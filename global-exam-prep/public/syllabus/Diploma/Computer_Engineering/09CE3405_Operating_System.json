@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Operating System",
+    "subject_code": "09CE3405",
+    "subject_id": null,
+    "department": "Diploma",
+    "course_or_branch": "Computer Engineering",
+    "semester": 4,
+    "source": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3405 - Operating System (.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Linux",
+      "content": [
+        "Introduction to Linux, Linux installation, Editing files with vi, vim",
+        "gcc, Shell and commands-touch, pwd, cd, mkdir, rmdir, ls, cat, cmp",
+        "cp, rm, mv,echo, wc, comm, head, tail, grep, sort and related shell",
+        "script programs"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Operating System",
+      "content": [
+        "Operating System overview, Operating System concepts, Functions",
+        "of OS,Services of OS ,System call, Types of operating system:",
+        "Batch Operating System, Multiprogramming Operating System",
+        "Multiprocessing Operating System, Real Time Operating System",
+        "Multitasking/Time Sharing OS, Distributed OS, Network OS",
+        "kernel, Architecture of operating system"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Pre-requisite of course:Students should be able to recall and understand basic concepts of C",
+      "content": [
+        "programming",
+        "apply fundamental data structures (arrays",
+        "stacks",
+        "queues)",
+        "and comprehend basic",
+        "computer organization concepts such as CPU and memory",
+        "MR. SMIT MAHENDRABHAI THACKER",
+        "MR. MITTAL KIRITBHAI JOISER"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Process Management",
+      "content": [
+        "Process, Process States, Process Control Block, Threads, User Level",
+        "and Kernel level thread, Multithreading-Many to one, One to One",
+        "Many to Many, Process Synchronization, race conditions, critical",
+        "region problem, Mutual exclusion, classical problems of IPC",
+        "Concepts of Semaphore - Mutex - Monitor -Event Counters",
+        "Message Passing"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "CPU Scheduling and Deadlocks",
+      "content": [
+        "Scheduling -Basic Concept, Preemptive and Non-Preemptive",
+        "scheduling, scheduling criteria, Types of Scheduling algorithm:",
+        "Non-Preemptive-First Come First Served (FCFS), Non-Preemptive",
+        "Shortest Job First (SJF), Priority Preemptive-Shortest Remaining",
+        "Time Next(SRTN) , Round Robin(RR), Deadlock concepts and its",
+        "characterization, deadlock detection, prevention techniques of",
+        "deadlock, techniques to get recovery from deadlock, deadlock",
+        "avoidance-Bankers Algorithm"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "File Management and Disk Structure",
+      "content": [
+        "File-Concept of file, attributes and operations of file, file accessing",
+        "methods, directories, file sharing and protection, Disk-Disk",
+        "structure- physical and logical structure, Disk Hardware, Disk",
+        "Scheduling"
+      ]
+    }
+  ]
+}

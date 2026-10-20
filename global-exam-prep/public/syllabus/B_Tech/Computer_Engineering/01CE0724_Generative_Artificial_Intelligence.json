@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Generative Artificial Intelligence",
+    "subject_code": "01CE0724",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0724 - Generative Artificial Intelligence.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Generative AI",
+      "content": [
+        "Introduction to Generative AI, Generative vs. Discriminative",
+        "Models,, Bayesian Models (Naive Bayes, Hidden Markov Models)",
+        "Deep Learning Models (VAEs, GANs, Diffusion Models",
+        "Transformers, Real-World Applications, Challenges & Ethical",
+        "Considerations, Introduction to Evaluation Metrics"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "GENERATIVE ARTIFICIAL INTELLIGENCE 01CE0724",
+      "content": [
+        "Transformer-Based Language Models, Encoder-Decoder",
+        "Architectures, Attention Mechanisms in NLP, Text Generation",
+        "using Transformer Models, Zero-shot, One-shot, Few-shot",
+        "Learning, Prompt Engineering & Optimization, Evaluation Metrics",
+        "for Text Generation"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Generative Models for Images",
+      "content": [
+        "Variational Autoencoders (VAEs), Latent Space Representation",
+        "Generative Adversarial Networks (GANs), DCGAN, CycleGAN",
+        "StyleGAN, Diffusion Models - Stable Diffusion, DDPMs",
+        "Applications (Image Inpainting, Super-Resolution, Face",
+        "Generation), Evaluation Metrics for Image Generation"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "AI-Generated Art, Music, and Games",
+      "content": [
+        "AI-Generated Art (Neural Style Transfer, DeepDream),, AI in",
+        "Music (MuseGAN, OpenAI Jukebox), AI in Game Development",
+        "(Deep Q-Learning, Proximal Policy Optimization), Challenges &",
+        "Biases in Creative AI, Evaluation Metrics"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Open-Source Models & Deployment",
+      "content": [
+        "Open-Source Generative Models, Fine-Tuning Pretrained Models",
+        "Deploying AI Models, Ethical & Legal Considerations, Model",
+        "Evaluation & Interpretability"
+      ]
+    }
+  ]
+}

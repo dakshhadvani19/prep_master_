@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Advance Web Technology",
+    "subject_code": "01CE1412",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE1412 - Advance Web Technology.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "JavaScript & TypeScript Essentials",
+      "content": [
+        "JavaScript refresher, variables, functions, arrays, ES6+ features",
+        "(arrow functions, destructuring, template literals, modules",
+        "promises, async/await);, TypeScript fundamentals: static typing",
+        "interfaces,, classes, generics",
+        "Setting up a TypeScript project for",
+        "frontend & backend"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "ADVANCED WEB TECHNOLOGY 01CE1412",
+      "content": [
+        "React fundamentals, components,, props, state, Hooks (useState",
+        "useEffect, useContext);, Forms & validation, Routing with React",
+        "Router, API integration (Fetch, Axios), State management basics",
+        "with Context API"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Backend Development with Node.js & Express",
+      "content": [
+        "Node.js setup & NPM, Express.js basics, routing, middleware",
+        "request/response cycle , REST API principles & creation, Request",
+        "validation & error handling , Database connectivity",
+        "(MongoDB/MySQL refresher)",
+        "API testing with Postman"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Modern Web Practices",
+      "content": [
+        "Next.js basics: file-based routing, SSR, SSG, API routes",
+        "Introduction to GraphQL (queries & mutations), Real-time",
+        "communication with Socket.io, Performance considerations;, Best",
+        "practices for structuring full-stack applications"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Practical",
+      "content": [
+        "Construct a React module (e.g., user profile or dashboard) using",
+        "TypeScript interfaces and generics to ensure reliable and type-safe",
+        "component behavior"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Integrate a Next.js frontend with a Node.js backend API to perform",
+        "CRUD operations and visualize real-time updates"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Optimize bundle size, implement environment management, and",
+        "deploy the full-stack app on a live platform (Vercel/Render)"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Conceive, design, and implement a mini full-stack application",
+        "integrating React, Node.js, TypeScript, and Next.js to solve a real",
+        "world problem scenario"
+      ]
+    }
+  ]
+}

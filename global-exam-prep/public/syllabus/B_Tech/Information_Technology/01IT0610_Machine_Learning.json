@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Machine Learning",
+    "subject_code": "01IT0610",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01IT/01IT0610 - Machine Learning.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Unit 1: Foundations of Machine Learning in Business",
+      "content": [
+        "Introduction to Machine Learning, Learning Systems and Real",
+        "world ML Applications, Importance of ML in Business Analytics",
+        "Variable Types and Terminology, Function Approximation",
+        "Concept of Learning and Types of Machine Learning, Curse of",
+        "Dimensionality, Bias-Variance Tradeoff, Overfitting and",
+        "Underfitting,, Model Selection Techniques, No Free Lunch",
+        "Theorem"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Unit 2: Predictive Modeling -\u0003Regression and Classification",
+      "content": [
+        "Linear Regression, Simple Linear Regression,, Model Accuracy: R2",
+        "Logistic Regression, Linear Discriminant Analysis (LDA), Bayes",
+        "Theorem, Naïve Bayes Classifier"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Unit 3: Resampling, Regularization, and Tree-Based Techniques",
+      "content": [
+        "Model Evaluation and Resampling Methods,, Cross-Validation:",
+        "LOOCV, k-Fold, The Bootstrap Method,, Principal Component",
+        "Regression (PCR),, Decision Trees for Classification and",
+        "Regression, Advantages and Disadvantages of Decision Trees",
+        "EnsembleMethods: Bagging, Random Forest, Boosting"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Unit 4: Support Vector Machines and Applications",
+      "content": [
+        "Concepts of Margins and Hyperplanes,, Maximum Margin",
+        "Classifier, Support Vector Classifier, Business Applications",
+        "andInterpretation of SVM Models"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Unit 5: Unsupervised Learning for Business Insights",
+      "content": [
+        "Principal Component Analysis (PCA),, Principal Components and",
+        "Dimensionality Reduction, Interpreting PCA for Business Data",
+        "Clustering Techniques: K-Means, Hierarchical Clustering, Choosing",
+        "the Right Number of Clusters,, Use Cases in",
+        "CustomerSegmentation, Market Basket Analysis"
+      ]
+    }
+  ]
+}

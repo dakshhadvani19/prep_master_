@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Computer Vision",
+    "subject_code": "01CT1621",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1621 - Computer Vision.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Image Formation",
+      "content": [
+        "Orthographic and Perspective Projection, Camera model, Camera",
+        "calibration, Intrinsic and Extrinsic parameters, Binocular Stereopsis:",
+        "Camera and Epipolar Geometry, Homography, Rectification, DLT",
+        "RANSAC, Stereo Vision"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Feature Extraction",
+      "content": [
+        "Edge Detection, Line Detection, Interest Points and Corners",
+        "Detection, Shape Analysis, SIFT, SURF, HOG"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Shape from X",
+      "content": [
+        "Light at Surfaces, Phong Model, Reflectance, Photometric Stereo",
+        "Surface Properties, Shape from Shading, Shape from Texture",
+        "Motion and Edges"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Segmentation",
+      "content": [
+        "Region Growing, Basic Clustering Methods, Watershed algorithm",
+        "K-Means algorithm, Mean-Shift algorithm, Agglomerative",
+        "Clustering with a graph, Normalized cuts, Grab-cut, Hough",
+        "Transform"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Recent trends and applications",
+      "content": [
+        "CNN, R-CNN, U-Nets, Mask R-CNN for computer vision, Self",
+        "supervised Learning, Reinforcement Learning in vision, Face",
+        "Recognition, Emotion Recognition,, Activity Recognition, Optical",
+        "Character Recognition, Biometrics, In-vehicle vision systems"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Experiment 6 Implement code to i. Calculate fundamental matrix using SIFT and",
+      "content": [
+        "FLANN and ii. Find and draw Epilines on images"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment 8 Simulate code to calculate Histogram of Gradients",
+      "content": [
+        "Experiment 9 Simulate code to create Depth map from Stereo images"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment 10 Simulate code to segment an image of mutually touching coins",
+      "content": [
+        "using distance transform along with Watershed algorithm"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment 11 Simulate code to segment images using K-means algorithm",
+      "content": [
+        "Simulate code to segment images using mean-shift algorithm"
+      ]
+    }
+  ]
+}

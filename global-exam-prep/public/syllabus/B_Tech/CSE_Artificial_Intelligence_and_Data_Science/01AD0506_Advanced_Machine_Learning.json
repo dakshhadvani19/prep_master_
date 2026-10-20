@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Advanced Machine Learning",
+    "subject_code": "01AD0506",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AD/01AD0506 - Advanced Machine Learning.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Machine Learning and Data Preparation",
+      "content": [
+        "Introduction to Artificial Intelligence, Data Science and Machine",
+        "Learning, Types of learning: supervised, unsupervised, semi",
+        "supervised and reinforcement learning, Machine learning workflow",
+        "Applications of ML in healthcare, finance, manufacturing, retail",
+        "cybersecurity and smart systems, Types of datasets",
+        "Training",
+        "validation and test sets",
+        "Data preprocessing, missing value handling",
+        "encoding categorical variables, feature scaling, normalization",
+        "standardization, feature selection basics, bias-variance tradeoff",
+        "overfitting and underfitting"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Regression and Classification Fundamentals",
+      "content": [
+        "Linear regression, multiple linear regression, polynomial regression",
+        "Cost function and gradient descent",
+        "Regularization concepts, Ridge",
+        "and Lasso",
+        "Classification basics, Logistic regression",
+        "k-Nearest",
+        "Neighbors",
+        "Naive Bayes, Model assumptions",
+        "Decision boundaries",
+        "Case studies for regression and classification problems"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Advanced Supervised Learning and Model Evaluation",
+      "content": [
+        "Decision tree learning, entropy, information gain, Gini index",
+        "Random Forest, Ensemble learning",
+        "Boosting concepts, Support",
+        "Vector Machines, margins, kernels;, Performance evaluation metrics",
+        "for classification and regression, Confusion matrix, precision, recall",
+        "F1-score, ROC-AUC, MAE, MSE, RMSE, R2",
+        "Cross-validation",
+        "Hyperparameter tuning",
+        "Grid search and random search, Model",
+        "selection strategies"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Unsupervised Learning and Dimensionality Reduction Introduction to unsupervised learning; Clustering concepts; k-means",
+      "content": [
+        "clustering, Hierarchical clustering",
+        "Density-based clustering basics",
+        "Distance measures",
+        "Cluster validation",
+        "Association with business",
+        "segmentation and anomaly identification",
+        "Principal Component",
+        "Analysis, Feature extraction vs feature selection",
+        "Visualization of",
+        "high-dimensional data, Applications in recommendation, customer",
+        "segmentation and fault detection"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Neural Networks and Modern Machine Learning",
+      "content": [
+        "Perceptron model",
+        "Multi-Layer Perceptron (MLP), Activation",
+        "functions",
+        "Forward propagation and backpropagation, Loss",
+        "Training neural networks",
+        "Optimization basics",
+        "Regularization in neural networks, Introductory concepts of deep",
+        "learning",
+        "Overview of CNN, RNN and transfer learning, Use cases",
+        "of neural networks in image, text and time-series problems"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Real-World Machine Learning Systems, Explainability and Responsible AI",
+      "content": [
+        "End-to-end ML pipeline design",
+        "Feature engineering in practice",
+        "Handling class imbalance",
+        "Model interpretability and explainability",
+        "basics, Feature importance, SHAP/LIME overview",
+        "Fairness, bias",
+        "ethics, trust, privacy and responsible AI, Model serialization and",
+        "deployment basics",
+        "Batch vs real-time inference, Monitoring",
+        "retraining, drift awareness and lifecycle management, Mini case",
+        "studies based on industry-ready ML solutions"
+      ]
+    }
+  ]
+}

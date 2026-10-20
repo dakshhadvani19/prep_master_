@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "DevOps Essentials",
+    "subject_code": "01CC0704",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CC/01CC0704 - DevOps Essentials.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to DevSecOps and Shift-Left Security",
+      "content": [
+        "What is DevSecOps: Evolution from DevOps, core principles, and",
+        "cultural transformation, The Shift-Left Security approach:",
+        "Integrating security early in the SDLC, CI/CD Pipeline Overview:",
+        "Stages of continuous integration, delivery, and deployment, Threat",
+        "Modeling Fundamentals: STRIDE, PASTA, and attack surface",
+        "analysis for modern applications, OWASP Top 10 and OWASP",
+        "DevSecOps Guideline: Key vulnerability categories relevant to",
+        "pipeline security, Security as Code: Policy-as-code, compliance-as",
+        "code, and infrastructure security basics"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Security Automation in CI/CD PipelinesStatic PipelinesStatic Application Security Testing (SAST): Tools",
+      "content": [
+        "(SonarQube, Semgrep, Bandit), integration into pipelines, and",
+        "interpreting results, Dynamic Application Security Testing (DAST):",
+        "OWASP ZAP, Burp Suite automation, and runtime vulnerability",
+        "scanning,, Software Composition Analysis (SCA): Identifying open",
+        "source vulnerabilities with Snyk, Dependabot, and OWASP",
+        "Dependency-Check, Secret Detection and Management, Tools like",
+        "GitLeaks, TruffleHog",
+        "integrating Vault (HashiCorp) and AWS",
+        "Secrets Manager, Pipeline Security Gates: Defining pass/fail",
+        "thresholds, breaking builds on critical findings, Integrating security",
+        "tools in Jenkins, GitHub Actions, and GitLab CI/CD pipelines"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Container and Infrastructure Security",
+      "content": [
+        "Docker Security: Image hardening, least privilege, non-root",
+        "containers, and Docker Bench for Security, Container Image",
+        "Scanning: Using Trivy, Clair, and Anchore to detect CVEs in base",
+        "images and dependencies, Kubernetes Security: RBAC, network",
+        "policies, Pod Security Standards, and securing the K8s API server",
+        "Infrastructure as Code (IaC) Security: Scanning Terraform",
+        "CloudFormation, and Ansible with Checkov, tfsec, and KICS",
+        "Cloud Security Posture Management (CSPM): Misconfiguration",
+        "detection across AWS, GCP, and Azure, Supply Chain Security",
+        "SBOM generation (Syft), image signing (Cosign), and SLSA",
+        "framework basics"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Security Testing, Code Review, and Vulnerability Management Secure Code Review Practices: Common coding vulnerabilities",
+      "content": [
+        "(injection, XSS, insecure deserialization),, manual and automated",
+        "review techniques, Penetration Testing in DevSecOps: Scoping",
+        "automated pen-testing tools (Metasploit, Nuclei), and responsible",
+        "disclosure, Fuzzing and Input Validation Testing: Using AFL",
+        "libFuzzer, and property-based testing to find edge-case",
+        "vulnerabilities,, Vulnerability Management Lifecycle: Triage, CVSS",
+        "scoring, patching workflows, and risk acceptance policies, API",
+        "Security Testing: OWASP API Top 10, testing with",
+        "Postman/Newman and kiterunner in automated workflows",
+        "Compliance as Code: Implementing CIS Benchmarks, NIST 800-53",
+        "controls, and SOC 2 checks as automated tests"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Runtime Security, Monitoring, and Incident Response Runtime Application Self-Protection (RASP) and Web Application",
+      "content": [
+        "Firewalls (WAF): Concepts and integration, Security Monitoring",
+        "and Observability, Centralized logging (ELK Stack), SIEM",
+        "integration, and anomaly detection in production, Falco and",
+        "Runtime Threat Detection, Writing rules for detecting suspicious",
+        "container and host activity, Incident Response in DevSecOps",
+        "Runbooks, automated rollback pipelines, forensic artifact collection",
+        "and post-mortems, Zero Trust Architecture: Principles, service mesh",
+        "security (Istio/Linkerd), and mTLS in microservices, Emerging",
+        "DevSecOps Trends: AI/ML-based security, supply chain attacks",
+        "GitOps security, and platform engineering security"
+      ]
+    }
+  ]
+}

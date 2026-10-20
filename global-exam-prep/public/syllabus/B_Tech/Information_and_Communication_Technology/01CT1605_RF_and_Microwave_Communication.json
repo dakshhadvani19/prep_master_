@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "RF and Microwave Communication",
+    "subject_code": "01CT1605",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1605 - RF and Microwave Communication.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Spectrum of RF and microwave frequencies, Frequency bands and",
+        "regions of spectrum allocations, Decibel for power ratios",
+        "representation of Power-Voltages dBm, dBW, dBμV/m, Modeling",
+        "lumped and distributed components at radio frequencies",
+        "Propagation of EM waves, Application of RF and microwaves"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Transmission lines and distributed systems",
+      "content": [
+        "Introduction to transmission lines and familiar examples, Lumped",
+        "and distributed systems, Telegraph equations and the waves",
+        "solution, Wave equation, Characteristic impedance and propagation",
+        "velocity, Load effect on the reflected wave, Types of transmission",
+        "lines (coaxial, conductor- pair, printed - microstrip, stripline)",
+        "Standing-wave in a transmission-line, Reflection coefficient and",
+        "voltage-standing-wave-ratio (VSWR), Efficiency of power-transfer",
+        "Short, open, and matched loads’ impedance as viewed at the end of",
+        "a variable-length transmission line, Reflection parameters",
+        "Transmission parameters, Wave representation of two-port and the",
+        "s-parameters, Phase velocity and group velocity"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "The Smith Chart and Impedance Matching",
+      "content": [
+        "Smith chart - impedance on the reflection plane, Review of",
+        "transmission lines and impedances matching , L, pi, T, sections",
+        "transmission lines and stubs"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Microwave Components",
+      "content": [
+        "Wave-guide tees, Magic tee, Directional couples, Circulars and",
+        "isolators, Corners, Bends, Twists, Flanges, Matched termination",
+        "Coupling probes, Loops"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Microwave Tubes and Circuits",
+      "content": [
+        "Limitations of conventional tubes at UHF & Microwave, Klystrons",
+        "Velocity modulation, Multi cavity klystron, Reflex klystron",
+        "Traveling wave tube, Magnetron"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Micro Strip & Integrated Circuits",
+      "content": [
+        "Strip lines, micro strip lines, MIC, MMIC"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment-07",
+      "content": [
+        "To create, simulate, and analyze Horn Antenna using the Ansoft",
+        "HFSS Design Environment"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment-08",
+      "content": [
+        "To create, simulate, and analyze Helix Antenna using the Ansoft",
+        "HFSS Design Environment"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment-09",
+      "content": [
+        "To create, simulate, and analyze Array Antenna using the Ansoft",
+        "HFSS Design Environment"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment-10",
+      "content": [
+        "To create, simulate, and analyze Probe Feed Patch Antenna using",
+        "the Ansoft HFSS Design Environment"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment-11",
+      "content": [
+        "To create, simulate, and analyze Slot Coupled Patch Antenna using",
+        "the Ansoft HFSS Design Environment"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment-12",
+      "content": [
+        "To create, simulate, and analyze corner reflector using the Ansoft",
+        "HFSS Design Environment"
+      ]
+    }
+  ]
+}

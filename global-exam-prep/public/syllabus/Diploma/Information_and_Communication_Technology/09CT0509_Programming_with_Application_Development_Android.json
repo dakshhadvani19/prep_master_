@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Programming with Application Development (Android)",
+    "subject_code": "09CT0509",
+    "subject_id": null,
+    "department": "Diploma",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 5,
+    "source": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0509 - Programming for Mobile Application Development (.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to KOTLIN Programming: ",
+      "content": [
+        "Basics of Kotlin, Operations and Priorities, Decision Making",
+        "Loop Control, Data Structures (Collections), Functions",
+        "Object-Oriented Programming: Inheritance, abstract, interface, super and this",
+        "visibility modifiers"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Introduction to Android and User Interface: ",
+      "content": [
+        "ANDROID SDK Features, Introduction to Development Features",
+        "Developing for ANDROID, developing for mobile and embedded devices",
+        "ANDROID development tools",
+        "Basics of an ANDROID application, introduction to manifest, externalizing",
+        "resources, application lifecycle, ANDROID activities",
+        "Widgets:",
+        "Button",
+        "TextView",
+        "ImageView",
+        "ProgressBar",
+        "ListView",
+        "EditText",
+        "Calendar, DateTime etc",
+        "Working with Intent"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Android Storage: Files, Shared Preferences, SQLite Database ",
+      "content": [
+        "Creating, saving and retrieving shared preferences",
+        "Including static files as resources, working with the file system",
+        "Introducing ANDROID databases",
+        "Content values and cursors",
+        "Working with SQLite databases",
+        "Creating content providers",
+        "Using content providers",
+        "Native ANDROID Content providers"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Enhancing User Experience, Maps & Location Based Service, Sensors ",
+      "content": [
+        "Material design, RecyclerView, CardView, TabLayout, ViewPager",
+        "Menus and dialogs, drawable and gradients",
+        "Using location-based services",
+        "Selecting a location provider",
+        "Finding your current location",
+        "Creating map-based activities",
+        "Hardware sensors, Sensors and sensor manager, monitoring devices movement and",
+        "orientation"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Audio, Video, Camera, Bluetooth, Wifi: ",
+      "content": [
+        "Playing audio and video manipulating raw audio, using camera to take pictures",
+        "recording video, adding media to mediastore",
+        "Managing Bluetooth",
+        "Monitor and manage Wifi"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Telephony API, Publishing, Monetizing & Distributing the Android Application",
+      "content": [
+        "Hardware support for telephony, using telephony",
+        "introducing SMS Send & Receive",
+        "Signing, publishing, monetizing & distributing applications"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Introduction of other mobile application development technology/framework",
+      "content": [
+        "iOS Development Framework",
+        "Flutter"
+      ]
+    }
+  ]
+}

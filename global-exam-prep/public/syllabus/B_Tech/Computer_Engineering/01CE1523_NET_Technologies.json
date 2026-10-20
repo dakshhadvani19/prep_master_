@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": ".NET Technologies",
+    "subject_code": "01CE1523",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE1523 - .NET Technologies.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to .Net Framework and C#",
+      "content": [
+        "Introduction to .NET Framework Architecture, CLR, Assemblies",
+        "Basics of C#, Class, Object, Method, Access Modifiers",
+        "Constructors, Abstract Class, Inheritance, Interface, Polymorphism",
+        "Exception Handling"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "ASP.Net Web Application",
+      "content": [
+        "Page life cycle of ASP.NET Application, Web Controls (Button",
+        "TextBox, CheckBox, Image etc.), Rich Controls (Calendar",
+        "AdRotator), Validation Controls, State management, Cookie",
+        "Session"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": ".NET TECHNOLOGIES 01CE1523",
+      "content": [
+        "Introduction to ASP.NET MVC, MVC Architecture Overview",
+        "Controllers, Razor Views, LayoutView, PartialView, Models",
+        "HTML helpers, Action Filters, Model Validation, URLs and",
+        "Routing"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Working with ADO.Net",
+      "content": [
+        "ADO.Net Architecture, Characteristics of ADO.Net, Data",
+        "Namespaces, ADO.Net Object Model, DataSet, DataTable",
+        "DataRelation, Connection object,, Command Object, Data Reader",
+        "Object, DataAdapter Object, Data Controls (Repeater, DataList",
+        "DataGrid), Binding data with Crystal Report, Performing CRUD",
+        "operations"
+      ]
+    }
+  ]
+}

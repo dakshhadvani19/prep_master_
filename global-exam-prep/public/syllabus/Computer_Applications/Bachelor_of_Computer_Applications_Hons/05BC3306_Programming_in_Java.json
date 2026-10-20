@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Programming in Java",
+    "subject_code": "05BC3306",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Bachelor of Computer Applications (Hons.)",
+    "semester": 3,
+    "source": "Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/PDFs/BCA/Sem_3/05BC3306 - Programming in Java.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Java and OOP",
+      "content": [
+        "Features",
+        "the",
+        "Java",
+        "Language",
+        "Object-oriented Programming",
+        "Creating an Application in Java",
+        "Compiling and executing Applications in Java",
+        "Program comments",
+        "Primitive data types",
+        "Data Types",
+        "Scanner Class",
+        "Operators",
+        "Type Casting",
+        "Arrays, single and multi-dimensional arrays",
+        "Other reference types, classes, interfaces, enums",
+        "and annotations",
+        "Unicode escapes in Java source code",
+        "Understanding super types and sub types",
+        "Understanding the narrowing and widening",
+        "Statements-if, if-else, switch-case, for, while, do-while",
+        "break, continue and return statements",
+        "Members of a class",
+        "Garbage collector and finalize method",
+        "Static variables and methods",
+        "Initializer blocks & Class Initializer blocks"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Inheritance and Packages",
+      "content": [
+        "Types of Inheritance",
+        "Object Class",
+        "Defining Subclass",
+        "Access Specifiers",
+        "Use of Super Keyword",
+        "Constructor Overloading",
+        "Method Overloading and Overriding",
+        "Use of Abstract and Final Keyword",
+        "Interface",
+        "Introduction to Packages",
+        "Normal import and Static Import",
+        "String, String Buffer and String Builder Classes from",
+        "java.lang package",
+        "Creating and using User Defined Package and Sub Package",
+        "Use of ClassPath"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Exception Handling",
+      "content": [
+        "Introduction to Exception Handling",
+        "Use of Try, Catch, Finally, Throw and Throws keywords",
+        "Creation of User Defined Exception",
+        "Checked and Unchecked Exceptions"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Multi Threading",
+      "content": [
+        "Introduction to Multithreading",
+        "Thread Life Cycle",
+        "Creation of new thread in two different ways",
+        "Synchronization",
+        "Thread Groups"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Database Connectivity in Java",
+      "content": [
+        "Introduction to JDBC",
+        "JDBC Configuration",
+        "Driver .jar Files",
+        "Connecting to the Database",
+        "Working with Statements",
+        "Resultsets",
+        "Prepared Statement"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Write a java program to implement simple exception handling",
+      "content": [
+        "24 Write a java program to use Finally block in Exception Handling"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Write a java program to implement Exception Propagation",
+      "content": [
+        "31 Write a java program to use simple inner class in your program"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Write a java program to display date in different format",
+      "content": [
+        "calendar class",
+        "37 Write a java program to add, subtract a days/month into current date",
+        "and time"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Write a java program to use Gregorian calendar to display",
+      "content": [
+        "calendar information",
+        "39. Write a java program to create a thread using Thread Class",
+        "40. Write a java program to create a thread using Runnable class",
+        "41. Write a java program to set Thread name and priority & test it",
+        "42. Write a java program to create two threads and make them Synchronized",
+        "(Thread Safe)",
+        "43. Write a java program to join two threads which perform loop operations",
+        "44. Write a JDBC program to Insert data into Oracle Table",
+        "45. Write a JDBC program to Display data into Oracle Table",
+        "46. Write a JDBC program to Update data into Oracle Table",
+        "47. Write a JDBC program to Delete data into Oracle Table",
+        "48. Write a JDBC program to Insert Records Into Oracle Table Using Prepared",
+        "Statement",
+        "49. Write a JDBC program to Display Records Into Oracle Table Using",
+        "Prepared",
+        "Statement",
+        "50. Write a JDBC program to Update and Delete Records Into Oracle Table",
+        "Using Prepared Statement"
+      ]
+    }
+  ]
+}

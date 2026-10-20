@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "subject": {
+    "name": "Web Application Development Using PHP",
+    "subject_code": "05BC3503",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Bachelor of Computer Applications (Hons.)",
+    "semester": 5,
+    "source": "Other_Departments_Structured_Syllabus/Computer_Applications/Bachelor_of_Computer_Applications_Hons/Semester_5/05BC3503_Web_Application_Development_Using_PHP_practicals.json"
+  },
+  "practicals": [
+    {
+      "practical_number": 1,
+      "title": "1.1 Write a PHP program for print Previous semester Result using variables &",
+      "content": [
+        "1.1 Write a PHP program for print Previous semester Result using variables &",
+        "constants in PHP.",
+        "1.2 Write a PHP program to find out maximum and minimum number",
+        "1.3 Write a PHP program for operators in PHP.",
+        "1.4. Write a PHP program to print current month using if..else& switch case.",
+        "1.5 Write a PHP program to print 5 to 10 using For and ForEach.",
+        "1.6 Write a PHP program to print 15 to 20 using While and Do While.",
+        "1.7 Write a PHP program to include a file using include and require function",
+        "1.8 Write a PHP Program to print the values of array entered by user.",
+        "1.9 Write a PHP Program to reverse an array values entered by user.",
+        "1.10 Write a PHP Program to merge to arrays.",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Bachelor of Computer Applications"
+      ]
+    },
+    {
+      "practical_number": 2,
+      "title": "2.1 Write a PHP code to create numeric array for Monday to Saturday,",
+      "content": [
+        "2.1",
+        "Write a PHP code to create numeric array for Monday to Saturday,",
+        "associative array for month with total days of month such as",
+        "January=>30,February=>28 upto December and multidimensional array",
+        "for laptop along with company name inside that model and price(any",
+        "two companies).",
+        "2.2 Write a PHP code for sorting an array entered by user.",
+        "2.3",
+        "Write a program to perform following array functions:"
+      ]
+    },
+    {
+      "practical_number": 3,
+      "title": "array_change_key_case($var, CASE_LOWER/CASE_UPPER).",
+      "content": [
+        "array_change_key_case($var, CASE_LOWER/CASE_UPPER)."
+      ]
+    },
+    {
+      "practical_number": 4,
+      "title": "array_chunk($var,size) //array of months",
+      "content": [
+        "array_chunk($var,size) //array of months"
+      ]
+    },
+    {
+      "practical_number": 5,
+      "title": "array_count_values()",
+      "content": [
+        "array_count_values()"
+      ]
+    },
+    {
+      "practical_number": 6,
+      "title": "array_pop()",
+      "content": [
+        "array_pop()"
+      ]
+    },
+    {
+      "practical_number": 7,
+      "title": "array_push()",
+      "content": [
+        "array_push()"
+      ]
+    },
+    {
+      "practical_number": 8,
+      "title": "array_unshift()",
+      "content": [
+        "array_unshift()"
+      ]
+    },
+    {
+      "practical_number": 9,
+      "title": "array_shift() 2.4 Write a that demonstrate the use of following string functions:",
+      "content": [
+        "array_shift()",
+        "2.4",
+        "Write a that demonstrate the use of following string functions:",
+        "1)",
+        "strlen() // any string",
+        "2)",
+        "strpos() //find some specific word,letter",
+        "3)",
+        "str_word_count()",
+        "4)",
+        "strrev()",
+        "5)",
+        "strtolower()",
+        "6)",
+        "strtoupper()",
+        "2.5",
+        "Write a PHP code for Type casting with settype, gettype function",
+        "2.6",
+        "Write a PHP code for user define function for calculator, take input from",
+        "user by creating simple html form.",
+        "2.7",
+        "Write a PHP code to use mysql string manipulation functions as given",
+        "bellow:",
+        "1) Length()",
+        "2) concat()"
+      ]
+    },
+    {
+      "practical_number": 10,
+      "title": "concat_ws()",
+      "content": [
+        "concat_ws()"
+      ]
+    },
+    {
+      "practical_number": 11,
+      "title": "trim(),rtrim(),ltrim()",
+      "content": [
+        "trim(),rtrim(),ltrim()"
+      ]
+    },
+    {
+      "practical_number": 12,
+      "title": "lpad(),rpad(),locate() 2.8 Write a PHP code to use mysql date and time functions as given bellow:",
+      "content": [
+        "lpad(),rpad(),locate()",
+        "2.8",
+        "Write a PHP code to use mysql date and time functions as given bellow:"
+      ]
+    },
+    {
+      "practical_number": 13,
+      "title": "DAYOFWEEK()",
+      "content": [
+        "DAYOFWEEK()"
+      ]
+    },
+    {
+      "practical_number": 14,
+      "title": "WEEKDAY()",
+      "content": [
+        "WEEKDAY()"
+      ]
+    },
+    {
+      "practical_number": 15,
+      "title": "DAYOFMONTH()",
+      "content": [
+        "DAYOFMONTH()"
+      ]
+    },
+    {
+      "practical_number": 16,
+      "title": "DAYOFYEAR()",
+      "content": [
+        "DAYOFYEAR()"
+      ]
+    },
+    {
+      "practical_number": 17,
+      "title": "DAYNAME() 2.9 Write a PHP code to use mysql date and time functions as given bellow:",
+      "content": [
+        "DAYNAME()",
+        "2.9",
+        "Write a PHP code to use mysql date and time functions as given bellow:",
+        "1) HOUR()",
+        "2) MINUTE()",
+        "3) SECOND()"
+      ]
+    },
+    {
+      "practical_number": 18,
+      "title": "DATE_FORMAT()",
+      "content": [
+        "DATE_FORMAT()"
+      ]
+    },
+    {
+      "practical_number": 19,
+      "title": "DATE_SUB() 2.10 Write a PHP code to use mysql date and time functions as given bellow:",
+      "content": [
+        "DATE_SUB()",
+        "2.10",
+        "Write a PHP code to use mysql date and time functions as given bellow:"
+      ]
+    },
+    {
+      "practical_number": 20,
+      "title": "CURDATE()/CURRENT_DATE,",
+      "content": [
+        "CURDATE()/CURRENT_DATE,"
+      ]
+    },
+    {
+      "practical_number": 21,
+      "title": "CURTIME()/CURRENT_TIME(),",
+      "content": [
+        "CURTIME()/CURRENT_TIME(),"
+      ]
+    },
+    {
+      "practical_number": 22,
+      "title": "UNIX_TIMESTAMP(),",
+      "content": [
+        "UNIX_TIMESTAMP(),"
+      ]
+    },
+    {
+      "practical_number": 23,
+      "title": "FROM_UNIXTIME() FACULTY OF COMPUTER APPLICATIONS",
+      "content": [
+        "FROM_UNIXTIME()",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Bachelor of Computer Applications"
+      ]
+    },
+    {
+      "practical_number": 24,
+      "title": "3.1 Write a PHP script to create cookie in a form.",
+      "content": [
+        "3.1 Write a PHP script to create cookie in a form.",
+        "3.2 Write a PHP script to read the cookie of a form",
+        "3.3 Write a PHP script to use cookie with header",
+        "3.4 Write a PHP script to delete a cookie",
+        "3.5 Write a PHP script to create a session",
+        "3.6 Write a PHP script to destroy a session",
+        "3.7 Write a PHP script to create a session when the user log in using the form of",
+        "Practical 12. Provide an option to logout. Once the user logs out then",
+        "he/she should not be able to open the home page using the URL.",
+        "3.8 Write a PHP script to create a PHP script, which will store a cookie on the",
+        "client’s device to identify whether the user is a new one or a repeated one.",
+        "3.9 Create a PHP script, which will help the user to remember his/her username",
+        "and password on the login form.",
+        "3.10 Write a PHP script to store the details of a registration form into the users",
+        "table of a database."
+      ]
+    },
+    {
+      "practical_number": 25,
+      "title": "4.1 Write a program that established Database connection",
+      "content": [
+        "4.1 Write a program that established Database connection",
+        "4.2 Create a MySQL Table Using MySQLi and PDO",
+        "4.3 Write a PHP program that Insert Data Into MySQL Using MySQLi and PDO",
+        "4.4 Write a program that Demonstrate PHP MySQL Prepared Statements",
+        "4.5 Write a PHP program that Select Data From a MySQL Database",
+        "4.6 Write a PHP code that Delete Data From a MySQL Table Using MySQLi and",
+        "PDO",
+        "4.7 Write a program that Update Data In a MySQL Table Using MySQLi and PDO",
+        "4.8 Write a program that demonstrate the Limit Data Selections From a MySQL",
+        "Database",
+        "4.9 Write a PHP script to authenticate the user using a login form where the",
+        "user will provide a username and password. Find these username and",
+        "password in the users table to see if the user is registered or not. If yes",
+        "then take him to the home page otherwise give an error message.",
+        "4.10",
+        "Write a PHP script to provide an edit profile page to the user where",
+        "he/she can see the existing details and if he/she wants to change details",
+        "then he/she can change them.",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Bachelor of Computer Applications"
+      ]
+    },
+    {
+      "practical_number": 26,
+      "title": "5.1 Create a simple XMLHttpRequest, and retrieve data from a TXT file.",
+      "content": [
+        "5.1",
+        "Create a simple XMLHttpRequest, and retrieve data from a TXT file.",
+        "5.2",
+        "Create a XMLHttpRequest with a callback function, and retrieve data",
+        "from a TXT file.",
+        "5.3",
+        "How to Retrieve all header information of a resource (file)",
+        "5.4",
+        "How a web page can communicate with a web server while a user type",
+        "characters in an input field.",
+        "5.5",
+        "How a web page can fetch information from a database with AJAX.",
+        "5.6",
+        "Create a simple HTML page that includes the jQuery library. Write a",
+        "script to check if jQuery is successfully loaded. Display a message",
+        "indicating whether jQuery is available or not.",
+        "5.7",
+        "Design a button on your web page. When the user clicks the button, use",
+        "jQuery to smoothly scroll to the top of the page. Implement this feature",
+        "to enhance user experience.",
+        "5.8",
+        "Select a few HTML elements (e.g., paragraphs, headings, buttons) and",
+        "set their background color to red using jQuery. Experiment with different",
+        "selectors and styles.",
+        "5.9",
+        "Create an input field for search suggestions. As the user types, use",
+        "jQuery to make asynchronous requests",
+        "5.10",
+        "Build a navigation menu with links to different sections of your website.",
+        "Use jQuery and AJAX to load content dynamically when the user clicks",
+        "on a menu item. Fetch data from a server (e.g., blog posts, product",
+        "details) and display it without refreshing the entire page."
+      ]
+    }
+  ]
+}

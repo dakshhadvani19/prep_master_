@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Object Oriented Design and Programming",
+    "subject_code": "01AI0103",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0103 - Object Oriented Design and Programming.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Introduction to Object Oriented Programming, rocedural Vs. Object",
+        "Oriented Programming, Principles of OOP, Access Modifiers",
+        "Basics of a Typical C++ Environment, Pre-processors Directives",
+        "C++ Program structure, Header Files and Namespaces, library files"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Programming Basics",
+      "content": [
+        "Output using cout, Directives, Input with cin, Type bool, The setw",
+        "manipulator, Type conversions"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Functions",
+      "content": [
+        "Call and Return by reference, Overloaded function, Macro Vs",
+        "Inline functions, Default arguments, friend functions"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Object and Classes",
+      "content": [
+        "Introduction, Structure Definitions, Accessing Members of",
+        "Structures, Class Scope and Accessing Class Members, Initializing",
+        "Class Objects: constructors and their types, destructors"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Operator overloading",
+      "content": [
+        "Overloading unary operations, Overloading binary operators, data",
+        "conversion, pitfalls of operators overloading and Type conversion"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Inheritance",
+      "content": [
+        "Concept of inheritance. Derived class and based class, Derived class",
+        "constructors, member function, class hierarchies, public and private",
+        "inheritance"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Polymorphism",
+      "content": [
+        "Pointers in C++, Objects and Pointers, virtual and pure virtual",
+        "functions, this pointer, Pointers in C++, Objects and Pointers, virtual",
+        "and pure virtual functions, this pointer, Implementing run time",
+        "polymorphism"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Streams and Files",
+      "content": [
+        "Concept of streams, C++ stream classes, formatted and Unformatted",
+        "I/O, File stream, manipulators, C++ File stream classes, File modes",
+        "File management functions, Binary Files, random Files"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Templates & Exception Handling",
+      "content": [
+        "What is template? Function templates and class templates",
+        "Overloading Template Functions, Inheritance and Templates",
+        "Templates and Friend functions, Overview and use of Standard",
+        "Template Library, try-catch throw, Multiple catch, catch all, Re",
+        "throwing Exception"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment",
+      "content": [
+        "A table gives a list of car models and the number of units sold in",
+        "each type in a specified period. Write a program to store this table in",
+        "suitable container and to display interactively the total value of a",
+        "particular model sold, given the unit-cost of that model"
+      ]
+    }
+  ]
+}

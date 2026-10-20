@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Python for Data Science and AI Applications",
+    "subject_code": "01CE0413",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0413 - Python for Data Science and AI Applications.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Module 1: Python Programming and Object-Oriented Development",
+      "content": [
+        "Introduction to Python - Basic Syntax, Data Types, Control",
+        "Structures, Functions, Modules, Error Handling - Lists, Tuples",
+        "Sets,, Dictionaries - String Manipulation, File Operations - Classes",
+        "Objects, Inheritance, Polymorphism, Encapsulation - Design",
+        "Patterns (Singleton, Factory, Observer), NumPy, Pandas",
+        "Matplotlib, Seaborn, scikit-learn"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Module 2: Python for Data Science",
+      "content": [
+        "Data Cleaning, Preprocessing (Pandas, Data Imputation, Scaling",
+        "Encoding, Normalization, Outlier Detection), Feature Selection",
+        "Feature Extraction, Feature Engineering (scikit-learn), Exploratory",
+        "Data Analysis (EDA), Data Visualization (Matplotlib, Seaborn)"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Module 3: Python for Machine Learning Machine Learning Basics - Supervised Learning (Linear",
+      "content": [
+        "Regression, Decision Trees, Random Forests), Unsupervised",
+        "Learning (K-means, PCA), Model Selection, Model Evaluation",
+        "Hyperparameter Tuning"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Module 4: Introduction to Deep Learning and NLP",
+      "content": [
+        "Image Preprocessing (Resizing, Normalization, Data",
+        "Augmentation), Neural Networks, TensorFlow, Keras - Transfer",
+        "Learning, Pretrained Models (VGG, ResNet), NLP Basics (NLTK",
+        "SpaCy), Transformer Models (BERT, GPT) - Computer Vision",
+        "(OpenCV)"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Module 5: Cutting-Edge Technologies",
+      "content": [
+        "Advanced Visualization in Python (Plotly, Bokeh, Dash)",
+        "Reinforcement Learning (Q-learning),, Basics of Generative",
+        "Adversarial Networks (GANs) and LLM,, Time Series Analysis"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a Python Program to Apply Feature Selection on the Adult",
+        "Income Dataset Using Recursive Feature Elimination (RFE)"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a Python Program to Preprocess Images and Train a CNN on",
+        "CIFAR-10 Using TensorFlow and Keras"
+      ]
+    }
+  ]
+}

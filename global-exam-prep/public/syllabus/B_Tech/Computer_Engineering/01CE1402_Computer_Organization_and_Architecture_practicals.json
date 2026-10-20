@@ -1,0 +1,1036 @@
+{
+  "schema_version": "1.0",
+  "subject": {
+    "name": "Computer Organization and Architecture",
+    "subject_code": "01CE1402",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Other_Departments_Structured_Syllabus/B.Tech/Computer_Engineering/Semester_Unknown/01CE1402_Computer_Organization_and_Architecture_practicals.json"
+  },
+  "practicals": [
+    {
+      "practical_number": 1,
+      "title": "Introduction to data representation a",
+      "content": [
+        "Introduction to data representation a"
+      ]
+    },
+    {
+      "practical_number": 2,
+      "title": "Number Systems b",
+      "content": [
+        "Number Systems b"
+      ]
+    },
+    {
+      "practical_number": 3,
+      "title": "Complements c",
+      "content": [
+        "Complements c"
+      ]
+    },
+    {
+      "practical_number": 4,
+      "title": "Fixed-Point Representation d",
+      "content": [
+        "Fixed-Point Representation d"
+      ]
+    },
+    {
+      "practical_number": 5,
+      "title": "Floating-Point",
+      "content": [
+        "Floating-Point"
+      ]
+    },
+    {
+      "practical_number": 6,
+      "title": "Representation",
+      "content": [
+        "Representation"
+      ]
+    },
+    {
+      "practical_number": 7,
+      "title": "A digital computer has a common bus system for 16 registers of 32",
+      "content": [
+        "A digital computer has a common bus system for 16 registers of 32"
+      ]
+    },
+    {
+      "practical_number": 8,
+      "title": "The bus is constructed with multiplexers. a",
+      "content": [
+        "The bus is constructed with multiplexers. a"
+      ]
+    },
+    {
+      "practical_number": 9,
+      "title": "selection inputs are there in each multiplexer? b",
+      "content": [
+        "selection inputs are there in each multiplexer? b"
+      ]
+    },
+    {
+      "practical_number": 10,
+      "title": "What size of",
+      "content": [
+        "What size of"
+      ]
+    },
+    {
+      "practical_number": 11,
+      "title": "multiplexers are needed? c",
+      "content": [
+        "multiplexers are needed? c"
+      ]
+    },
+    {
+      "practical_number": 12,
+      "title": "How many multiplexers are there in the",
+      "content": [
+        "How many multiplexers are there in the"
+      ]
+    },
+    {
+      "practical_number": 13,
+      "title": "bus?, Represent the following conditional control statement by two",
+      "content": [
+        "bus?, Represent the following conditional control statement by two"
+      ]
+    },
+    {
+      "practical_number": 14,
+      "title": "register transfer statements with control functions",
+      "content": [
+        "register transfer statements with control functions"
+      ]
+    },
+    {
+      "practical_number": 15,
+      "title": "If (P=1) then",
+      "content": [
+        "If (P=1) then"
+      ]
+    },
+    {
+      "practical_number": 16,
+      "title": "(R1? R2) else if (Q = 1) then (R1? R3), The following transfer",
+      "content": [
+        "(R1? R2) else if (Q = 1) then (R1? R3), The following transfer"
+      ]
+    },
+    {
+      "practical_number": 17,
+      "title": "statements specify a memory",
+      "content": [
+        "statements specify a memory"
+      ]
+    },
+    {
+      "practical_number": 18,
+      "title": "Explain the memory operation in each",
+      "content": [
+        "Explain the memory operation in each"
+      ]
+    },
+    {
+      "practical_number": 19,
+      "title": "R2 ? M[AR] b",
+      "content": [
+        "R2 ? M[AR] b"
+      ]
+    },
+    {
+      "practical_number": 20,
+      "title": "M[AR] ? R3 c",
+      "content": [
+        "M[AR] ? R3 c"
+      ]
+    },
+    {
+      "practical_number": 21,
+      "title": "R5 ? M[R5], Starting from",
+      "content": [
+        "R5 ? M[R5], Starting from"
+      ]
+    },
+    {
+      "practical_number": 22,
+      "title": "an initial value of R = 11011101, determine the sequence of binary",
+      "content": [
+        "an initial value of R = 11011101, determine the sequence of binary"
+      ]
+    },
+    {
+      "practical_number": 23,
+      "title": "values in R after a logical shift-left, followed by a circular shift-",
+      "content": [
+        "values in R after a logical shift-left, followed by a circular shift-"
+      ]
+    },
+    {
+      "practical_number": 24,
+      "title": "right, followed by a logical shift-right and a circular shift-left",
+      "content": [
+        "right, followed by a logical shift-right and a circular shift-left"
+      ]
+    },
+    {
+      "practical_number": 25,
+      "title": "A computer uses a memory unit with 256K words of 32 bit each",
+      "content": [
+        "A computer uses a memory unit with 256K words of 32 bit each"
+      ]
+    },
+    {
+      "practical_number": 26,
+      "title": "binary instructions code is store in one word of memory",
+      "content": [
+        "binary instructions code is store in one word of memory"
+      ]
+    },
+    {
+      "practical_number": 27,
+      "title": "instructions have four parts: an indirect bit, an operation code, a",
+      "content": [
+        "instructions have four parts: an indirect bit, an operation code, a"
+      ]
+    },
+    {
+      "practical_number": 28,
+      "title": "register code part to specify one of 64 registers, and an address part",
+      "content": [
+        "register code part to specify one of 64 registers, and an address part"
+      ]
+    },
+    {
+      "practical_number": 29,
+      "title": "How many bits are there in the operation code, the register code",
+      "content": [
+        "How many bits are there in the operation code, the register code"
+      ]
+    },
+    {
+      "practical_number": 30,
+      "title": "part, and the address part? b",
+      "content": [
+        "part, and the address part? b"
+      ]
+    },
+    {
+      "practical_number": 31,
+      "title": "Draw instruction word formant and",
+      "content": [
+        "Draw instruction word formant and"
+      ]
+    },
+    {
+      "practical_number": 32,
+      "title": "indicate the number of bits in each part. c",
+      "content": [
+        "indicate the number of bits in each part. c"
+      ]
+    },
+    {
+      "practical_number": 33,
+      "title": "How many bits are there",
+      "content": [
+        "How many bits are there"
+      ]
+    },
+    {
+      "practical_number": 34,
+      "title": "in the data and address inputs of the memory?, The following",
+      "content": [
+        "in the data and address inputs of the memory?, The following"
+      ]
+    },
+    {
+      "practical_number": 35,
+      "title": "control inputs are active in the bus system shown in figure of Basic",
+      "content": [
+        "control inputs are active in the bus system shown in figure of Basic"
+      ]
+    },
+    {
+      "practical_number": 36,
+      "title": "computer registers connected to a common bus",
+      "content": [
+        "computer registers connected to a common bus"
+      ]
+    },
+    {
+      "practical_number": 37,
+      "title": "For each case",
+      "content": [
+        "For each case"
+      ]
+    },
+    {
+      "practical_number": 38,
+      "title": "specify the register transfer that will be executed during the next",
+      "content": [
+        "specify the register transfer that will be executed during the next"
+      ]
+    },
+    {
+      "practical_number": 39,
+      "title": "clock transition",
+      "content": [
+        "clock transition"
+      ]
+    },
+    {
+      "practical_number": 40,
+      "title": "S2 S1 S0 LD of Register Memory Adder a 1 1 1 IR",
+      "content": [
+        "S2 S1 S0 LD of Register Memory Adder a 1 1 1 IR"
+      ]
+    },
+    {
+      "practical_number": 41,
+      "title": "Read -- b 1 1 0 PC -- -- c 1 0 0 DR Write -- d 0 0 0 AC -- Add",
+      "content": [
+        "Read -- b 1 1 0 PC -- -- c 1 0 0 DR Write -- d 0 0 0 AC -- Add"
+      ]
+    },
+    {
+      "practical_number": 42,
+      "title": "Consider the instruction formants of the basic computer shown in",
+      "content": [
+        "Consider the instruction formants of the basic computer shown in"
+      ]
+    },
+    {
+      "practical_number": 43,
+      "title": "figure of demonstration of Direct Indirect address and the list of",
+      "content": [
+        "figure of demonstration of Direct Indirect address and the list of"
+      ]
+    },
+    {
+      "practical_number": 44,
+      "title": "instructions given in table of Basic computer instructions",
+      "content": [
+        "instructions given in table of Basic computer instructions"
+      ]
+    },
+    {
+      "practical_number": 45,
+      "title": "of the following 16 bit instructions, given the equivalent four digit",
+      "content": [
+        "of the following 16 bit instructions, given the equivalent four digit"
+      ]
+    },
+    {
+      "practical_number": 46,
+      "title": "hexadecimal code and explain in your words what it is that the",
+      "content": [
+        "hexadecimal code and explain in your words what it is that the"
+      ]
+    },
+    {
+      "practical_number": 47,
+      "title": "instruction is going to performed. a. 0001 0000 0010 0100 b. 1011",
+      "content": [
+        "instruction is going to performed. a. 0001 0000 0010 0100 b. 1011"
+      ]
+    },
+    {
+      "practical_number": 48,
+      "title": "0001 0010 0100 c. 0111 0000 0010 0000",
+      "content": [
+        "0001 0010 0100 c. 0111 0000 0010 0000"
+      ]
+    },
+    {
+      "practical_number": 49,
+      "title": "List the assembly language program (of the equivalent binary",
+      "content": [
+        "List the assembly language program (of the equivalent binary"
+      ]
+    },
+    {
+      "practical_number": 50,
+      "title": "instructions) generated by a compiler from the following Fortran",
+      "content": [
+        "instructions) generated by a compiler from the following Fortran"
+      ]
+    },
+    {
+      "practical_number": 51,
+      "title": "Assume integer variables",
+      "content": [
+        "Assume integer variables"
+      ]
+    },
+    {
+      "practical_number": 52,
+      "title": "SUM = 0 SUM = SUM + A + B",
+      "content": [
+        "SUM = 0 SUM = SUM + A + B"
+      ]
+    },
+    {
+      "practical_number": 53,
+      "title": "DIF = DIF – C SUM = SUM + DIF, List the assembly language",
+      "content": [
+        "DIF = DIF – C SUM = SUM + DIF, List the assembly language"
+      ]
+    },
+    {
+      "practical_number": 54,
+      "title": "program (of the equivalent binary instructions) generated by a",
+      "content": [
+        "program (of the equivalent binary instructions) generated by a"
+      ]
+    },
+    {
+      "practical_number": 55,
+      "title": "compiler from the following IF statement: IF (A – B) 10, 20, 30",
+      "content": [
+        "compiler from the following IF statement: IF (A – B) 10, 20, 30"
+      ]
+    },
+    {
+      "practical_number": 56,
+      "title": "The program branches to statement 10 if A – B < 0; to statement 20",
+      "content": [
+        "The program branches to statement 10 if A – B < 0; to statement 20"
+      ]
+    },
+    {
+      "practical_number": 57,
+      "title": "if A – B = 0; and to statement 30 if A – B > 0",
+      "content": [
+        "if A – B = 0; and to statement 30 if A – B > 0"
+      ]
+    },
+    {
+      "practical_number": 58,
+      "title": "Write a program that",
+      "content": [
+        "Write a program that"
+      ]
+    },
+    {
+      "practical_number": 59,
+      "title": "evaluates the logic exclusive-OR of two operands",
+      "content": [
+        "evaluates the logic exclusive-OR of two operands"
+      ]
+    },
+    {
+      "practical_number": 60,
+      "title": "A bus organized CPU has 16 registers with 32 bits in each an ALU",
+      "content": [
+        "A bus organized CPU has 16 registers with 32 bits in each an ALU"
+      ]
+    },
+    {
+      "practical_number": 61,
+      "title": "and a destination decoder. a",
+      "content": [
+        "and a destination decoder. a"
+      ]
+    },
+    {
+      "practical_number": 62,
+      "title": "How many multiplexers are there in",
+      "content": [
+        "How many multiplexers are there in"
+      ]
+    },
+    {
+      "practical_number": 63,
+      "title": "the A bus and what is the size of each multiplexer? b",
+      "content": [
+        "the A bus and what is the size of each multiplexer? b"
+      ]
+    },
+    {
+      "practical_number": 64,
+      "title": "selection inputs are needed for MUX A and MUX B? c",
+      "content": [
+        "selection inputs are needed for MUX A and MUX B? c"
+      ]
+    },
+    {
+      "practical_number": 65,
+      "title": "inputs and outputs are there in decoder? d",
+      "content": [
+        "inputs and outputs are there in decoder? d"
+      ]
+    },
+    {
+      "practical_number": 66,
+      "title": "How many inputs and",
+      "content": [
+        "How many inputs and"
+      ]
+    },
+    {
+      "practical_number": 67,
+      "title": "outputs are there in the ALU for data, including input and output",
+      "content": [
+        "outputs are there in the ALU for data, including input and output"
+      ]
+    },
+    {
+      "practical_number": 68,
+      "title": "carries?, Specify the control word that must be applied to the",
+      "content": [
+        "carries?, Specify the control word that must be applied to the"
+      ]
+    },
+    {
+      "practical_number": 69,
+      "title": "processor of ALU to implement the following micro-operations. a",
+      "content": [
+        "processor of ALU to implement the following micro-operations. a"
+      ]
+    },
+    {
+      "practical_number": 70,
+      "title": "R1 ? R2+R3 b",
+      "content": [
+        "R1 ? R2+R3 b"
+      ]
+    },
+    {
+      "practical_number": 71,
+      "title": "R4 ? ??4¯¯¯¯ c",
+      "content": [
+        "R4 ? ??4¯¯¯¯ c"
+      ]
+    },
+    {
+      "practical_number": 72,
+      "title": "R6 ? SHL R1 e",
+      "content": [
+        "R6 ? SHL R1 e"
+      ]
+    },
+    {
+      "practical_number": 73,
+      "title": "INPUT, Determine the micro-operations that will be executed in the",
+      "content": [
+        "INPUT, Determine the micro-operations that will be executed in the"
+      ]
+    },
+    {
+      "practical_number": 74,
+      "title": "processor of ALU when the following 14-bit control words are",
+      "content": [
+        "processor of ALU when the following 14-bit control words are"
+      ]
+    },
+    {
+      "practical_number": 75,
+      "title": "applied. a. 00101001100101 b. 00000000000000 c",
+      "content": [
+        "applied. a. 00101001100101 b. 00000000000000 c"
+      ]
+    },
+    {
+      "practical_number": 76,
+      "title": "01001001001100 d. 00000100000010 e. 11110001110000",
+      "content": [
+        "01001001001100 d. 00000100000010 e. 11110001110000"
+      ]
+    },
+    {
+      "practical_number": 77,
+      "title": "Convert the following arithmetic expression from infix to reverse",
+      "content": [
+        "Convert the following arithmetic expression from infix to reverse"
+      ]
+    },
+    {
+      "practical_number": 78,
+      "title": "polish notation. a",
+      "content": [
+        "polish notation. a"
+      ]
+    },
+    {
+      "practical_number": 79,
+      "title": "A*B+C*D+E*F b",
+      "content": [
+        "A*B+C*D+E*F b"
+      ]
+    },
+    {
+      "practical_number": 80,
+      "title": "A*B+A*(B*D+C*E) c",
+      "content": [
+        "A*B+A*(B*D+C*E) c"
+      ]
+    },
+    {
+      "practical_number": 81,
+      "title": "+B*[C*D+E*(F+G)] d",
+      "content": [
+        "+B*[C*D+E*(F+G)] d"
+      ]
+    },
+    {
+      "practical_number": 82,
+      "title": "A*[B+C*(D+E)] / F*(G+H), Convert the",
+      "content": [
+        "A*[B+C*(D+E)] / F*(G+H), Convert the"
+      ]
+    },
+    {
+      "practical_number": 83,
+      "title": "following numerical arithmetic expression into reverse polish",
+      "content": [
+        "following numerical arithmetic expression into reverse polish"
+      ]
+    },
+    {
+      "practical_number": 84,
+      "title": "notation and show the stack operations for evaluating numerical",
+      "content": [
+        "notation and show the stack operations for evaluating numerical"
+      ]
+    },
+    {
+      "practical_number": 85,
+      "title": "(3+4) [10(2+6)+8] b",
+      "content": [
+        "(3+4) [10(2+6)+8] b"
+      ]
+    },
+    {
+      "practical_number": 86,
+      "title": "(5*4)/[(12+3)*7]",
+      "content": [
+        "(5*4)/[(12+3)*7]"
+      ]
+    },
+    {
+      "practical_number": 87,
+      "title": "Write a Program to evaluate the arithmetic statement",
+      "content": [
+        "Write a Program to evaluate the arithmetic statement"
+      ]
+    },
+    {
+      "practical_number": 88,
+      "title": "C + (D * E – F) / G + H * K a",
+      "content": [
+        "C + (D * E – F) / G + H * K a"
+      ]
+    },
+    {
+      "practical_number": 89,
+      "title": "Using a general register computer",
+      "content": [
+        "Using a general register computer"
+      ]
+    },
+    {
+      "practical_number": 90,
+      "title": "with three address instructions. b",
+      "content": [
+        "with three address instructions. b"
+      ]
+    },
+    {
+      "practical_number": 91,
+      "title": "Using a general register computer",
+      "content": [
+        "Using a general register computer"
+      ]
+    },
+    {
+      "practical_number": 92,
+      "title": "with two address instructions. c",
+      "content": [
+        "with two address instructions. c"
+      ]
+    },
+    {
+      "practical_number": 93,
+      "title": "Using a general register computer",
+      "content": [
+        "Using a general register computer"
+      ]
+    },
+    {
+      "practical_number": 94,
+      "title": "with one address instructions. d",
+      "content": [
+        "with one address instructions. d"
+      ]
+    },
+    {
+      "practical_number": 95,
+      "title": "Using a general register computer",
+      "content": [
+        "Using a general register computer"
+      ]
+    },
+    {
+      "practical_number": 96,
+      "title": "with zero address operation instructions",
+      "content": [
+        "with zero address operation instructions"
+      ]
+    },
+    {
+      "practical_number": 97,
+      "title": "An 8-bit Computer has a",
+      "content": [
+        "An 8-bit Computer has a"
+      ]
+    },
+    {
+      "practical_number": 98,
+      "title": "Determine the values of status bits, C, S, Z, and V (As",
+      "content": [
+        "Determine the values of status bits, C, S, Z, and V (As"
+      ]
+    },
+    {
+      "practical_number": 99,
+      "title": "per the Status register bits diagram) after each of the following",
+      "content": [
+        "per the Status register bits diagram) after each of the following"
+      ]
+    },
+    {
+      "practical_number": 100,
+      "title": "instructions",
+      "content": [
+        "instructions"
+      ]
+    },
+    {
+      "practical_number": 101,
+      "title": "The initial value of register R in each case is",
+      "content": [
+        "The initial value of register R in each case is"
+      ]
+    },
+    {
+      "practical_number": 102,
+      "title": "hexadecimal 71",
+      "content": [
+        "hexadecimal 71"
+      ]
+    },
+    {
+      "practical_number": 103,
+      "title": "The numbers below are also in hexadecimal. a",
+      "content": [
+        "The numbers below are also in hexadecimal. a"
+      ]
+    },
+    {
+      "practical_number": 104,
+      "title": "Add immediate operand C6 to R. b",
+      "content": [
+        "Add immediate operand C6 to R. b"
+      ]
+    },
+    {
+      "practical_number": 105,
+      "title": "Add immediate operand IE to",
+      "content": [
+        "Add immediate operand IE to"
+      ]
+    },
+    {
+      "practical_number": 106,
+      "title": "Subtract immediate operand 9A from R. d",
+      "content": [
+        "Subtract immediate operand 9A from R. d"
+      ]
+    },
+    {
+      "practical_number": 107,
+      "title": "AND immediate",
+      "content": [
+        "AND immediate"
+      ]
+    },
+    {
+      "practical_number": 108,
+      "title": "operand 8D to R. e",
+      "content": [
+        "operand 8D to R. e"
+      ]
+    },
+    {
+      "practical_number": 109,
+      "title": "Exclusive-OR R with R",
+      "content": [
+        "Exclusive-OR R with R"
+      ]
+    },
+    {
+      "practical_number": 110,
+      "title": "Draw a space time diagram for a six-segment pipeline showing the",
+      "content": [
+        "Draw a space time diagram for a six-segment pipeline showing the"
+      ]
+    },
+    {
+      "practical_number": 111,
+      "title": "time it takes to process eight tasks",
+      "content": [
+        "time it takes to process eight tasks"
+      ]
+    },
+    {
+      "practical_number": 112,
+      "title": "Determine the number if clock",
+      "content": [
+        "Determine the number if clock"
+      ]
+    },
+    {
+      "practical_number": 113,
+      "title": "cycles that it takes to process 200 tasks in a six-segment pipeline",
+      "content": [
+        "cycles that it takes to process 200 tasks in a six-segment pipeline"
+      ]
+    },
+    {
+      "practical_number": 114,
+      "title": "non-pipeline system takes 50 ns to process a task",
+      "content": [
+        "non-pipeline system takes 50 ns to process a task"
+      ]
+    },
+    {
+      "practical_number": 115,
+      "title": "The same task",
+      "content": [
+        "The same task"
+      ]
+    },
+    {
+      "practical_number": 116,
+      "title": "can be processed in a six-segment pipeline with a clock cycle of 10",
+      "content": [
+        "can be processed in a six-segment pipeline with a clock cycle of 10"
+      ]
+    },
+    {
+      "practical_number": 117,
+      "title": "Determine the speedup ratio of the pipeline for 100 tasks",
+      "content": [
+        "Determine the speedup ratio of the pipeline for 100 tasks"
+      ]
+    },
+    {
+      "practical_number": 118,
+      "title": "is the maximum speedup that can be achieved?",
+      "content": [
+        "is the maximum speedup that can be achieved?"
+      ]
+    },
+    {
+      "practical_number": 119,
+      "title": "Show the contents of registers E, A, Q, and SC (as Table) during the",
+      "content": [
+        "Show the contents of registers E, A, Q, and SC (as Table) during the"
+      ]
+    },
+    {
+      "practical_number": 120,
+      "title": "process of multiplication of two binary numbers, 11111",
+      "content": [
+        "process of multiplication of two binary numbers, 11111"
+      ]
+    },
+    {
+      "practical_number": 121,
+      "title": "(multiplicand) and 10101 (multiplier)",
+      "content": [
+        "(multiplicand) and 10101 (multiplier)"
+      ]
+    },
+    {
+      "practical_number": 122,
+      "title": "The signs are not included",
+      "content": [
+        "The signs are not included"
+      ]
+    },
+    {
+      "practical_number": 123,
+      "title": "Explain the Booth’s algorithm with the help of flowchart also show",
+      "content": [
+        "Explain the Booth’s algorithm with the help of flowchart also show"
+      ]
+    },
+    {
+      "practical_number": 124,
+      "title": "the steps for (-9) * (-13) using Booth’s Algorithm",
+      "content": [
+        "the steps for (-9) * (-13) using Booth’s Algorithm"
+      ]
+    },
+    {
+      "practical_number": 125,
+      "title": "Show the step-by-step multiplication process using booth algorithm",
+      "content": [
+        "Show the step-by-step multiplication process using booth algorithm"
+      ]
+    },
+    {
+      "practical_number": 126,
+      "title": "when the following binary numbers are multiplied",
+      "content": [
+        "when the following binary numbers are multiplied"
+      ]
+    },
+    {
+      "practical_number": 127,
+      "title": "Assume 5-bit",
+      "content": [
+        "Assume 5-bit"
+      ]
+    },
+    {
+      "practical_number": 128,
+      "title": "registers that hold signed numbers",
+      "content": [
+        "registers that hold signed numbers"
+      ]
+    },
+    {
+      "practical_number": 129,
+      "title": "The multiplicand in both cases is",
+      "content": [
+        "The multiplicand in both cases is"
+      ]
+    },
+    {
+      "practical_number": 130,
+      "title": "(+15) * (+13) b",
+      "content": [
+        "(+15) * (+13) b"
+      ]
+    },
+    {
+      "practical_number": 131,
+      "title": "(+15) * (-13)",
+      "content": [
+        "(+15) * (-13)"
+      ]
+    },
+    {
+      "practical_number": 132,
+      "title": "How many 128*8 RAM chips are needed to provide a memory",
+      "content": [
+        "How many 128*8 RAM chips are needed to provide a memory"
+      ]
+    },
+    {
+      "practical_number": 133,
+      "title": "capacity of 2048 bytes? b",
+      "content": [
+        "capacity of 2048 bytes? b"
+      ]
+    },
+    {
+      "practical_number": 134,
+      "title": "How many lines of the address bus must",
+      "content": [
+        "How many lines of the address bus must"
+      ]
+    },
+    {
+      "practical_number": 135,
+      "title": "be used to access 2048 bytes of memory? How many of these lines",
+      "content": [
+        "be used to access 2048 bytes of memory? How many of these lines"
+      ]
+    },
+    {
+      "practical_number": 136,
+      "title": "will be common to all chips? c",
+      "content": [
+        "will be common to all chips? c"
+      ]
+    },
+    {
+      "practical_number": 137,
+      "title": "How many lines must be decoded",
+      "content": [
+        "How many lines must be decoded"
+      ]
+    },
+    {
+      "practical_number": 138,
+      "title": "for chips select? Specify the size of the decoders",
+      "content": [
+        "for chips select? Specify the size of the decoders"
+      ]
+    },
+    {
+      "practical_number": 139,
+      "title": "A computer uses",
+      "content": [
+        "A computer uses"
+      ]
+    },
+    {
+      "practical_number": 140,
+      "title": "RAM chips of 1024 * 1 capacity. a",
+      "content": [
+        "RAM chips of 1024 * 1 capacity. a"
+      ]
+    },
+    {
+      "practical_number": 141,
+      "title": "How many chips are needed",
+      "content": [
+        "How many chips are needed"
+      ]
+    },
+    {
+      "practical_number": 142,
+      "title": "and how should their address lines be connected to provide a",
+      "content": [
+        "and how should their address lines be connected to provide a"
+      ]
+    },
+    {
+      "practical_number": 143,
+      "title": "memory capacity of 1024 bytes? b",
+      "content": [
+        "memory capacity of 1024 bytes? b"
+      ]
+    },
+    {
+      "practical_number": 144,
+      "title": "How many chips are needed to",
+      "content": [
+        "How many chips are needed to"
+      ]
+    },
+    {
+      "practical_number": 145,
+      "title": "provide a memory capacity of 16K bytes? Explain in words how the",
+      "content": [
+        "provide a memory capacity of 16K bytes? Explain in words how the"
+      ]
+    },
+    {
+      "practical_number": 146,
+      "title": "chips are to be connected to the address bus",
+      "content": [
+        "chips are to be connected to the address bus"
+      ]
+    }
+  ]
+}

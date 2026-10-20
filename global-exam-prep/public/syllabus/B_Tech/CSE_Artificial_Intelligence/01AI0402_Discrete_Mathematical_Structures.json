@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Discrete Mathematical Structures",
+    "subject_code": "01AI0402",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0402 - Discrete Mathematical Structures.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Propositional and Predicate Logic",
+      "content": [
+        "Definition, Statements & Notation, Truth Values, Statement",
+        "Formulas & Truth Tables, Tautologies, Equivalence of Formulas",
+        "Tautological Implications, Examples, predicates, Rules of",
+        "quantifiers. Rules of Inference for propositions and predicates"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Relation, Lattices and Boolean algebra",
+      "content": [
+        "Relation, different types of relation, Properties of relation, Relation",
+        "Matrix and Graph of a Relation, Equivalence Relation, Transitive",
+        "Closure, Poset, Hasse diagram, Lattice as Poset Properties of",
+        "lattices, Lattice as an algebraic system, Bounded, distributive and",
+        "complemented lattices, Boolean algebra (Definitions and simple",
+        "examples only)"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Recurrence Relation",
+      "content": [
+        "Definition, Order of recurrence relation, homogeneous and non",
+        "homogeneous recurrence relation, method of undetermined",
+        "coefficient"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Algebraic Structures",
+      "content": [
+        "Algebraic structures with one binary operation, Semigroup, Monoid",
+        "Group, Subgroup, normal subgroup, group Permutations, Coset",
+        "homomorphic subgroups, Lagrange’s theorem, Congruence relation",
+        "and quotient structures, Algebraic structures (Definitions and simple",
+        "examples only) with two binary operation- Ring, Integral domain",
+        "and field"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Concepts of Graphs and Trees",
+      "content": [
+        "Definition of a graph theory, incidence and degree, walks, paths",
+        "circuits, Connectedness, Eulerian and Hamiltonian graphs, Trees",
+        "basic properties of trees, Binary trees , Spanning and Minimal",
+        "spanning trees, Connectivity and Separability, fundamental circuits",
+        "and cut sets Isomorphism of graphs, Matrix representation of",
+        "graphs, adjacency and incidence matrix, Graph theoretical",
+        "algorithms: Dijkstra, prims and Kruskal"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "VLSI Physical Design",
+    "subject_code": "01CT0717",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT0717 - VLSI Physical Design.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "VLSI design styles, VLSI Physical Design flow"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Floor Planning and placement",
+      "content": [
+        "Partitioning, floor planning and its algorithms, pin assignments",
+        "placement,, classification of placement algorithms"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Routing",
+      "content": [
+        "Grid routing, global routing, detail routing"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Clock design",
+      "content": [
+        "Clock design issues, Clock distribution, clock skew and jitter, Clock",
+        "network synthesis, set-up time and hold time, strategies to reduce",
+        "clock skew, power and ground routing"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Timing analysis",
+      "content": [
+        "Time closure, timing driven placement, Timing driven routing",
+        "static timing analysis,, slack calculation, timing analysis problems"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Physical Synthesis and interconnect",
+      "content": [
+        "Physical synthesis, gate sizing, buffering, netlist restructuring",
+        "performance driven design flow. Timing optimization, interconnect",
+        "modeling, wire geometry, layer stack, wire resistance, choice of",
+        "metal, cross talk, Design rule check, Layout"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Design for Testability",
+      "content": [
+        "Various sources of faults and types of faults, fault modeling, Design",
+        "for testability, DFT techniques, scan path design, scan flip flop",
+        "boundary scan, built in self-test"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Low power design techniques",
+      "content": [
+        "Types of power dissipation, Techniques to reduce power, gate level",
+        "design for low power"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment-10 Analyze clock tree synthesis using TritonCTS 2.0",
+      "content": [
+        "Perform global routing using TritonRoute and do analysis of design"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment-13 Perform parasitic extraction analysis using OpenRCX",
+      "content": [
+        "Experiment-14 Check antenna rules violations using Antenna Rule Checker and",
+        "generate a report"
+      ]
+    }
+  ]
+}

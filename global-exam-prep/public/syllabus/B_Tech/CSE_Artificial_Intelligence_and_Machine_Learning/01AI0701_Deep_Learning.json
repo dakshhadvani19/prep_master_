@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Deep Learning",
+    "subject_code": "01AI0701",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Machine Learning",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0701 - Deep Learning.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Deep Learning",
+      "content": [
+        "Introduction to deep learning and biological motivation",
+        "Applications of deep learning, suitable problems for deep learning",
+        "Neurons, Neural Network, Activation Function"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Neural Networks",
+      "content": [
+        "Single layer neural network, Stochastic Gradient Descent, Gradient",
+        "Descent Extensions, Gradient Descent Regularization, Multilayer",
+        "Perceptron, Back propagation, Chain Rule, Deep Learning Model"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Convolutional Neural Network",
+      "content": [
+        "Introduction with Background and Application, properties of CNN",
+        "Motivation for Convolutional Layer, CNN Architecture, Training",
+        "for Deep CNN, Padding and Stride, Computer vision tasks"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Unsupervised Representational Learning",
+      "content": [
+        "Introduction with Motivation and Application, Auto encoder, Neural",
+        "Language Processing, Word embeddings, Generative models",
+        "Generative Adversarial Networks"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "RNN,LSTM and GRU",
+      "content": [
+        "RNN, LSTM, GRU- Image Segmentation, Image classification",
+        "Object Detection, Automatic Image Captioning, ,Image generation",
+        "with Generative Adversarial Networks, LSTM as a classifier Model",
+        "Attention Models for Computer Vision"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Applications and Case Study",
+      "content": [
+        "Case Study: Named Entity Recognition, Opinion Mining using",
+        "Recurrent Neural Networks, Parsing and Sentiment Analysis using",
+        "Recursive Neural Networks, Sentence Classification using",
+        "Convolutional Neural Networks, Dialogue Generation with LSTMs"
+      ]
+    }
+  ]
+}

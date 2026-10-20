@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Net Technologies",
+    "subject_code": "01CT1518",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1518 - Net Technologies.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to .Net Framework",
+      "content": [
+        "Introduction to .NET Framework Architecture, Program Execution",
+        "in .NET, CLR Structure , MSIL, CLS, CTS, Namespcaes",
+        "Assemblies the common Language Implementation, Creating strong",
+        "named assemblies , Garbage Collection"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "The Basics and Console Applications in C#",
+      "content": [
+        "C data types, declaring variables and constants, Type, Conversion",
+        "Boxing, Unboxing, Array, Structure, String Manipulation, String",
+        "Builder, Decision making statements, Conditional Loops, Switch",
+        "Case, Name Spaces - Constructor and Destructors, Function",
+        "Overloading &Inheritance, Operator Overloading, when to use",
+        "Console Applications - Generating Console Output, Processing",
+        "Console Input"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Advance C#",
+      "content": [
+        "Attributes, Reflection, Delegates, Events, Threading, Collections"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Building GUI with C#",
+      "content": [
+        "Working with common form controls, Visual Inheritance, Event",
+        "Handling"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Working with SQL server",
+      "content": [
+        "Introduction to SQL server, Different types of queries, SQL index",
+        "SQL views, stored procedure, cursor"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "ASP.NET",
+      "content": [
+        "Introduction to ASP.NET,, Working with Web and HTML",
+        "Controls,, Using Rich Server Controls, Login controls, Overview of",
+        "ASP.NET Validation Controls, Using the Simple Validations, Using",
+        "the Complex Validators Accessing, Data using ADO.NET, Using",
+        "the Complex Validators Accessing Data using ADO.NET",
+        "Configuration Overview"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Managing State",
+      "content": [
+        "Preserving State in Web Applications, Page-Level State, Using",
+        "Cookies to Preserve State, ASP.NET Session State, Storing Objects",
+        "in Session State, Configuring Session State, Setting Up an Out-of",
+        "Process State Server, Storing Session State in SQL Server, Using",
+        "Cookie less Session IDs, Application State Using the Data List and",
+        "Repeater Controls"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "ASP.NET MVC",
+      "content": [
+        "Controller, Model, View, Layout, Partial Views, Razor Language",
+        "jQuery Ajax, Entity Framework, routing mechanism, Web API"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Introduction to .NET Core",
+      "content": [
+        "Controllers, views, models, layout, Introduction to entity framework",
+        "core, Routing, Web api, Dependency injection"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Deployment of web app",
+      "content": [
+        "Deploy web app locally, accessing in local environment from",
+        "multiple devices"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiments 11 Write a program to Handle Exceptions",
+      "content": [
+        "Write a program to create a form with Basic control in C#. NET"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiments",
+      "content": [
+        "Write a API which can be consumed from any other languages I.e",
+        "Android / iOS / php / java etc"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiments 14 Write a program to generate daily different offers to attract",
+      "content": [
+        "customers for online shopping portal"
+      ]
+    }
+  ]
+}

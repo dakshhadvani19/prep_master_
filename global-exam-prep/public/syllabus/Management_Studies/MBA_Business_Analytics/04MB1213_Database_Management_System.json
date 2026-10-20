@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Database Management System",
+    "subject_code": "04MB1213",
+    "subject_id": null,
+    "department": "Management Studies",
+    "course_or_branch": "MBA Business Analytics",
+    "semester": 2,
+    "source": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Database Management System [a44b49128e00].pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Databases and Transaction",
+      "content": [
+        "What is Database system, Purpose of Database System, view of",
+        "data, Relational Databases, Database Architecture, Transaction",
+        "Management Data Models: The importance of Data Models, Basic",
+        "Building Blocks, Business Rules, The evolution of Data Models",
+        "Degrees of Data Abstraction. Object Oriented Data Model"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Database Design, ER-Diagram and Unified Modelling Language",
+      "content": [
+        "Database Design and ER Model: Overview, ER-Model, Constraints",
+        "ER-Diagrams, ERD Issues, Weak Entity Sets, Codd’s rules",
+        "Relational Schemas, Introduction to UML"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Relational Algebra and Calculus",
+      "content": [
+        "Relational Algebra: Introduction, Selection and Projection, Set",
+        "Operations, Renaming, Joins, Division, Syntax, Semantic",
+        "Operators, grouping and ungrouping, Relational Comparison",
+        "Calculus: Tuple Relational Calculus, Domain Relational Calculus",
+        "Calculus vs Algebra, Computational Capabilities"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Constraints, Views and SQL",
+      "content": [
+        "What is Constraints, types of Constrains, Integrity Constraints",
+        "Views: Introduction to views, Data independence, security, updates",
+        "on views, comparison between tables and views SQL: Data",
+        "definition, Aggregate function, Null Values, Nested sub Queries",
+        "Joined relations, and Triggers"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Relational database model: Logical view of data, keys, and Integrity rules",
+      "content": [
+        ": Relational Database design: Features of good Relational Database",
+        "Design, Atomic Domain and Normalization (1NF, 2NF, 3NF",
+        "BCNF)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Design and Analysis of Algorithm",
+    "subject_code": "01CE1503",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE1503 - Design and Analysis of Algorithm__38fabb22.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Analysis of Algorithm",
+      "content": [
+        "Introduction to algorithm, characteristics,, Efficiency of algorithm",
+        "Average, Best and Worst case analysis,, Asymptotic notations - Big",
+        "oh notation, Omega notations, , Theta notation , Amortized",
+        "Analysis, Analysis of algorithms - Using control statements",
+        "through recurrence equation- Substitution method, , Master’s",
+        "method, Tree based method"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "DESIGN AND ANALYSIS OF ALGORITHM 01CE1503",
+      "content": [
+        "Comparison based sorting algorithms, , Non Comparison based",
+        "sorting algorithms,, Problem Solving using divide and conquer",
+        "algorithm-Max-Min problem, , Matrix Multiplication, , Exponential"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Greedy and Dynamic Programming",
+      "content": [
+        "Introduction to Greedy algorithm,, Characteristics, , elements of",
+        "greedy technique, Activity selection problem, Knapsack problem",
+        "Job Scheduling problem., Introduction to Dynamic programming",
+        "elements of dynamic programming, Greedy vs. Dynamic,, Making",
+        "Change, Knapsack problem, Assembly Line Scheduling, Matrix",
+        "Chain Multiplication, Longest Common Subsequence, Huffman",
+        "coding"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Graph Representation and String Matching",
+      "content": [
+        "Graph Traversal algorithms- Breadth First Search, Depth First",
+        "Search, , Minimum Spanning Tree- Prim’s and Kruskal’s",
+        "Algorithm, Shortest Path Algorithm - Dijkstra’s Algorithm, All Pair",
+        "Shortest Path, Bellman-Ford Algorithm. Introduction to String",
+        "Matching,, The naive string matching algorithm, The Rabin-Karp",
+        "algorithm, The Knuth-Morris-Pratt algorithm"
+      ]
+    }
+  ]
+}

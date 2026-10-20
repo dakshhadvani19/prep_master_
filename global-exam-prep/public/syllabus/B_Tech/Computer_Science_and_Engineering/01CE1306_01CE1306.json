@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "01CE1306",
+    "subject_code": "01CE1306",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0306 - Web Technology.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Web and HTML",
+      "content": [
+        "Introduction to Web Servers, HTTP request and Response Model",
+        "Structure of HTML, Doctypes in HTML, HTML Tags, Elements",
+        "and attributes, HTML 5 Layout and syntax, Attributes, Events, Web",
+        "forms and validations, Audio &amp",
+        "Video, SVG"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "CSS3",
+      "content": [
+        "Introduction, Selectors (basic, pseudo class, pseudo element),, Box",
+        "Model, Backgrounds and Borders, Text Effects, 2D/3D",
+        "Transformations, Transitions, Images, Positioning, Animations",
+        "Flex-Box, Multiple Column Layout, Media Queries, CSS Variables"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Bootstrap",
+      "content": [
+        "Media Object, Grid Layouts, Typography, Buttons, Input Elements",
+        "Cards and Navigation, List Groups, Progress Bars, Tool Tips",
+        "Pagination, Modals, Collapse, Accordion, Carousel"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Tailwind CSS",
+      "content": [
+        "Introduction, Tailwind CSS layout, Tailwind CSS Flexbox",
+        "Tailwind CSS Grid, Tailwind CSS Typography, Tailwind CSS",
+        "Background,, Tailwind CSS Border, Tailwind CSS Transition and",
+        "Transformation"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Version Control and Web Hosting Basics",
+      "content": [
+        "Introduction to Version Control Systems, Git Basics, Essential Git",
+        "Commands, Working with GitHub, Advanced Git and GitHub",
+        "Features, Web Hosting Basics, Static Site Hosting with GitHub",
+        "Pages"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "JavaScript",
+      "content": [
+        "JS Syntax, Variable, String, Loops and Control, Operators",
+        "Functions, Events, Array, Date, Type conversions, this, arrow,, JS",
+        "validation, JS class and object, DOM, JSON, JS AJAX"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Create a responsive web page of your Product page using Tailwind",
+        "CSS only"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Publish your college webpage (Lab 4 OR Lab 8) using GitHub",
+        "Pages"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Create a HTML form that accept the student data like enrollment",
+        "number, name, email id, password, confirm password, phone",
+        "number, address, gender, choices of branch and perform client-side",
+        "validation using JavaScript"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Create a quiz application that displays one question at a time. Track",
+        "the user's score and show the final result at the end"
+      ]
+    }
+  ]
+}

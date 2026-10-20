@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Information & Network Security",
+    "subject_code": "01CE0619",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0619 - Information & Network Security.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Conventional Encryption and Techniques",
+      "content": [
+        "Conventional Encryption Model, Steganography, Classical",
+        "Encryption Techniques, stream ciphers and block ciphers, Block",
+        "Cipher structure, Data Encryption standard (DES), AES with",
+        "structure, its transformation functions, key expansion, Multiple",
+        "encryption and triple DES, Modes of Operations"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Public Key Cryptography",
+      "content": [
+        "Principles Of Public-Key Cryptography, RSA Algorithm, Key",
+        "Management, Diffie-Hellman Key Exchange"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Message Authentication, Hash Functions and Cryptographic Hash Functions",
+      "content": [
+        "Authentication Requirement, Functions, Message Authentication",
+        "Code, Hash Functions, MACs based on Hash Functions, Macs",
+        "based on Block Ciphers, Cryptographic Hash Functions, their",
+        "applications, Simple hash functions, its requirements and security",
+        "Hash functions based on Cipher Block Chaining, MD5 Message",
+        "Digest Algorithm, Secure Hash Algorithm (SHA), Ripemd-160",
+        "HMAC"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Digital Signature",
+      "content": [
+        "Digital Signature, its properties, requirements and security, Digital",
+        "Signature Standards, , Digital Signature Algorithm, , various digital",
+        "signature schemes (Elgamal and Schnorr), NIST digital Signature",
+        "algorithm"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Network Security",
+      "content": [
+        "Key management and distribution, symmetric key distribution using",
+        "symmetric and asymmetric encryptions, Distribution of public keys",
+        "X.509 certificates, public key infrastructure, Remote user",
+        "authentication with symmetric and asymmetric encryption, Kerberos"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement Diffi-Hellmen Key exchange Method"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement RSA encryption-decryption algorithm"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program to generate SHA-1 hash"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Perform various encryption-decryption techniques with cryptool"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Study and use the Wireshark for the various network protocols"
+      ]
+    }
+  ]
+}

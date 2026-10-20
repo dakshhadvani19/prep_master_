@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Linear Algebra",
+    "subject_code": "01MA1104",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01MA/01MA1104 - Linear Algebra.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Matrix and System of Linear Equations",
+      "content": [
+        "Matrix, Determinant, Cramer’s Rule, , System of Linear Equation",
+        "Row Echelon Form and Row Reduced Echelon Form of a matrix",
+        "Rank and Nullity of a matrix, Homogeneous and Non-homogeneous",
+        "system of Linear equations, Methodology of Gauss- elimination and",
+        "Gauss-Jordan-elimination, , Solution of a system through L-U",
+        "Decomposition"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Vector Space",
+      "content": [
+        "Vector Space: Vector space & Subspace,, Linear Combination",
+        "Span Set, Linearly independent and Linearly dependent set, Basis",
+        "and Dimension of the vector space,, Rank and Nullity Theorem"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Linear Transformation",
+      "content": [
+        "Definition of linear transformation,, Standard linear transformations",
+        "Matrix of Linear transformations,, Range and Kernel of Linear",
+        "Transformation, Dimension Theorem, Inverse Linear",
+        "Transformation, Similarity Transformation"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Eigen Values and Eigen Vectors",
+      "content": [
+        "Eigen values and Eigen vectors of a matrix, Algebraic Multiplicity",
+        "and Geometric Multiplicity, Similarity of two matrices and",
+        "Diagonalization, , Cayley - Hamilton theorem, Quadratic and",
+        "Canonical forms,, Applications of Eigen Value"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Inner Product Space",
+      "content": [
+        "Dot products and Inner products,, the lengths and angles of vectors",
+        "Matrix representations of Inner products,, Orthogonality",
+        "Normality, Gram-Schmidt orthogonalization, QR decomposition"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "practical- 6 Cayley-Hamilton Theorem",
+      "content": [
+        "Inner Product Space, Orthogonality, Normality"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "practical",
+      "content": [
+        "Gram Schmidt Procedure, QR Decomposition"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "practical",
+      "content": [
+        "Linear Dependent and independent, Span and Basis"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "practical",
+      "content": [
+        "Divergence, Tangent Plane, Normal Line, Directional Derivatives"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "practical",
+      "content": [
+        "Curl of a vector field and Irrotational Vector"
+      ]
+    }
+  ]
+}

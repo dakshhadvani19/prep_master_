@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Compiler Design",
+    "subject_code": "01AI0706",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0706 - Compiler Design.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Compiler",
+      "content": [
+        "Translators-Compilation and Compiler, Interpreter and Assembler",
+        "Overview of linker and loader , The Phases of Compiler-Errors",
+        "Encountered in Different Phases, Compiler Construction Tools",
+        "Programming Language basics, pass structure"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Scanner",
+      "content": [
+        "Role of Lexical Analyzer-Lexical Errors, Tokens-Regular",
+        "Expressions, A Language for Specifying Lexical Analyzer, Defining",
+        "relations and conversion process between Finite Automata and",
+        "Regular Expression, Minimization of DFA, Introduction to LEX",
+        "Design of Lexical Analyzer for a sample Language"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Parsing",
+      "content": [
+        "Top-down Parsing, Predictive parsing, non-recursive predictive",
+        "parsing, First and Follow set, LL(1) grammar, error handling for LL",
+        ", Bottom-up parsing, handle pruning, shift reduce parsing",
+        "operator precedence parser, LR(0) parser, SLR(1) Parser, Canonical",
+        "LR(1) Parser, LALR(1) Parser, error detection and recovery in LR",
+        "Parser, Parser generators(Yacc & Lex)"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Intermediate Code Generation",
+      "content": [
+        "Introduction, Intermediate Languages, Types of intermediate forms",
+        "Three Address Statements, , Syntax Directed Translation Attributes",
+        "and Mechanism, Directed Acyclic Graph, Static Single Assignment"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Memory Management",
+      "content": [
+        "Introduction, Importance of Memory Management, , Organization",
+        "for storage purpose, Static allocation, stack allocation, dynamic",
+        "allocation, Different methods of parameter passing, Activation",
+        "record, symbol table"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Code Optimization",
+      "content": [
+        "Introduction of Code Optimization, Advantage of code",
+        "optimization, Types of Code Optimization, Block and Loop",
+        "Optimization, Global Data Flow Analysis"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Code Generation",
+      "content": [
+        "Issues, flow graph, basic block, basic block optimization, Register",
+        "allocation, simple code generator, Directed acyclic graph",
+        "representation, code generation from directed acyclic graph",
+        "Peephole optimization, generators of code generator, Dynamic code",
+        "generation algorithm"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "WA Lex Program to count the total number of printf and scanf",
+        "statement in given C file"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "WAP to remove Left Recursion from the grammar"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "WAP to remove Left Factoring from the grammar"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "WAP to compute FIRST and FOLLOW Set of the given grammar"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Practical",
+      "content": [
+        "WAP with the help of Lex and Yacc file to implement Calculator",
+        "which performs basic operations like addition, subtraction",
+        "multiplication and division"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Practical",
+      "content": [
+        "YACC Program to generate Calculator"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Practical",
+      "content": [
+        "Three tuple intermediate code for given infix expression"
+      ]
+    }
+  ]
+}

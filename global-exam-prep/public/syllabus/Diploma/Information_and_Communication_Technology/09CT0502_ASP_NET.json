@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "ASP.NET",
+    "subject_code": "09CT0502",
+    "subject_id": null,
+    "department": "Diploma",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 5,
+    "source": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0502 - .Net Programming (.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to ASP.Net Web Programming",
+      "content": [
+        "Basics of ASP.NET: Features of ASP.NET",
+        "Differences between ASP.NET and Classic ASP",
+        "Web Applications and Webpage",
+        "Components of Web application",
+        "Client Server Architecture",
+        "MVC Architecture",
+        "Creating simple Web Application in ASP.NET: Introduction to Visual Studio",
+        "creating a New",
+        "Web Project (ASP.NET)",
+        "Opening an Existing Web Site",
+        "Building Web Sites",
+        "set up of work",
+        "environment",
+        "start page",
+        "the menu system",
+        "toolbars",
+        "the new project dialog box",
+        "graphical",
+        "designer, code designer",
+        "Working with ASP.Net Web Forms: Types of ASP.Net Files",
+        "Web Form Round Trip",
+        "Stages in",
+        "Web Form Processing ASP.Net Objects (Request",
+        "Response",
+        "Server",
+        "Application",
+        "Session)"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "State Management in ASP.Net",
+      "content": [
+        "State Management: View State",
+        "Session State",
+        "Application State",
+        "Query String",
+        "Cookies",
+        "ASP.Net Configuration: Global.asax application file, Web.config file"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Database Programming using ADO.Net and AJAX",
+      "content": [
+        "ADO.Net Components: Connection Object",
+        "Command Object",
+        "Data Reader",
+        "Datasets & Data",
+        "Adapter, Data View",
+        "Insert",
+        "Update",
+        "Delete and Databinding operation using Data Grid",
+        "Data List and Repeater",
+        "Control",
+        "ASP.Net AJAX Control: Ajax Framework",
+        "Script Manager",
+        "Update Panel & Update Progress",
+        "Bar Control of Ajax",
+        "Suggested Theory distribution:",
+        "Marwadi University",
+        "Faculty of Diploma Studies",
+        "Information and Communication Technology",
+        "The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines",
+        "for teachers and students to achieve effective teaching-learning process",
+        "Distribution of Theory for course delivery and evaluation",
+        "Remember",
+        "Analyse",
+        "Create"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "a. Design a ASP.Net web form for User Registration having fields First Name, Last",
+      "content": [
+        "Name, Email, Password, repass, Age (dd- mm-yyyy), Ph. No., address, city, using",
+        "different Server Controls",
+        "b. Validate all details in above application using validation controls and display all",
+        "the details in the same form"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Design a page that takes name and message from the user and choose a color by",
+      "content": [
+        "radio button",
+        "select a style for ex.-bold",
+        "italic",
+        "underline from the checkbox and",
+        "display in label control, when you clicked on display button. And clear the",
+        "information when",
+        "you clicked on clear button"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Create a web page, for book sales. Enter the quantity, title and price of the book.",
+      "content": [
+        "Calculate the extended price",
+        "discount (15%) and after discount",
+        "the actual price of",
+        "the book. Show the summary of book sales. (Like total no of books",
+        "total discount",
+        "given, total discounted amount and average discount.) You will need command",
+        "buttons- calculate, clear sale"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Design a web page to implement upload and download files",
+      "content": [
+        "functionality using File Upload Control"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Develop a web page to implement the concept of state management using Cookies",
+      "content": [
+        "Develop a web page to implement the concept of state management using Session and Application"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Develop a web page to implement the concept of state",
+      "content": [
+        "management using View State and Query String"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Create a web application using Global.asax file which will count",
+      "content": [
+        "the number of visitors on web page"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Use various tags in Web.config file for ASP.NET configuration.",
+      "content": [
+        "Create a web site using Master Page Concept having two content",
+        "pages"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Create a web application implementing Nested Master Page",
+      "content": [
+        "concept"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Design a web application to illustrate concept of CSS,Themes",
+      "content": [
+        "and Skin"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Write sample application to connect to database, Fetching and inserting data from database and using Data Reader",
+      "content": [
+        "Develop a User Registration form designed in Experiment 2. Insert user details in",
+        "Database and show the same in",
+        "DataGrid/Grid View control"
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Create a login page in your web application. Login page must have user name and",
+      "content": [
+        "password fields. If user enters correct ID",
+        "Password",
+        "he must be redirected to the",
+        "homepage of your",
+        "website"
+      ]
+    },
+    {
+      "chapter_number": 16,
+      "chapter_name": "Develop a web application to Add, Update, View and Delete",
+      "content": [
+        "records from Database data shown in Grid view"
+      ]
+    },
+    {
+      "chapter_number": 17,
+      "chapter_name": "Design a web form showing record in Repeater and Data List.",
+      "content": [
+        "above practical"
+      ]
+    },
+    {
+      "chapter_number": 18,
+      "chapter_name": "Develop a Login application and show Ajax Progress bar while",
+      "content": [
+        "user trying to log in"
+      ]
+    }
+  ]
+}

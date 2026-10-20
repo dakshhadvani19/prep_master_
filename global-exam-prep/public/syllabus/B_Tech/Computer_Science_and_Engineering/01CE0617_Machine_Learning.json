@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Machine Learning",
+    "subject_code": "01CE0617",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0617 - Machine Learning.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to ML",
+      "content": [
+        "Motivation and Applications, Importance of Data Visualization",
+        "Basics of Supervised, Unsupervised, and Reinforcement Learning",
+        "Current research trends in ML"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Supervised Learning",
+      "content": [
+        "Naive Bayes Classification, Fitting Multivariate Bernoulli",
+        "Distribution, Gaussian Distribution and Multinomial Distribution",
+        "K- Nearest Neighbours, Decision tree, Random Forest, Ensemble",
+        "Learning, Support Vector Machines, Evaluation metrics for",
+        "Classification Techniques, Confusion Matrix, Accuracy, Precision",
+        "Recall, F1 Score, Threshold, AUC-ROC"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Regression Techniques",
+      "content": [
+        "Basic concepts and applications of Regression, Simple Linear",
+        "Regression, Gradient Descent and Normal Equation Method",
+        "Multiple Linear Regression, Non-Linear Regression, Linear",
+        "Regression with Regularization, Overfitting and Underfitting",
+        "Hyperparameter tuning, Evaluation Measures for Regression",
+        "Techniques, MSE, RMSE, MAE, R2"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Unsupervised Learning",
+      "content": [
+        "Introduction to clustering, Types of Clustering: Hierarchical",
+        "Agglomerative Clustering and Divisive clustering, Partitional",
+        "Clustering, K-means clustering, Association rule mining, Apriori",
+        "Algorithm and FP tree algorithm, Evaluation metrics for Clustering",
+        "Silhouette Coefficient, Dunn's Index"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Neural Network",
+      "content": [
+        "Artificial Neural Networks, Biological Neurons and Biological",
+        "Neural Networks, Perceptron Learning, Activation Functions, MLP",
+        "Back-propagation Neural Networks, Competitive Neural Networks",
+        "Introduction to Transformer Neural Network"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Perform hyper parameter tuning using sample dataset"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement k-means clustering using a dataset"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Explore the association rule mining techniques using sample data"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement ANN using sample data"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Exploring activation function in ANN"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "Implementation of Transformer Neural Network model"
+      ]
+    }
+  ]
+}

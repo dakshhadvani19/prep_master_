@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Artificial Intelligence",
+    "subject_code": "01AI0511",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0511 - Artificial Intelligence.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Foundations of Artificial Intelligence and Intelligent Agents",
+      "content": [
+        "Introduction to Artificial Intelligence",
+        "history and evolution of AI",
+        "characteristics of intelligent behavior",
+        "AI applications in healthcare",
+        "finance, robotics, manufacturing, education and cybersecurity",
+        "intelligent agents and rational agents",
+        "PEAS description",
+        "types of",
+        "environments, problem formulation",
+        "state-space representation, AI",
+        "development lifecycle and overview of tools and datasets"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Problem Solving by Search and Adversarial Methods",
+      "content": [
+        "Uninformed search: breadth-first, depth-first, depth-limited, iterative",
+        "deepening and uniform-cost search, informed search: greedy best",
+        "first and A*;, heuristic design and admissibility",
+        "local search",
+        "methods, hill climbing and simulated annealing basics",
+        "adversarial",
+        "search",
+        "minimax algorithm, alpha-beta pruning",
+        "Monte Carlo tree",
+        "search overview",
+        "applications in routing, scheduling and game AI"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Knowledge Representation and Automated Reasoning",
+      "content": [
+        "Knowledge representation fundamentals, propositional logic and",
+        "first-order logic basics, syntax, semantics and inference",
+        "normal",
+        "forms",
+        "resolution, rule-based systems",
+        "forward chaining and",
+        "backward chaining, semantic networks, frames and ontologies",
+        "overview, expert systems architecture, knowledge acquisition and",
+        "explanation facilities"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Constraint Satisfaction and Planning",
+      "content": [
+        "Constraint satisfaction problems",
+        "backtracking search, variable and",
+        "value ordering",
+        "forward checking, arc consistency",
+        "map coloring",
+        "scheduling and Sudoku as CSPs, planning in AI",
+        "state-space",
+        "planning",
+        "STRIPS representation basics, goal stack planning",
+        "partial-order planning overview, planning applications in robotics",
+        "logistics and workflow automation"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Reasoning Under Uncertainty and Sequential Decision Making",
+      "content": [
+        "Probability review for AI",
+        "Bayes theorem, probabilistic inference",
+        "Bayesian networks, structure, conditional independence and",
+        "inference basics, hidden Markov models overview",
+        "decision",
+        "networks, utility and rational decision making",
+        "Markov decision",
+        "processes, value iteration and policy concepts, introduction to",
+        "reinforcement learning and agent-environment interaction"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Learning in AI, Modern Applications and Responsible AI",
+      "content": [
+        "Introduction to learning in AI",
+        "nearest neighbor, decision tree, Naive",
+        "Bayes and perceptron overview, neural networks and representation",
+        "learning basics, AI for natural language processing, computer vision",
+        "and recommendation systems, generative AI overview",
+        "explainability, fairness, privacy, trust and safety, responsible AI",
+        "practices",
+        "deployment, monitoring and human-in-the-loop AI",
+        "systems"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Develop a mini AI application such as text classification, chatbot",
+        "prototype or perception demo and report on ethics and explainability",
+        "considerations"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement a simple AI learning model such as k-NN, decision tree",
+        "Naive Bayes, or perceptron and compare results on a toy dataset"
+      ]
+    }
+  ]
+}

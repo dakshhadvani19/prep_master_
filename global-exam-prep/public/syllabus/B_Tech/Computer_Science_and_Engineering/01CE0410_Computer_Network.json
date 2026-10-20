@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Computer Network",
+    "subject_code": "01CE0410",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0410 - Computer Network.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Internet today, Data communication,, Categories of Network",
+        "Layered approach,, Understanding of Delay and its types, TCP/IP",
+        "Reference model,, Transmission Mode,, Transmission Media",
+        "Network Topologies: Star, Bus, Ring, Mesh, Hybrid,, Types of",
+        "Network: LAN, WAN, MAN, PAN,, Switching Techniques: Circuit",
+        "Switching,, Packet Switching"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Application Layer",
+      "content": [
+        "Web and HTTP,, File Transfer: FTP,, Electronic mail in the",
+        "internet,, Domain name server,, SMTP,, SNMP,, FTP,, DHCP:",
+        "Request and Response"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Transport Layer",
+      "content": [
+        "Introduction to Transport layer and its services,, Transport layer",
+        "Protocol:, TCP , UDP, Principles of Reliable data transfer:, Go",
+        "BACK-N, and Selective Repeat,, Flow Control,, Congestion",
+        "Control"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Network Layer",
+      "content": [
+        "Network Layer functionalities,, Network Layer design Issues",
+        "Unicast routing, Multicast Routing,, Inter domain and intra domain",
+        "routing,, Distance Vector Routing,, Link State routing,, OSPF",
+        "EIGRP"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Data Link Layer",
+      "content": [
+        "Data link layer services,, Data link layer design issues,, Error",
+        "correction and Error Detection techniques,, Parity,Checksum",
+        "Framing,, Flow Control,,, Error Control,, Multiple access protocols",
+        "Random Access Protocols,, CSMA , CSMA/CD, CSMA/CA",
+        "VLAN"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "practical",
+      "content": [
+        "Demonstrate various Network devices configuration commands"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "practical",
+      "content": [
+        "Implement the following concept in routing. i. Static Routing ii",
+        "Dynamic routing using RIP"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "practical",
+      "content": [
+        "Configuration of E-mail Server in Packet Tracer Software"
+      ]
+    }
+  ]
+}

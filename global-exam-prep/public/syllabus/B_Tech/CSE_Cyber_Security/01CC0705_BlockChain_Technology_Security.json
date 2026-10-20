@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "BlockChain Technology & Security",
+    "subject_code": "01CC0705",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CC/01CC0705 - BlockChain Technology & Security.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Blockchain",
+      "content": [
+        "What is Blockchain, Blockchain Technology Mechanisms &",
+        "Networks, Blockchain Origins,, Objective of Blockchain",
+        "Blockchain Challenges, Transactions And Blocks,, P2P Systems",
+        "Keys As Identity, Digital Signatures,, Hashing and public key",
+        "cryptosystems, Private vs. Public Blockchain"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Models of blockchain",
+      "content": [
+        "Introduction, Changing of Blocks, Hashing, Merkle-Tree",
+        "Consensus, Mining and Finalizing Blocks, Currency aka tokens",
+        "Security on blockchain, Data storage on blockchain, Wallets",
+        "Coding on blockchain: Smart Contracts, Peer-to-peer Network",
+        "Types of blockchain nodes, Risk associated with blockchain",
+        "solutions, Life cycle of blockchain transaction"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Mechanics Of Blockchain",
+      "content": [
+        "Bitcoin, Wallet, Blocks, Merkley Tree, Bitcoin transactions",
+        "Transaction verifiability, Anonymity, Forks, Double spending",
+        "Mathematical analysis of properties of Bitcoin, Bitcoin scripts",
+        "Applications of Bitcoin scripts, Bitcoin blocks, The Bitcoin",
+        "network, Limitations and improvements, How to store and use",
+        "Bitcoins, Simple local storage, Hot and cold storage, Splitting and",
+        "sharing keys, Online wallets and exchanges,, Payment services",
+        "Transaction fees, Currency exchange markets"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Alternative Coins And Recent Trends",
+      "content": [
+        "Ethereum, Ethereum Virtual Machine (EVM),, Wallets for",
+        "Ethereum, Solidity, Smart Contracts, Some attacks on smart",
+        "contracts, Zero Knowledge proofs and protocols in Blockchain",
+        "Succinct non interactive argument for Knowledge ( SNARK)",
+        "Pairing on Elliptic curves, Zcash"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "WEB 3.0",
+      "content": [
+        "From 1.0 to 3.0, Decentralization, Encryption, Tokenization, Social",
+        "Engineering and new form of attack, Data security and Reliability",
+        "Identity and anonymity"
+      ]
+    }
+  ]
+}

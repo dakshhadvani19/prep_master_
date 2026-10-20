@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Fundamentals of IOT & SCADA Security",
+    "subject_code": "01CC0504",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CC/01CC0504 - Fundamentals of IOT & SCADA Security.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "INTRODUCTION OF IOT",
+      "content": [
+        "Definition of IOT, History of IOT, Need of IOT - Benefits of IOT",
+        "IOT Classes & Stages, Use of IOT, Types of IOT Devices, RFID",
+        "Fingerprints, Eye Retina , Multiple Authentication,Types of Sensors",
+        "& It’s use, Introduction of Arduino & Raspberry Pi, Arduino Cases",
+        "in IOT, Raspberry Pi in IOT ,Use of Arduino & Raspberry Pi in",
+        "IOT"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "IOT WITH CLOUD",
+      "content": [
+        "Introduction of Microsoft Azure :What is it’s Need, Benefits of",
+        "Microsoft Azure Cloud , Services of Microsoft Azure with IOT",
+        "Services that can be connected in IOT, Introduction to Azure IOT",
+        "Hub , Use of Azure IOT Hub , Services that can be connected",
+        "Azure IOT Edge , Description of Microsoft Azure Cloud Services in",
+        "IOT, 2.10.IOT Hub Device Provisioning Service (DPS), Case study",
+        "for Smart Parking Management System"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "IOT SECURITY WITH VARIOUS CLOUD PLATFORMS",
+      "content": [
+        "Serverless Computing, Advantages of Serverless Computing",
+        "Introduction to Security, What is Kubernetes, Advantages &",
+        "Disadvantages of Kubernetes, Architecture of Kubernetes",
+        "Correlated Kubernetes, Docker & Container, Difference between",
+        "Kubernetes vs Docker vs Container, Case study using Microsoft",
+        "Azure Cloud using IOT Hub & IOT Edge for Smart Garbage",
+        "Management System"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "INTRODUCTION OF SCADA",
+      "content": [
+        "Introduction to SCADA, Use of SCADA, Advantages of SCADA",
+        "Disadvantages of SCADA in Azure, Framework for SCADA,, Steps",
+        "for SCADA System Installation, Monitoring - RBAC - Data Leak",
+        "Identity & Access Management - Training"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "SCADA SECURITY WITH CLOUD TRENDING TECHNOLOGIES",
+      "content": [
+        "Enabled Technologies in IOT Devices, Role of AI in Microsoft",
+        "Azure Cloud, Benefits of AI in Microsoft Cloud, Use of AI in",
+        "Microsoft Azure Cloud, Web Development in Cloud, Software",
+        "Development in Cloud,, Data Storage in Cloud, Cyber Attack in",
+        "Cloud, Roles & Responsibilities"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Check all the Services that can be correlated in IOT and include it in",
+        "the necessary IOT Experiments"
+      ]
+    }
+  ]
+}

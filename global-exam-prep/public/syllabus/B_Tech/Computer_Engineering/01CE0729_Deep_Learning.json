@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Deep Learning",
+    "subject_code": "01CE0729",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0729 - Deep Learning.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Deep Learning",
+      "content": [
+        "AI vs ML vs DL, Neural Networks basics, Perceptron, Activation",
+        "functions, Loss functions, Gradient Descent, Backpropagation",
+        "Overfitting & Regularizatio"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Deep Neural Networks & Optimization",
+      "content": [
+        "Multi-layer Perceptron (MLP), Initialization techniques",
+        "Optimization algorithms (SGD, Adam, RMSProp), Hyperparameter",
+        "tuning, Batch Normalization, Dropout"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Convolutional Neural Networks (CNNs)",
+      "content": [
+        "Image processing basics, CNN architecture, Convolution, Pooling",
+        "Popular models (LeNet, AlexNet, VGG, ResNet), Transfer Learning"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "DEEP LEARNING 01CE0729",
+      "content": [
+        "RNN, LSTM, GRU, Sequence modeling, Attention mechanism",
+        "Transformer architecture, BERT, GPT basics, NLP applications"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Generative AI & Advanced Topics",
+      "content": [
+        "Autoencoders, GANs, Diffusion Models, Large Language Models",
+        "(LLMs), Ethics in AI, Explainable AI (XAI)"
+      ]
+    }
+  ]
+}

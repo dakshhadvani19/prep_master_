@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Applied Linear Algebra",
+    "subject_code": "01AI0102",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0102 - Applied Linear Algebra.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Vector Space",
+      "content": [
+        "Vector space, Subspace, Linear Combination, Linear independence",
+        "of vectors, Span, Basis and dimension of vector space, Raw Space",
+        "Column Space, Null Space with the concept of Rank and Nullity"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Matrix Algebra and System of Linear Equations",
+      "content": [
+        "Types of matrices, Row Echelon Form and Row Reduced Echelon",
+        "Form of a matrix, Rank and Nullity of a matrix, Homogeneous and",
+        "Non homogeneous system of Linear equations, Methodology of",
+        "Gauss- elimination and Gauss-Jordan-elimination, Cramer’s Rule",
+        "Solution of a system through L-U Decomposition, Consistency of a",
+        "system of Linear equations, Computing inverse of a matrix by Row",
+        "operations"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Eigen Values and Eigen Vectors",
+      "content": [
+        "Eigen values and Eigen vectors of a matrix, Algebraic Multiplicity",
+        "and Geometric Multiplicity, Similarity of two matrices and",
+        "Diagonalization, Cayley - Hamilton theorem, Quadratic and",
+        "Canonical forms, Positive definite Matrices, Singular Value",
+        "Decomposition, Principal Component Analysis"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Norms and Inner product space",
+      "content": [
+        "Vector Norms, Matrix Norms, Inner Product Spaces, Orthogonal",
+        "Vectors, Gram-Schmidt Procedure, Orthogonal Decomposition"
+      ]
+    }
+  ]
+}

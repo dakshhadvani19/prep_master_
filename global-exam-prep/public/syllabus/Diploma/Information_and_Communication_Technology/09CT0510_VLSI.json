@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "VLSI",
+    "subject_code": "09CT0510",
+    "subject_id": null,
+    "department": "Diploma",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 5,
+    "source": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0510 - Elective 2 VLSI.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to VLSI Design",
+      "content": [
+        "Historical perspective",
+        "VLSI design flow",
+        "Design Methodologies",
+        "Y- chart",
+        "Full custom design",
+        "standard cell based design",
+        "FPGA based 2 Manufacturing Process of CMOS digital IC 04 design Silicon wafer",
+        "Photolithography",
+        "Simplified process sequences",
+        "process flow for fabrication of n-type MOS transistor",
+        "CMOS n-well process",
+        "3 MOS Transistor 07 Layout design rules MOS structure",
+        "MOS system under external bias and energy band diagram",
+        "Understanding accumulation",
+        "depletion and inversion",
+        "Marwadi University",
+        "Faculty of Diploma studies",
+        "Information and Communication Technology",
+        "Structure and operation of MOS transistor, MOSFET current-voltage"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "MOS Inverters 07 characteristics, MOSFET scaling, MOSFET capacitance",
+      "content": [
+        "Voltage Transfer Characteristics(VTC) of Ideal inverter, Typical VTC of a",
+        "realistic n-MOS inverter, Noise Immunity and Noise Margins, Resistive",
+        "load inverter and its analysis, Inverter with n-Type MOSFET",
+        "load(Enhancement-Load NMOS Inverter and Depletion-Load NMOS",
+        "Inverter), CMOS Inverter"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Combinational MOS logic circuits",
+      "content": [
+        "Two input NAND gate and NOR gate with depletion NMOS load, CMOS",
+        "logic circuits, CMOS NOR(2-input) and CMOS NAND(2-input) gate",
+        "Complex logic circuits, CMOS Transmission gates"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Sequential MOS logic circuits",
+      "content": [
+        "Introduction, CMOS SR latch based on 2-input NOR gates, CMOS SR",
+        "latch based on 2-input NAND gates, Clocked SR latch, Clocked JK latch",
+        "JK Master-Slave flip-flops, CMOS D-latch and edge triggered D-flip-flop"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Introduction to HDL",
+      "content": [
+        "Types of HDL, Describing hardware in HDL, basic concepts,behavioural",
+        "design, structural design",
+        "Total 42 hrs"
+      ]
+    }
+  ]
+}

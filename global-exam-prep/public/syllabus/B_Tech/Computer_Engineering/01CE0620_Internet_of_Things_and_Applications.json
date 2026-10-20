@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Internet of Things and Applications",
+    "subject_code": "01CE0620",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0620 - Internet of Things and Applications.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Internet of Things",
+      "content": [
+        "Introduction and Definition of Internet of Things, need and scope of",
+        "IoT, Application Areas of IoT, Characteristics of IoT, Things in",
+        "IoT, IoT Stack, Enabling Technologies,, IoT Challenges, IoT",
+        "Levels, IoT and Cyber Physical System IoT and WSN"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Sensor and Actuators",
+      "content": [
+        "Definition, features, classification, characteristics, physics of few",
+        "basic and important sensors and actuators"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Microcontroller, Microprocessor and their Interfacing",
+      "content": [
+        "Basics of a controller, popular microcontrollers, Overview of",
+        "different peripherals, ADC, DAC, Memory, GPIO, Timers",
+        "Interfacing of Sensors and Actuators to microcontrollers and",
+        "microprocessors, Introduction to: Arduino, Raspberry Pi, ESP32",
+        "Orange Pi"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Protocols for IoT",
+      "content": [
+        "Messaging protocols: CoAP, MQTT, XMPP, AMQP, Transport",
+        "protocols: BLE, LiFi"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "IoT Security and Applications of IoT",
+      "content": [
+        "IoT Security: Various security issues and needs, Requirements",
+        "security architecture, Challenges and algorithms., Applications of",
+        "IoT: Smart Home, Smart cITY, Smart Perishable Tracking with IoT",
+        "and Sensors, Smart Healthcare - Elderly Fall Detection with IoT",
+        "and Sensors, Smart Inflight Lavatory Maintenance with IoT",
+        "IoT-Based Application to Monitor Water Quality, Smart",
+        "Warehouse Monitoring, Smart Retail - IoT Possibilities in the",
+        "Retail Sector, IoT-Based Smart Driver Assistance Systems, System",
+        "to Measure Collision Impact in an Accident with IoT, Case studies",
+        "on IoT applications: Connected Vehicles and Autonomous Vehicles",
+        "Industrial IoT, IoMT (Internet of Medical Things)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Open Source Technologies",
+    "subject_code": "01CE0526",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0526 - Open Source Technologies.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Open Source, Licensing and Communities",
+      "content": [
+        "Definition, History, OSS vs Proprietary vs Freeware, GPL, MIT",
+        "BSD, Apache, LGPL Copyleft vs Permissive, Copyright, Patent",
+        "and, Trademark, Communication platforms"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Version Control Systems",
+      "content": [
+        "Git Basics, Git workflows (feature branches, pull requests)",
+        "GitHub/GitLab/Bitbucket usage"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "OPEN SOURCE TECHNOLOGIES 01CE0526",
+      "content": [
+        "Introduction to Laravel, Django, Node.js, MVC architecture",
+        "overview, Setting up development environments"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Open-Source Databases",
+      "content": [
+        "Relational - MySQL and PostgreSQL - Basic setup, CRUD",
+        "operations, common use cases,, Non-Relational - MongoDB",
+        "Document-based model,, CRUD operations, basic comparison with",
+        "SQL, MySQL workbench and MongoDB compass - GUI for",
+        "interaction"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Practical",
+      "content": [
+        "Deploy a simple app using Nginx/Apache"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Setup Nginx to handle proxy request and load balancing"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Use MongoDB to create a NoSQL database, perform CRUD",
+        "operations, and query documents using basic operators"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Use PostgreSQL to create a relational database, design tables, and",
+        "perform CRUD operations using SQL queries"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Use pytest to test python application"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Use selenium to create browser-based test"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "Use Postman to test sample API"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Practical",
+      "content": [
+        "Use OWASP ZAP to check security integrity"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Practical",
+      "content": [
+        "Use JMeter to test web application for load testing"
+      ]
+    }
+  ]
+}

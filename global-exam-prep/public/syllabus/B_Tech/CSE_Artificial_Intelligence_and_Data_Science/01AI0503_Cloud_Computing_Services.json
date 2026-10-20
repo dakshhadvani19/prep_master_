@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Cloud Computing Services",
+    "subject_code": "01AI0503",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0503 - Cloud Computing Services.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction of Cloud Computing",
+      "content": [
+        "What is Cloud Computing?, How it works?, Types of Cloud, Goals",
+        "& Challenges, Leveraging Cloud Computing, Cloud Economics and",
+        "Total Cost of Ownership, Cloud Service Models, Deployment",
+        "Models, trends in cloud GCP, AWS, AZURE Comparisons",
+        "advantages, disadvantages ,market share., Install any operating",
+        "system using Virtualization Tool and understand its application"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Amazon Web Services - Compute and Storage",
+      "content": [
+        "Introduction to AWS, AWS Compute: Amazon EC2, Amazon",
+        "Elastic Container Service, AWS Elastic Beanstalk etc.,, Storage:",
+        "AWS Database Options, AWS Elasticity and Management Tools",
+        "Deploy a web application using AWS Elastic Beanstalk"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Architecting on AWS",
+      "content": [
+        "Introduction to System Design: AWS Essentials Review, System",
+        "Design for High Availability, Well-Architected Best Practices:",
+        "Security, Reliability, Performance Efficiency, Working with AWS",
+        "Identity and Access Management (IAM), Using multiple Amazon",
+        "Web Services, create a project to demonstrate its collaborative use"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "FPGA Based System Design",
+    "subject_code": "01CT0718",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT0718 - FPGA Based System Design.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Revision of basic Digital systems.",
+      "content": [
+        "Combinational Circuits, Sequential Circuits, Timing, Electrical",
+        "Characteristics, Power Dissipation"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Current state of the field",
+      "content": [
+        "SoC, IP Design, SoPC, Design methodology, System Modelling",
+        "Hardware- Software Co-design, Device Technology, Application",
+        "Domains"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Digital system Design.",
+      "content": [
+        "Top down Approach to Design, Case study, Data Path, Control",
+        "Path, Controller behavior and Design, Case study Mealy & Moore",
+        "Machines, Timing of sequential circuits, Pipelining, Resource",
+        "sharing"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Programmable Logic Devices.",
+      "content": [
+        "Introduction, Evolution: PROM, PLA, PAL, Architecture of PAL's",
+        "Applications, Programming PLD's, Design Flow, Programmable",
+        "Interconnections, Complex PLD's (MAX - 7000, APEX)",
+        "Architecture, Resources, Applications, Tools"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "FPGA Architecture",
+      "content": [
+        "Introduction, Logic Block Architecture, Routing Architecture",
+        "Programmable Interconnections, Design Flow,Xilinx Virtex-II",
+        "Architecture, Altera Stratix Architecture"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Programming the FPGA",
+      "content": [
+        "Boundary Scan, Programming of the FPGA, Constraint Editor",
+        "Static Timing Analysis, One hot encoding, Applications, Tools",
+        "Case Study, Xilinx Virtex II Pro, Embedded System on",
+        "Programmable Chip, Hardware-software co-simulation, Debugging",
+        "FPGA Design"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "HDL for Synthesis",
+      "content": [
+        "Introduction, Behavioural, Data flow, Structural Models,Simulation",
+        "Cycles, Process, Concurrent Statements, Sequential",
+        "Statements,Loops, Delay Models, Sequential Circuits, FSM Coding"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment: 8 Implement a counter with a frequency divider on the FPGA",
+      "content": [
+        "development board"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment: 9 Implement Mealy and Moore machine examples on the FPGA",
+      "content": [
+        "development board"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment: 10 Implement a Traffic Light Controller on the FPGA development",
+      "content": [
+        "board"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment",
+      "content": [
+        "Implement Digital Alarm Clock on the FPGA development board"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment",
+      "content": [
+        "Implement 8 bit RISC processor on the FPGA development board"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment",
+      "content": [
+        "Implement FIR/IIR filter on the FPGA development board"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment",
+      "content": [
+        "Implement sensor-based systems on the FPGA development board"
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Experiment",
+      "content": [
+        "Implement vending machine on the FPGA development board"
+      ]
+    }
+  ]
+}

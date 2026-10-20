@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Data Structure",
+    "subject_code": "01AI0304",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0304 - Data Structure.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Introduction to data type and data structure, Types of data structure:",
+        "primitive & non-primitive, linear & non-linear. Operations on data",
+        "structures: traversing, searching, inserting, deleting e.t.c",
+        "Algorithms, Complexity analysis - worst case, best case, average",
+        "case"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Arrays",
+      "content": [
+        "Introduction to Arrays, Array Representation: Row major order &",
+        "Column major order, One dimensional and 2D array, Storage",
+        "structure of arrays, operations on arrays, Sparse Matrix"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Sorting and Searching",
+      "content": [
+        "Introduction, Classification of Sorting, Types: Bubble sort",
+        "Selection sort, Insertion sort, Quick Sort, Merge Sort, Radix sort",
+        "Searching: Linear or sequential search, Binary search"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Stack, Queue and Linked List",
+      "content": [
+        "Introduction to Stack and implementation, Operations on stacks",
+        "Polish Expressions and their compilation, Application of stack",
+        "Tower of Hanoi, Recursion, Queue: Introduction to Queue and",
+        "implementation, operations on Queue (insert, delete), Circular",
+        "Queue, Double Ended Queue, Priority Queues, Applications of",
+        "Queue, Linked List: Introduction, Implementation of Linked List",
+        "Singly Linked List, Doubly Linked List, Circular Linked List",
+        "Circular Doubly Linked, and Applications of Linked List"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Tree and Graphs",
+      "content": [
+        "Tree: Terminologies, Types of tree, Binary Tree Traversal",
+        "Techniques (Inorder, preorder, postorder)., Binary Search Tree:",
+        "Definition, Operations, AVL Tree: Definition, Insertion, Deletion",
+        "Rotations, Special trees: construction of B Tree and B+ Tree",
+        "Graph: Terminologies, Representation of graphs Types of Graph",
+        "Graph Traversal Techniques: BFS & DFS, Application of Trees and",
+        "Graphs"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Hashing",
+      "content": [
+        "Concepts and Hash Function, Hashing Methods, Collision, Collision",
+        "Resolution Technique (CRT), Perfect Hashing"
+      ]
+    }
+  ]
+}

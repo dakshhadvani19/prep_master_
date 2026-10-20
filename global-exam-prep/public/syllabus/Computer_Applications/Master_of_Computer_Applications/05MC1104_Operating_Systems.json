@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Operating Systems",
+    "subject_code": "05MC1104",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Master of Computer Applications",
+    "semester": 1,
+    "source": "Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/PDFs/MCA/Sem_1/05MC1104 - Operating Systems.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Operating Systems",
+      "content": [
+        "Definition and Objectives of Operating System, Evolution",
+        "and Types of OS, Operating System Structures, System",
+        "Calls and System Programs, OS Services and Components",
+        "User Mode and Kernel Mode, Virtual Machines"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Process Management",
+      "content": [
+        "Process Concept and Process States, Process Control Block",
+        "(PCB)",
+        "Process",
+        "Scheduling",
+        "Scheduling",
+        "Criteria",
+        "and",
+        "Algorithms (FCFS, SJF, Round Robin, SRT, HRRN), Inter",
+        "Process Communication (IPC), Threads and Multithreading",
+        "Process Vs. Threads"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Process Synchronization & Deadlocks",
+      "content": [
+        "Key terms related to concurrency, Critical Section Problem",
+        "Synchronization",
+        "Tools",
+        "(Mutex",
+        "Locks",
+        "Semaphores",
+        "Monitors), Classical Synchronization Problems (Producer",
+        "Consumer, Dining Philosophers, Readers-Writers)",
+        "Deadlocks:",
+        "Deadlock Characterization, Deadlock Prevention, Deadlock",
+        "Avoidance (Banker's Algorithm), Deadlock Detection and",
+        "Recovery"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Memory Management & Virtual Memory",
+      "content": [
+        "Memory Management Concepts, Contiguous and Non",
+        "Contiguous Allocation, Paging and Segmentation",
+        "Virtual Memory:",
+        "Demand Paging, Hardware and control structures, Address",
+        "translation in Paging, Address translation in segmentation",
+        "Page",
+        "Replacement",
+        "Algorithms",
+        "(FIFO",
+        "LRU",
+        "Optimal)",
+        "Thrashing"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "File Management, Input/Output & Security",
+      "content": [
+        "File Concept and File Attributes, File System Structure",
+        "Directory Structure, File Allocation Methods, Secondary",
+        "Storage Management",
+        "Input/Output",
+        "I/O Hardware and I/O Techniques, Disk Scheduling (RAID",
+        "FCFS, SSTF, SCAN, C-SCAN)",
+        "Security",
+        "Protection and Security in OS, Authentication Mechanisms",
+        "Access Control Models, Security Attacks, Trusted OS &",
+        "Security Kernels"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Course Outcomes: (Student will be able to..)",
+      "content": [
+        "CO1: Demonstrate understanding of OS structure, components, and design",
+        "CO2: Analyze and compare CPU scheduling algorithms and their performance impact",
+        "CO3: Apply synchronization mechanisms and solve concurrency/deadlock problems",
+        "CO4: Apply memory partitioning solutions and virtual memory techniques",
+        "CO5: Evaluate file systems",
+        "disk scheduling",
+        "I/O management",
+        "and security mechanisms",
+        "Text Book :",
+        "1. \"Operating Systems: Internals and Design Principles\"",
+        "William Stallings",
+        "Prentice",
+        "Hall India, 7th Edition",
+        "2. \"Operating System Concepts\", Silberschatz A., Peter B. Galvin and Greg Gagne",
+        "Wiley-India, 8th Edition",
+        "Reference Books :",
+        "1. \"Modern Operating Systems\", Tanenbaum A.S., PHI, 4th Edition",
+        "2. \"Operating Systems - A Concept Based Approach\", Dhamdhere, McGraw-Hill",
+        "3. \"Understanding Operating Systems\", Flynn I.M., Cengage India Publication",
+        "4. \"The Design of UNIX Operating System\", Bach M.J., Prentice Hall India, 1993",
+        "5. \"Unix Shell Programming\", Yashvant Kanetkar, BPB Publications, 1st Edition",
+        "6. \"Unix Concepts and Applications\"",
+        "Sumitabha Das",
+        "McGraw-Hill Publications",
+        "Edition",
+        "Web References :",
+        "1. https://www.javatpoint.com/os-tutorial",
+        "2. https://www.geeksforgeeks.org/operating-systems/",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Master of Computer Applications",
+        "___________________________________________________________________________________________________",
+        "App References :",
+        "1. Operating System Tutorials",
+        "2. AnLinux : Run Linux on Android",
+        "3. Linux Tutorial",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Master of Computer Applications",
+        "___________________________________________________________________________________________________",
+        "Syllabus Coverage from Text / Reference Book & Web/App Reference:",
+        "Text Book 1: Stallings",
+        "Operating Systems (7th Ed.)"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Implementation of Producer-Consumer Problem using Semaphores",
+      "content": [
+        "Write shell script for simple library management system. Database fields:",
+        "Accno, Title, Author, Edition, Publisher. Operations: View/Add/Delete/Count",
+        "records",
+        "Accept filename and display the permission of that file if it exists, otherwise",
+        "print appropriate message",
+        "Write a script to display the date, time and a welcome message (Good",
+        "Morning/Afternoon/Evening) using 24-hour notation",
+        "Write a script to display the name of those files in a given directory which",
+        "are having multiple links",
+        "Write a script to display the name of all executable files in the given",
+        "directory"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Write a script to display the last modified file",
+      "content": [
+        "UNIT - 4",
+        "Write a Shell Script to take user data as command line argument and display",
+        "a greetings message",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Master of Computer Applications",
+        "___________________________________________________________________________________________________",
+        "Write a script that deletes all leading and trailing spaces in all lines in a file",
+        "Also remove blank lines from the file",
+        "Write Menu driven program for: Display all words of file in ascending order",
+        "Remove all spaces from file, Display zero size files, Perform Find and",
+        "Replace operation"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Write a Script for Simple Database Management System (EMP_NO,",
+      "content": [
+        "EMP_NAME, EMP_ADDRESS, EMP_AGE, EMP_GENDER, EMP_DESIGNATION",
+        "EMP_BASIC_SALARY)",
+        "Menu:",
+        "View/Add/Delete/Modify",
+        "Record",
+        "Count",
+        "Records, Exit",
+        "Write a shell script to receive filename or full path and display its ls -l",
+        "information in proper format",
+        "Write a shell script to determine whether a year (input from keyboard) is a",
+        "leap year or not. If no argument is supplied, use current year"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Banker's Algorithm simulation for Deadlock Avoidance",
+      "content": [
+        "Write a script to determine profit or loss given cost price and selling price",
+        "Display amount of profit/loss",
+        "Write a shell script which deletes all lines containing the word unix in the",
+        "files supplied as arguments",
+        "Write a shell script to display a list of all files in the current directory for",
+        "which you have read, write and execute permissions"
+      ]
+    }
+  ]
+}

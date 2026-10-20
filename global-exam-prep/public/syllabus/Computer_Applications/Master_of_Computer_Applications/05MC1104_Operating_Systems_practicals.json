@@ -1,0 +1,359 @@
+{
+  "schema_version": "1.0",
+  "subject": {
+    "name": "Operating Systems",
+    "subject_code": "05MC1104",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Master of Computer Applications",
+    "semester": 1,
+    "source": "Other_Departments_Structured_Syllabus/Computer_Applications/Master_of_Computer_Applications/Semester_1/05MC1104_Operating_Systems_practicals.json"
+  },
+  "practicals": [
+    {
+      "practical_number": 1,
+      "title": "Introduction to Linux environment: Check the output of basic commands:",
+      "content": [
+        "Introduction to Linux environment: Check the output of basic commands:",
+        "date, ls, who, cal, ps, wc, cat, uname, pwd, mkdir, rmdir, cd, cp, rm, mv,",
+        "chmod"
+      ]
+    },
+    {
+      "practical_number": 2,
+      "title": "Check the output of following filter commands: diff, grep, sed, head, tail,",
+      "content": [
+        "Check the output of following filter commands: diff, grep, sed, head, tail,",
+        "cut, paste, sort, find"
+      ]
+    },
+    {
+      "practical_number": 3,
+      "title": "Write shell script to accept numbers and perform addition, subtraction,",
+      "content": [
+        "Write shell script to accept numbers and perform addition, subtraction,",
+        "multiplication and division"
+      ]
+    },
+    {
+      "practical_number": 4,
+      "title": "Write shell script to accept the string and check whether the string is",
+      "content": [
+        "Write shell script to accept the string and check whether the string is",
+        "palindrome or not"
+      ]
+    },
+    {
+      "practical_number": 5,
+      "title": "Write shell script to accept the number, check whether it is odd or even, find",
+      "content": [
+        "Write shell script to accept the number, check whether it is odd or even, find",
+        "length of the number and sum of its digits"
+      ]
+    },
+    {
+      "practical_number": 6,
+      "title": "Write shell script to accept the string and replace it by another string",
+      "content": [
+        "Write shell script to accept the string and replace it by another string"
+      ]
+    },
+    {
+      "practical_number": 7,
+      "title": "Accept the filename and display the last modification time if file exists,",
+      "content": [
+        "Accept the filename and display the last modification time if file exists,",
+        "otherwise display appropriate message"
+      ]
+    },
+    {
+      "practical_number": 8,
+      "title": "Fetch the data from file and display data into another file in reverse order",
+      "content": [
+        "Fetch the data from file and display data into another file in reverse order"
+      ]
+    },
+    {
+      "practical_number": 9,
+      "title": "Write a script to delete zero sized files from a given directory (and all its",
+      "content": [
+        "Write a script to delete zero sized files from a given directory (and all its",
+        "sub-directories)"
+      ]
+    },
+    {
+      "practical_number": 10,
+      "title": "Write a shell script to print all the prime numbers from 1 to 300 (Use nested",
+      "content": [
+        "Write a shell script to print all the prime numbers from 1 to 300 (Use nested",
+        "loops, break and continue)",
+        "UNIT - 2"
+      ]
+    },
+    {
+      "practical_number": 11,
+      "title": "Write a script that lists files by modification time when called with 1m and",
+      "content": [
+        "Write a script that lists files by modification time when called with 1m and",
+        "by access time when called with 1a. By default the script should show the",
+        "listing of all files in current directory"
+      ]
+    },
+    {
+      "practical_number": 12,
+      "title": "Write a script that behaves both in interactive and noninteractive mode.",
+      "content": [
+        "Write a script that behaves both in interactive and noninteractive mode.",
+        "When no arguments are supplied, it picks up each C program and lists first"
+      ]
+    },
+    {
+      "practical_number": 13,
+      "title": "lines, then prompts for deletion",
+      "content": [
+        "lines, then prompts for deletion"
+      ]
+    },
+    {
+      "practical_number": 14,
+      "title": "Display the processes in the system every 30 seconds five times using (i)",
+      "content": [
+        "Display the processes in the system every 30 seconds five times using (i)",
+        "while loop, (ii) for loop"
+      ]
+    },
+    {
+      "practical_number": 15,
+      "title": "Write a script which looks up every .c file in current directory for the strings",
+      "content": [
+        "Write a script which looks up every .c file in current directory for the strings",
+        "printf or fprintf. If found, the script adds #include <stdio.h> at the",
+        "beginning of the file"
+      ]
+    },
+    {
+      "practical_number": 16,
+      "title": "Write a script that uses find to look for a file and echo a suitable message if",
+      "content": [
+        "Write a script that uses find to look for a file and echo a suitable message if",
+        "the file is not found",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Master of Computer Applications",
+        "___________________________________________________________________________________________________"
+      ]
+    },
+    {
+      "practical_number": 17,
+      "title": "Write a script for generating a mark sheet after reading data from a file",
+      "content": [
+        "Write a script for generating a mark sheet after reading data from a file",
+        "(student roll no, name, marks of three subjects)"
+      ]
+    },
+    {
+      "practical_number": 18,
+      "title": "Write a shell script to accept distance between two cities (in km) and",
+      "content": [
+        "Write a shell script to accept distance between two cities (in km) and",
+        "convert it to meters, feet, inches and centimeters"
+      ]
+    },
+    {
+      "practical_number": 19,
+      "title": "Write a script to display all words of a file in ascending order and to display",
+      "content": [
+        "Write a script to display all words of a file in ascending order and to display",
+        "the last modified file"
+      ]
+    },
+    {
+      "practical_number": 20,
+      "title": "Ramesh's basic salary is input through keyboard. DA is 40% and HRA is",
+      "content": [
+        "Ramesh's basic salary is input through keyboard. DA is 40% and HRA is",
+        "20% of basic salary. Write a script to calculate gross salary"
+      ]
+    },
+    {
+      "practical_number": 21,
+      "title": "The length, breadth of a rectangle and radius of a circle are input through",
+      "content": [
+        "The length, breadth of a rectangle and radius of a circle are input through",
+        "keyboard. Write a shell script to calculate area of rectangle and",
+        "circumference of the circle",
+        "UNIT - 3"
+      ]
+    },
+    {
+      "practical_number": 22,
+      "title": "Write a script to make following file and directory management operations",
+      "content": [
+        "Write a script to make following file and directory management operations",
+        "menu-based: Display current directory, List directory, Make directory,",
+        "Change directory, Copy/Rename/Delete/Edit a file"
+      ]
+    },
+    {
+      "practical_number": 23,
+      "title": "Write a script which reads a text file and outputs: Count of characters,",
+      "content": [
+        "Write a script which reads a text file and outputs: Count of characters,",
+        "words and lines; File in reverse; Frequency of a particular word; Lowercase",
+        "in place of uppercase"
+      ]
+    },
+    {
+      "practical_number": 24,
+      "title": "Write a shell script to check whether the named user is currently logged in",
+      "content": [
+        "Write a shell script to check whether the named user is currently logged in",
+        "or not"
+      ]
+    },
+    {
+      "practical_number": 25,
+      "title": "Implementation of Producer-Consumer Problem using Semaphores",
+      "content": [
+        "Implementation of Producer-Consumer Problem using Semaphores"
+      ]
+    },
+    {
+      "practical_number": 26,
+      "title": "Write shell script for simple library management system. Database fields:",
+      "content": [
+        "Write shell script for simple library management system. Database fields:",
+        "Accno, Title, Author, Edition, Publisher. Operations: View/Add/Delete/Count",
+        "records"
+      ]
+    },
+    {
+      "practical_number": 27,
+      "title": "Accept filename and display the permission of that file if it exists, otherwise",
+      "content": [
+        "Accept filename and display the permission of that file if it exists, otherwise",
+        "print appropriate message"
+      ]
+    },
+    {
+      "practical_number": 28,
+      "title": "Write a script to display the date, time and a welcome message (Good",
+      "content": [
+        "Write a script to display the date, time and a welcome message (Good",
+        "Morning/Afternoon/Evening) using 24-hour notation"
+      ]
+    },
+    {
+      "practical_number": 29,
+      "title": "Write a script to display the name of those files in a given directory which",
+      "content": [
+        "Write a script to display the name of those files in a given directory which",
+        "are having multiple links"
+      ]
+    },
+    {
+      "practical_number": 30,
+      "title": "Write a script to display the name of all executable files in the given",
+      "content": [
+        "Write a script to display the name of all executable files in the given",
+        "directory"
+      ]
+    },
+    {
+      "practical_number": 31,
+      "title": "Write a script to display the last modified file",
+      "content": [
+        "Write a script to display the last modified file",
+        "UNIT - 4"
+      ]
+    },
+    {
+      "practical_number": 32,
+      "title": "Write a Shell Script to take user data as command line argument and display",
+      "content": [
+        "Write a Shell Script to take user data as command line argument and display",
+        "a greetings message",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Master of Computer Applications",
+        "___________________________________________________________________________________________________"
+      ]
+    },
+    {
+      "practical_number": 33,
+      "title": "Write a script that deletes all leading and trailing spaces in all lines in a file.",
+      "content": [
+        "Write a script that deletes all leading and trailing spaces in all lines in a file.",
+        "Also remove blank lines from the file"
+      ]
+    },
+    {
+      "practical_number": 34,
+      "title": "Write Menu driven program for: Display all words of file in ascending order,",
+      "content": [
+        "Write Menu driven program for: Display all words of file in ascending order,",
+        "Remove all spaces from file, Display zero size files, Perform Find and",
+        "Replace operation"
+      ]
+    },
+    {
+      "practical_number": 35,
+      "title": "Write a Script for Simple Database Management System (EMP_NO,",
+      "content": [
+        "Write a Script for Simple Database Management System (EMP_NO,",
+        "EMP_NAME, EMP_ADDRESS, EMP_AGE, EMP_GENDER, EMP_DESIGNATION,",
+        "EMP_BASIC_SALARY).",
+        "Menu:",
+        "View/Add/Delete/Modify",
+        "Record,",
+        "Count",
+        "Records, Exit"
+      ]
+    },
+    {
+      "practical_number": 36,
+      "title": "Write a shell script to receive filename or full path and display its ls -l",
+      "content": [
+        "Write a shell script to receive filename or full path and display its ls -l",
+        "information in proper format"
+      ]
+    },
+    {
+      "practical_number": 37,
+      "title": "Write a shell script to determine whether a year (input from keyboard) is a",
+      "content": [
+        "Write a shell script to determine whether a year (input from keyboard) is a",
+        "leap year or not. If no argument is supplied, use current year"
+      ]
+    },
+    {
+      "practical_number": 38,
+      "title": "Banker's Algorithm simulation for Deadlock Avoidance",
+      "content": [
+        "Banker's Algorithm simulation for Deadlock Avoidance"
+      ]
+    },
+    {
+      "practical_number": 39,
+      "title": "Write a script to determine profit or loss given cost price and selling price.",
+      "content": [
+        "Write a script to determine profit or loss given cost price and selling price.",
+        "Display amount of profit/loss"
+      ]
+    },
+    {
+      "practical_number": 40,
+      "title": "Write a shell script which deletes all lines containing the word unix in the",
+      "content": [
+        "Write a shell script which deletes all lines containing the word unix in the",
+        "files supplied as arguments"
+      ]
+    },
+    {
+      "practical_number": 41,
+      "title": "Write a shell script to display a list of all files in the current directory for",
+      "content": [
+        "Write a shell script to display a list of all files in the current directory for",
+        "which you have read, write and execute permissions"
+      ]
+    }
+  ]
+}

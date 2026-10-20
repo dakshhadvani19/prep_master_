@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Cyber Physical System",
+    "subject_code": "01CC0604",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CC/01CC0604 - Cyber Physical System.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Cyber Physical Systems",
+      "content": [
+        "Definition and Characteristics of CPS, Distinction from Embedded",
+        "Systems, IoT, and Sensor Networks, Key Concepts: Physical",
+        "dynamics, sensing, actuation, computation, communication",
+        "feedback loops, Societal Impact and Challenges of CPS (Safety",
+        "Security, Privacy, Reliability, Usability), Examples of CPS across",
+        "domains: Smart Grid, Autonomous Vehicles, Medical Devices",
+        "Industrial Control Systems (SCADA), Smart Buildings"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Modeling Physical Dynamics for CPS",
+      "content": [
+        "Introduction to Modeling Physical Processes: State-space models",
+        "differential equations (brief review), Hybrid Systems: Modeling",
+        "systems with interacting continuous and discrete dynamics",
+        "Modeling Techniques: Bond graphs, Simulink/Stateflow",
+        "(introduction), Modeling Tools and Simulation Environments for",
+        "CPS, Abstraction and Hybridization of Physical Systems"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Control and Real-Time Aspects in CPS",
+      "content": [
+        "Introduction to Control Theory for CPS: Feedback control, stability",
+        "performance, Digital Control: Sampling, quantization, real-time",
+        "constraints, Digital Control: Sampling, quantization, real-time",
+        "constraints, CPS Control Design Considerations: Handling delays",
+        "uncertainties, and packet loss in networked control systems, and",
+        "Validation of CPS Control Logic"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "CPS Networking and Communication",
+      "content": [
+        "Networking Requirements for CPS: Timeliness, reliability, safety",
+        "critical communication, Wireless Communication in CPS:",
+        "Challenges (interference, range), protocols (e.g., Zigbee, Bluetooth",
+        "Low Energy, WirelessHART), Wired Communication in CPS:",
+        "Industrial Ethernet, Fieldbuses (e.g., Modbus, Profibus - concepts)",
+        "Networked Control Systems (NCS): Architectures, challenges of",
+        "communication constraints on control performance, Time",
+        "Synchronization in Distributed CPS"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "CPS Security, Safety, and Applications",
+      "content": [
+        "CPS Security Threats: Attacks on sensors, actuators, control logic",
+        "communication networks (e.g., Stuxnet overview), Vulnerabilities at",
+        "the Cyber-Physical Interface: Exploiting physical properties via",
+        "cyber means, cyber effects on physical systems, CPS Security",
+        "Mechanisms: Secure boot, secure communication protocols",
+        "(adapted for CPS constraints), intrusion detection for CPS, CPS",
+        "Safety: Hazard analysis, safety standards (overview), achieving",
+        "safety in the presence of cyber threats, Case Studies of CPS",
+        "Applications: Detailed look at the architecture, challenges, and",
+        "security of selected real-world CPS"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Exploring a CPS Testbed (Virtual or Physical): Working with a pre",
+        "built virtual lab environment or a physical testbed to interact with",
+        "and observe the behavior of a more complex CPS example (e.g., a",
+        "simulated smart grid component, a robotic arm)"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "DR. MUNINDRA HASMUKHBHAI LUNAGARIA DR. RAJENDRASINH BAHADURSINH JADEJA",
+      "content": [
+        "Supplementary Resources:"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Agentic AI & LLM",
+    "subject_code": "01AI0609",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Machine Learning",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0609 - Agentic AI & LLM.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to LLMs",
+      "content": [
+        "Transformer Architecture - self attention mechanism, types of",
+        "transformer architecture, Prompting and prompt engineering, Pre",
+        "training and fine tuning- single task, multi-task, Tokenization",
+        "Evaluation metrics - Perplexity, BLEU, ROUGE, METEOR, and",
+        "BERTScore"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Conversational AI",
+      "content": [
+        "Dialogue Systems - task-oriented vs open domain, rule-based vs",
+        "neural conversational agents, Context Management - dialogue",
+        "history tracking, memory strategies, context window length and",
+        "truncation techniques, Intent Recognition - classification-based",
+        "models, zero-short/few shot intent detection, named entity",
+        "recognition"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Retrieval-Augmented Generation (RAG)",
+      "content": [
+        "Fundamentals of RAG - architecture, dense vs sparse retrieval",
+        "fusion-in decoder vs fusion-in-encoder, Retrieval techniques",
+        "vector embeddings, BM25, DPR, ColBERT, RAG pipeline"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "LangChain",
+      "content": [
+        "Chains - simpleChain, sequentialChain, LLMChain",
+        "ConversationChain, and RetrievalQAChain, Pipeline and modular",
+        "component - PromptTemplate, LLM, OutputParser, Memory",
+        "Input/output schema handling, Error Correction - Retry chains",
+        "Exception handling, LangSmith and logging/debugging tools",
+        "Context Handling - vectorStores, document loaders, memory",
+        "management and history buffers"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Function Calling",
+      "content": [
+        "OpenAI-style function calling, Defining functions via JSON",
+        "schema, Tool execution and argument parsing, Tool integration",
+        "External APIs, code execution, database queries, Responsiveness",
+        "Multi-turn reasoning with intermediate tool use, Streaming",
+        "responses, Error Handling"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Agentic Systems",
+      "content": [
+        "Introduction to Agents - reflection, long term memory, autonomy vs",
+        "interactivity, LangGraph, Architecture - Planner-executer loop, tool",
+        "chaining and task resolution, Planning and Decision Making",
+        "dynamic routing, conditional logic and retry mechanism, logging",
+        "and introspection"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Advanced Agentic Tools",
+      "content": [
+        "CrewAI - Defining roles, tasks, communication protocols between",
+        "agents, AutoGen - multi agent chat-based orchestration, system",
+        "agent-human interaction loops, human-in-the-loop design, Task",
+        "Management - decomposition and delegation, prioritization and",
+        "concurrent execution, memory sharing and results aggregation"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Project Development and Deployment",
+      "content": [
+        "Final Integration - Combining RAG, LangChain, agentic tools",
+        "Handling API dependencies and configuration, Testing"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Develop an LLM agent that can use multiple tools based on user",
+        "intent"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Set up a multi-agent chat system to iteratively refine a solution to a",
+        "user query"
+      ]
+    }
+  ]
+}

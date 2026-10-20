@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Computer Graphics",
+    "subject_code": "01CE0615",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0615 - Computer Graphics.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Basics of Computer Graphics",
+      "content": [
+        "Introduction to computer Graphics and its Applications, Principles",
+        "of graphics and its significance, Graphics input and output device",
+        "and Graphics software and standards, usage of Drawing",
+        "instruments, Drawing and filling methods"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Graphics Output Primitives",
+      "content": [
+        "Point and Lines, Line Drawing Algorithms: Simple, DDA",
+        "Bresenham's Line Drawing algorithm, Circle and Ellipse drawing",
+        "algorithm, Polygon drawing: Representation of polygon",
+        "Conventional methods for drawing polygons",
+        "Real time Scan",
+        "Conversion and Run length encoding",
+        "Fill area primitives including",
+        "scan-line polygon filling, inside-outside test, boundary fill and",
+        "flood-fill, character generation"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "2D Viewing and transformations",
+      "content": [
+        "Viewing pipeline, Window-to-viewport transformation, 2-D",
+        "Clipping, Cohen-Sutherland Line Clipping, Mid-point subdivision",
+        "algorithm, Liang-Barsky clipping, Cyrus-Beck line clipping",
+        "Polygon Clipping: Sutherland-Hodgeman and Weiler-Atherton",
+        "polygon clipping",
+        "Character Clipping"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "3D Transformations",
+      "content": [
+        "Scaling, Rotation, Translation, Shearing, Reflection",
+        "Homogeneous",
+        "coordinates, Composite Transformations. 3-D concepts and",
+        "representation, Solid Body transformations, Projections:",
+        "Perspective, Orthographic"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Advanced Graphic methods and Color Models",
+      "content": [
+        "Hidden Surfaces And Lines: Back-Face Algorithms, Z Buffers",
+        "Scan- Line Algorithms. Color models: properties of light, RGB",
+        "YIQ and CMYK color models"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a Program to fill a Circle using Flood Fill Algorithm"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a Program to draw a circle using mid-point circle algorithm"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program to perform shear transformation on a rectangle"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program to translate a triangle about the origin"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a Program to rotate a triangle about a fixed point taken as one",
+        "of the vertex of the triangle"
+      ]
+    }
+  ]
+}

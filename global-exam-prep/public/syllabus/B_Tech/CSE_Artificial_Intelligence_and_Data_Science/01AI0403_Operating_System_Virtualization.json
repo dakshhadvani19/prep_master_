@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Operating System & Virtualization",
+    "subject_code": "01AI0403",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0403 - Operating System & Virtualization.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Operating System Overview",
+      "content": [
+        "Computer System Overview-Basic Elements, Instruction Execution",
+        "Interrupts, Memory Hierarchy, Cache Memory, Direct Memory",
+        "Access, Multiprocessor and Multicore Organization, Operating",
+        "system overview-objectives and functions, Evolution of Operating",
+        "System, Computer System Organization Operating System Structure",
+        "and Operations- System Calls, System Programs,, OS Generation",
+        "and System Boot"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Process Management",
+      "content": [
+        "Processes - Process Concept, Process Scheduling, Operations on",
+        "Processes, Inter-process Communication, CPU Scheduling",
+        "Scheduling criteria, Scheduling algorithms, Multiple-processor",
+        "scheduling, Real time scheduling",
+        "Threads- Overview",
+        "Multithreading models, Threading issues",
+        "Process Synchronization",
+        "The critical-section problem, Synchronization hardware, Mutex",
+        "locks, Semaphores, Classic problems of synchronization, Critical",
+        "regions, Monitors",
+        "Deadlock - System model, Deadlock",
+        "characterization, Methods for handling deadlocks, Deadlock",
+        "prevention, Deadlock avoidance, Deadlock detection, Recovery",
+        "from deadlock"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Memory Management",
+      "content": [
+        "Memory Management requirements, Memory partitioning: Fixed",
+        "and Variable Partitioning, Memory Allocation: Allocation Strategies",
+        "(First Fit, Best Fit, and Worst Fit), Swapping, Paging and",
+        "Fragmentation. Demand Paging, Security Issues., Virtual Memory:",
+        "Concepts, VM management, Page Replacement Policies (FIFO",
+        "LRU, Optimal, Other Strategies), Thrashing"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "File Systems And I/O Systems",
+      "content": [
+        "Mass Storage system - Overview of Mass Storage Structure, Disk",
+        "Structure, Disk Scheduling and Management, swap space",
+        "management",
+        "File-System Interface - File concept, Access methods",
+        "Directory Structure, Directory organization,, File system mounting",
+        "File Sharing and Protection, File System Implementation- File",
+        "System Structure, Directory implementation, Allocation Methods",
+        "Free Space Management, Efficiency and Performance, Recovery",
+        "I/O Systems - I/O Hardware, Application I/O interface, Kernel I/O",
+        "subsystem, Streams, Performance"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Virtualization Concepts & Approaches to Virtualization",
+      "content": [
+        "Virtual machines, supporting multiple operating systems",
+        "simultaneously on a single hardware platform, running one",
+        "operating system on top of another., True or pure virtualization",
+        "Processor Issue, Memory Management, I/O Management, VMware",
+        "ESXi, Microsoft Hyper-V and Xen Variants, Java VM, Linux",
+        "VServer Virtual Machine Architecture, Android Virtual",
+        "Machine.Processor Issue, Memory Management, I/O Management",
+        "Microsoft Hyper-V and Xen Variants, Java VM, Linux VServer",
+        "Virtual Machine Architecture, Android Virtual Machine"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "a. Write a shell script to enter a number and print its reverse. b",
+        "Write a shell script to check whether a number is Prime number or",
+        "not. c. Write a script to check entered string or a number is",
+        "palindrome or not"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "a. Write a shell script which will generate first n Fibonacci numbers",
+        "like: 1, 1, 2, 3, 5, 13,... b. Write a script to translate the string from",
+        "capital letters to small and small letters to capital using awk",
+        "command"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Simulate all page replacement algorithms - FIFO and LRU"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program to simulate disk scheduling algorithms - FCFS and",
+        "SCAN"
+      ]
+    }
+  ]
+}

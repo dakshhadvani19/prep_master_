@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Computer Network",
+    "subject_code": "01AI0404",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0404 - Computer Network.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Basic Understanding of Computer Network and Internet",
+        "Transmission Media, Switching Techniques, Network Metrics, OSI",
+        "Model, TCP/IP Model"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Application Layer",
+      "content": [
+        "Principles of Network applications, Web & HTTP, Domain Name",
+        "System, Electronic Mail, Socket Programming"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Transport Layer",
+      "content": [
+        "Transport layer Protocols and its services, Multiplexing and",
+        "Demultiplexing, User Datagram Protocol, Transmission Control",
+        "Protocol, Principles of Congestion Control"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Network Layer",
+      "content": [
+        "Introduction, Connection Oriented and Connectionless networks",
+        "Interconnecting Devices, IP Protocol and Subnets, Distance Vector",
+        "Routing, Link State Routing, Hierarchical Routing"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Datalink Layer",
+      "content": [
+        "Data Link layer Design Issues, Link layer services, error-detection",
+        "and correction techniques, Multiple Access Protocols (MAP)",
+        "Ethernet"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement the concept of static routing"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement the concept of VLAN using Network Simulator"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement the concept of subnetting in Packet tracer and show then",
+        "ARP protocol activities"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Packet capture and header analysis by wire-shark (TCP, UDP, IP)"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Configuration of E-mail Server in Packet Tracer Software"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "Preparing straight and cross cables"
+      ]
+    }
+  ]
+}

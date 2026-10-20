@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Cloud Developing",
+    "subject_code": "01CT0720",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT0720 - Cloud Developing.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Developing on AWS",
+      "content": [
+        "Introduction, Systems development lifecycle, Steps to get started",
+        "developing on AWS, Demonstration: AWS CLI installation",
+        "Fundamentals of working with the AWS SDKs"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Developing Flexible NoSQL Solutions",
+      "content": [
+        "Introducing AWS database options, Key concepts for DynamoDB",
+        "Partitions and data distribution, Secondary indexes, Read/write",
+        "throughput, Calculating Read Capacity Units (RCUs) and Write",
+        "Capacity Units (WCUs), Streams and global tables, Backup and",
+        "restore, Basic operations for DynamoDB tables"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Developing REST APIs",
+      "content": [
+        "Introducing APIs, Introducing API Gateway, creating a REST API",
+        "Integrating with API Gateway, Deploying an API, controlling",
+        "access to a REST API, Monitoring a REST API, Optimizing API",
+        "Gateway"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Developing Event-Driven Serverless Solutions",
+      "content": [
+        "Introducing serverless computing, Introducing Lambda, Invoking",
+        "Lambda functions, setting permissions for Lambda, Authoring and",
+        "configuring Lambda functions, Deploying Lambda functions",
+        "Monitoring and debugging tools for application developers",
+        "Demonstration: Using X-Ray with Lambda"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Introducing Containers and Container Services",
+      "content": [
+        "Introducing containers, Introducing Docker containers, migrating a",
+        "Web, Application to Docker Containers, containers for",
+        "microservices, Introducing AWS container services, Deploying",
+        "applications with AWS Elastic Beanstalk"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Caching Information for Scalability",
+      "content": [
+        "Introduction, Caching overview, Caching with ElastiCache",
+        "Caching Application Data with ElastiCache, Caching with",
+        "CloudFront, Caching strategies"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Developing with Messaging Services",
+      "content": [
+        "Processing requests asynchronously, Introducing Amazon SQS",
+        "Working with Amazon SQS messages, Configuring Amazon SQS",
+        "queues, Introducing Amazon SNS, Developing with Amazon SNS",
+        "Demonstration: Working with Amazon Messaging Services",
+        "introducing Amazon Kinesis Data Streams"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Developing Secure Applications on AWS",
+      "content": [
+        "Securing network connections, Authenticating with AWS Security",
+        "Token Service (AWS STS), Authenticating with Amazon Cognito",
+        "Implementing Application Authentication using Amazon Cognito"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Automating Deployment Using CI/CD Pipelines",
+      "content": [
+        "Introducing DevOps, AWS code services for continuous integration",
+        "and continuous delivery (CI/CD), Deploying applications with",
+        "AWS Cloud Formation, deploying applications with the AWS",
+        "Serverless Application Model (AWS SAM), Automating",
+        "Application Deployment Using a CI/CD Pipeline"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment:10",
+      "content": [
+        "Application to Docker Containers"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment:11",
+      "content": [
+        "On lambda invoke trigger SNS notification to your respective mail"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment:12 Implementing a Messaging System Using Amazon SNS and",
+      "content": [
+        "Amazon SQS"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment:13",
+      "content": [
+        "Implementing Application Authentication Using Amazon Cognito"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment:14",
+      "content": [
+        "Create 2 simple websites and push their code to code commit"
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Experiment:15",
+      "content": [
+        "Automating Application Deployment Using a CI/CD Pipeline"
+      ]
+    },
+    {
+      "chapter_number": 16,
+      "chapter_name": "Experiment:16",
+      "content": [
+        "To send a message to SQS from the API"
+      ]
+    },
+    {
+      "chapter_number": 17,
+      "chapter_name": "Experiment:17",
+      "content": [
+        "Convert any monolithic architecture to micro-service"
+      ]
+    },
+    {
+      "chapter_number": 18,
+      "chapter_name": "Experiment:18",
+      "content": [
+        "Create CI/CD pipeline for deploying any project"
+      ]
+    }
+  ]
+}

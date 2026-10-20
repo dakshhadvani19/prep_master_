@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0",
+  "subject": {
+    "name": "DevOps Essentials",
+    "subject_code": "01CC0704",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 7,
+    "source": "Other_Departments_Structured_Syllabus/B.Tech/CSE_Cyber_Security/Semester_7/01CC0704_DevOps_Essentials_practicals.json"
+  },
+  "practicals": [
+    {
+      "practical_number": 1,
+      "title": "Setting up a DevSecOps Lab Environment Objective: Install",
+      "content": [
+        "Setting up a DevSecOps Lab Environment Objective: Install"
+      ]
+    },
+    {
+      "practical_number": 2,
+      "title": "Docker, Jenkins or GitHub Actions runner, SonarQube, and",
+      "content": [
+        "Docker, Jenkins or GitHub Actions runner, SonarQube, and"
+      ]
+    },
+    {
+      "practical_number": 3,
+      "title": "OWASP ZAP on a local VM or cloud instance",
+      "content": [
+        "OWASP ZAP on a local VM or cloud instance"
+      ]
+    },
+    {
+      "practical_number": 4,
+      "title": "Configure a sample",
+      "content": [
+        "Configure a sample"
+      ]
+    },
+    {
+      "practical_number": 5,
+      "title": "CI/CD pipeline with a sample application",
+      "content": [
+        "CI/CD pipeline with a sample application"
+      ]
+    },
+    {
+      "practical_number": 6,
+      "title": "Tools: Docker",
+      "content": [
+        "Tools: Docker"
+      ]
+    },
+    {
+      "practical_number": 7,
+      "title": "Jenkins/GitHub Actions, SonarQube, OWASP ZAP",
+      "content": [
+        "Jenkins/GitHub Actions, SonarQube, OWASP ZAP"
+      ]
+    },
+    {
+      "practical_number": 8,
+      "title": "Integrating SAST into a CI/CD Pipeline Objective: Configure",
+      "content": [
+        "Integrating SAST into a CI/CD Pipeline Objective: Configure"
+      ]
+    },
+    {
+      "practical_number": 9,
+      "title": "SonarQube or Semgrep to scan a deliberately vulnerable application",
+      "content": [
+        "SonarQube or Semgrep to scan a deliberately vulnerable application"
+      ]
+    },
+    {
+      "practical_number": 10,
+      "title": "(DVWA or WebGoat)",
+      "content": [
+        "(DVWA or WebGoat)"
+      ]
+    },
+    {
+      "practical_number": 11,
+      "title": "Identify and interpret security findings; set a",
+      "content": [
+        "Identify and interpret security findings; set a"
+      ]
+    },
+    {
+      "practical_number": 12,
+      "title": "quality gate to fail the build on high-severity issues",
+      "content": [
+        "quality gate to fail the build on high-severity issues"
+      ]
+    },
+    {
+      "practical_number": 13,
+      "title": "SonarQube, Semgrep, DVWA, WebGoat",
+      "content": [
+        "SonarQube, Semgrep, DVWA, WebGoat"
+      ]
+    },
+    {
+      "practical_number": 14,
+      "title": "Software Composition Analysis (SCA) with Snyk/OWASP",
+      "content": [
+        "Software Composition Analysis (SCA) with Snyk/OWASP"
+      ]
+    },
+    {
+      "practical_number": 15,
+      "title": "Dependency-Check Objective: Scan a Node.js or Python project's",
+      "content": [
+        "Dependency-Check Objective: Scan a Node.js or Python project's"
+      ]
+    },
+    {
+      "practical_number": 16,
+      "title": "dependencies for known CVEs",
+      "content": [
+        "dependencies for known CVEs"
+      ]
+    },
+    {
+      "practical_number": 17,
+      "title": "Generate an SBOM using Syft and",
+      "content": [
+        "Generate an SBOM using Syft and"
+      ]
+    },
+    {
+      "practical_number": 18,
+      "title": "analyze the output",
+      "content": [
+        "analyze the output"
+      ]
+    },
+    {
+      "practical_number": 19,
+      "title": "Tools: Snyk, OWASP Dependency-Check, Syft",
+      "content": [
+        "Tools: Snyk, OWASP Dependency-Check, Syft"
+      ]
+    },
+    {
+      "practical_number": 20,
+      "title": "Secret Detection in Source Code Objective: Use GitLeaks and",
+      "content": [
+        "Secret Detection in Source Code Objective: Use GitLeaks and"
+      ]
+    },
+    {
+      "practical_number": 21,
+      "title": "TruffleHog to scan a sample repository containing intentionally",
+      "content": [
+        "TruffleHog to scan a sample repository containing intentionally"
+      ]
+    },
+    {
+      "practical_number": 22,
+      "title": "embedded secrets",
+      "content": [
+        "embedded secrets"
+      ]
+    },
+    {
+      "practical_number": 23,
+      "title": "Implement a pre-commit hook to block secret",
+      "content": [
+        "Implement a pre-commit hook to block secret"
+      ]
+    },
+    {
+      "practical_number": 24,
+      "title": "Tools: GitLeaks, TruffleHog, Git hooks",
+      "content": [
+        "Tools: GitLeaks, TruffleHog, Git hooks"
+      ]
+    },
+    {
+      "practical_number": 25,
+      "title": "Dynamic Analysis with OWASP ZAP Objective: Run an automated",
+      "content": [
+        "Dynamic Analysis with OWASP ZAP Objective: Run an automated"
+      ]
+    },
+    {
+      "practical_number": 26,
+      "title": "DAST scan against a locally deployed vulnerable web application",
+      "content": [
+        "DAST scan against a locally deployed vulnerable web application"
+      ]
+    },
+    {
+      "practical_number": 27,
+      "title": "Configure ZAP in daemon mode and generate an HTML",
+      "content": [
+        "Configure ZAP in daemon mode and generate an HTML"
+      ]
+    },
+    {
+      "practical_number": 28,
+      "title": "report as a pipeline artifact",
+      "content": [
+        "report as a pipeline artifact"
+      ]
+    },
+    {
+      "practical_number": 29,
+      "title": "Tools: OWASP ZAP, DVWA",
+      "content": [
+        "Tools: OWASP ZAP, DVWA"
+      ]
+    },
+    {
+      "practical_number": 30,
+      "title": "Container Image Security Scanning with Trivy Objective: Build a",
+      "content": [
+        "Container Image Security Scanning with Trivy Objective: Build a"
+      ]
+    },
+    {
+      "practical_number": 31,
+      "title": "Docker image for a sample application and scan it using Trivy",
+      "content": [
+        "Docker image for a sample application and scan it using Trivy"
+      ]
+    },
+    {
+      "practical_number": 32,
+      "title": "Harden the image by switching to a minimal base image and re-scan",
+      "content": [
+        "Harden the image by switching to a minimal base image and re-scan"
+      ]
+    },
+    {
+      "practical_number": 33,
+      "title": "to verify improvement",
+      "content": [
+        "to verify improvement"
+      ]
+    },
+    {
+      "practical_number": 34,
+      "title": "Tools: Docker, Trivy",
+      "content": [
+        "Tools: Docker, Trivy"
+      ]
+    },
+    {
+      "practical_number": 35,
+      "title": "Infrastructure as Code (IaC) Security Scanning Objective: Write a",
+      "content": [
+        "Infrastructure as Code (IaC) Security Scanning Objective: Write a"
+      ]
+    },
+    {
+      "practical_number": 36,
+      "title": "Terraform configuration with intentional misconfigurations",
+      "content": [
+        "Terraform configuration with intentional misconfigurations"
+      ]
+    },
+    {
+      "practical_number": 37,
+      "title": "using Checkov or tfsec, fix the findings, and validate",
+      "content": [
+        "using Checkov or tfsec, fix the findings, and validate"
+      ]
+    },
+    {
+      "practical_number": 38,
+      "title": "Terraform, Checkov, tfsec",
+      "content": [
+        "Terraform, Checkov, tfsec"
+      ]
+    },
+    {
+      "practical_number": 39,
+      "title": "Kubernetes RBAC and Pod Security Objective: Deploy a sample",
+      "content": [
+        "Kubernetes RBAC and Pod Security Objective: Deploy a sample"
+      ]
+    },
+    {
+      "practical_number": 40,
+      "title": "workload to a local Kubernetes cluster (minikube/kind)",
+      "content": [
+        "workload to a local Kubernetes cluster (minikube/kind)"
+      ]
+    },
+    {
+      "practical_number": 41,
+      "title": "RBAC roles, apply Pod Security Standards, and use kube-bench to",
+      "content": [
+        "RBAC roles, apply Pod Security Standards, and use kube-bench to"
+      ]
+    },
+    {
+      "practical_number": 42,
+      "title": "audit the cluster",
+      "content": [
+        "audit the cluster"
+      ]
+    },
+    {
+      "practical_number": 43,
+      "title": "Tools: Kubernetes (minikube/kind), kube-bench",
+      "content": [
+        "Tools: Kubernetes (minikube/kind), kube-bench"
+      ]
+    },
+    {
+      "practical_number": 44,
+      "title": "Secrets Management with HashiCorp Vault Objective: Set up Vault",
+      "content": [
+        "Secrets Management with HashiCorp Vault Objective: Set up Vault"
+      ]
+    },
+    {
+      "practical_number": 45,
+      "title": "in development mode, store database credentials as a secret, and",
+      "content": [
+        "in development mode, store database credentials as a secret, and"
+      ]
+    },
+    {
+      "practical_number": 46,
+      "title": "configure a sample application to dynamically retrieve secrets at",
+      "content": [
+        "configure a sample application to dynamically retrieve secrets at"
+      ]
+    },
+    {
+      "practical_number": 47,
+      "title": "Tools: HashiCorp Vault, Docker",
+      "content": [
+        "Tools: HashiCorp Vault, Docker"
+      ]
+    },
+    {
+      "practical_number": 48,
+      "title": "Runtime Threat Detection with Falco Objective: Install Falco on a",
+      "content": [
+        "Runtime Threat Detection with Falco Objective: Install Falco on a"
+      ]
+    },
+    {
+      "practical_number": 49,
+      "title": "Linux host or inside a Kubernetes cluster",
+      "content": [
+        "Linux host or inside a Kubernetes cluster"
+      ]
+    },
+    {
+      "practical_number": 50,
+      "title": "Write a custom Falco rule",
+      "content": [
+        "Write a custom Falco rule"
+      ]
+    },
+    {
+      "practical_number": 51,
+      "title": "to detect suspicious behavior (e.g",
+      "content": [
+        "to detect suspicious behavior (e.g"
+      ]
+    },
+    {
+      "practical_number": 52,
+      "title": "shell spawned inside a container)",
+      "content": [
+        "shell spawned inside a container)"
+      ]
+    },
+    {
+      "practical_number": 53,
+      "title": "and trigger an alert",
+      "content": [
+        "and trigger an alert"
+      ]
+    },
+    {
+      "practical_number": 54,
+      "title": "Tools: Falco, Kubernetes",
+      "content": [
+        "Tools: Falco, Kubernetes"
+      ]
+    }
+  ]
+}

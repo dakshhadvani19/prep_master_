@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Applied Linear algebra",
+    "subject_code": "01CT2510",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT2510 - Applied Linear algebra.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Vectors and vector spaces",
+      "content": [
+        "Scalars: real numbers, complex numbers, examples of vector spaces",
+        "linear independence, span, basis vectors, rank, subspace, the null",
+        "space of A: solving Ax = 0 and Rx = 0, the Complete Solution to Ax",
+        "= b"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Linear Transformations",
+      "content": [
+        "Matrix representation, change of basis, products of linear maps, null",
+        "space, range, fundamental subspaces, rank-nullity theorem",
+        "invertibility, isomorphism, operators, invertible linear maps, change",
+        "of basis for a linear map/operator, simplifying linear operators by",
+        "changing basis"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Eigenvalues and eigenvectors of linear operators",
+      "content": [
+        "Characteristic polynomial, eigenvalues/eigenvectors, generalized",
+        "eigenvectors/eigenspaces, similarity transformation, diagonalization",
+        "determinant, applications of eigen values: convolution and DFT",
+        "stability, inding expressions for A^k - fibonacci, counting paths in",
+        "graphs, oogle search - popularity measures in a network"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Projection and least squares",
+      "content": [
+        "Projection to a subspace, distance from a subspace and projection",
+        "least squares solution to a linear equation, application: MMSE",
+        "estimation application: linear regression in machine learning"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Singular value decompositions",
+      "content": [
+        "Singular values and singular vectors, singular value decomposition",
+        "application: MIMO communications, low-rank approximations",
+        "recommendation systems"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Experiment 6 Determining the word representation based on embeddings of",
+      "content": [
+        "diffrent words using word2vec"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment 7 Solving the system of Linear Equations for exact solution",
+      "content": [
+        "Experiment 8 Solving the system of Linear Equations for Approximate solution"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment 9 Using QR decomposition for solving linear equations",
+      "content": [
+        "Find the equation of hypothesis to fit the set of datapoints"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment 11 Obtain the linearly transformed image/structure of a given",
+      "content": [
+        "image/structure"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment 12 Application of Radiography images using Projection",
+      "content": [
+        "Experiment 13 Calculating the matrix-power using matrix diagonalization"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment 14 Ranking algorithm in search engines using eigenvalues",
+      "content": [
+        "Experiment 15 Dimensionality Reduction using Eigenvalues and Eigenvectors"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment 17 Image compression using Matrix Factorization",
+      "content": [
+        "Experiment 18 Content Based Filtering Recommendation system using Singular",
+        "Value Decomposition"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment 19 Merging multiple images using linear algebra to look as natural",
+      "content": [
+        "image"
+      ]
+    }
+  ]
+}

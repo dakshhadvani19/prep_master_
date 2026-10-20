@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Computer Vision",
+    "subject_code": "01CE0728",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0728 - Computer Vision.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Computer Vision",
+      "content": [
+        "Introduction to Computer Vision, History and Evolution of",
+        "Computer Vision,, Applications of Computer Vision in Various",
+        "Fields, Human Vision vs, Computer Vision, Digital Image",
+        "Representation and Basics of Pixel Operations, Color Spaces and",
+        "Color Image Processing, Image Formation and Imaging Geometry"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "COMPUTER VISION 01CE0728",
+      "content": [
+        "Digital Image Fundamentals,, Image Enhancement Techniques",
+        "(Histogram Equalization, Contrast Stretching, etc.), Image Filtering",
+        "(Spatial Filters), Noise Reduction Techniques (Smoothing Filters)",
+        "Image Sharpening (Laplacian and Gradient-Based Techniques)"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Feature Extraction and Matching",
+      "content": [
+        "Feature Detection and Description, Harris Corner Detection, Scale",
+        "Invariant Feature Transform (SIFT),, Speeded-Up Robust Features",
+        "(SURF), Feature Matching Algorithms (e.g., Brute-Force",
+        "FLANN),, RANSAC for Robust Estimation, Applications of",
+        "Feature Matching (e.g., Image Stitching)"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Object Detection and Tracking",
+      "content": [
+        "Introduction to Object Detection, Sliding Window Approach for",
+        "Object Detection, Haar Cascades for Face and Object Detection",
+        "Histogram of Oriented Gradients (HOG) for Object Detection",
+        "Object Tracking and its Challenges, Kalman Filters for Object",
+        "Tracking, Multiple Object Tracking (MOT) and Tracking-by",
+        "Detection"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Deep Learning for Computer Vision",
+      "content": [
+        "Introduction to Deep Learning, Convolutional Neural Networks",
+        "(CNNs) for Image, Object Recognition and Localization using",
+        "CNNs Semantic Segmentation with Deep Learning, Object",
+        "Detection with Region-Based CNNs (RCNN, Fast-RCNN, Faster",
+        "RCNN)"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement feature matching algorithms"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement object tracking Algorithm in video sequences"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Build a CNN model using a deep learning framework for image",
+        "classification"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Fine-tune a pre-trained CNN model on a new dataset for image",
+        "classification"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Use deep learning models to perform image segmentation tasks"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "Develop a facial recognition system using any techniques"
+      ]
+    }
+  ]
+}

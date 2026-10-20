@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Big Data Analytics",
+    "subject_code": "01CE0621",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0621 - Big Data Analytics.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Understanding Big Data",
+      "content": [
+        "Concepts and terminology, Big Data Characteristics, Different types",
+        "of Data, Identifying Data Characteristics - Big Data Architecture",
+        "Big Data Storage: File System and Distributed File System",
+        "NoSQL, Sharding, Replication, ACID and BASE Properties"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Introduction Hadoop",
+      "content": [
+        "Introduction Hadoop",
+        "comparisons of RDBMS and Hadoop",
+        "Distributed Computing Challenges, Hadoop Overview, Business",
+        "Value of Hadoop, Hadoop Distributed File System, NameNode",
+        "Secondary NameNode, and DataNode, Hadoop MapReduce",
+        "paradigm, Map and Reduce tasks, Job, Task trackers Cluster Setup",
+        "SSH & Hadoop Configuration - HDFS Administering Monitoring &",
+        "Maintenance.,, Hadoop Yarn, Hadoop in the Cloud, Applications on",
+        "Big Hadoop Ecosystem"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Introduction to Hive",
+      "content": [
+        "Hive Architecture, Hive modules, Data types and file formats, Hive",
+        "QL -Data Definition and Data Manipulation - Hive QL queries",
+        "Sorting and Aggregation, Hive QL views - reduce query",
+        "complexity, Hive scripts, Hive QL Indexes - Aggregate functions",
+        "Bucketing vs Partitioning"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "HBASE, PIG and Zookeeper",
+      "content": [
+        "HBase concepts and models- Schema Design, Advance Indexing",
+        "PIG concepts - Data Types, Latin Concepts, Run Modes",
+        "Zookeeper, how it helps in monitoring a cluster, Benefits and",
+        "Challenges of Zookeeper"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Spark",
+      "content": [
+        "Overview of Spark - Hadoop Overview of Spark, Hadoop Vs Spark",
+        "Cluster Design, Cluster Management - performance, Application",
+        "Programming Interface (API), Spark Context, Resilient Distributed",
+        "Datasets, Creating RDD, RDD Operations, and Saving RDD, Lazy",
+        "Operation - Spark Jobs"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical - 8 Installation of Hive",
+      "content": [
+        "Practical - 9 Run all Hive Commands on a given data"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical - 13 Implementing spark environment",
+      "content": [
+        "Practical - 14 An implementation of case study of detecting Medicare Fraud",
+        "Detection using Big Data Analytic Tools"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Operating System",
+    "subject_code": "01CE1401",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE1401 - Operating System.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Operating System",
+      "content": [
+        "Computer system overview, Architecture, Goals & Structures of",
+        "O.S,, Functions of operating systems, protection and security",
+        "distributed systems, operating Systems structures, services,, Role &",
+        "Function Of Kernel, system calls and their working"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "OPERATING SYSTEM 01CE1401",
+      "content": [
+        "Process and Threads - Process concepts,, threads,, scheduling",
+        "criteria,, scheduling-Algorithms, and their evaluation., Process",
+        "Scheduling,, Thread Scheduling,, Real Time Scheduling., System",
+        "calls like ps, fork, join, exec family, wait,, Microkernel’s",
+        "architecture and benefits,, case studies UNIX"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Concurrency Control(IPC)",
+      "content": [
+        "Process synchronization,, critical- section problem., classic",
+        "problems of Synchronization,, Software Solutions for",
+        "synchronization problem., Hardware Solutions for synchronization",
+        "problem., Synchronization and Their applications., Understanding",
+        "of Semaphore, Mutex - Monitor - Event Counters"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Principles of Deadlock",
+      "content": [
+        "Deadlock - system model, deadlock and its characterization with",
+        "example,, deadlock prevention techniques with example,, detection",
+        "and avoidance of a deadlock,, methods to get recovery form",
+        "deadlock"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "File System Interface",
+      "content": [
+        "File system Interface- the concept of a file, Access Methods",
+        "Directory Structure. File system mounting, file protection and",
+        "sharing mechanism., File System implementation- File system",
+        "structure, file/directory implementation, efficiency and",
+        "performance,, file allocation methods, Free-space management., I/O",
+        "systems - Hardware, application l/o interface, kernel I/O subsystem",
+        "Transforming I/O requests to Hardware operations. STREAMS",
+        "performance"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a Shell Script to display the student’s Result. Enter3 different",
+        "subject marks display total and percentage of student and student’s",
+        "grade message display as per following conditions:- Per >=66 then",
+        "Distinction Per < 66 and per >=60 then first class Per <60 and per",
+        ">= 50 then second class Per < 50 and per >=40 pass class Per < 40",
+        "then fail"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a shell script which takes one number from the user and finds",
+        "the factorial of a given number"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a shell script which calculates nth Fibonacci number where n",
+        "will be provided as input when prompted"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a script to check if the entered string or a number is",
+        "palindrome or not"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program for process creation using C Language",
+        "(Commands: fork(), getpid(),getppid()) [Use of gcc compiler]"
+      ]
+    }
+  ]
+}

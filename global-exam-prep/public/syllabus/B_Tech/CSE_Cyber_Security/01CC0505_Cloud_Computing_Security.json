@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Cloud Computing & Security",
+    "subject_code": "01CC0505",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CC/01CC0505 - Cloud Computing & Security.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "INTRODUCTION OF CLOUD COMPUTING",
+      "content": [
+        "Definition of Cloud Computing, What is Cloud Computing & Need",
+        "of Cloud Computing, Types of Cloud, Different Types of Cloud",
+        "Services, Benefits of Cloud Computing, Challenges of Cloud",
+        "Computing, Introduction to Cloud Platforms & it’s use, Role of",
+        "Cloud with the Virtualization"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "AWS CLOUD",
+      "content": [
+        "Introduction of AWS, What is it’s Need and Benefits, Services of",
+        "AWS, Introduction to EC2 & AMI, Introduction to s3, What is",
+        "Network & it’s Role in Cloud, Network Security Group with Ports",
+        "Description of Sub nets, Description of IAM, Use of Key Pair",
+        "Login, Use of Auto Scaling, Use of Load balancer, Introduction to",
+        "VPC, What is it’s use in Web Development"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "CLOUD COMPUTING THREATS, DOCKER, CONTAINER & KUBERNETES",
+      "content": [
+        "Serverless Computing, Advantages of Serverless Computing",
+        "Introduction to OWASP, What is Docker, Advantages &",
+        "Disadvantages of Docker, Architecture of Docker, What is",
+        "Container, ,Advantages & Disadvantages of Container, Architecture",
+        "of Container, Difference between Docker vs Container,, What is",
+        "Kubernetes - Advantages & Disadvantages of Kubernetes",
+        "Architecture of Kubernetes,, Difference between Kubernetes vs",
+        "Docker, Difference between Kubernetes vs Docker vs Container"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "CLOUD SECURITY",
+      "content": [
+        "Introduction to NIST, NIST Framework, Security in Cloud",
+        "Necessary Steps in Cloud,, Security in AWS, Framework for Cloud",
+        "Security, Required/Necessary S teps, Monitoring, RBAC, Data",
+        "Governance, Identity & Access Management, Training"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "CLOUD WITH TRENDING TECHNOLOGIES",
+      "content": [
+        "Enabled Technologies in Cloud, Role of AI in Cloud, Benefits of AI",
+        "in Cloud, Use of AI in Cloud - Web Development in Cloud",
+        "Development in Cloud, Data Storage in Cloud, Cyber Attack in",
+        "Cloud"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Deploy IAM and check out all the required credentials in it"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Create one DynamoDB for storing the Data & Compare with RDS",
+        "including it’s Use & Functionalities"
+      ]
+    }
+  ]
+}

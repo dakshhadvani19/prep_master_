@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Programming with Python",
+    "subject_code": "01AI0302",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0302 - Programming with Python.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Python",
+      "content": [
+        "Installation and working with python, Introduction of anaconda",
+        "jupyter notebook, Google colab Features, Python Interpreter and its",
+        "working, Need of python ,Role of python in Data science, machine",
+        "learning and DL, Syntax and Semantics, Python variables",
+        "immutable variables and Blocks"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Python Data Types and Program Flow Controls",
+      "content": [
+        "Data Types, Declaring and using Numeric and string data type",
+        "string operations, Assignments, Operators, Expressions, Comments",
+        "Conditional blocks using if, else and elif, Simple For loop, For loop",
+        "using Ranges, While loops, Loop manipulation using Pass, Range",
+        "Function in loop Continue, Break and Else"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Python Functions and Data Structures",
+      "content": [
+        "Organizing python codes using functions and Modules, Import",
+        "modules,Pre-defined Functions, User Defined Functions math, date",
+        "and other Functions Introduction to String, Operations on String",
+        "List, operations on list, Tuple, operations on tuple and Dictionary",
+        "operations on dictionary, working with in-built methods of String",
+        "and List, Tuple and Dictionary manipulation using in-built methods"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Exception Handling and File Handling",
+      "content": [
+        "Exception, Types of errors, Handling an exception, try, expect, else",
+        "try-finally clause, Argument of an Exception, Raising an Exception",
+        "Files, Types of Files in python, Read and Write functions",
+        "Working with Text Files, Manipulating file pointer using Seek and",
+        "Tell and various File Operations"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Classes, Objects and Regular Expressions",
+      "content": [
+        "Creating Classes and Objects, Instance Variables, Access Specifiers",
+        "Importance of self, , __init()__Method, Instance Method, Class",
+        "Method, Regular Expressions, Match function, Search function",
+        "Matching vs Searching, Wildcard, Connecting with database"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Data Analytics and Visualization",
+      "content": [
+        "NumPy Library - Introduction and Installation of NumPy, NumPy",
+        "Arrays, Array creation using built-in functions, Attributes and",
+        "Methods, Array manipulation,Indexing and Iterating Pandas Library",
+        "Introduction to Pandas, Pandas Series, Data Frame, Importing and",
+        "Exporting data with Excel files, Manipulating a Data Frame",
+        "Handling missing values, Scaling, Visualization - Introduction to",
+        "Matplotlib, Types of Charts, Legends, annotations and style",
+        "Plotting directly from Pandas Data Frame and NumPy Arrays"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Python program to count the frequency of words appearing in a",
+        "string using a dictionary"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Python program to read the contents of a file in reverse order"
+      ]
+    }
+  ]
+}

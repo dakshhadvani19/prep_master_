@@ -12,6 +12,17 @@ import { Clock, AlertCircle, CheckCircle, ChevronLeft, ArrowRight, ArrowLeft, Up
 import { useAuth } from '../context/AuthContext';
 import { saveExamHistory } from '../utils/examHistoryStorage';
 
+import TermsConsentDialog from '../components/TermsConsentDialog';
+import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
+import { fitContext } from '../utils/contextFitter';
+import { stripReviewMetadata, validateExam } from '../utils/examValidation';
+import {
+    saveExamAttempt,
+    updateAttemptAnswers,
+    submitExamAttempt,
+    saveExamGrade,
+} from '../utils/supabaseExam';
+
 export default function ExamPortal() {
     const { subjectId, examType, difficulty } = useParams();
     const navigate = useNavigate();
@@ -37,6 +48,17 @@ export default function ExamPortal() {
 
     const [autoProcessing, setAutoProcessing] = useState(false);
     const [autoError, setAutoError] = useState('');
+
+    // Terms & Consent
+    const [termsAccepted, setTermsAccepted] = useState(false);
+
+    // Supabase attempt tracking
+    const [attemptId, setAttemptId] = useState(null);
+    const [supabaseError, setSupabaseError] = useState('');
+
+    // Network / connectivity
+    const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
+    const [networkWarning, setNetworkWarning] = useState(false);
 
     // Numeric catalog SubjectIds resolve through the bridge; legacy source IDs still match mockData.
     const subjectContext = findSubjectContext(domains, subjectId);
@@ -101,6 +123,35 @@ export default function ExamPortal() {
         };
     }, [examState]);
 
+    // Network / connectivity handling — preserve answers, warn when offline
+    useEffect(() => {
+        const handleOnline = () => {
+            setIsOnline(true);
+            setNetworkWarning(false);
+        };
+        const handleOffline = () => {
+            setIsOnline(false);
+            setNetworkWarning(true);
+        };
+
+        window.addEventListener('online', handleOnline);
+        window.addEventListener('offline', handleOffline);
+
+        return () => {
+            window.removeEventListener('online', handleOnline);
+            window.removeEventListener('offline', handleOffline);
+        };
+    }, []);
+
+    // Persist answers to Supabase attempt as the student works (idempotent upsert).
+    // Only while exam is active and we have an attempt id. Answers live in the
+    // ActiveExamInterface component; this effect is a no-op hook kept for
+    // future integration — the actual per-answer sync lives inside
+    // ActiveExamInterface where `answers` state is defined.
+    useEffect(() => {
+        // Intentionally minimal: sync handled in ActiveExamInterface.
+    }, [examState, attemptId, isOnline]);
+
     if (!examInfo || !subjectDetail) {
         return <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }}><h2>Exam details not found</h2></div>;
     }
@@ -114,54 +165,131 @@ export default function ExamPortal() {
     };
 
     const startExam = async () => {
+        // Terms & Conditions must be accepted before any exam can start.
+        if (!termsAccepted) {
+            setAutoError('Please accept the Terms & Conditions before starting.');
+            return;
+        }
+
         if (examMode === 'auto') {
             setAutoProcessing(true);
             setAutoError('');
+            setSupabaseError('');
             try {
-                const syllabus = universitySyllabus[sourceSubjectId];
-                let syllabusText = contextPrefix;
-
-                // Priority 1: Local PDF extracted text (from process-syllabuses.cjs)
-                if (pdfSyllabus[sourceSubjectId]) {
-                    syllabusText += `Provided Study Material/Syllabus content:\n${pdfSyllabus[sourceSubjectId]}`;
-                } else {
-                    // Priority 2: PDF syllabus uploaded through the temporary local syllabus adapter
-                    let pdfUploadedSyllabus = null;
-                    try {
-                        pdfUploadedSyllabus = await fetchSyllabus(sourceSubjectId, courseDetail?.id);
-                    } catch (syllabusErr) {
-                        console.warn('Could not load the uploaded syllabus, falling back:', syllabusErr.message);
+                // \u2500\u2500 Syllabus dataset integration \u2500\u2500
+                // Resolve the syllabus record from the static dataset by subject code.
+                let syllabusRecord = null;
+                let syllabusSource = 'none';
+                try {
+                    const resolved = await resolveSyllabus(sourceSubjectId, {
+                        department: domainDetail?.title,
+                        courseOrBranch: courseDetail?.title,
+                        preferTheory: true,
+                    });
+                    if (resolved) {
+                        const check = validateSyllabusRecord(resolved.record);
+                        if (check.valid) {
+                            syllabusRecord = resolved.record;
+                            syllabusSource = resolved.entry.sourceFile;
+                        } else {
+                            console.warn('Syllabus record validation failed:', check.reason);
+                        }
                     }
-                    if (pdfUploadedSyllabus?.extractedText) {
-                        syllabusText += `Provided Study Material/Syllabus content:\n${pdfUploadedSyllabus.extractedText}`;
-                    } else if (syllabus) {
-                        // Priority 3: Local universitySyllabus.js chapters/concepts
-                        syllabusText += `Syllabus Breakdown:\n`;
-                        syllabus.chapters.forEach(ch => {
-                            syllabusText += `Chapter: ${ch.title}\nConcepts: ${ch.concepts.join(', ')}\n\n`;
-                        });
-                    } else if (predictedSyllabus && predictedSyllabus[sourceSubjectId]) {
-                        // Priority 4: Predicted AI Syllabus from PDF extraction
-                        const predicted = predictedSyllabus[sourceSubjectId];
-                        syllabusText += `You MUST base the generated questions strictly on the following specific topics for this subject (Aligned with ${predicted.aiPromptContext}):
-${predicted.topics.map(t => `- ${t}`).join('\n')}`;
-                    } else {
-                        // Priority 5: Fallback to LLM latent knowledge
-                        syllabusText += `Generate questions comprehensively covering the standard university curriculum for this subject. Ensure topics are varied and strictly relevant to the level specified in the context above.`;
-                    }
+                } catch (err) {
+                    console.warn('Could not load syllabus from dataset:', err.message);
                 }
 
-                const isObj = examInfo.type === 'objective';
-                const examCount = isObj ? (difficulty === 'hard' ? 40 : difficulty === 'medium' ? 30 : 25) : (examType === 'final' ? 7 : 4);
+                if (!syllabusRecord) {
+                    throw new Error(
+                        'Syllabus content not available for subject "' + sourceSubjectId + '". ' +
+                        'Please contact your administrator to upload the subject syllabus.'
+                    );
+                }
 
-                const questions = await generateQuestionsFromText({
-                    text: syllabusText,
-                    difficulty,
-                    count: examCount,
-                    isObjective: isObj
-                });
+                // \u2500\u2500 Context fitting: scope selection + batching under 6,000-char cap \u2500\u2500
+                const { batches, coveragePlan, config } = fitContext(syllabusRecord, examType);
 
-                setAiQuestions(questions);
+                // Build academic context prefix for the model
+                const contextPrefixText = domainDetail && courseDetail
+                    ? 'Academic Context:\n- Domain: ' + domainDetail.title + '\n- Course: ' + courseDetail.title + '\n- Subject: ' + subjectDetail.title + ' (' + sourceSubjectId + ')\n- Syllabus: ' + syllabusSource + '\n- Exam: ' + examInfo.title + ' (' + config.type + ', ' + config.totalMarks + ' marks, ' + config.timeMinutes + ' min)\n\n'
+                    : '';
+
+                // \u2500\u2500 Generate per batch, combine, validate \u2500\u2500
+                const allQuestions = [];
+                const chapters = Array.isArray(syllabusRecord.chapters) ? syllabusRecord.chapters : [];
+                const MAX_SOURCE_CHARS = 6000;
+
+                for (const batch of batches) {
+                    const batchParts = batch.chapterIndices.map((ci) => {
+                        const ch = chapters[ci];
+                        if (!ch) return '';
+                        return 'CHAPTER: ' + (ch.chapter_name || 'Chapter ' + (ci + 1)) + '\n' + (ch.content || '') + '\n';
+                    });
+                    let batchText = contextPrefixText + 'Study Material / Syllabus Chapters:\n\n' + batchParts.join('\n---\n');
+
+                    // Enforce 6,000-char cap explicitly (truncation note is never silent)
+                    if (batchText.length > MAX_SOURCE_CHARS) {
+                        batchText = batchText.slice(0, MAX_SOURCE_CHARS);
+                        batchText += '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]';
+                    }
+
+                    const isObj = examInfo.type === 'objective';
+
+                    // Determine question count for this batch
+                    let batchCount;
+                    if (isObj) {
+                        // Mid-2 MCQ: exactly 30 total, split across batches by char proportion
+                        const totalChars = batches.reduce((sum, b) => sum + b.charCount, 0);
+                        batchCount = Math.max(1, Math.round((batch.charCount / totalChars) * 30));
+                    } else {
+                        // Theory: allocate questions proportionally across batches.
+                        // Target ~8 questions for Mid-1 (30 marks), ~12 for ESE (60 marks).
+                        // The AI assigns marks; validation enforces the exact blueprint.
+                        const targetQuestions = config.totalMarks === 60 ? 12 : 8;
+                        const totalChars = batches.reduce((sum, b) => sum + b.charCount, 0);
+                        batchCount = Math.max(1, Math.round((batch.charCount / totalChars) * targetQuestions));
+                    }
+
+                    const batchQuestions = await generateQuestionsFromText({
+                        text: batchText,
+                        difficulty,
+                        count: batchCount,
+                        isObjective: isObj,
+                    });
+
+                    allQuestions.push(...batchQuestions);
+                }
+
+                // \u2500\u2500 Combined validation against the exam blueprint \u2500\u2500
+                const validation = validateExam(allQuestions, config, coveragePlan);
+                if (!validation.valid) {
+                    throw new Error('Generated exam failed validation: ' + validation.errors.join(', '));
+                }
+
+                // Strip internal review metadata before the student sees the questions
+                const studentSafeQuestions = stripReviewMetadata(allQuestions);
+                setAiQuestions(studentSafeQuestions);
+
+                // \u2500\u2500 Persist attempt to Supabase \u2500\u2500
+                try {
+                    const attemptPayload = {
+                        subjectCode: sourceSubjectId,
+                        subjectName: subjectDetail.title,
+                        examType,
+                        questions: studentSafeQuestions,
+                        totalMarks: config.totalMarks,
+                        timeMinutes: config.timeMinutes,
+                    };
+                    const result = await saveExamAttempt(attemptPayload);
+                    if (result.error) {
+                        setSupabaseError(result.error);
+                    } else if (result.id) {
+                        setAttemptId(result.id);
+                    }
+                } catch (supabaseErr) {
+                    setSupabaseError(supabaseErr.message || 'Supabase unavailable');
+                }
+
                 setExamState('active');
             } catch (err) {
                 if (err.retryAfter) {
@@ -173,6 +301,7 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                 setAutoProcessing(false);
             }
         } else {
+            // Upload mode — Terms still required; questions come from uploaded files
             setExamState('active');
         }
     };
@@ -198,6 +327,11 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
     const removeFile = (idx) => setUploadedFiles(prev => prev.filter((_, i) => i !== idx));
 
     const processFilesAndStartExam = async () => {
+        // Terms & Conditions must be accepted before any exam can start.
+        if (!termsAccepted) {
+            setUploadError('Please accept the Terms & Conditions before starting.');
+            return;
+        }
         if (uploadedFiles.length === 0) {
             setUploadError('Please upload at least one file.');
             return;
@@ -271,28 +405,49 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                 if (sum > 0) actualTotalMarks = sum;
             }
 
-            const recordId = Date.now();
+            const percentage = actualTotalMarks > 0 ? Math.round((score / actualTotalMarks) * 100) : 0;
 
-            // Store compact question+answer snapshot for review
-            // CRITICAL: Ensure no field is undefined before storing the compact local snapshot
+            // ── Persist to Supabase (idempotent: only in_progress → submitted) ──
+            let submitResult = { ok: false, error: null, alreadySubmitted: false };
+            if (attemptId) {
+                submitResult = await submitExamAttempt(attemptId, score, answers);
+                if (submitResult.error && !submitResult.alreadySubmitted) {
+                    throw new Error(submitResult.error);
+                }
+            }
+
+            // Save grade record
+            if (attemptId && submitResult.ok) {
+                try {
+                    await saveExamGrade(attemptId, {
+                        score,
+                        totalMarks: actualTotalMarks,
+                        percentage,
+                        grade: percentage >= 80 ? 'Distinction' : percentage >= 60 ? 'First Class' : percentage >= 40 ? 'Second Class' : 'Fail',
+                    });
+                } catch (gradeErr) {
+                    // Grade save is non-fatal; attempt is already recorded
+                    console.warn('Grade save failed:', gradeErr.message);
+                }
+            }
+
+            // Also keep local history for offline fallback / dashboard display
             const questionSnapshot = questions.map(q => ({
                 id: q.id,
                 text: q.text || "",
                 options: q.options || null,
-                answer: q.answer !== undefined ? q.answer : null, // Corrected: handle theory where answer is undefined
+                answer: q.answer !== undefined ? q.answer : null,
                 marks: q.marks || null,
             }));
 
-            // Sanitize user answers (replace undefined with empty string)
             const sanitizedAnswers = {};
             questions.forEach(q => {
                 const val = answers[q.id];
                 sanitizedAnswers[q.id] = val !== undefined ? val : "";
             });
 
-            // Save to the temporary browser-local history store until persistent exam history is migrated.
             saveExamHistory(currentUser.uid, {
-                id: recordId,
+                id: Date.now(),
                 date: new Date().toISOString(),
                 subjectId: sourceSubjectId || "unknown",
                 examType: examType || "unknown",
@@ -304,13 +459,12 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                 userAnswers: sanitizedAnswers,
             });
 
-            // The result is already saved locally, so there is no artificial wait.
             setExamState('submitted');
-            navigate('/dashboard', { state: { justSubmitted: true } });
+            navigate('/dashboard', { state: { justSubmitted: true, score, totalMarks: actualTotalMarks } });
 
         } catch (err) {
             console.error("Submission failed:", err);
-            setSubmitError("Failed to save exam results locally. Please try submitting again.");
+            setSubmitError("Failed to submit exam. Please try again — your answers are preserved.");
             setIsSubmitting(false);
         }
     };
@@ -406,6 +560,45 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                 </div>
             )}
 
+            {/* ── Network / Connectivity Warning ── */}
+            {!isOnline && (
+                <div style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    zIndex: 10000,
+                    background: 'rgba(239,68,68,0.95)',
+                    color: 'white',
+                    padding: '0.75rem 1rem',
+                    textAlign: 'center',
+                    fontSize: '0.95rem',
+                    fontWeight: 600,
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                }}>
+                    ⚠️ You are offline. Your answers are preserved locally and will sync when you reconnect. Do not close this tab.
+                </div>
+            )}
+
+            {!isOnline && networkWarning && (
+                <div style={{
+                    position: 'fixed',
+                    top: 60,
+                    left: 0,
+                    right: 0,
+                    zIndex: 9999,
+                    background: 'rgba(251,191,36,0.95)',
+                    color: '#713f12',
+                    padding: '0.75rem 1rem',
+                    textAlign: 'center',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                }}>
+                    Reconnecting… your answers are safe. You can resume when the connection returns.
+                </div>
+            )}
+
 
 
             {/* ── STEP 2: File Upload UI ── */}
@@ -485,9 +678,18 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                         </div>
                     )}
 
+                    {/* Terms & Consent (required before Start) */}
+                    <TermsConsentDialog
+                        examMode="upload"
+                        uploadProcessing={uploadProcessing}
+                        retryCountdown={retryCountdown}
+                        onStart={processFilesAndStartExam}
+                        startLabel="Generate Questions & Start Exam"
+                    />
+
                     <button
                         onClick={processFilesAndStartExam}
-                        disabled={uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0}
+                        disabled={!termsAccepted || uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0}
                         style={{
                             width: '100%', padding: '1rem', borderRadius: 'var(--radius-full)',
                             background: (uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0) ? 'var(--bg-tertiary)' : 'linear-gradient(135deg,#8b5cf6,#3b82f6)',
@@ -563,28 +765,39 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                         </div>
                     )}
 
+                    {/* Terms & Consent (required before Start) */}
+                    <TermsConsentDialog
+                        examMode="auto"
+                        autoProcessing={autoProcessing}
+                        retryCountdown={retryCountdown}
+                        onStart={startExam}
+                        startLabel="I am Ready, Generate Live AI Exam"
+                    />
+
                     <button
                         onClick={startExam}
-                        disabled={autoProcessing || retryCountdown > 0}
+                        disabled={!termsAccepted || autoProcessing || retryCountdown > 0}
                         style={{
                             width: '100%',
-                            background: (autoProcessing || retryCountdown > 0) ? 'var(--bg-tertiary)' : 'var(--accent-gradient)',
-                            color: (autoProcessing || retryCountdown > 0) ? 'var(--text-tertiary)' : 'white',
+                            background: (!termsAccepted || autoProcessing || retryCountdown > 0) ? 'var(--bg-tertiary)' : 'var(--accent-gradient)',
+                            color: (!termsAccepted || autoProcessing || retryCountdown > 0) ? 'var(--text-tertiary)' : 'white',
                             padding: '1rem 3rem',
                             borderRadius: 'var(--radius-full)',
                             fontSize: '1.1rem',
                             fontWeight: 600,
-                            boxShadow: (autoProcessing || retryCountdown > 0) ? 'none' : 'var(--shadow-glow)',
-                            cursor: (autoProcessing || retryCountdown > 0) ? 'not-allowed' : 'pointer',
+                            boxShadow: (!termsAccepted || autoProcessing || retryCountdown > 0) ? 'none' : 'var(--shadow-glow)',
+                            cursor: (!termsAccepted || autoProcessing || retryCountdown > 0) ? 'not-allowed' : 'pointer',
                             transition: 'all 0.2s',
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem',
                         }}
                     >
-                        {autoProcessing
-                            ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Building Live AI Exam...</>
-                            : retryCountdown > 0
-                                ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Retry in {retryCountdown}s...</>
-                                : <><Cpu size={18} /> I am Ready, Generate Live AI Exam</>}
+                        {!termsAccepted
+                            ? 'Accept Terms & Conditions to Start'
+                            : autoProcessing
+                                ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Building Live AI Exam...</>
+                                : retryCountdown > 0
+                                    ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Retry in {retryCountdown}s...</>
+                                    : <><Cpu size={18} /> I am Ready, Generate Live AI Exam</>}
                     </button>
                     <style>{`@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
                 </div>
@@ -603,6 +816,7 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                     isSubmitting={isSubmitting}
                     submitError={submitError}
                     forceSubmit={forceSubmit}
+                    attemptId={attemptId}
                 />
             )}
 
@@ -661,13 +875,27 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
     );
 }
 
-function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLeft, formatTime, onSubmit, aiQuestions, isSubmitting, submitError, forceSubmit }) {
+function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLeft, formatTime, onSubmit, aiQuestions, isSubmitting, submitError, forceSubmit, attemptId }) {
     // Determine objective vs subjective purely based on the original examType mode.
     const isObjective = examInfo.type === 'objective';
     const [currentQ, setCurrentQ] = useState(0);
     const [answers, setAnswers] = useState({});
 
     const [questions] = useState(() => Array.isArray(aiQuestions) ? aiQuestions : []);
+
+    // Periodic answer sync to Supabase (idempotent upsert, preserves answers on network interruption)
+    useEffect(() => {
+        if (!attemptId) return;
+        const timer = setTimeout(async () => {
+            try {
+                const { updateAttemptAnswers } = await import('../utils/supabaseExam');
+                await updateAttemptAnswers(attemptId, answers);
+            } catch {
+                // Supabase unavailable or offline — answers remain in React state
+            }
+        }, 3000);
+        return () => clearTimeout(timer);
+    }, [attemptId, answers]);
 
     // Auto-submit when timer expires (forceSubmit set by parent)
     useEffect(() => {

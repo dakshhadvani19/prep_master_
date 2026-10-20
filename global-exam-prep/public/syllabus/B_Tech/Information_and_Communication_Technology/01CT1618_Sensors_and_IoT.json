@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Sensors and IoT",
+    "subject_code": "01CT1618",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1618 - Sensors and IoT.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Internet of Things",
+      "content": [
+        "Definitions, Core Concepts, Related Concepts, Challenges, IoT",
+        "framework, IoT Reference Models, IoT Architecture: IoTWF",
+        "architecture, architecture for adequate design for required security",
+        "architecture of edge computing, OPC unified architecture, oneM2M"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "IoT Devices",
+      "content": [
+        "Classification of Things in IoT, Sensors and its classification",
+        "Actuators and its classification, Working principles of various",
+        "sensors, MEMS, Smart Objects, Case study - Sensor tag energy",
+        "harvesting, batteries and super capacitors,interfacing of sensors with",
+        "microcontroller"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "IoT Protocols",
+      "content": [
+        "Communication Criteria, Access technologies and communication",
+        "protocols, Bluetooth, BLE, LoRaWAN, WirelessHART",
+        "Zwave,LTE-M, NB-IoT, Sigfox, 6LowPAN, 6TiSCH, LLN, RPL",
+        "MQTT, Publish-Subscribe Operation, Packet Structure, Transport",
+        "Layer (TCP, MPTCP, UDP, DCCP, SCTP)-(TLS, DTLS), Session",
+        "Layer-HTTP, XMPP, AMQP"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Security in IoT",
+      "content": [
+        "Protocols and technologies, Lightweight formats for crypto security",
+        "CoAP, DTLS, Object security for constrained RESTful",
+        "environments, OAUTH based authorization, Denial of Service",
+        "attacks, selective jamming in wireless networks, Intrusion detection",
+        "systems and firewalls"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Recent trends in IoT",
+      "content": [
+        "IoT application domains: Smart Cities, Smart Manufacturing, Smart",
+        "Grid, Smart Buildings, Intelligent Transportation Systems",
+        "Healthcare"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Experiment-6 To interface pressure sensor with IoT hardware board and read",
+      "content": [
+        "sensed data"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment-7",
+      "content": [
+        "To read RFID tag using RFID reader interfaced with IoT hardware",
+        "board"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment-8 To control LED on IoT hardware board using Bluetooth module",
+      "content": [
+        "interfaced with it"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment-9 To get location data using GPS module interfaced with IoT",
+      "content": [
+        "hardware module on webpage"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment-10",
+      "content": [
+        "To understand implementation of MQTT using ContikiOS"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment-11",
+      "content": [
+        "To understand implementation of CoAP using ContikiOS"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment-12 To create IPv6 network and configure network stack using Cooja",
+      "content": [
+        "simulator"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment-13 Demonstrate a smart object API gateway service reference",
+      "content": [
+        "implementation in IoT toolkit"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment-14",
+      "content": [
+        "Sketch the architecture of IoT Tool kit and explain each entity in",
+        "brief"
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Experiment-15 Write and explain working of an HTTP- to-CoAP semantic mapping",
+      "content": [
+        "proxy in IoT toolkit"
+      ]
+    },
+    {
+      "chapter_number": 16,
+      "chapter_name": "Experiment-16",
+      "content": [
+        "Describe gateway-as-a-service deployment in IoT tool kit"
+      ]
+    },
+    {
+      "chapter_number": 17,
+      "chapter_name": "Experiment-17 Explain application framework and embedded software agents for",
+      "content": [
+        "IoT tool kit"
+      ]
+    },
+    {
+      "chapter_number": 18,
+      "chapter_name": "Experiment-18",
+      "content": [
+        "Define and Explain Eclipse IoTProject"
+      ]
+    },
+    {
+      "chapter_number": 19,
+      "chapter_name": "Experiment-19",
+      "content": [
+        "List and summarize few Eclipse IoTProjects"
+      ]
+    },
+    {
+      "chapter_number": 20,
+      "chapter_name": "Experiment-20",
+      "content": [
+        "Give overview of Zetta"
+      ]
+    }
+  ]
+}

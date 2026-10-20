@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Digital Design using Verilog",
+    "subject_code": "01CT1619",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1619 - Digital Design using Verilog.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Digital Circuit Design Flow",
+      "content": [
+        "Introduction to digital circuit design flow, VLSI design flow",
+        "Behavioral design, data path design, logic design, physical design",
+        "manufacturing. VLSI design style, FPGA based design, standard",
+        "cell based design, Full custom design"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Introduction to Verilog",
+      "content": [
+        "Concept of module , Data types in Verilog, Features of Verilog",
+        "Verilog operators"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Verilog Modeling",
+      "content": [
+        "Behavioral modeling and structural modeling, Explanation of",
+        "modeling with different examples, modeling 16x1 multiplexer",
+        "modeling 16 bit adder, Switch level modeling"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Verilog Description Styles",
+      "content": [
+        "Data flow and behavioral(procedure statements), Example of",
+        "decoder and D-latch, Various examples using blocking and non",
+        "blocking assignment, Analysing that how the modelling style",
+        "influences the simulator and synthesis tool"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Verilog Test benches",
+      "content": [
+        "Writing Verilog test benches, write test bench for combinational",
+        "design, write test bench for sequential design, generating test",
+        "vectors"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Modeling Finite State Machine",
+      "content": [
+        "Moore Machine, Mealy Machine, Examples"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Data path and Controller design",
+      "content": [
+        "Data path design includes functional circuits, registers, multiplexers",
+        "bus, adders, multipliers, counters etc., Controller design includes",
+        "Finite State Machine and provide control to the data path,, Example",
+        "to explain above concept"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Modeling Memory and register banks",
+      "content": [
+        "Concepts of modeling memory, How to model memory and",
+        "initialize memory, concepts of modeling register bank"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Verilog modeling of processor",
+      "content": [
+        "RISC Processor, Basic pipe line concepts, Understanding pipe line",
+        "implementation"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Programmable Logic Devices Introduction to Programmable Logic Devices",
+      "content": [
+        "Write the Verilog code for D flip flop, SR flip flop, JK flip flop"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment-12 Write the Verilog code for designing T-flip flop using D-flip-flop",
+      "content": [
+        "Experiment-13 Design 4-bit shift register with asynchronous clear and enable using",
+        "verilog"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment-14",
+      "content": [
+        "Design 4-bit shift register with synchronous reset using Verilog"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment-15",
+      "content": [
+        "Design 4 bit up/down counter with parallel load using Verilog"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment-16",
+      "content": [
+        "Design Moore machine(FSM) with example using Verilog"
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Experiment-17",
+      "content": [
+        "Design Mealy machine(FSM) with example using Verilog"
+      ]
+    },
+    {
+      "chapter_number": 16,
+      "chapter_name": "Experiment-18",
+      "content": [
+        "Design 4 bit ALU which performs the following tasks. a. Add",
+        "b.Subtract c.Multiplication d. Division e. OR f. AND g. Invert",
+        "h.XOR"
+      ]
+    },
+    {
+      "chapter_number": 17,
+      "chapter_name": "Experiment-19 Implement bus structure to transfer data among registers using two",
+      "content": [
+        "different approaches. a. Using tristate driver b. Using multiplexer"
+      ]
+    },
+    {
+      "chapter_number": 18,
+      "chapter_name": "Experiment-20 Design control circuit for a simple processor to perform basic",
+      "content": [
+        "operations mentioned below. a. load data into register b. copy data",
+        "from register to register c. add d. subtract"
+      ]
+    }
+  ]
+}

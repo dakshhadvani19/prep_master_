@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Design and Analysis of Algorithms",
+    "subject_code": "01AI0506",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Machine Learning",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0506 - Design and Analysis of Algorithms.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "The Role of Algorithms in Computing, Algorithm, Designing",
+        "Algorithms - Analysing Algorithms - Time and space complexity",
+        "Asymptotic Notations and its properties, The efficiency of algorithm",
+        "Best case, Worst case and average case analysis"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "ALGORITHM DESIGN TECHNIQUES",
+      "content": [
+        "Recurrence relation: Introduction, methods to solve recurrence",
+        "Sorting and searching: Bubble sort, Selection sort, Insertion sort",
+        "Shell sort, Heap sort, Binary Search, Linear search Divide and",
+        "Conquer: Finding maximum and minimum, Merge sort, Quick sort"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "DYNAMIC PROGRAMMING",
+      "content": [
+        "Introduction,, Elements of Dynamic Programming, Problem Solving",
+        "using Dynamic Programming - Making Change Problem, Assembly",
+        "Line Scheduling, Knapsack problem, Matrix chain multiplication",
+        "Longest Common Subsequence"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "GREEDY METHOD AND GRAPH ALGORITHMS",
+      "content": [
+        "General Characteristics of greedy algorithms, Elements of greedy",
+        "strategy, Problem solving using - Activity selection problem",
+        "Fractional Knapsack Problem, Job Scheduling Problem, Huffman",
+        "Code, Representations of graphs - Graph traversal: DFS - BFS",
+        "applications - Connectivity, Minimum spanning tree: Kruskal’s and",
+        "Prim’s algorithms, Shortest path Algorithms: Dijkstra’s algorithm",
+        "Floyd-Warshall algorithm"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "BACKTRACKING AND BRANCH & BOUND",
+      "content": [
+        "Backtracking: n-Queens problem , Hamiltonian Circuit Problem",
+        "Subset Sum Problem , Graph colouring problem, Travelling",
+        "Salesman Problem, Branch and Bound: Assignment problem",
+        "Knapsack Problem"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "NP-COMPLETE AND APPROXIMATION ALGORITHM",
+      "content": [
+        "Tractable and intractable problems: Polynomial time algorithms",
+        "Venn diagram representation , NP algorithms , NP hardness and",
+        "NP-completeness, Bin Packing problem, Problem reduction: TSP",
+        "3- CNF problem., Approximation Algorithms: TSP , Randomized",
+        "Algorithms: concept and application, primality testing - randomized",
+        "quick sort, Finding kth smallest number"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Implementation of Graph and Searching (DFS and BFS)"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement prim’s algorithm"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement Kruskal’s algorithm"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program for Floyd-Warshal algorithm"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program for travelling salesman problem"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Theory of Automata & Formal Language",
+    "subject_code": "01AI0505",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0505 - Theory of Automata & Formal Language.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Preliminaries",
+      "content": [
+        "Set theory, propositions, predicate logic, relation, one-to-one",
+        "function, onto function, bijection function, Direct proof, proof by",
+        "contradiction, proof by contrapositive, Principle of mathematical",
+        "induction, Recursive Definition"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Regular Languages",
+      "content": [
+        "Symbol, Alphabet, String, Language, Regular expression and",
+        "Language, Pumping Lemna"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Finite State Machine",
+      "content": [
+        "Basics of Automata theory, Finite automata, Deterministic and Non",
+        "Deterministic Automata, ^ - Transition Finite automata, Conversion",
+        "NFA - ^ to NFA, Conversion NFA to DFA, Conversion RE",
+        "(Regular Expression) to Non-Deterministic Finite Automata, Subset",
+        "Algorithm to convert Non DFA to DFA, Finite automata",
+        "minimization, Moore and Mealey machine and their Conversion"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Context Free Grammar (CFG)",
+      "content": [
+        "Context free language, Chomsky normal forms, Greibach normal",
+        "forms, derivation - derivation tree with their relation, Ambiguous",
+        "and unambiguous CFG, Algebraic expression, Closure properties of",
+        "Context Free Language"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Push Down Automata (PDA)",
+      "content": [
+        "Introduction about PDA, equivalence between CFG and PDA",
+        "Deterministic PDA, Pumping Lemna for Context Free Language",
+        "Acceptance of Empty and Final state"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Turing machine and REL",
+      "content": [
+        "Basics of Turing machine, Language acceptor, Turing machine",
+        "variations, Church Turing thesis, Universal Turing machine",
+        "Looping vs Halting, Recursively and Enumerable Languages"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Computability",
+      "content": [
+        "Partial function, Primitive recursive functions, undecidable problem",
+        "Class P and NP, Np Completeness"
+      ]
+    }
+  ]
+}
