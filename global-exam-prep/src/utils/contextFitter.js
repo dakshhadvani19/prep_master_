@@ -14,6 +14,15 @@
 
 export const MAX_SOURCE_CHARS = 6000;
 
+// Normalize legacy route params to canonical syllabus exam keys.
+export function normalizeExamType(examType) {
+    const key = String(examType || '').toLowerCase();
+    if (['mid-1', 'mid1', 'midterm1', 'midterm-1'].includes(key)) return 'mid1';
+    if (['mid-2', 'mid2', 'midterm2', 'midterm-2'].includes(key)) return 'mid2';
+    if (['final', 'ese', 'end-semester', 'end_semester'].includes(key)) return 'ese';
+    return key;
+}
+
 /**
  * Exam type configuration — marking blueprints and scope rules.
  */
@@ -56,7 +65,8 @@ export function selectScopeChapters(record, examType) {
     const total = chapters.length;
     if (total === 0) return [];
 
-    const config = EXAM_CONFIG[examType];
+    const normalizedType = normalizeExamType(examType);
+    const config = EXAM_CONFIG[normalizedType];
     if (!config) throw new Error(`Unknown exam type: ${examType}`);
 
     if (config.scopeRule === 'first_50_percent_chapters') {
@@ -150,7 +160,9 @@ export function buildBatches(record, chapterIndices, maxChars = MAX_SOURCE_CHARS
  * @returns {object} coverage plan
  */
 export function buildCoveragePlan(record, examType, chapterIndices, batches) {
-    const config = EXAM_CONFIG[examType];
+    const normalizedType = normalizeExamType(examType);
+    const config = EXAM_CONFIG[normalizedType];
+    if (!config) throw new Error(`Unknown exam type: ${examType}`);
     const totalMarks = config.totalMarks;
     const totalChars = batches.reduce((sum, b) => sum + b.charCount, 0);
 
@@ -167,7 +179,7 @@ export function buildCoveragePlan(record, examType, chapterIndices, batches) {
     });
 
     return {
-        examType,
+        examType: normalizedType,
         totalChapters: record.chapters ? record.chapters.length : 0,
         inScopeChapters: chapterIndices.map((ci) => ({
             index: ci,
@@ -220,16 +232,17 @@ export function buildBatchExcerpt(record, chapterIndices, maxChars = MAX_SOURCE_
  * @returns {object} { chapterIndices, batches, coveragePlan, config }
  */
 export function fitContext(record, examType) {
-    const chapterIndices = selectScopeChapters(record, examType);
+    const normalizedType = normalizeExamType(examType);
+    const chapterIndices = selectScopeChapters(record, normalizedType);
     if (chapterIndices.length === 0) {
         throw new Error(`No in-scope chapters found for exam type ${examType}`);
     }
     const batches = buildBatches(record, chapterIndices);
-    const coveragePlan = buildCoveragePlan(record, examType, chapterIndices, batches);
+    const coveragePlan = buildCoveragePlan(record, normalizedType, chapterIndices, batches);
     return {
         chapterIndices,
         batches,
         coveragePlan,
-        config: EXAM_CONFIG[examType],
+        config: EXAM_CONFIG[normalizedType],
     };
 }
