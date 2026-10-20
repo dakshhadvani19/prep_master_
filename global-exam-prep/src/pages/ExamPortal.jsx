@@ -12,7 +12,6 @@ import { Clock, AlertCircle, CheckCircle, ChevronLeft, ArrowRight, ArrowLeft, Up
 import { useAuth } from '../context/AuthContext';
 import { saveExamHistory } from '../utils/examHistoryStorage';
 
-import TermsConsentDialog from '../components/TermsConsentDialog';
 import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
 import { fitContext } from '../utils/contextFitter';
 import { stripReviewMetadata, validateExam } from '../utils/examValidation';
@@ -64,9 +63,6 @@ export default function ExamPortal() {
 
     const [autoProcessing, setAutoProcessing] = useState(false);
     const [autoError, setAutoError] = useState('');
-
-    // Terms & Consent
-    const [termsAccepted, setTermsAccepted] = useState(false);
 
     // Supabase attempt tracking
     const [attemptId, setAttemptId] = useState(null);
@@ -181,12 +177,6 @@ export default function ExamPortal() {
     };
 
     const startExam = async () => {
-        // Terms & Conditions must be accepted before any exam can start.
-        if (!termsAccepted) {
-            setAutoError('Please accept the Terms & Conditions before starting.');
-            return;
-        }
-
         if (examMode === 'auto') {
             setAutoProcessing(true);
             setAutoError('');
@@ -197,7 +187,7 @@ export default function ExamPortal() {
                 let syllabusRecord = null;
                 let syllabusSource = 'none';
                 try {
-                    const branchName = courseDetail?.title?.replace(/^(B\\.Tech|Diploma|BCA|MCA)\\s*[-–:]\\s*/i, '');
+                    const branchName = courseDetail?.title?.replace(/^(B\.Tech|Diploma|BCA|MCA)\s*[-–:]\s*/i, '');
                     const resolved = await resolveSyllabus(sourceSubjectId, {
                         courseOrBranch: branchName,
                         preferTheory: true,
@@ -344,11 +334,6 @@ export default function ExamPortal() {
     const removeFile = (idx) => setUploadedFiles(prev => prev.filter((_, i) => i !== idx));
 
     const processFilesAndStartExam = async () => {
-        // Terms & Conditions must be accepted before any exam can start.
-        if (!termsAccepted) {
-            setUploadError('Please accept the Terms & Conditions before starting.');
-            return;
-        }
         if (uploadedFiles.length === 0) {
             setUploadError('Please upload at least one file.');
             return;
@@ -695,18 +680,10 @@ export default function ExamPortal() {
                         </div>
                     )}
 
-                    {/* Terms & Consent (required before Start) */}
-                    <TermsConsentDialog
-                        examMode="upload"
-                        uploadProcessing={uploadProcessing}
-                        retryCountdown={retryCountdown}
-                        onStart={processFilesAndStartExam}
-                        startLabel="Generate Questions & Start Exam"
-                    />
 
                     <button
                         onClick={processFilesAndStartExam}
-                        disabled={!termsAccepted || uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0}
+                        disabled={uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0}
                         style={{
                             width: '100%', padding: '1rem', borderRadius: 'var(--radius-full)',
                             background: (uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0) ? 'var(--bg-tertiary)' : 'linear-gradient(135deg,#8b5cf6,#3b82f6)',
@@ -782,35 +759,25 @@ export default function ExamPortal() {
                         </div>
                     )}
 
-                    {/* Terms & Consent (required before Start) */}
-                    <TermsConsentDialog
-                        examMode="auto"
-                        autoProcessing={autoProcessing}
-                        retryCountdown={retryCountdown}
-                        onStart={startExam}
-                        startLabel="I am Ready, Generate Live AI Exam"
-                    />
 
                     <button
                         onClick={startExam}
-                        disabled={!termsAccepted || autoProcessing || retryCountdown > 0}
+                        disabled={autoProcessing || retryCountdown > 0}
                         style={{
                             width: '100%',
-                            background: (!termsAccepted || autoProcessing || retryCountdown > 0) ? 'var(--bg-tertiary)' : 'var(--accent-gradient)',
-                            color: (!termsAccepted || autoProcessing || retryCountdown > 0) ? 'var(--text-tertiary)' : 'white',
+                            background: (autoProcessing || retryCountdown > 0) ? 'var(--bg-tertiary)' : 'var(--accent-gradient)',
+                            color: (autoProcessing || retryCountdown > 0) ? 'var(--text-tertiary)' : 'white',
                             padding: '1rem 3rem',
                             borderRadius: 'var(--radius-full)',
                             fontSize: '1.1rem',
                             fontWeight: 600,
-                            boxShadow: (!termsAccepted || autoProcessing || retryCountdown > 0) ? 'none' : 'var(--shadow-glow)',
-                            cursor: (!termsAccepted || autoProcessing || retryCountdown > 0) ? 'not-allowed' : 'pointer',
+                            boxShadow: (autoProcessing || retryCountdown > 0) ? 'none' : 'var(--shadow-glow)',
+                            cursor: (autoProcessing || retryCountdown > 0) ? 'not-allowed' : 'pointer',
                             transition: 'all 0.2s',
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem',
                         }}
                     >
-                        {!termsAccepted
-                            ? 'Accept Terms & Conditions to Start'
-                            : autoProcessing
+                        {autoProcessing
                                 ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Building Live AI Exam...</>
                                 : retryCountdown > 0
                                     ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Retry in {retryCountdown}s...</>
