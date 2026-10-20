@@ -14,6 +14,16 @@
 
 export const MAX_SOURCE_CHARS = 6000;
 
+/**
+ * Normalize chapter content to a string (some records store it as an array of
+ * paragraph strings).
+ */
+function contentToString(content) {
+    if (content == null) return '';
+    if (Array.isArray(content)) return content.map(String).filter(Boolean).join('\n');
+    return String(content);
+}
+
 // Normalize legacy route params to canonical syllabus exam keys.
 export function normalizeExamType(examType) {
     const key = String(examType || '').toLowerCase();
@@ -121,7 +131,7 @@ export function buildBatches(record, chapterIndices, maxChars = MAX_SOURCE_CHARS
     for (const ci of chapterIndices) {
         const ch = chapters[ci];
         if (!ch) continue;
-        const chapterText = `${ch.chapter_name || ''}\n${ch.content || ''}`;
+        const chapterText = `${ch.chapter_name || ''}\n${contentToString(ch.content)}`;
         const chapterLen = chapterText.length;
 
         if (current.length === 0) {
@@ -209,7 +219,7 @@ export function buildBatchExcerpt(record, chapterIndices, maxChars = MAX_SOURCE_
     for (const ci of chapterIndices) {
         const ch = chapters[ci];
         if (!ch) continue;
-        const chapterText = `CHAPTER: ${ch.chapter_name || `Chapter ${ci + 1}`}\n${ch.content || ''}\n`;
+        const chapterText = `CHAPTER: ${ch.chapter_name || `Chapter ${ci + 1}`}\n${contentToString(ch.content)}\n`;
         parts.push(chapterText);
     }
 

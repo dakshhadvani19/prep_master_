@@ -10,6 +10,8 @@
  * answer keys, no Groq keys client-side.
  */
 
+import codeMap from '../data/syllabusCodeMap.json';
+
 const INDEX_URL = '/syllabus/index.json';
 
 let _indexCache = null;
@@ -74,6 +76,17 @@ export async function resolveSyllabus(subjectCode, opts = {}) {
     let entries = await findSyllabusBySubjectCode(subjectCode);
     const { department, courseOrBranch, subjectName, preferTheory = true } = opts;
 
+    // Step 2: explicit internal-ID -> official syllabus code mapping.
+    // The application's sourceSubjectId (legacy id from the subject-ID bridge)
+    // often differs from the official syllabus subject code (e.g. "09ce2301"
+    // vs "09CE3301"). Resolve it deterministically via the generated map.
+    if ((!entries || entries.length === 0)) {
+        const mapped = codeMap.map?.[String(subjectCode).toLowerCase()];
+        if (mapped && mapped.officialCode) {
+            entries = await findSyllabusBySubjectCode(mapped.officialCode);
+        }
+    }
+
     // Legacy catalog IDs may differ from the official syllabus code. If the
     // code has no indexed record, fall back only to an exact normalized title
     // match, then use department/course to disambiguate duplicates.
@@ -117,6 +130,16 @@ export async function resolveSyllabus(subjectCode, opts = {}) {
 }
 
 /**
+ * Normalize chapter content to a string. Some syllabus records store content
+ * as an array of paragraph strings rather than a single string.
+ */
+function contentToString(content) {
+    if (content == null) return '';
+    if (Array.isArray(content)) return content.map(String).filter(Boolean).join('\n');
+    return String(content);
+}
+
+/**
  * Validate that a loaded syllabus record is usable for exam generation.
  * Returns { valid: boolean, reason?: string }.
  */
@@ -132,7 +155,7 @@ export function validateSyllabusRecord(record) {
         return { valid: false, reason: 'missing_chapters' };
     }
     const badChapters = record.chapters.filter(
-        (c) => !c || !c.chapter_name || typeof c.content !== 'string' || c.content.trim().length === 0
+        (c) => !c || !c.chapter_name || contentToString(c.content).trim().length === 0
     );
     if (badChapters.length > 0) {
         return { valid: false, reason: 'incomplete_chapter_content' };

@@ -256,5 +256,43 @@ describe('syllabusLoader', () => {
             expect(result.valid).toBe(false);
             expect(result.reason).toBe('incomplete_chapter_content');
         });
+
+        it('accepts record whose chapter content is an array of strings', () => {
+            const result = validateSyllabusRecord({
+                subject: { subject_code: '09CE3301' },
+                chapters: [
+                    { chapter_name: 'Ch1', content: ['para one', 'para two'] },
+                    { chapter_name: 'Ch2', content: 'single string content' },
+                ],
+            });
+            expect(result.valid).toBe(true);
+        });
+
+        it('rejects record whose chapter content is an empty array', () => {
+            const result = validateSyllabusRecord({
+                subject: { subject_code: 'X' },
+                chapters: [{ chapter_name: 'Ch1', content: [] }],
+            });
+            expect(result.valid).toBe(false);
+            expect(result.reason).toBe('incomplete_chapter_content');
+        });
     });
 });
+
+/**
+ * codeMap resolution: legacy/internal source id -> official syllabus code.
+ */
+import { describe as d2, it as i2, expect as e2 } from 'vitest';
+import codeMap from '../src/data/syllabusCodeMap.json';
+
+d2('syllabusCodeMap', () => {
+    i2('maps legacy id 09ce2301 to official code 09CE3301 (Object Oriented Programming With C++)', () => {
+        e2(codeMap.map['09ce2301'].officialCode).toBe('09CE3301');
+        e2(codeMap.map['09ce2301'].subjectName).toBe('Object Oriented Programming With C++');
+    });
+
+    i2('does not invent mappings for unknown legacy ids', () => {
+        e2(codeMap.map['DOES_NOT_EXIST']).toBeUndefined();
+    });
+});
+
