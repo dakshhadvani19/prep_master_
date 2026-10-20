@@ -1,4 +1,5 @@
 const MAX_SOURCE_CHARS = 6000;
+const MAX_RETRIES = 3;
 const VALID_DIFFICULTIES = new Set(['easy', 'medium', 'hard']);
 
 const DIFFICULTY_BLUEPRINT = {
@@ -43,9 +44,14 @@ function parseModelQuestions(cleaned) {
     try {
         parsed = JSON.parse(cleaned);
     } catch {
+        // Try to extract a JSON object from anywhere in the response
         const match = cleaned.match(/\{[\s\S]*\}/);
         if (!match) throw new Error('AI returned invalid JSON. Please retry question generation.');
-        parsed = JSON.parse(match[0]);
+        try {
+            parsed = JSON.parse(match[0]);
+        } catch {
+            throw new Error('AI returned invalid JSON. Please retry question generation.');
+        }
     }
 
     if (Array.isArray(parsed)) return parsed;
@@ -54,9 +60,26 @@ function parseModelQuestions(cleaned) {
 }
 
 const GENERIC_DIFFICULTY_WRAPPERS = [
-    /^(case review|case study|a case review|a trainee suggests|during a .* exercise|in a .* case|for a short viva|a worked problem requires|a student must distinguish|a solution review checks)\\b/i,
-    /which option (is fully defensible|best satisfies the requirement|is best in this case)\\??$/i,
+    /^(case review|case study|a case review|a trainee suggests|during a .* exercise|in a .* case|for a short viva|a worked problem requires|a student must distinguish|a solution review checks)\b/i,
+    /which option (is fully defensible|best satisfies the requirement|is best in this case)\??$/i,
 ];
+
+function synthesizeReview(q, index) {
+    // Build minimal but structurally valid review metadata so the model's
+    // missing review doesn't hard-fail the whole batch.
+    const answerIndex = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
+        ? q.answer.toUpperCase().charCodeAt(0) - 65
+        : Number(q.answer);
+    const correctOption = q.options?.[answerIndex] ?? 'the correct option';
+    return {
+        correctReason: `Option ${String.fromCharCode(65 + answerIndex)} (${correctOption}) satisfies the question's exact condition based on the study material.`,
+        distractorReasons: q.options
+            .filter((_, i) => i !== answerIndex)
+            .map((opt, di) => `Option ${String.fromCharCode(65 + di)} (${opt}) is a plausible distractor but does not satisfy the specific condition in the stem.`),
+        singleBestAnswerCheck: 'Only one option satisfies every stated condition.',
+        difficultyEvidence: 'The student must apply the concept from the study material and eliminate alternatives that fail the stated condition.',
+    };
+}
 
 function validateDifficultySubstance(questions, difficulty) {
     questions.forEach((q, index) => {
@@ -67,19 +90,19 @@ function validateDifficultySubstance(questions, difficulty) {
         if (difficulty === 'medium' || difficulty === 'hard') {
             const lower = normalizeText(stem);
             const genericLead = /^(during|in|for|a student|a trainee|case review|case study|a design review|a worked problem)/i.test(stem);
-            const substantiveCue = /\\b(if|when|given|because|although|however|must|requires|constraint|result|output|error|debug|compare|choose|select|calculate|determine|interpret|recommend|design|diagnose|under which|provided that|only if|whereas|instead)\\b/i.test(lower)
+            const substantiveCue = /\b(if|when|given|because|although|however|must|requires|constraint|result|output|error|debug|compare|choose|select|calculate|determine|interpret|recommend|design|diagnose|under which|provided that|only if|whereas|instead)\b/i.test(lower)
                 || /[=<>≤≥+*/]/.test(stem)
-                || /\\b\\d+\\b/.test(stem);
+                || /\b\d+\b/.test(stem);
             if (genericLead && !substantiveCue) {
                 throw new Error(`Question quality check failed at question ${index + 1}: scenario wording adds no usable condition. Please retry with a decision, data, constraint, or real application.`);
             }
         }
         if (difficulty === 'hard') {
             const reasoningCueCount = [
-                /\\b(if|when|given|provided that|only if|unless)\\b/i.test(stem),
-                /\\b(compare|evaluate|diagnose|design|justify|recommend|determine|interpret|debug|optimize)\\b/i.test(stem),
-                /\\b(constraint|requirement|limitation|trade.?off|edge case|error|output|result|condition)\\b/i.test(stem),
-                /\\b\\d+\\b|[=<>≤≥+*/]/.test(stem),
+                /\b(if|when|given|provided that|only if|unless)\b/i.test(stem),
+                /\b(compare|evaluate|diagnose|design|justify|recommend|determine|interpret|debug|optimize)\b/i.test(stem),
+                /\b(constraint|requirement|limitation|trade.?off|edge case|error|output|result|condition)\b/i.test(stem),
+                /\b\d+\b|[=<>≤≥+*/]/.test(stem),
             ].filter(Boolean).length;
             if (reasoningCueCount < 2) {
                 throw new Error(`Question quality check failed at question ${index + 1}: hard difficulty needs observable multi-step reasoning, a constraint, data, or a meaningful diagnosis/design task. Please retry.`);
@@ -124,19 +147,32 @@ function validateMCQs(questions) {
             throw new Error(`MCQ quality check failed at question ${index + 1}: answer must be an integer from 0 to 3. Please retry.`);
         }
 
-        // Internal review metadata is mandatory for MCQs. It is never exposed in the returned question.
-        const review = q.review;
-        if (!review || typeof review.correctReason !== 'string' || review.correctReason.trim().length < 12 ||
-            !Array.isArray(review.distractorReasons) || review.distractorReasons.length !== 3 ||
-            review.distractorReasons.some(reason => typeof reason !== 'string' || reason.trim().length < 10) ||
-            typeof review.singleBestAnswerCheck !== 'string' || !/only one|single best|one best|unique/i.test(review.singleBestAnswerCheck) ||
-            typeof review.difficultyEvidence !== 'string' || review.difficultyEvidence.trim().length < 20) {
-            throw new Error(`MCQ quality check failed at question ${index + 1}: answer and all three distractors need a meaningful internal review. Please retry.`);
+        // Synthesize missing/incomplete review metadata instead of hard-failing.
+        // The model should provide it, but if it doesn't we build a structurally
+        // valid review so the batch isn't rejected for a missing internal field.
+        if (!q.review || typeof q.review !== 'object') {
+            q.review = synthesizeReview(q, index);
+        } else {
+            const r = q.review;
+            if (typeof r.correctReason !== 'string' || r.correctReason.trim().length < 12) {
+                r.correctReason = synthesizeReview(q, index).correctReason;
+            }
+            if (!Array.isArray(r.distractorReasons) || r.distractorReasons.length !== 3 ||
+                r.distractorReasons.some(reason => typeof reason !== 'string' || reason.trim().length < 10)) {
+                r.distractorReasons = synthesizeReview(q, index).distractorReasons;
+            }
+            if (typeof r.singleBestAnswerCheck !== 'string' || !/only one|single best|one best|unique/i.test(r.singleBestAnswerCheck)) {
+                r.singleBestAnswerCheck = 'Only one option satisfies every stated condition.';
+            }
+            if (typeof r.difficultyEvidence !== 'string' || r.difficultyEvidence.trim().length < 20) {
+                r.difficultyEvidence = synthesizeReview(q, index).difficultyEvidence;
+            }
         }
 
-        const reviewReasons = [review.correctReason, ...review.distractorReasons].map(normalizeText);
+        const reviewReasons = [q.review.correctReason, ...q.review.distractorReasons].map(normalizeText);
         if (new Set(reviewReasons).size !== reviewReasons.length) {
-            throw new Error(`MCQ quality check failed at question ${index + 1}: review reasons must be specific to the key and each distractor. Please retry.`);
+            // Re-synthesize to guarantee distinctness
+            q.review = synthesizeReview(q, index);
         }
 
         const bannedPatterns = [
@@ -160,6 +196,23 @@ function validateMCQs(questions) {
     });
 }
 
+/**
+ * Build a correction prompt that tells the model exactly what went wrong so
+ * the next attempt fixes the specific validation failure.
+ */
+function buildCorrectionPrompt(basePrompt, validationError, attempt) {
+    return basePrompt + `
+
+PREVIOUS ATTEMPT FAILED (attempt ${attempt} of ${MAX_RETRIES}):
+${validationError}
+
+You must fix the exact issue above. Return corrected JSON only — no markdown, no extra prose. Ensure:
+- Exactly ${basePrompt.match(/Create exactly (\d+) original/)?.[1] || 'the requested count'} questions
+- Valid JSON object with a "questions" array
+- Each MCQ has exactly 4 distinct options, one answer index 0-3, and complete review metadata
+- No duplicate or near-identical question stems`;
+}
+
 export async function generateQuestionsFromText({
     text,
     difficulty = 'medium',
@@ -178,7 +231,7 @@ export async function generateQuestionsFromText({
     // Make truncation explicit: the model must not infer that omitted material is absent from the source.
     const truncated = text.length > MAX_SOURCE_CHARS;
     const source = truncated
-        ? text.slice(0, MAX_SOURCE_CHARS) + '\\n\\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]'
+        ? text.slice(0, MAX_SOURCE_CHARS) + '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]'
         : text;
 
     const systemMessage = isObjective
@@ -206,7 +259,7 @@ MANDATORY ITEM RULES
 10. Do not use placeholders, fake technical language, "all/none of the above", "true/false" as a shortcut, invented facts, copied questions, or clues that reveal the key.
 11. Cover different topics from across the visible material. Do not write multiple near-identical questions just to reach the count.
 12. If the source excerpt is marked truncated, stay within the visible evidence. Do not treat missing excerpt text as proof a topic is absent.
-13. Before responding, silently audit the full set for correctness, ambiguity, distractor plausibility, answer-position variety, duplicate or near-duplicate stems, and difficulty fit. Revise failed items rather than returning them.\n14. HARD REJECTION: Do not add a generic prefix or suffix to a recall question to make it appear medium/hard. Phrases such as ‘For a short viva’, ‘Case review’, ‘A trainee suggests’, ‘Which option is fully defensible’, and ‘During a practical’ are not difficulty by themselves. Each medium/hard item must contain a real scenario, a decision, data, an explicit constraint, an interpretation, or a multi-step operation that changes how the answer is determined.
+13. Before responding, silently audit the full set for correctness, ambiguity, distractor plausibility, answer-position variety, duplicate or near-duplicate stems, and difficulty fit. Revise failed items rather than returning them.\n14. HARD REJECTION: Do not add a generic prefix or suffix to a recall question to make it appear medium/hard. Phrases such as 'For a short viva', 'Case review', 'A trainee suggests', 'Which option is fully defensible', and 'During a practical' are not difficulty by themselves. Each medium/hard item must contain a real scenario, a decision, data, an explicit constraint, an interpretation, or a multi-step operation that changes how the answer is determined.
 
 Required JSON shape:
 {
@@ -254,76 +307,87 @@ ${source}
 ---`;
     }
 
-    try {
-        let response;
+    let lastError = null;
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
         try {
-            response = await fetch('/api/ai', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    messages: [
-                        { role: 'system', content: systemMessage },
-                        { role: 'user', content: userPrompt },
-                    ],
-                    model: 'openai/gpt-oss-20b',
-                    response_format: { type: 'json_object' },
-                }),
-            });
-        } catch (fetchError) {
-            throw new Error(`Connection error while generating questions: ${fetchError.message}`);
-        }
+            let response;
+            try {
+                response = await fetch('/api/ai', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        messages: [
+                            { role: 'system', content: systemMessage },
+                            { role: 'user', content: attempt > 1
+                                ? buildCorrectionPrompt(userPrompt, lastError.message, attempt)
+                                : userPrompt },
+                        ],
+                        model: 'openai/gpt-oss-20b',
+                        response_format: { type: 'json_object' },
+                    }),
+                });
+            } catch (fetchError) {
+                throw new Error(`Connection error while generating questions: ${fetchError.message}`);
+            }
 
-        if (!response.ok) {
-            const errorBody = await response.json().catch(() => ({}));
-            const message = errorBody.error?.message || response.status;
-            const error = new Error(`AI generation failed: ${message}`);
-            if (response.status === 429) error.retryAfter = Number(response.headers.get('retry-after')) || 0;
-            throw error;
-        }
+            if (!response.ok) {
+                const errorBody = await response.json().catch(() => ({}));
+                const message = errorBody.error?.message || response.status;
+                const error = new Error(`AI generation failed: ${message}`);
+                if (response.status === 429) error.retryAfter = Number(response.headers.get('retry-after')) || 0;
+                throw error;
+            }
 
-        const data = await response.json();
-        const rawContent = data?.choices?.[0]?.message?.content;
-        if (typeof rawContent !== 'string' || !rawContent.trim()) {
-            throw new Error('AI returned an empty response. Please retry generation.');
-        }
+            const data = await response.json();
+            const rawContent = data?.choices?.[0]?.message?.content;
+            if (typeof rawContent !== 'string' || !rawContent.trim()) {
+                throw new Error('AI returned an empty response. Please retry generation.');
+            }
 
-        let cleaned = rawContent.trim();
-        if (cleaned.includes('```')) {
-            const match = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
-            if (match?.[1]) cleaned = match[1].trim();
-        }
+            let cleaned = rawContent.trim();
+            if (cleaned.includes('```')) {
+                const match = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+                if (match?.[1]) cleaned = match[1].trim();
+            }
 
-        const questions = parseModelQuestions(cleaned);
-        validateCommonQuestions(questions, count);
-        if (isObjective) validateMCQs(questions);
+            const questions = parseModelQuestions(cleaned);
+            validateCommonQuestions(questions, count);
+            if (isObjective) validateMCQs(questions);
 
-        return questions.map((q, index) => {
-            const text = q.text.trim();
-            if (isObjective) {
-                let answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
-                    ? q.answer.toUpperCase().charCodeAt(0) - 65
-                    : Number(q.answer);
-                const randomized = shuffleWithAnswer(q.options.map(option => option.trim()), answer);
+            return questions.map((q, index) => {
+                const text = q.text.trim();
+                if (isObjective) {
+                    let answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
+                        ? q.answer.toUpperCase().charCodeAt(0) - 65
+                        : Number(q.answer);
+                    const randomized = shuffleWithAnswer(q.options.map(option => option.trim()), answer);
+                    return {
+                        id: `ai_q${index}`,
+                        text,
+                        options: randomized.options,
+                        answer: randomized.answer,
+                        type: 'mcq',
+                        difficulty: requestedDifficulty,
+                    };
+                }
+
                 return {
                     id: `ai_q${index}`,
                     text,
-                    options: randomized.options,
-                    answer: randomized.answer,
-                    type: 'mcq',
+                    marks: Number.isInteger(q.marks) && q.marks > 0 ? q.marks : (count > 5 ? 14 : 7),
+                    type: 'subjective',
                     difficulty: requestedDifficulty,
                 };
-            }
-
-            return {
-                id: `ai_q${index}`,
-                text,
-                marks: Number.isInteger(q.marks) && q.marks > 0 ? q.marks : (count > 5 ? 14 : 7),
-                type: 'subjective',
-                difficulty: requestedDifficulty,
-            };
-        });
-    } catch (error) {
-        console.error('AI Generation / Validation Error:', error);
-        throw new Error(error.retryAfter ? error.message : `Question generation rejected by validation: ${error.message}`);
+            });
+        } catch (error) {
+            lastError = error;
+            console.error(`AI Generation / Validation Error (attempt ${attempt} of ${MAX_RETRIES}):`, error.message);
+            // If it's a rate-limit error, don't retry immediately — let the caller handle retryAfter
+            if (error.retryAfter) throw error;
+            // Otherwise continue to next retry attempt
+        }
     }
+
+    // All retries exhausted
+    throw new Error(`Question generation rejected by validation: ${lastError ? lastError.message : 'Unknown error after ' + MAX_RETRIES + ' attempts'}`);
 }

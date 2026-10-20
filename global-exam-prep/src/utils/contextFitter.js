@@ -18,7 +18,7 @@ export const MAX_SOURCE_CHARS = 6000;
  * Normalize chapter content to a string (some records store it as an array of
  * paragraph strings).
  */
-function contentToString(content) {
+export function contentToString(content) {
     if (content == null) return '';
     if (Array.isArray(content)) return content.map(String).filter(Boolean).join('\n');
     return String(content);

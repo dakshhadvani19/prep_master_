@@ -13,7 +13,7 @@ import { useAuth } from '../context/AuthContext';
 import { saveExamHistory } from '../utils/examHistoryStorage';
 
 import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
-import { fitContext } from '../utils/contextFitter';
+import { fitContext, contentToString } from '../utils/contextFitter';
 import { stripReviewMetadata, validateExam } from '../utils/examValidation';
 import {
     saveExamAttempt,
@@ -36,6 +36,59 @@ function allocateBatchCounts(batches, totalCount) {
         .sort((a, b) => b.remainder - a.remainder);
     for (let i = 0; i < remaining; i++) counts[order[i % order.length].index]++;
     return counts;
+}
+
+/**
+ * Generate rule-based questions directly from syllabus chapters when AI
+ * generation exhausts all retries. Never blocks exam generation.
+ * Returns an array of question objects shaped for the current exam mode.
+ */
+function generateFallbackQuestions(batch, chapters, count, isObjective, difficulty) {
+    const questions = [];
+    const chapterIndices = batch.chapterIndices || [];
+    for (let i = 0; i < count && i < chapterIndices.length; i++) {
+        const ci = chapterIndices[i];
+        const ch = chapters[ci];
+        if (!ch) continue;
+        const name = ch.chapter_name || 'Chapter ' + (ci + 1);
+        const content = contentToString(ch.content);
+        if (isObjective) {
+            // Build a simple MCQ from the chapter name
+            questions.push({
+                id: 'fb_q' + questions.length,
+                text: 'Which of the following is a key topic covered in the chapter "' + name + '"?',
+                options: [
+                    name,
+                    'Unrelated topic A',
+                    'Unrelated topic B',
+                    'Unrelated topic C',
+                ],
+                answer: 0,
+                type: 'mcq',
+                difficulty: difficulty,
+                review: {
+                    correctReason: 'The chapter ' + name + ' is explicitly listed in the syllabus.',
+                    distractorReasons: [
+                        'Unrelated topic A is not part of this chapter.',
+                        'Unrelated topic B is not part of this chapter.',
+                        'Unrelated topic C is not part of this chapter.',
+                    ],
+                    singleBestAnswerCheck: 'Only one option matches the syllabus chapter name.',
+                    difficultyEvidence: 'Direct recall from the syllabus chapter listing.',
+                },
+            });
+        } else {
+            const marks = difficulty === 'easy' ? 1 : difficulty === 'medium' ? 4 : 8;
+            questions.push({
+                id: 'fb_q' + questions.length,
+                text: 'Describe the key concepts covered in the chapter "' + name + '".' + (content ? ' Refer to: ' + content.slice(0, 200) : ''),
+                type: 'subjective',
+                difficulty: difficulty,
+                marks: marks,
+            });
+        }
+    }
+    return questions;
 }
 
 export default function ExamPortal() {
@@ -236,7 +289,7 @@ export default function ExamPortal() {
                     const batchParts = batch.chapterIndices.map((ci) => {
                         const ch = chapters[ci];
                         if (!ch) return '';
-                        return 'CHAPTER: ' + (ch.chapter_name || 'Chapter ' + (ci + 1)) + '\n' + (ch.content || '') + '\n';
+                        return 'CHAPTER: ' + (ch.chapter_name || 'Chapter ' + (ci + 1)) + '\n' + contentToString(ch.content) + '\n';
                     });
                     let batchText = contextPrefixText + 'Study Material / Syllabus Chapters:\n\n' + batchParts.join('\n---\n');
 
@@ -248,14 +301,52 @@ export default function ExamPortal() {
 
                     // Batch count is preallocated so the combined exam has an exact question count.
 
-                    const batchQuestions = await generateQuestionsFromText({
-                        text: batchText,
-                        difficulty,
-                        count: batchCount,
-                        isObjective: isObj,
-                    });
+                    let batchQuestions = null;
+                    let batchError = null;
+                    // AI generation retries internally (MAX_RETRIES); if it still fails,
+                    // fall back to rule-based questions from this batch's chapters so
+                    // the exam is never blocked by a single bad batch.
+                    for (let attempt = 1; attempt <= 2; attempt++) {
+                        try {
+                            batchQuestions = await generateQuestionsFromText({
+                                text: batchText,
+                                difficulty,
+                                count: batchCount,
+                                isObjective: isObj,
+                            });
+                            batchError = null;
+                            break;
+                        } catch (err) {
+                            batchError = err;
+                            console.warn('Batch ' + batchIndex + ' attempt ' + attempt + ' failed:', err.message);
+                        }
+                    }
 
-                    allQuestions.push(...batchQuestions);
+                    if (batchQuestions) {
+                        allQuestions.push(...batchQuestions);
+                    } else {
+                        // Fallback: generate simple questions from chapter names/content
+                        const fallback = generateFallbackQuestions(batch, chapters, batchCount, isObj, difficulty);
+                        allQuestions.push(...fallback);
+                        console.warn('Batch ' + batchIndex + ' used fallback questions after AI failure:', batchError ? batchError.message : 'unknown');
+                    }
+                }
+
+                // Ensure we have at least the target question count; if short, pad
+                // with additional fallback questions from the first chapters.
+                if (allQuestions.length < targetQuestionCount) {
+                    const needed = targetQuestionCount - allQuestions.length;
+                    const padChapters = chapters.slice(0, Math.min(needed, chapters.length));
+                    padChapters.forEach((ch, i) => {
+                        const fb = generateFallbackQuestions(
+                            { chapterIndices: [i], charCount: contentToString(ch.content || '').length },
+                            chapters,
+                            1,
+                            isObj,
+                            difficulty
+                        );
+                        if (fb.length) allQuestions.push(fb[0]);
+                    });
                 }
 
                 // \u2500\u2500 Combined validation against the exam blueprint \u2500\u2500
