@@ -190,6 +190,8 @@ export default function ExamPortal() {
                     const branchName = courseDetail?.title?.replace(/^(B\.Tech|Diploma|BCA|MCA)\s*[-–:]\s*/i, '');
                     const resolved = await resolveSyllabus(sourceSubjectId, {
                         courseOrBranch: branchName,
+                        department: domainDetail?.title,
+                        subjectName: subjectDetail?.title,
                         preferTheory: true,
                     });
                     if (resolved) {
