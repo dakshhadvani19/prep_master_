@@ -71,10 +71,22 @@ export async function loadSyllabusRecord(path) {
  * @returns {Promise<{entry, record} | null>}
  */
 export async function resolveSyllabus(subjectCode, opts = {}) {
-    const entries = await findSyllabusBySubjectCode(subjectCode);
-    if (!entries || entries.length === 0) return null;
+    let entries = await findSyllabusBySubjectCode(subjectCode);
+    const { department, courseOrBranch, subjectName, preferTheory = true } = opts;
 
-    const { department, courseOrBranch, preferTheory = true } = opts;
+    // Legacy catalog IDs may differ from the official syllabus code. If the
+    // code has no indexed record, fall back only to an exact normalized title
+    // match, then use department/course to disambiguate duplicates.
+    if ((!entries || entries.length === 0) && subjectName) {
+        const idx = await loadSyllabusIndex();
+        const normalize = (value) => String(value || '').toLowerCase()
+            .replace(/[^a-z0-9]+/g, ' ').trim();
+        const wantedName = normalize(subjectName);
+        entries = Object.values(idx.subjects || {}).flatMap((value) =>
+            Array.isArray(value) ? value : [value]
+        ).filter((entry) => normalize(entry.subjectName) === wantedName);
+    }
+    if (!entries || entries.length === 0) return null;
 
     let candidates = entries.filter((e) => e.status === 'ready');
 
