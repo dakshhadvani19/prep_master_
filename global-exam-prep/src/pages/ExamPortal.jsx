@@ -308,7 +308,7 @@ export default function ExamPortal() {
                 setAutoProcessing(false);
             }
         } else {
-            // Upload mode — Terms still required; questions come from uploaded files
+            // Upload mode — questions come from uploaded files
             setExamState('active');
         }
     };
@@ -391,10 +391,11 @@ export default function ExamPortal() {
             setIsSubmitting(true);
             setSubmitError('');
 
-            let score = 0;
+            let score = null; // Theory responses are not auto-graded.
             let actualTotalMarks = examInfo.totalMarks;
 
             if (examInfo.type === 'objective') {
+                score = 0;
                 actualTotalMarks = questions.length; // 1 Mark per question safely
                 questions.forEach(q => {
                     if (answers[q.id] !== undefined && answers[q.id] == q.answer) {
@@ -407,7 +408,9 @@ export default function ExamPortal() {
                 if (sum > 0) actualTotalMarks = sum;
             }
 
-            const percentage = actualTotalMarks > 0 ? Math.round((score / actualTotalMarks) * 100) : 0;
+            const percentage = examInfo.type === 'objective' && actualTotalMarks > 0
+                ? Math.round((score / actualTotalMarks) * 100)
+                : null;
 
             // ── Persist to Supabase (idempotent: only in_progress → submitted) ──
             let submitResult = { ok: false, error: null, alreadySubmitted: false };
@@ -419,7 +422,7 @@ export default function ExamPortal() {
             }
 
             // Save grade record
-            if (attemptId && submitResult.ok) {
+            if (attemptId && submitResult.ok && examInfo.type === 'objective') {
                 try {
                     await saveExamGrade(attemptId, {
                         score,
