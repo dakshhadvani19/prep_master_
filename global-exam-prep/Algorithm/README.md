@@ -4,17 +4,17 @@ These Markdown files define the exam-generation specification. They are not, by 
 
 ## Canonical runtime prompt
 
-Use [\`FINAL_PROMPT_TEMPLATE.md\`](./FINAL_PROMPT_TEMPLATE.md) as the **single canonical prompt template** for Groq integration. Backend code should assemble one request from the stable system rules, exactly one exam-specific block, exactly one difficulty overlay, verified subject context, and one exact output schema. Do not concatenate every Markdown file into every request.
+Use [`FINAL_PROMPT_TEMPLATE.md`](./FINAL_PROMPT_TEMPLATE.md) as the **single canonical prompt template** for Groq integration. Backend code should assemble one request from the stable system rules, exactly one exam-specific block, exactly one difficulty overlay, verified subject context, and one exact output schema. Do not concatenate every Markdown file into every request.
 
 The template consolidates the applicable rules from the files below and documents how to fetch, select, scope, and fit syllabus context without silent truncation.
 
 ## Reference files
 
-- [\`Mid1.md\`](./Mid1.md): non-departmental theory Mid-1.
-- [\`Mid1_Departmental.md\`](./Mid1_Departmental.md): departmental MCQ Mid-1.
-- [\`Mid2.md\`](./Mid2.md): Mid-2 MCQ.
-- [\`ESE.md\`](./ESE.md): ESE theory.
-- [\`Easy.md\`](./Easy.md), [\`Medium.md\`](./Medium.md), [\`Hard.md\`](./Hard.md): difficulty definitions.
+- [`Mid1.md`](./Mid1.md): non-departmental theory Mid-1.
+- [`Mid1_Departmental.md`](./Mid1_Departmental.md): departmental MCQ Mid-1.
+- [`Mid2.md`](./Mid2.md): Mid-2 MCQ.
+- [`ESE.md`](./ESE.md): ESE theory.
+- [`Easy.md`](./Easy.md), [`Medium.md`](./Medium.md), [`Hard.md`](./Hard.md): difficulty definitions.
 
 These remain human-readable reference/specification files. If they conflict with the canonical template or an authoritative course blueprint, reconcile the documentation before changing runtime behavior.
 
@@ -24,8 +24,8 @@ These remain human-readable reference/specification files. If they conflict with
 2. Reject unsupported combinations and unverified/mismatched syllabus records; do not ask Groq to decide policy or database details.
 3. Fetch only the selected subject's ordered syllabus/practical content and verified blueprint. For Mid-1, apply the first-50%-of-syllabus rule using official unit/contact-hour weighting when available.
 4. Build traceable topic chunks/coverage metadata and fit them to the chosen model's actual context/output-token limits. Never silently truncate a long syllabus. If sufficient source fidelity cannot be maintained, fail safely.
-5. Assemble the prompt using [\`FINAL_PROMPT_TEMPLATE.md\`](./FINAL_PROMPT_TEMPLATE.md), call Groq, parse strict JSON and run deterministic structure, count, answer-index, marks/rubric and available coverage checks with bounded retries.
-6. Map validated output to the actual supported \u0060TestsData\u0060 schema and persist the test before returning the student-facing exam. Never expose the answer key, model answers, rubrics or internal review evidence during the attempt.
+5. Assemble the prompt using [`FINAL_PROMPT_TEMPLATE.md`](./FINAL_PROMPT_TEMPLATE.md), call Groq, parse strict JSON and run deterministic structure, count, answer-index, marks/rubric and available coverage checks with bounded retries.
+6. Map validated output to the actual supported `TestsData` schema and persist the test before returning the student-facing exam. Never expose the answer key, model answers, rubrics or internal review evidence during the attempt.
 
 ## Canonical policy summary
 
@@ -39,6 +39,6 @@ These remain human-readable reference/specification files. If they conflict with
 
 ## Important implementation status
 
-The canonical prompt template is committed, but **runtime integration is not complete**. The current \u0060global-exam-prep/src/utils/geminiQuestions.js\u0060 uses a simpler prompt and has a \u0060MAX_SOURCE_CHARS = 6000\u0060 truncation cap. The template describes the intended design; backend source retrieval, prompt assembly, model call, schema mapping, persistence and end-to-end testing still need to be implemented and verified.
+The canonical prompt template is committed, but **runtime integration is not complete**. The current `global-exam-prep/src/utils/geminiQuestions.js` uses a simpler prompt and has a `MAX_SOURCE_CHARS = 6000` truncation cap. The template describes the intended design; backend source retrieval, prompt assembly, model call, schema mapping, persistence and end-to-end testing still need to be implemented and verified.
 
 If any rule conflicts with a verified official course blueprint, stop and flag the conflict rather than silently overriding authoritative policy.
