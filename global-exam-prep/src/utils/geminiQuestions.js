@@ -265,7 +265,7 @@ ${source}
                         { role: 'system', content: systemMessage },
                         { role: 'user', content: userPrompt },
                     ],
-                    model: 'llama-3.1-8b-instant',
+                    model: 'openai/gpt-oss-20b',
                     response_format: { type: 'json_object' },
                 }),
             });
