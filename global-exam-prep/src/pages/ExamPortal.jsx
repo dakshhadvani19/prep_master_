@@ -23,6 +23,22 @@ import {
     saveExamGrade,
 } from '../utils/supabaseExam';
 
+
+// Allocate an exact exam question count across syllabus batches. Largest-remainder
+// allocation avoids rounding each batch independently and generating too many/few.
+function allocateBatchCounts(batches, totalCount) {
+    if (!batches.length) return [];
+    const totalWeight = batches.reduce((sum, batch) => sum + Math.max(0, batch.charCount || 0), 0);
+    const weights = batches.map(batch => totalWeight > 0 ? Math.max(0, batch.charCount || 0) / totalWeight : 1 / batches.length);
+    const exact = weights.map(weight => weight * totalCount);
+    const counts = exact.map(Math.floor);
+    const remaining = totalCount - counts.reduce((sum, count) => sum + count, 0);
+    const order = exact.map((value, index) => ({ index, remainder: value - Math.floor(value) }))
+        .sort((a, b) => b.remainder - a.remainder);
+    for (let i = 0; i < remaining; i++) counts[order[i % order.length].index]++;
+    return counts;
+}
+
 export default function ExamPortal() {
     const { subjectId, examType, difficulty } = useParams();
     const navigate = useNavigate();
@@ -181,9 +197,9 @@ export default function ExamPortal() {
                 let syllabusRecord = null;
                 let syllabusSource = 'none';
                 try {
+                    const branchName = courseDetail?.title?.replace(/^(B\\.Tech|Diploma|BCA|MCA)\\s*[-–:]\\s*/i, '');
                     const resolved = await resolveSyllabus(sourceSubjectId, {
-                        department: domainDetail?.title,
-                        courseOrBranch: courseDetail?.title,
+                        courseOrBranch: branchName,
                         preferTheory: true,
                     });
                     if (resolved) {
@@ -218,8 +234,13 @@ export default function ExamPortal() {
                 const allQuestions = [];
                 const chapters = Array.isArray(syllabusRecord.chapters) ? syllabusRecord.chapters : [];
                 const MAX_SOURCE_CHARS = 6000;
+                const isObj = examInfo.type === 'objective';
+                const targetQuestionCount = isObj ? 30 : (config.totalMarks === 60 ? 10 : 9);
+                const batchCounts = allocateBatchCounts(batches, targetQuestionCount);
 
-                for (const batch of batches) {
+                for (const [batchIndex, batch] of batches.entries()) {
+                    const batchCount = batchCounts[batchIndex];
+                    if (batchCount <= 0) continue;
                     const batchParts = batch.chapterIndices.map((ci) => {
                         const ch = chapters[ci];
                         if (!ch) return '';
@@ -233,22 +254,7 @@ export default function ExamPortal() {
                         batchText += '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]';
                     }
 
-                    const isObj = examInfo.type === 'objective';
-
-                    // Determine question count for this batch
-                    let batchCount;
-                    if (isObj) {
-                        // Mid-2 MCQ: exactly 30 total, split across batches by char proportion
-                        const totalChars = batches.reduce((sum, b) => sum + b.charCount, 0);
-                        batchCount = Math.max(1, Math.round((batch.charCount / totalChars) * 30));
-                    } else {
-                        // Theory: allocate questions proportionally across batches.
-                        // Target ~8 questions for Mid-1 (30 marks), ~12 for ESE (60 marks).
-                        // The AI assigns marks; validation enforces the exact blueprint.
-                        const targetQuestions = config.totalMarks === 60 ? 12 : 8;
-                        const totalChars = batches.reduce((sum, b) => sum + b.charCount, 0);
-                        batchCount = Math.max(1, Math.round((batch.charCount / totalChars) * targetQuestions));
-                    }
+                    // Batch count is preallocated so the combined exam has an exact question count.
 
                     const batchQuestions = await generateQuestionsFromText({
                         text: batchText,
@@ -261,6 +267,17 @@ export default function ExamPortal() {
                 }
 
                 // \u2500\u2500 Combined validation against the exam blueprint \u2500\u2500
+                // Give questions globally unique IDs (each AI batch starts at ai_q0).
+                // Apply the exact theory marking blueprint after combining all batches.
+                allQuestions.forEach((question, index) => {
+                    question.id = `ai_q${index}`;
+                    if (!isObj) {
+                        question.marks = index < 2 ? 1
+                            : config.totalMarks === 60 && index === 2 ? 2
+                            : config.totalMarks === 60 ? 8 : 4;
+                    }
+                });
+
                 const validation = validateExam(allQuestions, config, coveragePlan);
                 if (!validation.valid) {
                     throw new Error('Generated exam failed validation: ' + validation.errors.join(', '));
