@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Computer Organization and Architecture",
+    "subject_code": "01CE1402",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE1402 - Computer Organization and Architecture.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Register Transfer and Micro- operations",
+      "content": [
+        "Register Transfer language, Register Transfer, Bus and Memory",
+        "Transfers, Arithmetic Micro-Operations, Logic Micro-Operations",
+        "Shift Micro-Operations, Arithmetic logical shift unit"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Basic Computer Organization and Design",
+      "content": [
+        "Instruction codes, Computer registers, Computer instructions",
+        "Timing and Control, Instruction cycle, Memory-Reference",
+        "Instructions, Input- output and interrupt, Complete computer",
+        "description, Design of Basic Computer, Design of Accumulator",
+        "Logic"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "COMPUTER ORGANIZATION AND ARCHITECTURE 01CE1402",
+      "content": [
+        "Introduction, Machine Language, Assembly Language, assembler",
+        "Program loops, Programming Arithmetic and logic operations",
+        "subroutines, I-O Programming"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Pipeline",
+      "content": [
+        "Flynn's taxonomy, Parallel Processing, Pipelining, Arithmetic",
+        "Pipeline, Instruction, Pipeline, RISC Pipeline"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Computer Arithmetic",
+      "content": [
+        "Introduction, Addition and subtraction, Multiplication Algorithms",
+        "(Booth Multiplication Algorithm), Division Algorithms, Floating",
+        "Point Arithmetic operations, Decimal Arithmetic Unit"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Input-Output Organization",
+      "content": [
+        "Input-Output Interface, Asynchronous Data Transfer, Modes of",
+        "Transfer, Priority Interrupt, DMA, Input-Output Processor (IOP)",
+        "CPUIOP Communication"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Memory Organization",
+      "content": [
+        "Memory Hierarchy, Main Memory, Auxiliary Memory, Associative",
+        "Memory, Cache Memory, Virtual Memory"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Tutorial",
+      "content": [
+        "Show the contents of registers E, A, Q, and SC (as Table) during the",
+        "process of multiplication of two binary numbers, 11111",
+        "(multiplicand) and 10101 (multiplier). The signs are not included",
+        "Explain the Booth’s algorithm with the help of flowchart also show",
+        "the steps for (-9) * (-13) using Booth’s Algorithm"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Tutorial",
+      "content": [
+        "Show the step-by-step multiplication process using booth algorithm",
+        "when the following binary numbers are multiplied. Assume 5-bit",
+        "registers that hold signed numbers. The multiplicand in both cases is",
+        "+15. a. (+15) * (+13) b. (+15) * (-13)"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Tutorial",
+      "content": [
+        "a. How many 128*8 RAM chips are needed to provide a memory",
+        "capacity of 2048 bytes? b. How many lines of the address bus must",
+        "be used to access 2048 bytes of memory? How many of these lines",
+        "will be common to all chips? c. How many lines must be decoded",
+        "for chips select? Specify the size of the decoders., A computer uses",
+        "RAM chips of 1024 * 1 capacity. a. How many chips are needed",
+        "and how should their address lines be connected to provide a",
+        "memory capacity of 1024 bytes? b. How many chips are needed to",
+        "provide a memory capacity of 16K bytes? Explain in words how the",
+        "chips are to be connected to the address bus"
+      ]
+    }
+  ]
+}

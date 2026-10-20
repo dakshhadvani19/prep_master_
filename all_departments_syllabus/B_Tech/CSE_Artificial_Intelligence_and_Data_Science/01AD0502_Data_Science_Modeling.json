@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Data Science & Modeling",
+    "subject_code": "01AD0502",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AD/01AD0502 - Data Science & Modeling.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Data Science, Data Analytics tools for the Data Science",
+      "content": [
+        "Background: This foundation of Data Science explains what data",
+        "science is, its applications across industries, the roles of data",
+        "professionals that can lead to a career in data science. How Machine",
+        "Learning and Deep Learning Models are useful for data science?",
+        "Describe the Data Scientist’s tool kit which includes Data sets",
+        "Machine learning models, and Big Data tools, Utilize languages",
+        "commonly used by data scientists like Python, R. , Demonstrate",
+        "working knowledge of tools such as Jupyter notebooks and RStudio",
+        "and utilize their various features. , Create and manage source code",
+        "for data science using Git repositories and GitHub, Libraries &",
+        "Packages (Exploratory data analysis (EDA) using Pandas and",
+        "NumPy, scikit-learn, SciPy, TensorFlow to uncover patterns and",
+        "insights), Web Scraping (learning about tools, libraries and ethical",
+        "considerations), Data Visualization using Matplotlib, Seaborn, and",
+        "Plotly. , R Libraries for Big Data (ggplot2, dplyr, tidyverse, shiny)"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Probability Concepts, Descriptive and Inferential Statistical",
+      "content": [
+        "Basic probability, random variables, discrete & continuous",
+        "distributions functions (Binomial, Poisson, Normal)., Descriptive",
+        "Statistics (central tendency, variance, standard deviation",
+        "covariance, correlation, Law of Large Numbers, Point & Interval",
+        "Estimation), Inferential Statistics through hypothesis tests (Central",
+        "limit theorem, hypothesis testing, one-tailed and two-tailed test, and",
+        "Chi-Square test). , Analysis of Variance, Kruskal-Wallis test",
+        "Coefficient of correlation"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Optimization Approaches, Machine Learning",
+      "content": [
+        "Introduction to optimization, Constrained optimization",
+        "Unconstrained optimization, Linear optimization, Gradient-based",
+        "methods., Simple and Multiple Linear Regression, Logistic",
+        "Regression, Bias and Variance Tradeoff in Data",
+        "Ridge/Lasso/ElasticNet Regularization Techniques, Data",
+        "Correlation: Relationship between data and variables (Principal",
+        "component Analysis, Cluster Analysis, Multiple regressions",
+        "Analysis)"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Fundamentals of R and Python Programming",
+      "content": [
+        "R Data Structures (Vectors, Common Vectorized operations",
+        "Matrices, Arrays, Lists, Data Frames, File Handling)., Construct",
+        "Python programs to clean and prepare data for analysis by",
+        "addressing missing values, formatting inconsistencies",
+        "normalization, and binning, Analyze real-world datasets through",
+        "exploratory data analysis (EDA),, Apply data operation techniques",
+        "using dataframes to organize, summarize, and interpret data",
+        "distributions, correlation analysis, and data pipelines., Apply core",
+        "machine learning algorithms such as regression, classification",
+        "clustering, and dimensionality reduction using Python and scikit",
+        "learn. , Use these models to generate predictions and support data",
+        "driven decision-making"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Statistical Analysis and Visualizations using R Programming",
+      "content": [
+        "Creating Datasets in R, Importing Data into R, Data Manipulation",
+        "Techniques using R, Data Visualization Techniques, Statistical",
+        "Applications using R (Logical Regression, Hierarchical Clustering",
+        "PCA for Dimensionality Reduction)., Libraries, Data Handling",
+        "capabilities, , Data Modeling Algorithms, Data Visualization",
+        "Statistical Analysis"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Reproducible Research Using R",
+      "content": [
+        "Reproducible Research using R and Rstudio , knitr, rmarkdown",
+        "bookdown, interactive document, shiny presentation, shiny web",
+        "application"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement practical related to advance techniques of deep learning",
+        "reinforcement learning models using TensorFlow and PyTorch"
+      ]
+    }
+  ]
+}

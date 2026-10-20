@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Database Management System",
+    "subject_code": "01AI0303",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0303 - Database Management System.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introductory concepts of DBMS",
+      "content": [
+        "Data base System Applications, Purpose of Database Systems, View",
+        "of Data - Data Abstraction, Instances and Schemas - data Models",
+        "the ER Model - Relational Model - Other Models, Database",
+        "Languages - DDL - DML - database Access for applications",
+        "Programs, data base Users and Administrator - Data Base",
+        "Architecture - Storage Manager , the Query Processor"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Relational Models & SQL Fundamentals Relational Models & SQL Fundamentals: Relational Data Model",
+      "content": [
+        "Concept of relations, Schema-instance distinction. Structure of",
+        "relational databases, Domains, Relations, Relational algebra",
+        "fundamental operators and syntax",
+        "All set Operators., SQL:",
+        "Appropriate tool for DBMS, Basics of SQL, DDL, DML, DCL",
+        "structure creation, alteration, defining constraints, Primary key",
+        "foreign key, unique, not null, check, IN operator, Functions",
+        "aggregate functions, Built-in functions numeric, date, string",
+        "functions, set operations, sub-queries, correlated sub-queries, Use of",
+        "group by, having, order by, join and its types, Exist, Any, All"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Data Modelling & Design",
+      "content": [
+        "Data base design and ER diagrams , ER Model - Entities, Attributes",
+        "and Entity sets - Relationships and Relationship sets , ER Design",
+        "Issues - Concept Design, Conceptual Design for University",
+        "Enterprise. Introduction to the Relational Model, Structure",
+        "Database Schema, Keys - Schema Diagrams"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Normalization",
+      "content": [
+        "Normalization , Introduction, Non-loss decomposition and",
+        "functional dependencies, First, Second, and third normal forms",
+        "dependency preservation, Boyes/Codd normal form. Higher Normal",
+        "Forms - Introduction, Multi-valued dependencies and Fourth normal",
+        "form, Join dependencies and Fifth normal form"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Transactional Management & Concurrency Control",
+      "content": [
+        "Transaction State- , Transaction Properties, Implementation of",
+        "Atomicity and Durability, Concurrent - Executions , Serializability",
+        "Conflict & View Serialization, Transaction Commands, Problems of",
+        "Concurrency Controls-Lock based Protocol-2PL protocols",
+        "Validation based Protocol-Deadlocks- Recovery and Atomicity",
+        "Log - Based Recovery - Recovery with Concurrent Transactions",
+        "Buffer Management - Failure with loss of nonvolatile storage",
+        "Advance Recovery systems- Remote Backup systems"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Handling different Objects in SQL & PL-SQL",
+      "content": [
+        "Views, Synonyms, Sequences, Stored procedures and packages",
+        "Table spaces, constrains , PL-SQL Blocks and Programs"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Security & Advance DBMS Concepts",
+      "content": [
+        "Security: Discretionary and Mandatory Access Control, Audit",
+        "Trails",
+        "Multi-Level Security",
+        "Statistical Databases",
+        "Data",
+        "Encryption., Introduction to NOSQL Databases. , Introduction to",
+        "Data Mining"
+      ]
+    }
+  ]
+}

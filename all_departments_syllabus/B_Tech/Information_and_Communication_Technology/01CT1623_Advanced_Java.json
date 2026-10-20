@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Advanced Java",
+    "subject_code": "01CT1623",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1623 - Advanced Java.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "JDBC Programming",
+      "content": [
+        "The JDBC Connectivity Model, Database Programming:",
+        "Connecting to the Database, Creating a SQL Query, Getting the",
+        "Results, Updating Database Data, Error Checking and the",
+        "SQLException Class, The SQLWarning Class, The Statement",
+        "Interface, PreparedStatement, CallableStatement The ResultSet",
+        "Interface, Updatable Result Sets, JDBC Types, Executing SQL",
+        "Queries, ResultSetMetaData, Executing SQL, Updates, Transaction",
+        "Management"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Servlet API and Overview Servlet Model",
+      "content": [
+        "Overview of Servlet, Servlet Life Cycle, HTTP Methods Structure",
+        "and Deployment descriptor ServletContext and ServletConfig",
+        "interface, Attributes in Servelt, Request Dispacher interface The",
+        "Filter API: Filter, FilterChain, Filter Config Cookies, Session",
+        "Management: Understanding state and session, Understanding",
+        "Session Timeout and Session Tracking, URL Rewriting"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Java Server Pages JSP Overview",
+      "content": [
+        "The Problem with Servlets, Life Cycle of JSP Page, JSP Processing",
+        "JSP Application Design with MVC, Setting Up the JSP",
+        "Environment. JSP Directives, JSP Action, JSP Implicit Objects JSP",
+        "Form Processing, JSP Session and Cookies Handling, JSP Standard",
+        "Tag Libraries, JSP Custom Tag, JSP Expression Language, JSP",
+        "Exception Handling"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Hibernate 4.0",
+      "content": [
+        "Overview of Hibernate, Hibernate Architecture, Hibernate Mapping",
+        "Types, Hibernate O/R Mapping, Hibernate Annotation, Hibernate",
+        "Query Language"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Spring",
+      "content": [
+        "Introduction to spring, Dependency Injection, Spring AOP, Spring",
+        "ORM, Spring MVC"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Experiment-6",
+      "content": [
+        "A servlet program to do session tracking and session counter using",
+        "serssionListener"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment-7",
+      "content": [
+        "JSP program to demonstrate arithmetic operations"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment-8",
+      "content": [
+        "Gets two numbers in html page from the user and submit that",
+        "numbers in jsp page,print appropriate output using methods. (JSP)"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment-9",
+      "content": [
+        "Get value from user and create cookie in another jsp page and also",
+        "view that cookie. (JSP)"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment-10",
+      "content": [
+        "Get value from user and create session in another jsp page and also",
+        "view. (JSP)"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment-11 Session Demo program. Create login.jsp and check it from",
+      "content": [
+        "user_master db and set session for next UserAccount.jsp page",
+        "(JDBC-JSP)"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment-12 Create employee_master table and check if user is authenticated or",
+      "content": [
+        "not by login module and set appropriate session. Every time",
+        "whenver user loged in the last Access Time should be shown to",
+        "user. give logout link and destory the session attributes and redirect",
+        "the user to again login page. (JDBC-JSP)"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment-13",
+      "content": [
+        "JSP program to demonstrate jsp: forward action tag"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment-14",
+      "content": [
+        "Create one user login registration page in jsp with all required form",
+        "fields and insert into database. insertion of data done at servlet level",
+        "where connection method is created in servlet. Accept the client",
+        "httpServletRequest. (JDBC-Servlet-JSP)"
+      ]
+    }
+  ]
+}

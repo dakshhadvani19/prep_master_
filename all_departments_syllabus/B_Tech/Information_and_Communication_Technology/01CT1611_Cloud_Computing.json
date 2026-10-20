@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Cloud Computing",
+    "subject_code": "01CT1611",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1611 - Cloud Computing.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction of Cloud & Amazon Web Service",
+      "content": [
+        "Introduction of cloud computing, how it works Types of cloud, what",
+        "is Virtualization, Advantages of Cloud, AWS history, Dashboard",
+        "AWS Overview, Architecture"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Cloud Service Models",
+      "content": [
+        "Software as a Service (SaaS), Infrastructure As a Services (IaaS)",
+        "Platform As a service (PaaS)"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Identity & Access Management",
+      "content": [
+        "IAM Overview and Policies, IAM Users, Groups, Access Key",
+        "Secret Access Key, MFA, Report"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Elastic Cloud Computing (EC2)",
+      "content": [
+        "Amazon EC2 Overview, Elastic Block Storage (EBS), Amazon",
+        "Machine Image (AMI), Instance Purchasing Options, Introduction",
+        "to EC2 Instance Types Security Group Elastic, Public & private IP",
+        "Overview, Amazon EBS & Snapshot, AWS CLI, Bootstrap Script",
+        "Elastic Load Balancing (ELB), Auto Scaling"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Virtual Private Cloud (VPC)",
+      "content": [
+        "Amazon Virtual Private Cloud (VPC), Amazon VPC and Subnets",
+        "Route Table, Internet Gateway"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Amazon Simple Storage Service (S3)",
+      "content": [
+        "Simple Storage Service (S3), S3 Object Storage and Buckets",
+        "Security on bucket, Logging & event, Glacier, Versioning &",
+        "Lifecycle Policy, Cross region replication"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Route",
+      "content": [
+        "DNS Records, Website Hosting, Health Check"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Databases",
+      "content": [
+        "Relation Database System, DB engine & Instance details, Security",
+        "Parameter group, Monitoring Resourcing, DynamoDB, Elasticache"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "CloudWatch & Monitoring",
+      "content": [
+        "Cloud Watch, Matrices, Alarm & notification"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment-10 Launching EC2 Spot Instances with Auto Scaling and Amazon",
+      "content": [
+        "CloudWatch"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment-13 Create Lifecycle Policy using S3",
+      "content": [
+        "Experiment-14 Setup Versioning & Configure Cross Region Replication in S3"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment-16 RDS : Create Database & Connect",
+      "content": [
+        "Authentication"
+      ]
+    }
+  ]
+}

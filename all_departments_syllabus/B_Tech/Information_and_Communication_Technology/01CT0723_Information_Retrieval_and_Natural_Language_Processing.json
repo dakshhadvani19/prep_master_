@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Information Retrieval and Natural Language Processing",
+    "subject_code": "01CT0723",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT0723 - Information Retrieval and Natural Language Processing.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Information Retrieval",
+      "content": [
+        "Boolean retrieval, Vector Space Model, Feature Vectors",
+        "Document/Passage Retrieval, Search Engines, Relevance Feedback",
+        "& Query Expansion, Document Filtering and Categorization, flat",
+        "and hierarchical clustering, Latent Semantic Analysis, Web",
+        "Crawling and the Google algorithm"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Language models and IR systems",
+      "content": [
+        "Unigram, Bigram language models,, generating queries from",
+        "documents, Language models and smoothing, , ranking with",
+        "language models, Kullback Leibler divergence, , Divergence from",
+        "randomness, Passage retrieval and ranking, Management of",
+        "Information Retrieval Systems: Knowledge management",
+        "Information management, Digital asset management, Network",
+        "management, Search engine optimization, Records compliance and",
+        "risk management, Version control, Data and data quality",
+        "Information system failure. , Types of information retrieval systems:",
+        "Web retrieval and mining, Semantic web, XML information",
+        "retrieval, Recommender systems and expert locators, Knowledge",
+        "management systems, Decision support systems, , Geographic",
+        "information system (GIS). Indexing: Inverted indices, Index",
+        "components and Index life cycle, Interleaving Dictionary and",
+        "Postings lists, Index construction"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Statistical Natural Language Processing",
+      "content": [
+        "Sequence Labeling: POS-tagging, Named Entity Recognition and",
+        "Normalization, Syntactic Parsing: Dependency Syntactic Parsing",
+        "Ambiguity in language, Shallow Semantic Parsing: Predicate",
+        "Argument Structures, Relation Extraction (supervised and semi",
+        "supervised), Discourse Parsing: Coreference Resolution and",
+        "discourse connective classification"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Neural NLP Models",
+      "content": [
+        "Word Window Classification, Neural Networks for text, N-gram",
+        "Language Models, Perplexity, Hidden Markov Models, Recurrent",
+        "Neural network, Vanishing Gradients and exploding gradient, 1D",
+        "CNN for NLP, Contextual Representations, Encoder-Decoder",
+        "Transformers"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Joint NLP and IR applications",
+      "content": [
+        "Deep Linguistic Analysis for Question Answering: QA tasks (open",
+        "restricted, factoid, non-factoid), NLP Representation, Question",
+        "Answering Workflow, QA Pipeline, Question Classification, Fine",
+        "Grained Opinion Mining: automatic review classification, automatic",
+        "product extraction and review"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Experiment-7 Text document pre-processing and Classification",
+      "content": [
+        "Experiment-8 To construct the Ontology relation among the words and sentences"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment-9",
+      "content": [
+        "Text processing practice: sentence segmentation, word tokenization",
+        "stemming and lemmatization, preparation of dictionary, etc"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment-11 Programming exercises on employing HMM for PoS tagging",
+      "content": [
+        "Experiment-12 Programming exercises to implement log-linear model for PoS",
+        "tagging problem"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment-13 Programming exercises for employing CRF on NER tasks",
+      "content": [
+        "(CoreNLP/NLTK) and obtaining the syntactic parsing of the text"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment-15 Programming exercises for employing a multi-layer feedforward",
+      "content": [
+        "network on PoS tagging and NER tasks"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment-16 Programming exercises for using LSTM in text classification task",
+      "content": [
+        "classification task"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment-18 Programming exercises for using a sequence to sequence model on",
+      "content": [
+        "machine translation tasks"
+      ]
+    }
+  ]
+}

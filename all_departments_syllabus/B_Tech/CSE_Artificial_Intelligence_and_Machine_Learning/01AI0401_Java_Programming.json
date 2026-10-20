@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Java Programming",
+    "subject_code": "01AI0401",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Machine Learning",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0401 - Java Programming.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Java Overview",
+      "content": [
+        "Java Introduction, Platform Independence, JVM & JDK, Data types",
+        "Operators, If, else statement, Switch condition, while, do-while, for",
+        "loop, break and continue statement"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Array, String and Collection Classes",
+      "content": [
+        "Single Array & Multidimensional Array, Library Classes-String",
+        "String Buffer & Wrapper Class, Command line arguments and",
+        "Various String Operations, List Class (Abstract List), Array List",
+        "class, LinkedList class, Enumeration Iterative Statement, Vector",
+        "class"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Classes, Objects and Methods",
+      "content": [
+        "Class and Object, Object reference, Constructor: Constructor",
+        "Overloading, Method: Method Overloading, Recursion, Passing and",
+        "Returning object form Method, new operator, this and static",
+        "keyword, finalize() method, Import statement, Static import, Access",
+        "control, Nested class, , Inner class, Anonymous inner class"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Inheritance and Interfaces in Java",
+      "content": [
+        "Overview of Inheritance, inheritance in constructor, Inheriting Data",
+        "members and Methods, s, Multilevel Inheritance - method",
+        "overriding Handle multilevel constructors Explain super keyword",
+        "Stop Inheritance ,Explain Final keywords, Creation and",
+        "Implementation of an interface, Interface reference, instance of",
+        "operator, Interface inheritance, Dynamic method dispatch, Abstract",
+        "class, Comparison between Abstract Class and interface, inside of",
+        "System.out.println - statements"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Multithreading, Exception and File Handling in Java",
+      "content": [
+        "Introduction of Multithread programming, Thread classes and",
+        "Runnable interface,, Thread priority and synchronization, Thread",
+        "communication and Deadlock, Exception and Error, Use of try",
+        "catch, throw, throws and finally, Built in Exception, Custom",
+        "exception, Throwable Class. Overview of Different Stream (Byte",
+        "Stream, Character stream), Readers and Writers class, File Class",
+        "File Input Stream, File Output Stream, Input Stream Reader and",
+        "Output Stream Writer class, File reader and writer class, File Writer",
+        "Buffered Reader class"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Swing",
+      "content": [
+        "Introduction To Swing, Applications and Pluggable look and feel",
+        "Basic swing components : Text Fields, Buttons, Toggle Buttons",
+        "Checkboxes, and Radio Buttons., Event Handling: various event",
+        "handling mechanisms, Delegation Event Model, Events, Event",
+        "Sources, Event Listeners, various classes related to event sources",
+        "and event listeners"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Inheritance, Method Overriding"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Multithreading, Exception"
+      ]
+    }
+  ]
+}

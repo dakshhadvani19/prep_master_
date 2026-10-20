@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Information Security",
+    "subject_code": "05BC3502",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Bachelor of Computer Applications (Hons.)",
+    "semester": 5,
+    "source": "Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/PDFs/BCA/Sem_5/05BC3502 - Information Security.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Computer Security Concepts (CIA), Threats, Attacks, and Assets",
+        "Security Fundamental Requirements, Fundamental Security",
+        "Design Principles, Attack Surfaces and Attack Trees"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Symmetric and Asymmetric Cryptographic Techniques",
+      "content": [
+        "Introduction to Symmetric Cryptography, Data Encryption",
+        "Standard (DES) Algorithm, Advanced Encryption Standard (AES)",
+        "Algorithm",
+        "Introduction to Asymmetric Cryptography, Difference between",
+        "symmetric and asymmetric cryptography, RSA Algorithm"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Message Authentication and Digital Signatures",
+      "content": [
+        "Authentication",
+        "Using",
+        "Symmetric",
+        "Encryption",
+        "Message",
+        "Authentication without Message Encryption, Secure Hash",
+        "Functions, Digital Signature, Public-Key Certificates, Symmetric",
+        "Key Exchange Using Public-Key Encryption"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Program Security",
+      "content": [
+        "Non malicious Program errors - Buffer overflow, Incomplete",
+        "Mediation, Time-of-Check to Time-of-Use",
+        "Malicious Code (Malware) - Viruses, Trojan Horses and Worms",
+        "Program Security Countermeasures for Users and Developers"
+      ]
+    }
+  ]
+}

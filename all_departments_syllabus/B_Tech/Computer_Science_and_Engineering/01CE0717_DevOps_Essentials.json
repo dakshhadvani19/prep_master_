@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "DevOps Essentials",
+    "subject_code": "01CE0717",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0717 - DevOps Essentials.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to DevOps",
+      "content": [
+        "Devops Essentials - Introduction To AWS, GCP, Azure - Version",
+        "control systems: Git and Github"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Compile and Build Using Maven and Gradle",
+      "content": [
+        "Introduction, Installation of Maven, POM files,, Maven Build",
+        "lifecycle, Build phases(compile build, test, package) Maven",
+        "Profiles,, Maven repositories(local, central, global),, Maven plugins",
+        "Maven create and build Artificats, Dependency management",
+        "Installation of Gradle, Understand build using Gradle"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "DEVOPS ESSENTIALS 01CE0717",
+      "content": [
+        "Install & Configure Jenkins, Jenkins Architecture Overview",
+        "Creating a Jenkins Job, Configuring a Jenkins job,, Introduction to",
+        "Plugins, Adding Plugins to Jenkins, , Commonly used plugins (Git",
+        "Plugin, Parameter Plugin, HTML Publisher, Copy Artifact and",
+        "Extended choice parameters)., Configuring Jenkins to work with",
+        "java, Git and Maven,, Creating a Jenkins Build and Jenkins",
+        "workspace"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Configuration Management Using Ansible",
+      "content": [
+        "Ansible Introduction, Installation, Ansible master/slave",
+        "configuration, , YAML basics, Ansible modules,, Ansible Inventory",
+        "files, Ansible playbooks, Ansible Roles, adhoc commands in ansible"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Docker & DevOps Pipelines Using AWS",
+      "content": [
+        "What is container technology? Docker introduction, How docker",
+        "works,, Networking in Docker, DockerHub, Create Docker images",
+        "using yaml, , Upload DockerImages to DockerHub, , Create",
+        "Github/AWS Account, , Create Repository, Create a new pipeline",
+        "Build a sample code, Modify AWS code pipelines,, deploy from",
+        "github actions to EC2"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "eploy web app in AWS EC2 using Ansible"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Use Jenkins to set up a distributed pipeline that will compile and test",
+        "a Maven project on two different slave nodes respectively"
+      ]
+    }
+  ]
+}

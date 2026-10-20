@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Differential Calculus",
+    "subject_code": "01AI0101",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0101 - Differential Calculus.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Partial derivatives",
+      "content": [
+        "Partial derivatives, Implicit functions, Total differentiation, Euler’s",
+        "theorem, Modified Euler’s theorem and its Applications"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Infinite series",
+      "content": [
+        "Convergence and Divergence, Comparison Test, Integral Test, Ratio",
+        "Test, Root Test, Alternating Series, Absolute and Conditional",
+        "Convergence, Taylor and Maclaurin’s series expansion"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Applications of Partial differentiation and Optimization",
+      "content": [
+        "Tangent plane and normal line to a surface, Jacobian, Multivariable",
+        "optimization, local/global maxima and minima, Unconstrained",
+        "optimization, Constrained optimization using Lagrange’s multiplier",
+        "Kuhn-Tucker conditions"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Gradient descent algorithm",
+      "content": [
+        "Introduction to Gradient, Directional derivatives, convex functions",
+        "Gradient descent algorithm for univariate and Bivariate convex",
+        "differentiable functions"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Multiple Integrals",
+      "content": [
+        "Double integrals, Properties of double integrals, Double integrals",
+        "over general region, Double integrals in polar co-ordinates, Triple",
+        "Integrals with constant limits, Change of Order of Integration",
+        "Jacobian of several variables, Change of variables"
+      ]
+    }
+  ]
+}

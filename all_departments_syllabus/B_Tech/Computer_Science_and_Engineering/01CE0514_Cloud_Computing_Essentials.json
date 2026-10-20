@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Cloud Computing Essentials",
+    "subject_code": "01CE0514",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0514 - Cloud Computing Essentials.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Overview of Cloud Computing",
+      "content": [
+        "Cloud Computing Fundamentals: Cloud Computing definition",
+        "Types of cloud, Cloud Services - Cloud models (IaaS, PaaS, SaaS)",
+        "Public vs Private Cloud - Community Cloud - Hybrid Cloud",
+        "Benefits and challenges of cloud computing, Business models",
+        "around Cloud -Major Players in Cloud Computing - Issues in Cloud"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "CLOUD COMPUTING ESSENTIALS 01CE0514",
+      "content": [
+        "Need for Virtualization - Pros and cons of Virtualization - Types of",
+        "Virtualization, System VM, Process VM, Virtual Machine monitor",
+        "Virtual machine properties - Interpretation and binary translation",
+        "HLL VM - Hypervisors - Xen, KVM, VM Ware, Virtual Box",
+        "Hyper-V"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Types of Cloud Services Introduction to cloud different services- Service providers - Google",
+      "content": [
+        "App Engine, Amazon EC2, Microsoft Azure, Sales force",
+        "Introduction to Hadoop Framework"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Cloud infrastructure",
+      "content": [
+        "Architectural Design of Compute and Storage Clouds , Layered",
+        "Cloud Architecture Development , Design Challenges , Inter Cloud",
+        "Resource Management , Resource Provisioning and Platform",
+        "Deployment , Global Exchange of Cloud Resources"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Practical - 11 Study on Hadoop Framework",
+      "content": [
+        "Practical - 12 Using Auto Scaling with AWS Lambda and Lifecycle Hooks"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical - 13 Implementing a Serverless Architecture with AWS Managed",
+      "content": [
+        "Services"
+      ]
+    }
+  ]
+}

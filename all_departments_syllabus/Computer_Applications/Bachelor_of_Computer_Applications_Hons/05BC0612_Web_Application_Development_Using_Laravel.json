@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Web Application Development Using Laravel",
+    "subject_code": "05BC0612",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Bachelor of Computer Applications (Hons.)",
+    "semester": 6,
+    "source": "Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/PDFs/BCA/Sem_6/05BC0612 - Web Application Development Using Laravel.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Laravel",
+      "content": [
+        "Why Use a Framework? A Short History of Web and",
+        "PHP Frameworks, What’s So Special About Laravel?",
+        "How It Works, Why Laravel?",
+        "1. Create a simple route that returns \"Hello, Laravel!\"",
+        "when accessed",
+        "2. Create a controller that returns a view with a",
+        "welcome message",
+        "3. Create a products table with fields (id, name, price)",
+        "4. Create a ProductController with CRUD operations",
+        "5. Create a form to submit product data and store it in",
+        "the database",
+        "6. Implement authentication in Laravel",
+        "7. Create a middleware that only allows access to a",
+        "route if the user is an admin"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Laravel Routes and Controllers",
+      "content": [
+        "1. Routes define how Laravel responds to different",
+        "HTTP requests",
+        "2. Grouping",
+        "routes",
+        "allows",
+        "applying",
+        "middleware",
+        "prefixes, or namespaces to multiple routes",
+        "3. Routes can return Blade views",
+        "4. Controllers handle logic for routes",
+        "5. Automatically fetch a model instance for a given ID",
+        "6. Improve performance by caching routes",
+        "7. HTML forms only support GET and POST, but Laravel",
+        "allows other HTTP verbs",
+        "8. Laravel protects against Cross-Site Request Forgery",
+        "(CSRF) attacks",
+        "9. Redirect users to a different route",
+        "10.Laravel provides abort() to stop execution and",
+        "return an error response",
+        "11.Laravel provides helper functions for responses"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Blade Template Integration",
+      "content": [
+        "1. Blade uses double curly braces ({{ }}) to echo data",
+        "safely (HTML-escaped)",
+        "2. Blade provides if-else, switch, and loops",
+        "3. Laravel Blade supports @for, @foreach, @while",
+        "and @forelse",
+        "4. Blade allows reusable layouts using @extends",
+        "@section, and @yield",
+        "5. Use @include to insert reusable components",
+        "6. You can pass data from the controller to the Blade",
+        "template",
+        "7. Implement template integration",
+        "8. Customize the existing template"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Front End Components and User Data",
+      "content": [
+        "1. Laravel Mix (previously Elixir) is a wrapper for",
+        "Webpack, making front-end asset compilation",
+        "simple",
+        "2. Laravel provides an easy way to paginate database",
+        "results",
+        "3. Message bags help store validation messages or",
+        "flash messages",
+        "4. Laravel provides many string helper functions",
+        "5. Laravel",
+        "supports",
+        "pluralization",
+        "using",
+        "the",
+        "trans_choice() function",
+        "6. You can inject the Request object into your",
+        "controller",
+        "7. Routes can pass parameters to controllers",
+        "8. Laravel makes file uploads simple",
+        "9. Laravel provides powerful validation methods",
+        "10.Instead of validating in controllers, use Form",
+        "Requests",
+        "11.Eloquent allows mass assignment when using",
+        "create()",
+        "12.{{{ }} vs {!! !!} in Blade"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Database Eloquent and User Authentication and",
+      "content": [
+        "Authorization:",
+        "1. Laravel uses Eloquent ORM for interacting with",
+        "databases",
+        "2. Migrations help manage database structure using",
+        "code instead of manually creating tables",
+        "3. Laravel allows inserting test data using seeders",
+        "4. Query Builder lets you run SQL queries using",
+        "Laravel",
+        "5. Eloquent",
+        "allows",
+        "object-oriented",
+        "database",
+        "interactions",
+        "6. Eloquent provides lifecycle events like creating",
+        "updating, and deleting",
+        "7. Laravel provides built-in authentication with auth()",
+        "helper and Auth Facade"
+      ]
+    }
+  ]
+}

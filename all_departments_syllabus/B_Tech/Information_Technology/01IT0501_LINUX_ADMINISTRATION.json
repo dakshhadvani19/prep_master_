@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "LINUX ADMINISTRATION",
+    "subject_code": "01IT0501",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information Technology",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01IT/01IT0501 - LINUX ADMINISTRATION.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Basics of Linux",
+      "content": [
+        "History of Linux (GNU/LINUX)",
+        "Download",
+        "installs",
+        "update",
+        "and manage software packages",
+        "from Red Hat and yum package repositories"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Linux Commands",
+      "content": [
+        "Pwd/cd/ls/who/whoami/who am i/which/cp/mv/rm/mkdir/touch/ hostname/ cat/cal/eject/mount/",
+        "umount/login/logout /echo/wget/Halt/shutdown/poweroff/reboot/ll/dd/joe/emacs/ln/fdisk/mke2fs/",
+        "mtools/pico/sed/wc/whereis/convert/ifconfig/ncftp/scp/hdparm/dmesg/bc/sh/at/atq/trm/date/",
+        "uptime/su/switchdesk/uname"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Management of File using Command Line",
+      "content": [
+        "Introduction to BASH",
+        "Command-line shortcuts",
+        "File Types",
+        "Ownership and Permissions",
+        "File",
+        "management and manipulation",
+        "Moving users & its directories",
+        "Miscellaneous Tools",
+        "Editors"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Managing Users and Groups",
+      "content": [
+        "Creating and managing user/s and group commands",
+        "User management Tools",
+        "Users and Access",
+        "Permissions",
+        "Updating users and group attributes",
+        "PAM (Pluggable Authentication Modules)",
+        "Creating, Viewing, and Editing Text Files",
+        "Redirecting Output to a File or Program",
+        "I/O Redirection and Pipelines",
+        "Editing Text Files from",
+        "the Shell Prompt, Editing Text Files with a Graphical Editor"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Booting and Shutting down",
+      "content": [
+        "Boot Loaders",
+        "The init process",
+        "rc scripts",
+        "enabling and disabling services",
+        "Booting in",
+        "recovery mode"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Core System Services",
+      "content": [
+        "The init Daemon",
+        "xinetd and inetd",
+        "The Logging Daemon",
+        "Configuring",
+        "Logging Daemon",
+        "CRON program"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Compiling the Linux Kernel",
+      "content": [
+        "Kernel concepts",
+        "Finding Kernel Source Code",
+        "Building the Kernel",
+        "Patching the Kernel"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Apache Web Server",
+      "content": [
+        "HTTP Protocol",
+        "Installing Apache HTTP Server",
+        "Starting up and shutting down apache",
+        "Testing",
+        "Apache Installation, Configuring Apache, Troubleshooting Apache"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Total Hours",
+      "content": [
+        "Marwadi University",
+        "Faculty of Diploma Studies",
+        "Information and Communication Technology",
+        "Suggested Theory distribution:",
+        "The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines for",
+        "teachers and students to achieve effective teaching-learning process",
+        "Distribution of Theory for course delivery and evaluation",
+        "Remember",
+        "Analyse",
+        "Create"
+      ]
+    }
+  ]
+}

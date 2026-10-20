@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Information and Web Security",
+    "subject_code": "01CT1515",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1515 - Information and Web Security.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction To Information Security",
+      "content": [
+        "Overview of internet security, Firewalls, , Internet security",
+        "Management concepts and information privacy and copyright",
+        "issues, Basics of asymmetric cryptosystems"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Conventional Encryption & Number Theory",
+      "content": [
+        "Conventional encryption model, Steganography, Classical",
+        "encryption techniques (Substitution and Transposition techniques)",
+        "Prime and relative prime numbers, Modular arithmetic, Euler’s",
+        "theorem, , Euclid’s algorithm, Discrete logarithmic, Modular",
+        "arithmetic, The Euclidean algorithm, Finite field of the form"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Block Cipher Method",
+      "content": [
+        "Stream ciphers and block ciphers, Block cipher structure, Data",
+        "encryption standard (DES) with example Strength of DES",
+        "Blowfish, RC5, Cast-128, RC2, AES with structure, Traffic",
+        "confidentiality, Random number generation, Key distribution"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Advanced symmetric cipher",
+      "content": [
+        "Multiple encryption and triple DES, Electronic code book, Cipher",
+        "block chaining mode, Cipher feedback mode"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Message authentication and hash functions",
+      "content": [
+        "Authentication requirement, Message authentication code, Hash",
+        "functions, Security of hash functions and macs, MD5 message",
+        "digest algorithm, Secure hash algorithm"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Introduction to Web Security",
+      "content": [
+        "IP security overview, Architecture, Authentication header, Key",
+        "management, pretty good privacy, S/Mime and types, Web security",
+        "requirement, SSL and transport layer security, Secure electronic",
+        "transactions, Web security requirement, SSL and transport layer",
+        "security, Secure electronic transactions, Web Threat Model",
+        "Authenticated Sessions, Cross-site Scripting, JavaScript Hijacking",
+        "Web Service Security, Website Vulnerability Scanner"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Web Application Security &Vulnerability",
+      "content": [
+        "Web Application Security, How Does Web Application Security",
+        "Work, Web Application Lifecycle Maintenance, Importance of Web",
+        "Application Security, Broken Access Control, Broken",
+        "Authentication and Session Management, Buffer Overflows, Cross",
+        "Site Scripting Flaws, Denial of Service, Improper Error Handling",
+        "Insecure Configuration Management, Insecure Storage, SQL",
+        "Injection Flaws, Unvalidated Input, Defensive Measures"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "E-Commerce Security",
+      "content": [
+        "Overview of online Security issues, Security for client computers",
+        "Communication channel security, Security for server computers"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Public Key Cryptography",
+      "content": [
+        "Public key cryptosystems with applications,, Requirements and",
+        "cryptanalysis, RSA algorithm, Diffie-hillman key exchange",
+        "algorithm, Man-in-Middle attack"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment 10 Perform an Experiment to Sniff Traffic using ARP Poisoning",
+      "content": [
+        "Experiment 11 Demonstrate intrusion detection system using any tool (snort or any",
+        "other s/w)"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment",
+      "content": [
+        "Demonstrate how to provide secure data storage, secure data",
+        "transmission and for creating digital signatures"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment",
+      "content": [
+        "Installation and overview of Burpsuite Tools in Kali Linux"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment 14 Perform SQL injection",
+      "content": [
+        "Experiment 15 Perform Cross-site scripting and Cross-site request forgery (CSRF)"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment 16 Demonstrate Information disclosure vulnerabilities",
+      "content": [
+        "Experiment 17 Configure NGINX and Apache webserver in Linux with https",
+        "protocol"
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Experiment",
+      "content": [
+        "Configure Fail2ban with NGINX to protect the web server"
+      ]
+    }
+  ]
+}

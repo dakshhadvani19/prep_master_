@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Software Defined Networks",
+    "subject_code": "01CT0726",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT0726 - Software Defined Networks.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to SDN",
+      "content": [
+        "History of Software Defined Networking (SDN), Modern Data",
+        "Center, Traditional Switch Architecture, need of SDN, Evolution of",
+        "SDN, Working principle of SDN, Centralized and Distributed",
+        "Control, Date Planes"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Open flow and SDN controllers",
+      "content": [
+        "Open Flow Specification, Drawbacks of Open SDN, SDN via APIs",
+        "SDN via Hypervisor- Based Overlays, SDN via Opening up the",
+        "Device, SDN Controllers"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Data centers",
+      "content": [
+        "Multitenant and Virtualized Multitenant Data Center, SDN",
+        "Solutions for the Data Center Network - VLANs, EVPN, VxLAN",
+        "NVGRE"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "SDN Programming Programming SDNs: Northbound Application Programming",
+      "content": [
+        "Interface, Current Languages and Tools, Composition of SDNs",
+        "Network Functions Virtualization (NFV), Software Defined",
+        "Networks: Concepts, Implementation and Applications"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "SDN",
+      "content": [
+        "Juniper SDN Framework, IETF SDN Framework, Open Daylight",
+        "Controller, Floodlight Controller, Bandwidth Calendaring, Data",
+        "Center Orchestration"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Experiment 8 To preform routing within SDN network",
+      "content": [
+        "Experiment 9 To establish the interconnections between legacy networks and",
+        "SDN networks"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment 10 To configure virtual private LAN service",
+      "content": [
+        "To apply equal cost multi path protocol within SDN networks"
+      ]
+    }
+  ]
+}

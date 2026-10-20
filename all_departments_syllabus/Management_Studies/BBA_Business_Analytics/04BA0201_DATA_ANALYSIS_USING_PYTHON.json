@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "DATA ANALYSIS USING PYTHON",
+    "subject_code": "04BA0201",
+    "subject_id": null,
+    "department": "Management Studies",
+    "course_or_branch": "BBA ( Business Analytics )",
+    "semester": 2,
+    "source": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/DATA ANALYSIS USING PYTHON [c29f9efb01a1].pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Python programming Basic",
+      "content": [
+        "Python interpreter, Python Basics, Tab completion, Introspection",
+        "%run command, magic commands, matplotlib integration,, python",
+        "programming, language semantics, scalar types. Control flow"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Data Structure, functions, files",
+      "content": [
+        "tuple, list, built-in sequence function, dict, set, functions",
+        "namescape, scope, local function, returning multiple values",
+        "functions are objects, lambda functions,, error and exception",
+        "handling, file and operation systems"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "NumPy: Array and vectorized computation",
+      "content": [
+        "Multidimensional array object. Creating ndarrays,, arithmetic with",
+        "numpy array, basic indexing and slicing, Boolean indexing",
+        "transposing array and swapping axes, universal functions, array",
+        "oriented programming with arrays, conditional logic as arrays",
+        "operations, file input and output with array"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Pandas",
+      "content": [
+        "Pandas data structure, series, Data Frame, Index Object",
+        "Reindexing, dropping entities from an axis, indexing, selection and",
+        "filtering, integer indexes, arithmetic and data alignment, function",
+        "application and mapping, soring and ranking,, correlation and",
+        "covariance, unique values, values controls and membership, reading",
+        "and writing data in text format"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Visualization with Matplotlib",
+      "content": [
+        "Figures and subplots, colors, markers, line style, ticks, labels",
+        "legends, annotation and drawing on sublots, matplotlib",
+        "configuration, Plotting with pandas and seaborn: line plots, bar",
+        "plots, histogram, density plots, scatter and point plots, facet grids",
+        "and categorical data"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Advanced Microprocessor",
+    "subject_code": "01CT1507",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1507 - Advanced Microprocessor.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Hardware Components of Embedded System, Instruction Set",
+        "Architecture"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "RISC Processors and ARM",
+      "content": [
+        "Basic architecture of the ARM7core, Registers, Current Program",
+        "Status Register (CPSR), , Operating States, Operating Modes",
+        "Programming Model, Interrupt and Exception Handling, ARM",
+        "Instruction Set,, Migration to Cortex Series, ARM 12 architecture",
+        "v7 profile, ARMv7-Marchitecture, Operating States and Operating",
+        "Modes, Programming Model"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "C Programming for ARM Instruction Set:Tables with all categories of instructions with",
+      "content": [
+        "descriptions, Load/Store instructions with addressing modes",
+        "Thumb instruction set, CMSIS"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Peripheral Programming in C for Cortex M based Microcontroller",
+      "content": [
+        "C programs for General purpose I/O, General Purpose Timers",
+        "WDT Programming, Interrupt Programming, LPM programming",
+        "ADC, DAC, PWM and DMA programming"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Serial communication protocols",
+      "content": [
+        "UART protocol, I2C protocol, SPI protocol, Serial Port",
+        "Programming, I2C Programming, SPI Programming"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Experiment 6 Hands-on experimentation of PWM programming in C on ARMv7",
+      "content": [
+        "development board"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment 7 Hands-on experimentation of UART Transmit programming in C on",
+      "content": [
+        "ARMv7 development board"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment 8 Hands-on experimentation of UART Receive programming in C on",
+      "content": [
+        "ARMv7 development board"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment 9 Hands-on experimentation of UART Transmit and Receive",
+      "content": [
+        "programming in C on ARMv7 development board"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment 10 Hands-on experimentation of interfacing 16x2 LCD and",
+      "content": [
+        "programming in C with ARMv7 development board"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment 11 Hands-on experimentation of interfacing SIM800L GSM/GPRS and",
+      "content": [
+        "programming in C withARMv7 development board"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment 12 Hands-on experimentation of interfacing HC-05 Serial Bluetooth",
+      "content": [
+        "and programming in C withARMv7 development board"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment 13 Hands-on experimentation of MPU6050 Accelerometer &",
+      "content": [
+        "Gyroscope Interfacing in C usingI2C protocol with ARMv7",
+        "development board"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment 14 Hands-on experimentation of MAX7219 LED matrix driver",
+      "content": [
+        "interfacing in C using SPI protocol with ARMv7 development",
+        "board"
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Experiment 15 Design Mini project based on Cortex M based Microcontroller",
+      "content": [
+        "utilizing minimum 3 on- chip peripherals and minimum 2 external",
+        "sensors/actuators to solve a real-world problem"
+      ]
+    }
+  ]
+}

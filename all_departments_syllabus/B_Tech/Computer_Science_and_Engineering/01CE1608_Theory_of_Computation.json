@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Theory of Computation",
+    "subject_code": "01CE1608",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE1608 - Theory of Computation.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Mathematical Theory and Regular Languages",
+      "content": [
+        "Set Theory, Predicate Logic, Relations, Functions, Principal of",
+        "Mathematical Induction, Regular Expression, Regular Languages",
+        "Regular Languages - Pumping Lemma"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Finite State Machine",
+      "content": [
+        "Basics of Automata theory, Finite automata, Deterministic",
+        "andNonDeterministic Automata,, Transition Finite automata",
+        "Conversion NFA - ^ to NFA, Conversion NFA to DFA, Conversion",
+        "RE (Regular Expression) to Non-Deterministic Finite Automata",
+        "Subset Algorithm to convert Non DFA to DFA, Finite automata",
+        "minimization, Moore and Mealey machine and their Conversion"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Context Free Grammar (CFG)",
+      "content": [
+        "Context free language, Chomsky normal forms, Derivation",
+        "Derivation tree with their relation, Ambiguous and unambiguous",
+        "CFG, Closure properties of Context Free Language"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Push Down Automata (PDA)",
+      "content": [
+        "Introduction about PDA, Equivalence between CFG and PDA",
+        "Deterministic PDA- Acceptance of Empty and Final state, Pumping",
+        "Lemma for Context Free Language"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Turing machine and REL",
+      "content": [
+        "Basics of Turing machine, Language acceptor, Turing machine",
+        "variations, Church Turing thesis, Universal Turing machine",
+        "Recursively and Enumerable Languages"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Tutorial",
+      "content": [
+        "Introduction to context-free grammar, derivation and construction of",
+        "parse (derivation) trees"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Tutorial 7 Conversion of CFGs to Chomsky Normal Form(CNF) &",
+      "content": [
+        "Identification of ambiguous grammar"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Tutorial",
+      "content": [
+        "Design PDA for given languages, solve problems on stack",
+        "operations and language recognition"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Tutorial",
+      "content": [
+        "Conversion of CFG to PDA and Acceptance by final state & empty",
+        "stack"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Tutorial",
+      "content": [
+        "Solve TM construction problems and trace execution"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Tutorial",
+      "content": [
+        "Design TM for operations (increment, palindrome, etc.), study",
+        "variants"
+      ]
+    }
+  ]
+}

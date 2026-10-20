@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "System Secure Software Design",
+    "subject_code": "01CC0706",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CC/01CC0706 - System Secure Software Design.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Foundations of Secure Software Design The Importance of Secure Design (why security must be designed",
+      "content": [
+        "in, not bolted on),, Secure Design within the Software Development",
+        "Lifecycle (SDL) (integrating security activities into requirements",
+        "design, and architecture phases), Common Software Design",
+        "Vulnerabilities (examples of how design flaws lead to security",
+        "issues), Core Secure Design Principles (a deeper dive into principles",
+        "like Least Privilege, Defense in Depth, Fail-Safe Defaults",
+        "Separation of Concerns, Complete Mediation as applied to software",
+        "components), Introduction to Security Requirements Engineering"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Threat Modeling for Software Design",
+      "content": [
+        "Threat Modeling Concepts (defining the scope, identifying assets",
+        "threats, and vulnerabilities at the design level), Common Threat",
+        "Modeling Methodologies (e.g., STRIDE, LINDDUN) (practical",
+        "application to software modules and features), Identifying Trust",
+        "Boundaries in Software Design (understanding how data and control",
+        "flow across different levels of trust within the application), Creating",
+        "Data Flow Diagrams (DFDs) and other models for threat analysis",
+        "Prioritizing Threats based on Risk (likelihood and impact)"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Secure Design Patterns and Practices Secure Design Patterns (implementing common security controls",
+      "content": [
+        "using established patterns (e.g., Access Object, Gatekeeper",
+        "Validator), Avoiding Insecure Design Patterns and Anti-Patterns",
+        "Designing for Authentication (integrating authentication",
+        "mechanisms into the software design, secure handling of credentials",
+        "(excluding OS-level details)), Designing for Authorization",
+        "(implementing access control logic within the software based on",
+        "roles, permissions, or attributes), Designing for Secure Session",
+        "Management within the application"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Designing for Data Security and Input Handling Designing for Secure Data Storage (protecting sensitive data within",
+      "content": [
+        "the software's data structures and persistence mechanisms",
+        "(encryption, access control within the application)), Designing for",
+        "Secure Input Validation and Sanitization (determining where and",
+        "how to validate and clean user inputs at the design level to prevent",
+        "injection attacks), Designing for Secure Output Encoding",
+        "(preventing injection attacks by encoding output correctly based on",
+        "context), Designing for Secure Error Handling and Logging within",
+        "the application logic to avoid information leakage"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Design Review, Architectural Security, and Assurance Secure Software Architecture Design (designing multi-layered",
+      "content": [
+        "applications, separating concerns for security), Security",
+        "Considerations in Specific Software Architectures (e.g",
+        "microservices security design patterns, client-server design)",
+        "Security Design Review Techniques (conducting structured reviews",
+        "of design artifacts to identify flaws), Introduction to Static Analysis",
+        "Tools for Design and Architecture (concepts and types of analysis)",
+        "Designing for Maintainability and Evolvability from a Security",
+        "Perspective"
+      ]
+    }
+  ]
+}

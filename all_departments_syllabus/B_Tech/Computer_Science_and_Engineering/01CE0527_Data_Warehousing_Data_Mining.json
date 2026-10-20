@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Data Warehousing & Data Mining",
+    "subject_code": "01CE0527",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0527 - Data Warehousing & Data Mining.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Data Warehousing",
+      "content": [
+        "Introduction to Data Warehouse, Data warehouse vs Operational",
+        "DBMS,, Multidimensional data model: Data cubes, Conceptual",
+        "Modelling of Data warehouse: schemas, Multidimensional Data",
+        "OLAP operations, Comparison of OLAP with OLTP, Data",
+        "Warehouse architecture,, OLAP Server Architecture: ROLAP",
+        "MOLAP"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Data Mining",
+      "content": [
+        "Motivation and importance of data mining, Different kinds of data",
+        "Data mining functionalities, Classification of data mining systems",
+        "Data mining task primitives, Integration of a data mining system",
+        "with a Database or a Data Warehouse, KDD Process"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "DATA WAREHOUSING & DATA MINING 01CE0527",
+      "content": [
+        "Data pre-processing overview, Major tasks in data pre-processing",
+        "Introduction to Data cleaning, Data cleaning process for incomplete",
+        "and noisy data, Introduction to Data integration, Correlation",
+        "Analysis for nominal and numeric data,, Covariance analysis for",
+        "numeric data, Introduction to data transformation, Data",
+        "normalization techniques, Box and whisker plot using five number",
+        "summary, Quartile for outlier detection"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Mining Frequent Patterns, Associations and Correlations",
+      "content": [
+        "Basic concept of frequent pattern analysis, Market Basket Analysis",
+        "Apriori algorithm, Frequent item-set mining methods, Mining",
+        "various kind of association rules, Measuring the Quality of Rules",
+        "Applications of association rules"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Practical",
+      "content": [
+        "Demonstration on APRIORI algorithm"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Apply APRIORI algorithm on dataset"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Apply and analyse data cleaning using Google Colab"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Apply data mining techniques on dataset using Google Colab"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Project on real life Data Mining applications"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Server Management",
+    "subject_code": "01CC0506",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CC/01CC0506 - Server Management.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Server Deployment and Core OS Administration",
+      "content": [
+        "Server Hardware Overview (focus on selection, installation, and",
+        "basic troubleshooting), Server Operating System Installation:",
+        "Planning, unattended installations, post-installation tasks for",
+        "Windows Server and a major Linux distribution, Introduction to",
+        "Server Virtualization Platforms (Hyper-V, VMware ESXi, KVM):",
+        "Installation and basic VM creation/management., Command-line",
+        "and GUI Administration Tools: Mastering essential tools for server",
+        "interaction., Managing Local Users, Groups, and Permissions",
+        "(practical application on servers). File Systems Management:",
+        "Partitioning, formatting, mounting, and managing storage using OS",
+        "tools"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Essential Network Services Administration",
+      "content": [
+        "DNS Server Configuration and Management: Installing, configuring",
+        "zones, managing records, and troubleshooting DNS issues on",
+        "Windows Server and Linux (BIND), DHCP Server Configuration",
+        "and Management: Installing, configuring scopes,, and",
+        "troubleshooting DHCP issues., Web Server Administration:",
+        "Installation, basic configuration, virtual hosts, and managing",
+        "modules/extensions for Apache, Nginx, and IIS. File Sharing",
+        "Services Configuration: Setting up and securing file shares using",
+        "Samba (Linux-Windows),, NFS (Linux), and Windows Shared",
+        "Folders. Remote Access Services: Configuring SSH server on Linux",
+        "and RDP on Windows Server, securing remote connections"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Server Maintenance and Monitoring Server Updates and Patch Management: Implementing strategies for",
+      "content": [
+        "applying OS and application updates (WSUS, package managers)",
+        "scheduling updates. Monitoring Server Performance: Using OS",
+        "native tools (Task Manager, Performance Monitor, top, htop, sar) to",
+        "monitor CPU, memory, disk, and network. Log Management and",
+        "Monitoring: Configuring system logs, using log viewing tools, basic",
+        "log analysis for operational issues, Scheduled Tasks and",
+        "Automation: Creating and managing cron jobs (Linux) and Task",
+        "Scheduler tasks (Windows) for routine maintenance, Server Backup",
+        "and Restoration: Implementing basic backup strategies using OS",
+        "tools or simple backup software, performing test restores"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Server Security Implementation Server Hardening Practices: Disabling unnecessary services and",
+      "content": [
+        "features,, securing default accounts. Configuring OS-Level",
+        "Firewalls: Implementing and managing firewall rules",
+        "(iptables/firewalld Windows Firewall) to restrict network access",
+        "Account Security: Implementing password policies, account",
+        "lockout, and auditing login attempts, Introduction to Server Security",
+        "Scanning Tools (basic usage for vulnerability identification)",
+        "Securing Remote Administration Interfaces. Basic Intrusion",
+        "Detection/Prevention Configuration (e.g., fail2ban on Linux)"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Advanced Server Topics and Cloud Management Scripting for Server Administration: Developing practical scripts",
+      "content": [
+        "(Bash, PowerShell) for automating common tasks (user creation",
+        "file backups, service restarts)., Introduction to Configuration",
+        "Management Concepts (Puppet, Chef, Ansible - conceptual",
+        "overview)., Managing Servers in a Virtualized Environment:",
+        "Advanced VM configuration, snapshots, resource allocation",
+        "Introduction to Container Management (Docker): Building and",
+        "running basic containers. Cloud Server Administration: Deploying",
+        "and managing virtual machines in a cloud environment",
+        "understanding basic cloud networking and storage for servers",
+        "Disaster Recovery Concepts for Servers"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Deploying and Managing a Basic Server in the Cloud: Launching a",
+        "virtual machine instance in a cloud environment (e.g., AWS EC2",
+        "Azure VM) and performing basic administration tasks"
+      ]
+    }
+  ]
+}

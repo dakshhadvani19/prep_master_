@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Advance Java Technology",
+    "subject_code": "01CE0308",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0308 - Advance Java Technology.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Java Database Connectivity",
+      "content": [
+        "JDBC Architecture, Types of JDBC Drivers, Introduction to major",
+        "JDBC Classes and Interface, Creating simple JDBC Application",
+        "Types of Statement, Exploring ResultSet Operation, Operations",
+        "Batch Updates in JDBC, Creating CRUD Application, Using",
+        "Rowsets Objects, Managing Database Transaction"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "GUI - Swing & Event Handling",
+      "content": [
+        "Swing features, Swing Containers: JFrame, JPanel, Jwindow, Swing",
+        "components : JLabel, ImageIcon, JTextField, JButton",
+        "JToggeleButton, JCheckBox, JRadioButton, JTabbedPane",
+        "JScrollPane, JList, JComboBox, JTree, JTable, Layout managers",
+        "Event model in Java, Event classes, Event listeners, Adapter classes"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Servlets API",
+      "content": [
+        "Servlet Introduction, Servlet Life Cycle(SLC), Types of Servlet",
+        "Servlet Configuration with Deployment Descriptor, Working with",
+        "ServletContext and ServletConfig Object, Attributes in Servlet",
+        "Response and Redirection using Request Dispacher, using",
+        "sendRedirect Method, Filter API, Manipulating Responses using",
+        "Filter API, Session Tracking: using Cookies, HTTPSession, Hidden",
+        "Form Fields and URL Rewriting, Types of Servlet Event:",
+        "ContextLevel and SessionLevel"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Java Server Pages",
+      "content": [
+        "Introduction to JSP, Comparison with Servlet, JSP Architecture",
+        "Architecture, JSP: Life Cycle, Scripting Elements, Directives",
+        "Action Tags, Implicit Objects, Expression Language(EL), JSP",
+        "Standard Tag Libraries(JSTL), Custom Tag, Session Management",
+        "Exception Handling, CRUD Application"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Hibernate framework",
+      "content": [
+        "Introduction to Hibernate, Exploring Architecture of Hibernate",
+        "Object Relation Mapping(ORM) with Hibernate, Hibernate",
+        "Annotation, Hibernate Query Language (HQL), CRUD Operation",
+        "using Hibernate API"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Spring framework",
+      "content": [
+        "Spring: Introduction, Architecture, Spring MVC Module, Life Cycle",
+        "of Bean Factory, Explore: Constructor Injection, Dependency",
+        "Injection, Inner Beans, Aliases in Bean, Bean Scopes, Spring",
+        "Annotations, Spring AOP Module, Spring DAO, Database",
+        "Transaction Management, CRUD Operation using DAO and Spring",
+        "API"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Creat JSP Application Demonstrating Session EL, JSTL, Custom",
+        "tags"
+      ]
+    }
+  ]
+}

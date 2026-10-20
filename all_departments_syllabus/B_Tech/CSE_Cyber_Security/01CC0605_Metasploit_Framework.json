@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Metasploit Framework",
+    "subject_code": "01CC0605",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Cyber Security",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CC/01CC0605 - Metasploit Framework.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Metasploit",
+      "content": [
+        "Importance of Penetration Testing, Vulnerability Assessment vs",
+        "Penetration, Testing, the need for a penetration testing framework",
+        "Installing Metasploit on Windows & Linux"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Metasploit Components",
+      "content": [
+        "Anatomy and Structure of Metasploit, Graphical Structure of MSF",
+        "Libraries, Interfaces, Metasploit Components, Auxiliaries, Exploits",
+        "Encoders, Payloads, Post, Nops, Understanding the MSFconsole",
+        "Variables in Metasploit (LHOST, LPORT, RHOST, RPORT)"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Information Gathering with Metasploit",
+      "content": [
+        "Enumerating protocols, Password sniffing, Advanced recon with",
+        "Shodan, Passive Info. gathering, Active info. gathering, 5 Port",
+        "scanning- The Nmap way, Host discovery with ARP Sweep, UDP",
+        "Service Sweeper, SMB scanning and enumeration, Detecting SSH",
+        "versions, FTP scanning, SMTP enumeration, SNMP Enumeration",
+        "HTTP Scanning, WinRM scanning and brute forcing"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Meterpreter-1",
+      "content": [
+        "What is Meterpreter?, Meterpreter core commands, Meterpreter file",
+        "system commands, Meterpreter networking commands, Meterpreter",
+        "system commands, Dumping the Hashes and cracking with JTR",
+        "(John the ripper), Shell command, Privilege escalation, MSF",
+        "VENOM"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Post-Exploitation",
+      "content": [
+        "Privilege escalation, Metasploit Macro Exploits, Exploiting a",
+        "Windows machine, Social engineering with Metasploit, Browser",
+        "Auto pwn"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Perform WinRM scanning and brute-force attacks using Metasploit",
+        "Analyze authentication mechanisms and identify weaknesses such",
+        "as poor credential management in remote access services"
+      ]
+    }
+  ]
+}

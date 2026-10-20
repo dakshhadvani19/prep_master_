@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Software Testing",
+    "subject_code": "05BC3601",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Bachelor of Computer Applications (Hons.)",
+    "semester": 6,
+    "source": "Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/PDFs/BCA/Sem_6/05BC3601 - Software Testing.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Software Testing and Software",
+      "content": [
+        "Testing Terminology and Methodology:",
+        "Introduction, Software Testing Definition, Goals of",
+        "Software Testing, Software Testing As Process",
+        "Failure, Fault, Error, Test Case, Testware, Incident",
+        "Test Oracle, Life cycle of Bug, States of Bug, Bugs",
+        "Classification based on criticality, Bugs Classification",
+        "based on SDLC, Testing Principle, STLC, Verification",
+        "and Validation Activities"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Testing Techniques",
+      "content": [
+        "Dynamic Testing: Black-Box Testing Techniques",
+        "Boundary Value Analysis, Equivalence Class Testing",
+        "State Table Based Testing, Decision Table Based",
+        "Testing, Cause-Effect Graphing Based Testing, Error",
+        "Guessing",
+        "Dynamic Testing : White-Box Testing Techniques",
+        "Need of White-box testing, Logic Coverage Criteria",
+        "Basis Path Testing, Graph Matrices, Loop testing, Data",
+        "Flow testing, Mutation testing"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Validation Activities",
+      "content": [
+        "Unit Validation Testing, Benefit of Designing stub and",
+        "driver, Integration Testing, Decomposition based",
+        "Integration, Comparison between top down and",
+        "bottom up integration testing, Call Graph Based",
+        "Integration",
+        "Pair-wise",
+        "Integration",
+        "Neighborhood",
+        "Integration, Path Based Integration, Function Testing",
+        "System",
+        "Testing",
+        "Categories",
+        "System",
+        "Tests",
+        "Acceptance Testing, Alpha Testing, Beta Testing",
+        "Regression Testing"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Test Management",
+      "content": [
+        "Test Organization, Structure of Test Group, Test",
+        "Planning, Test Plan Components, Test Plan Hierarchy",
+        "Master Test Plan, Test Design Specification, Test Case",
+        "Specification, Test Procedure Specification, Test Log",
+        "Test Incident Report, Test Summary Report"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Software Quality Management",
+      "content": [
+        "Software Quality, Broadening the concept of Quality",
+        "Quality cost, Benefits of Investment on",
+        "Quality",
+        "Quality",
+        "Control",
+        "and",
+        "Quality",
+        "Assurance",
+        "Quality",
+        "Management QM, QM and Project",
+        "Management",
+        "Quality Factors, Methods of Quality Management",
+        "Procedural Approach to QM, Quantitative Approach to",
+        "QM, Software Quality Metrics, SQA Models, ISO 9126",
+        "Capability Maturity Model CMM, Software Total Quality",
+        "Management STQM"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Natural Language Processing",
+    "subject_code": "01AI0702",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Machine Learning",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0702 - Natural Language Processing.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Origins and challenges of NLP - Language Modeling, Grammar",
+        "based LM, Statistical LM - Regular Expressions, Finite-State",
+        "Automata - English Morphology, Transducers for lexicon and rules",
+        "Tokenization, Detecting and Correcting Spelling Errors, Minimum",
+        "Edit Distance"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Word Level Analysis",
+      "content": [
+        "Unsmoothed N-grams,, Evaluating N-grams, Smoothing",
+        "Interpolation and Backoff - Word Classes, Part-of-Speech Tagging",
+        "Rule-based, Stochastic and Transformation-based tagging, Issues in",
+        "PoS tagging, Hidden Markov and Maximum Entropy models"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Syntactic Analysis",
+      "content": [
+        "Context-Free Grammars, Grammar rules for English, Treebanks",
+        "Normal Forms for grammar, Dependency Grammar - Syntactic",
+        "Parsing, Ambiguity, Dynamic Programming parsing -, Shallow",
+        "parsing - Probabilistic CFG, Probabilistic CYK,, Probabilistic",
+        "Lexicalized CFGs - Feature structures, Unification of feature",
+        "structures"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Semantics and Pragmatics",
+      "content": [
+        "Requirements for representation, First-Order Logic, Description",
+        "Logics - Syntax-Driven Semantic analysis, Semantic attachments",
+        "Word Senses, Relations between Senses, Thematic Roles",
+        "selectional restrictions, Word Sense Disambiguation, WSD using",
+        "Supervised, Dictionary & Thesaurus,, Bootstrapping methods",
+        "Word Similarity using Thesaurus, Distributional methods"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Discourse Analysis and Lexical Resources",
+      "content": [
+        "Discourse segmentation, Coherence - Reference Phenomena",
+        "Anaphora Resolution using Hobbs and Centering Algorithm",
+        "Coreference Resolution - Resources:, Porter Stemmer, Lemmatizer",
+        "Penn Treebank,, Brill's Tagger, WordNet, PropBank, FrameNet",
+        "Brown Corpus, British National Corpus (BNC)"
+      ]
+    }
+  ]
+}

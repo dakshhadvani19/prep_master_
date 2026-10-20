@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Compiler Design",
+    "subject_code": "01CE0714",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0714 - Compiler Design.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Compilers",
+      "content": [
+        "Outline of Process Of translation, Phases of Compiler, Cousins of",
+        "Compiler, Types of compiler, Symbol Table, Compiler",
+        "Constructions tools, Overview of LEX and YACC"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "COMPILER DESIGN 01CE0714",
+      "content": [
+        "Role of Lexical analyzer, Input buffering techniques, Specification",
+        "and recognition of tokens, Conversion of Regular expressions to",
+        "finite automata using Thompson's method, Conversion of NDFA to",
+        "DFA, Minimization of DFA, Conversion of Regular Expression to",
+        "DFA using Syntax Tree Method"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Parsing",
+      "content": [
+        "Role of Parser and basics of Context Free Grammar, Left recursion",
+        "Left Factoring,, ambiguous grammar, ambiguous grammar, Top",
+        "down and Bottom up Parsing, Recursive Descent Parser, Predictive",
+        "Parser, LL(1) Parsing, Operator Precedence Parser, LR Parsing - LR",
+        ", Simple LR Parsing, Canonical LR Parsing, Look ahead LR",
+        "Parsing"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Intermediate Code Generation and Memory Management",
+      "content": [
+        "Type of Intermediate forms, Directed Acyclic Graph, Quadruple",
+        "Triples, Indirect triples,, Syntax Directed Definition - Synthesized",
+        "Attributes, Inherited Attributes, Syntax Directed Translation",
+        "Activation record and parameter passing method, Activation record",
+        "and parameter passing method"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Code Optimization and Generation",
+      "content": [
+        "Introduction to optimization and Optimization Techniques",
+        "Peephole optimization, Overview of Global Data Flow analysis",
+        "Basic blocks and Flow graphs, DAG Representation of Basic Block",
+        "Issues in the design of code generation, Register allocation and",
+        "assignment"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "(a) WALex Program to generate Histogram of words, (b) WALex",
+        "Program to remove single or multi line comments from C program"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "WALex Program to extract HTML tags from .html file"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "9 Write a C Program to compute FIRST Set of the given grammar"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a C Program to compute FOLLOW Set of the given grammar"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a C program to implement SLR parsing"
+      ]
+    }
+  ]
+}

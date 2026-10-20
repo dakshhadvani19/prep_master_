@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "ASP.Net (Elective)",
+    "subject_code": "05MC0308",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Master of Computer Applications",
+    "semester": 3,
+    "source": "Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/PDFs/BCA/Sem_5/05BC3505 - ASP.NET (Elective).pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction of .Net Framework",
+      "content": [
+        " Concept of .Net Programming Framework, CLR",
+        "Net Class Library",
+        " Data Types, Object Based Manipulation, Overview",
+        "about Namespace",
+        " APS.Net Applications: ASP.Net File Types",
+        "Various files behind the web applications, ASP.Net",
+        "Configuration with web.config file"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Web form fundamentals with web controls",
+      "content": [
+        " Introduction of Web Controls: Basic web control",
+        "classes and web control tags, Concept of",
+        "AutoPostBack and Web control Events, How to",
+        "access web controls",
+        " Web controls: Basic Web controls, List Controls",
+        "Rich Controls, Validation Controls"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "State Management & Error Handling",
+      "content": [
+        " Concept of Viewstate, Transferring Information",
+        "Custom",
+        "Cookies",
+        "Session",
+        "State",
+        "and",
+        "its",
+        "configuration, Application State",
+        " Overview of Common Error, .Net Exception object",
+        "Handling",
+        "Exceptions",
+        "Throwing",
+        "your",
+        "own",
+        "exception",
+        " Managing User Interface Consistency : Concept of",
+        "ASP.NET Master Page, Theme, Skins"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Database Connectivity using ADO.Net & Data Binding",
+      "content": [
+        " Introduction of ADO.Net with Characteristics",
+        "ADO.Net Object Model",
+        " SQL",
+        "Basics",
+        "with",
+        "executing",
+        "various",
+        "SQL",
+        "statements, Connection with database , accessing",
+        "records and managing data base connectivity in",
+        "web application",
+        " Data Binding with ListControl Based controls,Tree",
+        "View Contro,Menu Control,GridView Control",
+        "DataList Control"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Introduction of MVC, Ajax and Web services",
+      "content": [
+        " Overview of The Model-View-Controller (MVC)",
+        "Architecture, ASP.Net and MVC",
+        " Concept of AJAX, Overview of Client and server",
+        "side support for AJAX",
+        " Introduction",
+        "Web",
+        "Service",
+        "Architecture",
+        "Configuring a web services"
+      ]
+    }
+  ]
+}

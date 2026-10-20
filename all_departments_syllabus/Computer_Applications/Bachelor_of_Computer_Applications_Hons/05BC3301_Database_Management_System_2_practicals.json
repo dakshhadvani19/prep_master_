@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.0",
+  "subject": {
+    "name": "Database Management System-2",
+    "subject_code": "05BC3301",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Bachelor of Computer Applications (Hons.)",
+    "semester": 3,
+    "source": "Other_Departments_Structured_Syllabus/Computer_Applications/Bachelor_of_Computer_Applications_Hons/Semester_3/05BC3301_Database_Management_System_2_practicals.json"
+  },
+  "practicals": [
+    {
+      "practical_number": 1,
+      "title": "Write a PL/SQL block that calculates the simple",
+      "content": [
+        "Write a PL/SQL block that calculates the simple",
+        "interest based on the given principal amount, rate of",
+        "interest and number of years."
+      ]
+    },
+    {
+      "practical_number": 2,
+      "title": "Write a PL/SQL block to calculate the square and",
+      "content": [
+        "Write a PL/SQL block to calculate the square and",
+        "cube of the given number."
+      ]
+    },
+    {
+      "practical_number": 3,
+      "title": "Write a PL/SQL block to accept product name, qty",
+      "content": [
+        "Write a PL/SQL block to accept product name, qty",
+        "and price from user and then calculate discount in Rs.",
+        "based on the given (%)."
+      ]
+    },
+    {
+      "practical_number": 4,
+      "title": "Write a PL/SQL block which accepts measurement",
+      "content": [
+        "Write a PL/SQL block which accepts measurement",
+        "in feet and displays it in cm, inch and meter."
+      ]
+    },
+    {
+      "practical_number": 5,
+      "title": "Write a PL/SQL block which converts temperature",
+      "content": [
+        "Write a PL/SQL block which converts temperature",
+        "from Celsius to Fahrenheit."
+      ]
+    },
+    {
+      "practical_number": 6,
+      "title": "Write a program to generate the numbers using",
+      "content": [
+        "Write a program to generate the numbers using",
+        "LOOP, FOR LOOP and WHILE LOOP up to the number",
+        "inputted by the user."
+      ]
+    },
+    {
+      "practical_number": 7,
+      "title": "Write a PL/SQL block to calculate the total,",
+      "content": [
+        "Write a PL/SQL block to calculate the total,",
+        "percentage and grade of student based on his/her",
+        "Rollno from the RESULT table. (Create RESULT table",
+        "with Rollno, Name, Sub1, Sub2, Sub3, Sub4, Sub5,",
+        "Total, Per, Grade attributes with appropriate data",
+        "type)."
+      ]
+    },
+    {
+      "practical_number": 8,
+      "title": "Write a PL/SQL block which displays the gross",
+      "content": [
+        "Write a PL/SQL block which displays the gross",
+        "salary of employees as per user input EID. (Consider",
+        "an EMP table with EID, EName, Deptno, Deptname",
+        "Gender, Age, BasicSal) with appropriate data types.)",
+        "Gross_Salary: BASICSAL + (DA + HRA + Medical) –",
+        "PF.",
+        "Rules: HRA = 15% of basic, DA = 50% of basic,",
+        "Medical = Rs. 500, PF = 10% of basic."
+      ]
+    },
+    {
+      "practical_number": 9,
+      "title": "Write a PL/SQL block which displays all records of",
+      "content": [
+        "Write a PL/SQL block which displays all records of",
+        "Male employees working in the HR Dept from the EMP",
+        "table."
+      ]
+    },
+    {
+      "practical_number": 10,
+      "title": "Write a PL/SQL block to delete the record of an",
+      "content": [
+        "Write a PL/SQL block to delete the record of an",
+        "employee for a given EID.",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Bachelor of Computer Applications"
+      ]
+    },
+    {
+      "practical_number": 11,
+      "title": "Write a PL/SQL block that uses a cursor attribute",
+      "content": [
+        "Write a PL/SQL block that uses a cursor attribute",
+        "SQL%ROWCOUNT to raise",
+        "the",
+        "basic salary of",
+        "employees by 10% that are working in department",
+        "number 10 and also display the appropriate message",
+        "based on the existence of the record in the EMP table.",
+        "(Use Implicit Cursor)"
+      ]
+    },
+    {
+      "practical_number": 12,
+      "title": "Write a PL/SQL block that uses a cursor attribute",
+      "content": [
+        "Write a PL/SQL block that uses a cursor attribute",
+        "%ISOPEN and %NOTFOUND to raise the basic salary",
+        "of employees of department number 20 by 5% and",
+        "also display the appropriate message based on the",
+        "existence of the record in the EMP table. Whenever",
+        "any such raise is given to the employees, a record for",
+        "the same is maintained in the emp_update table.",
+        "(Perform using both Implicit and Explicit Cursor)"
+      ]
+    },
+    {
+      "practical_number": 13,
+      "title": "Write a PL/SQL block that uses a cursor attribute",
+      "content": [
+        "Write a PL/SQL block that uses a cursor attribute",
+        "%ROWCOUNT to display the name, department and",
+        "basic salary of the first 5 employees getting the",
+        "highest basic salary. (Use Explicit Cursor)"
+      ]
+    },
+    {
+      "practical_number": 14,
+      "title": "Write a PL/SQL block using a cursor FOR loop to",
+      "content": [
+        "Write a PL/SQL block using a cursor FOR loop to",
+        "display the name and the basic salary of the top 3",
+        "highest paid employees. (Use Cursor For Loop)"
+      ]
+    },
+    {
+      "practical_number": 15,
+      "title": "Write a PL/SQL block using a parameterized cursor",
+      "content": [
+        "Write a PL/SQL block using a parameterized cursor",
+        "that displays the department wise basic salary of each",
+        "employee and department wise total gross salary.",
+        "(Parameterized Cursor and Use Cursor For Loop)"
+      ]
+    },
+    {
+      "practical_number": 16,
+      "title": "Write a program using a cursor to insert the",
+      "content": [
+        "Write a program using a cursor to insert the",
+        "records of employees in the EMP_BACKUP table for",
+        "given DEPT_NO, also raise a user-defined exception",
+        "NO_DEPT_FOUND when no records are found for",
+        "entered DEPT_NO."
+      ]
+    },
+    {
+      "practical_number": 17,
+      "title": "Write a PL/SQL block to display records from the",
+      "content": [
+        "Write a PL/SQL block to display records from the",
+        "CUSTOMER table using an explicit cursor."
+      ]
+    },
+    {
+      "practical_number": 18,
+      "title": "Write a PL/SQL block to display data with the use",
+      "content": [
+        "Write a PL/SQL block to display data with the use",
+        "of LIKE Operator using cursor FOR Loop."
+      ]
+    },
+    {
+      "practical_number": 19,
+      "title": "Write a PL/SQL block to show the records using",
+      "content": [
+        "Write a PL/SQL block to show the records using",
+        "ORDER BY clause using cursor."
+      ]
+    },
+    {
+      "practical_number": 20,
+      "title": "Write a PL/SQL block to perform an update",
+      "content": [
+        "Write a PL/SQL block to perform an update",
+        "operation on the EMPLOYEE table using an implicit",
+        "cursor.",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Bachelor of Computer Applications"
+      ]
+    },
+    {
+      "practical_number": 21,
+      "title": "Write a PL/SQL block that explains the use of the",
+      "content": [
+        "Write a PL/SQL block that explains the use of the",
+        "ZERO_DIVIDE exception."
+      ]
+    },
+    {
+      "practical_number": 22,
+      "title": "Write a PL/SQL block to accept a student name",
+      "content": [
+        "Write a PL/SQL block to accept a student name",
+        "from a user if it exists, display his/her result from the",
+        "RESULT table otherwise display appropriate message",
+        "using exception handling."
+      ]
+    },
+    {
+      "practical_number": 23,
+      "title": "Write a PL/SQL block to accept employee name",
+      "content": [
+        "Write a PL/SQL block to accept employee name",
+        "from a user if it exists, display his/her basic salary",
+        "otherwise",
+        "display",
+        "appropriate",
+        "message",
+        "using",
+        "exception handling."
+      ]
+    },
+    {
+      "practical_number": 24,
+      "title": "Write a PL/SQL block to display the salary of that",
+      "content": [
+        "Write a PL/SQL block to display the salary of that",
+        "employee whose age is 50 years otherwise display",
+        "appropriate messages using exception handling."
+      ]
+    },
+    {
+      "practical_number": 25,
+      "title": "Write a PL/SQL block using a cursor to insert the",
+      "content": [
+        "Write a PL/SQL block using a cursor to insert the",
+        "records of employees in the EMP_BACKUP table for a",
+        "given department number, also raise a user defined",
+        "exception NO_DEPT_FOUND when no records are",
+        "found for entered DEPT_NO. (Use User Defined",
+        "Exception)"
+      ]
+    },
+    {
+      "practical_number": 26,
+      "title": "Write a program that explains the use of the",
+      "content": [
+        "Write a program that explains the use of the",
+        "NO_DATA_FOUND exception."
+      ]
+    },
+    {
+      "practical_number": 27,
+      "title": "Write a program that explains the use of the",
+      "content": [
+        "Write a program that explains the use of the",
+        "INVALID_NUMBER exception."
+      ]
+    },
+    {
+      "practical_number": 28,
+      "title": "Write a program that explains the use of the",
+      "content": [
+        "Write a program that explains the use of the",
+        "ZERO_DIVIDE exception."
+      ]
+    },
+    {
+      "practical_number": 29,
+      "title": "Write a program using implicit cursor to display the",
+      "content": [
+        "Write a program using implicit cursor to display the",
+        "commission of given EMPNO, also raise a user-defined",
+        "exception NULL _COMMISSION when no value (NULL)",
+        "is available for commission.",
+        "(Use User Defined Exception)"
+      ]
+    },
+    {
+      "practical_number": 30,
+      "title": "Write  a  program that  explains  the  use of",
+      "content": [
+        "Write a program that explains the use of",
+        "exception",
+        "trapping",
+        "functions",
+        "SQLCODE",
+        "and",
+        "SQLERRM.",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Bachelor of Computer Applications"
+      ]
+    },
+    {
+      "practical_number": 31,
+      "title": "Write a simple procedure without any parameter",
+      "content": [
+        "Write a simple procedure without any parameter",
+        "that shows a user defined message on the screen. Call",
+        "the procedure using a separate PL/SQL block and on",
+        "the command line."
+      ]
+    },
+    {
+      "practical_number": 32,
+      "title": "Write a simple procedure that increases the basic",
+      "content": [
+        "Write a simple procedure that increases the basic",
+        "salary of employees for the given department number",
+        "by percentage inputted by the user using the IN",
+        "parameter."
+      ]
+    },
+    {
+      "practical_number": 33,
+      "title": "Write a procedure that searches whether the given",
+      "content": [
+        "Write a procedure that searches whether the given",
+        "employee id is present or not in the table. If an",
+        "employee is found then show its name otherwise raise",
+        "appropriate error messages (Use both IN and OUT",
+        "mode variables) and also write a PL/SQL block to call",
+        "the procedure."
+      ]
+    },
+    {
+      "practical_number": 34,
+      "title": "Write a function that returns the square of the",
+      "content": [
+        "Write a function that returns the square of the",
+        "given number. Execute the function using a separate",
+        "PL/SQL block and on the command line."
+      ]
+    },
+    {
+      "practical_number": 35,
+      "title": "Write a function that returns the balance for a",
+      "content": [
+        "Write a function that returns the balance for a",
+        "given account number. (Create ACCOUNT table with",
+        "ACNO, CNAME, BNAME, BALANCE columns using",
+        "appropriate data types)"
+      ]
+    },
+    {
+      "practical_number": 36,
+      "title": "Write a simple procedure without any parameter",
+      "content": [
+        "Write a simple procedure without any parameter",
+        "that updates the values in the EMP table."
+      ]
+    },
+    {
+      "practical_number": 37,
+      "title": "Write a simple procedure that increases the salary",
+      "content": [
+        "Write a simple procedure that increases the salary",
+        "of employees for the given department not by",
+        "percentage inputted by the user using the IN",
+        "parameter."
+      ]
+    },
+    {
+      "practical_number": 38,
+      "title": "Write a procedure that search‟s whether the given",
+      "content": [
+        "Write a procedure that search‟s whether the given",
+        "employee number is present or not in the table. (Use",
+        "both IN and OUT mode variables) and also Write a",
+        "PL/SQL block to call the SEARCH_EMP procedure."
+      ]
+    },
+    {
+      "practical_number": 39,
+      "title": "Write a function that returns the square of the",
+      "content": [
+        "Write a function that returns the square of the",
+        "given number. Execute this function using a separate",
+        "PL/SQL block and also without using PL/SQL block on",
+        "the command line."
+      ]
+    },
+    {
+      "practical_number": 40,
+      "title": "Write a function that returns the balance for a",
+      "content": [
+        "Write a function that returns the balance for a",
+        "given account number.",
+        "FACULTY OF COMPUTER APPLICATIONS",
+        "Bachelor of Computer Applications"
+      ]
+    },
+    {
+      "practical_number": 41,
+      "title": "Write a trigger to restrict users from accessing the",
+      "content": [
+        "Write a trigger to restrict users from accessing the",
+        "table on weekends."
+      ]
+    },
+    {
+      "practical_number": 42,
+      "title": "Write a trigger that restricts the entry of records in",
+      "content": [
+        "Write a trigger that restricts the entry of records in",
+        "the EMP table if the salary is greater than Rs 50000."
+      ]
+    },
+    {
+      "practical_number": 43,
+      "title": "Write a trigger to insert the values into the",
+      "content": [
+        "Write a trigger to insert the values into the",
+        "NEWEMP table when the records are inserted into the",
+        "EMP table."
+      ]
+    },
+    {
+      "practical_number": 44,
+      "title": "Write a trigger to insert the existing values of the",
+      "content": [
+        "Write a trigger to insert the existing values of the",
+        "EMP table into NEWEMP table when the record is",
+        "updated in EMP table."
+      ]
+    },
+    {
+      "practical_number": 45,
+      "title": "Write a trigger to insert the existing values of the",
+      "content": [
+        "Write a trigger to insert the existing values of the",
+        "EMP table into NEWEMP table when the record is",
+        "deleted from EMP table."
+      ]
+    },
+    {
+      "practical_number": 46,
+      "title": "Write a trigger to insert the existing values of the",
+      "content": [
+        "Write a trigger to insert the existing values of the",
+        "EMP table into NEWEMP table when the record is",
+        "deleted from EMP table."
+      ]
+    },
+    {
+      "practical_number": 47,
+      "title": "Write a trigger to insert the existing values of the",
+      "content": [
+        "Write a trigger to insert the existing values of the",
+        "EMP table into NEWEMP table when the record is",
+        "updated in EMP table."
+      ]
+    },
+    {
+      "practical_number": 48,
+      "title": "Write a trigger that restricts the entry of record if",
+      "content": [
+        "Write a trigger that restricts the entry of record if",
+        "salary is greater than Rs.50000."
+      ]
+    },
+    {
+      "practical_number": 49,
+      "title": "Write a trigger that identifies the gender of the",
+      "content": [
+        "Write a trigger that identifies the gender of the",
+        "employee and according to the gender sets MR. in",
+        "front of MALE employees and MS. in front of FEMALE",
+        "employees."
+      ]
+    },
+    {
+      "practical_number": 50,
+      "title": "Write a trigger to restrict users from using the",
+      "content": [
+        "Write a trigger to restrict users from using the",
+        "table on Sunday."
+      ]
+    }
+  ]
+}

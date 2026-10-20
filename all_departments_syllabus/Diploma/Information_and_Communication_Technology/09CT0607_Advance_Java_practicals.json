@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "subject": {
+    "name": "Advance Java",
+    "subject_code": "09CT0607",
+    "subject_id": null,
+    "department": "Diploma",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Diploma_Structured_Syllabus/Diploma/Information_and_Communication_Technology/Semester_6/09CT0607_Advance_Java_practicals.json"
+  },
+  "practicals": [
+    {
+      "practical_number": 1,
+      "title": "WAP that will retrieve data from Database and display on Console screen. (JDBC)",
+      "content": [
+        "WAP that will retrieve data from Database and display on Console screen. (JDBC)"
+      ]
+    },
+    {
+      "practical_number": 2,
+      "title": "WAP that will take firstName, surName, email from user. Store that data into DB and",
+      "content": [
+        "WAP that will take firstName, surName, email from user. Store that data into DB and",
+        "display data from DB. (JDBC)"
+      ]
+    },
+    {
+      "practical_number": 3,
+      "title": "Search userDOB by passing arguments as date to servlet by submit the serch.jsp page",
+      "content": [
+        "Search userDOB by passing arguments as date to servlet by submit the serch.jsp page",
+        "at SearchResult.java servlet that returns the rows of result back to clientResult.jsp",
+        "page. (Servlet)."
+      ]
+    },
+    {
+      "practical_number": 4,
+      "title": "Create one class file named DBTransaction.java file under classes directory. That",
+      "content": [
+        "Create one class file named DBTransaction.java file under classes directory. That",
+        "returns the connection obj. to servlet ConServlet.java file under same classes folder.",
+        "Use this servlet for controller. Accept the data from CV.jsp page as forms data pass it",
+        "to servlet that redirect data to the InsertData() method of DBTransaction.java file. Use",
+        "ServletContext for controller (JDBC-Servlet)."
+      ]
+    },
+    {
+      "practical_number": 5,
+      "title": "Take USerName and Email-id from user in html page. Store email-id in xml file also.",
+      "content": [
+        "Take USerName and Email-id from user in html page. Store email-id in xml file also.",
+        "Display both values in servlet. (Servlet)"
+      ]
+    },
+    {
+      "practical_number": 6,
+      "title": "A servlet program to do session tracking and session counter using serssionListener.",
+      "content": [
+        "A servlet program to do session tracking and session counter using serssionListener."
+      ]
+    },
+    {
+      "practical_number": 7,
+      "title": "JSP program to demonstrate arithmetic operations.",
+      "content": [
+        "JSP program to demonstrate arithmetic operations."
+      ]
+    },
+    {
+      "practical_number": 8,
+      "title": "Gets two numbers in html page from the user and submit that numbers in jsp",
+      "content": [
+        "Gets two numbers in html page from the user and submit that numbers in jsp",
+        "page,print appropriate output using methods. (JSP)"
+      ]
+    },
+    {
+      "practical_number": 9,
+      "title": "Get value from user and create cookie in another jsp page and also view that cookie.",
+      "content": [
+        "Get value from user and create cookie in another jsp page and also view that cookie.",
+        "(JSP)"
+      ]
+    },
+    {
+      "practical_number": 10,
+      "title": "Get value from user and create session in another jsp page and also view. (JSP)",
+      "content": [
+        "Get value from user and create session in another jsp page and also view. (JSP)"
+      ]
+    },
+    {
+      "practical_number": 11,
+      "title": "Session Demo program. Create login.jsp and check it from user_master db and set",
+      "content": [
+        "Session Demo program. Create login.jsp and check it from user_master db and set",
+        "session for next UserAccount.jsp page. (JDBC-JSP)"
+      ]
+    },
+    {
+      "practical_number": 12,
+      "title": "Create employee_master table and check if user is authenticated or not by login",
+      "content": [
+        "Create employee_master table and check if user is authenticated or not by login",
+        "module and set appropriate session. Every time whenver user loged in the",
+        "lastAccessTime should be shown to user. give logout link and destory the session",
+        "attributes and redirecte the user to again login page. (JDBC-JSP)"
+      ]
+    },
+    {
+      "practical_number": 13,
+      "title": "JSP program to demonstrate jsp:forward action  tag.",
+      "content": [
+        "JSP program to demonstrate jsp:forward action tag."
+      ]
+    },
+    {
+      "practical_number": 14,
+      "title": "Create one user login registeration page in jsp with all required form fields and insert",
+      "content": [
+        "Create one user login registeration page in jsp with all required form fields and insert",
+        "into database. insertion of data done at servlet level where connection method is",
+        "created in servlet. Accept the client httpServletRequest. (JDBC-Servlet-JSP)",
+        "Student Activity:",
+        "Complete online course and get certificate of “Advance Java” under Online",
+        "Programming Certification."
+      ]
+    }
+  ]
+}

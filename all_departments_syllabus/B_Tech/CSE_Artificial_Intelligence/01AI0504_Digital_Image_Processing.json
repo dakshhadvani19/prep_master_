@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Digital Image Processing",
+    "subject_code": "01AI0504",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI0504 - Digital Image Processing.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction To Digital Image Processing",
+      "content": [
+        "Fundamentals of Elements of Digital Image, Image as Data, Pixels",
+        "Components of Digital Image, Types of Image Representation",
+        "Measures of Image, Application of Digital Image Processing"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "MATLAB basicS & Digital Image Properties- Operations on Digital Image",
+      "content": [
+        "Data Types, Operators, Matrices, File, I/O, Image Processing",
+        "Toolbox, Topological Properties of Digital Images-Histograms",
+        "Entropy, Eigen Values-Image Quality Metrics Noise in Images",
+        "Sources, Arithmetic operations - Addition, Subtraction",
+        "Multiplication, Division, Logical operations NOT, OR, AND, XOR",
+        "Set Operators"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Image Enhancement",
+      "content": [
+        "Spatial Domain: Gray level transformation - Histogram processing",
+        "Frequency Domain: Basics of filtering - smoothening and",
+        "sharpening frequency domain filters"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Image Filtering Techniques",
+      "content": [
+        "Low Pass Filters - Smoothing, High Pass Filters - Edge Detection",
+        "Sharpening"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Image Degradation/Restoration",
+      "content": [
+        "Noise Models, Model of Image Degradation/Restoration Process",
+        "Noise Reduction, Inverse Filtering, M Minimum Mean Square Error",
+        "(Weiner) Filtering"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Color Image Fundamentals",
+      "content": [
+        "Color Models, Representation of Color in Images, Color Image",
+        "Processing, Basics of Color Image Processing Smoothing and",
+        "Sharpening"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Image Segmentation & Image Morphology",
+      "content": [
+        "Thresholding, Histogram Based Segmentation, Clustering, Region",
+        "Growing Method, Point, Line and Edge Detection, Different",
+        "Morphological Algorithm, Morphological Measures"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Lab 8 Program for edge detection",
+      "content": [
+        "Lab 9 Program for smoothening and sharpening for 8-bit color image"
+      ]
+    }
+  ]
+}

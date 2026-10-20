@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "subject": {
+    "name": "Database Management System",
+    "subject_code": "09CE2302",
+    "subject_id": null,
+    "department": "Diploma",
+    "course_or_branch": "Computer Engineering",
+    "semester": 3,
+    "source": "Diploma_Structured_Syllabus/Diploma/Computer_Engineering/Semester_3/09CE2302_Database_Management_System_practicals.json"
+  },
+  "practicals": [
+    {
+      "practical_number": 1,
+      "title": "Practical-1",
+      "content": [
+        "Create database tables using CREATE statement (define fields, data",
+        "types, and constraints)"
+      ]
+    },
+    {
+      "practical_number": 2,
+      "title": "Practical-2",
+      "content": [
+        "Insert records into the tables created in Practical 1 using INSERT",
+        "statement"
+      ]
+    },
+    {
+      "practical_number": 3,
+      "title": "Practical-3",
+      "content": [
+        "Retrieve all records and specific columns using basic SELECT",
+        "statement"
+      ]
+    },
+    {
+      "practical_number": 4,
+      "title": "Practical-4",
+      "content": [
+        "Delete specific records from the tables using DELETE statement",
+        "with condition"
+      ]
+    },
+    {
+      "practical_number": 5,
+      "title": "Practical-5",
+      "content": [
+        "Modify existing records in the tables using UPDATE statement with",
+        "condition"
+      ]
+    },
+    {
+      "practical_number": 6,
+      "title": "Practical-6",
+      "content": [
+        "Retrieve filtered rows using WHERE clause and select specific",
+        "columns"
+      ]
+    },
+    {
+      "practical_number": 7,
+      "title": "Practical-7",
+      "content": [
+        "Display records using ORDER BY clause and remove duplicate",
+        "values using DISTINCT.(Sorting and Distinct Values)"
+      ]
+    },
+    {
+      "practical_number": 8,
+      "title": "Practical-8",
+      "content": [
+        "Apply aggregate functions such as COUNT, SUM, AVG, MIN, and",
+        "MAX on table data"
+      ]
+    },
+    {
+      "practical_number": 9,
+      "title": "Practical-9",
+      "content": [
+        "Group records using GROUP BY clause and filter grouped data",
+        "using HAVING clause"
+      ]
+    },
+    {
+      "practical_number": 10,
+      "title": "Practical-10",
+      "content": [
+        "Retrieve data from multiple tables using different types of JOIN",
+        "operations"
+      ]
+    },
+    {
+      "practical_number": 11,
+      "title": "Practical-11",
+      "content": [
+        "Retrieve data using nested SELECT statements (subqueries)"
+      ]
+    },
+    {
+      "practical_number": 12,
+      "title": "Practical-12",
+      "content": [
+        "Modify table structure using ALTER statement and apply",
+        "constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and",
+        "NOT NULL",
+        "Total Hours 56"
+      ]
+    }
+  ]
+}

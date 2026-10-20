@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Digital Electronics",
+    "subject_code": "01EC1102",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01EC/01EC1102 - Digital Electronics__7239849f.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Number Systems Arithmetic and Codes",
+      "content": [
+        "Analogue versus Digital, Various Number Systems and Conversion",
+        "between them, Number. System arithmetic, Binary Codes, Error",
+        "detection and correction codes. Floating point numbers"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Boolean Algebra and digital circuit design",
+      "content": [
+        "Introduction of gates, timing diagram, circuit design, Postulates and",
+        "Theorems, types of Boolean expressions, Simplification and",
+        "minimisation techniques Karnaugh Map Method and Tabulation",
+        "Method"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Combinational Logic Circuits",
+      "content": [
+        "Combinational Circuits and their implementations, Arithmetic",
+        "Circuits including Adders and Subtractors, BCD Adder, Look",
+        "Ahead Carry Generator, ALU, Multiplier, Magnitude comparator",
+        "Multiplexer, Encoders, Demultiplexers and Decoders, Parity",
+        "Generation and Checking, Switching Algebra, PLA"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Sequential Logic Circuits",
+      "content": [
+        "IC-555 Multivibrator, IC555 based circuits, Latch, R-S and D Flip",
+        "flop, Level Triggered and Edge-Triggered Flip-flops, J-K and T",
+        "Flip-flop, Synchronous and Asynchronous Input, Flip-flop Timing",
+        "Parameters, Asynchronous Counter, Synchronous Counter",
+        "Designing Counter with Arbitrary Sequences, Registers, Moore/",
+        "Melay Machines, FSM"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Logic Families",
+      "content": [
+        "Significance of Families, Characteristic Parameters, Types of Logic",
+        "Families: TTL, ECL, CMOS, Bi-CMOS, NMOS and PMOS",
+        "Comparison between various logic families"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Hardware Description Language (Verilog)",
+      "content": [
+        "Fundamentals of Verilog, Overview of Digital Design with Verilog",
+        "HDL, Gate-Level Modelling, Dataflow Modelling, Behavioural",
+        "Modelling"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment",
+      "content": [
+        "To design and implement a priority encoder for an emergency alarm",
+        "system and a 7- segment display decoder for digital output"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment",
+      "content": [
+        "To perform and verify the operation of SR, D, JK, and T flip-flops"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment 9 To design and implement a serial-to-parallel data converter using",
+      "content": [
+        "shift registers"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment 10 To implement a frequency divider and multiplier using a",
+      "content": [
+        "bidirectional shift register"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment",
+      "content": [
+        "To design and implement a digital clock using counters"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment",
+      "content": [
+        "To design and implement an event counting system such as a visitor",
+        "counter"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment",
+      "content": [
+        "To implement and verify basic logic gates using Verilog"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment 14 To design and simulate a multiplexer and Demultiplexer using",
+      "content": [
+        "Verilog"
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Experiment",
+      "content": [
+        "To implement and analyze flip-flops using Verilog"
+      ]
+    },
+    {
+      "chapter_number": 16,
+      "chapter_name": "Experiment",
+      "content": [
+        "To design and implement a decoder/encoder using Verilog"
+      ]
+    },
+    {
+      "chapter_number": 17,
+      "chapter_name": "Experiment 17 To design and implement an Arithmetic Logic Unit (ALU) using",
+      "content": [
+        "Verilog HDL"
+      ]
+    },
+    {
+      "chapter_number": 18,
+      "chapter_name": "Experiment 18 To design and implement different types of counters using Verilog",
+      "content": [
+        "HDL"
+      ]
+    }
+  ]
+}

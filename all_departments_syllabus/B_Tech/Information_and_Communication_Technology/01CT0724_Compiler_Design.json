@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Compiler Design",
+    "subject_code": "01CT0724",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 7,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT0724 - Compiler Design.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Compiler",
+      "content": [
+        "Review of Languages & Grammar, Translators-Compilation and",
+        "Compiler, Interpreter and Assembler, overview of linker and loader",
+        "Language processors, The Phases of Compiler-Errors Encountered",
+        "in Different Phases, The Grouping of Phases-Compiler Construction",
+        "Tools , Programming Language basics, pass structure"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Scanner",
+      "content": [
+        "Need and Role of Lexical Analyzer-Lexical Errors, Expressing",
+        "Tokens by Regular Expressions-Recognition of Tokens, A",
+        "Language for Specifying Lexical Analyzer, Finite Automata from",
+        "Regular Expression, Converting Regular Expression to DFA",
+        "Minimization of DFA-Language for Specifying Lexical Analyzers",
+        "LEX- Design of Lexical Analyzer for a sample Language"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Parsing",
+      "content": [
+        "Top-down Parsing, Predictive parsing, non recursive predictive",
+        "parsing, First and Follow set, LL(1) grammar, error handling for LL",
+        ", Bottomup parsing, handle pruning, shift reduce parsing",
+        "operator precedence parser, LR(0) parser, SLR(1) Parser, Canonical",
+        "LR(1) Parser, LALR(1) Parser, error detection and recovery in LR",
+        "Parser, Parser generators (Yacc & Lex)"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Intermediate Code Generation",
+      "content": [
+        "Introduction, Intermediate Languages, Types of intermediate forms",
+        "Three address Codes: Quadruple & Triples, Translation of",
+        "Assignment Statements, Boolean expressions, Control Statements",
+        "Postfix Translation, Syntax Directed Translation Attributes and",
+        "Mechanism, Directed Acyclic Graph, Static Single Assignment"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Memory Management",
+      "content": [
+        "Introduction, Importance of Memory Management, organization for",
+        "storage purpose, static allocation, stack allocation, dynamic",
+        "allocation, different methods of parameter passing, activation",
+        "record, symbol table"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Code Optimization",
+      "content": [
+        "Introduction of Code Optimization, Advantage of code",
+        "optimization, Types of Code Optimization, Block and Loop",
+        "Optimization, Global Data Flow Analysis"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment",
+      "content": [
+        "WAP with the help of Lex and Yacc file to implement Calculator",
+        "which performs basic operations like addition, subtraction",
+        "multiplication and division"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment",
+      "content": [
+        "WAP Lex Program to count words, characters, lines, Vowels and",
+        "consonants from given input"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment",
+      "content": [
+        "WAP Lex Program to generate string which is ending with zeros"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment",
+      "content": [
+        "WAP Lex Program to check given string is simple or compound",
+        "string"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment",
+      "content": [
+        "WAP Lex Program to count the total number of printf and scanf",
+        "statement in given C file. Also convert it into readf and write out",
+        "respectively to another file"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment",
+      "content": [
+        "WAP to check given number is positive negative or zero"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment",
+      "content": [
+        "WA Lex Program to print HTML tags of given file"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment",
+      "content": [
+        "WA YACC Program to generate Calculator"
+      ]
+    }
+  ]
+}

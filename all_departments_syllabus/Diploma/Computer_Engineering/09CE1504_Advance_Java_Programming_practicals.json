@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "subject": {
+    "name": "Advance Java Programming",
+    "subject_code": "09CE1504",
+    "subject_id": null,
+    "department": "Diploma",
+    "course_or_branch": "Computer Engineering",
+    "semester": 5,
+    "source": "Diploma_Structured_Syllabus/Diploma/Computer_Engineering/Semester_5/09CE1504_Advance_Java_Programming_practicals.json"
+  },
+  "practicals": [
+    {
+      "practical_number": 1,
+      "title": "Write a Basic java applet program, Write applet program that draws a circle",
+      "content": [
+        "Write a Basic java applet program, Write applet program that draws a circle"
+      ]
+    },
+    {
+      "practical_number": 2,
+      "title": "The dimension of the applet should be 500 x 300 pixels The circle should be centered in the applet and have a radius of",
+      "content": [
+        "The dimension of the applet should be 500 x 300 pixels The circle should be centered in the applet and have a radius of 100 pixels"
+      ]
+    },
+    {
+      "practical_number": 3,
+      "title": "Display your name centered in a circle.( using drawOval() method), Draw ten red circles in a vertical column in the cent",
+      "content": [
+        "Display your name centered in a circle.( using drawOval() method), Draw ten red circles in a vertical column in the center of the applet"
+      ]
+    },
+    {
+      "practical_number": 4,
+      "title": "Built an applet that displays a horizontal rectangle in its center",
+      "content": [
+        "Built an applet that displays a horizontal rectangle in its center"
+      ]
+    },
+    {
+      "practical_number": 5,
+      "title": "Let the rectangle fill with color from left to right",
+      "content": [
+        "Let the rectangle fill with color from left to right"
+      ]
+    },
+    {
+      "practical_number": 6,
+      "title": "Develop an applet that display the position of the mouse at the upper left corner of the applet when it is dragged or mo",
+      "content": [
+        "Develop an applet that display the position of the mouse at the upper left corner of the applet when it is dragged or moved"
+      ]
+    },
+    {
+      "practical_number": 7,
+      "title": "Draw a 10x10 pixel rectangle filed with black at the current mouse position Develop an applet that contains one button",
+      "content": [
+        "Draw a 10x10 pixel rectangle filed with black at the current mouse position Develop an applet that contains one button"
+      ]
+    },
+    {
+      "practical_number": 8,
+      "title": "Initialize the label on the button to “start”, when the user presses the button, which changes the label between these t",
+      "content": [
+        "Initialize the label on the button to “start”, when the user presses the button, which changes the label between these two values each time the button is pressed"
+      ]
+    },
+    {
+      "practical_number": 9,
+      "title": "Develop an applet that uses the mouse listener, which overrides only two methods which are mousePressed and mouseRelease",
+      "content": [
+        "Develop an applet that uses the mouse listener, which overrides only two methods which are mousePressed and mouseReleased"
+      ]
+    },
+    {
+      "practical_number": 10,
+      "title": "Write a program that has only one button in the MR",
+      "content": [
+        "Write a program that has only one button in the MR"
+      ]
+    },
+    {
+      "practical_number": 11,
+      "title": "MITTAL KIRITBHAI JOISER DR",
+      "content": [
+        "MITTAL KIRITBHAI JOISER DR"
+      ]
+    },
+    {
+      "practical_number": 12,
+      "title": "RAJESHKUMAR MEGHAJIBHAI PATEL frame, clicking on the button cycles through the colors: red->green >blue and so on",
+      "content": [
+        "RAJESHKUMAR MEGHAJIBHAI PATEL frame, clicking on the button cycles through the colors: red->green >blue and so on"
+      ]
+    },
+    {
+      "practical_number": 13,
+      "title": "One color changes per click.(use getBackGround() method to get the current color), Write an program that contains three",
+      "content": [
+        "One color changes per click.(use getBackGround() method to get the current color), Write an program that contains three check boxes and 30 x 30 pixel canvas.The three checkboxes should be labeled “Red”, “Green”,”Blue”"
+      ]
+    },
+    {
+      "practical_number": 14,
+      "title": "The selection of the check boxes determine the color of the canvas",
+      "content": [
+        "The selection of the check boxes determine the color of the canvas"
+      ]
+    },
+    {
+      "practical_number": 15,
+      "title": "For example, if the user selects both “Red” and “Blue”, the canvas should be purple Create an application that displays",
+      "content": [
+        "For example, if the user selects both “Red” and “Blue”, the canvas should be purple Create an application that displays a frame with a menu bar"
+      ]
+    },
+    {
+      "practical_number": 16,
+      "title": "When a user selects any menu or menu item, display that selection on a text area in the center of the frame, Write down",
+      "content": [
+        "When a user selects any menu or menu item, display that selection on a text area in the center of the frame, Write down Five Basic steps to establish JDBC connection from Java Application"
+      ]
+    },
+    {
+      "practical_number": 17,
+      "title": "Also mention sample code for each step, Write a JDBC application which will interact with Database and perform the follo",
+      "content": [
+        "Also mention sample code for each step, Write a JDBC application which will interact with Database and perform the following task. 1) Create Student Table with RollNo, Name, and Address field and insert few records. 2) Using Statement Object display the content of Record. 3) Using Statement Object Insert Two Record. 4) Using Statement Object Update One Record. 5) Using Statement Object Delete One Record"
+      ]
+    },
+    {
+      "practical_number": 18,
+      "title": "Using Statement Object display the content of Record Write a JDBC application which will interact with Database and perf",
+      "content": [
+        "Using Statement Object display the content of Record Write a JDBC application which will interact with Database and perform the following task. 1) Create Student Table with RollNo Name, and Address field and insert few records. 2) Using PreparedStatement Object display the content of Record. 3) Using PreparedStatement Object Insert Two Record. 4) Using PreparedStatement Object Update One Record. 5) Using PreparedStatement Object Delete One Record. 6) Using PreparedStatement Object display the content of Record"
+      ]
+    },
+    {
+      "practical_number": 19,
+      "title": "Write a JDBC application which will interact with Database and perform the following task. 1) Create a store procedure w",
+      "content": [
+        "Write a JDBC application which will interact with Database and perform the following task. 1) Create a store procedure which will insert one record into employee table. 2) Create a store procedure which will retrieve salary for given employee id. 3) Write a java application which will call the above procedure and display appropriate information on screen"
+      ]
+    },
+    {
+      "practical_number": 20,
+      "title": "Design a JDBC application which will demonstrate Scrollable ResultSet functionality",
+      "content": [
+        "Design a JDBC application which will demonstrate Scrollable ResultSet functionality"
+      ]
+    },
+    {
+      "practical_number": 21,
+      "title": "Design a JDBC application which will demonstrate transaction management functionality",
+      "content": [
+        "Design a JDBC application which will demonstrate transaction management functionality"
+      ]
+    },
+    {
+      "practical_number": 22,
+      "title": "Write down the Program for testing the Servlet and study deployment descriptor",
+      "content": [
+        "Write down the Program for testing the Servlet and study deployment descriptor"
+      ]
+    },
+    {
+      "practical_number": 23,
+      "title": "Create login form and perform state management using Cookies, HttpSession and URL Rewriting Create Servlet file which co",
+      "content": [
+        "Create login form and perform state management using Cookies, HttpSession and URL Rewriting Create Servlet file which contains following functions: 1"
+      ]
+    },
+    {
+      "practical_number": 24,
+      "title": "Create Database 3",
+      "content": [
+        "Create Database 3"
+      ]
+    },
+    {
+      "practical_number": 25,
+      "title": "Create Tabe 4",
+      "content": [
+        "Create Tabe 4"
+      ]
+    },
+    {
+      "practical_number": 26,
+      "title": "Insert Records into respective table 5",
+      "content": [
+        "Insert Records into respective table 5"
+      ]
+    },
+    {
+      "practical_number": 27,
+      "title": "Update records of particular table of database 6",
+      "content": [
+        "Update records of particular table of database 6"
+      ]
+    },
+    {
+      "practical_number": 28,
+      "title": "Delete Records from table. 7",
+      "content": [
+        "Delete Records from table. 7"
+      ]
+    },
+    {
+      "practical_number": 29,
+      "title": "Delete table and also database",
+      "content": [
+        "Delete table and also database"
+      ]
+    },
+    {
+      "practical_number": 30,
+      "title": "Write down the Program in which error is handled by the deployment descriptor file (web.xml), Implement Authentication f",
+      "content": [
+        "Write down the Program in which error is handled by the deployment descriptor file (web.xml), Implement Authentication filter using filter API Write down the Program for testing the servlet context interface Write down the Program which displays the simple JSP file"
+      ]
+    },
+    {
+      "practical_number": 31,
+      "title": "Write down the program in which input the two numbers in an html file and then display the addition in JSP file",
+      "content": [
+        "Write down the program in which input the two numbers in an html file and then display the addition in JSP file"
+      ]
+    },
+    {
+      "practical_number": 32,
+      "title": "Write down the program in which display the error by common file for all general pages Perform Database Access through J",
+      "content": [
+        "Write down the program in which display the error by common file for all general pages Perform Database Access through JSP"
+      ]
+    },
+    {
+      "practical_number": 33,
+      "title": "Write down the Program for testing the include action tag in jsp",
+      "content": [
+        "Write down the Program for testing the include action tag in jsp"
+      ]
+    },
+    {
+      "practical_number": 34,
+      "title": "Write down the Program for testing the forward action tag",
+      "content": [
+        "Write down the Program for testing the forward action tag"
+      ]
+    },
+    {
+      "practical_number": 35,
+      "title": "Write down a program which demonstrates the core tag of JSTL",
+      "content": [
+        "Write down a program which demonstrates the core tag of JSTL"
+      ]
+    },
+    {
+      "practical_number": 36,
+      "title": "Write down a program which demonstrates the Format tag of JSTL, Write down a program which Supplementary Resources:",
+      "content": [
+        "Write down a program which demonstrates the Format tag of JSTL, Write down a program which Supplementary Resources:"
+      ]
+    },
+    {
+      "practical_number": 37,
+      "title": "https://docs.oracle.com/javaee/6/tutorial/doc/ Instructional Method:",
+      "content": []
+    }
+  ]
+}

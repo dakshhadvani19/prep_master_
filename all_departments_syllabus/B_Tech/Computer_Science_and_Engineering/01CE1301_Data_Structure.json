@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Data Structure",
+    "subject_code": "01CE1301",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE1301 - Data Structure.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Data Structures",
+      "content": [
+        "Data Management concepts, Data types - primitive and non",
+        "primitive,, Types of Data Structures, Linear & non-linear Data",
+        "Structures,, Abstract Data Types"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Linear Data Structures & their representation: Array",
+      "content": [
+        "Array: Representation of arrays,, sparse matrix and its",
+        "representation,, Storage Structures for arrays, Applications of",
+        "arrays., Stack: Stack definitions and concepts,, Operations on stacks",
+        "(push, pop, peep, change),, Polish Expressions and their",
+        "compilation, Tower of Hanoi., Queue: Representation of Queue",
+        "operations on Queue (insert, delete),, Simple Queue, Circular",
+        "Queue,, Double Ended Queue,, Priority Queues,, Applications of",
+        "Queue., Linked List: Linked list Understanding and their",
+        "Operations,, Singly Linked List,, Doubly Linked List, Circular",
+        "Linked List,, Circular Doubly Linked, Applications of Linked List"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Nonlinear Data Structure",
+      "content": [
+        "Graph: Graphs and their understanding,, Matrix representations of a",
+        "given graph,, graph, Depth First Search (DFS),, Breadth First",
+        "Search (BFS), Tree: Tree definitions and their concepts",
+        "Representation of binary tree,, Binary tree traversal methods",
+        "(Inorder, postorder, preorder),, Binary search trees,, Method to",
+        "Convert a general tree to binary tree,, Threaded binary tree",
+        "Applications of Trees, Balanced tree and its mechanism,, AVL tree",
+        "Weight Balanced Trees,, B Tree, B+ Tree"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Sorting & Searching techniques",
+      "content": [
+        "Sorting Concepts and methods: Bubble Sort,, Selection Sort",
+        "Insertion Sort,, Quick Sort, Merge Sort, Searching Concepts and",
+        "Methods: Sequential Search,, Binary Search"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Hashing and Collision",
+      "content": [
+        "Hashing Concepts and methods. Hash Table Methods-Introduction",
+        "Hash Functions, Collision in Hashing,, Collision-Resolution",
+        "Techniques with examples"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "(i) Write a program to implement a stack using a linked list. (ii)",
+        "Write a program to implement a queue using a linked list"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program to implement Binary Search Tree where the user",
+        "can perform: (a) Insert a value in an existing Tree (b) Delete a value",
+        "from the tree (c) Traverse a Tree: Pre-Order, In-Order, Post-Order"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program to implement Linear Search and Binary Search"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program to implement Merge Sort"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Write a program to implement Quick Sort"
+      ]
+    }
+  ]
+}

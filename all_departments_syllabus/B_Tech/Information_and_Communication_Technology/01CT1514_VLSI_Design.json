@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "VLSI Design",
+    "subject_code": "01CT1514",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 5,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1514 - VLSI Design.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Overview of VLSI design methodology, VLSI design flow, Design",
+        "hierarchy,, Concept of regularity, Modularity, and Locality, VLSI",
+        "design style, Design quality, package technology, introduction to",
+        "FPGA and CPLD, computer aided design technology"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Fabrication of MOSFET",
+      "content": [
+        "Introduction, Fabrication Process flow: Basic steps, Wafer",
+        "formation, , Photolithography, Gate oxide, gate and drain formation",
+        "and Contacts and Metallization, nMOS Fabrication. C-MOS n-Well",
+        "Process, Layout Design rules, full custom mask layout design"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "MOS Transistor Theory",
+      "content": [
+        "Introduction and I-V Characteristics, Non ideal I-V effects: Velocity",
+        "saturation, mobility degradation and Channel length modulation",
+        "Non ideal I-V effects: Body Effect, Sub threshold conduction",
+        "Junction leakage, MOSFET scaling and small geometry effects"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "MOS Inverters",
+      "content": [
+        "Introduction, Resistive load inverter, Inverters with n-type",
+        "MOSFET load, CMOS Inverter, Propagation delay, Interconnect",
+        "delay, switching power dissipation of inverter"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Combinational and Sequential CMOS Logic Circuits",
+      "content": [
+        "MOS logic circuit with depletion load, CMOS logic circuits",
+        "Complex logic circuit, pass transistor circuits, CMOS with",
+        "transmission gate, Multiplexer and XOR gate using CMOS",
+        "transmission gate, Level sensitive latches and edge triggered flip",
+        "flops"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Chip I/P and O/P Circuits",
+      "content": [
+        "ESD protection, Input circuits, Output circuits, On chip Clock",
+        "Generation and Distribution, Latch -Up and its Prevention"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Low-power CMOS logic circuits",
+      "content": [
+        "Introduction, Overview of Power Consumption, Low power design",
+        "Leakage power dissipation, Reduction in switching activity, Gated",
+        "clock signals"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Design for manufacturability",
+      "content": [
+        "Introduction, Process variations, Basic concepts and definitions"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Design for Testability",
+      "content": [
+        "Introduction, Fault types and models, Controllability and",
+        "observability,, Various techniques to identify the faults"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiments 10 Implement the 2x1 MUX using Transmission gate and simulate the",
+      "content": [
+        "design"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiments",
+      "content": [
+        "Develop layout of CMOS inverter and simulate it"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiments",
+      "content": [
+        "Measure propagation delay of CMOS inverter"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiments 13 Develop the D-latch using CMOS transmission gate and simulate it",
+      "content": [
+        "Develop the edge triggered D flip flop and simulate it"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Database Management System",
+    "subject_code": "01CE0105",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0105 - Database Management System.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Introduction and applications of DBMS, File Processing System and",
+        "its limitations, ANSI/SPARC Model, Data Independence, Client",
+        "Server Architecture, Users & DBA, Database Architecture"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Data Models",
+      "content": [
+        "Hierarchical Model, Network Model, Relational Model, Object",
+        "Oriented Model., E-R Diagram: Introduction to E-R Diagram",
+        "Entities, Attributes & its types, Relationships, Mapping",
+        "Cardinalities, Participation Constraints, Weak Entity Sets",
+        "Specialization,, Generalization, Aggregation"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Relational Data Model: Introduction, Degree, Cardinality",
+      "content": [
+        "Constraints & Keys: Primary Key, Foreign Key, Super Key",
+        "Candidate Key,, Not Null Constraint, Check Constraint, Relational",
+        "Algebra Operations: Selection, Projection, Cross-Product, Rename",
+        "Joins (Natural & Outer Join),, Set Operators (Union, Intersection",
+        "Set Difference), Aggregate Functions"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Relational Database Design",
+      "content": [
+        "Functional Dependency-definition, trivial and non-trivial FD",
+        "Armstrong's Axioms/Inference Rules,, Closure of FD, Closure of",
+        "Attributes, Candidate Key, Finding a Candidate Key",
+        "Decomposition (Lossy & Lossless), Database Anomalies",
+        "Normalization - 1Nf, 2NF, 3NF & BCNF"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Parallel & Distributed Databases",
+      "content": [
+        "Introduction, Need for Distribution, Advantages & Disadvantages",
+        "Centralized vs Distributed DBMS,, Fragmentation (Horizontal &",
+        "Vertical), Replication (basic idea), Transparency in Distributed",
+        "Databases (Location & Replication Transparency), Introduction",
+        "Need for Parallelism, Shared-Memory, hared-Disk, and Shared",
+        "Nothing Architectures (conceptual overview),, Distributed DB vs",
+        "Parallel DB,, Real-world use cases of Distributed & Parallel",
+        "Databases (Banking, Cloud, Social Media, E-Commerce)"
+      ]
+    }
+  ]
+}

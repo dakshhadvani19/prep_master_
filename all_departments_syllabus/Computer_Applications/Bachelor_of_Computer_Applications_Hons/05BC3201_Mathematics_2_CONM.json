@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Mathematics-2 (CONM)",
+    "subject_code": "05BC3201",
+    "subject_id": null,
+    "department": "Computer Applications",
+    "course_or_branch": "Bachelor of Computer Applications (Hons.)",
+    "semester": 2,
+    "source": "Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/PDFs/BCA/Sem_2/05BC3201 - Mathematics-2 (CONM).pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "FLOATING-POINT ARITHMETIC",
+      "content": [
+        "Introduction : Floating Point and Error, Truncation & Round Off",
+        "Errors, Absolute Error, Relative Error, Addition of Floating Point",
+        "Numbers, Subtraction of Floating Point Numbers, Multiplication of",
+        "Floating Point Numbers, Division of Floating Point Numbers"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "ITERATIVE METHODS FOR FINDING ROOTS",
+      "content": [
+        "Intermediate Value Theorem, Bisection Method, False Position",
+        "Method, Secant Method, Method of Successive Approximation"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "INTERPOLATION",
+      "content": [
+        "Idea of Interpolation, Lagrange Interpolation, Inverse Lagrangian",
+        "Interpolation, Newton¶s Forward Differences Interpolation",
+        "Newton¶s Backward Differences Interpolation, Newton¶s Divided",
+        "Differences Interpolation"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "NUMERICAL DIFFERENTIATIONAL & INTEGRATION",
+      "content": [
+        "Introduction to Calculus, Newton¶s Forward Differences",
+        "Differentiation, Newton¶s Backward Differences Differentiation",
+        "Newton¶s Divided Difference Differentiation (1st order only)",
+        "Trapezoidal Rule, Simpson¶s 1/ 3 rule, Simpson¶s 3/8 rule"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "SOLUTION OF SIMULATANEOUS LINEAR &",
+      "content": [
+        "DIFFERENTIAL EQUATIONS",
+        "Gauss Elimination Method, Gauss Jordan Method, Gauss Seidel",
+        "Method, Runge Kutta 2nd Order Method, Runge Kutta 4th Order",
+        "Method, Milne - Simpson¶s Method, Adams - Multon¶s Method"
+      ]
+    }
+  ]
+}

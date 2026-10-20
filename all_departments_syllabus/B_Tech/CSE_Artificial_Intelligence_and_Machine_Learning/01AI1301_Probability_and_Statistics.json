@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Probability and Statistics",
+    "subject_code": "01AI1301",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Machine Learning",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AI/01AI1301 - Probability and Statistics.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Probability",
+      "content": [
+        "Sample space and events, definitions of probability, properties of",
+        "probability, conditional probability, Bayes’ theorem and",
+        "independence"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Random variable Probability distribution",
+      "content": [
+        "Discrete and continuous random variable, distribution functions",
+        "moments of random variables, functions of random variable, Some",
+        "special probability distributions, Binomial distribution, Poisson",
+        "distribution, Exponential distribution, law of large numbers, Central",
+        "Limit Theorem , Normal distribution"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Correlation and regression analysis",
+      "content": [
+        "Definition, Assumption of Correlation, Bivariate Correlation, Partial",
+        "Correlation, Correlation Coefficients: Pearson, Assumption of",
+        "Regression Analysis, Simple Regression Model, Multiple",
+        "Regressions Model, Coefficient of regression and their properties",
+        "Applications of the concepts in engineering"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Estimation",
+      "content": [
+        "Random sampling, Estimation of parameters, confidence intervals",
+        "for proportions, confidence intervals for parameters in one sample",
+        "and two sample problems of normal populations"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Testing of Hypotheses",
+      "content": [
+        "Null and alternative hypotheses, the critical and acceptance region",
+        "two types of errors, Test of significance for large samples: z- test for",
+        "single proportion test, Difference of proportions test, Single mean",
+        "Difference of means, and Difference of standard deviations test",
+        "Test of significance for small samples: t- Test for single mean",
+        "difference of means, t-test for correlation coefficients, F- test for",
+        "ratio of variances, Chi square goodness of fit test and its",
+        "applications"
+      ]
+    }
+  ]
+}

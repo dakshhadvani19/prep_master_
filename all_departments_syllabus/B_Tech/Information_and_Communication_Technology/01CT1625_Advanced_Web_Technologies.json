@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Advanced Web Technologies",
+    "subject_code": "01CT1625",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1625 - Advanced Web Technologies.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Client-side JS Framework - ReactJS",
+      "content": [
+        "Introduction to ReactJS, Introducing JSX, Rendering Elements",
+        "Component and Props, State and Life Cycle, Handling Events",
+        "Conditional Rendering, List and Keys, Forms, Lifting State Up",
+        "Composition vs Inheritance, Thinking in React, Manual and Unit",
+        "Testing"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Server-side JS Framework - Node JS",
+      "content": [
+        "Get started with Node.js, Node Package Manager, Modules",
+        "Asynchronous Program, Callbacks, Events and Event Loop",
+        "Streams and Buffers, Connect Node.js to Database, Web Sockets",
+        "API using NodeJS"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Express JS",
+      "content": [
+        "MVC Pattern, Introduction to Express, Routing, HTTP Interaction",
+        "Handle Form Data, Handle Query Parameters, Cookies and",
+        "Sessions, User Authentication, Error Handle, Create and Consume",
+        "RESTful Services, Use Templates, Functional and Unit Testing"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "MongoDB",
+      "content": [
+        "Introduction to MongoDB, CRUD Operations in Mongodb",
+        "Introduction to Mongoose, Core concepts of Mongoose, Extending",
+        "Models - Working with hooks, Validation of model data, Creating",
+        "custom static methods, Creating custom instance methods, CRUD",
+        "operations with Mongoose"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Cloud & Deployment",
+      "content": [
+        "Basics of Devops and Cloud Infrastructure, In-depth of DNS and",
+        "network terminologies, Introduction to AWS, AWS-ECS, EC2",
+        "Docker, Kubernetes, Git Basics, Git with CI/CD, Hosting website",
+        "on various platforms"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Experiment-6",
+      "content": [
+        "Create a RESTful service with Node, Express and MongoDB"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Experiment-7",
+      "content": [
+        "Frontend: Using ReactJS, make Image Carousel, FAQ/Accordion",
+        "and Shopping item list with filters"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Experiment-8",
+      "content": [
+        "Frontend: Using ReactJS, integrate video player like a youtube",
+        "clone"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment-9",
+      "content": [
+        "Frontend: Using ReactJS, make a e-commerce website (flipkart or",
+        "amazon) clone"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment-10",
+      "content": [
+        "Backend: Using NodeJS, build a real time chat application or email",
+        "sender"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment-11",
+      "content": [
+        "Backend: Using NodeJS, build a job search platform or e-commerce",
+        "platform api to search and filter"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment-12",
+      "content": [
+        "Database: Using MongoDB, build the CRUD operations with",
+        "NodeJS"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Experiment-13",
+      "content": [
+        "Database: using MongoDB, NodeJS and ReactJS, build a project to",
+        "fetch and post data from frontend to database"
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Experiment-14",
+      "content": [
+        "Deployment: Using AWS, deploy the project in EC2 instances or",
+        "use Lambda functionalities to build APIs"
+      ]
+    }
+  ]
+}

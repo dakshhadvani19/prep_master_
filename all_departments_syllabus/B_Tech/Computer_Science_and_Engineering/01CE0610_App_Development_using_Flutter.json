@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "App Development using Flutter",
+    "subject_code": "01CE0610",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0610 - App Development using Flutter.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Flutter",
+      "content": [
+        "Introduction to flutter framework, advantages of flutter, importance",
+        "of DART in flutter, introduction to Flutter Widget, Element and",
+        "RenderObject, Types of Flutter Widgets,, Stateless and Stateful",
+        "Widget lifecycle, Working of Widget tree and Element tree",
+        "introduction to flutter app"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Starter Project Template, Widget, Common Widgets, Gestures Widget",
+      "content": [
+        "Built-in Flutter widgets, value widgets, layout widgets, navigation",
+        "widgets, other widgets, stateless and stateful widget, ommon",
+        "Widgets: Container, Text, RichText, Column, Row, Buttons, Using",
+        "Images and Icons, Using Decorators, Using the Form Widget to",
+        "Validate Text Fields, Gestures: Buttons: FlatButton, IconButton",
+        "FloatingActionButton, Custom Gestures"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Scrolling List and Layouts",
+      "content": [
+        "Scrolling List: Using the Card, Using ListView and ListTile, Using",
+        "the GridView, Layouts: A High-Level View of the Layout, Creating",
+        "the Layout"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "DART Basics",
+      "content": [
+        "Introduction to DART, comments, top level main() function, use of",
+        "different types of variables, flow statements, use of functions to",
+        "group reusable logic, use of 'import' statement, classes"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Database Connectivity with SQLite & Accessing REST API",
+      "content": [
+        "Database Connectivity with SQLite, CRUD operations with SQLite",
+        "Accessing REST API:, Introduction to JSON, Connecting to REST",
+        "API,, Parsing JSON data from REST API"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Create and application with Flutter UI Components"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Create and application with Navigation in Flutter"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Create and application with list view in Flutter"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Create and application with grid view in Flutter"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Create and application Crud Operation with SQLite in Flutter"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "Create and application using Hardware Interaction in Flutter"
+      ]
+    }
+  ]
+}

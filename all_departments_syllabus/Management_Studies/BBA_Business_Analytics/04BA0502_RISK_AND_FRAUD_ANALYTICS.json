@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "RISK AND FRAUD ANALYTICS",
+    "subject_code": "04BA0502",
+    "subject_id": null,
+    "department": "Management Studies",
+    "course_or_branch": "BBA ( Business Analytics )",
+    "semester": 5,
+    "source": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RISK AND FRAUD ANALYTICS [874f39829e55].pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Fraud and Risk Analytics",
+      "content": [
+        "Definition and types of fraud, Understanding anomalies vs. fraud,",
+        "The risk associated with fraudulent activities, Fraud detection",
+        "methodologies, Recognizing fraud patterns, Introduction to data",
+        "analytical software tools, Data inclusions and deletions in fraud",
+        "analysis"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Data Preparation for Fraud Analysis",
+      "content": [
+        "Evaluation and analysis of data, Obtaining and handling data files,",
+        "Understanding different file formats, Data preparation and cleaning",
+        "techniques,, Organizing and arranging data for analysis"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Data Analysis Tests for Fraud Detection",
+      "content": [
+        "Benford¶s Law, , Number duplication test, Z-score analysis, ,",
+        "Relative size factor test, , Same-same-same test, , Same-same",
+        "different test, Even amounts analysis, Correlation and trend analysis"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Detecting Billing Scheme Frauds",
+      "content": [
+        "Data familiarization techniques, Application of Benford¶s Law in",
+        "billing, , Relative size factor and z-score tests in billing data, ,",
+        "Detection of even dollar amounts, , Same-same-same and same",
+        "same-different tests in billing,, Identifying payments without",
+        "purchase orders, , Analyzing time gaps between invoice and",
+        "payment dates, , Detecting post office box addresses and matching",
+        "employee addresses to suppliers, Identifying duplicate addresses in",
+        "vendor master files, Detecting payments to vendors not in the",
+        "master list, Gap detection in check number sequence"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Payroll and Expense Reimbursement Fraud Analytics",
+      "content": [
+        "Understanding payroll fraud mechanisms, , Data analysis in payroll",
+        "systems, , Analyzing payroll registers and master files, ,",
+        "Commission tests and their applications, Detecting anomalies in",
+        "expense reimbursements",
+        "Textbook :",
+        "1 Fraud Analytics Using Descriptive, Predictive, and Social Network Techniques: A Guide to",
+        "Data Science for Fraud Detection, Baesens, B., Van Vlasselaer, V., & Verbeke, W. ,",
+        "WILLEY, 2015",
+        "2 Fraud Analytics: Strategies and Methods for Detection and Prevention. , Spann, D. D. ,",
+        "WILEY, 2014"
+      ]
+    }
+  ]
+}

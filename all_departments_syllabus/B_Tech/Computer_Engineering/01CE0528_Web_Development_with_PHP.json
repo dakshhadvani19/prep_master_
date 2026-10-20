@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Web Development with PHP",
+    "subject_code": "01CE0528",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0528 - Web Development with PHP.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "PHP Overview Flow Control & Programming Fundamentals",
+      "content": [
+        "Variables, Data types, Operators and expressions, Constants",
+        "switching flow, passing information between PHP pages, String",
+        "Handling, working with functions, Working with Arrays, working",
+        "with advance program flow control, Handling Session and Cookies",
+        "in PHP, Saving Form Data using Sessions"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "WEB DEVELOPMENT WITH PHP 01CE0528",
+      "content": [
+        "Understanding PHP File Permissions, File Reading and Writing",
+        "Functions, File system and Directory Functions, Learning Data",
+        "Types,, working with variables, Constants and simple expression in",
+        "PHP, Creation of Database Tables, Using Time and Date function in",
+        "MySQL, Connecting and Interacting to MySQL using PHP",
+        "Transaction and Stored procedures in MySQL"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Object-Oriented Programming in PHP",
+      "content": [
+        "Object Oriented Programming with PHP-Classes, Properties",
+        "Methods,, Magic Methods: Constructor, Destructor, Getter and",
+        "Setter,, Encapsulation, Inheritance, Data Abstraction",
+        "Polymorphism, Advanced OOP Concepts"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Introduction to PHP MVC Framework - Laravel",
+      "content": [
+        "Introduction to Laravel and MVC, Environment Setup, Routes",
+        "Namespaces,, Controllers, Views, Request Response Redirections"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Practical - 6 Create a Database for Online Laptop Shopping Web Application",
+      "content": [
+        "using MySql and finalize Home Page"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical - 7 Establish database connectivity and implement Registration Page",
+      "content": [
+        "with Server-side validations using PHP"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement following web pages using PHP:, a. Login Page (User",
+        "and Admin), b. Add a category for the products"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement following web pages using PHP:, a. Insert a new",
+        "product, b. Update existing product, c. Delete existing product"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement following web pages using PHP:, a. Display the products",
+        "category wise in Category Page, b. Display detailed information of a",
+        "single product in Product Page"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "a. Setup Laravel project for Book Inventory., b. Implement Session",
+        "and Cookie in all pages"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "a. Setup Laravel project for Book Inventory., b. Setup the database 2",
+        "in Laravel for Book Inventory. Implement Select Operation with",
+        "GUI to fetch details of books from Book Inventory"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Practical",
+      "content": [
+        "a. Implement Insert Operation with GUI to add new details of book",
+        "in Book Inventory., Implement Update Operation with GUI to",
+        "modify details of any book in Book Inventory"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Practical",
+      "content": [
+        "a. Implement Delete Operation with GUI to remove a book from",
+        "Book Inventory., Implement Search Operation on Book Name and",
+        "Author Name with GUI for Book Inventory"
+      ]
+    }
+  ]
+}

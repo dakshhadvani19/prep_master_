@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Generative Adversial Networks (GAN",
+    "subject_code": "01CE0727",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0727 - Generative Adversial Networks (GAN.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Generative Mo Overview of Artificial Intelligence and Deep Learning with",
+      "content": [
+        "emphasis on data-driven systems,, ifference between discriminative",
+        "and generative models with simple examples, basic understanding",
+        "of probability distributions and data generation concepts",
+        "introduction to generative models and their importance, detailed",
+        "introduction to Generative Adversarial Networks including basic",
+        "idea and motivation, applications of GANs in real-world scenarios",
+        "such as image generation, data synthesis, and creative systems"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "GENERATIVE ADVERSIAL NETWORKS 01CE0727",
+      "content": [
+        "Basic architecture of Generator and Discriminator networks, role",
+        "and functionality of each component in GANs, concept of",
+        "adversarial learning explained using simple game-based analogy",
+        "minimax game formulation with intuitive explanation rather than",
+        "mathematical depth,, commonly used loss functions in GANs and",
+        "their purpose, complete GAN training process including data flow",
+        "feedback mechanism, and convergence behavior, overview of GAN",
+        "training workflow and common training steps"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Variants of GANs Introduction to different variants of GANs developed to improve",
+      "content": [
+        "performance and stability,, Deep Convolutional GAN (DCGAN)",
+        "architecture and advantages for image data,, Conditional GAN",
+        "(cGAN) and its use for labeled data generation, Wasserstein GAN",
+        "(WGAN) and its basic idea for improving training stability, Cycle",
+        "GAN with simple explanation of image-to-image translation",
+        "comparative discussion of GAN variants based on architecture",
+        "application, and limitations"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Applications of GANs Use of GANs for image generation and image-to-image translation",
+      "content": [
+        "tasks, application of GANs for data augmentation to improve",
+        "machine learning model performance, role of GANs in healthcare",
+        "and medical imaging such as disease detection and image",
+        "enhancement, application of GANs in cyber security for anomaly",
+        "detection and attack simulation, creative and industrial applications",
+        "of GANs in art, design,Media, and content creation"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Challenges and Ethical Issues",
+      "content": [
+        "Common challenges in GAN training such as training instability",
+        "non-convergence, andmode collapse, methods for evaluating GAN",
+        "performance using simple qualitative and quantitative measures",
+        "ethical concerns related to misuse of GAN-generated content",
+        "security threats including deepfakes and misinformation, social",
+        "impact and responsibilityof GAN developers, future research",
+        "directions focusing on stability, efficiency, andResponsibleuse of",
+        "GANs"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Preparation of practical report including result analysis",
+        "observations, and conclusion of GAN experiments"
+      ]
+    }
+  ]
+}

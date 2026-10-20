@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Computer Programming",
+    "subject_code": "01CE2101",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE2101 - Computer Programming.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction",
+      "content": [
+        "Introduction to Computer, Block Diagram of Computer, Primary",
+        "Memory, Secondary Memory, CPU, ALU, Software, Types of",
+        "Software, Compilers and Interpreters, Hardware, I/O Devices",
+        "Flowchart, Algorithm"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "C Programming Basics",
+      "content": [
+        "Introduction to C Programming, Structure of C program",
+        "Compilation and linking processes, Constants, Variables, Data",
+        "Types, C Tokens, Expression using operators in C, Type",
+        "Conversion and Type Casting"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Control Structure and Looping",
+      "content": [
+        "Decision Making statements, Decision Making statements",
+        "Conditional operator, Looping, Entry and Exit control loops",
+        "Concept of jump, Break and continue"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Array and String",
+      "content": [
+        "Declaration and initialization of array, Types of arrays, Sorting and",
+        "matrix operation using array, Strings operations, String array, String",
+        "functions"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Functions",
+      "content": [
+        "Definition of function, Declaration of function, Call by value, Call",
+        "by references,, Recursion"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Structure and Union",
+      "content": [
+        "Need of structure data type, Structure definition, structure",
+        "declaration, Structure within structure, Difference between structure",
+        "and union"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Pointers and Dynamic Memory Allocation",
+      "content": [
+        "Definition, Initialization, Pointer arithmetic, Pointer and array",
+        "Chain of pointer, DMA concepts, DMA functions, malloc(), calloc",
+        "(), realloc(), free()"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "File Management",
+      "content": [
+        "Introduction to file management, File Handling function"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Write file handling programs for read, write, and append operations"
+      ]
+    }
+  ]
+}

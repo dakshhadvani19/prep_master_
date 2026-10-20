@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Satellite Communication",
+    "subject_code": "01CT1610",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Information and Communication Technology",
+    "semester": 6,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CT/01CT1610 - Satellite Communication.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Satellite Communication",
+      "content": [
+        "Historical background, Basic concepts of Satellite Communications",
+        "Communication Networks and Services, Growth of Satellite",
+        "communications. Satellite in Networks"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Satellite Orbits",
+      "content": [
+        "Kepler’s Laws, Newton’s law, orbital parameters, orbital",
+        "perturbations, station keeping, geo stationary and non Geo",
+        "stationary orbits, Look Angle Determination, Limits of visibility",
+        "eclipse-Sub satellite point, Sun transit outage-Launching",
+        "Procedures, launch vehicles and propulsion"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Space Segment",
+      "content": [
+        "Introduction, The Power Supply, Attitude Control, Spinning satellite",
+        "stabilization, Momentum wheel stabilization, Station Keeping",
+        "Thermal Control, TT&C Subsystem, Transponders: The wideband",
+        "receiver, The input demultiplexer, The power amplifier, The",
+        "Antenna Subsystem"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Earth Segment",
+      "content": [
+        "Introduction - Receive - Only home TV systems, Outdoor unit",
+        "Indoor unit for analog (FM) TV, Master antenna TV system",
+        "Community antenna TV system, Transmit - Receive earth stations"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "The Space Link",
+      "content": [
+        "Introduction, Equivalent Isotropic Radiated Power, Transmission",
+        "Losses: Free-space transmission, Feeder losses, Antenna",
+        "misalignment losses, Fixed atmospheric and ionospheric losses, The",
+        "Link-Power Budget Equation, System Noise, Carrier-to-Noise",
+        "Ratio, The Uplink: Saturation flux density, Input backoff",
+        "Downlink, Output back-off, Satellite TWTA output, Combined",
+        "Uplink and Downlink C/N Ratio. Inter-satellite Link"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Satellite Access",
+      "content": [
+        "Introduction, Single Access, Preassigned FDMA, Demand-Assigned",
+        "FDMA, Spade System, TDMA, Preassigned TDMA, Demand",
+        "assigned TDMA, Satellite-Switched TDMA, Code-Division",
+        "Multiple Access"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Satellite Applications",
+      "content": [
+        "INSAT, VSAT, Mobile satellite services: GSM, GPS, Direct",
+        "Broadcast satellites (DBS)- Direct to home Broadcast (DTH)",
+        "GRAMSAT, Specialized services - E -mail, Video conferencing"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Advances in Satellite Communication",
+      "content": [
+        "Satellite based societal application for national development",
+        "Disaster management, Microwave remote sensors, Digital signal",
+        "processing for microwave sensors, Optical and infrared remote",
+        "sensing"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Experiment-9 To measure the signal parameters in an analog FM/FDM TV",
+      "content": [
+        "satellite link"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Experiment-10 To transmit digital waveforms through a satellite communication",
+      "content": [
+        "link"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Experiment-11",
+      "content": [
+        "To Calculate Bit Error Rate in a satellite communication link"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Experiment-12",
+      "content": [
+        "To write a program to observe the variations in the antenna look",
+        "angles for the earth station antennas"
+      ]
+    }
+  ]
+}

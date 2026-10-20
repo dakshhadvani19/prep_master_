@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Business Analytics",
+    "subject_code": "01AD0503",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AD/01AD0503 - Business Analytics.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Business Analytics",
+      "content": [
+        "Definition and scope of Business Analytics, Types: Descriptive",
+        "Predictive, Prescriptive Analytics, Role of Analytics in Business",
+        "Decision Making, Data-driven organizations, Business Intelligence",
+        "vs Business Analytics, Data lifecycle and data sources, , Case",
+        "studies (Retail, Banking, Healthcare)"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Data Collection, Cleaning and Preprocessing",
+      "content": [
+        "Data types: structured, semi-structured, unstructured, Data",
+        "acquisition techniques, Data cleaning: missing values, Data",
+        "transformation and normalization,, Feature engineering basics, Data",
+        "integration and ETL concepts Introduction to tools: Excel, Python",
+        "(Pandas)"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Statistical Analysis and Visualization",
+      "content": [
+        "Descriptive statistics (mean, median, variance, skewness)",
+        "Probability distributions, Correlation and regression basics",
+        "Hypothesis testing (t-test, chi-square), , Data visualization",
+        "techniques, Tools: Python (Matplotlib, Seaborn), PowerBI basics"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Predictive Analytics & Machine Learning",
+      "content": [
+        "Clustering (K-Means), Classification (Decision Tree, Naïve Bayes",
+        "KNN), Regression models (Linear, Logistic), Model evaluation",
+        "(Accuracy, Precision, Recall, F1-score), Overfitting and cross",
+        "validation, Introduction to AI-driven analytics"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Business Applications & Advanced Topics",
+      "content": [
+        "Analytics in: Marketing, Finance, Supply Chain, Dashboard design",
+        "principles, Big Data Analytics, Ethical issues in analytics, Real",
+        "world case studies"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Practical",
+      "content": [
+        "Perform correlation analysis between variables"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Perform K-Means clustering on customer data"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Build a KNN & decision tree classifier"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement linear regression using a real dataset"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Implement logistic regression for classification"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "Create a dashboard using Power BI"
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Practical",
+      "content": [
+        "Perform customer segmentation using clustering"
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Practical",
+      "content": [
+        "Mini Project: Solve a real-world business problem (data ? model ?",
+        "visualization)"
+      ]
+    }
+  ]
+}

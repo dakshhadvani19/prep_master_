@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Advance Database Management System",
+    "subject_code": "01CE0310",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "Computer Science and Engineering",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01CE/01CE0310 - Advance Database Management System.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Transaction & Concurrency Control",
+      "content": [
+        "Transaction concept, ACID properties, Transaction states & Cycle",
+        "Concurrency problems: Lost update, Dirty read, Phantom read, 2PL",
+        "Serializability,, Concurrency control techniques: Locking",
+        "(shared/exclusive),, Shadow paging, Timestamp ordering",
+        "Multiversion concurrency control (MVCC), Deadlock detection",
+        "prevention, avoidance and recovery"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Database Security",
+      "content": [
+        "Database security requirements and challenges, User authentication",
+        "& authorization, SQL injection attacks & prevention methods",
+        "Access control models: DAC, MAC, RBAC, Database encryption",
+        "techniques, Security in cloud databases"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Indexing & Hashing",
+      "content": [
+        "Types of indexes: Primary, Secondary, Dense, Sparse, Clustered vs",
+        "Non-clustered indexes, Multi-level indexing, Bitmap indexing",
+        "Tree-based indexing: B-Tree, B+ Tree (concepts, insertion &",
+        "deletion overview), Static & Dynamic Hashing (Extendible",
+        "Hashing, Linear Hashing), Comparison of indexing & hashing",
+        "Indexing in modern RDBMS (Oracle, MySQL, PostgreSQL)"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Query Optimization & Performance Tuning",
+      "content": [
+        "Query processing steps, Heuristics-based optimization, Cost-based",
+        "optimization, Query execution plans & analysis, Index optimization",
+        "strategies, Partitioning & Sharding (performance-oriented view)",
+        "Query tuning practices in real-world DBMS"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Advanced SQL & PL/SQL",
+      "content": [
+        "Advanced SQL constructs: Nested queries, Set operations (UNION",
+        "INTERSECT, EXCEPT), Complex joins, Views, Index usage in",
+        "SQL queries, PL/SQL basics: Block structure, Variables, Control",
+        "structures, Cursors: Implicit & Explicit, Stored Procedures &",
+        "Functions, Triggers: Row-level & Statement-level, Exception",
+        "handling, Packages in PL/SQL"
+      ]
+    }
+  ]
+}

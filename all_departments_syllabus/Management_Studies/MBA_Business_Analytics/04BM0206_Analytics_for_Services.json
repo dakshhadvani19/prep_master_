@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Analytics for Services",
+    "subject_code": "04BM0206",
+    "subject_id": null,
+    "department": "Management Studies",
+    "course_or_branch": "MBA Business Analytics",
+    "semester": 2,
+    "source": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Analytics for Services [12daddadb992].pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Introduction to Service Analytics Overview of service industries and characteristics of service",
+      "content": [
+        "operations using real-time dashboards, Introduction to analytics in",
+        "service enhancement through visual reports, Mapping service",
+        "processes and visualizing performance gaps (using Excel/Power",
+        "BI), Case Study: Service quality analytics in a hospitality chain",
+        "using performance dashboards"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Data Collection and Management in Services",
+      "content": [
+        "Designing effective customer surveys using online tools, Collecting",
+        "transactional and behavioral data through CRM logs, Data cleaning",
+        "and preprocessing for service data (hands-on with Pandas/Excel)",
+        "Handling unstructured data like reviews and chats (text formatting",
+        "& storage), Software: Google Forms / SurveyMonkey, Excel, SQL",
+        "Python (Pandas) Case Study: CRM data integration and",
+        "preprocessing at a telecom firm for service improvement"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Predictive Analytics in Service Operations",
+      "content": [
+        "Forecasting service demand using historical datasets, Building",
+        "customer churn prediction models with logistic regression or",
+        "decision trees, Resource planning using what-if simulations and",
+        "optimization tools (Excel Solver) Software: Python (Scikit-learn",
+        "Pandas), R, Excel Solver Case Study: Demand prediction and staff",
+        "allocation at a healthcare facility"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Customer Experience and Sentiment Analysis Extracting insights from NPS/CSAT scores and customer",
+      "content": [
+        "satisfaction surveys, Performing sentiment analysis on review data",
+        "(using Python TextBlob/VADER), Creating personalized service",
+        "strategies based on text mining outputs Software: Python (TextBlob",
+        "NLTK, Vader), RapidMiner, Excel Case Study: Customer sentiment",
+        "analysis in an e-commerce platform to improve retention"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Strategic Decision Making and Optimization",
+      "content": [
+        "Applying data-driven frameworks for service design and delivery",
+        "Service route and workforce optimization using Excel Solver or",
+        "PuLP, Evaluating service analytics ROI with visual performance",
+        "indicators Software: Excel Solver / OpenSolver, Python (PuLP)",
+        "Tableau / Power BI Case Study: Route and resource optimization in",
+        "logistics and delivery services"
+      ]
+    }
+  ]
+}

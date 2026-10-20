@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "status": "ready",
+  "subject": {
+    "name": "Visual Computing",
+    "subject_code": "01AD0504",
+    "subject_id": null,
+    "department": "B.Tech",
+    "course_or_branch": "CSE Artificial Intelligence and Data Science",
+    "semester": null,
+    "source": "Syllabus/B.Tech programs/_PDF_Library/01AD/01AD0504 - Visual Computing.pdf"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Visual Computing Fundamentals",
+      "content": [
+        "Introduction to Visual Computing, Physiological Foundations of",
+        "Human Visual System, Representation of Light and Color",
+        "Fundamental Image Processing Steps: Image Acquisition",
+        "Enhancement, Restoration, Color Processing, Compression",
+        "Segmentation, Recognition"
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Digital Image Processing (Fundamentals)",
+      "content": [
+        "Image representation and pixel relationships (4-connected, 8",
+        "connected)., Image sampling and quantization, Sampling Theorem",
+        "Spatial and intensity resolution., Gray level and color quantization",
+        "vector quantization., Point operations, histogram processing",
+        "(equalization, specification), contrast stretching. , Spatial filtering:",
+        "smoothing and sharpening filters"
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Geometric Transformations and Camera Models",
+      "content": [
+        "2D and 3D transformations, homogeneous coordinates, Translation",
+        "rotation, scaling, shearing, Coordinate systems and viewing",
+        "transformations. , Camera geometry, perspective projection",
+        "orthographic projection., Introduction to 3D viewing pipeline"
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Advanced Image Processing & Frequency Domain Techniques",
+      "content": [
+        "Frequency domain fundamentals, Fourier Transform (DFT, FFT)",
+        "Discrete Cosine Transform (DCT), Frequency domain filtering",
+        "(low-pass, high-pass)., Image enhancement and restoration",
+        "techniques, Wiener filtering, median filtering, nonlinear diffusion"
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Image Analysis and Motion Understanding",
+      "content": [
+        "Multi-resolution analysis, Gaussian-Laplacian pyramids, wavelets",
+        "scale-space representation, Image and video compression basics",
+        "Image segmentation, thresholding, edge-based and region-based",
+        "methods, Feature matching: template matching, point matching",
+        "Motion analysis: optical flow, stereo vision., Feature descriptors and",
+        "learning-based vision concepts (fundamentals)"
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Graphics Pipeline and Geometric Modeling",
+      "content": [
+        "Graphics pipeline architecture, Lighting and reflection models",
+        "Shading techniques (Gouraud, Phong)., Texture mapping and",
+        "texture analysis, Aliasing and anti-aliasing, Global illumination",
+        "basics: ray tracing, radiosity, Introduction to graphics APIs",
+        "(OpenGL) and hardware, Parametric curves: Bézier curves, B",
+        "splines, Introduction to surfaces and mesh representation (triangle",
+        "meshes, basics only)"
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Practical",
+      "content": [
+        "Fourier Transform and DCT implementation"
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Practical",
+      "content": [
+        "Image segmentation techniques (thresholding, edge detection)"
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Practical",
+      "content": [
+        "Optical flow and stereo vision basics"
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Practical",
+      "content": [
+        "Graphics pipeline and shading (Phong/Gouraud)"
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Practical",
+      "content": [
+        "Bézier curves, B-splines, and mesh basics"
+      ]
+    }
+  ]
+}
