@@ -8,6 +8,8 @@ Use [`FINAL_PROMPT_TEMPLATE.md`](./FINAL_PROMPT_TEMPLATE.md) as the **single can
 
 The template consolidates the applicable rules from the files below and documents how to fetch, select, scope, and fit syllabus context without silent truncation.
 
+**Implementation contract for context retrieval/fitting:** [`CONTEXT_FITTING_IMPLEMENTATION.md`](./CONTEXT_FITTING_IMPLEMENTATION.md) specifies exact subject resolution, exam-scope selection, token budgeting, overflow batching, coverage allocation, internal provenance, and acceptance tests.
+
 ## Reference files
 
 - [`Mid1.md`](./Mid1.md): non-departmental theory Mid-1.
