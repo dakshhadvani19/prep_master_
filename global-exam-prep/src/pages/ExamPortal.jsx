@@ -196,7 +196,7 @@ export default function ExamPortal() {
                         const check = validateSyllabusRecord(resolved.record);
                         if (check.valid) {
                             syllabusRecord = resolved.record;
-                            syllabusSource = resolved.entry.sourceFile;
+                            syllabusSource = resolved.entry.path;
                         } else {
                             console.warn('Syllabus record validation failed:', check.reason);
                         }
