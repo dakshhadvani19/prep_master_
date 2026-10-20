@@ -43,3 +43,6 @@ Thumbs.db
 # Local dev-preview shim (sandbox host allowlist); not part of the app
 vite.config.preview.mjs
 global-exam-prep/vite.config.preview.mjs
+
+# Local cache of input syllabus ZIP from Drive — not part of the repository
+google_drive/
