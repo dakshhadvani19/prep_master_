@@ -1,4 +1,0 @@
--- DEPRECATED: this subject seed contains the superseded 10-question-per-test layout.
--- Do not run this file; its TestIds overlap the canonical exam-type-aware v2 bank.
--- Use ../seed-all-v2.sql instead. It handles Mid 1, Mid 2, ESE and difficulty metadata.
--- This placeholder performs no INSERT and makes no database changes.

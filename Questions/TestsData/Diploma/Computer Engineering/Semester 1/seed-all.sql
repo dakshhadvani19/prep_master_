@@ -1,3 +1,0 @@
--- DEPRECATED: this legacy seed is intentionally disabled.
--- It would insert the superseded 10-question test rows and reuse the current TestId occurrence range.
--- Use seed-all-v2.sql instead. This file performs no INSERT and makes no database changes.

@@ -1,2 +1,0 @@
--- Use the semester-level ../seed-all-v2.sql after academic review and TestId collision checks.
--- No independent insert statements in this folder.

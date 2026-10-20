@@ -1,0 +1,1803 @@
+{
+  "schema_version": "1.0",
+  "status": "COMPACT_REFERENCE_SAMPLES_ONLY",
+  "purpose": "Small set of existing Diploma Computer Engineering question examples for reference; not a production seed or source of exam format rules.",
+  "hierarchy": "Course -> branch -> subject JSON -> exam_types -> exam type -> difficulty -> sample; semester is metadata, not a folder.",
+  "retention_policy": {
+    "retained_sample": "One existing medium-difficulty paper per subject and available exam type.",
+    "source_occurrences": {
+      "Mid 1": 5,
+      "Mid 2": 17,
+      "ESE": 29
+    },
+    "approximate_variants_retained_per_exam_type": "1 of 12 (about 8.3%)",
+    "question_content_changed": false
+  },
+  "usage_rules": [
+    "Use these files only as examples of question style and schema.",
+    "Always give Groq the selected subject's actual syllabus chapters/content and, only when present, its actual practical list.",
+    "Do not treat these question samples as syllabus content.",
+    "The generator must enforce current exam counts/marks and validation rules from docs/EXAM_FORMAT_AND_MARKING_RULES.md and docs/THEORY_QUESTION_GENERATION_GUIDE.md."
+  ],
+  "compatibility_warning": "Some retained historical theory examples use four 8-mark questions (32 marks), which do not satisfy the newer theory-paper mark totals. They are retained as style references only and must not override the current paper-format contract.",
+  "counts": {
+    "subjects": 39,
+    "exam_type_samples": 103,
+    "mcq_papers": 53,
+    "theory_papers": 50,
+    "question_prompts": 1790,
+    "option_entries": 6360,
+    "answer_entries": 1790,
+    "by_semester": [
+      {
+        "semester": 1,
+        "subjects": 8,
+        "samples": 21
+      },
+      {
+        "semester": 2,
+        "subjects": 7,
+        "samples": 19
+      },
+      {
+        "semester": 3,
+        "subjects": 6,
+        "samples": 17
+      },
+      {
+        "semester": 4,
+        "subjects": 6,
+        "samples": 16
+      },
+      {
+        "semester": 5,
+        "subjects": 7,
+        "samples": 17
+      },
+      {
+        "semester": 6,
+        "subjects": 5,
+        "samples": 13
+      }
+    ]
+  },
+  "validation": {
+    "all_rows_indexed": true,
+    "all_samples_medium": true,
+    "one_sample_per_subject_exam_type_difficulty": true,
+    "mcq_and_theory_array_shapes_valid": true,
+    "mcq_answers_zero_based_a_to_d": true,
+    "errors": []
+  },
+  "subjects": [
+    {
+      "name": "Basics of Web Designing",
+      "SubjectId": "44000935310201",
+      "subject_code": "09CE3102",
+      "isDepartmentalSubject": false,
+      "semester": 1,
+      "file": "44000935310201__Basics_of_Web_Designing.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bharatiya Knowledge System",
+      "SubjectId": "44009911010101",
+      "subject_code": "09IK0101",
+      "isDepartmentalSubject": false,
+      "semester": 1,
+      "file": "44009911010101__Bharatiya_Knowledge_System.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Communication Skills-I",
+      "SubjectId": "44091912010301",
+      "subject_code": "09SL0103",
+      "isDepartmentalSubject": false,
+      "semester": 1,
+      "file": "44091912010301__Communication_Skills_I.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer Fundamental Skill",
+      "SubjectId": "44000935210101",
+      "subject_code": "09CE2101",
+      "isDepartmentalSubject": true,
+      "semester": 1,
+      "file": "44000935210101__Computer_Fundamental_Skill.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer Hardware Skill",
+      "SubjectId": "44000935210301",
+      "subject_code": "09CE2103",
+      "isDepartmentalSubject": true,
+      "semester": 1,
+      "file": "44000935210301__Computer_Hardware_Skill.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Engineering Drawing",
+      "SubjectId": "44009135110101",
+      "subject_code": "09ME1101",
+      "isDepartmentalSubject": false,
+      "semester": 1,
+      "file": "44009135110101__Engineering_Drawing.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Indian Constitution",
+      "SubjectId": "44009121010101",
+      "subject_code": "09AU0101",
+      "isDepartmentalSubject": true,
+      "semester": 1,
+      "file": "44009121010101__Indian_Constitution.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mathematics-I",
+      "SubjectId": "44009131210101",
+      "subject_code": "09MA2101",
+      "isDepartmentalSubject": false,
+      "semester": 1,
+      "file": "44009131210101__Mathematics_I.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Applied Physics",
+      "SubjectId": "44009719210101",
+      "subject_code": "09GS2101",
+      "isDepartmentalSubject": false,
+      "semester": 2,
+      "file": "44009719210101__Applied_Physics.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Basic Electronics",
+      "SubjectId": "44000955210301",
+      "subject_code": "09EE2103",
+      "isDepartmentalSubject": false,
+      "semester": 2,
+      "file": "44000955210301__Basic_Electronics.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer Network Skills",
+      "SubjectId": "44000935210501",
+      "subject_code": "09CE2105",
+      "isDepartmentalSubject": true,
+      "semester": 2,
+      "file": "44000935210501__Computer_Network_Skills.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer Programming",
+      "SubjectId": "44000935210401",
+      "subject_code": "09CE2104",
+      "isDepartmentalSubject": false,
+      "semester": 2,
+      "file": "44000935210401__Computer_Programming.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Enviornment Conservation & Disater Management",
+      "SubjectId": "44009121010201",
+      "subject_code": "09AU0102",
+      "isDepartmentalSubject": true,
+      "semester": 2,
+      "file": "44009121010201__Enviornment_Conservation_Disater_Management.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Integrated Personality Development Course-I",
+      "SubjectId": "44009164010101",
+      "subject_code": "09PD0101",
+      "isDepartmentalSubject": false,
+      "semester": 2,
+      "file": "44009164010101__Integrated_Personality_Development_Course_I.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mathematics-II",
+      "SubjectId": "44009131210201",
+      "subject_code": "09MA2102",
+      "isDepartmentalSubject": false,
+      "semester": 2,
+      "file": "44009131210201__Mathematics_II.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data Structure",
+      "SubjectId": "44000935330301",
+      "subject_code": "09CE3303",
+      "isDepartmentalSubject": false,
+      "semester": 3,
+      "file": "44000935330301__Data_Structure.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Database Management System",
+      "SubjectId": "44000935230201",
+      "subject_code": "09CE2302",
+      "isDepartmentalSubject": false,
+      "semester": 3,
+      "file": "44000935230201__Database_Management_System.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Digital Electronics",
+      "SubjectId": "44009320130101",
+      "subject_code": "09CT1301",
+      "isDepartmentalSubject": false,
+      "semester": 3,
+      "file": "44009320130101__Digital_Electronics.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mathematics-III",
+      "SubjectId": "44009131030201",
+      "subject_code": "09MA0302",
+      "isDepartmentalSubject": false,
+      "semester": 3,
+      "file": "44009131030201__Mathematics_III.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Object Oriented Programming With C++",
+      "SubjectId": "44000935330101",
+      "subject_code": "09CE3301",
+      "isDepartmentalSubject": false,
+      "semester": 3,
+      "file": "44000935330101__Object_Oriented_Programming_With_C.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Python Programming and Prompt Engineering",
+      "SubjectId": "44000935030401",
+      "subject_code": "09CE0304",
+      "isDepartmentalSubject": true,
+      "semester": 3,
+      "file": "44000935030401__Python_Programming_and_Prompt_Engineering.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer Organization",
+      "SubjectId": "44000935240101",
+      "subject_code": "09CE2401",
+      "isDepartmentalSubject": false,
+      "semester": 4,
+      "file": "44000935240101__Computer_Organization.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Java Programming",
+      "SubjectId": "44000935140301",
+      "subject_code": "09CE1403",
+      "isDepartmentalSubject": true,
+      "semester": 4,
+      "file": "44000935140301__Java_Programming.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mathematics-IV",
+      "SubjectId": "44009131040201",
+      "subject_code": "09MA0402",
+      "isDepartmentalSubject": false,
+      "semester": 4,
+      "file": "44009131040201__Mathematics_IV.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Operating System",
+      "SubjectId": "44000935340501",
+      "subject_code": "09CE3405",
+      "isDepartmentalSubject": false,
+      "semester": 4,
+      "file": "44000935340501__Operating_System.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Software Engineering",
+      "SubjectId": "44000935340201",
+      "subject_code": "09CE3402",
+      "isDepartmentalSubject": false,
+      "semester": 4,
+      "file": "44000935340201__Software_Engineering.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Web Technology",
+      "SubjectId": "44000935340401",
+      "subject_code": "09CE3404",
+      "isDepartmentalSubject": true,
+      "semester": 4,
+      "file": "44000935340401__Web_Technology.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Advance Database Management System",
+      "SubjectId": "44000935150201",
+      "subject_code": "09CE1502",
+      "isDepartmentalSubject": false,
+      "semester": 5,
+      "file": "44000935150201__Advance_Database_Management_System.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Advance Java Programming",
+      "SubjectId": "44000935150401",
+      "subject_code": "09CE1504",
+      "isDepartmentalSubject": true,
+      "semester": 5,
+      "file": "44000935150401__Advance_Java_Programming.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Advance Web Technology",
+      "SubjectId": "44000935150301",
+      "subject_code": "09CE1503",
+      "isDepartmentalSubject": true,
+      "semester": 5,
+      "file": "44000935150301__Advance_Web_Technology.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fundamentals Of IOT With Python",
+      "SubjectId": "44000935150601",
+      "subject_code": "09CE1506",
+      "isDepartmentalSubject": false,
+      "semester": 5,
+      "file": "44000935150601__Fundamentals_Of_IOT_With_Python.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mobile Computing",
+      "SubjectId": "44000935150101",
+      "subject_code": "09CE1501",
+      "isDepartmentalSubject": false,
+      "semester": 5,
+      "file": "44000935150101__Mobile_Computing.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Project-I",
+      "SubjectId": "44000935150501",
+      "subject_code": "09CE1505",
+      "isDepartmentalSubject": true,
+      "semester": 5,
+      "file": "44000935150501__Project_I.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Summer Internship",
+      "SubjectId": "44000935050901",
+      "subject_code": "09CE0509",
+      "isDepartmentalSubject": true,
+      "semester": 5,
+      "file": "44000935050901__Summer_Internship.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": ".NET",
+      "SubjectId": "44000935160301",
+      "subject_code": "09CE1603",
+      "isDepartmentalSubject": true,
+      "semester": 6,
+      "file": "44000935160301__NET.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Entrepreneurship Development",
+      "SubjectId": "44000935160701",
+      "subject_code": "09CE1607",
+      "isDepartmentalSubject": false,
+      "semester": 6,
+      "file": "44000935160701__Entrepreneurship_Development.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fundametals of Machine Learning",
+      "SubjectId": "44000935160601",
+      "subject_code": "09CE1606",
+      "isDepartmentalSubject": false,
+      "semester": 6,
+      "file": "44000935160601__Fundametals_of_Machine_Learning.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Multimedia and Animation Tools",
+      "SubjectId": "44000935160101",
+      "subject_code": "09CE1601",
+      "isDepartmentalSubject": false,
+      "semester": 6,
+      "file": "44000935160101__Multimedia_and_Animation_Tools.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        },
+        {
+          "exam_type": "ESE",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "theory",
+              "question_count": 4,
+              "option_count": 0,
+              "answer_count": 4,
+              "source_occurrence": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Project-II",
+      "SubjectId": "44000935160201",
+      "subject_code": "09CE1602",
+      "isDepartmentalSubject": true,
+      "semester": 6,
+      "file": "44000935160201__Project_II.json",
+      "exam_types": [
+        {
+          "exam_type": "Mid 1",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 5
+            }
+          ]
+        },
+        {
+          "exam_type": "Mid 2",
+          "difficulties": [
+            {
+              "difficulty": "medium",
+              "format": "mcq",
+              "question_count": 30,
+              "option_count": 120,
+              "answer_count": 30,
+              "source_occurrence": 17
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
