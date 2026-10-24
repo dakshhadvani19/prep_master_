@@ -545,6 +545,58 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
         });
     });
 
+    describe('9. Provider JSON validation failures', () => {
+        const jsonValidationError = {
+            error: {
+                message: "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.",
+                type: 'invalid_request_error',
+                category: 'generation_format',
+                providerCode: 'json_validate_failed',
+            },
+        };
+
+        it('switches to json_object when Groq returns json_validate_failed', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(400, jsonValidationError))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(3)));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content here. ' + 'x'.repeat(100),
+                difficulty: 'medium',
+                count: 3,
+                isObjective: true,
+            });
+
+            expect(result).toHaveLength(3);
+            expect(fetchMock).toHaveBeenCalledTimes(2);
+            const firstRequest = JSON.parse(fetchMock.mock.calls[0][1].body);
+            const fallbackRequest = JSON.parse(fetchMock.mock.calls[1][1].body);
+            expect(firstRequest.response_format.type).toBe('json_schema');
+            expect(fallbackRequest.response_format).toEqual({ type: 'json_object' });
+        });
+
+        it('continues bounded retries if json_object mode also gets json_validate_failed', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(400, jsonValidationError))
+                .mockResolvedValueOnce(mockJsonResponse(400, jsonValidationError))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(3)));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content here. ' + 'x'.repeat(100),
+                difficulty: 'medium',
+                count: 3,
+                isObjective: true,
+            });
+
+            expect(result).toHaveLength(3);
+            expect(fetchMock).toHaveBeenCalledTimes(3);
+            const finalRequest = JSON.parse(fetchMock.mock.calls[2][1].body);
+            expect(finalRequest.response_format).toEqual({ type: 'json_object' });
+        });
+    });
+
     describe('9. Non-retryable schema/config errors', () => {
         it('treats json_schema unsupported error as non-retryable and falls back once', async () => {
             const { generateQuestionsFromText } = await importModule();
