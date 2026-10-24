@@ -90,19 +90,15 @@ export function buildMcqSchema(count) {
                 properties: {
                     questions: {
                         type: 'array',
-                        minItems: count,
-                        maxItems: count,
                         items: {
                             type: 'object',
                             properties: {
                                 text: { type: 'string' },
                                 options: {
                                     type: 'array',
-                                    minItems: 4,
-                                    maxItems: 4,
                                     items: { type: 'string' },
                                 },
-                                answer: { type: 'integer', minimum: 0, maximum: 3 },
+                                answer: { type: 'integer', enum: [0, 1, 2, 3] },
                             },
                             required: ['text', 'options', 'answer'],
                             additionalProperties: false,
@@ -132,8 +128,6 @@ export function buildTheorySchema(count) {
                 properties: {
                     questions: {
                         type: 'array',
-                        minItems: count,
-                        maxItems: count,
                         items: {
                             type: 'object',
                             properties: {
@@ -295,6 +289,8 @@ export async function generateQuestionsFromText({
     count = 10,
     isObjective = true,
     marksForQuestions = null,
+    recoveryDepth = 0,
+    excludedQuestionTexts = [],
 }) {
     const requestedDifficulty = VALID_DIFFICULTIES.has(difficulty) ? difficulty : 'medium';
     const blueprint = DIFFICULTY_BLUEPRINT[requestedDifficulty];
@@ -361,6 +357,10 @@ export async function generateQuestionsFromText({
         ? `Create accurate, syllabus-grounded MCQs. Return only valid JSON matching the required schema: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations, review fields, or IDs.` 
         : `Create accurate, syllabus-grounded theory questions. Return only valid JSON matching the required schema: {"questions":[{"text":"...","marks":4}]}. No answers, hints, marking schemes, or IDs.`
 
+    const exclusionText = excludedQuestionTexts.length
+        ? `ALREADY GENERATED — do not repeat these question stems: ${JSON.stringify(excludedQuestionTexts.map(stem => String(stem).slice(0, 180)))}\n`
+        : '';
+
     let userPrompt;
     if (isObjective) {
         userPrompt = `Create exactly ${count} original single-answer MCQs based only on the study material.
@@ -376,6 +376,7 @@ Rules:
 - Avoid true/false, all/none-of-the-above, placeholders, invented facts, duplicate concepts, and predictable answer positions.
 - Silently verify the key, all options, uniqueness, grounding, and difficulty before answering. Output only the required JSON; do not include explanations.
 
+${exclusionText}
 Study material:
 ---
 ${source}
@@ -388,6 +389,7 @@ DIFFICULTY: ${blueprint.label} (${requestedDifficulty}); target: ${blueprint.rea
 Easy: foundational definition or one-step use. Medium: short application, calculation, comparison, or interpretation. Hard: multi-step analysis, diagnosis, design, or a justified decision.
 Keep every question clear, distinct, fair, and syllabus-specific. Do not include answers, hints, or marking schemes. If the source is truncated, rely only on visible content.
 
+${exclusionText}
 Study material:
 ---
 ${source}
@@ -473,12 +475,18 @@ ${source}
             if (!Array.isArray(questions) || questions.length === 0) {
                 throw new Error('AI returned no questions. Please retry generation.');
             }
-            // Reject incomplete or duplicate response sets instead of letting a partial
-            // Groq response appear to be a complete exam.
-            validateCommonQuestions(questions, count);
+            // Validate all returned items. A short response is recovered below by
+            // requesting only the missing questions; it is never accepted as a full batch.
+            const isPartialResponse = questions.length < count;
+            if (questions.length > count) {
+                validateCommonQuestions(questions, count);
+            } else {
+                validateCommonQuestions(questions, questions.length);
+            }
             if (!isObjective && Array.isArray(marksForQuestions)) {
-                if (questions.length !== marksForQuestions.length || questions.some((q, i) => Number(q.marks) !== marksForQuestions[i])) {
-                    throw new Error('Theory response did not follow the required mark sequence: ' + JSON.stringify(marksForQuestions) + '. Please retry.');
+                const expectedMarks = marksForQuestions.slice(0, questions.length);
+                if (questions.some((q, i) => Number(q.marks) !== expectedMarks[i])) {
+                    throw new Error('Theory response did not follow the required mark sequence: ' + JSON.stringify(expectedMarks) + '. Please retry.');
                 }
                 // Set the expected type before difficulty validation so 1-mark brevity rules apply.
                 questions.forEach(q => { q.type = 'subjective'; });
@@ -486,7 +494,7 @@ ${source}
             validateDifficultySubstance(questions, requestedDifficulty);
             if (isObjective) validateMCQs(questions);
 
-            return questions.map((q, index) => {
+            const normalizedQuestions = questions.map((q, index) => {
                 const text = String(q?.text || q?.question || '').trim() || 'Error reading question text';
                 if (isObjective) {
                     let answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
@@ -515,6 +523,34 @@ ${source}
                     difficulty: requestedDifficulty,
                 };
             });
+
+            if (isPartialResponse) {
+                if (recoveryDepth >= 2) {
+                    throw new Error(`AI returned only ${normalizedQuestions.length} of ${count} requested questions after recovery attempts.`);
+                }
+                const missingCount = count - normalizedQuestions.length;
+                const missingMarks = Array.isArray(marksForQuestions)
+                    ? marksForQuestions.slice(normalizedQuestions.length)
+                    : null;
+                const missingQuestions = await generateQuestionsFromText({
+                    text,
+                    difficulty: requestedDifficulty,
+                    count: missingCount,
+                    isObjective,
+                    marksForQuestions: missingMarks,
+                    recoveryDepth: recoveryDepth + 1,
+                    excludedQuestionTexts: [
+                        ...excludedQuestionTexts,
+                        ...normalizedQuestions.map(question => question.text),
+                    ],
+                });
+                const combined = [...normalizedQuestions, ...missingQuestions]
+                    .map((question, index) => ({ ...question, id: `ai_q${index}` }));
+                validateCommonQuestions(combined, count);
+                return combined;
+            }
+
+            return normalizedQuestions;
         } catch (error) {
             lastError = error;
             console.error(`AI Generation / Validation Error (attempt ${attempt} of ${MAX_RETRIES}):`, error.message);
