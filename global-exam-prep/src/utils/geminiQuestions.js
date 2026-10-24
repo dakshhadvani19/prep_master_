@@ -1,5 +1,13 @@
 const MAX_SOURCE_CHARS = 6000;
 const MAX_RETRIES = 3;
+const MAX_RATE_LIMIT_RETRIES = 4;
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+function parseRetryAfterSeconds(message) {
+    const match = String(message ?? '').match(/try again in\\s+([\\d.]+)\\s*s/i);
+    return match ? Number(match[1]) : 0;
+}
+
 const VALID_DIFFICULTIES = new Set(['easy', 'medium', 'hard']);
 
 const DIFFICULTY_BLUEPRINT = {
@@ -358,6 +366,7 @@ ${source}
     }
 
     let lastError = null;
+    let rateLimitRetries = 0;
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
         try {
             let response;
@@ -384,7 +393,10 @@ ${source}
                 const errorBody = await response.json().catch(() => ({}));
                 const message = errorBody.error?.message || response.status;
                 const error = new Error(`AI generation failed: ${message}`);
-                if (response.status === 429) error.retryAfter = Number(response.headers.get('retry-after')) || 0;
+                if (response.status === 429) {
+                    error.isRateLimit = true;
+                    error.retryAfter = Number(response.headers.get('retry-after')) || parseRetryAfterSeconds(message);
+                }
                 throw error;
             }
 
@@ -450,9 +462,24 @@ ${source}
         } catch (error) {
             lastError = error;
             console.error(`AI Generation / Validation Error (attempt ${attempt} of ${MAX_RETRIES}):`, error.message);
-            // If it's a rate-limit error, don't retry immediately — let the caller handle retryAfter
-            if (error.retryAfter) throw error;
-            // Otherwise continue to next retry attempt
+            // Rate limits are temporary. Wait for Groq's reset hint and retry the same
+            // validation attempt instead of treating this as a bad question or failing the exam.
+            const rateLimited = error.isRateLimit || error.retryAfter > 0 || /rate limit reached|too many requests/i.test(error.message);
+            if (rateLimited) {
+                if (rateLimitRetries >= MAX_RATE_LIMIT_RETRIES) {
+                    throw new Error(`Groq rate limit persisted after ${MAX_RATE_LIMIT_RETRIES} retries. Please try generating the exam again. ${error.message}`);
+                }
+                rateLimitRetries += 1;
+                const suggestedSeconds = error.retryAfter || parseRetryAfterSeconds(error.message);
+                const backoffSeconds = Math.min(2 ** rateLimitRetries, 20);
+                // Add a small buffer so the retry does not hit the same TPM window edge.
+                const waitSeconds = Math.min(Math.max(suggestedSeconds || backoffSeconds, 1), 60) + 1;
+                console.warn(`Groq TPM rate limit: retry ${rateLimitRetries}/${MAX_RATE_LIMIT_RETRIES} in ${waitSeconds.toFixed(1)}s.`);
+                await sleep(waitSeconds * 1000);
+                attempt -= 1;
+                continue;
+            }
+            // Validation/format errors still use the normal bounded correction retries.
         }
     }
 
