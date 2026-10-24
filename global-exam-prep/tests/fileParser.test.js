@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getDocument } from 'pdfjs-dist';
-import { extractPdfText, MAX_PDF_PAGES } from '../src/utils/fileParser';
+import { extractPdfText, extractTextFromFile, MAX_PDF_PAGES } from '../src/utils/fileParser';
 
 vi.mock('pdfjs-dist', () => ({
     GlobalWorkerOptions: { workerSrc: null },
@@ -33,7 +33,11 @@ describe('fileParser PDF extraction', () => {
         const pdf = makePdf(50);
         getDocument.mockReturnValue({ promise: Promise.resolve(pdf.document) });
 
-        const text = await extractPdfText(new ArrayBuffer(8), STUDY_PDF_OPTIONS);
+        const text = await extractTextFromFile({
+            name: 'notes.pdf',
+            size: 8,
+            arrayBuffer: async () => new ArrayBuffer(8),
+        });
 
         expect(pdf.getPage).toHaveBeenCalledTimes(50);
         expect(text).toContain('[Page 1]\nPage content 1');
@@ -46,7 +50,11 @@ describe('fileParser PDF extraction', () => {
         const pdf = makePdf(51);
         getDocument.mockReturnValue({ promise: Promise.resolve(pdf.document) });
 
-        await expect(extractPdfText(new ArrayBuffer(8), STUDY_PDF_OPTIONS)).rejects.toThrow(/51 pages.*maximum allowed is 50/i);
+        await expect(extractTextFromFile({
+            name: 'notes.pdf',
+            size: 8,
+            arrayBuffer: async () => new ArrayBuffer(8),
+        })).rejects.toThrow(/51 pages.*maximum allowed is 50/i);
         expect(pdf.getPage).not.toHaveBeenCalled();
         expect(pdf.destroy).toHaveBeenCalledTimes(1);
     });
