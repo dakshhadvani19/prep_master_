@@ -9,7 +9,7 @@ function makePagedText(prefix, count, fillerLength = 900) {
 }
 
 describe('uploadContext', () => {
-    it('uses a 30,000-character default upload budget', () => {
+    it('uses configured per-exam upload context budgets', () => {
         expect(UPLOAD_CONTEXT_MAX_CHARS).toBe(12000);
         expect(UPLOAD_MCQ_CONTEXT_MAX_CHARS).toBe(9000);
     });
