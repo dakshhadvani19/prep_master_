@@ -32,7 +32,7 @@ function splitSourceIntoParts(text, partCount) {
         }
         if (boundary < minBoundary || boundary > maxBoundary) boundary = target;
         parts.push(text.slice(start, boundary).trim());
-        start = boundary < text.length && /\\s/.test(text[boundary]) ? boundary + 1 : boundary;
+        start = boundary < text.length && /\s/.test(text[boundary]) ? boundary + 1 : boundary;
     }
     parts.push(text.slice(start).trim());
     return parts;
