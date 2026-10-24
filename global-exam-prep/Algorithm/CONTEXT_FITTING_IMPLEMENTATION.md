@@ -50,12 +50,9 @@ Difficulty changes cognitive demand only — never exam eligibility, scope, coun
 
 ### Step 3 — Estimate Fit Within 6,000 Characters
 
-1. Concatenate the context prefix (academic context) + scope chapter content.
-2. If total ≤ 6,000 characters, send as a single batch.
-3. If total > 6,000 characters, split at chapter boundaries:
-   - Assign whole chapters to batches. Never split mid-chapter.
-   - Each batch must fit within the remaining budget after reserving space for system instructions, scope block, and output schema.
-   - If a single chapter exceeds the budget, that chapter is processed alone and a truncation note is appended (explicit, never silent).
+1. Select the verified in-scope chapters and add the academic context prefix.
+2. **Mid-2 MCQ:** build one balanced representative excerpt across all in-scope chapters, constrained to 6,000 characters. Keep each chapter heading, preserve the beginning/end of long chapter content with an explicit omission marker, and do not use only the first chapter batch.
+3. **Theory exams:** if the source exceeds 6,000 characters, split at chapter boundaries and allocate questions/marks across those source batches. Never split an ordinary chapter across batches; oversized single chapters must carry an explicit truncation marker.
 
 ### Step 4 — Construct Coverage Plan
 
@@ -87,7 +84,7 @@ For every request, require the requested count in the schema where supported and
 
 ### Step 6 — Combine and Validate
 
-1. Combine all batch question arrays into a single exam.
+1. For theory, combine all chapter-batch question arrays. For MCQs, use the single full-paper response plus any bounded missing-question recovery responses.
 2. Re-validate the complete exam:
    - Total question count matches the configured count.
    - Total marks match the exam blueprint.
