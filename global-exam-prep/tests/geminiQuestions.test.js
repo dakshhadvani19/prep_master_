@@ -1,6 +1,6 @@
 /**
- * Regression tests for geminiQuestions.js — AI question generation with
- * strict JSON Schema (Groq structured output) and bounded retry logic.
+ * Regression tests for prompt-led Groq question generation with minimal
+ * response-shape guards and bounded recovery.
  *
  * Covers the 12 failure modes:
  *   1. Valid MCQ JSON
@@ -121,7 +121,7 @@ function buildTheoryBody(count, marksSequence, stemOffset = 0) {
     return { choices: [{ message: { content: JSON.stringify({ questions }) } }] };
 }
 
-describe('geminiQuestions — strict JSON Schema migration', () => {
+describe('geminiQuestions — prompt-led generation with minimal format checks', () => {
     beforeEach(() => {
         fetchMock.mockReset();
         vi.restoreAllMocks();
@@ -176,37 +176,8 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
         });
     });
 
-    describe('3. Strict-schema config', () => {
-        it('buildMcqSchema enforces required fields and additionalProperties: false', async () => {
-            const { buildMcqSchema } = await importModule();
-            const schema = buildMcqSchema(3);
-            expect(schema.type).toBe('json_schema');
-            expect(schema.json_schema.strict).toBe(true);
-            const items = schema.json_schema.schema.properties.questions.items;
-            expect(items.required).toEqual(['text', 'options', 'answer']);
-            expect(items.additionalProperties).toBe(false);
-            expect(items.properties.options.minItems).toBe(4);
-            expect(items.properties.options.maxItems).toBe(4);
-            expect(items.properties.answer.enum).toEqual([0, 1, 2, 3]);
-            expect(schema.json_schema.schema.properties.questions.minItems).toBe(3);
-            expect(schema.json_schema.schema.properties.questions.maxItems).toBe(3);
-        });
-
-        it('buildTheorySchema does not force all questions to share one mark value', async () => {
-            const { buildTheorySchema } = await importModule();
-            const schema = buildTheorySchema(3);
-            const items = schema.json_schema.schema.properties.questions.items;
-            expect(items.properties.marks.type).toBe('integer');
-            expect(items.properties.marks.enum).toBeUndefined();
-            expect(items.properties.marks.const).toBeUndefined();
-            const questionsProp = schema.json_schema.schema.properties.questions;
-            expect(questionsProp.minItems).toBe(3);
-            expect(questionsProp.maxItems).toBe(3);
-        });
-    });
-
     describe('3a. Full MCQ paper is requested once', () => {
-        it('sends all 30 MCQs in one request with an exact-count schema', async () => {
+        it('sends all 30 MCQs in one request using JSON-object mode', async () => {
             const { generateQuestionsFromText } = await importModule();
             fetchMock.mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(30)));
 
