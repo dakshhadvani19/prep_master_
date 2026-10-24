@@ -31,8 +31,14 @@ export default async function handler(req) {
 
         if (!res.ok) {
             const err = await res.json().catch(() => ({}));
+            const responseHeaders = new Headers({ 'Content-Type': 'application/json' });
+            // Forward Groq's rate-limit reset headers so the browser can wait accurately.
+            for (const header of ['retry-after', 'x-ratelimit-reset-tokens']) {
+                const value = res.headers.get(header);
+                if (value) responseHeaders.set(header, value);
+            }
             return new Response(JSON.stringify({ error: { message: err.error?.message || `Groq API Error: ${res.status}` } }), {
-                status: res.status, headers: { 'Content-Type': 'application/json' }
+                status: res.status, headers: responseHeaders
             });
         }
 
