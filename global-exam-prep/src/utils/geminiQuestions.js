@@ -192,8 +192,9 @@ function validateCommonQuestions(questions, count, isObjective = false) {
             throw new Error(`AI response format error: question ${index + 1} has no text field.`);
         }
         if (isObjective) {
-            if (!Array.isArray(question.options) || question.options.length !== 4) {
-                throw new Error(`AI response format error: MCQ ${index + 1} must contain four options.`);
+            if (!Array.isArray(question.options) || question.options.length !== 4
+                || question.options.some(option => typeof option !== 'string' || !option.trim())) {
+                throw new Error(`AI response format error: MCQ ${index + 1} must contain four non-empty string options.`);
             }
             const answer = typeof question.answer === 'string' && /^[A-D]$/i.test(question.answer)
                 ? question.answer.toUpperCase().charCodeAt(0) - 65
