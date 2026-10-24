@@ -33,14 +33,14 @@ These remain human-readable reference/specification files. If they conflict with
 
 - Departmental subject: Mid-1 MCQ and Mid-2 MCQ; no ESE unless authoritative course policy explicitly permits it.
 - Non-departmental subject: Mid-1 theory, Mid-2 MCQ, and ESE theory when eligible.
-- MCQ: exactly 30 questions, four options each, one zero-based answer index per question. The existing database mapping flattens the options in question order (120 option entries).
-- Mid-1 theory: 30 marks, exactly two 1-mark questions; remaining 28 marks from 4-/8-mark questions.
-- ESE theory: 60 marks, exactly two 1-mark questions plus one 2-mark question; remaining 56 marks from 4-/8-mark questions. Stop if an official blueprint conflicts.
+- MCQ: exactly 30 questions at every difficulty, four options each, one zero-based answer index per question. Use small generation calls (up to 5 questions each), then combine and validate all 30. The existing database mapping flattens the options in question order (120 option entries).
+- Mid-1 theory: exactly 7 questions, two 1-mark, three 4-mark and two 8-mark; 30 marks total. Interleave mark values.
+- ESE theory: exactly 13 questions, two 1-mark, one 2-mark, six 4-mark and four 8-mark; 60 marks total. Interleave mark values. One-mark questions ask for one brief fact/point, not a page-length answer. Stop if an official blueprint conflicts.
 - Mid-1 scope: first 50% of ordered syllabus, accounting for verified unit/contact-hour weighting where available. ESE covers the full relevant syllabus unless official policy narrows it.
 - Difficulty changes cognitive demand, not syllabus boundaries, exam format, counts, eligibility or marks.
 
 ## Important implementation status
 
-The canonical prompt template is committed, but **runtime integration is not complete**. The current `global-exam-prep/src/utils/geminiQuestions.js` uses a simpler prompt and has a `MAX_SOURCE_CHARS = 6000` truncation cap. The template describes the intended design; backend source retrieval, prompt assembly, model call, schema mapping, persistence and end-to-end testing still need to be implemented and verified.
+The canonical prompt template is committed, and the current runtime uses bounded question batches plus exact blueprint validation. **Run the application tests and a real exam smoke test before treating the latest behaviour as production-verified.** The current `global-exam-prep/src/utils/geminiQuestions.js` uses a simpler prompt and has a `MAX_SOURCE_CHARS = 6000` truncation cap. The template describes the intended design; backend source retrieval, prompt assembly, model call, schema mapping, persistence and end-to-end testing still need to be implemented and verified.
 
 If any rule conflicts with a verified official course blueprint, stop and flag the conflict rather than silently overriding authoritative policy.
