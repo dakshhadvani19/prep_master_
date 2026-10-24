@@ -9,7 +9,8 @@ Generate a comprehensive end-semester theory paper grounded in the complete veri
 - Total: exactly 60 marks.
 - Include exactly two 1-mark questions (2 marks total).
 - Include one 2-mark question.
-- The remaining 56 marks must be made from 4-mark and 8-mark questions. Valid combinations satisfy `4a + 8b = 56` for non-negative integers a and b (for example, seven 8-mark questions, or twelve 4-mark questions plus one 8-mark question).
+- Use this balanced **13-question** distribution by default: two 1-mark, one 2-mark, six 4-mark, and four 8-mark questions (2 + 2 + 24 + 32 = 60 marks). Interleave short, medium, and long questions throughout the paper.
+- Do not generate an ESE consisting only of 1-mark, 2-mark and 8-mark questions. The default distribution above is mandatory unless a verified official blueprint explicitly overrides it.
 - Every question must state its mark value. The sum of all question marks must be exactly 60.
 - If the official blueprint forbids a 2-mark question or otherwise conflicts with this distribution, do not improvise. Return a clear configuration conflict for the backend to handle instead of emitting an invalid paper.
 
@@ -19,10 +20,10 @@ Generate a comprehensive end-semester theory paper grounded in the complete veri
 - Include relevant practical, coding, numerical or applied questions only when supported by the subject syllabus and appropriate to their mark values.
 
 ## Question construction and marking
-- 1 mark: one precise fact, term, result or small step.
+- 1 mark: one precise fact, term, result or small step. Expected answer: usually one sentence or 1–2 lines. Do not ask for a page-long explanation, a full architecture, or multiple subparts for 1 mark.
 - 2 marks: a short, bounded response with two creditable elements or a compact calculation.
-- 4 marks: a bounded explanation, comparison, method or application with a four-mark rubric.
-- 8 marks: a fuller explanation, worked solution, multi-step task or reasoned application with an eight-mark rubric.
+- 4 marks: a bounded explanation, comparison, method or application with around four distinct creditable points/steps and a four-mark rubric.
+- 8 marks: a fuller explanation, worked solution, multi-step task or reasoned application with an eight-mark rubric and answer depth appropriate to 8 marks.
 - Provide a model answer and marking rubric for every question. Rubric marks must add up exactly to the question's mark value. Accept equivalent technically correct answers where appropriate.
 - Avoid filler questions, duplication, ambiguous prompts, hidden assumptions and unsupported facts.
 
