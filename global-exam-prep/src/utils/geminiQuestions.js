@@ -117,12 +117,21 @@ function validateCommonQuestions(questions, count) {
     }
 
     const seen = new Set();
+    const seenTokenSets = [];
     for (const [index, q] of questions.entries()) {
         const text = typeof q?.text === 'string' ? q.text.trim() : '';
         const normalized = normalizeText(text);
         if (text.length < 12) throw new Error(`Question ${index + 1} is empty or too short. Please retry generation.`);
-        if (seen.has(normalized)) throw new Error(`Question quality check failed: duplicate question at position ${index + 1}. Please retry.`);
+        if (seen.has(normalized)) throw new Error(`Question quality check failed: exact duplicate question at position ${index + 1}. Please retry.`);
         seen.add(normalized);
+        const tokens = new Set(normalized.split(/[^a-z0-9]+/).filter(token => token.length > 2));
+        const nearDuplicate = seenTokenSets.some(previous => {
+            const intersection = [...tokens].filter(token => previous.has(token)).length;
+            const union = new Set([...tokens, ...previous]).size;
+            return union > 0 && intersection / union >= 0.82;
+        });
+        if (nearDuplicate) throw new Error(`Question quality check failed: near-duplicate question at position ${index + 1}. Please retry with a distinct concept or reasoning task.`);
+        seenTokenSets.push(tokens);
     }
 }
 
@@ -354,19 +363,23 @@ ${source}
             if (!Array.isArray(questions) || questions.length === 0) {
                 throw new Error('AI returned no questions. Please retry generation.');
             }
+            // Reject incomplete or duplicate response sets instead of letting a partial
+            // Groq response appear to be a complete exam.
+            validateCommonQuestions(questions, count);
+            validateDifficultySubstance(questions, requestedDifficulty);
+            if (isObjective) validateMCQs(questions);
             // Groq response-content verification is archived in removed_verification/.
 
-            const FALLBACK_OPTIONS = ['True', 'False', 'None of the above', 'All of the above'];
             return questions.map((q, index) => {
                 const text = String(q?.text || q?.question || '').trim() || 'Error reading question text';
                 if (isObjective) {
                     let answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
                         ? q.answer.toUpperCase().charCodeAt(0) - 65
                         : Number(q.answer);
-                    let opts = Array.isArray(q.options) ? q.options.map(option => String(option).trim()) : [...FALLBACK_OPTIONS];
-                    if (opts.length < 4) opts = [...opts, ...FALLBACK_OPTIONS.slice(opts.length)];
-                    if (opts.length > 4) opts = opts.slice(0, 4);
-                    if (!Number.isInteger(answer) || answer < 0 || answer > 3) answer = 0;
+                    const opts = q.options.map(option => String(option).trim());
+                    if (!Number.isInteger(answer) || answer < 0 || answer > 3) {
+                        throw new Error(`MCQ ${index + 1} has an invalid answer index.`);
+                    }
                     const randomized = shuffleWithAnswer(opts, answer);
                     return {
                         id: `ai_q${index}`,
