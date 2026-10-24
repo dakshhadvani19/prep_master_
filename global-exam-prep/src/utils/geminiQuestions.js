@@ -255,7 +255,7 @@ export async function generateQuestionsFromText({
                 isObjective,
                 marksForQuestions: batchMarks,
             });
-            combined.push(...batch.map(question => ({ ...question, id: `ai_q${combined.length}` })));
+            combined.push(...batch.map((question, index) => ({ ...question, id: `ai_q${offset + index}` })));
         }
         // Cross-batch validation is necessary because each response is validated alone.
         validateCommonQuestions(combined, count);
