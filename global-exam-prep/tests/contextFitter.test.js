@@ -27,10 +27,17 @@ describe('contextFitter', () => {
     it('EXAM_CONFIG has mid1, mid2, ese', () => {
         expect(EXAM_CONFIG.mid1.type).toBe('subjective');
         expect(EXAM_CONFIG.mid1.totalMarks).toBe(30);
+        expect(EXAM_CONFIG.mid1.questionCount).toBe(7);
+        expect(EXAM_CONFIG.mid1.markSequence).toEqual([1, 4, 1, 8, 4, 8, 4]);
+        expect(EXAM_CONFIG.mid1.markSequence.reduce((a, b) => a + b, 0)).toBe(30);
         expect(EXAM_CONFIG.mid2.type).toBe('objective');
         expect(EXAM_CONFIG.mid2.totalMarks).toBe(30);
+        expect(EXAM_CONFIG.mid2.questionCount).toBe(30);
         expect(EXAM_CONFIG.ese.type).toBe('subjective');
         expect(EXAM_CONFIG.ese.totalMarks).toBe(60);
+        expect(EXAM_CONFIG.ese.questionCount).toBe(13);
+        expect(EXAM_CONFIG.ese.markSequence).toEqual([1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]);
+        expect(EXAM_CONFIG.ese.markSequence.reduce((a, b) => a + b, 0)).toBe(60);
     });
 
 
