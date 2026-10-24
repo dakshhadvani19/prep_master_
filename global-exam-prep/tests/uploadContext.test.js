@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS } from '../src/utils/uploadContext';
+import { prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS, UPLOAD_MCQ_CONTEXT_MAX_CHARS } from '../src/utils/uploadContext';
 
 function makePagedText(prefix, count, fillerLength = 900) {
     return Array.from({ length: count }, (_, index) => {
@@ -10,7 +10,8 @@ function makePagedText(prefix, count, fillerLength = 900) {
 
 describe('uploadContext', () => {
     it('uses a 30,000-character default upload budget', () => {
-        expect(UPLOAD_CONTEXT_MAX_CHARS).toBe(30000);
+        expect(UPLOAD_CONTEXT_MAX_CHARS).toBe(12000);
+        expect(UPLOAD_MCQ_CONTEXT_MAX_CHARS).toBe(9000);
     });
 
     it('preserves all extracted text when the upload fits within the budget', () => {
