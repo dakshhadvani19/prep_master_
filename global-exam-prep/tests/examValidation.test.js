@@ -132,7 +132,7 @@ describe('examValidation', () => {
             expect(result.errors.some((e) => e.includes('invalid_answer_index'))).toBe(true);
         });
 
-        it('detects duplicate questions', () => {
+        it('does not reject repeated stems through a semantic quality gate', () => {
             const questions = Array.from({ length: 30 }, (_, i) => ({
                 id: `q${i}`,
                 text: i === 0 || i === 1 ? 'Duplicate question text?' : `Unique question ${i}?`,
@@ -140,17 +140,11 @@ describe('examValidation', () => {
                 difficulty: 'medium',
                 options: ['A', 'B', 'C', 'D'],
                 answer: 0,
-                review: {
-                    correctReason: 'Correct because.',
-                    distractorReasons: ['Wrong A.', 'Wrong B.', 'Wrong C.'],
-                    singleBestAnswerCheck: 'Only one option satisfies every stated condition.',
-                    difficultyEvidence: 'Needs reasoning.',
-                },
             }));
 
             const result = validateExam(questions, EXAM_CONFIG.mid2, null);
-            expect(result.valid).toBe(false);
-            expect(result.errors.some((e) => e.includes('duplicate_question'))).toBe(true);
+            expect(result.valid).toBe(true);
+            expect(result.errors.some((e) => e.includes('duplicate_question'))).toBe(false);
         });
     });
 
