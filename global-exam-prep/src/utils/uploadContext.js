@@ -141,7 +141,7 @@ export function prepareUploadContext(files, maxChars = UPLOAD_CONTEXT_MAX_CHARS)
     const headerChars = headers.reduce((sum, header) => sum + header.length, 0)
         + Math.max(0, documents.length - 1) * 2;
     const note = TRUNCATION_NOTE;
-    const sourceBudget = Math.max(0, maxBudget - headerChars - note.length);
+    const sourceBudget = Math.max(0, maxBudget - headerChars - note.length - 2);
     const allocations = allocateEvenly(documents.map(file => file.text.length), sourceBudget);
 
     const text = documents.map((file, index) => {
