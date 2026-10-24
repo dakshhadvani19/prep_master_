@@ -211,6 +211,13 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
         it('fills the missing MCQs when a request for five returns only two', async () => {
             const { generateQuestionsFromText } = await importModule();
             fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(400, {
+                    error: {
+                        message: "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.",
+                        category: 'generation_format',
+                        providerCode: 'json_validate_failed',
+                    },
+                }))
                 .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(2, 0)))
                 .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(3, 2)));
 
@@ -223,7 +230,8 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
 
             expect(result).toHaveLength(5);
             expect(new Set(result.map(question => question.text)).size).toBe(5);
-            expect(fetchMock).toHaveBeenCalledTimes(2);
+            expect(fetchMock).toHaveBeenCalledTimes(3);
+            expect(JSON.parse(fetchMock.mock.calls[1][1].body).response_format).toEqual({ type: 'json_object' });
         });
 
         it('recovers theory short responses while keeping the caller mark sequence', async () => {
