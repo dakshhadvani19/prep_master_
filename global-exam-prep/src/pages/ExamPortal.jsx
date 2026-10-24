@@ -86,7 +86,7 @@ export default function ExamPortal() {
 - Course: ${courseDetail.title}
 - Subject: ${subjectDetail.title} (${subjectId})\n\n` : '';
 
-    // Static question counts for the AI (25/30/40 for MCQs; 4/7 for theory).
+    // Exam question counts come from the current fixed paper blueprint (30 MCQs; 7 Mid-1 or 13 ESE theory).
     // Not shown to the user in pre-exam UI, per request.
     const examCount = examInfo?.type === 'objective' ? 30 : (examType === 'final' ? 13 : 7);
 
