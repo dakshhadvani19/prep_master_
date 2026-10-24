@@ -2,7 +2,10 @@
  * Upload-only source-context fitting. Built-in syllabus context remains governed
  * by contextFitter.js and geminiQuestions.js defaults.
  */
-export const UPLOAD_CONTEXT_MAX_CHARS = 30000;
+// Conservative defaults for Groq's lower TPM tier. Mid-2 generates a large
+// 30-question response in one request, so its input context is smaller.
+export const UPLOAD_CONTEXT_MAX_CHARS = 12000;
+export const UPLOAD_MCQ_CONTEXT_MAX_CHARS = 9000;
 const MAX_GENERIC_SECTION_CHARS = 1200;
 const TRUNCATION_NOTE = '[NOTE: This is a balanced excerpt from uploaded study material. Some source text was omitted to fit the context budget; only the supplied text is available when generating questions.]';
 
