@@ -107,8 +107,8 @@ function validateCommonQuestions(questions, count, isObjective = false) {
             throw new Error(`AI response format error: question ${index + 1} is not an object.`);
         }
         const text = question.text ?? question.question;
-        if (typeof text !== 'string') {
-            throw new Error(`AI response format error: question ${index + 1} has no text field.`);
+        if (typeof text !== 'string' || !text.trim()) {
+            throw new Error(`AI response format error: question ${index + 1} has no non-empty text field.`);
         }
         if (isObjective) {
             if (!Array.isArray(question.options) || question.options.length !== 4
@@ -317,7 +317,7 @@ ${source}
             validateCommonQuestions(questions, questions.length, isObjective);
 
             const normalizedQuestions = questions.map((q, index) => {
-                const text = String(q?.text || q?.question || '').trim() || 'Error reading question text';
+                const text = String(q?.text || q?.question || '').trim();
                 if (isObjective) {
                     let answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
                         ? q.answer.toUpperCase().charCodeAt(0) - 65
