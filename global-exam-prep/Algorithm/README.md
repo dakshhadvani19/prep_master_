@@ -41,6 +41,6 @@ These remain human-readable reference/specification files. If they conflict with
 
 ## Important implementation status
 
-The canonical prompt template is committed, and the current runtime uses bounded question batches plus exact blueprint validation. **Run the application tests and a real exam smoke test before treating the latest behaviour as production-verified.** The current `global-exam-prep/src/utils/geminiQuestions.js` uses a simpler prompt and has a `MAX_SOURCE_CHARS = 6000` truncation cap. The template describes the intended design; backend source retrieval, prompt assembly, model call, schema mapping, persistence and end-to-end testing still need to be implemented and verified.
+The current runtime requests the entire **30-question Mid-2 MCQ paper in one model call**, using a balanced 6,000-character excerpt from all in-scope chapters and an exact-count schema. Only theory exams use small mark-preserving batches. If JSON-object fallback returns a short set, the generator has bounded missing-question recovery and still validates the complete paper. **Run the application tests and a real exam smoke test before treating the latest behaviour as production-verified.** The canonical prompt template and current runtime are not fully integrated; keep documentation aligned with the actual code.
 
 If any rule conflicts with a verified official course blueprint, stop and flag the conflict rather than silently overriding authoritative policy.
