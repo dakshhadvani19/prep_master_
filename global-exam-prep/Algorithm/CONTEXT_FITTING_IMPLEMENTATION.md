@@ -80,7 +80,7 @@ Allocate questions or marks across batches proportionally to chapter content siz
 
 **Theory exams:** Keep chapter-aware batching at no more than **3 theory questions per request** so the caller-provided marks sequence remains manageable. Allocate exact marks across theory calls, combine the responses, and validate the complete paper.
 
-For every request, require the requested count in the schema where supported and validate the returned count locally. Do not generate fallback placeholder questions.
+For every request, state the exact count and output format in the prompt. The active runtime uses JSON-object mode rather than strict JSON Schema mode; it applies only structural shape checks and exact exam count/mark-blueprint checks. Do not generate fallback placeholder questions.
 
 ### Step 6 — Combine and Validate
 
