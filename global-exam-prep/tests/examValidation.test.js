@@ -157,12 +157,13 @@ describe('examValidation', () => {
     describe('validateExam — Mid-1 Theory', () => {
         it('accepts valid Mid-1 theory exam with two 1-mark questions', () => {
             const questions = [
-                { id: 'q0', text: 'Define X?', type: 'subjective', difficulty: 'easy', marks: 1 },
-                { id: 'q1', text: 'Distinguish Y from Z?', type: 'subjective', difficulty: 'easy', marks: 1 },
-                { id: 'q2', text: 'Explain concept A with example?', type: 'subjective', difficulty: 'medium', marks: 4 },
-                { id: 'q3', text: 'Calculate result B?', type: 'subjective', difficulty: 'medium', marks: 8 },
-                { id: 'q4', text: 'Compare approach C and D?', type: 'subjective', difficulty: 'hard', marks: 8 },
-                { id: 'q5', text: 'Analyze scenario E?', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q0', text: 'State the primary purpose of concept X.', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q1', text: 'Explain how method Y works in a basic case.', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q2', text: 'Name one limitation of concept Z.', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q3', text: 'Analyze the multi-step process used by approach A.', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q4', text: 'Compare the two specified properties of method B.', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q5', text: 'Evaluate approach C under the given constraints.', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q6', text: 'Describe one practical application of concept D.', type: 'subjective', difficulty: 'medium', marks: 4 },
             ];
 
             const result = validateExam(questions, EXAM_CONFIG.mid1, null);
@@ -205,17 +206,20 @@ describe('examValidation', () => {
     describe('validateExam — ESE Theory', () => {
         it('accepts valid ESE theory exam with two 1-mark + one 2-mark', () => {
             const questions = [
-                { id: 'q0', text: 'Define X?', type: 'subjective', difficulty: 'easy', marks: 1 },
-                { id: 'q1', text: 'Define Y?', type: 'subjective', difficulty: 'easy', marks: 1 },
-                { id: 'q2', text: 'List two types?', type: 'subjective', difficulty: 'easy', marks: 2 },
-                { id: 'q3', text: 'Explain concept A with examples?', type: 'subjective', difficulty: 'medium', marks: 8 },
-                { id: 'q4', text: 'Calculate result B step by step?', type: 'subjective', difficulty: 'medium', marks: 8 },
-                { id: 'q5', text: 'Compare approach C and D?', type: 'subjective', difficulty: 'medium', marks: 8 },
-                { id: 'q6', text: 'Analyze scenario E in detail?', type: 'subjective', difficulty: 'hard', marks: 8 },
-                { id: 'q7', text: 'Design system F with constraints?', type: 'subjective', difficulty: 'hard', marks: 8 },
-                { id: 'q8', text: 'Evaluate method G critically?', type: 'subjective', difficulty: 'hard', marks: 8 },
-                { id: 'q9', text: 'Diagnose problem H and recommend?', type: 'subjective', difficulty: 'hard', marks: 8 },
-            ]; // 1+1+2+8+8+8+8+8+8+8 = 60
+                { id: 'q0', text: 'State the purpose of concept X.', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q1', text: 'Explain method A and its main steps.', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q2', text: 'Name one property of concept Y.', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q3', text: 'Analyze concept B using a multi-step example.', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q4', text: 'Compare methods C and D against two criteria.', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q5', text: 'List two types of concept E.', type: 'subjective', difficulty: 'easy', marks: 2 },
+                { id: 'q6', text: 'Design approach F subject to explicit constraints.', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q7', text: 'Describe four key features of system G.', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q8', text: 'Evaluate method H and justify its use.', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q9', text: 'Explain four practical uses of concept I.', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q10', text: 'Diagnose a multi-condition failure involving concept J.', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q11', text: 'Compare two limitations of approach K.', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q12', text: 'Describe the main stages of process L.', type: 'subjective', difficulty: 'medium', marks: 4 },
+            ]; // 2x1 + 1x2 + 6x4 + 4x8 = 60
 
             const result = validateExam(questions, EXAM_CONFIG.ese, null);
             expect(result.valid).toBe(true);
