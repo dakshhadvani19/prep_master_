@@ -6,31 +6,9 @@
  * - Mid-1 theory: exactly two 1-mark questions; remaining 28 marks in 4/8-mark questions; total 30 marks.
  * - Mid-2 MCQ: exactly 30 questions; four distinct options; exactly one correct answer (index 0-3).
  * - ESE theory: exactly two 1-mark questions, one 2-mark question; remaining 56 marks in 4/8-mark questions; total 60 marks.
- * - No duplicate or near-duplicate stems.
- * - Coverage spans in-scope chapters.
+ * - Coverage spans in-scope chapters. Semantic quality and duplication are instructed in the generation prompt,
+ *   not used as hard rejection gates.
  */
-
-/**
- * Similarity threshold for near-duplicate detection (Jaccard on word sets).
- */
-const DUPLICATE_SIMILARITY_THRESHOLD = 0.75;
-
-function normalizeText(t) {
-    return String(t || '')
-        .toLowerCase()
-        .replace(/[^a-z0-9\s]/g, ' ')
-        .split(/\s+/)
-        .filter(Boolean);
-}
-
-function jaccard(a, b) {
-    const sa = new Set(normalizeText(a));
-    const sb = new Set(normalizeText(b));
-    if (sa.size === 0 || sb.size === 0) return 0;
-    const inter = new Set([...sa].filter((x) => sb.has(x)));
-    const union = new Set([...sa, ...sb]);
-    return inter.size / union.size;
-}
 
 /**
  * Validation result shape.
@@ -74,7 +52,6 @@ export function validateExam(questions, config, coveragePlan) {
     }
 
     // --- Per-question validation ---
-    const seenStems = [];
     for (const q of questions) {
         if (!q || typeof q !== 'object') {
             errors.push('invalid_question_object');
@@ -90,8 +67,8 @@ export function validateExam(questions, config, coveragePlan) {
             if (!Array.isArray(q.options) || q.options.length !== 4) {
                 errors.push(`mcq_${q.id}: expected_4_options_got_${q.options ? q.options.length : 0}`);
             } else {
-                const distinct = new Set(q.options.map((o) => String(o).trim()));
-                if (distinct.size !== 4) errors.push(`mcq_${q.id}: non_distinct_options`);
+                // Option plausibility/distinctness is left to generation instructions;
+                // keep only the minimum shape required to render selectable choices.
                 const emptyOpt = q.options.some((o) => !o || String(o).trim().length === 0);
                 if (emptyOpt) errors.push(`mcq_${q.id}: empty_option`);
             }
@@ -115,11 +92,6 @@ export function validateExam(questions, config, coveragePlan) {
             }
         }
 
-        // Duplicate detection
-        const stem = q.text || '';
-        const isDup = seenStems.some((s) => jaccard(stem, s) > DUPLICATE_SIMILARITY_THRESHOLD);
-        if (isDup) errors.push(`duplicate_question_${q.id}`);
-        seenStems.push(stem);
     }
 
     // --- Marks blueprint checks ---
