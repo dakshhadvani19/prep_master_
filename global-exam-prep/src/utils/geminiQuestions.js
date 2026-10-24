@@ -1,4 +1,4 @@
-const MAX_SOURCE_CHARS = 3000;
+const MAX_SOURCE_CHARS = 6000;
 const MAX_RETRIES = 3;
 const MAX_RATE_LIMIT_RETRIES = 4;
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -32,7 +32,7 @@ function splitSourceIntoParts(text, partCount) {
         }
         if (boundary < minBoundary || boundary > maxBoundary) boundary = target;
         parts.push(text.slice(start, boundary).trim());
-        start = boundary + 1;
+        start = boundary < text.length && /\\s/.test(text[boundary]) ? boundary + 1 : boundary;
     }
     parts.push(text.slice(start).trim());
     return parts;
