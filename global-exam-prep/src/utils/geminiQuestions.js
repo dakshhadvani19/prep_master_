@@ -80,7 +80,7 @@ function shuffleWithAnswer(options, answerIndex) {
  * Exact question count, four-option cardinality, and semantic rules are
  * enforced by local validators instead of JSON Schema array-size constraints.
  */
-export function buildMcqSchema() {
+export function buildMcqSchema(count) {
     return {
         type: 'json_schema',
         json_schema: {
@@ -91,12 +91,16 @@ export function buildMcqSchema() {
                 properties: {
                     questions: {
                         type: 'array',
+                        minItems: count,
+                        maxItems: count,
                         items: {
                             type: 'object',
                             properties: {
                                 text: { type: 'string' },
                                 options: {
                                     type: 'array',
+                                    minItems: 4,
+                                    maxItems: 4,
                                     items: { type: 'string' },
                                 },
                                 answer: { type: 'integer', enum: [0, 1, 2, 3] },
@@ -117,7 +121,7 @@ export function buildMcqSchema() {
  * Build a portable strict Groq JSON Schema for theory questions.
  * Exact question count and caller-provided mark sequence are validated locally.
  */
-export function buildTheorySchema() {
+export function buildTheorySchema(count) {
     return {
         type: 'json_schema',
         json_schema: {
@@ -128,6 +132,8 @@ export function buildTheorySchema() {
                 properties: {
                     questions: {
                         type: 'array',
+                        minItems: count,
+                        maxItems: count,
                         items: {
                             type: 'object',
                             properties: {
@@ -301,9 +307,10 @@ export async function generateQuestionsFromText({
         throw new Error('Question count must be an integer between 1 and 50.');
     }
 
-    // Keep each Groq response small. Large 30-MCQ requests can be cut short by
-    // output-token limits, which previously allowed partial exams to slip through.
-    const maxPerResponse = isObjective ? 5 : 3;
+    // MCQ exams must be requested as one complete paper (Mid-2 = 30 MCQs).
+    // Theory generation remains split into small requests to preserve exact marks
+    // and avoid excessive context/output for the longer question prompts.
+    const maxPerResponse = isObjective ? count : 3;
     if (count > maxPerResponse) {
         const combined = [];
         const batchCountTotal = Math.ceil(count / maxPerResponse);
@@ -350,8 +357,8 @@ export async function generateQuestionsFromText({
     // Build strict JSON Schema for structured output. This enforces the response
     // shape at the API level, drastically reducing invalid-JSON failures.
     const responseFormat = isObjective
-        ? buildMcqSchema()
-        : buildTheorySchema();
+        ? buildMcqSchema(count)
+        : buildTheorySchema(count);
 
     const systemMessage = isObjective
         ? `Create accurate, syllabus-grounded MCQs. Return only valid JSON matching the required schema: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations, review fields, or IDs.` 
