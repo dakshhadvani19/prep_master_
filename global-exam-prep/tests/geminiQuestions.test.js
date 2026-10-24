@@ -882,7 +882,7 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
 
             expect(result.map(question => question.marks)).toEqual(EXAM_CONFIG.ese.markSequence);
             expect(result.reduce((sum, question) => sum + question.marks, 0)).toBe(60);
-        });;
+        });
     });
 
     describe('parseModelQuestions', () => {
