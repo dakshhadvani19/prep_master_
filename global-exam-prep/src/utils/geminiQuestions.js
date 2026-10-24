@@ -415,5 +415,5 @@ ${source}
     }
 
     // All retries exhausted
-    throw new Error(`Question generation rejected by validation: ${lastError ? lastError.message : 'Unknown error after ' + MAX_RETRIES + ' attempts'}`);
+    throw new Error(`Question generation failed after ${MAX_RETRIES} attempts: ${lastError ? lastError.message : 'Unknown generation error'}`);
 }
