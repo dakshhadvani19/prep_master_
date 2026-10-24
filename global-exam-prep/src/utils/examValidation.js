@@ -98,10 +98,8 @@ export function validateExam(questions, config, coveragePlan) {
             if (typeof q.answer !== 'number' || q.answer < 0 || q.answer > 3) {
                 errors.push(`mcq_${q.id}: invalid_answer_index`);
             }
-            // Internal review metadata should be present (will be stripped before student view)
-            if (!q.review || typeof q.review !== 'object') {
-                warnings.push(`mcq_${q.id}: missing_internal_review_metadata`);
-            }
+            // Review metadata is optional. The generation prompt omits it to save tokens;
+            // stripReviewMetadata still removes it when older/generated records contain it.
         } else if (q.type === 'subjective') {
             stats.theoryCount++;
             if (typeof q.marks !== 'number' || q.marks <= 0) {
