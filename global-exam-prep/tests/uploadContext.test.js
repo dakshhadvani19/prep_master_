@@ -65,10 +65,10 @@ describe('uploadContext', () => {
 
     it('counts actual extracted text rather than page labels from scanned PDFs', () => {
         expect(countReadableTextChars([
-            { name: 'scan.pdf', text: '[Page 1]\\n\\n[Page 2]\\n' },
+            { name: 'scan.pdf', text: '[Page 1]\n\n[Page 2]\n' },
         ])).toBe(0);
         expect(countReadableTextChars([
-            { name: 'notes.pdf', text: '[Page 1]\\nActual readable content' },
+            { name: 'notes.pdf', text: '[Page 1]\nActual readable content' },
         ])).toBe('Actual readable content'.length);
     });
 
