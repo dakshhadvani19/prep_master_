@@ -58,6 +58,7 @@ For subjective (theory) questions:
 - No answers, rubrics, or hints in the question text.
 - Each question must be unique and specific enough to mark fairly.
 - Marks must sum exactly to the exam's configured total for the section.
+- Match answer depth to marks: a 1-mark question asks for one fact/brief point (normally one sentence or 1–2 lines), never a page-long explanation. A 4-mark question targets roughly four creditable points/steps. An 8-mark question allows a fuller multi-step explanation or solution, but must remain bounded and syllabus-relevant.
 - Easy: concise definition, distinction, or one-step use. Medium: apply, calculate, compare, interpret. Hard: multi-step analysis, design, diagnosis, evaluation, or justified decision.
 ```
 
@@ -103,7 +104,7 @@ Where:
 - `syllabusScopeDescription` — human-readable description of which syllabus portion is in scope (e.g. "Chapters 1–4 of 8 (first 50%)", "Full syllabus, all 8 chapters").
 - `coveragePlan` — table mapping chapter ranges to question/mark allocations, so the model knows how to distribute coverage.
 - `objectiveInstructions` — for MCQ exams: exactly 30 questions, four options each, one correct answer, answer index 0-3 pointing to the correct option before shuffling.
-- `theoryInstructions` — for theory exams: questions with marks, exactly two 1-mark questions + remaining marks in 4- and 8-mark questions (Mid-1: 30 marks; ESE: 60 marks with two 1-mark + one 2-mark + rest 4/8-mark).
+- `theoryInstructions` — Mid-1: exactly 7 questions, two 1-mark, three 4-mark and two 8-mark (30 marks total). ESE: exactly 13 questions, two 1-mark, one 2-mark, six 4-mark and four 8-mark (60 marks total). Interleave the mark values instead of grouping all long questions together.
 
 ---
 
@@ -167,7 +168,7 @@ The generated output is validated before persistence (see `src/utils/examValidat
 
 1. Question count matches the configured count exactly.
 2. MCQ: exactly 4 distinct options, answer index 0-3, internal review present and well-formed.
-3. Theory: marks present and positive; total marks sum matches the exam blueprint (Mid-1: 30; ESE: 60; two 1-mark questions required).
+3. Theory: exact question count, allowed mark values, required mark-value counts, 4/8-mark subtotal and total marks all match the configured blueprint (Mid-1: 7 questions/30 marks; ESE: 13 questions/60 marks).
 4. No duplicate or near-duplicate question stems.
 5. Syllabus coverage: questions span the allocated chapters/topics per the coverage plan.
 6. If any check fails, the batch is rejected and regenerated (up to 3 retries). On persistent failure, a meaningful error is returned to the student — never fabricated coverage.
