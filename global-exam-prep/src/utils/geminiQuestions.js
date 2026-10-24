@@ -533,18 +533,27 @@ ${source}
                 const missingMarks = Array.isArray(marksForQuestions)
                     ? marksForQuestions.slice(normalizedQuestions.length)
                     : null;
-                const missingQuestions = await generateQuestionsFromText({
-                    text,
-                    difficulty: requestedDifficulty,
-                    count: missingCount,
-                    isObjective,
-                    marksForQuestions: missingMarks,
-                    recoveryDepth: recoveryDepth + 1,
-                    excludedQuestionTexts: [
-                        ...excludedQuestionTexts,
-                        ...normalizedQuestions.map(question => question.text),
-                    ],
-                });
+                let missingQuestions;
+                try {
+                    missingQuestions = await generateQuestionsFromText({
+                        text,
+                        difficulty: requestedDifficulty,
+                        count: missingCount,
+                        isObjective,
+                        marksForQuestions: missingMarks,
+                        recoveryDepth: recoveryDepth + 1,
+                        excludedQuestionTexts: [
+                            ...excludedQuestionTexts,
+                            ...normalizedQuestions.map(question => question.text),
+                        ],
+                    });
+                } catch (recoveryError) {
+                    const wrappedError = new Error(
+                        `Could not recover the missing ${missingCount} question(s): ${recoveryError.message}`
+                    );
+                    wrappedError.partialRecoveryFailed = true;
+                    throw wrappedError;
+                }
                 const combined = [...normalizedQuestions, ...missingQuestions]
                     .map((question, index) => ({ ...question, id: `ai_q${index}` }));
                 validateCommonQuestions(combined, count);
@@ -555,6 +564,9 @@ ${source}
         } catch (error) {
             lastError = error;
             console.error(`AI Generation / Validation Error (attempt ${attempt} of ${MAX_RETRIES}):`, error.message);
+            // Recovery already performed its own bounded retries. Do not regenerate
+            // the original partial batch when only the missing-question request failed.
+            if (error.partialRecoveryFailed) throw error;
             // A repeated schema-configuration error is not made better by retrying.
             // Other failures (including json_validate_failed in JSON-object mode and
             // rate limits) continue through the bounded retry policy.
