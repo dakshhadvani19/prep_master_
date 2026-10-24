@@ -5,7 +5,7 @@ export const examPrompts = {
     timeMinutes: 60,
     totalMarks: 30,
     type: 'subjective',
-    description: "30-mark theory Mid-1 covering the first 50% of the ordered syllabus, with two 1-mark questions and a balanced mix of 4- and 8-mark questions.",
+    description: "30-mark theory Mid-1 covering the first 50% of the ordered syllabus: two 1-mark, three 4-mark, and two 8-mark questions.",
   },
   'mid-2': {
     title: 'Mid-Term 2 (MCQ / Objective)',
