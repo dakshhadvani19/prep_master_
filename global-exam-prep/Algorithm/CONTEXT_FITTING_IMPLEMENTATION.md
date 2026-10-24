@@ -79,6 +79,8 @@ Allocate questions or marks across batches proportionally to chapter content siz
 
 ### Step 5 — Generate Per-Batch
 
+Keep each Groq response small to avoid output-token truncation: request at most **5 MCQs** or **3 theory questions** per response, even when all syllabus content fits in one source batch. Split the exam's exact question/mark allocation across calls, then combine and validate the complete paper.
+
 Additionally split each source batch into small generation requests: at most **5 MCQs per Groq response** and at most **3 theory questions per response**. Even if the source fits in one chapter batch, make multiple calls when needed to reach 30 MCQs or the configured theory count. Require the model to return exactly the requested count for every call.
 
 For each batch:
