@@ -14,7 +14,7 @@ This document defines how syllabus source material is fitted into the 6,000-char
 | Generated output (reserved) | ~1,500 | Room for the model's response tokens |
 | **Source excerpt budget** | **≤ 6,000** | Hard cap enforced by `MAX_SOURCE_CHARS` |
 
-The 6,000-character source cap is a **display/excerpt limit**, not a silent discard. When source material exceeds the cap, it must be split at chapter boundaries, batched, and combined.
+The 6,000-character source cap is a per-request context limit, not permission to silently discard syllabus topics. Theory generation uses chapter batches. For Mid-2 MCQs, the app instead builds one balanced excerpt from every in-scope chapter and requests the complete 30-question paper in one call; omitted middle sections are marked within each chapter excerpt.
 
 ---
 
@@ -77,17 +77,13 @@ Before generation, build a coverage plan:
 
 Allocate questions or marks across batches proportionally to chapter content size. For theory exams, ensure the 1-mark, 2-mark, 4-mark, and 8-mark distribution can be satisfied across batches.
 
-### Step 5 — Generate Per-Batch
+### Step 5 — Generate the Exam
 
-Keep each Groq response small to avoid output-token truncation: request at most **5 MCQs** or **3 theory questions** per response, even when all syllabus content fits in one source batch. Split the exam's exact question/mark allocation across calls, then combine and validate the complete paper.
+**Mid-2 MCQ:** Send one request asking for exactly **30 MCQs**, with an exact-count strict JSON schema. Do not divide the paper into five-question tasks. Build one balanced context within the 6,000-character budget that includes a representative excerpt from every in-scope chapter. If the provider returns fewer than 30 questions in JSON-object fallback mode, preserve valid questions and make a bounded request for only the missing count; never accept or display an incomplete paper.
 
-Additionally split each source batch into small generation requests: at most **5 MCQs per Groq response** and at most **3 theory questions per response**. Even if the source fits in one chapter batch, make multiple calls when needed to reach 30 MCQs or the configured theory count. Require the model to return exactly the requested count for every call.
+**Theory exams:** Keep chapter-aware batching at no more than **3 theory questions per request** so the caller-provided marks sequence remains manageable. Allocate exact marks across theory calls, combine the responses, and validate the complete paper.
 
-For each batch:
-1. Build the user message with the scope block, coverage plan, and that batch's source excerpt.
-2. Call `generateQuestionsFromText` via `/api/ai`.
-3. Validate the batch output against the schema (question count, option count, answer index, marks).
-4. Track which chapters each batch covered.
+For every request, require the requested count in the schema where supported and validate the returned count locally. Do not generate fallback placeholder questions.
 
 ### Step 6 — Combine and Validate
 
@@ -134,8 +130,8 @@ The existing `geminiQuestions.js` enforces `MAX_SOURCE_CHARS = 6000`. When trunc
 |--------|---------------|
 | `src/utils/subjectResolver.js` | Subject ID resolution (bridge → domain/course/subject) |
 | `src/utils/syllabusLoader.js` | Load syllabus JSON from dataset by subject code |
-| `src/utils/contextFitter.js` | Scope selection, batching, coverage plan |
-| `src/utils/geminiQuestions.js` | Model invocation, 6,000-char cap, per-batch validation |
+| `src/utils/contextFitter.js` | Scope selection, theory batching, balanced all-chapter context for the MCQ request |
+| `src/utils/geminiQuestions.js` | Model invocation, 6,000-char cap, exact-count schemas, single-call MCQ generation, bounded partial-response recovery |
 | `src/utils/examValidation.js` | Combined exam validation (counts, marks, duplicates, coverage) |
 | `src/pages/ExamPortal.jsx` | Orchestrates the full flow: consent → syllabus → scope → fit → generate → validate → persist |
 
