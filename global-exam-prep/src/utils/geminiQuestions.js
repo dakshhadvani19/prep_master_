@@ -227,6 +227,7 @@ export async function generateQuestionsFromText({
     difficulty = 'medium',
     count = 10,
     isObjective = true,
+    marksForQuestions = null,
 }) {
     const requestedDifficulty = VALID_DIFFICULTIES.has(difficulty) ? difficulty : 'medium';
     const blueprint = DIFFICULTY_BLUEPRINT[requestedDifficulty];
@@ -298,6 +299,8 @@ ${source}
 ---`;
     } else {
         userPrompt = `Create exactly ${count} original open-ended theory questions grounded only in the provided study material.
+ASSIGNED MARK VALUES IN QUESTION ORDER: ${Array.isArray(marksForQuestions) ? JSON.stringify(marksForQuestions) : 'Follow the caller-provided exam blueprint'}.
+Every question must match its assigned mark value and answer depth. A 1-mark question asks for ONE fact or brief point and should normally be answerable in one sentence or 1–2 lines; never ask for a page-long explanation, full architecture, or multi-part list for 1 mark. A 4-mark question should have roughly four creditable points/steps. An 8-mark question can require a fuller, bounded multi-step explanation or solution.
 DIFFICULTY: ${blueprint.label} (${requestedDifficulty}).
 Reasoning target: ${blueprint.reasoning}.
 1. Easy: concise definition, distinction, or one-step use of a foundational concept.
@@ -308,7 +311,8 @@ Reasoning target: ${blueprint.reasoning}.
 6. If the source is truncated, only rely on visible content.
 
 Required JSON shape:
-{ "questions": [ { "id": "ai_q0", "text": "A clear, assessable question?" } ] }
+{ "questions": [ { "id": "ai_q0", "text": "A clear, assessable question?", "marks": 4 } ] }
+Return the assigned marks for each question in the same order. Do not change the supplied mark sequence.
 
 Study Material:
 ---
@@ -368,6 +372,9 @@ ${source}
             validateCommonQuestions(questions, count);
             validateDifficultySubstance(questions, requestedDifficulty);
             if (isObjective) validateMCQs(questions);
+            else if (Array.isArray(marksForQuestions) && (questions.length !== marksForQuestions.length || questions.some((q, i) => Number(q.marks) !== marksForQuestions[i]))) {
+                throw new Error('Theory response did not follow the required mark sequence: ' + JSON.stringify(marksForQuestions) + '. Please retry.');
+            }
             // Groq response-content verification is archived in removed_verification/.
 
             return questions.map((q, index) => {
@@ -394,7 +401,7 @@ ${source}
                 return {
                     id: `ai_q${index}`,
                     text,
-                    marks: Number.isInteger(q.marks) && q.marks > 0 ? q.marks : (count > 5 ? 14 : 7),
+                    marks: Number.isInteger(q.marks) && q.marks > 0 ? q.marks : (Array.isArray(marksForQuestions) ? marksForQuestions[index] : (count > 5 ? 14 : 7)),
                     type: 'subjective',
                     difficulty: requestedDifficulty,
                 };
