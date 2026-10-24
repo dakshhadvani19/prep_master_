@@ -4,7 +4,7 @@ import { examPrompts, domains } from '../data/mockData';
 import { findSubjectContext } from '../utils/subjectResolver';
 import { universitySyllabus } from '../data/universitySyllabus';
 import { pdfSyllabus } from '../data/pdfSyllabus';
-import { extractTextFromFile } from '../utils/fileParser';
+import { extractTextFromFile, MAX_PDF_PAGES } from '../utils/fileParser';
 import { prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS } from '../utils/uploadContext';
 import { generateQuestionsFromText } from '../utils/geminiQuestions';
 import { fetchSyllabus } from '../utils/syllabusStorage';
@@ -692,7 +692,7 @@ export default function ExamPortal() {
                     >
                         <BookOpen size={36} color="var(--text-tertiary)" style={{ margin: '0 auto 1rem', display: 'block' }} />
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem', fontWeight: 500 }}>Drag & drop files here, or click to browse</p>
-                        <p style={{ color: 'var(--text-tertiary)', fontSize: '0.82rem' }}>Supported: PDF, PPTX, CSV, TXT &bull; PDF max 50 pages &bull; Max 10 MB per file &bull; Up to 3 files</p>
+                        <p style={{ color: 'var(--text-tertiary)', fontSize: '0.82rem' }}>Supported: PDF, PPTX, CSV, TXT &bull; PDF max {MAX_PDF_PAGES} pages &bull; Max 10 MB per file &bull; Up to 3 files</p>
                         <input
                             ref={fileInputRef}
                             type="file"
