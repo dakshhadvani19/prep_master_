@@ -90,7 +90,7 @@ function validateDifficultySubstance(questions, difficulty) {
         // A 1-mark theory item must stay brief even in a hard paper; difficulty
         // must not force a one-mark question to demand multi-step/page-long work.
         if (q?.type === 'subjective' && Number(q?.marks) === 1) {
-            const multiPartCommand = /\\b(explain|describe|discuss|analy[sz]e|evaluate|compare|differentiate|elaborate|illustrate|justify|outline|enumerate|derive|prove|design|construct|write a program|write an algorithm)\\b/i.test(stem);
+            const multiPartCommand = /\b(explain|describe|discuss|analy[sz]e|evaluate|compare|differentiate|elaborate|illustrate|justify|outline|enumerate|derive|prove|design|construct|write a program|write an algorithm)\b/i.test(stem);
             if (stem.length > 180 || multiPartCommand) {
                 throw new Error(`Question quality check failed at question ${index + 1}: a 1-mark item must ask for one concise fact or point, not a multi-part explanation.`);
             }
@@ -407,11 +407,15 @@ ${source}
             // Reject incomplete or duplicate response sets instead of letting a partial
             // Groq response appear to be a complete exam.
             validateCommonQuestions(questions, count);
+            if (!isObjective && Array.isArray(marksForQuestions)) {
+                if (questions.length !== marksForQuestions.length || questions.some((q, i) => Number(q.marks) !== marksForQuestions[i])) {
+                    throw new Error('Theory response did not follow the required mark sequence: ' + JSON.stringify(marksForQuestions) + '. Please retry.');
+                }
+                // Set the expected type before difficulty validation so 1-mark brevity rules apply.
+                questions.forEach(q => { q.type = 'subjective'; });
+            }
             validateDifficultySubstance(questions, requestedDifficulty);
             if (isObjective) validateMCQs(questions);
-            else if (Array.isArray(marksForQuestions) && (questions.length !== marksForQuestions.length || questions.some((q, i) => Number(q.marks) !== marksForQuestions[i]))) {
-                throw new Error('Theory response did not follow the required mark sequence: ' + JSON.stringify(marksForQuestions) + '. Please retry.');
-            }
             // Groq response-content verification is archived in removed_verification/.
 
             return questions.map((q, index) => {
