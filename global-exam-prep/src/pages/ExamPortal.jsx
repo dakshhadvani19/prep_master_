@@ -429,15 +429,22 @@ export default function ExamPortal() {
             }
             setUploadProgress('Asking AI to generate questions... (may take up to 60s if rate-limited, please wait)');
             const isObj = examInfo.type === 'objective';
-            const examCount = isObj ? (difficulty === 'hard' ? 40 : difficulty === 'medium' ? 30 : 25) : (examType === 'final' ? 7 : 4);
+            const examCount = isObj ? 30 : (examType === 'final' ? 13 : 7);
+            const theoryMarks = examType === 'final'
+                ? [1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]
+                : [1, 4, 1, 8, 4, 8, 4];
 
             const questions = await generateQuestionsFromText({
                 text: combinedText,
                 difficulty,
                 count: examCount,
-                isObjective: isObj
+                isObjective: isObj,
+                marksForQuestions: isObj ? null : theoryMarks,
             });
-            setAiQuestions(questions);
+            const blueprintQuestions = isObj
+                ? questions
+                : questions.map((question, index) => ({ ...question, marks: theoryMarks[index] }));
+            setAiQuestions(blueprintQuestions);
             setExamState('active');
         } catch (err) {
             if (err.retryAfter) {
