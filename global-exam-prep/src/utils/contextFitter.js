@@ -240,6 +240,51 @@ export function buildBatchExcerpt(record, chapterIndices, maxChars = MAX_SOURCE_
 }
 
 /**
+ * Build one balanced source context for a single full-paper MCQ request.
+ * Every in-scope chapter gets a representative excerpt within the total character
+ * budget, avoiding the previous first-batch-only loss of syllabus coverage.
+ */
+export function buildBalancedObjectiveSource(record, chapterIndices, prefix = '', maxChars = MAX_SOURCE_CHARS) {
+    const chapters = Array.isArray(record?.chapters) ? record.chapters : [];
+    const entries = [...new Set(chapterIndices || [])]
+        .map((index) => {
+            const chapter = chapters[index];
+            if (!chapter) return null;
+            return {
+                name: String(chapter.chapter_name || `Chapter ${index + 1}`),
+                content: contentToString(chapter.content).trim(),
+            };
+        })
+        .filter(Boolean);
+
+    const safeMaxChars = Math.max(1, Number(maxChars) || MAX_SOURCE_CHARS);
+    const prefixText = String(prefix || '').slice(0, Math.min(safeMaxChars, Math.floor(safeMaxChars * 0.15)));
+    const lead = prefixText ? `${prefixText}\n\n` : '';
+    if (entries.length === 0) return lead.slice(0, safeMaxChars);
+
+    const chapterHeadingsLength = entries.reduce((sum, entry) => sum + `CHAPTER: ${entry.name}\n`.length, 0);
+    const separatorsLength = Math.max(0, entries.length - 1) * '\n---\n'.length;
+    const availableContentChars = Math.max(0, safeMaxChars - lead.length - chapterHeadingsLength - separatorsLength);
+    const baseBudget = Math.floor(availableContentChars / entries.length);
+    let remainder = availableContentChars - baseBudget * entries.length;
+
+    const excerpts = entries.map((entry) => {
+        const budget = baseBudget + (remainder-- > 0 ? 1 : 0);
+        if (entry.content.length <= budget) return entry.content;
+        if (budget <= 32) return entry.content.slice(0, budget);
+
+        // Preserve the start and end of each chapter with a marker for omitted middle content.
+        const marker = '\n[…middle excerpt omitted…]\n';
+        const retained = Math.max(0, budget - marker.length);
+        const headLength = Math.ceil(retained * 0.6);
+        const tailLength = retained - headLength;
+        return `${entry.content.slice(0, headLength)}${marker}${tailLength ? entry.content.slice(-tailLength) : ''}`;
+    });
+
+    return `${lead}${entries.map((entry, index) => `CHAPTER: ${entry.name}\n${excerpts[index]}`).join('\n---\n')}`.slice(0, safeMaxChars);
+}
+
+/**
  * Full pipeline: select scope, build batches, build coverage plan.
  *
  * @param {object} record — parsed syllabus JSON
