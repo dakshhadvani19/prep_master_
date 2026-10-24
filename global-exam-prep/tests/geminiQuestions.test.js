@@ -701,7 +701,9 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
     describe('10. Bounded recovery + terminal messages', () => {
         it('stops after MAX_RETRIES on repeated validation failures', async () => {
             const { generateQuestionsFromText } = await importModule();
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, buildMcqBody(2))));
+            // Over-counting is a non-recoverable count validation error; partial
+            // under-counts are covered by the adaptive recovery tests above.
+            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, buildMcqBody(4))));
 
             await expect(generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(100),
