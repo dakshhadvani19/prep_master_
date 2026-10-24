@@ -692,7 +692,7 @@ export default function ExamPortal() {
                     >
                         <BookOpen size={36} color="var(--text-tertiary)" style={{ margin: '0 auto 1rem', display: 'block' }} />
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem', fontWeight: 500 }}>Drag & drop files here, or click to browse</p>
-                        <p style={{ color: 'var(--text-tertiary)', fontSize: '0.82rem' }}>Supported: PDF, PPTX, CSV, TXT &bull; Max 10 MB per file &bull; Up to 3 files</p>
+                        <p style={{ color: 'var(--text-tertiary)', fontSize: '0.82rem' }}>Supported: PDF, PPTX, CSV, TXT &bull; PDF max 50 pages &bull; Max 10 MB per file &bull; Up to 3 files</p>
                         <input
                             ref={fileInputRef}
                             type="file"
