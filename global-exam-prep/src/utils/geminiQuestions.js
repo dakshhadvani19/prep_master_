@@ -76,8 +76,9 @@ function shuffleWithAnswer(options, answerIndex) {
 }
 
 /**
- * Build a strict Groq JSON Schema for MCQ generation.
- * Enforces: questions array of exact length; each item has text, options (4 strings), answer (0-3).
+ * Build a portable strict Groq JSON Schema for MCQs.
+ * Exact question count, four-option cardinality, and semantic rules are
+ * enforced by local validators instead of JSON Schema array-size constraints.
  */
 export function buildMcqSchema() {
     return {
@@ -113,9 +114,8 @@ export function buildMcqSchema() {
 }
 
 /**
- * Build a strict Groq JSON Schema for theory generation.
- * Enforces: questions array of exact length; each item has text (string) and marks (integer).
- * Does NOT force all questions to share the same mark value — marks are caller-provided.
+ * Build a portable strict Groq JSON Schema for theory questions.
+ * Exact question count and caller-provided mark sequence are validated locally.
  */
 export function buildTheorySchema() {
     return {
