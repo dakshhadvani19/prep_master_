@@ -172,111 +172,35 @@ export function parseModelQuestions(cleaned) {
     throw new Error('AI response must be a JSON object containing a questions array.');
 }
 
-const GENERIC_DIFFICULTY_WRAPPERS = [
-    /^(case review|case study|a case review|a trainee suggests|during a .* exercise|in a .* case|for a short viva|a worked problem requires|a student must distinguish|a solution review checks)\b/i,
-    /which option (is fully defensible|best satisfies the requirement|is best in this case)\??$/i,
-];
-
-function validateDifficultySubstance(questions, difficulty) {
-    questions.forEach((q, index) => {
-        const stem = String(q?.text ?? '').trim();
-        if (GENERIC_DIFFICULTY_WRAPPERS.some(pattern => pattern.test(stem))) {
-            throw new Error(`Question quality check failed at question ${index + 1}: generic difficulty wrapper detected. The stem must create real reasoning, not merely label a recall question as a case. Please retry.`);
-        }
-        // A 1-mark theory item must stay brief even in a hard paper; difficulty
-        // must not force a one-mark question to demand multi-part/page-long work.
-        if (q?.type === 'subjective' && Number(q?.marks) === 1) {
-            const multiPartCommand = /\b(explain|describe|discuss|analy[sz]e|evaluate|compare|differentiate|elaborate|illustrate|justify|outline|enumerate|derive|prove|design|construct|write a program|write an algorithm)\b/i.test(stem);
-            if (stem.length > 180 || multiPartCommand) {
-                throw new Error(`Question quality check failed at question ${index + 1}: a 1-mark item must ask for one concise fact or point, not a multi-part explanation.`);
-            }
-            return;
-        }
-        if (difficulty === 'medium' || difficulty === 'hard') {
-            const lower = normalizeText(stem);
-            const genericLead = /^(during|in|for|a student|a trainee|case review|case study|a design review|a worked problem)/i.test(stem);
-            const substantiveCue = /\b(if|when|given|because|although|however|must|requires|constraint|result|output|error|debug|compare|choose|select|calculate|determine|interpret|recommend|design|diagnose|under which|provided that|only if|whereas|instead)\b/i.test(lower)
-                || /[=<>≤≥+*/]/.test(stem)
-                || /\b\d+\b/.test(stem);
-            if (genericLead && !substantiveCue) {
-                throw new Error(`Question quality check failed at question ${index + 1}: scenario wording adds no usable condition. Please retry with a decision, data, constraint, or real application.`);
-            }
-        }
-        if (difficulty === 'hard') {
-            const reasoningCueCount = [
-                /\b(if|when|given|provided that|only if|unless)\b/i.test(stem),
-                /\b(compare|evaluate|diagnose|design|justify|recommend|determine|interpret|debug|optimize)\b/i.test(stem),
-                /\b(constraint|requirement|limitation|trade.?off|edge case|error|output|result|condition)\b/i.test(stem),
-                /\b\d+\b|[=<>≤≥+*/]/.test(stem),
-            ].filter(Boolean).length;
-            if (reasoningCueCount < 2) {
-                throw new Error(`Question quality check failed at question ${index + 1}: hard difficulty needs observable multi-step reasoning, a constraint, data, or a meaningful diagnosis/design task. Please retry.`);
-            }
-        }
-    });
-}
-
-function validateCommonQuestions(questions, count) {
+/**
+ * Minimal response-shape checks only. Semantic quality, difficulty heuristics,
+ * duplicate rejection, and option-plausibility filters are intentionally not
+ * applied after generation. Groq receives these requirements in its prompt;
+ * this layer only protects the exam UI's required data shape.
+ */
+function validateCommonQuestions(questions, count, isObjective = false) {
     if (!Array.isArray(questions) || questions.length !== count) {
-        throw new Error(`Question quality check failed: expected exactly ${count} questions, received ${Array.isArray(questions) ? questions.length : 0}. Please retry.`);
+        throw new Error(`AI response format error: expected ${count} question(s), received ${Array.isArray(questions) ? questions.length : 0}.`);
     }
 
-    const seen = new Set();
-    const seenTokenSets = [];
-    for (const [index, q] of questions.entries()) {
-        const text = typeof q?.text === 'string' ? q.text.trim() : '';
-        const normalized = normalizeText(text);
-        if (text.length < 12) throw new Error(`Question ${index + 1} is empty or too short. Please retry generation.`);
-        if (seen.has(normalized)) throw new Error(`Question quality check failed: exact duplicate question at position ${index + 1}. Please retry.`);
-        seen.add(normalized);
-        const tokens = new Set(normalized.split(/[^a-z0-9]+/).filter(token => token.length > 2));
-        const nearDuplicate = seenTokenSets.some(previous => {
-            const intersection = [...tokens].filter(token => previous.has(token)).length;
-            const union = new Set([...tokens, ...previous]).size;
-            return union > 0 && intersection / union >= 0.82;
-        });
-        if (nearDuplicate) throw new Error(`Question quality check failed: near-duplicate question at position ${index + 1}. Please retry with a distinct concept or reasoning task.`);
-        seenTokenSets.push(tokens);
-    }
-}
-
-function validateMCQs(questions) {
-    const forbiddenOptions = new Set(['true', 'false', 'none of the above', 'all of the above', 'both a and b', 'all options']);
-    questions.forEach((q, index) => {
-        if (!Array.isArray(q.options) || q.options.length !== 4 ||
-            q.options.some(option => typeof option !== 'string' || !option.trim())) {
-            throw new Error(`MCQ quality check failed at question ${index + 1}: exactly four non-empty options are required. Please retry.`);
+    questions.forEach((question, index) => {
+        if (!question || typeof question !== 'object' || Array.isArray(question)) {
+            throw new Error(`AI response format error: question ${index + 1} is not an object.`);
         }
-        const normalizedOptions = q.options.map(normalizeText);
-        if (new Set(normalizedOptions).size !== 4) {
-            throw new Error(`MCQ quality check failed at question ${index + 1}: options must be distinct. Please retry.`);
+        const text = question.text ?? question.question;
+        if (typeof text !== 'string') {
+            throw new Error(`AI response format error: question ${index + 1} has no text field.`);
         }
-        if (normalizedOptions.some(option => forbiddenOptions.has(option))) {
-            throw new Error(`MCQ quality check failed at question ${index + 1}: generic shortcut options are not allowed. Please retry.`);
-        }
-        const answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
-            ? q.answer.toUpperCase().charCodeAt(0) - 65
-            : Number(q.answer);
-        if (!Number.isInteger(answer) || answer < 0 || answer > 3) {
-            throw new Error(`MCQ quality check failed at question ${index + 1}: answer must be an integer from 0 to 3. Please retry.`);
-        }
-
-        const bannedPatterns = [
-            /rigorous definition\s*\/\s*mechanism/i,
-            /highly plausible edge.case/i,
-            /standard misconception related to/i,
-            /common failure state of/i,
-            /technically accurate but theoretically irrelevant/i,
-            /inverse or corrupted boundary of/i,
-        ];
-        if ([q.text, ...q.options].some(value => bannedPatterns.some(pattern => pattern.test(value)))) {
-            throw new Error(`MCQ quality check failed at question ${index + 1}: generic placeholder content is not allowed. Please retry.`);
-        }
-
-        const lengths = q.options.map(option => normalizeText(option).length).sort((a, b) => a - b);
-        const medianLength = (lengths[1] + lengths[2]) / 2;
-        if (medianLength >= 18 && lengths[3] > Math.max(medianLength * 2.25, medianLength + 28)) {
-            throw new Error(`MCQ quality check failed at question ${index + 1}: one option is a conspicuous length outlier. Please retry.`);
+        if (isObjective) {
+            if (!Array.isArray(question.options) || question.options.length !== 4) {
+                throw new Error(`AI response format error: MCQ ${index + 1} must contain four options.`);
+            }
+            const answer = typeof question.answer === 'string' && /^[A-D]$/i.test(question.answer)
+                ? question.answer.toUpperCase().charCodeAt(0) - 65
+                : Number(question.answer);
+            if (!Number.isInteger(answer) || answer < 0 || answer > 3) {
+                throw new Error(`AI response format error: MCQ ${index + 1} must have an answer index from 0 to 3.`);
+            }
         }
     });
 }
@@ -286,7 +210,7 @@ function validateMCQs(questions) {
  * the next attempt fixes the specific validation failure.
  */
 function buildCorrectionPrompt(basePrompt, validationError, attempt) {
-    return basePrompt + `\n\nPREVIOUS ATTEMPT FAILED (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\n\nYou must fix the exact issue above. Return corrected JSON only — no markdown, no extra prose. Ensure:\n- Exactly ${basePrompt.match(/Create exactly (\d+)/)?.[1] || 'the requested count'} questions\n- Valid JSON object with a "questions" array\n- Each MCQ has exactly 4 distinct options and one answer index 0-3\n- No duplicate or near-identical question stems`;
+    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\n\nReturn corrected JSON only — no markdown or extra prose. Ensure the requested count, required fields, four MCQ options, valid answer index, and requested theory marks.`;
 }
 
 export async function generateQuestionsFromText({
@@ -339,7 +263,7 @@ export async function generateQuestionsFromText({
             batchIndex += 1;
         }
         // Cross-batch validation is necessary because each response is validated alone.
-        validateCommonQuestions(combined, count);
+        validateCommonQuestions(combined, count, isObjective);
         return combined;
     }
 
@@ -380,7 +304,7 @@ Rules:
 - Give four distinct, plausible options of similar type, specificity, and length. Wrong options should reflect realistic misconceptions, not random or unrelated facts.
 - For medium/hard, the stem must contain a meaningful scenario, data, constraint, or reasoning task. Do not disguise recall with generic story wording.
 - Avoid true/false, all/none-of-the-above, placeholders, invented facts, duplicate concepts, and predictable answer positions.
-- Silently verify the key, all options, uniqueness, grounding, and difficulty before answering. Output only the required JSON; do not include explanations.
+- Follow every requested count, difficulty, syllabus, option, answer-key, and JSON-format rule while generating. Return only the required JSON object, with no markdown or extra prose.
 
 ${exclusionText}
 Study material:
@@ -478,28 +402,16 @@ ${source}
                 if (match?.[1]) cleaned = match[1].trim();
             }
 
-            const questions = parseModelQuestions(cleaned);
-            if (!Array.isArray(questions) || questions.length === 0) {
+            const parsedQuestions = parseModelQuestions(cleaned);
+            if (!Array.isArray(parsedQuestions) || parsedQuestions.length === 0) {
                 throw new Error('AI returned no questions. Please retry generation.');
             }
-            // Validate all returned items. A short response is recovered below by
-            // requesting only the missing questions; it is never accepted as a full batch.
+
+            // Trust the generated content. If the provider over-returns, use the requested
+            // count; if it under-returns, make a bounded request for only the missing items.
+            const questions = parsedQuestions.slice(0, count);
             const isPartialResponse = questions.length < count;
-            if (questions.length > count) {
-                validateCommonQuestions(questions, count);
-            } else {
-                validateCommonQuestions(questions, questions.length);
-            }
-            if (!isObjective && Array.isArray(marksForQuestions)) {
-                const expectedMarks = marksForQuestions.slice(0, questions.length);
-                if (questions.some((q, i) => Number(q.marks) !== expectedMarks[i])) {
-                    throw new Error('Theory response did not follow the required mark sequence: ' + JSON.stringify(expectedMarks) + '. Please retry.');
-                }
-                // Set the expected type before difficulty validation so 1-mark brevity rules apply.
-                questions.forEach(q => { q.type = 'subjective'; });
-            }
-            validateDifficultySubstance(questions, requestedDifficulty);
-            if (isObjective) validateMCQs(questions);
+            validateCommonQuestions(questions, questions.length, isObjective);
 
             const normalizedQuestions = questions.map((q, index) => {
                 const text = String(q?.text || q?.question || '').trim() || 'Error reading question text';
@@ -507,10 +419,7 @@ ${source}
                     let answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
                         ? q.answer.toUpperCase().charCodeAt(0) - 65
                         : Number(q.answer);
-                    const opts = q.options.map(option => String(option).trim());
-                    if (!Number.isInteger(answer) || answer < 0 || answer > 3) {
-                        throw new Error(`MCQ ${index + 1} has an invalid answer index.`);
-                    }
+                    const opts = q.options.map(option => String(option ?? ''));
                     const randomized = shuffleWithAnswer(opts, answer);
                     return {
                         id: `ai_q${index}`,
@@ -525,7 +434,9 @@ ${source}
                 return {
                     id: `ai_q${index}`,
                     text,
-                    marks: Number.isInteger(q.marks) && q.marks > 0 ? q.marks : (Array.isArray(marksForQuestions) ? marksForQuestions[index] : (count > 5 ? 14 : 7)),
+                    marks: Array.isArray(marksForQuestions)
+                        ? marksForQuestions[index]
+                        : (Number.isInteger(Number(q.marks)) && Number(q.marks) > 0 ? Number(q.marks) : (count > 5 ? 14 : 7)),
                     type: 'subjective',
                     difficulty: requestedDifficulty,
                 };
@@ -562,7 +473,7 @@ ${source}
                 }
                 const combined = [...normalizedQuestions, ...missingQuestions]
                     .map((question, index) => ({ ...question, id: `ai_q${index}` }));
-                validateCommonQuestions(combined, count);
+                validateCommonQuestions(combined, count, isObjective);
                 return combined;
             }
 
