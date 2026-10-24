@@ -75,7 +75,84 @@ function shuffleWithAnswer(options, answerIndex) {
     };
 }
 
-function parseModelQuestions(cleaned) {
+/**
+ * Build a strict Groq JSON Schema for MCQ generation.
+ * Enforces: questions array of exact length; each item has text, options (4 strings), answer (0-3).
+ */
+export function buildMcqSchema(count) {
+    return {
+        type: 'json_schema',
+        json_schema: {
+            name: 'mcq_exam',
+            strict: true,
+            schema: {
+                type: 'object',
+                properties: {
+                    questions: {
+                        type: 'array',
+                        minItems: count,
+                        maxItems: count,
+                        items: {
+                            type: 'object',
+                            properties: {
+                                text: { type: 'string' },
+                                options: {
+                                    type: 'array',
+                                    minItems: 4,
+                                    maxItems: 4,
+                                    items: { type: 'string' },
+                                },
+                                answer: { type: 'integer', minimum: 0, maximum: 3 },
+                            },
+                            required: ['text', 'options', 'answer'],
+                            additionalProperties: false,
+                        },
+                    },
+                },
+                required: ['questions'],
+                additionalProperties: false,
+            },
+        },
+    };
+}
+
+/**
+ * Build a strict Groq JSON Schema for theory generation.
+ * Enforces: questions array of exact length; each item has text (string) and marks (integer).
+ * Does NOT force all questions to share the same mark value — marks are caller-provided.
+ */
+export function buildTheorySchema(count) {
+    return {
+        type: 'json_schema',
+        json_schema: {
+            name: 'theory_exam',
+            strict: true,
+            schema: {
+                type: 'object',
+                properties: {
+                    questions: {
+                        type: 'array',
+                        minItems: count,
+                        maxItems: count,
+                        items: {
+                            type: 'object',
+                            properties: {
+                                text: { type: 'string' },
+                                marks: { type: 'integer' },
+                            },
+                            required: ['text', 'marks'],
+                            additionalProperties: false,
+                        },
+                    },
+                },
+                required: ['questions'],
+                additionalProperties: false,
+            },
+        },
+    };
+}
+
+export function parseModelQuestions(cleaned) {
     let parsed;
     try {
         parsed = JSON.parse(cleaned);
@@ -107,7 +184,7 @@ function validateDifficultySubstance(questions, difficulty) {
             throw new Error(`Question quality check failed at question ${index + 1}: generic difficulty wrapper detected. The stem must create real reasoning, not merely label a recall question as a case. Please retry.`);
         }
         // A 1-mark theory item must stay brief even in a hard paper; difficulty
-        // must not force a one-mark question to demand multi-step/page-long work.
+        // must not force a one-mark question to demand multi-part/page-long work.
         if (q?.type === 'subjective' && Number(q?.marks) === 1) {
             const multiPartCommand = /\b(explain|describe|discuss|analy[sz]e|evaluate|compare|differentiate|elaborate|illustrate|justify|outline|enumerate|derive|prove|design|construct|write a program|write an algorithm)\b/i.test(stem);
             if (stem.length > 180 || multiPartCommand) {
@@ -209,16 +286,7 @@ function validateMCQs(questions) {
  * the next attempt fixes the specific validation failure.
  */
 function buildCorrectionPrompt(basePrompt, validationError, attempt) {
-    return basePrompt + `
-
-PREVIOUS ATTEMPT FAILED (attempt ${attempt} of ${MAX_RETRIES}):
-${validationError}
-
-You must fix the exact issue above. Return corrected JSON only — no markdown, no extra prose. Ensure:
-- Exactly ${basePrompt.match(/Create exactly (\d+)/)?.[1] || 'the requested count'} questions
-- Valid JSON object with a "questions" array
-- Each MCQ has exactly 4 distinct options and one answer index 0-3
-- No duplicate or near-identical question stems`;
+    return basePrompt + `\n\nPREVIOUS ATTEMPT FAILED (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\n\nYou must fix the exact issue above. Return corrected JSON only — no markdown, no extra prose. Ensure:\n- Exactly ${basePrompt.match(/Create exactly (\d+)/)?.[1] || 'the requested count'} questions\n- Valid JSON object with a "questions" array\n- Each MCQ has exactly 4 distinct options and one answer index 0-3\n- No duplicate or near-identical question stems`;
 }
 
 export async function generateQuestionsFromText({
@@ -283,9 +351,15 @@ export async function generateQuestionsFromText({
         ? text.slice(0, MAX_SOURCE_CHARS) + '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]'
         : text;
 
+    // Build strict JSON Schema for structured output. This enforces the response
+    // shape at the API level, drastically reducing invalid-JSON failures.
+    const responseFormat = isObjective
+        ? buildMcqSchema(count)
+        : buildTheorySchema(count);
+
     const systemMessage = isObjective
-        ? `Create accurate, syllabus-grounded MCQs. JSON only: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations or review fields.`
-        : `Create accurate, syllabus-grounded theory questions. JSON only: {"questions":[{"text":"...","marks":4}]}. No answers, hints, or marking schemes.`;
+        ? `Create accurate, syllabus-grounded MCQs. Return only valid JSON matching the required schema: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations, review fields, or IDs.` 
+        : `Create accurate, syllabus-grounded theory questions. Return only valid JSON matching the required schema: {"questions":[{"text":"...","marks":4}]}. No answers, hints, marking schemes, or IDs.`
 
     let userPrompt;
     if (isObjective) {
@@ -302,8 +376,6 @@ Rules:
 - Avoid true/false, all/none-of-the-above, placeholders, invented facts, duplicate concepts, and predictable answer positions.
 - Silently verify the key, all options, uniqueness, grounding, and difficulty before answering. Output only the required JSON; do not include explanations.
 
-JSON: {"questions":[{"text":"Question?","options":["A","B","C","D"],"answer":0}]}
-
 Study material:
 ---
 ${source}
@@ -315,7 +387,6 @@ Mark depth: 1 mark = one concise fact/point (normally one sentence or 1–2 line
 DIFFICULTY: ${blueprint.label} (${requestedDifficulty}); target: ${blueprint.reasoning}.
 Easy: foundational definition or one-step use. Medium: short application, calculation, comparison, or interpretation. Hard: multi-step analysis, diagnosis, design, or a justified decision.
 Keep every question clear, distinct, fair, and syllabus-specific. Do not include answers, hints, or marking schemes. If the source is truncated, rely only on visible content.
-JSON only: {"questions":[{"text":"Question?","marks":4}]}
 
 Study material:
 ---
@@ -325,6 +396,9 @@ ${source}
 
     let lastError = null;
     let rateLimitRetries = 0;
+    let schemaFallbackAttempted = false;
+    let currentResponseFormat = responseFormat;
+
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
         try {
             let response;
@@ -340,7 +414,7 @@ ${source}
                                 : userPrompt },
                         ],
                         model: 'openai/gpt-oss-20b',
-                        response_format: { type: 'json_object' },
+                        response_format: currentResponseFormat,
                     }),
                 });
             } catch (fetchError) {
@@ -350,10 +424,21 @@ ${source}
             if (!response.ok) {
                 const errorBody = await response.json().catch(() => ({}));
                 const message = errorBody.error?.message || response.status;
+                const category = errorBody.error?.category || 'upstream';
                 const error = new Error(`AI generation failed: ${message}`);
+                error.category = category;
                 if (response.status === 429) {
                     error.isRateLimit = true;
                     error.retryAfter = Number(response.headers.get('retry-after')) || parseRetryAfterSeconds(message);
+                }
+                // If strict json_schema is not supported by this provider/model,
+                // fall back once to json_object with enhanced client-side validation.
+                if (category === 'schema_config' && !schemaFallbackAttempted) {
+                    schemaFallbackAttempted = true;
+                    currentResponseFormat = { type: 'json_object' };
+                    console.warn('Strict json_schema not supported; falling back to json_object with client-side validation.');
+                    attempt -= 1; // retry the same attempt with the fallback format
+                    continue;
                 }
                 throw error;
             }
@@ -386,7 +471,6 @@ ${source}
             }
             validateDifficultySubstance(questions, requestedDifficulty);
             if (isObjective) validateMCQs(questions);
-            // Groq response-content verification is archived in removed_verification/.
 
             return questions.map((q, index) => {
                 const text = String(q?.text || q?.question || '').trim() || 'Error reading question text';
@@ -420,6 +504,11 @@ ${source}
         } catch (error) {
             lastError = error;
             console.error(`AI Generation / Validation Error (attempt ${attempt} of ${MAX_RETRIES}):`, error.message);
+            // After the json_schema→json_object fallback has already been attempted,
+            // do not retry any further — break out immediately with a terminal error.
+            if (schemaFallbackAttempted) {
+                break;
+            }
             // Rate limits are temporary. Wait for Groq's reset hint and retry the same
             // validation attempt instead of treating this as a bad question or failing the exam.
             const rateLimited = error.isRateLimit || error.retryAfter > 0 || /rate limit reached|too many requests/i.test(error.message);
