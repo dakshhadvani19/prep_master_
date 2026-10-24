@@ -5,6 +5,7 @@ import { findSubjectContext } from '../utils/subjectResolver';
 import { universitySyllabus } from '../data/universitySyllabus';
 import { pdfSyllabus } from '../data/pdfSyllabus';
 import { extractTextFromFile } from '../utils/fileParser';
+import { prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS } from '../utils/uploadContext';
 import { generateQuestionsFromText } from '../utils/geminiQuestions';
 import { fetchSyllabus } from '../utils/syllabusStorage';
 import predictedSyllabus from '../data/predicted_ai_syllabus.json';
@@ -384,16 +385,21 @@ export default function ExamPortal() {
         setUploadProcessing(true);
         setUploadError('');
         try {
-            // Extract text from all files
+            // Extract text from all files while retaining document boundaries.
             const allTexts = [];
             for (const file of uploadedFiles) {
                 setUploadProgress(`Extracting text from ${file.name}...`);
                 const text = await extractTextFromFile(file);
-                allTexts.push(`=== ${file.name} ===\n${text}`);
+                allTexts.push({ name: file.name, text });
             }
-            const combinedText = allTexts.join('\n\n');
-            if (combinedText.trim().length < 100) {
-                throw new Error('Not enough text extracted from files. Please check your files have readable text.');
+            const extractedChars = allTexts.reduce((sum, file) => sum + file.text.trim().length, 0);
+            if (extractedChars < 100) {
+                throw new Error('Not enough readable text could be extracted from these files. If a PDF is scanned or image-only, OCR is not supported yet.');
+            }
+
+            const uploadContext = prepareUploadContext(allTexts, UPLOAD_CONTEXT_MAX_CHARS);
+            if (uploadContext.truncated) {
+                setUploadProgress('Preparing balanced excerpts across the uploaded documents...');
             }
             setUploadProgress('Asking AI to generate questions... (may take up to 60s if rate-limited, please wait)');
             const isObj = examInfo.type === 'objective';
@@ -403,11 +409,12 @@ export default function ExamPortal() {
                 : [1, 4, 1, 8, 4, 8, 4];
 
             const questions = await generateQuestionsFromText({
-                text: combinedText,
+                text: uploadContext.text,
                 difficulty,
                 count: examCount,
                 isObjective: isObj,
                 marksForQuestions: isObj ? null : theoryMarks,
+                maxSourceChars: UPLOAD_CONTEXT_MAX_CHARS,
             });
             const blueprintQuestions = isObj
                 ? questions
