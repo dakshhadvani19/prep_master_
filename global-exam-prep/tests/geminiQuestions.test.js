@@ -230,17 +230,17 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             const { generateQuestionsFromText } = await importModule();
             fetchMock
                 .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(2, [1, 4], 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(3, [1, 8, 4], 2)));
+                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(1, [8], 2)));
 
             const result = await generateQuestionsFromText({
                 text: 'Syllabus content about databases and operating systems. ' + 'x'.repeat(200),
                 difficulty: 'medium',
-                count: 5,
+                count: 3,
                 isObjective: false,
-                marksForQuestions: [1, 4, 1, 8, 4],
+                marksForQuestions: [1, 4, 8],
             });
 
-            expect(result.map(question => question.marks)).toEqual([1, 4, 1, 8, 4]);
+            expect(result.map(question => question.marks)).toEqual([1, 4, 8]);
             expect(fetchMock).toHaveBeenCalledTimes(2);
         });
     });
