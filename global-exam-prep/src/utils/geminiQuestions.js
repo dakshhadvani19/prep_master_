@@ -59,10 +59,6 @@ const DIFFICULTY_BLUEPRINT = {
     },
 };
 
-function normalizeText(value) {
-    return String(value ?? '').trim().replace(/\s+/g, ' ').toLocaleLowerCase();
-}
-
 function shuffleWithAnswer(options, answerIndex) {
     const decorated = options.map((value, index) => ({
         value,
@@ -72,83 +68,6 @@ function shuffleWithAnswer(options, answerIndex) {
     return {
         options: decorated.map(item => item.value),
         answer: decorated.findIndex(item => item.isCorrect),
-    };
-}
-
-/**
- * Build a portable strict Groq JSON Schema for MCQs.
- * Exact question count, four-option cardinality, and semantic rules are
- * enforced by local validators instead of JSON Schema array-size constraints.
- */
-export function buildMcqSchema(count) {
-    return {
-        type: 'json_schema',
-        json_schema: {
-            name: 'mcq_exam',
-            strict: true,
-            schema: {
-                type: 'object',
-                properties: {
-                    questions: {
-                        type: 'array',
-                        minItems: count,
-                        maxItems: count,
-                        items: {
-                            type: 'object',
-                            properties: {
-                                text: { type: 'string' },
-                                options: {
-                                    type: 'array',
-                                    minItems: 4,
-                                    maxItems: 4,
-                                    items: { type: 'string' },
-                                },
-                                answer: { type: 'integer', enum: [0, 1, 2, 3] },
-                            },
-                            required: ['text', 'options', 'answer'],
-                            additionalProperties: false,
-                        },
-                    },
-                },
-                required: ['questions'],
-                additionalProperties: false,
-            },
-        },
-    };
-}
-
-/**
- * Build a portable strict Groq JSON Schema for theory questions.
- * Exact question count and caller-provided mark sequence are validated locally.
- */
-export function buildTheorySchema(count) {
-    return {
-        type: 'json_schema',
-        json_schema: {
-            name: 'theory_exam',
-            strict: true,
-            schema: {
-                type: 'object',
-                properties: {
-                    questions: {
-                        type: 'array',
-                        minItems: count,
-                        maxItems: count,
-                        items: {
-                            type: 'object',
-                            properties: {
-                                text: { type: 'string' },
-                                marks: { type: 'integer' },
-                            },
-                            required: ['text', 'marks'],
-                            additionalProperties: false,
-                        },
-                    },
-                },
-                required: ['questions'],
-                additionalProperties: false,
-            },
-        },
     };
 }
 
