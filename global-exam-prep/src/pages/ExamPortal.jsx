@@ -13,7 +13,7 @@ import { useAuth } from '../context/AuthContext';
 import { saveExamHistory } from '../utils/examHistoryStorage';
 
 import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
-import { fitContext, contentToString } from '../utils/contextFitter';
+import { fitContext, contentToString, buildBalancedObjectiveSource } from '../utils/contextFitter';
 import { stripReviewMetadata, validateExam } from '../utils/examValidation';
 import {
     saveExamAttempt,
@@ -226,40 +226,61 @@ export default function ExamPortal() {
                 const MAX_SOURCE_CHARS = 6000;
                 const isObj = examInfo.type === 'objective';
                 const targetQuestionCount = config.questionCount;
-                const batchCounts = allocateBatchCounts(batches, targetQuestionCount);
-                // Keep each Groq response small enough to avoid token-limit truncation.
-                // This is the key protection against a 30-question prompt returning only ~10.
-                const maxQuestionsPerRequest = isObj ? 5 : 3;
                 const generationTasks = [];
-                let markCursor = 0;
-                batches.forEach((batch, batchIndex) => {
-                    let remaining = batchCounts[batchIndex];
-                    while (remaining > 0) {
-                        const count = Math.min(maxQuestionsPerRequest, remaining);
-                        const markSequence = isObj ? null : config.markSequence.slice(markCursor, markCursor + count);
-                        generationTasks.push({ batch, batchIndex, batchCount: count, markSequence });
-                        markCursor += count;
-                        remaining -= count;
-                    }
-                });
+
+                if (isObj) {
+                    // Mid-2 must make one explicit full-paper request (normally 30 MCQs).
+                    // Balance context across every in-scope chapter instead of asking for
+                    // 5-question chunks or silently omitting later chapter batches.
+                    const allChapterIndices = [...new Set(
+                        coveragePlan.inScopeChapters.map(chapter => chapter.index)
+                    )];
+                    generationTasks.push({
+                        batch: { chapterIndices: allChapterIndices },
+                        batchIndex: 0,
+                        batchCount: targetQuestionCount,
+                        markSequence: null,
+                    });
+                } else {
+                    const batchCounts = allocateBatchCounts(batches, targetQuestionCount);
+                    const maxQuestionsPerRequest = 3;
+                    let markCursor = 0;
+                    batches.forEach((batch, batchIndex) => {
+                        let remaining = batchCounts[batchIndex];
+                        while (remaining > 0) {
+                            const count = Math.min(maxQuestionsPerRequest, remaining);
+                            const markSequence = config.markSequence.slice(markCursor, markCursor + count);
+                            generationTasks.push({ batch, batchIndex, batchCount: count, markSequence });
+                            markCursor += count;
+                            remaining -= count;
+                        }
+                    });
+                }
 
                 for (const [requestIndex, task] of generationTasks.entries()) {
                     const { batch, batchIndex, batchCount, markSequence } = task;
-                    const batchParts = batch.chapterIndices.map((ci) => {
-                        const ch = chapters[ci];
-                        if (!ch) return '';
-                        return 'CHAPTER: ' + (ch.chapter_name || 'Chapter ' + (ci + 1)) + '\n' + contentToString(ch.content) + '\n';
-                    });
-                    let batchText = contextPrefixText + 'Study Material / Syllabus Chapters:\n\n' + batchParts.join('\n---\n');
+                    let batchText;
+                    if (isObj) {
+                        batchText = buildBalancedObjectiveSource(
+                            syllabusRecord,
+                            batch.chapterIndices,
+                            contextPrefixText,
+                            MAX_SOURCE_CHARS
+                        );
+                    } else {
+                        const batchParts = batch.chapterIndices.map((ci) => {
+                            const ch = chapters[ci];
+                            if (!ch) return '';
+                            return 'CHAPTER: ' + (ch.chapter_name || 'Chapter ' + (ci + 1)) + '\n' + contentToString(ch.content) + '\n';
+                        });
+                        batchText = contextPrefixText + 'Study Material / Syllabus Chapters:\n\n' + batchParts.join('\n---\n');
 
-                    // Enforce 6,000-char cap explicitly (truncation note is never silent)
-                    if (batchText.length > MAX_SOURCE_CHARS) {
-                        batchText = batchText.slice(0, MAX_SOURCE_CHARS);
-                        batchText += '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]';
+                        if (batchText.length > MAX_SOURCE_CHARS) {
+                            batchText = batchText.slice(0, MAX_SOURCE_CHARS);
+                            batchText += '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]';
+                        }
                     }
 
-                    // generateQuestionsFromText already retries malformed/incomplete responses.
-                    // Never substitute generic fallback questions: a failed batch invalidates the exam.
                     try {
                         const batchQuestions = await generateQuestionsFromText({
                             text: batchText,
