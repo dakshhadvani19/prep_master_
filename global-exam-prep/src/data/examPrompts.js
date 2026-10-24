@@ -5,7 +5,7 @@ export const examPrompts = {
     timeMinutes: 60,
     totalMarks: 30,
     type: 'subjective',
-    description: "Strict evaluation reflecting Marwadi University's first internal evaluation covering the initial 40% syllabus.",
+    description: "30-mark theory Mid-1 covering the first 50% of the ordered syllabus, with two 1-mark questions and a balanced mix of 4- and 8-mark questions.",
   },
   'mid-2': {
     title: 'Mid-Term 2 (MCQ / Objective)',
@@ -15,11 +15,11 @@ export const examPrompts = {
     description: 'High-accuracy objective examination format conforming to university grading patterns.',
   },
   'final': {
-    title: 'Final Examination (End Semester Review)',
+    title: 'Final Examination (ESE — 60 marks)',
     timeMinutes: 180,
-    totalMarks: 100,
+    totalMarks: 60,
     type: 'subjective',
-    description: 'End Semester University Examination (ESUE) mapping exactly to standard university blue-print and weightage.',
+    description: '60-mark End Semester Examination: two 1-mark, one 2-mark, four 8-mark and six 4-mark questions, covering the full eligible syllabus.',
   },
 };
 
