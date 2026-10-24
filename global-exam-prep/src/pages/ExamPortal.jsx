@@ -398,10 +398,9 @@ export default function ExamPortal() {
             }
 
             const uploadContext = prepareUploadContext(allTexts, UPLOAD_CONTEXT_MAX_CHARS);
-            if (uploadContext.truncated) {
-                setUploadProgress('Preparing balanced excerpts across the uploaded documents...');
-            }
-            setUploadProgress('Asking AI to generate questions... (may take up to 60s if rate-limited, please wait)');
+            setUploadProgress(uploadContext.truncated
+                ? 'Asking AI to generate questions from balanced excerpts... (may take up to 60s if rate-limited, please wait)'
+                : 'Asking AI to generate questions... (may take up to 60s if rate-limited, please wait)');
             const isObj = examInfo.type === 'objective';
             const examCount = isObj ? 30 : (examType === 'final' ? 13 : 7);
             const theoryMarks = examType === 'final'
