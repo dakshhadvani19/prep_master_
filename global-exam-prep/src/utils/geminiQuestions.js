@@ -278,11 +278,10 @@ export async function generateQuestionsFromText({
         ? text.slice(0, MAX_SOURCE_CHARS) + '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]'
         : text;
 
-    // Build strict JSON Schema for structured output. This enforces the response
-    // shape at the API level, drastically reducing invalid-JSON failures.
-    const responseFormat = isObjective
-        ? buildMcqSchema(count)
-        : buildTheorySchema(count);
+    // Use JSON-object mode to avoid Groq's strict-schema generation validator
+    // rejecting the output before the application's minimal format guard runs.
+    // The exact requested format and count are stated explicitly in the prompt.
+    const responseFormat = { type: 'json_object' };
 
     const systemMessage = isObjective
         ? `Create accurate, syllabus-grounded MCQs. Return only valid JSON matching the required schema: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations, review fields, or IDs.` 
@@ -377,7 +376,9 @@ ${source}
                 // provider-side validation failure persists.
                 const jsonValidationFailure = providerCode === 'json_validate_failed'
                     || /failed to validate json|generated json does not match|json_validate_failed/i.test(message);
-                if ((category === 'schema_config' || jsonValidationFailure) && !schemaFallbackAttempted) {
+                if ((category === 'schema_config' || jsonValidationFailure)
+                    && currentResponseFormat.type === 'json_schema'
+                    && !schemaFallbackAttempted) {
                     schemaFallbackAttempted = true;
                     currentResponseFormat = { type: 'json_object' };
                     console.warn(
@@ -488,7 +489,7 @@ ${source}
             // A repeated schema-configuration error is not made better by retrying.
             // Other failures (including json_validate_failed in JSON-object mode and
             // rate limits) continue through the bounded retry policy.
-            if (schemaFallbackAttempted && error.category === 'schema_config') {
+            if (error.category === 'schema_config') {
                 break;
             }
             // Rate limits are temporary. Wait for Groq's reset hint and retry the same
