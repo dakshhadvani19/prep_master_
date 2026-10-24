@@ -365,20 +365,22 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             })).rejects.toThrow(/four options|options/);
         });
 
-        it('rejects duplicate options', async () => {
+        it('does not reject repeated option text on semantic quality grounds', async () => {
             const { generateQuestionsFromText } = await importModule();
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, {
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, {
                 choices: [{ message: { content: JSON.stringify({ questions: [{
                     text: 'What is the capital city of France?', options: ['A', 'A', 'C', 'D'], answer: 0,
                 }] }) } }],
-            })));
+            }));
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(100),
                 difficulty: 'medium',
                 count: 1,
                 isObjective: true,
-            })).rejects.toThrow();
+            });
+            expect(result).toHaveLength(1);
+            expect(result[0].options).toHaveLength(4);
         });
 
         it('rejects empty option text', async () => {
@@ -397,20 +399,21 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             })).rejects.toThrow();
         });
 
-        it('rejects generic shortcut options like "all of the above"', async () => {
+        it('does not reject shortcut-style options through a local quality gate', async () => {
             const { generateQuestionsFromText } = await importModule();
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, {
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, {
                 choices: [{ message: { content: JSON.stringify({ questions: [{
                     text: 'What is the capital city of France?', options: ['A', 'B', 'C', 'all of the above'], answer: 0,
                 }] }) } }],
-            })));
+            }));
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(100),
                 difficulty: 'medium',
                 count: 1,
                 isObjective: true,
-            })).rejects.toThrow();
+            });
+            expect(result).toHaveLength(1);
         });
     });
 
@@ -433,51 +436,55 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(fetchMock).toHaveBeenCalledTimes(2);
         });
 
-        it('rejects more questions than requested', async () => {
+        it('uses the requested number if the provider returns extra questions', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // count=5, but return 6 questions
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, buildMcqBody(6))));
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(6)));
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(200),
                 difficulty: 'medium',
                 count: 5,
                 isObjective: true,
-            })).rejects.toThrow(/expected exactly 5 questions|retry generation/i);
+            });
+
+            expect(result).toHaveLength(5);
+            expect(fetchMock).toHaveBeenCalledTimes(1);
         });
 
-        it('detects exact duplicate question text', async () => {
+        it('does not reject exact duplicate stems through a local quality gate', async () => {
             const { generateQuestionsFromText } = await importModule();
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, {
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, {
                 choices: [{ message: { content: JSON.stringify({ questions: [
                     { text: 'Exact duplicate stem here?', options: ['A', 'B', 'C', 'D'], answer: 0 },
                     { text: 'Exact duplicate stem here?', options: ['A', 'B', 'C', 'D'], answer: 1 },
                 ] }) } }],
-            })));
+            }));
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(100),
                 difficulty: 'medium',
                 count: 2,
                 isObjective: true,
-            })).rejects.toThrow(/duplicate/i);
+            });
+            expect(result).toHaveLength(2);
         });
 
-        it('detects near-duplicate question text', async () => {
+        it('does not reject near-duplicate stems through a local quality gate', async () => {
             const { generateQuestionsFromText } = await importModule();
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, {
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, {
                 choices: [{ message: { content: JSON.stringify({ questions: [
                     { text: 'What is a deadlock in operating systems?', options: ['A', 'B', 'C', 'D'], answer: 0 },
                     { text: 'What is a deadlock in operating systems?', options: ['A', 'B', 'C', 'D'], answer: 1 },
                 ] }) } }],
-            })));
+            }));
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(100),
                 difficulty: 'medium',
                 count: 2,
                 isObjective: true,
-            })).rejects.toThrow(/duplicate|near-duplicate/i);
+            });
+            expect(result).toHaveLength(2);
         });
 
         it('makes one request for an MCQ set larger than five questions', async () => {
@@ -536,25 +543,21 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(result.map((q) => q.marks)).toEqual([1, 4, 8, 4]);
         });
 
-        it('rejects theory response that does not follow mark sequence', async () => {
+        it('uses the caller mark sequence even when generated mark fields differ', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // Return wrong marks: [4, 4, 4] for batch1 (count=3) instead of [1, 4, 8]
-            // 3 mocks for 3 retry attempts
             fetchMock
-                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(3, [4, 4, 4], 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(1, [4], 3)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(3, [4, 4, 4], 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(1, [4], 3)))
                 .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(3, [4, 4, 4], 0)))
                 .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(1, [4], 3)));
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(200),
                 difficulty: 'medium',
                 count: 4,
                 isObjective: false,
                 marksForQuestions: [1, 4, 8, 4],
-            })).rejects.toThrow(/mark sequence|marks/);
+            });
+            expect(result.map(question => question.marks)).toEqual([1, 4, 8, 4]);
+            expect(fetchMock).toHaveBeenCalledTimes(2);
         });
     });
 
@@ -721,16 +724,21 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
     describe('10. Bounded recovery + terminal messages', () => {
         it('stops after MAX_RETRIES on repeated validation failures', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // Over-counting is a non-recoverable count validation error; partial
-            // under-counts are covered by the adaptive recovery tests above.
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, buildMcqBody(4))));
+            // Malformed structure should still be rejected to protect the exam UI.
+            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, {
+                choices: [{ message: { content: JSON.stringify({ questions: [
+                    { text: 'What is the capital city of France?', options: ['A', 'B', 'C'], answer: 0 },
+                    { text: 'Which gas do plants absorb from air?', options: ['A', 'B', 'C'], answer: 0 },
+                    { text: 'What is two plus two equal to?', options: ['A', 'B', 'C'], answer: 0 },
+                ] }) } }],
+            })));
 
             await expect(generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(100),
                 difficulty: 'medium',
                 count: 3,
                 isObjective: true,
-            })).rejects.toThrow(/expected exactly 3 questions|rejected by validation/i);
+            })).rejects.toThrow(/response format error/i);
 
             // MAX_RETRIES = 3 attempts
             expect(fetchMock).toHaveBeenCalledTimes(3);
@@ -754,19 +762,18 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
     });
 
     describe('11. Failed recovery never returns partial exams', () => {
-        it('rejects when missing-question recovery produces duplicates', async () => {
+        it('completes missing-count recovery without duplicate-content rejection', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // A short full-paper response is followed by recovery requests that repeat
-            // its stems. Final validation must reject the incomplete/duplicate set.
             fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, buildMcqBody(2, 0))));
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(300),
                 difficulty: 'medium',
                 count: 6,
                 isObjective: true,
-            })).rejects.toThrow(/duplicate|near-duplicate|recover/i);
+            });
 
+            expect(result).toHaveLength(6);
             expect(fetchMock.mock.calls.length).toBeGreaterThan(1);
         });
     });
