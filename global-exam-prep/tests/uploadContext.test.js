@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS, UPLOAD_MCQ_CONTEXT_MAX_CHARS } from '../src/utils/uploadContext';
+import { countReadableTextChars, prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS, UPLOAD_MCQ_CONTEXT_MAX_CHARS } from '../src/utils/uploadContext';
 
 function makePagedText(prefix, count, fillerLength = 900) {
     return Array.from({ length: count }, (_, index) => {
@@ -61,6 +61,15 @@ describe('uploadContext', () => {
         expect(result.text.length).toBeLessThanOrEqual(4000);
         expect(result.text).toContain('DOCUMENT_START');
         expect(result.text).toContain('DOCUMENT_END');
+    });
+
+    it('counts actual extracted text rather than page labels from scanned PDFs', () => {
+        expect(countReadableTextChars([
+            { name: 'scan.pdf', text: '[Page 1]\\n\\n[Page 2]\\n' },
+        ])).toBe(0);
+        expect(countReadableTextChars([
+            { name: 'notes.pdf', text: '[Page 1]\\nActual readable content' },
+        ])).toBe('Actual readable content'.length);
     });
 
     it('handles an empty file list without throwing', () => {
