@@ -483,7 +483,7 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
                 difficulty: 'medium',
                 count: 6,
                 isObjective: true,
-            })).rejects.toThrow(/invalid JSON|rejected by validation/i);
+            })).rejects.toThrow(/invalid JSON/i);
 
             expect(fetchMock).toHaveBeenCalledTimes(3);
         });
@@ -720,7 +720,7 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
                 difficulty: 'medium',
                 count: 1,
                 isObjective: true,
-            })).rejects.toThrow(/invalid answer index|rejected by validation/i);
+            })).rejects.toThrow(/answer index|response format error/i);
         });
     });
 
