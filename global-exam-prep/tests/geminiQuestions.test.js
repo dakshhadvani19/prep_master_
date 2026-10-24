@@ -415,17 +415,22 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
     });
 
     describe('6. Missing / extra / duplicate questions across batches', () => {
-        it('rejects fewer questions than requested', async () => {
+        it('recovers an under-counted full request by asking for only the missing questions', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // count=6 triggers batching (5+1). Return 3 questions for batch1 → validate fails.
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, buildMcqBody(3))));
+            fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(3, 0)))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(3, 3)));
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(200),
                 difficulty: 'medium',
                 count: 6,
                 isObjective: true,
-            })).rejects.toThrow(/expected exactly|retry generation/i);
+            });
+
+            expect(result).toHaveLength(6);
+            expect(new Set(result.map(question => question.text)).size).toBe(6);
+            expect(fetchMock).toHaveBeenCalledTimes(2);
         });
 
         it('rejects more questions than requested', async () => {
@@ -748,25 +753,21 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
         });
     });
 
-    describe('11. Batch failure without saving partial exam', () => {
-        it('throws when any batch fails, so no partial exam is assembled', async () => {
+    describe('11. Failed recovery never returns partial exams', () => {
+        it('rejects when missing-question recovery produces duplicates', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // count=6 → batch1=5 (ok), batch2=1 (returns 2 questions → validateCommonQuestions(questions, 1) fails)
-            // 3 mocks for 3 retry attempts
-            fetchMock
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(5, 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(2, 5)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(5, 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(2, 5)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(5, 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(2, 5)));
+            // A short full-paper response is followed by recovery requests that repeat
+            // its stems. Final validation must reject the incomplete/duplicate set.
+            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, buildMcqBody(2, 0))));
 
             await expect(generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(300),
                 difficulty: 'medium',
                 count: 6,
                 isObjective: true,
-            })).rejects.toThrow();
+            })).rejects.toThrow(/duplicate|near-duplicate|recover/i);
+
+            expect(fetchMock.mock.calls.length).toBeGreaterThan(1);
         });
     });
 
@@ -807,38 +808,21 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(result.reduce((sum, q) => sum + q.marks, 0)).toBe(EXAM_CONFIG.mid1.totalMarks);
         });
 
-        it('validates Mid-2 complete paper (30 MCQs in batches of 5)', async () => {
+        it('validates Mid-2 complete paper (30 questions)', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // count=30 > maxPerResponse(5) → 6 batches of 5
-            // Use MCQ_STEMS with offset to avoid near-duplicate detection
-            const bodies = [];
-            for (let attempt = 0; attempt < 3; attempt += 1) {
-                for (let b = 0; b < 6; b += 1) {
-                    const batchQuestions = Array.from({ length: 5 }, (_, q) => {
-                        const idx = b * 5 + q;
-                        return {
-                            text: MCQ_STEMS[idx % MCQ_STEMS.length],
-                            options: ['Option A', 'Option B', 'Option C', 'Option D'],
-                            answer: idx % 4,
-                        };
-                    });
-                    bodies.push(mockJsonResponse(200, {
-                        choices: [{ message: { content: JSON.stringify({ questions: batchQuestions }) } }],
-                    }));
-                }
-            }
-            bodies.forEach((body) => fetchMock.mockResolvedValueOnce(body));
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(30)));
 
             const result = await generateQuestionsFromText({
                 text: 'Syllabus content for a full mid-term covering many topics. ' + 'x'.repeat(800),
                 difficulty: 'medium',
-                count: 30,
+                count: EXAM_CONFIG.mid2.questionCount,
                 isObjective: true,
             });
 
             expect(result).toHaveLength(EXAM_CONFIG.mid2.questionCount);
             result.forEach((q) => expect(q.type).toBe('mcq'));
-        });
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+        });;
 
         it('validates ESE complete paper (13 questions, 60 marks)', async () => {
             const { generateQuestionsFromText } = await importModule();
