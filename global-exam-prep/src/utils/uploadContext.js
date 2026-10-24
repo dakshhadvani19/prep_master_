@@ -9,6 +9,20 @@ export const UPLOAD_MCQ_CONTEXT_MAX_CHARS = 9000;
 const MAX_GENERIC_SECTION_CHARS = 1200;
 const TRUNCATION_NOTE = '[NOTE: This is a balanced excerpt from uploaded study material. Some source text was omitted to fit the context budget; only the supplied text is available when generating questions.]';
 
+
+/**
+ * Count actual extracted text, excluding PDF page labels. Empty, image-only
+ * pages must not be mistaken for readable content merely because they have
+ * "[Page N]" markers.
+ */
+export function countReadableTextChars(files) {
+    return (Array.isArray(files) ? files : []).reduce((sum, file) => {
+        const text = typeof file?.text === 'string' ? file.text : '';
+        const withoutPageLabels = text.replace(/^\\[Page\\s+\\d+\\][ \\t]*(?:\\r?\\n)?/gim, '');
+        return sum + withoutPageLabels.trim().length;
+    }, 0);
+}
+
 function chunkText(text, maxChars = MAX_GENERIC_SECTION_CHARS) {
     const chunks = [];
     let start = 0;
