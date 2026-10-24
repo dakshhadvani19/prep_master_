@@ -308,10 +308,9 @@ export async function generateQuestionsFromText({
     }
 
     // MCQ exams must be requested as one complete paper (Mid-2 = 30 MCQs).
-    // Theory generation remains split into small requests to preserve exact marks
-    // and avoid excessive context/output for the longer question prompts.
-    const maxPerResponse = isObjective ? count : 3;
-    if (count > maxPerResponse) {
+    // Only theory exams use smaller internal requests.
+    const maxPerResponse = 3;
+    if (!isObjective && count > maxPerResponse) {
         const combined = [];
         const batchCountTotal = Math.ceil(count / maxPerResponse);
         // For long material, make a few balanced source sections and reuse each
