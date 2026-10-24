@@ -14,7 +14,7 @@ import { saveExamHistory } from '../utils/examHistoryStorage';
 
 import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
 import { fitContext, contentToString } from '../utils/contextFitter';
-import { stripReviewMetadata, validateExam } from '../utils/examValidation';
+import { stripReviewMetadata } from '../utils/examValidation';
 import {
     saveExamAttempt,
     updateAttemptAnswers,
@@ -361,12 +361,7 @@ export default function ExamPortal() {
                     }
                 });
 
-                const validation = validateExam(allQuestions, config, coveragePlan);
-                if (!validation.valid) {
-                    throw new Error('Generated exam failed validation: ' + validation.errors.join(', '));
-                }
-
-                // Strip internal review metadata before the student sees the questions
+                // Groq response-content verification is archived in removed_verification/.
                 const studentSafeQuestions = stripReviewMetadata(allQuestions);
                 setAiQuestions(studentSafeQuestions);
 

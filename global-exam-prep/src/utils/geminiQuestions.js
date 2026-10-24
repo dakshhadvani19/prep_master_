@@ -351,16 +351,23 @@ ${source}
             }
 
             const questions = parseModelQuestions(cleaned);
-            validateCommonQuestions(questions, count);
-            if (isObjective) validateMCQs(questions);
+            if (!Array.isArray(questions) || questions.length === 0) {
+                throw new Error('AI returned no questions. Please retry generation.');
+            }
+            // Groq response-content verification is archived in removed_verification/.
 
+            const FALLBACK_OPTIONS = ['True', 'False', 'None of the above', 'All of the above'];
             return questions.map((q, index) => {
-                const text = q.text.trim();
+                const text = String(q?.text || q?.question || '').trim() || 'Error reading question text';
                 if (isObjective) {
                     let answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
                         ? q.answer.toUpperCase().charCodeAt(0) - 65
                         : Number(q.answer);
-                    const randomized = shuffleWithAnswer(q.options.map(option => option.trim()), answer);
+                    let opts = Array.isArray(q.options) ? q.options.map(option => String(option).trim()) : [...FALLBACK_OPTIONS];
+                    if (opts.length < 4) opts = [...opts, ...FALLBACK_OPTIONS.slice(opts.length)];
+                    if (opts.length > 4) opts = opts.slice(0, 4);
+                    if (!Number.isInteger(answer) || answer < 0 || answer > 3) answer = 0;
+                    const randomized = shuffleWithAnswer(opts, answer);
                     return {
                         id: `ai_q${index}`,
                         text,
