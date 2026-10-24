@@ -11,11 +11,23 @@ export const config = { runtime: 'edge' };
  *   - generation_format: the model failed to produce valid structured output
  *   - upstream: any other provider error
  */
-function categoriseGroqError(status, message) {
+export function categoriseGroqError(status, message, providerCode = '') {
     const msg = String(message ?? '').toLowerCase();
+    const code = String(providerCode ?? '').toLowerCase();
+
     if (status === 429 || /rate limit reached|too many requests|tpm|tokens per minute/i.test(msg)) {
         return 'rate_limit';
     }
+
+    // Groq returns code=json_validate_failed for the exact
+    // "Failed to validate JSON ... See 'failed_generation'" error.
+    // Handle it before generic upstream classification so the client can
+    // switch response format and recover instead of retrying the same request.
+    if (code === 'json_validate_failed'
+        || /failed to validate json|generated json does not match|json_validate_failed/i.test(msg)) {
+        return 'generation_format';
+    }
+
     if (status === 400 && /json_schema|schema|response_format|structured output|unsupported/i.test(msg)) {
         return 'schema_config';
     }
@@ -74,14 +86,27 @@ export default async function handler(req) {
         if (!res.ok) {
             const err = await res.json().catch(() => ({}));
             const message = err.error?.message || `Groq API Error: ${res.status}`;
-            const category = categoriseGroqError(res.status, message);
+            const providerCode = err.error?.code || '';
+            const category = categoriseGroqError(res.status, message, providerCode);
             const retryAfter = parseRetryAfterSeconds(message, res.headers);
+
+            // Preserve diagnostic metadata without returning generated payloads or
+            // credentials. Groq's failed_generation field can be empty or large.
+            console.error('[Groq API error]', {
+                status: res.status,
+                category,
+                providerCode,
+                message,
+                hasFailedGeneration: Boolean(err.error?.failed_generation),
+            });
 
             return new Response(
                 JSON.stringify({
                     error: {
                         message,
                         category,
+                        providerCode: providerCode || undefined,
+                        hasFailedGeneration: Boolean(err.error?.failed_generation),
                         status: res.status,
                         retryAfter: retryAfter > 0 ? retryAfter : undefined,
                     },
