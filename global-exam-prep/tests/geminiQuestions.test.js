@@ -221,8 +221,7 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(fetchMock).toHaveBeenCalledTimes(1);
             const request = JSON.parse(fetchMock.mock.calls[0][1].body);
             expect(request.messages[1].content).toContain('Create exactly 30 original single-answer MCQs');
-            expect(request.response_format.json_schema.schema.properties.questions.minItems).toBe(30);
-            expect(request.response_format.json_schema.schema.properties.questions.maxItems).toBe(30);
+            expect(request.response_format).toEqual({ type: 'json_object' });
         });
     });
 
@@ -627,7 +626,7 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             },
         };
 
-        it('switches to json_object when Groq returns json_validate_failed', async () => {
+        it('retries json_validate_failed in JSON-object mode', async () => {
             const { generateQuestionsFromText } = await importModule();
             fetchMock
                 .mockResolvedValueOnce(mockJsonResponse(400, jsonValidationError))
@@ -643,9 +642,9 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(result).toHaveLength(3);
             expect(fetchMock).toHaveBeenCalledTimes(2);
             const firstRequest = JSON.parse(fetchMock.mock.calls[0][1].body);
-            const fallbackRequest = JSON.parse(fetchMock.mock.calls[1][1].body);
-            expect(firstRequest.response_format.type).toBe('json_schema');
-            expect(fallbackRequest.response_format).toEqual({ type: 'json_object' });
+            const retryRequest = JSON.parse(fetchMock.mock.calls[1][1].body);
+            expect(firstRequest.response_format).toEqual({ type: 'json_object' });
+            expect(retryRequest.response_format).toEqual({ type: 'json_object' });
         });
 
         it('continues bounded retries if json_object mode also gets json_validate_failed', async () => {
@@ -670,45 +669,39 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
     });
 
     describe('9. Non-retryable schema/config errors', () => {
-        it('treats json_schema unsupported error as non-retryable and falls back once', async () => {
+        it('stops immediately if the provider rejects JSON-object configuration', async () => {
             const { generateQuestionsFromText } = await importModule();
             const schemaErrorBody = {
                 error: {
-                    message: 'json_schema response format is not supported by this model',
+                    message: 'JSON response format is not supported by this endpoint',
                     type: 'bad_request',
                     category: 'schema_config',
                 },
             };
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(400, schemaErrorBody));
 
-            // Fresh Response for each call
-            fetchMock
-                .mockResolvedValueOnce(mockJsonResponse(400, schemaErrorBody))
-                .mockResolvedValue(mockJsonResponse(200, buildMcqBody(3)));
-
-            const result = await generateQuestionsFromText({
+            await expect(generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(100),
                 difficulty: 'medium',
                 count: 3,
                 isObjective: true,
-            });
+            })).rejects.toThrow(/JSON response format is not supported/);
 
-            expect(result).toHaveLength(3);
-            expect(fetchMock).toHaveBeenCalledTimes(2);
+            expect(fetchMock).toHaveBeenCalledTimes(1);
         });
 
-        it('does not retry non-retryable 400 errors beyond fallback', async () => {
+
+        it('does not retry a non-retryable response-format error', async () => {
             const { generateQuestionsFromText } = await importModule();
             const schemaErrorBody = {
                 error: {
-                    message: 'json_schema response format is not supported',
+                    message: 'JSON response format is not supported',
                     type: 'bad_request',
                     category: 'schema_config',
                 },
             };
 
-            // Same error every time — fresh Response each call
-            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(400, schemaErrorBody)));
-
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(400, schemaErrorBody));
             await expect(generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(100),
                 difficulty: 'medium',
@@ -716,8 +709,7 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
                 isObjective: true,
             })).rejects.toThrow();
 
-            // Original json_schema (1) + fallback json_object (1) = 2 calls
-            expect(fetchMock).toHaveBeenCalledTimes(2);
+            expect(fetchMock).toHaveBeenCalledTimes(1);
         });
     });
 
@@ -863,11 +855,9 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(result.reduce((sum, q) => sum + q.marks, 0)).toBe(EXAM_CONFIG.ese.totalMarks);
         });
 
-        it('rejects ESE with wrong mark sequence', async () => {
+        it('uses the configured ESE mark sequence even if Groq returns different marks', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // Return all 4s instead of the exact ESE sequence
             const wrongMarks = Array(13).fill(4);
-            const bodies = [];
             const batches = [
                 { count: 3, marks: wrongMarks.slice(0, 3), offset: 0 },
                 { count: 3, marks: wrongMarks.slice(3, 6), offset: 3 },
@@ -875,21 +865,24 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
                 { count: 3, marks: wrongMarks.slice(9, 12), offset: 9 },
                 { count: 1, marks: wrongMarks.slice(12, 13), offset: 12 },
             ];
-            for (let attempt = 0; attempt < 3; attempt += 1) {
-                for (const b of batches) {
-                    bodies.push(mockJsonResponse(200, buildTheoryBody(b.count, b.marks, b.offset)));
-                }
-            }
-            bodies.forEach((body) => fetchMock.mockResolvedValueOnce(body));
+            batches.forEach(batch => {
+                fetchMock.mockResolvedValueOnce(mockJsonResponse(
+                    200,
+                    buildTheoryBody(batch.count, batch.marks, batch.offset),
+                ));
+            });
 
-            await expect(generateQuestionsFromText({
+            const result = await generateQuestionsFromText({
                 text: 'Comprehensive syllabus content. ' + 'x'.repeat(500),
                 difficulty: 'medium',
                 count: 13,
                 isObjective: false,
                 marksForQuestions: EXAM_CONFIG.ese.markSequence,
-            })).rejects.toThrow(/mark sequence|marks/);
-        });
+            });
+
+            expect(result.map(question => question.marks)).toEqual(EXAM_CONFIG.ese.markSequence);
+            expect(result.reduce((sum, question) => sum + question.marks, 0)).toBe(60);
+        });;
     });
 
     describe('parseModelQuestions', () => {
