@@ -76,7 +76,7 @@ Allocate questions or marks across batches proportionally to chapter content siz
 
 ### Step 5 — Generate the Exam
 
-**Mid-2 MCQ:** Send one request asking for exactly **30 MCQs**, with an exact-count strict JSON schema. Do not divide the paper into five-question tasks. Build one balanced context within the 6,000-character budget that includes a representative excerpt from every in-scope chapter. If the provider returns fewer than 30 questions in JSON-object fallback mode, preserve valid questions and make a bounded request for only the missing count; never accept or display an incomplete paper.
+**Mid-2 MCQ:** Send one request asking for exactly **30 MCQs** in JSON-object mode. The prompt states the exact schema and exam rules; do not divide the paper into five-question tasks or use strict-schema output mode. Build one balanced context within the 6,000-character budget that includes a representative excerpt from every in-scope chapter. If the provider returns fewer than 30 questions, preserve the returned items and make a bounded request for only the missing count; never accept or display an incomplete paper.
 
 **Theory exams:** Keep chapter-aware batching at no more than **3 theory questions per request** so the caller-provided marks sequence remains manageable. Allocate exact marks across theory calls, combine the responses, and validate the complete paper.
 
@@ -88,7 +88,7 @@ For every request, require the requested count in the schema where supported and
 2. Re-validate the complete exam:
    - Total question count matches the configured count.
    - Total marks match the exam blueprint.
-   - No duplicate or near-duplicate questions across batches.
+   - Local checks enforce required object/count/options/answer shape and the configured marks only. Semantic quality, difficulty heuristics, duplicate stems, option distinctness/plausibility and answer-choice style are prompt-led and are not hard rejection gates.
    - Coverage spans all in-scope chapters.
    - For MCQ: exactly 30 questions, 4 options each, one correct answer.
    - For Mid-1 theory: exactly 7 questions with marks `[1, 4, 1, 8, 4, 8, 4]` (30 total). A 1-mark prompt must request one brief fact/point, not a page-length response.
@@ -128,8 +128,8 @@ The existing `geminiQuestions.js` enforces `MAX_SOURCE_CHARS = 6000`. When trunc
 | `src/utils/subjectResolver.js` | Subject ID resolution (bridge → domain/course/subject) |
 | `src/utils/syllabusLoader.js` | Load syllabus JSON from dataset by subject code |
 | `src/utils/contextFitter.js` | Scope selection, theory batching, balanced all-chapter context for the MCQ request |
-| `src/utils/geminiQuestions.js` | Model invocation, 6,000-char cap, exact-count schemas, single-call MCQ generation, bounded partial-response recovery |
-| `src/utils/examValidation.js` | Combined exam validation (counts, marks, duplicates, coverage) |
+| `src/utils/geminiQuestions.js` | Model invocation, 6,000-char cap, JSON-object generation, single-call MCQ generation, bounded partial-response recovery |
+| `src/utils/examValidation.js` | Combined exam validation (question counts, required fields, MCQ format, and exam marks) |
 | `src/pages/ExamPortal.jsx` | Orchestrates the full flow: consent → syllabus → scope → fit → generate → validate → persist |
 
 ---
