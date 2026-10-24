@@ -4,7 +4,7 @@ const MAX_RATE_LIMIT_RETRIES = 4;
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 function parseRetryAfterSeconds(message) {
-    const match = String(message ?? '').match(/try again in\\s+([\\d.]+)\\s*s/i);
+    const match = String(message ?? '').match(/try again in\s+([\d.]+)\s*s/i);
     return match ? Number(match[1]) : 0;
 }
 
