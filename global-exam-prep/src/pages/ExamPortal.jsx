@@ -5,7 +5,7 @@ import { findSubjectContext } from '../utils/subjectResolver';
 import { universitySyllabus } from '../data/universitySyllabus';
 import { pdfSyllabus } from '../data/pdfSyllabus';
 import { extractTextFromFile, MAX_PDF_PAGES } from '../utils/fileParser';
-import { prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS, UPLOAD_MCQ_CONTEXT_MAX_CHARS } from '../utils/uploadContext';
+import { countReadableTextChars, prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS, UPLOAD_MCQ_CONTEXT_MAX_CHARS } from '../utils/uploadContext';
 import { generateQuestionsFromText } from '../utils/geminiQuestions';
 import { fetchSyllabus } from '../utils/syllabusStorage';
 import predictedSyllabus from '../data/predicted_ai_syllabus.json';
@@ -392,7 +392,7 @@ export default function ExamPortal() {
                 const text = await extractTextFromFile(file);
                 allTexts.push({ name: file.name, text });
             }
-            const extractedChars = allTexts.reduce((sum, file) => sum + file.text.trim().length, 0);
+            const extractedChars = countReadableTextChars(allTexts);
             if (extractedChars < 100) {
                 throw new Error('Not enough readable text could be extracted from these files. If a PDF is scanned or image-only, OCR is not supported yet.');
             }
