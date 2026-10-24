@@ -5,7 +5,7 @@ import { findSubjectContext } from '../utils/subjectResolver';
 import { universitySyllabus } from '../data/universitySyllabus';
 import { pdfSyllabus } from '../data/pdfSyllabus';
 import { extractTextFromFile, MAX_PDF_PAGES } from '../utils/fileParser';
-import { prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS } from '../utils/uploadContext';
+import { prepareUploadContext, UPLOAD_CONTEXT_MAX_CHARS, UPLOAD_MCQ_CONTEXT_MAX_CHARS } from '../utils/uploadContext';
 import { generateQuestionsFromText } from '../utils/geminiQuestions';
 import { fetchSyllabus } from '../utils/syllabusStorage';
 import predictedSyllabus from '../data/predicted_ai_syllabus.json';
@@ -397,11 +397,12 @@ export default function ExamPortal() {
                 throw new Error('Not enough readable text could be extracted from these files. If a PDF is scanned or image-only, OCR is not supported yet.');
             }
 
-            const uploadContext = prepareUploadContext(allTexts, UPLOAD_CONTEXT_MAX_CHARS);
+            const isObj = examInfo.type === 'objective';
+            const uploadContextBudget = isObj ? UPLOAD_MCQ_CONTEXT_MAX_CHARS : UPLOAD_CONTEXT_MAX_CHARS;
+            const uploadContext = prepareUploadContext(allTexts, uploadContextBudget);
             setUploadProgress(uploadContext.truncated
                 ? 'Asking AI to generate questions from balanced excerpts... (may take up to 60s if rate-limited, please wait)'
                 : 'Asking AI to generate questions... (may take up to 60s if rate-limited, please wait)');
-            const isObj = examInfo.type === 'objective';
             const examCount = isObj ? 30 : (examType === 'final' ? 13 : 7);
             const theoryMarks = examType === 'final'
                 ? [1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]
@@ -413,7 +414,7 @@ export default function ExamPortal() {
                 count: examCount,
                 isObjective: isObj,
                 marksForQuestions: isObj ? null : theoryMarks,
-                maxSourceChars: UPLOAD_CONTEXT_MAX_CHARS,
+                maxSourceChars: uploadContextBudget,
             });
             const blueprintQuestions = isObj
                 ? questions
