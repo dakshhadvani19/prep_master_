@@ -79,7 +79,7 @@ function shuffleWithAnswer(options, answerIndex) {
  * Build a strict Groq JSON Schema for MCQ generation.
  * Enforces: questions array of exact length; each item has text, options (4 strings), answer (0-3).
  */
-export function buildMcqSchema(count) {
+export function buildMcqSchema() {
     return {
         type: 'json_schema',
         json_schema: {
@@ -117,7 +117,7 @@ export function buildMcqSchema(count) {
  * Enforces: questions array of exact length; each item has text (string) and marks (integer).
  * Does NOT force all questions to share the same mark value — marks are caller-provided.
  */
-export function buildTheorySchema(count) {
+export function buildTheorySchema() {
     return {
         type: 'json_schema',
         json_schema: {
@@ -350,8 +350,8 @@ export async function generateQuestionsFromText({
     // Build strict JSON Schema for structured output. This enforces the response
     // shape at the API level, drastically reducing invalid-JSON failures.
     const responseFormat = isObjective
-        ? buildMcqSchema(count)
-        : buildTheorySchema(count);
+        ? buildMcqSchema()
+        : buildTheorySchema();
 
     const systemMessage = isObjective
         ? `Create accurate, syllabus-grounded MCQs. Return only valid JSON matching the required schema: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations, review fields, or IDs.` 
@@ -417,6 +417,7 @@ ${source}
                         ],
                         model: 'openai/gpt-oss-20b',
                         response_format: currentResponseFormat,
+                        reasoning_effort: 'low',
                     }),
                 });
             } catch (fetchError) {
