@@ -28604,10 +28604,10 @@ export const examPrompts = {
     description: 'High-accuracy objective examination format conforming to university grading patterns.'
   },
   'final': {
-    title: 'Final Examination (End Semester Review)',
+    title: 'Final Examination (ESE — 60 marks)',
     timeMinutes: 180,
-    totalMarks: 100,
+    totalMarks: 60,
     type: 'subjective',
-    description: 'End Semester University Examination (ESUE) mapping exactly to standard university blue-print and weightage.'
+    description: '60-mark ESE: two 1-mark, one 2-mark, six 4-mark and four 8-mark questions.'
   }
 };
