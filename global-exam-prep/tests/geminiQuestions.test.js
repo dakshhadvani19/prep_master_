@@ -185,10 +185,13 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             const items = schema.json_schema.schema.properties.questions.items;
             expect(items.required).toEqual(['text', 'options', 'answer']);
             expect(items.additionalProperties).toBe(false);
-            expect(items.properties.options.minItems).toBe(4);
-            expect(items.properties.options.maxItems).toBe(4);
-            expect(items.properties.answer.minimum).toBe(0);
-            expect(items.properties.answer.maximum).toBe(3);
+            // Count and option cardinality are verified by local validators; keep
+            // the strict schema limited to the provider's portable subset.
+            expect(items.properties.options.minItems).toBeUndefined();
+            expect(items.properties.options.maxItems).toBeUndefined();
+            expect(items.properties.answer.enum).toEqual([0, 1, 2, 3]);
+            expect(schema.json_schema.schema.properties.questions.minItems).toBeUndefined();
+            expect(schema.json_schema.schema.properties.questions.maxItems).toBeUndefined();
         });
 
         it('buildTheorySchema does not force all questions to share one mark value', async () => {
@@ -199,8 +202,46 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(items.properties.marks.enum).toBeUndefined();
             expect(items.properties.marks.const).toBeUndefined();
             const questionsProp = schema.json_schema.schema.properties.questions;
-            expect(questionsProp.minItems).toBe(3);
-            expect(questionsProp.maxItems).toBe(3);
+            expect(questionsProp.minItems).toBeUndefined();
+            expect(questionsProp.maxItems).toBeUndefined();
+        });
+    });
+
+    describe('3b. Recover short-but-valid batches', () => {
+        it('fills the missing MCQs when a request for five returns only two', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(2, 0)))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(3, 2)));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content about operating systems and databases. ' + 'x'.repeat(200),
+                difficulty: 'medium',
+                count: 5,
+                isObjective: true,
+            });
+
+            expect(result).toHaveLength(5);
+            expect(new Set(result.map(question => question.text)).size).toBe(5);
+            expect(fetchMock).toHaveBeenCalledTimes(2);
+        });
+
+        it('recovers theory short responses while keeping the caller mark sequence', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(2, [1, 4], 0)))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(3, [1, 8, 4], 2)));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content about databases and operating systems. ' + 'x'.repeat(200),
+                difficulty: 'medium',
+                count: 5,
+                isObjective: false,
+                marksForQuestions: [1, 4, 1, 8, 4],
+            });
+
+            expect(result.map(question => question.marks)).toEqual([1, 4, 1, 8, 4]);
+            expect(fetchMock).toHaveBeenCalledTimes(2);
         });
     });
 
