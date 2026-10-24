@@ -247,8 +247,6 @@ ${source}
 
     let lastError = null;
     let rateLimitRetries = 0;
-    let schemaFallbackAttempted = false;
-    let currentResponseFormat = responseFormat;
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
         try {
@@ -265,7 +263,7 @@ ${source}
                                 : userPrompt },
                         ],
                         model: 'openai/gpt-oss-20b',
-                        response_format: currentResponseFormat,
+                        response_format: responseFormat,
                         reasoning_effort: 'low',
                     }),
                 });
@@ -289,25 +287,9 @@ ${source}
                         || parseRetryAfterSeconds(message);
                 }
 
-                // Groq sometimes rejects a generation with code json_validate_failed.
-                // That is distinct from an unsupported schema. Retry once in JSON-object
-                // mode, then use bounded retries and local validation if the transient
-                // provider-side validation failure persists.
-                const jsonValidationFailure = providerCode === 'json_validate_failed'
-                    || /failed to validate json|generated json does not match|json_validate_failed/i.test(message);
-                if ((category === 'schema_config' || jsonValidationFailure)
-                    && currentResponseFormat.type === 'json_schema'
-                    && !schemaFallbackAttempted) {
-                    schemaFallbackAttempted = true;
-                    currentResponseFormat = { type: 'json_object' };
-                    console.warn(
-                        jsonValidationFailure
-                            ? 'Groq JSON validation failed; retrying once in json_object mode with local validation.'
-                            : 'Strict json_schema is unsupported; retrying in json_object mode with local validation.'
-                    );
-                    attempt -= 1; // fallback does not consume a generation retry
-                    continue;
-                }
+                // JSON-object mode is used from the first request, so provider-side
+                // JSON validation errors go through the normal bounded corrected-prompt retry.
+                // Unsupported response-format/configuration errors are not retryable.
                 throw error;
             }
 
