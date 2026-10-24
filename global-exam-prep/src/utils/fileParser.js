@@ -2,21 +2,66 @@ import * as pdfjsLib from 'pdfjs-dist';
 import pdfjsWorkerUrl from 'pdfjs-dist/build/pdf.worker.mjs?url';
 import JSZip from 'jszip';
 
+// Keep the page limit explicit so UI and tests can use the same policy.
+export const MAX_PDF_PAGES = 50;
+export const MAX_UPLOAD_FILE_BYTES = 10 * 1024 * 1024;
+
 // Use local worker bundled by Vite (avoids CDN version mismatch issues)
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorkerUrl;
 
+function toPdfReadError(error) {
+    const message = String(error?.message || error || '');
+    if (/password|encrypted|PasswordException/i.test(message) || error?.name === 'PasswordException') {
+        return new Error('This PDF is password-protected or encrypted. Remove its password and upload it again.');
+    }
+    if (/invalid pdf|missing pdf|formaterror|unexpected end|malformed/i.test(message) || error?.name === 'InvalidPDFException') {
+        return new Error('This PDF is invalid or damaged and could not be read. Please try another PDF.');
+    }
+    return new Error('Could not read this PDF. It may be damaged, encrypted, or unsupported. Please try another PDF.');
+}
+
 /**
- * Extract plain text from a PDF ArrayBuffer using PDF.js
+ * Extract plain text from a PDF ArrayBuffer using PDF.js.
+ * Page labels are retained so downstream context fitting can sample across
+ * the complete document rather than accidentally keeping only its first pages.
  */
 export async function extractPdfText(arrayBuffer) {
-    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-    const pages = [];
-    for (let i = 1; i <= pdf.numPages; i++) {
-        const page = await pdf.getPage(i);
-        const content = await page.getTextContent();
-        const pageText = content.items.map(item => item.str).join(' ');
-        pages.push(pageText);
+    let pdf;
+    try {
+        pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    } catch (error) {
+        throw toPdfReadError(error);
     }
+
+    if (!Number.isInteger(pdf?.numPages) || pdf.numPages < 1) {
+        throw new Error('This PDF does not contain any readable pages.');
+    }
+
+    if (pdf.numPages > MAX_PDF_PAGES) {
+        try {
+            await pdf.destroy?.();
+        } catch {
+            // The page-count rejection is the important user-facing result.
+        }
+        throw new Error(`This PDF has ${pdf.numPages} pages. The maximum allowed is ${MAX_PDF_PAGES} pages per PDF.`);
+    }
+
+    const pages = [];
+    try {
+        for (let i = 1; i <= pdf.numPages; i += 1) {
+            const page = await pdf.getPage(i);
+            const content = await page.getTextContent();
+            const pageText = (content?.items || [])
+                .map(item => typeof item?.str === 'string' ? item.str : '')
+                .filter(Boolean)
+                .join(' ')
+                .trim();
+            pages.push(`[Page ${i}]\n${pageText}`);
+        }
+    } catch (error) {
+        throw toPdfReadError(error);
+    }
+
     return pages.join('\n\n');
 }
 
@@ -62,9 +107,8 @@ export function extractCsvText(text) {
  */
 export async function extractTextFromFile(file) {
     const ext = file.name.split('.').pop().toLowerCase();
-    const MAX_BYTES = 10 * 1024 * 1024; // 10 MB limit
 
-    if (file.size > MAX_BYTES) {
+    if (file.size > MAX_UPLOAD_FILE_BYTES) {
         throw new Error(`File "${file.name}" is too large (max 10 MB). Please upload a smaller file.`);
     }
 
