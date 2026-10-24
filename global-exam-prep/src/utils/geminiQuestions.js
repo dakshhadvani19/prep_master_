@@ -185,7 +185,7 @@ function validateMCQs(questions) {
         }
 
         const bannedPatterns = [
-            /rigorous definition\\s*\\/\\s*mechanism/i,
+            /rigorous definition\s*\/\s*mechanism/i,
             /highly plausible edge.case/i,
             /standard misconception related to/i,
             /common failure state of/i,
@@ -309,23 +309,15 @@ Study material:
 ${source}
 ---`;
     } else {
-        userPrompt = `Create exactly ${count} original open-ended theory questions grounded only in the provided study material.
-ASSIGNED MARK VALUES IN QUESTION ORDER: ${Array.isArray(marksForQuestions) ? JSON.stringify(marksForQuestions) : 'Follow the caller-provided exam blueprint'}.
-Every question must match its assigned mark value and answer depth. A 1-mark question asks for ONE fact or brief point and should normally be answerable in one sentence or 1–2 lines; never ask for a page-long explanation, full architecture, or multi-part list for 1 mark. A 4-mark question should have roughly four creditable points/steps. An 8-mark question can require a fuller, bounded multi-step explanation or solution.
-DIFFICULTY: ${blueprint.label} (${requestedDifficulty}).
-Reasoning target: ${blueprint.reasoning}.
-1. Easy: concise definition, distinction, or one-step use of a foundational concept.
-2. Medium: apply, calculate, compare, interpret, or explain a short practical scenario.
-3. Hard: multi-step analysis, design, diagnosis, evaluation of constraints, or a justified decision among plausible approaches.
-4. Calibrate the task to the difficulty and to a realistic exam. Avoid vague commands such as "write everything about" and avoid unnecessary artificial complexity.
-5. Do not include answers, rubrics, or hints. Ensure each question is unique and sufficiently specific to mark fairly.
-6. If the source is truncated, only rely on visible content.
+        userPrompt = `Create exactly ${count} unique open-ended theory questions using only the study material.
+MARKS IN QUESTION ORDER: ${Array.isArray(marksForQuestions) ? JSON.stringify(marksForQuestions) : 'Use the caller-provided exam blueprint'}. Follow these marks exactly.
+Mark depth: 1 mark = one concise fact/point (normally one sentence or 1–2 lines; no multi-part explanation); 2 marks = a compact answerable task; 4 marks = about four creditable points/steps; 8 marks = a bounded, fuller multi-step response.
+DIFFICULTY: ${blueprint.label} (${requestedDifficulty}); target: ${blueprint.reasoning}.
+Easy: foundational definition or one-step use. Medium: short application, calculation, comparison, or interpretation. Hard: multi-step analysis, diagnosis, design, or a justified decision.
+Keep every question clear, distinct, fair, and syllabus-specific. Do not include answers, hints, or marking schemes. If the source is truncated, rely only on visible content.
+JSON only: {"questions":[{"id":"ai_q0","text":"Question?","marks":4}]}
 
-Required JSON shape:
-{ "questions": [ { "id": "ai_q0", "text": "A clear, assessable question?", "marks": 4 } ] }
-Return the assigned marks for each question in the same order. Do not change the supplied mark sequence.
-
-Study Material:
+Study material:
 ---
 ${source}
 ---`;
