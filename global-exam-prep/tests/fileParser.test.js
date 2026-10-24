@@ -83,7 +83,7 @@ describe('fileParser PDF extraction', () => {
 
         const text = await extractPdfText(new ArrayBuffer(8));
 
-        expect(text).toBe('Page content 1\\n\\nPage content 2');
+        expect(text).toBe('Page content 1\n\nPage content 2');
         expect(text).not.toContain('[Page 1]');
     });
 });
