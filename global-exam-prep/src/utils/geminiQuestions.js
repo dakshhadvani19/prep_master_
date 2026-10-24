@@ -215,7 +215,7 @@ PREVIOUS ATTEMPT FAILED (attempt ${attempt} of ${MAX_RETRIES}):
 ${validationError}
 
 You must fix the exact issue above. Return corrected JSON only — no markdown, no extra prose. Ensure:
-- Exactly ${basePrompt.match(/Create exactly (\d+) original/)?.[1] || 'the requested count'} questions
+- Exactly ${basePrompt.match(/Create exactly (\d+)/)?.[1] || 'the requested count'} questions
 - Valid JSON object with a "questions" array
 - Each MCQ has exactly 4 distinct options and one answer index 0-3
 - No duplicate or near-identical question stems`;
@@ -284,8 +284,8 @@ export async function generateQuestionsFromText({
         : text;
 
     const systemMessage = isObjective
-        ? `Create accurate, syllabus-grounded MCQs for diploma/university exams. Return JSON only: {"questions":[{"id":"ai_q0","text":"...","options":["...","...","...","..."],"answer":0}]}. Use four distinct options and answer index 0-3; no explanations or review fields.`
-        : `Create accurate, syllabus-grounded theory questions for diploma/university exams. Return JSON only: {"questions":[{"id":"ai_q0","text":"...","marks":4}]}. Do not include answers, hints, or marking schemes.`;
+        ? `Create accurate, syllabus-grounded MCQs. JSON only: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations or review fields.`
+        : `Create accurate, syllabus-grounded theory questions. JSON only: {"questions":[{"text":"...","marks":4}]}. No answers, hints, or marking schemes.`;
 
     let userPrompt;
     if (isObjective) {
@@ -302,7 +302,7 @@ Rules:
 - Avoid true/false, all/none-of-the-above, placeholders, invented facts, duplicate concepts, and predictable answer positions.
 - Silently verify the key, all options, uniqueness, grounding, and difficulty before answering. Output only the required JSON; do not include explanations.
 
-JSON: {"questions":[{"id":"ai_q0","text":"Question?","options":["A","B","C","D"],"answer":0}]}
+JSON: {"questions":[{"text":"Question?","options":["A","B","C","D"],"answer":0}]}
 
 Study material:
 ---
@@ -315,7 +315,7 @@ Mark depth: 1 mark = one concise fact/point (normally one sentence or 1–2 line
 DIFFICULTY: ${blueprint.label} (${requestedDifficulty}); target: ${blueprint.reasoning}.
 Easy: foundational definition or one-step use. Medium: short application, calculation, comparison, or interpretation. Hard: multi-step analysis, diagnosis, design, or a justified decision.
 Keep every question clear, distinct, fair, and syllabus-specific. Do not include answers, hints, or marking schemes. If the source is truncated, rely only on visible content.
-JSON only: {"questions":[{"id":"ai_q0","text":"Question?","marks":4}]}
+JSON only: {"questions":[{"text":"Question?","marks":4}]}
 
 Study material:
 ---
