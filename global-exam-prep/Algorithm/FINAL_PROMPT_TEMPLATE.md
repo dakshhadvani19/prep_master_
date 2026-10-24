@@ -64,6 +64,17 @@ For subjective (theory) questions:
 
 ---
 
+## 2.5 Canonical theory blueprints and answer length
+
+The backend owns the ordered mark sequence and must pass it to every generation call. Follow it exactly.
+
+- **Mid-1 theory:** exactly 7 questions, mark sequence `[1, 4, 1, 8, 4, 8, 4]`: two 1-mark, three 4-mark and two 8-mark questions; exactly 30 marks.
+- **ESE theory:** exactly 13 questions, mark sequence `[1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]`: two 1-mark, one 2-mark, six 4-mark and four 8-mark questions; exactly 60 marks.
+- Interleave question types rather than grouping all same-mark questions together.
+- A 1-mark question asks for one fact or brief point and normally expects one sentence or 1–2 lines. Never ask for a page-long answer, full architecture or several subparts for 1 mark.
+- A 4-mark question expects around four creditable points/steps. An 8-mark question may require a fuller, bounded multi-step explanation or solution.
+- Difficulty changes reasoning demand, not question count, syllabus scope, marking scheme or suitable answer length.
+
 ## 3. User Message (per-request template)
 
 ```
