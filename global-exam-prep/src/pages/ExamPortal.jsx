@@ -14,7 +14,7 @@ import { saveExamHistory } from '../utils/examHistoryStorage';
 
 import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
 import { fitContext, contentToString } from '../utils/contextFitter';
-import { stripReviewMetadata } from '../utils/examValidation';
+import { stripReviewMetadata, validateExam } from '../utils/examValidation';
 import {
     saveExamAttempt,
     updateAttemptAnswers,
@@ -141,9 +141,7 @@ export default function ExamPortal() {
 
     // Static question counts for the AI (25/30/40 for MCQs; 4/7 for theory).
     // Not shown to the user in pre-exam UI, per request.
-    const examCount = examInfo?.type === 'objective'
-        ? (difficulty === 'hard' ? 40 : difficulty === 'medium' ? 30 : 25)
-        : (examType === 'final' ? 7 : 4);
+    const examCount = examInfo?.type === 'objective' ? 30 : (examType === 'final' ? 13 : 7);
 
     useEffect(() => {
         if (examInfo) {
@@ -280,12 +278,23 @@ export default function ExamPortal() {
                 const chapters = Array.isArray(syllabusRecord.chapters) ? syllabusRecord.chapters : [];
                 const MAX_SOURCE_CHARS = 6000;
                 const isObj = examInfo.type === 'objective';
-                const targetQuestionCount = isObj ? 30 : (config.totalMarks === 60 ? 10 : 9);
+                const targetQuestionCount = config.questionCount;
                 const batchCounts = allocateBatchCounts(batches, targetQuestionCount);
+                // Keep each Groq response small enough to avoid token-limit truncation.
+                // This is the key protection against a 30-question prompt returning only ~10.
+                const maxQuestionsPerRequest = isObj ? 5 : 3;
+                const generationTasks = [];
+                batches.forEach((batch, batchIndex) => {
+                    let remaining = batchCounts[batchIndex];
+                    while (remaining > 0) {
+                        const count = Math.min(maxQuestionsPerRequest, remaining);
+                        generationTasks.push({ batch, batchIndex, batchCount: count });
+                        remaining -= count;
+                    }
+                });
 
-                for (const [batchIndex, batch] of batches.entries()) {
-                    const batchCount = batchCounts[batchIndex];
-                    if (batchCount <= 0) continue;
+                for (const [requestIndex, task] of generationTasks.entries()) {
+                    const { batch, batchIndex, batchCount } = task;
                     const batchParts = batch.chapterIndices.map((ci) => {
                         const ch = chapters[ci];
                         if (!ch) return '';
@@ -299,54 +308,27 @@ export default function ExamPortal() {
                         batchText += '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]';
                     }
 
-                    // Batch count is preallocated so the combined exam has an exact question count.
-
-                    let batchQuestions = null;
-                    let batchError = null;
-                    // AI generation retries internally (MAX_RETRIES); if it still fails,
-                    // fall back to rule-based questions from this batch's chapters so
-                    // the exam is never blocked by a single bad batch.
-                    for (let attempt = 1; attempt <= 2; attempt++) {
-                        try {
-                            batchQuestions = await generateQuestionsFromText({
-                                text: batchText,
-                                difficulty,
-                                count: batchCount,
-                                isObjective: isObj,
-                            });
-                            batchError = null;
-                            break;
-                        } catch (err) {
-                            batchError = err;
-                            console.warn('Batch ' + batchIndex + ' attempt ' + attempt + ' failed:', err.message);
+                    // generateQuestionsFromText already retries malformed/incomplete responses.
+                    // Never substitute generic fallback questions: a failed batch invalidates the exam.
+                    try {
+                        const batchQuestions = await generateQuestionsFromText({
+                            text: batchText,
+                            difficulty,
+                            count: batchCount,
+                            isObjective: isObj,
+                        });
+                        if (batchQuestions.length !== batchCount) {
+                            throw new Error('Expected ' + batchCount + ' questions from request ' + requestIndex + ', received ' + batchQuestions.length + '.');
                         }
-                    }
-
-                    if (batchQuestions) {
                         allQuestions.push(...batchQuestions);
-                    } else {
-                        // Fallback: generate simple questions from chapter names/content
-                        const fallback = generateFallbackQuestions(batch, chapters, batchCount, isObj, difficulty);
-                        allQuestions.push(...fallback);
-                        console.warn('Batch ' + batchIndex + ' used fallback questions after AI failure:', batchError ? batchError.message : 'unknown');
+                    } catch (err) {
+                        console.error('Question generation failed for request ' + requestIndex + ' (source batch ' + batchIndex + '):', err.message);
+                        throw new Error('Could not generate a complete valid exam. ' + err.message);
                     }
                 }
 
-                // Ensure we have at least the target question count; if short, pad
-                // with additional fallback questions from the first chapters.
-                if (allQuestions.length < targetQuestionCount) {
-                    const needed = targetQuestionCount - allQuestions.length;
-                    const padChapters = chapters.slice(0, Math.min(needed, chapters.length));
-                    padChapters.forEach((ch, i) => {
-                        const fb = generateFallbackQuestions(
-                            { chapterIndices: [i], charCount: contentToString(ch.content || '').length },
-                            chapters,
-                            1,
-                            isObj,
-                            difficulty
-                        );
-                        if (fb.length) allQuestions.push(fb[0]);
-                    });
+                if (allQuestions.length !== targetQuestionCount) {
+                    throw new Error('Generated ' + allQuestions.length + ' questions; this exam requires exactly ' + targetQuestionCount + '. Please retry.');
                 }
 
                 // \u2500\u2500 Combined validation against the exam blueprint \u2500\u2500
@@ -354,14 +336,15 @@ export default function ExamPortal() {
                 // Apply the exact theory marking blueprint after combining all batches.
                 allQuestions.forEach((question, index) => {
                     question.id = `ai_q${index}`;
-                    if (!isObj) {
-                        question.marks = index < 2 ? 1
-                            : config.totalMarks === 60 && index === 2 ? 2
-                            : config.totalMarks === 60 ? 8 : 4;
-                    }
+                    if (!isObj) question.marks = config.markSequence[index];
                 });
 
-                // Groq response-content verification is archived in removed_verification/.
+                const validation = validateExam(allQuestions, config, coveragePlan);
+                if (!validation.valid) {
+                    throw new Error('Generated exam failed blueprint validation: ' + validation.errors.join(', '));
+                }
+
+                // Keep grading/review metadata server-side; only the display-safe fields go to the UI.
                 const studentSafeQuestions = stripReviewMetadata(allQuestions);
                 setAiQuestions(studentSafeQuestions);
 
