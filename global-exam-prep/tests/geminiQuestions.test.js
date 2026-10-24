@@ -822,7 +822,7 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(result).toHaveLength(EXAM_CONFIG.mid2.questionCount);
             result.forEach((q) => expect(q.type).toBe('mcq'));
             expect(fetchMock).toHaveBeenCalledTimes(1);
-        });;
+        });
 
         it('validates ESE complete paper (13 questions, 60 marks)', async () => {
             const { generateQuestionsFromText } = await importModule();
