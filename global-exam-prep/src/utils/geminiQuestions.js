@@ -1,4 +1,4 @@
-const MAX_SOURCE_CHARS = 6000;
+const MAX_SOURCE_CHARS = 3000;
 const MAX_RETRIES = 3;
 const MAX_RATE_LIMIT_RETRIES = 4;
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -9,6 +9,34 @@ function parseRetryAfterSeconds(message) {
 }
 
 const VALID_DIFFICULTIES = new Set(['easy', 'medium', 'hard']);
+
+function splitSourceIntoParts(text, partCount) {
+    if (partCount <= 1) return [text];
+    const parts = [];
+    let start = 0;
+    const targetSize = text.length / partCount;
+
+    for (let part = 1; part < partCount; part += 1) {
+        const target = Math.round(text.length * part / partCount);
+        const minBoundary = Math.max(start + 1, Math.floor(target - targetSize * 0.35));
+        const maxBoundary = Math.min(text.length - 1, Math.ceil(target + targetSize * 0.35));
+        let boundary = text.indexOf('\n', target);
+        if (boundary < minBoundary || boundary > maxBoundary) {
+            boundary = text.lastIndexOf('\n', target);
+        }
+        if (boundary < minBoundary || boundary > maxBoundary) {
+            boundary = text.indexOf(' ', target);
+        }
+        if (boundary < minBoundary || boundary > maxBoundary) {
+            boundary = text.lastIndexOf(' ', target);
+        }
+        if (boundary < minBoundary || boundary > maxBoundary) boundary = target;
+        parts.push(text.slice(start, boundary).trim());
+        start = boundary + 1;
+    }
+    parts.push(text.slice(start).trim());
+    return parts;
+}
 
 const DIFFICULTY_BLUEPRINT = {
     easy: {
@@ -71,23 +99,6 @@ const GENERIC_DIFFICULTY_WRAPPERS = [
     /^(case review|case study|a case review|a trainee suggests|during a .* exercise|in a .* case|for a short viva|a worked problem requires|a student must distinguish|a solution review checks)\b/i,
     /which option (is fully defensible|best satisfies the requirement|is best in this case)\??$/i,
 ];
-
-function synthesizeReview(q, index) {
-    // Build minimal but structurally valid review metadata so the model's
-    // missing review doesn't hard-fail the whole batch.
-    const answerIndex = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
-        ? q.answer.toUpperCase().charCodeAt(0) - 65
-        : Number(q.answer);
-    const correctOption = q.options?.[answerIndex] ?? 'the correct option';
-    return {
-        correctReason: `Option ${String.fromCharCode(65 + answerIndex)} (${correctOption}) satisfies the question's exact condition based on the study material.`,
-        distractorReasons: q.options
-            .filter((_, i) => i !== answerIndex)
-            .map((opt, di) => `Option ${String.fromCharCode(65 + di)} (${opt}) is a plausible distractor but does not satisfy the specific condition in the stem.`),
-        singleBestAnswerCheck: 'Only one option satisfies every stated condition.',
-        difficultyEvidence: 'The student must apply the concept from the study material and eliminate alternatives that fail the stated condition.',
-    };
-}
 
 function validateDifficultySubstance(questions, difficulty) {
     questions.forEach((q, index) => {
@@ -173,36 +184,8 @@ function validateMCQs(questions) {
             throw new Error(`MCQ quality check failed at question ${index + 1}: answer must be an integer from 0 to 3. Please retry.`);
         }
 
-        // Synthesize missing/incomplete review metadata instead of hard-failing.
-        // The model should provide it, but if it doesn't we build a structurally
-        // valid review so the batch isn't rejected for a missing internal field.
-        if (!q.review || typeof q.review !== 'object') {
-            q.review = synthesizeReview(q, index);
-        } else {
-            const r = q.review;
-            if (typeof r.correctReason !== 'string' || r.correctReason.trim().length < 12) {
-                r.correctReason = synthesizeReview(q, index).correctReason;
-            }
-            if (!Array.isArray(r.distractorReasons) || r.distractorReasons.length !== 3 ||
-                r.distractorReasons.some(reason => typeof reason !== 'string' || reason.trim().length < 10)) {
-                r.distractorReasons = synthesizeReview(q, index).distractorReasons;
-            }
-            if (typeof r.singleBestAnswerCheck !== 'string' || !/only one|single best|one best|unique/i.test(r.singleBestAnswerCheck)) {
-                r.singleBestAnswerCheck = 'Only one option satisfies every stated condition.';
-            }
-            if (typeof r.difficultyEvidence !== 'string' || r.difficultyEvidence.trim().length < 20) {
-                r.difficultyEvidence = synthesizeReview(q, index).difficultyEvidence;
-            }
-        }
-
-        const reviewReasons = [q.review.correctReason, ...q.review.distractorReasons].map(normalizeText);
-        if (new Set(reviewReasons).size !== reviewReasons.length) {
-            // Re-synthesize to guarantee distinctness
-            q.review = synthesizeReview(q, index);
-        }
-
         const bannedPatterns = [
-            /rigorous definition\s*\/\s*mechanism/i,
+            /rigorous definition\\s*\\/\\s*mechanism/i,
             /highly plausible edge.case/i,
             /standard misconception related to/i,
             /common failure state of/i,
@@ -213,7 +196,6 @@ function validateMCQs(questions) {
             throw new Error(`MCQ quality check failed at question ${index + 1}: generic placeholder content is not allowed. Please retry.`);
         }
 
-        // Reject conspicuous length giveaways. This is a screening check, not a substitute for content review.
         const lengths = q.options.map(option => normalizeText(option).length).sort((a, b) => a - b);
         const medianLength = (lengths[1] + lengths[2]) / 2;
         if (medianLength >= 18 && lengths[3] > Math.max(medianLength * 2.25, medianLength + 28)) {
@@ -235,7 +217,7 @@ ${validationError}
 You must fix the exact issue above. Return corrected JSON only — no markdown, no extra prose. Ensure:
 - Exactly ${basePrompt.match(/Create exactly (\d+) original/)?.[1] || 'the requested count'} questions
 - Valid JSON object with a "questions" array
-- Each MCQ has exactly 4 distinct options, one answer index 0-3, and complete review metadata
+- Each MCQ has exactly 4 distinct options and one answer index 0-3
 - No duplicate or near-identical question stems`;
 }
 
@@ -260,19 +242,31 @@ export async function generateQuestionsFromText({
     const maxPerResponse = isObjective ? 5 : 3;
     if (count > maxPerResponse) {
         const combined = [];
+        const batchCountTotal = Math.ceil(count / maxPerResponse);
+        // For long material, make a few balanced source sections and reuse each
+        // section for nearby small batches instead of resending the entire source.
+        // This preserves coverage while materially lowering tokens per minute.
+        const sourcePartCount = text.length >= 3000
+            ? Math.min(batchCountTotal, Math.max(2, Math.floor(text.length / 1800)))
+            : 1;
+        const sourceParts = splitSourceIntoParts(text, sourcePartCount);
+        let batchIndex = 0;
+
         for (let offset = 0; offset < count; offset += maxPerResponse) {
             const batchCount = Math.min(maxPerResponse, count - offset);
             const batchMarks = Array.isArray(marksForQuestions)
                 ? marksForQuestions.slice(offset, offset + batchCount)
                 : null;
+            const sourcePartIndex = Math.min(sourceParts.length - 1, Math.floor(batchIndex * sourceParts.length / batchCountTotal));
             const batch = await generateQuestionsFromText({
-                text,
+                text: sourceParts[sourcePartIndex],
                 difficulty: requestedDifficulty,
                 count: batchCount,
                 isObjective,
                 marksForQuestions: batchMarks,
             });
             combined.push(...batch.map((question, index) => ({ ...question, id: `ai_q${offset + index}` })));
+            batchIndex += 1;
         }
         // Cross-batch validation is necessary because each response is validated alone.
         validateCommonQuestions(combined, count);
@@ -290,55 +284,27 @@ export async function generateQuestionsFromText({
         : text;
 
     const systemMessage = isObjective
-        ? `You are a rigorous exam setter and item reviewer for diploma/university assessments. Return only valid JSON: { "questions": [...] }. Each MCQ must contain "id" (string), "text" (string), "options" (exactly 4 distinct strings), "answer" (integer 0-3), and internal "review": {"correctReason": string, "distractorReasons": [string,string,string], "singleBestAnswerCheck": string, "difficultyEvidence": string}. The review field is internal QC and will be stripped before the question reaches the exam UI. Never add markdown or extra prose.`
-        : `You are a rigorous diploma/university exam setter. Return only valid JSON: { "questions": [...] }. Each theory question must contain "id" (string) and "text" (string). Do not provide an answer or marking scheme in the question text. Never add markdown or extra prose.`;
+        ? `Create accurate, syllabus-grounded MCQs for diploma/university exams. Return JSON only: {"questions":[{"id":"ai_q0","text":"...","options":["...","...","...","..."],"answer":0}]}. Use four distinct options and answer index 0-3; no explanations or review fields.`
+        : `Create accurate, syllabus-grounded theory questions for diploma/university exams. Return JSON only: {"questions":[{"id":"ai_q0","text":"...","marks":4}]}. Do not include answers, hints, or marking schemes.`;
 
     let userPrompt;
     if (isObjective) {
-        userPrompt = `Create exactly ${count} original single-answer MCQs grounded only in the provided study material.
-DIFFICULTY: ${blueprint.label} (${requestedDifficulty}).
-Reasoning target: ${blueprint.reasoning}.
-Distractor standard: ${blueprint.distractors}
-Question design: ${blueprint.traps}
+        userPrompt = `Create exactly ${count} original single-answer MCQs based only on the study material.
+DIFFICULTY: ${blueprint.label} (${requestedDifficulty}). Target: ${blueprint.reasoning}.
+Distractors: ${blueprint.distractors}
+Design: ${blueprint.traps}
 
-MANDATORY ITEM RULES
-1. Test real understanding, application, calculations, interpretation, diagnosis, or comparison. Use the syllabus terminology accurately and stay at the subject level.
-2. Never make a question trivially predictable because one option is the only related, technical, long, specific, or grammatically matching answer. The four options should be parallel in type, similar in specificity and roughly similar in length.
-3. Make wrong options plausible for a student who confuses neighbouring concepts. Avoid random options and cross-topic distractors that an average student could instantly eliminate.
-4. At easy level, use foundational concepts but make at least two distractors credible near-misses. At medium level, make two or three options seem defensible until the scenario's decisive condition is applied. At hard level, make each wrong option partially correct in some context, but demonstrably incomplete or incorrect under a stated condition.
-5. Exactly one option must be the best answer given the written stem. Do not rely on unstated assumptions, examiner intention, or ambiguous words such as "normally" without context. Do not stack negatives.
-6. Hard questions should require at least two meaningful reasoning steps or the evaluation of multiple explicit constraints. Distractors may represent a correct rule under the wrong condition, an omitted requirement, an invalid intermediate step, or a solution that satisfies only part of the brief.
-7. For every item, write internal review metadata: explain why the key is correct, explain separately why each of the three distractors could attract a student and the precise reason it fails under the stem, and explicitly confirm that only one answer satisfies the stated conditions. This review must reflect the actual choices, not generic text.
-8. For medium/hard items, the stem itself must provide the decisive application/constraint. Do not turn a direct recall item into a medium/hard item by adding generic wrappers such as "Case review", "Which option is fully defensible", or unrelated narrative. If the source concept cannot support the claimed difficulty, generate a different syllabus-grounded item.
-9. The "answer" index must point to the correct option before options are randomized. Use varied answer positions; do not create a predictable answer-key pattern.
-10. Do not use placeholders, fake technical language, "all/none of the above", "true/false" as a shortcut, invented facts, copied questions, or clues that reveal the key.
-11. Cover different topics from across the visible material. Do not write multiple near-identical questions just to reach the count.
-12. If the source excerpt is marked truncated, stay within the visible evidence. Do not treat missing excerpt text as proof a topic is absent.
-13. Before responding, silently audit the full set for correctness, ambiguity, distractor plausibility, answer-position variety, duplicate or near-duplicate stems, and difficulty fit. Revise failed items rather than returning them.\n14. HARD REJECTION: Do not add a generic prefix or suffix to a recall question to make it appear medium/hard. Phrases such as 'For a short viva', 'Case review', 'A trainee suggests', 'Which option is fully defensible', and 'During a practical' are not difficulty by themselves. Each medium/hard item must contain a real scenario, a decision, data, an explicit constraint, an interpretation, or a multi-step operation that changes how the answer is determined.
+Rules:
+- Test distinct syllabus concepts using recall, application, calculation, interpretation, diagnosis, or comparison as appropriate.
+- Include all conditions needed to identify exactly one correct answer; do not rely on unstated assumptions or ambiguous wording.
+- Give four distinct, plausible options of similar type, specificity, and length. Wrong options should reflect realistic misconceptions, not random or unrelated facts.
+- For medium/hard, the stem must contain a meaningful scenario, data, constraint, or reasoning task. Do not disguise recall with generic story wording.
+- Avoid true/false, all/none-of-the-above, placeholders, invented facts, duplicate concepts, and predictable answer positions.
+- Silently verify the key, all options, uniqueness, grounding, and difficulty before answering. Output only the required JSON; do not include explanations.
 
-Required JSON shape:
-{
-  "questions": [
-    {
-      "id": "ai_q0",
-      "text": "A specific question with enough context to determine one best answer?",
-      "options": ["Option A", "Option B", "Option C", "Option D"],
-      "answer": 2,
-      "review": {
-        "correctReason": "Why this answer satisfies the question's exact condition.",
-        "distractorReasons": [
-          "Why option A is tempting and the precise condition it fails.",
-          "Why option B is tempting and the precise condition it fails.",
-          "Why option D is tempting and the precise condition it fails."
-        ],
-        "singleBestAnswerCheck": "Only one option satisfies every stated condition.",
-        "difficultyEvidence": "The student must apply the case condition and eliminate the alternatives that fail it."
-      }
-    }
-  ]
-}
+JSON: {"questions":[{"id":"ai_q0","text":"Question?","options":["A","B","C","D"],"answer":0}]}
 
-Study Material:
+Study material:
 ---
 ${source}
 ---`;
