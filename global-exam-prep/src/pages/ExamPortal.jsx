@@ -38,59 +38,6 @@ function allocateBatchCounts(batches, totalCount) {
     return counts;
 }
 
-/**
- * Generate rule-based questions directly from syllabus chapters when AI
- * generation exhausts all retries. Never blocks exam generation.
- * Returns an array of question objects shaped for the current exam mode.
- */
-function generateFallbackQuestions(batch, chapters, count, isObjective, difficulty) {
-    const questions = [];
-    const chapterIndices = batch.chapterIndices || [];
-    for (let i = 0; i < count && i < chapterIndices.length; i++) {
-        const ci = chapterIndices[i];
-        const ch = chapters[ci];
-        if (!ch) continue;
-        const name = ch.chapter_name || 'Chapter ' + (ci + 1);
-        const content = contentToString(ch.content);
-        if (isObjective) {
-            // Build a simple MCQ from the chapter name
-            questions.push({
-                id: 'fb_q' + questions.length,
-                text: 'Which of the following is a key topic covered in the chapter "' + name + '"?',
-                options: [
-                    name,
-                    'Unrelated topic A',
-                    'Unrelated topic B',
-                    'Unrelated topic C',
-                ],
-                answer: 0,
-                type: 'mcq',
-                difficulty: difficulty,
-                review: {
-                    correctReason: 'The chapter ' + name + ' is explicitly listed in the syllabus.',
-                    distractorReasons: [
-                        'Unrelated topic A is not part of this chapter.',
-                        'Unrelated topic B is not part of this chapter.',
-                        'Unrelated topic C is not part of this chapter.',
-                    ],
-                    singleBestAnswerCheck: 'Only one option matches the syllabus chapter name.',
-                    difficultyEvidence: 'Direct recall from the syllabus chapter listing.',
-                },
-            });
-        } else {
-            const marks = difficulty === 'easy' ? 1 : difficulty === 'medium' ? 4 : 8;
-            questions.push({
-                id: 'fb_q' + questions.length,
-                text: 'Describe the key concepts covered in the chapter "' + name + '".' + (content ? ' Refer to: ' + content.slice(0, 200) : ''),
-                type: 'subjective',
-                difficulty: difficulty,
-                marks: marks,
-            });
-        }
-    }
-    return questions;
-}
-
 export default function ExamPortal() {
     const { subjectId, examType, difficulty } = useParams();
     const navigate = useNavigate();
