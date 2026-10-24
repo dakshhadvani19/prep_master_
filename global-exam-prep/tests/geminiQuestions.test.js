@@ -185,13 +185,11 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             const items = schema.json_schema.schema.properties.questions.items;
             expect(items.required).toEqual(['text', 'options', 'answer']);
             expect(items.additionalProperties).toBe(false);
-            // Count and option cardinality are verified by local validators; keep
-            // the strict schema limited to the provider's portable subset.
-            expect(items.properties.options.minItems).toBeUndefined();
-            expect(items.properties.options.maxItems).toBeUndefined();
+            expect(items.properties.options.minItems).toBe(4);
+            expect(items.properties.options.maxItems).toBe(4);
             expect(items.properties.answer.enum).toEqual([0, 1, 2, 3]);
-            expect(schema.json_schema.schema.properties.questions.minItems).toBeUndefined();
-            expect(schema.json_schema.schema.properties.questions.maxItems).toBeUndefined();
+            expect(schema.json_schema.schema.properties.questions.minItems).toBe(3);
+            expect(schema.json_schema.schema.properties.questions.maxItems).toBe(3);
         });
 
         it('buildTheorySchema does not force all questions to share one mark value', async () => {
@@ -202,13 +200,34 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             expect(items.properties.marks.enum).toBeUndefined();
             expect(items.properties.marks.const).toBeUndefined();
             const questionsProp = schema.json_schema.schema.properties.questions;
-            expect(questionsProp.minItems).toBeUndefined();
-            expect(questionsProp.maxItems).toBeUndefined();
+            expect(questionsProp.minItems).toBe(3);
+            expect(questionsProp.maxItems).toBe(3);
+        });
+    });
+
+    describe('3a. Full MCQ paper is requested once', () => {
+        it('sends all 30 MCQs in one request with an exact-count schema', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(30)));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content covering all in-scope chapters. ' + 'x'.repeat(500),
+                difficulty: 'medium',
+                count: 30,
+                isObjective: true,
+            });
+
+            expect(result).toHaveLength(30);
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+            const request = JSON.parse(fetchMock.mock.calls[0][1].body);
+            expect(request.messages[1].content).toContain('Create exactly 30 original single-answer MCQs');
+            expect(request.response_format.json_schema.schema.properties.questions.minItems).toBe(30);
+            expect(request.response_format.json_schema.schema.properties.questions.maxItems).toBe(30);
         });
     });
 
     describe('3b. Recover short-but-valid batches', () => {
-        it('fills the missing MCQs when a request for five returns only two', async () => {
+        it('fills missing MCQs if the one full-paper request returns only two', async () => {
             const { generateQuestionsFromText } = await importModule();
             fetchMock
                 .mockResolvedValueOnce(mockJsonResponse(400, {
@@ -456,12 +475,9 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             })).rejects.toThrow(/duplicate|near-duplicate/i);
         });
 
-        it('cross-batch: combines small batches into full count', async () => {
+        it('makes one request for an MCQ set larger than five questions', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // count=6 > maxPerResponse(5) → batch1=5 (offset 0), batch2=1 (offset 5)
-            fetchMock
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(5, 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(1, 5)));
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(6, 0)));
 
             const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(300),
@@ -471,24 +487,23 @@ describe('geminiQuestions — strict JSON Schema migration', () => {
             });
 
             expect(result).toHaveLength(6);
+            expect(fetchMock).toHaveBeenCalledTimes(1);
         });
 
-        it('cross-batch: failure in second batch throws without partial results', async () => {
+        it('does not return an invalid partial result when JSON parsing fails', async () => {
             const { generateQuestionsFromText } = await importModule();
-            // count=6 → batch1=5 (ok), batch2=1 (invalid JSON)
-            // 3 mocks: batch1 + batch2 fail + retry batch1 + retry batch2 fail
-            fetchMock
-                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(5, 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, {
-                    choices: [{ message: { content: 'invalid' } }],
-                }));
+            fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, {
+                choices: [{ message: { content: 'invalid' } }],
+            })));
 
             await expect(generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(300),
                 difficulty: 'medium',
                 count: 6,
                 isObjective: true,
-            })).rejects.toThrow();
+            })).rejects.toThrow(/invalid JSON|rejected by validation/i);
+
+            expect(fetchMock).toHaveBeenCalledTimes(3);
         });
     });
 
