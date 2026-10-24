@@ -18,7 +18,7 @@ const TRUNCATION_NOTE = '[NOTE: This is a balanced excerpt from uploaded study m
 export function countReadableTextChars(files) {
     return (Array.isArray(files) ? files : []).reduce((sum, file) => {
         const text = typeof file?.text === 'string' ? file.text : '';
-        const withoutPageLabels = text.replace(/^\\[Page\\s+\\d+\\][ \\t]*(?:\\r?\\n)?/gim, '');
+        const withoutPageLabels = text.replace(/^\[Page\s+\d+\][ \t]*(?:\r?\n)?/gim, '');
         return sum + withoutPageLabels.trim().length;
     }, 0);
 }
