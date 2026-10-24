@@ -64,10 +64,11 @@ export function validateExam(questions, config, coveragePlan) {
         theoryCount: 0,
         oneMarkCount: 0,
         twoMarkCount: 0,
+        fourOrEightMarkTotal: 0,
     };
 
     // --- Count & type checks ---
-    const expectedCount = config.markDistribution.mcqCount || null;
+    const expectedCount = config.questionCount || config.markDistribution.mcqCount || null;
     if (expectedCount && questions.length !== expectedCount) {
         errors.push(`expected_${expectedCount}_questions_got_${questions.length}`);
     }
@@ -109,6 +110,10 @@ export function validateExam(questions, config, coveragePlan) {
                 stats.totalMarks += q.marks;
                 if (q.marks === 1) stats.oneMarkCount++;
                 if (q.marks === 2) stats.twoMarkCount++;
+                if (q.marks === 4 || q.marks === 8) stats.fourOrEightMarkTotal += q.marks;
+                if (config.type === 'subjective' && ![1, 2, 4, 8].includes(q.marks)) {
+                    errors.push(`subjective_${q.id}: marks_must_be_1_2_4_or_8`);
+                }
             }
         }
 
@@ -131,6 +136,9 @@ export function validateExam(questions, config, coveragePlan) {
         if (stats.twoMarkCount !== expectedTwoMark) {
             errors.push(`expected_${expectedTwoMark}_two_mark_questions_got_${stats.twoMarkCount}`);
         }
+    }
+    if (config.markDistribution.fourOrEightMarkTotal !== undefined && stats.fourOrEightMarkTotal !== config.markDistribution.fourOrEightMarkTotal) {
+        errors.push(`expected_4_or_8_mark_total_${config.markDistribution.fourOrEightMarkTotal}_got_${stats.fourOrEightMarkTotal}`);
     }
     if (config.totalMarks !== undefined && stats.totalMarks > 0) {
         if (stats.totalMarks !== config.totalMarks) {
