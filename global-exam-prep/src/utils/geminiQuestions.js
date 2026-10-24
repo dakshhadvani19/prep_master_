@@ -425,19 +425,33 @@ ${source}
                 const errorBody = await response.json().catch(() => ({}));
                 const message = errorBody.error?.message || response.status;
                 const category = errorBody.error?.category || 'upstream';
+                const providerCode = errorBody.error?.providerCode || errorBody.error?.code || '';
                 const error = new Error(`AI generation failed: ${message}`);
                 error.category = category;
+                error.providerCode = providerCode;
+
                 if (response.status === 429) {
                     error.isRateLimit = true;
-                    error.retryAfter = Number(response.headers.get('retry-after')) || parseRetryAfterSeconds(message);
+                    error.retryAfter = Number(errorBody.error?.retryAfter)
+                        || Number(response.headers.get('retry-after'))
+                        || parseRetryAfterSeconds(message);
                 }
-                // If strict json_schema is not supported by this provider/model,
-                // fall back once to json_object with enhanced client-side validation.
-                if (category === 'schema_config' && !schemaFallbackAttempted) {
+
+                // Groq sometimes rejects a generation with code json_validate_failed.
+                // That is distinct from an unsupported schema. Retry once in JSON-object
+                // mode, then use bounded retries and local validation if the transient
+                // provider-side validation failure persists.
+                const jsonValidationFailure = providerCode === 'json_validate_failed'
+                    || /failed to validate json|generated json does not match|json_validate_failed/i.test(message);
+                if ((category === 'schema_config' || jsonValidationFailure) && !schemaFallbackAttempted) {
                     schemaFallbackAttempted = true;
                     currentResponseFormat = { type: 'json_object' };
-                    console.warn('Strict json_schema not supported; falling back to json_object with client-side validation.');
-                    attempt -= 1; // retry the same attempt with the fallback format
+                    console.warn(
+                        jsonValidationFailure
+                            ? 'Groq JSON validation failed; retrying once in json_object mode with local validation.'
+                            : 'Strict json_schema is unsupported; retrying in json_object mode with local validation.'
+                    );
+                    attempt -= 1; // fallback does not consume a generation retry
                     continue;
                 }
                 throw error;
@@ -504,9 +518,10 @@ ${source}
         } catch (error) {
             lastError = error;
             console.error(`AI Generation / Validation Error (attempt ${attempt} of ${MAX_RETRIES}):`, error.message);
-            // After the json_schema→json_object fallback has already been attempted,
-            // do not retry any further — break out immediately with a terminal error.
-            if (schemaFallbackAttempted) {
+            // A repeated schema-configuration error is not made better by retrying.
+            // Other failures (including json_validate_failed in JSON-object mode and
+            // rate limits) continue through the bounded retry policy.
+            if (schemaFallbackAttempted && error.category === 'schema_config') {
                 break;
             }
             // Rate limits are temporary. Wait for Groq's reset hint and retry the same
