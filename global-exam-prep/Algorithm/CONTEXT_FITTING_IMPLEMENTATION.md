@@ -22,9 +22,9 @@ The 6,000-character source cap is a **display/excerpt limit**, not a silent disc
 
 | Exam Type | Scope | Marks | Question Rules |
 |-----------|-------|-------|----------------|
-| **Mid-1 (Theory)** | First 50% of ordered chapters (verified unit/contact-hour weights where available; otherwise closest defensible chapter boundary) | 30 | Exactly two 1-mark questions; remaining 28 marks distributed among 4- and 8-mark questions |
+| **Mid-1 (Theory)** | First 50% of ordered chapters (verified unit/contact-hour weights where available; otherwise closest defensible chapter boundary) | 30 | Exactly 7 questions: two 1-mark, three 4-mark, two 8-mark (30 marks total); interleave types |
 | **Mid-2 (MCQ / Objective)** | Verified and configured Mid-2 scope — do not silently assume second half or full syllabus | 30 | Exactly 30 questions, four distinct options, exactly one correct answer |
-| **ESE / Final (Theory)** | Full relevant syllabus unless an authoritative blueprint narrows it | 60 | Exactly two 1-mark questions, one 2-mark question, remaining 56 marks distributed among 4- and 8-mark questions |
+| **ESE / Final (Theory)** | Full relevant syllabus unless an authoritative blueprint narrows it | 60 | Exactly 13 questions: two 1-mark, one 2-mark, six 4-mark, four 8-mark (60 marks total); interleave types |
 | **Practicals** | Only the matching subject's practical content, only where appropriate | — | Practical-specific questions only |
 
 Difficulty changes cognitive demand only — never exam eligibility, scope, counts, or marks.
@@ -79,6 +79,8 @@ Allocate questions or marks across batches proportionally to chapter content siz
 
 ### Step 5 — Generate Per-Batch
 
+Additionally split each source batch into small generation requests: at most **5 MCQs per Groq response** and at most **3 theory questions per response**. Even if the source fits in one chapter batch, make multiple calls when needed to reach 30 MCQs or the configured theory count. Require the model to return exactly the requested count for every call.
+
 For each batch:
 1. Build the user message with the scope block, coverage plan, and that batch's source excerpt.
 2. Call `generateQuestionsFromText` via `/api/ai`.
@@ -94,8 +96,8 @@ For each batch:
    - No duplicate or near-duplicate questions across batches.
    - Coverage spans all in-scope chapters.
    - For MCQ: exactly 30 questions, 4 options each, one correct answer.
-   - For Mid-1 theory: exactly two 1-mark questions, remaining 28 marks in 4/8-mark questions.
-   - For ESE theory: exactly two 1-mark questions, one 2-mark question, remaining 56 marks in 4/8-mark questions.
+   - For Mid-1 theory: exactly 7 questions with marks `[1, 4, 1, 8, 4, 8, 4]` (30 total). A 1-mark prompt must request one brief fact/point, not a page-length response.
+   - For ESE theory: exactly 13 questions with marks `[1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]` (60 total). A 1-mark prompt must request one brief fact/point, not a page-length response.
 3. Strip internal review metadata from MCQ questions before the student-facing payload.
 
 ### Step 7 — Failure Handling
