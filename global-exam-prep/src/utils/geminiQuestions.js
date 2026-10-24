@@ -90,8 +90,9 @@ function validateDifficultySubstance(questions, difficulty) {
         // A 1-mark theory item must stay brief even in a hard paper; difficulty
         // must not force a one-mark question to demand multi-step/page-long work.
         if (q?.type === 'subjective' && Number(q?.marks) === 1) {
-            if (stem.length > 220 || /\\b(explain in detail|discuss comprehensively|describe all|write an essay|full architecture)\\b/i.test(stem)) {
-                throw new Error(`Question quality check failed at question ${index + 1}: a 1-mark item must ask for one concise fact or point.`);
+            const multiPartCommand = /\\b(explain|describe|discuss|analy[sz]e|evaluate|compare|differentiate|elaborate|illustrate|justify|outline|enumerate|derive|prove|design|construct|write a program|write an algorithm)\\b/i.test(stem);
+            if (stem.length > 180 || multiPartCommand) {
+                throw new Error(`Question quality check failed at question ${index + 1}: a 1-mark item must ask for one concise fact or point, not a multi-part explanation.`);
             }
             return;
         }
