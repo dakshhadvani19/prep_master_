@@ -284,17 +284,20 @@ export default function ExamPortal() {
                 // This is the key protection against a 30-question prompt returning only ~10.
                 const maxQuestionsPerRequest = isObj ? 5 : 3;
                 const generationTasks = [];
+                let markCursor = 0;
                 batches.forEach((batch, batchIndex) => {
                     let remaining = batchCounts[batchIndex];
                     while (remaining > 0) {
                         const count = Math.min(maxQuestionsPerRequest, remaining);
-                        generationTasks.push({ batch, batchIndex, batchCount: count });
+                        const markSequence = isObj ? null : config.markSequence.slice(markCursor, markCursor + count);
+                        generationTasks.push({ batch, batchIndex, batchCount: count, markSequence });
+                        markCursor += count;
                         remaining -= count;
                     }
                 });
 
                 for (const [requestIndex, task] of generationTasks.entries()) {
-                    const { batch, batchIndex, batchCount } = task;
+                    const { batch, batchIndex, batchCount, markSequence } = task;
                     const batchParts = batch.chapterIndices.map((ci) => {
                         const ch = chapters[ci];
                         if (!ch) return '';
@@ -316,6 +319,7 @@ export default function ExamPortal() {
                             difficulty,
                             count: batchCount,
                             isObjective: isObj,
+                            marksForQuestions: markSequence,
                         });
                         if (batchQuestions.length !== batchCount) {
                             throw new Error('Expected ' + batchCount + ' questions from request ' + requestIndex + ', received ' + batchQuestions.length + '.');
