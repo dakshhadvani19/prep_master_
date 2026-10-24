@@ -87,6 +87,14 @@ function validateDifficultySubstance(questions, difficulty) {
         if (GENERIC_DIFFICULTY_WRAPPERS.some(pattern => pattern.test(stem))) {
             throw new Error(`Question quality check failed at question ${index + 1}: generic difficulty wrapper detected. The stem must create real reasoning, not merely label a recall question as a case. Please retry.`);
         }
+        // A 1-mark theory item must stay brief even in a hard paper; difficulty
+        // must not force a one-mark question to demand multi-step/page-long work.
+        if (q?.type === 'subjective' && Number(q?.marks) === 1) {
+            if (stem.length > 220 || /\\b(explain in detail|discuss comprehensively|describe all|write an essay|full architecture)\\b/i.test(stem)) {
+                throw new Error(`Question quality check failed at question ${index + 1}: a 1-mark item must ask for one concise fact or point.`);
+            }
+            return;
+        }
         if (difficulty === 'medium' || difficulty === 'hard') {
             const lower = normalizeText(stem);
             const genericLead = /^(during|in|for|a student|a trainee|case review|case study|a design review|a worked problem)/i.test(stem);
