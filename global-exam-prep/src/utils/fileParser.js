@@ -22,10 +22,10 @@ function toPdfReadError(error) {
 
 /**
  * Extract plain text from a PDF ArrayBuffer using PDF.js.
- * Page labels are retained so downstream context fitting can sample across
- * the complete document rather than accidentally keeping only its first pages.
+ * Optional page limits and labels are enabled for study-material uploads only;
+ * other callers (such as the admin syllabus uploader) retain legacy behavior.
  */
-export async function extractPdfText(arrayBuffer) {
+export async function extractPdfText(arrayBuffer, { maxPages = null, includePageLabels = false } = {}) {
     let pdf;
     try {
         pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
@@ -37,13 +37,13 @@ export async function extractPdfText(arrayBuffer) {
         throw new Error('This PDF does not contain any readable pages.');
     }
 
-    if (pdf.numPages > MAX_PDF_PAGES) {
+    if (Number.isInteger(maxPages) && maxPages > 0 && pdf.numPages > maxPages) {
         try {
             await pdf.destroy?.();
         } catch {
             // The page-count rejection is the important user-facing result.
         }
-        throw new Error(`This PDF has ${pdf.numPages} pages. The maximum allowed is ${MAX_PDF_PAGES} pages per PDF.`);
+        throw new Error(`This PDF has ${pdf.numPages} pages. The maximum allowed is ${maxPages} pages per PDF.`);
     }
 
     const pages = [];
@@ -56,7 +56,7 @@ export async function extractPdfText(arrayBuffer) {
                 .filter(Boolean)
                 .join(' ')
                 .trim();
-            pages.push(`[Page ${i}]\n${pageText}`);
+            pages.push(includePageLabels ? `[Page ${i}]\n${pageText}` : pageText);
         }
     } catch (error) {
         throw toPdfReadError(error);
@@ -114,7 +114,7 @@ export async function extractTextFromFile(file) {
 
     if (ext === 'pdf') {
         const buf = await file.arrayBuffer();
-        return await extractPdfText(buf);
+        return await extractPdfText(buf, { maxPages: MAX_PDF_PAGES, includePageLabels: true });
     }
 
     if (ext === 'pptx') {
