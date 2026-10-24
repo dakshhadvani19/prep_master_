@@ -238,6 +238,34 @@ export async function generateQuestionsFromText({
         throw new Error('Question count must be an integer between 1 and 50.');
     }
 
+    // Keep each Groq response small. Large 30-MCQ requests can be cut short by
+    // output-token limits, which previously allowed partial exams to slip through.
+    const maxPerResponse = isObjective ? 5 : 3;
+    if (count > maxPerResponse) {
+        const combined = [];
+        for (let offset = 0; offset < count; offset += maxPerResponse) {
+            const batchCount = Math.min(maxPerResponse, count - offset);
+            const batchMarks = Array.isArray(marksForQuestions)
+                ? marksForQuestions.slice(offset, offset + batchCount)
+                : null;
+            const batch = await generateQuestionsFromText({
+                text,
+                difficulty: requestedDifficulty,
+                count: batchCount,
+                isObjective,
+                marksForQuestions: batchMarks,
+            });
+            combined.push(...batch.map(question => ({ ...question, id: `ai_q${combined.length}` })));
+        }
+        // Cross-batch validation is necessary because each response is validated alone.
+        validateCommonQuestions(combined, count);
+        return combined;
+    }
+
+    if (Array.isArray(marksForQuestions) && !isObjective && marksForQuestions.length !== count) {
+        throw new Error('The assigned mark sequence must contain one mark value per theory question.');
+    }
+
     // Make truncation explicit: the model must not infer that omitted material is absent from the source.
     const truncated = text.length > MAX_SOURCE_CHARS;
     const source = truncated
