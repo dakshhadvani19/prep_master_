@@ -141,7 +141,11 @@ export async function generateQuestionsFromText({
     marksForQuestions = null,
     recoveryDepth = 0,
     excludedQuestionTexts = [],
+    maxSourceChars = MAX_SOURCE_CHARS,
 }) {
+    const sourceLimit = Number.isInteger(maxSourceChars) && maxSourceChars >= 100
+        ? maxSourceChars
+        : MAX_SOURCE_CHARS;
     const requestedDifficulty = VALID_DIFFICULTIES.has(difficulty) ? difficulty : 'medium';
     const blueprint = DIFFICULTY_BLUEPRINT[requestedDifficulty];
     if (typeof text !== 'string' || text.trim().length < 100) {
@@ -178,6 +182,7 @@ export async function generateQuestionsFromText({
                 count: batchCount,
                 isObjective,
                 marksForQuestions: batchMarks,
+                maxSourceChars: sourceLimit,
             });
             combined.push(...batch.map((question, index) => ({ ...question, id: `ai_q${offset + index}` })));
             batchIndex += 1;
@@ -192,9 +197,9 @@ export async function generateQuestionsFromText({
     }
 
     // Make truncation explicit: the model must not infer that omitted material is absent from the source.
-    const truncated = text.length > MAX_SOURCE_CHARS;
+    const truncated = text.length > sourceLimit;
     const source = truncated
-        ? text.slice(0, MAX_SOURCE_CHARS) + '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]'
+        ? text.slice(0, sourceLimit) + '\n\n[NOTE: SOURCE EXCERPT TRUNCATED. Treat only the visible material as evidence; do not make claims about what omitted text does or does not contain.]'
         : text;
 
     // Use JSON-object mode to avoid Groq's strict-schema generation validator
@@ -362,6 +367,7 @@ ${source}
                         isObjective,
                         marksForQuestions: missingMarks,
                         recoveryDepth: recoveryDepth + 1,
+                        maxSourceChars: sourceLimit,
                         excludedQuestionTexts: [
                             ...excludedQuestionTexts,
                             ...normalizedQuestions.map(question => question.text),
