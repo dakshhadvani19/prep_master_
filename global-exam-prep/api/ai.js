@@ -73,6 +73,7 @@ export default async function handler(req) {
                 messages: body.messages,
                 response_format: body.response_format,
                 temperature: body.temperature ?? 0.1,
+                reasoning_effort: body.reasoning_effort ?? 'low',
             }),
         });
 
