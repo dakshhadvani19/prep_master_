@@ -6,6 +6,7 @@ import {
     selectScopeChapters,
     buildBatches,
     buildCoveragePlan,
+    buildBalancedObjectiveSource,
     fitContext,
     MAX_SOURCE_CHARS,
     EXAM_CONFIG,
@@ -48,6 +49,34 @@ describe('contextFitter', () => {
         expect(fitContext(makeRecord(4), 'mid-1').config.totalMarks).toBe(30);
         expect(fitContext(makeRecord(4), 'mid-2').config.type).toBe('objective');
         expect(fitContext(makeRecord(4), 'final').config.totalMarks).toBe(60);
+    });
+
+    describe('buildBalancedObjectiveSource', () => {
+        it('fits within the context budget and represents every in-scope chapter', () => {
+            const record = makeRecord(12);
+            const prefix = 'Academic Context: Subject Test\n';
+            const source = buildBalancedObjectiveSource(
+                record,
+                Array.from({ length: 12 }, (_, index) => index),
+                prefix,
+                1200,
+            );
+
+            expect(source.length).toBeLessThanOrEqual(1200);
+            expect(source.startsWith(prefix)).toBe(true);
+            for (let chapter = 1; chapter <= 12; chapter += 1) {
+                expect(source).toContain(`CHAPTER: Chapter ${chapter}`);
+                expect(source).toContain(`Content for chapter ${chapter}.`);
+            }
+        });
+
+        it('preserves source text directly when it fits the budget', () => {
+            const record = { chapters: [{ chapter_name: 'Short', content: 'Definition and example.' }] };
+            const source = buildBalancedObjectiveSource(record, [0], '', 1000);
+            expect(source).toContain('CHAPTER: Short');
+            expect(source).toContain('Definition and example.');
+            expect(source.length).toBeLessThanOrEqual(1000);
+        });
     });
 
     describe('selectScopeChapters', () => {
