@@ -11,7 +11,6 @@ import { requireSupabase } from '../supabase';
 import {
     buildCanonicalRoomQuestions,
     makeSafeRoomQuestions,
-    scoreRoomAnswers,
     shuffleRoomQuestions,
     toCanonicalAnswerArray,
 } from '../utils/testRoomShuffle';
