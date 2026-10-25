@@ -55,7 +55,7 @@ export function cleanQuestions(input) {
     if (!Array.isArray(input) || input.length !== 30) throw new Error('A Test Room must contain exactly 30 MCQs.');
     return input.map((q, index) => {
         const options = Array.isArray(q?.options) ? q.options : [];
-        const answer = Number(q?.answer);
+        const answer = q?.answer;
         if (!String(q?.text || '').trim() || options.length !== 4 || !Number.isInteger(answer) || answer < 0 || answer > 3) {
             throw new Error('Question ' + (index + 1) + ' is not a valid four-option MCQ.');
         }
