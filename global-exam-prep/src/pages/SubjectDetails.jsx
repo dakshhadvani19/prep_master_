@@ -4,7 +4,7 @@ import { examPrompts, DEFAULT_EXAM_TYPES } from '../data/examPrompts';
 import { fetchCourseAndSubjects } from '../utils/catalogApi';
 import {
     ChevronLeft, Book, Target, Activity, Flame, Shield,
-    Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader
+    Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader, Users, X, DoorOpen
 } from 'lucide-react';
 
 const DIFFICULTY_LEVELS = [
@@ -23,6 +23,7 @@ export default function SubjectDetails() {
     const [selectedExamType, setSelectedExamType] = useState(null);
     const [selectedMode, setSelectedMode] = useState(null); // 'auto' | 'upload'
     const [selectedDifficulty, setSelectedDifficulty] = useState('medium');
+    const [showTestRoomModal, setShowTestRoomModal] = useState(false);
 
     const [currentCourse, setCurrentCourse] = useState(null);
     const [subjects, setSubjects] = useState([]);
@@ -119,6 +120,30 @@ export default function SubjectDetails() {
     };
 
     const canStart = selectedSubject && selectedExamType && selectedMode && selectedDifficulty;
+    const canUseTestRoom = Boolean(canStart && examPrompts[selectedExamType]?.type === 'objective');
+
+    const handleCreateTestRoom = () => {
+        if (!canUseTestRoom) return;
+        const info = examPrompts[selectedExamType];
+        navigate(
+            `/exams/${selectedSubject.id}/${selectedExamType}/${selectedDifficulty}`,
+            {
+                state: {
+                    examMode: selectedMode,
+                    testRoomMode: 'create',
+                    courseId: String(courseId),
+                    subjectName: selectedSubject.title,
+                    examTitle: info?.title || selectedExamType,
+                    difficulty: selectedDifficulty,
+                },
+            }
+        );
+    };
+
+    const handleJoinTestRoom = () => {
+        setShowTestRoomModal(false);
+        navigate('/test-rooms');
+    };
 
     const handleSemClick = (sem) => {
         setSelectedSem(sem);
@@ -382,29 +407,52 @@ export default function SubjectDetails() {
                                                                 })}
                                                             </div>
 
-                                                            <button
-                                                                onClick={handleStartExam}
-                                                                disabled={!canStart}
-                                                                style={{
-                                                                    width: '100%',
-                                                                    padding: '1rem',
-                                                                    borderRadius: 'var(--radius-full)',
-                                                                    background: canStart ? 'var(--accent-gradient)' : 'var(--bg-tertiary)',
-                                                                    color: canStart ? 'white' : 'var(--text-tertiary)',
-                                                                    fontWeight: 700,
-                                                                    fontSize: '1.05rem',
-                                                                    cursor: canStart ? 'pointer' : 'not-allowed',
-                                                                    transition: 'all 0.2s',
-                                                                    display: 'flex',
-                                                                    alignItems: 'center',
-                                                                    justifyContent: 'center',
-                                                                    gap: '0.6rem',
-                                                                    boxShadow: canStart ? 'var(--shadow-glow)' : 'none',
-                                                                }}
-                                                            >
-                                                                <ArrowRight size={18} />
-                                                                Start Exam
-                                                            </button>
+                                                            <div style={{ display: 'grid', gridTemplateColumns: canUseTestRoom ? 'repeat(auto-fit,minmax(210px,1fr))' : '1fr', gap: '0.75rem' }}>
+                                                                <button
+                                                                    onClick={handleStartExam}
+                                                                    disabled={!canStart}
+                                                                    style={{
+                                                                        width: '100%',
+                                                                        padding: '1rem',
+                                                                        borderRadius: 'var(--radius-full)',
+                                                                        background: canStart ? 'var(--accent-gradient)' : 'var(--bg-tertiary)',
+                                                                        color: canStart ? 'white' : 'var(--text-tertiary)',
+                                                                        fontWeight: 700,
+                                                                        fontSize: '1.05rem',
+                                                                        cursor: canStart ? 'pointer' : 'not-allowed',
+                                                                        transition: 'all 0.2s',
+                                                                        display: 'flex',
+                                                                        alignItems: 'center',
+                                                                        justifyContent: 'center',
+                                                                        gap: '0.6rem',
+                                                                        boxShadow: canStart ? 'var(--shadow-glow)' : 'none',
+                                                                    }}
+                                                                >
+                                                                    <ArrowRight size={18} /> Start Exam
+                                                                </button>
+                                                                {canUseTestRoom && (
+                                                                    <button
+                                                                        onClick={() => setShowTestRoomModal(true)}
+                                                                        style={{
+                                                                            width: '100%',
+                                                                            padding: '1rem',
+                                                                            borderRadius: 'var(--radius-full)',
+                                                                            border: '1px solid rgba(141,123,255,0.4)',
+                                                                            background: 'rgba(141,123,255,0.12)',
+                                                                            color: '#b9adff',
+                                                                            fontWeight: 750,
+                                                                            fontSize: '1.02rem',
+                                                                            cursor: 'pointer',
+                                                                            display: 'flex',
+                                                                            alignItems: 'center',
+                                                                            justifyContent: 'center',
+                                                                            gap: '0.6rem',
+                                                                        }}
+                                                                    >
+                                                                        <Users size={18} /> Test Room
+                                                                    </button>
+                                                                )}
+                                                            </div>
                                                         </div>
                                                     )}
                                                 </div>
@@ -416,6 +464,39 @@ export default function SubjectDetails() {
                         })}
                     </div>
                 </section>
+            )}
+
+
+            {showTestRoomModal && (
+                <div
+                    role="presentation"
+                    onMouseDown={(event) => { if (event.target === event.currentTarget) setShowTestRoomModal(false); }}
+                    style={{ position: 'fixed', inset: 0, zIndex: 11000, background: 'rgba(4,6,12,0.82)', backdropFilter: 'blur(12px)', display: 'grid', placeItems: 'center', padding: '1rem' }}
+                >
+                    <div role="dialog" aria-modal="true" aria-labelledby="test-room-dialog-title" className="glass-panel animate-fade-in" style={{ width: '100%', maxWidth: 560, padding: 'clamp(1.25rem,4vw,2rem)', border: '1px solid rgba(141,123,255,0.28)' }}>
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1.35rem' }}>
+                            <div style={{ width: 48, height: 48, borderRadius: 15, background: 'rgba(141,123,255,0.14)', color: '#b9adff', display: 'grid', placeItems: 'center', flexShrink: 0 }}><Users size={23} /></div>
+                            <div style={{ flex: 1 }}>
+                                <h2 id="test-room-dialog-title" style={{ fontSize: '1.45rem', marginBottom: '0.45rem' }}>Test Room</h2>
+                                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.6 }}>Create a temporary room for this MCQ exam or join an existing room with a code.</p>
+                            </div>
+                            <button aria-label="Close Test Room dialog" onClick={() => setShowTestRoomModal(false)} style={{ color: 'var(--text-tertiary)', padding: '0.25rem' }}><X size={20} /></button>
+                        </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '0.8rem' }}>
+                            <button onClick={handleCreateTestRoom} style={{ textAlign: 'left', padding: '1.15rem', borderRadius: 'var(--radius-lg)', border: '1px solid rgba(59,130,246,0.28)', background: 'rgba(59,130,246,0.09)', color: 'var(--text-primary)' }}>
+                                <DoorOpen size={23} color="var(--accent-primary)" />
+                                <div style={{ fontWeight: 800, marginTop: '0.8rem' }}>Create Test Room</div>
+                                <div style={{ color: 'var(--text-secondary)', fontSize: '0.82rem', lineHeight: 1.55, marginTop: '0.35rem' }}>Generate the MCQ paper, choose a timer, and share a code.</div>
+                            </button>
+                            <button onClick={handleJoinTestRoom} style={{ textAlign: 'left', padding: '1.15rem', borderRadius: 'var(--radius-lg)', border: '1px solid rgba(141,123,255,0.28)', background: 'rgba(141,123,255,0.09)', color: 'var(--text-primary)' }}>
+                                <Users size={23} color="#b9adff" />
+                                <div style={{ fontWeight: 800, marginTop: '0.8rem' }}>Join Test Room</div>
+                                <div style={{ color: 'var(--text-secondary)', fontSize: '0.82rem', lineHeight: 1.55, marginTop: '0.35rem' }}>Enter a room code and wait for the host to begin.</div>
+                            </button>
+                        </div>
+                        <p style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', marginTop: '1.15rem' }}>Rooms are temporary. No room code, host, timer, or live session is written to the room database table.</p>
+                    </div>
+                </div>
             )}
 
             <style>{`
