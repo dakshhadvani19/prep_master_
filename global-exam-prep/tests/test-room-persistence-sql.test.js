@@ -2,10 +2,14 @@ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { PGlite } from '@electric-sql/pglite';
 
-const MIGRATION = readFileSync(
-    `${globalThis.process.cwd()}/supabase/migrations/20261025120000_test_room_attempt_persistence.sql`,
+const MIGRATIONS = [
+    '20261025095212_add_persistent_exam_attempts_and_grades.sql',
+    '20261025095445_unique_test_room_attempt_per_student.sql',
+    '20261025095507_keep_test_room_answer_keys_server_only.sql',
+].map((filename) => readFileSync(
+    `${globalThis.process.cwd()}/supabase/migrations/${filename}`,
     'utf8',
-);
+));
 const USER_A = 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa';
 const USER_B = 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb';
 
@@ -30,7 +34,7 @@ beforeAll(async () => {
         grant execute on function auth.uid() to anon, authenticated, service_role;
         insert into auth.users (id) values ('${USER_A}'), ('${USER_B}');
     `);
-    await db.exec(MIGRATION);
+    for (const migration of MIGRATIONS) await db.exec(migration);
 }, 120000);
 
 afterAll(async () => { await db?.close(); });
