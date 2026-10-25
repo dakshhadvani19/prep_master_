@@ -3,6 +3,7 @@ import {
     cleanQuestions,
     normalizeAnswers,
     normalizeCode,
+    resolveFinalization,
     safeQuestions,
     scoreAnswers,
 } from '../api/test-room-session.js';
@@ -13,6 +14,38 @@ const questions = Array.from({ length: 30 }, (_, index) => ({
     options: ['A', 'B', 'C', 'D'].map((text, originalOptionIndex) => ({ text, originalOptionIndex })),
     answer: index % 4,
 }));
+
+describe('Test Room finalization decisions', () => {
+    it('uses the exact deadline boundary for timeout classification', () => {
+        expect(resolveFinalization('submit', 10_000, 9_999)).toEqual({
+            status: 'submitted',
+            reason: 'manual_submit',
+        });
+        expect(resolveFinalization('submit', 10_000, 10_000)).toEqual({
+            status: 'timed_out',
+            reason: 'timer_expired',
+        });
+        expect(resolveFinalization('disconnect', 10_000, 10_001)).toEqual({
+            status: 'timed_out',
+            reason: 'timer_expired',
+        });
+    });
+
+    it('keeps manual submit, participant disconnect and host-marked disconnect reasons distinct', () => {
+        expect(resolveFinalization('submit', null, 1)).toEqual({
+            status: 'submitted',
+            reason: 'manual_submit',
+        });
+        expect(resolveFinalization('disconnect', 0, 1)).toEqual({
+            status: 'disconnected',
+            reason: 'connection_lost',
+        });
+        expect(resolveFinalization('mark_disconnected', undefined, 1)).toEqual({
+            status: 'disconnected',
+            reason: 'participant_connection_lost',
+        });
+    });
+});
 
 describe('Test Room server-side validation and scoring', () => {
     it('normalizes valid room codes and rejects ambiguous or malformed codes', () => {
