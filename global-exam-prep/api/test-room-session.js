@@ -168,7 +168,11 @@ async function finalizeAttempt(admin, { code, uid, status = 'disconnected', reas
     if (attempt.status === 'waiting') return { ok: false, error: 'The test has not started yet.' };
     const questionList = code ? await getQuestions(code).catch(() => null) : null;
     const answerKey = await privateAnswerKey(admin, attempt.id, questionList);
-    const answers = normalizeAnswers(submittedAnswers ?? attempt.answers, attempt.total_marks || answerKey.length || 30);
+    // Redis holds the most recent accepted answer revision; use it when a
+    // host detects departure or another participant's heartbeat performs cleanup.
+    const participantSnapshot = code ? await getParticipant(code, uid).catch(() => null) : null;
+    const answerSource = submittedAnswers ?? participantSnapshot?.answers ?? attempt.answers;
+    const answers = normalizeAnswers(answerSource, attempt.total_marks || answerKey.length || 30);
     const result = answerKey.length ? scoreAnswers(answerKey, answers) : null;
     const now = new Date().toISOString();
     const patch = { answers, status, end_reason: reason, submitted_at: now, updated_at: now };
@@ -179,7 +183,7 @@ async function finalizeAttempt(admin, { code, uid, status = 'disconnected', reas
     const { data, error } = await admin.from('exam_attempts').update(patch)
         .eq('id', attempt.id).eq('user_id', uid).eq('status', 'in_progress').select('*').maybeSingle();
     if (error) throw new Error(error.message);
-    const participant = code ? await getParticipant(code, uid).catch(() => null) : null;
+    const participant = participantSnapshot || (code ? await getParticipant(code, uid).catch(() => null) : null);
     if (participant) {
         await patchParticipant(code, uid, {
             status: ['submitted', 'auto_submitted', 'timed_out'].includes(status) ? 'submitted' : 'disconnected',
