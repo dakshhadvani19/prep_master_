@@ -109,9 +109,10 @@ function roomButtonStyle(variant = 'primary', disabled = false) {
 }
 
 export default function TestRoomPage() {
-    const { roomCode: routeCode } = useParams();
+    const { roomCode: routeCodeParam } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
+    const routeCode = routeCodeParam || location.state?.temporaryRoomCode || '';
     const { currentUser } = useAuth();
 
     const createPayload = location.state?.testRoomMode === 'create' && Array.isArray(location.state?.questions)
@@ -597,14 +598,14 @@ export default function TestRoomPage() {
                         spellCheck={false}
                         value={joinCodeInput}
                         onChange={(event) => setJoinCodeInput(normalizedCode(event.target.value).slice(0, 10))}
-                        onKeyDown={(event) => { if (event.key === 'Enter' && codeLooksValid) navigate('/test-rooms/' + normalizedCode(joinCodeInput)); }}
+                        onKeyDown={(event) => { if (event.key === 'Enter' && codeLooksValid) navigate('/test-rooms/session', { state: { temporaryRoomCode: normalizedCode(joinCodeInput) } }); }}
                         placeholder="e.g. 7KMR2QXNA8"
                         aria-describedby="room-code-hint"
                         style={{ width: '100%', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.9rem 1rem', background: 'var(--bg-tertiary)', color: 'var(--text-primary)', font: 'inherit', fontSize: '1.1rem', letterSpacing: '0.1em', marginBottom: '0.6rem' }}
                     />
                     <p id="room-code-hint" style={{ color: 'var(--text-tertiary)', fontSize: '0.8rem', marginBottom: '1.3rem' }}>Letters I/O and digits 0/1 are excluded to make codes easier to read.</p>
                     {error && <p role="alert" style={{ color: '#fca5a5', fontSize: '0.88rem', marginBottom: '1rem' }}>{error}</p>}
-                    <button disabled={!codeLooksValid} onClick={() => navigate('/test-rooms/' + normalizedCode(joinCodeInput))} style={roomButtonStyle('primary', !codeLooksValid)}>
+                    <button disabled={!codeLooksValid} onClick={() => navigate('/test-rooms/session', { state: { temporaryRoomCode: normalizedCode(joinCodeInput) } })} style={roomButtonStyle('primary', !codeLooksValid)}>
                         <DoorOpen size={18} /> Check Code &amp; Join
                     </button>
                     <p style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', lineHeight: 1.55, marginTop: '1rem' }}>
