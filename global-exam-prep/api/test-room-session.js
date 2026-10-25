@@ -285,6 +285,59 @@ export default async function handler(req, res) {
             return res.status(200).json({ ok: true });
         }
 
+        if (action === 'get_attempt_review') {
+            const attemptId = String(body.attemptId || '');
+            if (!/^[0-9a-f-]{36}$/i.test(attemptId)) return fail(res, 400, 'Invalid attempt identifier.');
+            const { data: attempt, error: attemptError } = await admin.from('exam_attempts')
+                .select('*').eq('id', attemptId).eq('user_id', user.id)
+                .eq('attempt_type', 'test_room').maybeSingle();
+            if (attemptError) throw new Error(attemptError.message);
+            if (!attempt) return fail(res, 404, 'Attempt not found.');
+            if (!['submitted', 'auto_submitted', 'disconnected', 'timed_out'].includes(attempt.status)) {
+                return fail(res, 409, 'This attempt is not finalized yet. Its saved progress is still being reconciled.');
+            }
+            const { data: keyRow, error: keyError } = await admin.from('exam_attempt_keys')
+                .select('answer_key').eq('attempt_id', attempt.id).maybeSingle();
+            if (keyError) throw new Error(keyError.message);
+            const key = Array.isArray(keyRow?.answer_key) ? keyRow.answer_key : [];
+            const safeQuestionsForReview = Array.isArray(attempt.questions) ? attempt.questions : [];
+            const answers = normalizeAnswers(attempt.answers, safeQuestionsForReview.length || 30);
+            const correct = safeQuestionsForReview.map((question, index) => ({
+                ...question,
+                options: (Array.isArray(question.options) ? question.options : [])
+                    .slice()
+                    .sort((a, b) => Number(a?.originalOptionIndex ?? 0) - Number(b?.originalOptionIndex ?? 0))
+                    .map((option) => String(option?.text ?? option ?? '')),
+                answer: Number.isInteger(key[index]) ? key[index] : null,
+            }));
+            const userAnswers = Object.fromEntries(correct.map((question, index) => [
+                question.id,
+                answers[index] === null || answers[index] === undefined ? '' : answers[index],
+            ]));
+            return res.status(200).json({
+                record: {
+                    id: attempt.id,
+                    date: attempt.started_at || attempt.created_at,
+                    subjectId: attempt.subject_code || attempt.subject_name,
+                    subjectName: attempt.subject_name,
+                    examType: attempt.exam_type,
+                    difficulty: attempt.difficulty,
+                    type: 'objective',
+                    score: attempt.score,
+                    totalMarks: attempt.total_marks,
+                    questions: correct,
+                    userAnswers,
+                    attemptType: 'test_room',
+                    status: attempt.status,
+                    endReason: attempt.end_reason,
+                    correctCount: attempt.correct_count,
+                    incorrectCount: attempt.incorrect_count,
+                    attemptedCount: attempt.attempted_count,
+                    unattemptedCount: attempt.unattempted_count,
+                },
+            });
+        }
+
         const code = normalizeCode(body.code);
         if (!code) return fail(res, 400, 'Enter a valid 10-character room code.');
         const room = await getRoom(code);
