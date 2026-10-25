@@ -81,6 +81,7 @@ export default function ExamPortal() {
     const sourceSubjectId = subjectContext.sourceSubjectId || subjectId;
 
     const examInfo = examPrompts[examType];
+    const testRoomMode = location.state?.testRoomMode === 'create' ? 'create' : null;
 
     const contextPrefix = domainDetail && courseDetail ? `Academic Context: 
 - Domain: ${domainDetail.title}
@@ -321,24 +322,45 @@ export default function ExamPortal() {
                 const studentSafeQuestions = stripReviewMetadata(allQuestions);
                 setAiQuestions(studentSafeQuestions);
 
-                // \u2500\u2500 Persist attempt to Supabase \u2500\u2500
-                try {
-                    const attemptPayload = {
-                        subjectCode: sourceSubjectId,
-                        subjectName: subjectDetail.title,
-                        examType,
-                        questions: studentSafeQuestions,
-                        totalMarks: config.totalMarks,
-                        timeMinutes: config.timeMinutes,
-                    };
-                    const result = await saveExamAttempt(attemptPayload);
-                    if (result.error) {
-                        setSupabaseError(result.error);
-                    } else if (result.id) {
-                        setAttemptId(result.id);
+                // Keep a room paper only in the host's temporary router state/Realtime session.
+                // Do not create a normal individual attempt for this room flow.
+                if (!testRoomMode) {
+                    try {
+                        const attemptPayload = {
+                            subjectCode: sourceSubjectId,
+                            subjectName: subjectDetail.title,
+                            examType,
+                            questions: studentSafeQuestions,
+                            totalMarks: config.totalMarks,
+                            timeMinutes: config.timeMinutes,
+                        };
+                        const result = await saveExamAttempt(attemptPayload);
+                        if (result.error) {
+                            setSupabaseError(result.error);
+                        } else if (result.id) {
+                            setAttemptId(result.id);
+                        }
+                    } catch (supabaseErr) {
+                        setSupabaseError(supabaseErr.message || 'Supabase unavailable');
                     }
-                } catch (supabaseErr) {
-                    setSupabaseError(supabaseErr.message || 'Supabase unavailable');
+                }
+
+                if (testRoomMode === 'create') {
+                    navigate('/test-rooms/create', {
+                        state: {
+                            testRoomMode: 'create',
+                            questions: studentSafeQuestions,
+                            courseId: String(location.state?.courseId || ''),
+                            subjectId: sourceSubjectId,
+                            subjectName: subjectDetail.title,
+                            examType,
+                            examTitle: examInfo.title,
+                            difficulty,
+                            timeMinutes: config.timeMinutes || examInfo.timeMinutes,
+                            examMode: 'auto',
+                        },
+                    });
+                    return;
                 }
 
                 setExamState('active');
@@ -419,6 +441,36 @@ export default function ExamPortal() {
             const blueprintQuestions = isObj
                 ? questions
                 : questions.map((question, index) => ({ ...question, marks: theoryMarks[index] }));
+
+            if (testRoomMode === 'create') {
+                if (!isObj) {
+                    throw new Error('Test Rooms are available only for MCQ exams.');
+                }
+                if (blueprintQuestions.length !== 30 || blueprintQuestions.some((question) => (
+                    !question || question.type !== 'mcq'
+                    || !Array.isArray(question.options) || question.options.length !== 4
+                    || question.options.some((option) => !String(option ?? '').trim())
+                    || !Number.isInteger(question.answer) || question.answer < 0 || question.answer > 3
+                ))) {
+                    throw new Error('The generated paper did not pass MCQ validation. Try another source file.');
+                }
+                navigate('/test-rooms/create', {
+                    state: {
+                        testRoomMode: 'create',
+                        questions: blueprintQuestions,
+                        courseId: String(location.state?.courseId || ''),
+                        subjectId: sourceSubjectId,
+                        subjectName: subjectDetail.title,
+                        examType,
+                        examTitle: examInfo.title,
+                        difficulty,
+                        timeMinutes: examInfo.timeMinutes,
+                        examMode: 'upload',
+                    },
+                });
+                return;
+            }
+
             setAiQuestions(blueprintQuestions);
             setExamState('active');
         } catch (err) {
