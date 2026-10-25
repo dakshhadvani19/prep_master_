@@ -96,6 +96,7 @@ function App() {
                 <Route path="courses/:courseId/subjects" element={<SubjectDetails />} />
                 <Route path="test-rooms" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
                 <Route path="test-rooms/create" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
+                <Route path="test-rooms/session" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
                 <Route path="test-rooms/:roomCode" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
                 <Route
                   path="exams/:subjectId/:examType/:difficulty"
