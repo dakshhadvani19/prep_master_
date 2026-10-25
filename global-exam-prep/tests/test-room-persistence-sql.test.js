@@ -143,4 +143,34 @@ describe('Test Room persistence migration', () => {
         expect(saved.rows[0].answers).toEqual([2, 3]);
     });
 
+    it('prevents a second finalizer from overwriting an already-finalized result', async () => {
+        const inserted = await db.query(`
+            insert into public.exam_attempts
+                (user_id, subject_name, questions, answers, attempt_type, status, room_code, score)
+            values
+                ('${USER_A}', 'Finalization race', '[]'::jsonb, '[1,2]'::jsonb, 'test_room', 'in_progress', 'FINALIZE1111', null)
+            returning id
+        `);
+        const id = inserted.rows[0].id;
+
+        const firstFinalizer = await db.query(`
+            update public.exam_attempts
+            set status = 'submitted', score = 2, answers = '[1,2]'::jsonb
+            where id = '${id}' and user_id = '${USER_A}'
+              and attempt_type = 'test_room' and status = 'in_progress'
+            returning id
+        `);
+        const delayedFinalizer = await db.query(`
+            update public.exam_attempts
+            set status = 'disconnected', score = 0, answers = '[null,null]'::jsonb
+            where id = '${id}' and user_id = '${USER_A}'
+              and attempt_type = 'test_room' and status = 'in_progress'
+            returning id
+        `);
+
+        expect(firstFinalizer.rows).toHaveLength(1);
+        expect(delayedFinalizer.rows).toHaveLength(0);
+        const durable = await db.query('select status, score, answers from public.exam_attempts where id = $1', [id]);
+        expect(durable.rows[0]).toEqual({ status: 'submitted', score: 2, answers: [1, 2] });
+    });
 });
