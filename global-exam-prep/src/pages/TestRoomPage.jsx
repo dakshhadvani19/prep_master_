@@ -641,7 +641,7 @@ export default function TestRoomPage() {
         );
     }
 
-    if (view === 'error' || (error && !roomCode)) {
+    if (view === 'error') {
         return (
             <div className="container" style={{ maxWidth: 720, marginTop: '3rem' }}>
                 <div className="glass-panel" style={{ padding: '2rem', borderColor: 'rgba(239,68,68,0.25)' }}>
