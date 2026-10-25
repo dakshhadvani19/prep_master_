@@ -44,19 +44,20 @@ function uniqueParticipants(channel) {
     });
 }
 
-async function callRoomApi(payload) {
+async function callRoomApi(payload, options = {}) {
     const supabase = requireSupabase();
     const { data, error } = await supabase.auth.getSession();
     const accessToken = data?.session?.access_token;
     if (error || !accessToken) throw new Error('Sign in again before using Test Rooms.');
 
-    const response = await fetch('/api/test-room-code', {
+    const response = await fetch('/api/test-room-session', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             Authorization: 'Bearer ' + accessToken,
         },
         body: JSON.stringify(payload),
+        keepalive: Boolean(options.keepalive),
     });
 
     let body = null;
@@ -145,6 +146,8 @@ export default function TestRoomPage() {
     const [scoreResult, setScoreResult] = useState(null);
     const [results, setResults] = useState({});
     const [submissionPending, setSubmissionPending] = useState(false);
+    const [attemptId, setAttemptId] = useState(null);
+    const [persistenceError, setPersistenceError] = useState('');
 
     const channelRef = useRef(null);
     const canonicalQuestionsRef = useRef(canonicalQuestions);
@@ -157,8 +160,14 @@ export default function TestRoomPage() {
     const startingRoomRef = useRef(false);
     const submitHandlerRef = useRef(null);
     const latestViewRef = useRef(view);
+    const answerRevisionRef = useRef(0);
+    const answersRef = useRef(answers);
+    const previousPresenceIdsRef = useRef(new Set());
+    const connectionLostRef = useRef(false);
+    const disconnectingRef = useRef(false);
 
     useEffect(() => { canonicalQuestionsRef.current = canonicalQuestions; }, [canonicalQuestions]);
+    useEffect(() => { answersRef.current = answers; }, [answers]);
     useEffect(() => { roomMetaRef.current = roomMeta; }, [roomMeta]);
     useEffect(() => { participantsRef.current = participants; }, [participants]);
     useEffect(() => { latestViewRef.current = view; }, [view]);
@@ -239,6 +248,30 @@ export default function TestRoomPage() {
             setParticipants(liveParticipants);
             participantsRef.current = liveParticipants;
 
+            const previousIds = previousPresenceIdsRef.current;
+            if (isHostFlow && roomMetaRef.current?.status === 'started') {
+                previousIds.forEach((previousUid) => {
+                    if (previousUid !== userId && !liveIds.has(previousUid)) {
+                        callRoomApi({ action: 'mark_disconnected', code: roomCode, targetUid: previousUid })
+                            .then((result) => {
+                                if (result.result) {
+                                    setResults((current) => ({
+                                        ...current,
+                                        [previousUid]: {
+                                            userId: previousUid,
+                                            displayName: liveParticipants.find((person) => person.userId === previousUid)?.displayName || 'Disconnected participant',
+                                            ...result.result,
+                                            disconnected: true,
+                                        },
+                                    }));
+                                }
+                            })
+                            .catch(() => {});
+                    }
+                });
+            }
+            previousPresenceIdsRef.current = liveIds;
+
             const host = liveParticipants.find((person) => (
                 person.role === 'host' && person.roomCode === normalizedCode(roomCode)
             ));
@@ -256,7 +289,16 @@ export default function TestRoomPage() {
                 }
                 if (host.status === 'finished') setView('finished');
             } else if (!isHostFlow && hostSeenRef.current) {
-                setError('The host disconnected. This temporary room is no longer available.');
+                if (roomMetaRef.current?.status === 'started' && !submittedRef.current && !disconnectingRef.current) {
+                    disconnectingRef.current = true;
+                    callRoomApi({
+                        action: 'disconnect',
+                        code: roomCode,
+                        answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                    }, { keepalive: true }).catch(() => {});
+                    connectionLostRef.current = true;
+                }
+                setError('The host connection was lost. Your last saved answers and result are available on the dashboard. This started test cannot be rejoined.');
                 setConnected(false);
                 setView('error');
             }
@@ -317,14 +359,17 @@ export default function TestRoomPage() {
                 return;
             }
 
-            const participantPresence = {
-                role: 'participant',
-                roomCode: normalizedCode(roomCode),
-                userId,
-                displayName: String(displayName).slice(0, 80),
-                joinedAt: new Date().toISOString(),
-            };
             try {
+                const admission = await callRoomApi({ action: 'join', code: roomCode });
+                if (cancelled) return;
+                setAttemptId(admission.attemptId);
+                const participantPresence = {
+                    role: 'participant',
+                    roomCode: normalizedCode(roomCode),
+                    userId,
+                    displayName: String(displayName).slice(0, 80),
+                    joinedAt: new Date().toISOString(),
+                };
                 await channel.track(participantPresence);
                 if (cancelled) return;
                 setConnected(true);
@@ -350,22 +395,18 @@ export default function TestRoomPage() {
             setCanonicalQuestions(buildCanonicalRoomQuestions(payload.questions));
         });
 
-        channel.on('broadcast', { event: 'room_submission' }, async ({ payload }) => {
-            if (!isHostFlow || !payload?.userId || !Array.isArray(payload.answers)) return;
+        channel.on('broadcast', { event: 'room_submission' }, ({ payload }) => {
+            if (!isHostFlow || !payload?.userId || !payload?.result) return;
             const submittedUid = String(payload.userId);
             const roster = participantsRef.current;
-            if (!roster.some((person) => person.userId === submittedUid)) return;
-
-            const result = scoreRoomAnswers(canonicalQuestionsRef.current, payload.answers);
             setResults((previous) => ({
                 ...previous,
                 [submittedUid]: {
                     userId: submittedUid,
                     displayName: roster.find((person) => person.userId === submittedUid)?.displayName || 'Participant',
-                    ...result,
+                    ...payload.result,
                 },
             }));
-            await send('room_result', { toUid: submittedUid, result });
         });
 
         channel.on('broadcast', { event: 'room_result' }, ({ payload }) => {
@@ -434,7 +475,18 @@ export default function TestRoomPage() {
         setWorking(true);
         setError('');
         try {
-            const response = await callRoomApi({ action: 'create' });
+            const response = await callRoomApi({
+                action: 'create',
+                room: {
+                    subjectCode: createPayload?.subjectId || createPayload?.subjectCode || '',
+                    subjectName: createPayload?.subjectName || 'MCQ Exam',
+                    examTitle: createPayload?.examTitle || 'MCQ Exam',
+                    difficulty: createPayload?.difficulty,
+                    durationMinutes: Math.min(180, Math.max(1, Number(durationMinutes) || 45)),
+                },
+                questions: canonicalQuestions,
+            });
+            setAttemptId(response.attemptId);
             const meta = {
                 role: 'host',
                 roomCode: response.code,
@@ -457,6 +509,7 @@ export default function TestRoomPage() {
             roomMetaRef.current = meta;
             setRoomMeta(meta);
             setRoomCode(response.code);
+            setPersistenceError('');
             setView('share');
         } catch (err) {
             setError(err.message || 'Could not create a Test Room.');
@@ -503,31 +556,31 @@ export default function TestRoomPage() {
     };
 
     const handleSubmit = useCallback(async () => {
-        if (submittedRef.current || !canonicalQuestionsRef.current.length) return;
+        if (submittedRef.current || !canonicalQuestionsRef.current.length || !roomCode) return;
         submittedRef.current = true;
-        const canonicalAnswers = toCanonicalAnswerArray(
-            answers,
-            canonicalQuestionsRef.current.length,
-        );
-        setSubmissionPending(!isHostFlow);
-        setView(isHostFlow ? 'result' : 'submitting');
-
-        if (isHostFlow) {
-            setScoreResult(scoreRoomAnswers(canonicalQuestionsRef.current, canonicalAnswers));
-        }
+        const canonicalAnswers = toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length);
+        setSubmissionPending(true);
+        setView('submitting');
         try {
+            const saved = await callRoomApi({ action: 'submit', code: roomCode, answers: canonicalAnswers });
+            if (!saved?.result) throw new Error('The server did not return a saved result.');
+            setScoreResult(saved.result);
+            setSubmissionPending(false);
+            setPersistenceError('');
+            setView('result');
             await channelRef.current?.send({
                 type: 'broadcast',
                 event: 'room_submission',
-                payload: { userId, answers: canonicalAnswers },
+                payload: { userId, result: saved.result },
             });
-        } catch {
-            if (!isHostFlow) {
-                setError('Your answers could not be sent to the host. Keep this page open and retry your connection.');
-                setView('error');
-            }
+        } catch (err) {
+            submittedRef.current = false;
+            setSubmissionPending(false);
+            setPersistenceError(err.message || 'Could not save your attempt.');
+            setError('Your attempt could not be finalized yet. Keep this page open and retry when the connection is restored.');
+            setView('attempt');
         }
-    }, [answers, isHostFlow, userId]);
+    }, [roomCode, userId]);
 
     useEffect(() => { submitHandlerRef.current = handleSubmit; }, [handleSubmit]);
 
