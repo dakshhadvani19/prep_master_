@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle, XCircle, MinusCircle, BarChart2, Bo
 import { domains, examPrompts } from '../data/mockData';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistoryRecord } from '../utils/examHistoryStorage';
+import { getTestRoomAttemptReview } from '../utils/supabaseExam';
 
 export default function ReviewPage() {
     const { historyId } = useParams();
@@ -13,16 +14,31 @@ export default function ReviewPage() {
     const [loadingRecord, setLoadingRecord] = useState(true);
     const { currentUser } = useAuth();
 
-    // History is currently a browser-local static store.
+    // Normal exams retain the local-history path; Test Room attempts are loaded
+    // from the owner-checked backend review endpoint because they survive disconnects.
     useEffect(() => {
-        if (!currentUser) {
-            setRecord(null);
-            setLoadingRecord(false);
-            return;
+        let cancelled = false;
+        async function loadRecord() {
+            if (!currentUser?.uid) {
+                setRecord(null);
+                setLoadingRecord(false);
+                return;
+            }
+            setLoadingRecord(true);
+            const localRecord = getExamHistoryRecord(currentUser.uid, historyId);
+            if (localRecord) {
+                setRecord(localRecord);
+                setLoadingRecord(false);
+                return;
+            }
+            const { record: roomRecord } = await getTestRoomAttemptReview(historyId);
+            if (!cancelled) {
+                setRecord(roomRecord);
+                setLoadingRecord(false);
+            }
         }
-
-        setRecord(getExamHistoryRecord(currentUser.uid, historyId));
-        setLoadingRecord(false);
+        loadRecord();
+        return () => { cancelled = true; };
     }, [currentUser?.uid, historyId]);
 
     // Summary stats - MUST be above conditional returns to satisfy React Hook rules
@@ -134,9 +150,10 @@ export default function ReviewPage() {
             <div className="glass-panel" style={{ padding: '1.5rem 2rem', marginBottom: '1.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
                     <div>
-                        <h1 style={{ fontSize: '1.6rem', marginBottom: '0.25rem' }}>{getSubjectName(record.subjectId)}</h1>
+                        <h1 style={{ fontSize: '1.6rem', marginBottom: '0.25rem' }}>{record.subjectName || getSubjectName(record.subjectId)}</h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                            {examInfo?.title} &bull; <span style={{ textTransform: 'capitalize' }}>{record.difficulty}</span> &bull; {new Date(record.date).toLocaleDateString()}
+                            {record.examTitle || examInfo?.title || record.examType} &bull; <span style={{ textTransform: 'capitalize' }}>{record.difficulty}</span> &bull; {new Date(record.date).toLocaleDateString()}
+                            {record.attemptType === 'test_room' && <> &bull; {String(record.status || '').replaceAll('_', ' ')}</>}
                         </p>
                     </div>
                     {isObjective && record.score !== null && (
