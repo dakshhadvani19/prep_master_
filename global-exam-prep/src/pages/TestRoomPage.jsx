@@ -213,6 +213,7 @@ export default function TestRoomPage() {
 
         let cancelled = false;
         const supabase = requireSupabase();
+        let joinTimeout = null;
         const channel = supabase.channel('test-room:' + normalizedCode(roomCode), {
             config: {
                 presence: { key: userId },
@@ -307,6 +308,7 @@ export default function TestRoomPage() {
 
         channel.on('broadcast', { event: 'join_response' }, async ({ payload }) => {
             if (isHostFlow || payload?.toUid !== userId) return;
+            if (joinTimeout) clearTimeout(joinTimeout);
             if (!payload.accepted) {
                 setError(payload.reason || 'The host could not admit you to this room.');
                 setView('error');
@@ -395,6 +397,11 @@ export default function TestRoomPage() {
                         userId,
                         displayName: String(displayName).slice(0, 80),
                     });
+                    joinTimeout = setTimeout(() => {
+                        if (cancelled || connected || latestViewRef.current !== 'connecting') return;
+                        setError('The host is no longer reachable. Ask them to reopen the room and share a new code.');
+                        setView('error');
+                    }, 6000);
                 }
             } else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
                 setError('The live room connection failed. Check your connection and retry.');
@@ -404,6 +411,7 @@ export default function TestRoomPage() {
 
         return () => {
             cancelled = true;
+            if (joinTimeout) clearTimeout(joinTimeout);
             if (channelRef.current === channel) channelRef.current = null;
             Promise.resolve(supabase.removeChannel(channel)).catch(() => {});
         };
@@ -428,6 +436,7 @@ export default function TestRoomPage() {
             const meta = {
                 role: 'host',
                 roomCode: response.code,
+                userId,
                 hostUid: userId,
                 hostName: String(displayName).slice(0, 80),
                 displayName: String(displayName).slice(0, 80),
