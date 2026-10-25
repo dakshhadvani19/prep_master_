@@ -680,7 +680,7 @@ export default async function handler(req, res) {
             }
             if (room.status === 'started' && Number(p.lastHeartbeat || 0) > 0 && Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
                 const final = await finalizeAttempt(admin, {
-                    code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers, submittedRevision: body.revision,
+                    code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers, submittedRevision: body.revision, submittedRevision: body.revision,
                 });
                 return res.status(200).json({ active: false, ...final });
             }
@@ -720,7 +720,7 @@ export default async function handler(req, res) {
             if (!currentRoom || currentRoom.status !== 'started') return fail(res, 409, 'The test is not active.');
             if (!p || p.status === 'disconnected' || p.status === 'submitted') return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
             if (Date.now() >= Number(currentRoom.deadlineAt)) {
-                return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers }) });
+                return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers, submittedRevision: body.revision }) });
             }
             if (Number(p.lastHeartbeat || 0) > 0 && Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
                 const final = await finalizeAttempt(admin, {
@@ -764,7 +764,7 @@ export default async function handler(req, res) {
             if (timedOut) reason = 'timer_expired';
             const inputAnswers = targetUid === user.id ? body.answers : null;
             if (Array.isArray(inputAnswers)) await patchParticipant(code, targetUid, { answers: normalizeAnswers(inputAnswers), lastHeartbeat: Date.now() }).catch(() => {});
-            const finalized = await finalizeAttempt(admin, { code, uid: targetUid, status, reason, submittedAnswers: inputAnswers });
+            const finalized = await finalizeAttempt(admin, { code, uid: targetUid, status, reason, submittedAnswers: inputAnswers, submittedRevision: body.revision });
             if (!finalized.ok) return fail(res, 409, finalized.error || 'Could not finalize the attempt.');
             return res.status(200).json(finalized);
         }
