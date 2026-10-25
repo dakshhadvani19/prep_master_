@@ -95,4 +95,10 @@ Verified on 2026-10-25 in project llqwtgwjlwgrftihtern:
 - FK: TestRooms.TestId → TestsData.TestId ON DELETE RESTRICT.
 - Answers shape: participants × questions; question dimension constrained to 1–30 and must match the referenced saved test.
 - Current supabase_realtime publication excludes TestRooms.
-- Table privileges are currently only listed for postgres and service_role, not browser roles.
+- Table privileges on legacy `TestRooms` are currently only listed for postgres and service_role, not browser roles.
+- `public.exam_attempts` exists with 25 columns and RLS enabled. Authenticated users can read their own rows; client-side insert/update policies explicitly exclude `attempt_type = 'test_room'`, so Test Room writes go through the authenticated server API.
+- `public.exam_grades` exists with 9 columns and RLS enabled. Browser reads are owner-scoped, and client inserts are limited to grades for the user's ordinary `attempt_type = 'exam'` attempts.
+- `public.exam_attempt_keys` exists with 3 columns and RLS enabled. Browser roles have no table grants; the explicit deny policy also blocks anon/authenticated access. Only the server-side privileged client reads/writes answer keys.
+- The partial unique index `exam_attempts_room_user_unique` prevents duplicate Test Room attempt rows for the same user and room code.
+- The repository migration filenames match the live migration versions `20261025095212`, `20261025095445`, and `20261025095507`.
+- Regression tests were added for server-side code/answer validation, scoring, RLS ownership, private-key access, and the unique room-attempt constraint. The latest Vercel status is still pending, and the tests/build have not been executed locally in this environment.
