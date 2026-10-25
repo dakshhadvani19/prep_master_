@@ -188,12 +188,13 @@ async function finalizeAttempt(admin, { code, uid, status = 'disconnected', reas
     }
     return { ok: true, status: data?.status || status, result, alreadyFinalized: !data };
 }
-async function reconcileRoom(admin, code) {
+async function reconcileRoom(admin, code, skipUid = '') {
     const room = await getRoom(code).catch(() => null);
     if (!room) return;
     const memberIds = await redis('SMEMBERS', keys(code).members).catch(() => []);
     const now = Date.now();
     for (const uid of Array.isArray(memberIds) ? memberIds : []) {
+        if (!uid || uid === skipUid) continue;
         const p = await getParticipant(code, uid).catch(() => null);
         if (!p || !p.attemptId || !['waiting', 'connected'].includes(p.status)) continue;
         if (room.status !== 'started') continue;
@@ -422,11 +423,17 @@ export default async function handler(req, res) {
         }
 
         if (action === 'heartbeat') {
-            await reconcileRoom(admin, code);
+            await reconcileRoom(admin, code, user.id);
             const p = await getParticipant(code, user.id);
             if (!p || p.status === 'disconnected' || p.status === 'submitted') return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
             if (room.status === 'started' && Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt)) {
                 return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers }) });
+            }
+            if (room.status === 'started' && Number(p.lastHeartbeat || 0) > 0 && Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
+                const final = await finalizeAttempt(admin, {
+                    code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers,
+                });
+                return res.status(200).json({ active: false, ...final });
             }
 
             // Heartbeats also retry the newest answer snapshot. This closes the gap
@@ -458,13 +465,19 @@ export default async function handler(req, res) {
         }
 
         if (action === 'save_answer') {
-            await reconcileRoom(admin, code);
+            await reconcileRoom(admin, code, user.id);
             const currentRoom = await getRoom(code);
             const p = await getParticipant(code, user.id);
             if (!currentRoom || currentRoom.status !== 'started') return fail(res, 409, 'The test is not active.');
             if (!p || p.status === 'disconnected' || p.status === 'submitted') return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
             if (Date.now() >= Number(currentRoom.deadlineAt)) {
                 return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers }) });
+            }
+            if (Number(p.lastHeartbeat || 0) > 0 && Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
+                const final = await finalizeAttempt(admin, {
+                    code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers,
+                });
+                return res.status(200).json({ active: false, ...final });
             }
             const questions = await getQuestions(code);
             const answers = normalizeAnswers(body.answers, questions?.length || 30);
