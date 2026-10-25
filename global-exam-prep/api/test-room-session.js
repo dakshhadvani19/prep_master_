@@ -36,6 +36,15 @@ function parseJson(value) {
     if (typeof value === 'object') return value;
     try { return JSON.parse(value); } catch { return null; }
 }
+export function resolveFinalization(action, deadlineAt, now = Date.now()) {
+    const deadline = Number(deadlineAt);
+    const timedOut = Number.isFinite(deadline) && deadline > 0 && now >= deadline;
+    if (timedOut) return { status: 'timed_out', reason: 'timer_expired' };
+    if (action === 'submit') return { status: 'submitted', reason: 'manual_submit' };
+    if (action === 'mark_disconnected') return { status: 'disconnected', reason: 'participant_connection_lost' };
+    return { status: 'disconnected', reason: 'connection_lost' };
+}
+
 export function normalizeCode(value) {
     const code = String(value ?? '').trim().toUpperCase().replace(/[\s-]/g, '');
     return new RegExp('^[' + CODE_ALPHABET + ']{10}$').test(code) ? code : null;
@@ -750,7 +759,6 @@ export default async function handler(req, res) {
 
         if (['submit', 'disconnect', 'mark_disconnected'].includes(action)) {
             let targetUid = user.id;
-            let reason = action === 'submit' ? 'manual_submit' : action === 'mark_disconnected' ? 'participant_connection_lost' : 'connection_lost';
             if (action === 'mark_disconnected') {
                 if (user.id !== room.hostUid) return fail(res, 403, 'Only the host can finalize a disconnected participant.');
                 targetUid = String(body.targetUid || '');
@@ -759,11 +767,12 @@ export default async function handler(req, res) {
             const p = await getParticipant(code, targetUid);
             if (!p) return fail(res, 404, 'Participant attempt not found.');
             if (room.status !== 'started') return fail(res, 409, 'The test has not started.');
-            const timedOut = Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt);
-            const status = timedOut ? 'timed_out' : action === 'submit' ? 'submitted' : 'disconnected';
-            if (timedOut) reason = 'timer_expired';
+            const decision = resolveFinalization(action, room.deadlineAt, Date.now());
             const inputAnswers = targetUid === user.id ? body.answers : null;
-            const finalized = await finalizeAttempt(admin, { code, uid: targetUid, status, reason, submittedAnswers: inputAnswers, submittedRevision: body.revision });
+            const finalized = await finalizeAttempt(admin, {
+                code, uid: targetUid, status: decision.status, reason: decision.reason,
+                submittedAnswers: inputAnswers, submittedRevision: body.revision,
+            });
             if (!finalized.ok) return fail(res, 409, finalized.error || 'Could not finalize the attempt.');
             return res.status(200).json(finalized);
         }
