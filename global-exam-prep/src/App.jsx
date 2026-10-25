@@ -11,6 +11,7 @@ const LandingPage = lazy(() => import('./pages/LandingPage'));
 const CourseExplorer = lazy(() => import('./pages/CourseExplorer'));
 const SubjectDetails = lazy(() => import('./pages/SubjectDetails'));
 const ExamPortal = lazy(() => import('./pages/ExamPortal'));
+const TestRoomPage = lazy(() => import('./pages/TestRoomPage'));
 const DashboardSwitch = lazy(() => import('./pages/DashboardSwitch'));
 const AdminCourses = lazy(() => import('./pages/AdminCourses'));
 const Leaderboard = lazy(() => import('./pages/Leaderboard'));
@@ -93,6 +94,9 @@ function App() {
                 <Route path="feedback" element={<FeedbackPage />} />
                 <Route path="guide" element={<UserGuide />} />
                 <Route path="courses/:courseId/subjects" element={<SubjectDetails />} />
+                <Route path="test-rooms" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
+                <Route path="test-rooms/create" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
+                <Route path="test-rooms/:roomCode" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
                 <Route
                   path="exams/:subjectId/:examType/:difficulty"
                   element={
