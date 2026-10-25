@@ -143,11 +143,67 @@ async function createAttempt(admin, room, uid, name, role, safe) {
     }
     return attempt;
 }
-async function writeAnswers(admin, attemptId, uid, answers) {
-    const { error } = await admin.from('exam_attempts')
-        .update({ answers, updated_at: new Date().toISOString() })
-        .eq('id', attemptId).eq('user_id', uid).eq('attempt_type', 'test_room').eq('status', 'in_progress');
+async function writeAnswers(admin, attemptId, uid, answers, revision) {
+    const acceptedRevision = Math.max(0, Math.floor(Number(revision) || 0));
+    // Compare-and-set in Postgres makes the durable copy monotonic too. Redis
+    // guards the live snapshot, but network responses can complete out of order.
+    const { data, error } = await admin.from('exam_attempts')
+        .update({
+            answers,
+            answer_revision: acceptedRevision,
+            updated_at: new Date().toISOString(),
+        })
+        .eq('id', attemptId)
+        .eq('user_id', uid)
+        .eq('attempt_type', 'test_room')
+        .eq('status', 'in_progress')
+        .lt('answer_revision', acceptedRevision)
+        .select('id')
+        .maybeSingle();
     if (error) throw new Error(error.message);
+    return Boolean(data?.id);
+}
+
+/**
+ * Atomically closes a participant's Redis snapshot before it is finalized in
+ * Postgres. Any in-flight save_answer/heartbeat that arrives after this point
+ * is rejected, and duplicate finalizers reuse the same accepted snapshot.
+ */
+async function closeParticipantSnapshot(code, uid, status, reason, submittedAnswers = null, submittedRevision = null) {
+    const participantKey = keys(code, uid).participant;
+    const normalized = Array.isArray(submittedAnswers)
+        ? JSON.stringify(normalizeAnswers(submittedAnswers, 30))
+        : '';
+    const revision = Number.isSafeInteger(Number(submittedRevision)) && Number(submittedRevision) >= 0
+        ? Number(submittedRevision)
+        : -1;
+    const participantStatus = ['submitted', 'auto_submitted', 'timed_out'].includes(status)
+        ? 'submitted'
+        : 'disconnected';
+    const script = [
+        "local raw = redis.call('GET', KEYS[1])",
+        "if not raw then return '' end",
+        "local p = cjson.decode(raw)",
+        "if p.status ~= 'disconnected' and p.status ~= 'submitted' then",
+        "  local incomingRevision = tonumber(ARGV[4]) or -1",
+        "  local currentRevision = tonumber(p.answerRevision) or 0",
+        "  if ARGV[3] ~= '' and incomingRevision > currentRevision then",
+        "    p.answers = cjson.decode(ARGV[3]); p.answerRevision = incomingRevision",
+        "  end",
+        "  p.status = ARGV[5]; p.finalStatus = ARGV[1]; p.endReason = ARGV[2]",
+        "  p.connected = false; p.disconnectedAt = tonumber(ARGV[6])",
+        "  redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[7])",
+        "end",
+        "return cjson.encode(p)"
+    ].join('\\n');
+    const raw = await redis(
+        'EVAL', script, 1, participantKey, status, reason, normalized, revision,
+        participantStatus, Date.now(), ROOM_TTL_SECONDS,
+    );
+    if (!raw) return null;
+    const participant = parseJson(raw);
+    if (!participant || typeof participant !== 'object') throw new Error('Could not read the final answer snapshot.');
+    return participant;
 }
 async function privateAnswerKey(admin, attemptId, questions = null) {
     if (Array.isArray(questions) && questions.length) return questions.map((q) => q.answer);
@@ -155,43 +211,126 @@ async function privateAnswerKey(admin, attemptId, questions = null) {
     if (error) throw new Error(error.message);
     return Array.isArray(data?.answer_key) ? data.answer_key : [];
 }
-async function finalizeAttempt(admin, { code, uid, status = 'disconnected', reason = 'connection_lost', submittedAnswers = null }) {
+async function finalizeAttempt(admin, {
+    code,
+    uid,
+    status = 'disconnected',
+    reason = 'connection_lost',
+    submittedAnswers = null,
+    submittedRevision = null,
+}) {
     const attempt = await getAttempt(admin, code, uid);
     if (!attempt) return { ok: false, error: 'Attempt record not found.' };
     if (!['in_progress', 'waiting'].includes(attempt.status)) {
-        return { ok: true, alreadyFinalized: true, status: attempt.status, result: attempt.score == null ? null : {
-            correct: attempt.correct_count || 0, incorrect: attempt.incorrect_count || 0,
-            attempted: attempt.attempted_count || 0, unattempted: attempt.unattempted_count ?? attempt.total_marks,
-            points: attempt.score, totalQuestions: attempt.total_marks,
-        } };
+        return {
+            ok: true,
+            alreadyFinalized: true,
+            status: attempt.status,
+            result: attempt.score == null ? null : {
+                correct: attempt.correct_count || 0,
+                incorrect: attempt.incorrect_count || 0,
+                attempted: attempt.attempted_count || 0,
+                unattempted: attempt.unattempted_count ?? attempt.total_marks,
+                points: attempt.score,
+                totalQuestions: attempt.total_marks,
+            },
+        };
     }
     if (attempt.status === 'waiting') return { ok: false, error: 'The test has not started yet.' };
+
+    // Close Redis first to stop a late answer write racing with finalization.
+    // If the following DB write fails, dashboard reconciliation can retry using
+    // this same closed snapshot and its stored finalStatus/endReason.
+    const participantSnapshot = code
+        ? await closeParticipantSnapshot(code, uid, status, reason, submittedAnswers, submittedRevision).catch((error) => {
+            // If Redis expired or is temporarily unavailable, fall back to the last
+            // durable snapshot. The persistent answer key remains in Postgres.
+            if (/redis|upstash|fetch failed|credentials/i.test(String(error?.message || ''))) return null;
+            throw error;
+        })
+        : null;
     const questionList = code ? await getQuestions(code).catch(() => null) : null;
     const answerKey = await privateAnswerKey(admin, attempt.id, questionList);
-    // Redis holds the most recent accepted answer revision; use it when a
-    // host detects departure or another participant's heartbeat performs cleanup.
-    const participantSnapshot = code ? await getParticipant(code, uid).catch(() => null) : null;
-    const answerSource = submittedAnswers ?? participantSnapshot?.answers ?? attempt.answers;
-    const answers = normalizeAnswers(answerSource, attempt.total_marks || answerKey.length || 30);
+    const finalStatus = participantSnapshot?.finalStatus || status;
+    const finalReason = participantSnapshot?.endReason || reason;
+    const answerSource = Array.isArray(participantSnapshot?.answers)
+        ? participantSnapshot.answers
+        : Array.isArray(submittedAnswers)
+            ? submittedAnswers
+            : attempt.answers;
+    const answers = normalizeAnswers(
+        answerSource,
+        questionList?.length || attempt.questions?.length || answerKey.length || attempt.total_marks || 30,
+    );
     const result = answerKey.length ? scoreAnswers(answerKey, answers) : null;
     const now = new Date().toISOString();
-    const patch = { answers, status, end_reason: reason, submitted_at: now, updated_at: now };
+    const snapshotRevision = Math.max(
+        0,
+        Math.floor(Number(participantSnapshot?.answerRevision ?? submittedRevision ?? attempt.answer_revision ?? 0) || 0),
+    );
+    const patch = {
+        answers,
+        answer_revision: snapshotRevision,
+        status: finalStatus,
+        end_reason: finalReason,
+        submitted_at: now,
+        updated_at: now,
+    };
     if (result) Object.assign(patch, {
-        score: result.points, correct_count: result.correct, incorrect_count: result.incorrect,
-        attempted_count: result.attempted, unattempted_count: result.unattempted,
+        score: result.points,
+        correct_count: result.correct,
+        incorrect_count: result.incorrect,
+        attempted_count: result.attempted,
+        unattempted_count: result.unattempted,
     });
-    const { data, error } = await admin.from('exam_attempts').update(patch)
-        .eq('id', attempt.id).eq('user_id', uid).eq('status', 'in_progress').select('*').maybeSingle();
+
+    const { data, error } = await admin.from('exam_attempts')
+        .update(patch)
+        .eq('id', attempt.id)
+        .eq('user_id', uid)
+        .eq('attempt_type', 'test_room')
+        .eq('status', 'in_progress')
+        .select('*')
+        .maybeSingle();
     if (error) throw new Error(error.message);
-    const participant = participantSnapshot || (code ? await getParticipant(code, uid).catch(() => null) : null);
-    if (participant) {
+
+    if (!data) {
+        // Another request may have finalized the row concurrently. Return the
+        // actual durable result instead of a stale local calculation.
+        const refreshed = await getAttempt(admin, code, uid);
+        if (refreshed && !['in_progress', 'waiting'].includes(refreshed.status)) {
+            return {
+                ok: true,
+                alreadyFinalized: true,
+                status: refreshed.status,
+                result: refreshed.score == null ? null : {
+                    correct: refreshed.correct_count || 0,
+                    incorrect: refreshed.incorrect_count || 0,
+                    attempted: refreshed.attempted_count || 0,
+                    unattempted: refreshed.unattempted_count ?? refreshed.total_marks,
+                    points: refreshed.score,
+                    totalQuestions: refreshed.total_marks,
+                },
+            };
+        }
+        return { ok: false, error: 'The attempt changed while it was being finalized. Please retry.' };
+    }
+
+    if (participantSnapshot && code) {
         await patchParticipant(code, uid, {
-            status: ['submitted', 'auto_submitted', 'timed_out'].includes(status) ? 'submitted' : 'disconnected',
-            connected: false, answers, result, disconnectedAt: Date.now(), endReason: reason,
+            status: ['submitted', 'auto_submitted', 'timed_out'].includes(finalStatus) ? 'submitted' : 'disconnected',
+            finalStatus,
+            endReason: finalReason,
+            connected: false,
+            answers,
+            answerRevision: snapshotRevision,
+            result,
+            disconnectedAt: Date.now(),
         }).catch(() => {});
     }
-    return { ok: true, status: data?.status || status, result, alreadyFinalized: !data };
+    return { ok: true, status: data.status, result, alreadyFinalized: false };
 }
+
 async function reconcileRoom(admin, code, skipUid = '') {
     // Heartbeats and debounced answer saves can arrive frequently. A short Redis
     // lease ensures only one request per room scans every participant at a time.
@@ -207,8 +346,18 @@ async function reconcileRoom(admin, code, skipUid = '') {
     for (const uid of Array.isArray(memberIds) ? memberIds : []) {
         if (!uid || uid === skipUid) continue;
         const p = await getParticipant(code, uid).catch(() => null);
-        if (!p || !p.attemptId || !['waiting', 'connected'].includes(p.status)) continue;
-        if (room.status !== 'started') continue;
+        if (!p || !p.attemptId) continue;
+        const durableAttempt = await getAttempt(admin, code, uid).catch(() => null);
+        if (durableAttempt?.status === 'in_progress' && ['disconnected', 'submitted'].includes(p.status)) {
+            await finalizeAttempt(admin, {
+                code,
+                uid,
+                status: p.finalStatus || (p.status === 'submitted' ? 'submitted' : 'disconnected'),
+                reason: p.endReason || 'recovery_after_partial_finalization',
+            }).catch(() => {});
+            continue;
+        }
+        if (!['waiting', 'connected'].includes(p.status) || room.status !== 'started') continue;
         if (Number(room.deadlineAt) > 0 && now >= Number(room.deadlineAt)) {
             await finalizeAttempt(admin, { code, uid, status: 'timed_out', reason: 'timer_expired' }).catch(() => {});
         } else if (Number(p.lastHeartbeat || 0) > 0 && now - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
@@ -306,7 +455,7 @@ export default async function handler(req, res) {
                     const refreshed = await getAttempt(admin, attempt.room_code, user.id).catch(() => null);
                     if (refreshed?.status === 'in_progress' && (!p || !Number(p.lastHeartbeat) || Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS)) {
                         const timedOut = Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt);
-                        await finalizeAttempt(admin, { code: attempt.room_code, uid: user.id, status: timedOut ? 'timed_out' : 'disconnected', reason: timedOut ? 'timer_expired' : 'connection_lost' }).catch(() => {});
+                        await finalizeAttempt(admin, {\n                            code: attempt.room_code,\n                            uid: user.id,\n                            status: p?.finalStatus || (timedOut ? 'timed_out' : p?.status === 'submitted' ? 'submitted' : 'disconnected'),\n                            reason: p?.endReason || (timedOut ? 'timer_expired' : 'connection_lost'),\n                        }).catch(() => {});
                     }
                 } else if (attempt.status === 'in_progress') {
                     await finalizeAttempt(admin, { code: attempt.room_code, uid: user.id, status: 'disconnected', reason: 'room_expired_after_disconnect' }).catch(() => {});
@@ -549,7 +698,7 @@ export default async function handler(req, res) {
                     "local participant = cjson.decode(raw)",
                     "if participant.status == 'disconnected' or participant.status == 'submitted' then return 'ERR:ATTEMPT_CLOSED' end",
                     "local revision = tonumber(ARGV[2])",
-                    "if not participant.answerRevision or revision >= tonumber(participant.answerRevision) then participant.answers = cjson.decode(ARGV[1]); participant.answerRevision = revision end",
+                    "if not participant.answerRevision or revision > tonumber(participant.answerRevision) then participant.answers = cjson.decode(ARGV[1]); participant.answerRevision = revision end",
                     "participant.lastHeartbeat = tonumber(ARGV[3]); participant.connected = true",
                     "redis.call('SET', KEYS[1], cjson.encode(participant), 'EX', ARGV[4])",
                     "return cjson.encode(participant)"
@@ -557,7 +706,7 @@ export default async function handler(req, res) {
                 const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), ROOM_TTL_SECONDS));
                 if (savedRaw.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active.');
                 const saved = parseJson(savedRaw);
-                await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || normalized, questions?.length || 30));
+                await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || normalized, questions?.length || 30), Number(saved?.answerRevision ?? revision));
             } else {
                 await patchParticipant(code, user.id, { lastHeartbeat: Date.now(), connected: true });
             }
@@ -587,7 +736,7 @@ export default async function handler(req, res) {
                 "local p = cjson.decode(raw)",
                 "if p.status == 'disconnected' or p.status == 'submitted' then return 'ERR:ATTEMPT_CLOSED' end",
                 "local revision = tonumber(ARGV[2])",
-                "if not p.answerRevision or revision >= tonumber(p.answerRevision) then p.answers = cjson.decode(ARGV[1]); p.answerRevision = revision end",
+                "if not p.answerRevision or revision > tonumber(p.answerRevision) then p.answers = cjson.decode(ARGV[1]); p.answerRevision = revision end",
                 "p.lastHeartbeat = tonumber(ARGV[3]); p.connected = true",
                 "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[4])",
                 "return cjson.encode(p)"
@@ -595,7 +744,7 @@ export default async function handler(req, res) {
             const result = String(await redis('EVAL', script, 1, keys(code, user.id).participant, JSON.stringify(answers), Number(body.revision) || Date.now(), Date.now(), ROOM_TTL_SECONDS));
             if (result.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active.');
             const saved = parseJson(result);
-            await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || answers, questions?.length || 30));
+            await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || answers, questions?.length || 30), Number(saved?.answerRevision ?? body.revision ?? Date.now()));
             return res.status(200).json({ ok: true, savedAt: Date.now() });
         }
 
