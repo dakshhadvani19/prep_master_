@@ -126,6 +126,50 @@ export async function saveExamGrade(attemptId, grade) {
 /**
  * Fetch a student's past attempts for their dashboard/history.
  */
+/**
+ * Call the authenticated, server-side Test Room API. Answer keys are never
+ * read directly by the browser.
+ */
+async function callTestRoomSessionApi(payload, options = {}) {
+    requireSupabase();
+    const { data, error } = await supabase.auth.getSession();
+    const accessToken = data?.session?.access_token;
+    if (error || !accessToken) throw new Error('Not authenticated');
+
+    const response = await fetch('/api/test-room-session', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + accessToken,
+        },
+        body: JSON.stringify(payload),
+        keepalive: Boolean(options.keepalive),
+    });
+    const result = await response.json().catch(() => null);
+    if (!response.ok) throw new Error(result?.error || 'Test Room service request failed.');
+    return result;
+}
+
+/** Reconcile room attempts whose heartbeats have stopped. Safe to call repeatedly. */
+export async function reconcileTestRoomAttempts() {
+    try {
+        await callTestRoomSessionApi({ action: 'reconcile_my_attempts' });
+        return { ok: true, error: null };
+    } catch (error) {
+        return { ok: false, error: error.message || 'Could not reconcile Test Room attempts.' };
+    }
+}
+
+/** Fetch an owner's finalized Test Room attempt and its answer review. */
+export async function getTestRoomAttemptReview(attemptId) {
+    try {
+        const result = await callTestRoomSessionApi({ action: 'get_attempt_review', attemptId });
+        return { record: result?.record || null, error: null };
+    } catch (error) {
+        return { record: null, error: error.message || 'Could not load this Test Room review.' };
+    }
+}
+
 export async function getMyAttempts(limit = 50) {
     requireSupabase();
     const userId = await getCurrentUserId();
