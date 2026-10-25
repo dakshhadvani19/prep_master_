@@ -45,7 +45,7 @@ function generateCode() {
 }
 function keys(code, uid = '') {
     const base = 'pm:test-room:' + code;
-    return { meta: base + ':meta', questions: base + ':questions', members: base + ':members', participant: base + ':participant:' + uid };
+    return { meta: base + ':meta', questions: base + ':questions', members: base + ':members', reconcileLock: base + ':reconcile-lock', participant: base + ':participant:' + uid };
 }
 function displayName(user) {
     const metadata = user?.user_metadata || {};
@@ -193,6 +193,13 @@ async function finalizeAttempt(admin, { code, uid, status = 'disconnected', reas
     return { ok: true, status: data?.status || status, result, alreadyFinalized: !data };
 }
 async function reconcileRoom(admin, code, skipUid = '') {
+    // Heartbeats and debounced answer saves can arrive frequently. A short Redis
+    // lease ensures only one request per room scans every participant at a time.
+    // This reduces command amplification and avoids making heartbeats wait for
+    // dozens of redundant Redis round trips.
+    const lease = await redis('SET', keys(code).reconcileLock, String(Date.now()), 'EX', 8, 'NX').catch(() => null);
+    if (lease !== 'OK') return;
+
     const room = await getRoom(code).catch(() => null);
     if (!room) return;
     const memberIds = await redis('SMEMBERS', keys(code).members).catch(() => []);
