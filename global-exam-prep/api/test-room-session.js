@@ -359,6 +359,33 @@ export default async function handler(req, res) {
         }
         if (!room) return fail(res, 404, 'This room expired or is no longer available.');
 
+        if (action === 'room_results') {
+            if (user.id !== room.hostUid) return fail(res, 403, 'Only the host can view the room-wide results.');
+            const { data, error } = await admin.from('exam_attempts')
+                .select('user_id,participant_name,room_role,status,score,total_marks,correct_count,incorrect_count,attempted_count,unattempted_count,end_reason,submitted_at')
+                .eq('room_code', code)
+                .eq('attempt_type', 'test_room')
+                .eq('room_role', 'participant')
+                .in('status', ['submitted', 'auto_submitted', 'disconnected', 'timed_out'])
+                .order('submitted_at', { ascending: true })
+                .limit(MAX_PARTICIPANTS);
+            if (error) throw new Error(error.message);
+            return res.status(200).json({
+                results: (data || []).filter((row) => row.score !== null).map((row) => ({
+                    userId: row.user_id,
+                    displayName: row.participant_name || 'Participant',
+                    points: Number(row.score),
+                    totalQuestions: Number(row.total_marks || 30),
+                    correct: Number(row.correct_count || 0),
+                    incorrect: Number(row.incorrect_count || 0),
+                    attempted: Number(row.attempted_count || 0),
+                    unattempted: Number(row.unattempted_count || 0),
+                    status: row.status,
+                    endReason: row.end_reason,
+                })),
+            });
+        }
+
         if (action === 'join') {
             if (room.status !== 'waiting') return fail(res, 409, 'This room has already started. Rejoining is disabled.');
             const participantKey = keys(code, user.id).participant;
