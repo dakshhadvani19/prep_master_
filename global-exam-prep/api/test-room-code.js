@@ -117,6 +117,7 @@ async function inspectActiveRoom(client, code) {
                             ? Math.min(180, Math.max(1, host.durationMinutes))
                             : 30,
                         status: host.status,
+                        serverNow: Number.isFinite(Number(host.serverNow)) ? Number(host.serverNow) : Date.now(),
                         startedAt: Number.isFinite(Number(host.startedAt))
                             ? Number(host.startedAt)
                             : null,
@@ -216,7 +217,8 @@ export default async function handler(req, res) {
         }
         // Authoritative timestamp from the backend. It is shared through host Presence,
         // but is never persisted to a database table.
-        return res.status(200).json({ startedAt: Date.now() });
+        const serverNow = Date.now();
+        return res.status(200).json({ startedAt: serverNow, serverNow });
     }
 
     if (inspected.room.status !== 'waiting') {
@@ -232,6 +234,7 @@ export default async function handler(req, res) {
     return res.status(200).json({
         valid: true,
         joinable: true,
+        serverNow: Date.now(),
         room: inspected.room,
     });
 }
