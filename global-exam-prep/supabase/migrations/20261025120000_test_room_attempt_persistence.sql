@@ -102,3 +102,7 @@ create table if not exists public.exam_attempt_keys (
 alter table public.exam_attempt_keys enable row level security;
 revoke all on table public.exam_attempt_keys from public, anon, authenticated;
 grant all on table public.exam_attempt_keys to service_role;
+drop policy if exists "Deny client access to private answer keys" on public.exam_attempt_keys;
+create policy "Deny client access to private answer keys"
+  on public.exam_attempt_keys for all to anon, authenticated
+  using (false) with check (false);
