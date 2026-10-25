@@ -1,0 +1,54 @@
+name: Test Room regression checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "global-exam-prep/**"
+      - ".github/workflows/test-room-regression.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "global-exam-prep/**"
+      - ".github/workflows/test-room-regression.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    name: Vitest suite
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: global-exam-prep
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: global-exam-prep/package-lock.json
+      - run: npm ci
+      - name: Run unit and regression tests
+        run: npm test
+
+  static-checks:
+    name: ESLint and production build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: global-exam-prep
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: global-exam-prep/package-lock.json
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Production build
+        run: npm run build
