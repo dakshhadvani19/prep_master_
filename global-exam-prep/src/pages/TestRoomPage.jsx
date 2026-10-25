@@ -15,6 +15,8 @@ import {
     toCanonicalAnswerArray,
 } from '../utils/testRoomShuffle';
 
+const MotionDiv = motion.div;
+
 const MAX_PARTICIPANTS = 50;
 const TIMER_OPTIONS = [5, 10, 15, 20, 30, 45, 60, 90, 120, 180];
 
@@ -906,9 +908,9 @@ export default function TestRoomPage() {
         return (
             <div className="container animate-fade-in" style={{ maxWidth: 760, marginTop: '2.5rem', marginBottom: '4rem' }}>
                 <div className="glass-panel" style={{ padding: 'clamp(1.4rem,4vw,2.8rem)', textAlign: 'center' }}>
-                    <motion.div initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} style={{ width: 70, height: 70, borderRadius: 22, margin: '0 auto 1.1rem', display: 'grid', placeItems: 'center', background: 'rgba(16,185,129,0.12)', color: 'var(--success)' }}>
+                    <MotionDiv initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} style={{ width: 70, height: 70, borderRadius: 22, margin: '0 auto 1.1rem', display: 'grid', placeItems: 'center', background: 'rgba(16,185,129,0.12)', color: 'var(--success)' }}>
                         <CheckCircle2 size={36} />
-                    </motion.div>
+                    </MotionDiv>
                     <h1 style={{ fontSize: '1.9rem', marginBottom: '0.65rem' }}>Your room is ready</h1>
                     <p style={{ color: 'var(--text-secondary)', maxWidth: 500, margin: '0 auto 1.6rem' }}>Share this code with the participants. Enter the lobby when you are ready to wait for everyone.</p>
 
@@ -960,15 +962,15 @@ export default function TestRoomPage() {
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
                             <AnimatePresence initial={false}>
-                                {participants.map((person, index) => (
-                                    <motion.div key={person.userId} layout initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.18 }} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.8rem 0.9rem' }}>
+                                {participants.map((person) => (
+                                    <MotionDiv key={person.userId} layout initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.18 }} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.8rem 0.9rem' }}>
                                         <div style={{ width: 38, height: 38, borderRadius: 13, display: 'grid', placeItems: 'center', flexShrink: 0, background: person.role === 'host' ? 'rgba(245,158,11,0.15)' : 'var(--accent-light)', color: person.role === 'host' ? '#fbbf24' : 'var(--accent-primary)', fontWeight: 800 }}>{String(person.displayName || person.hostName || 'S').trim().charAt(0).toUpperCase()}</div>
                                         <div style={{ flex: 1, minWidth: 0 }}>
                                             <div style={{ fontWeight: 700, overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{person.displayName || person.hostName || 'Student'}{person.userId === userId ? ' (You)' : ''}</div>
                                             <div style={{ color: 'var(--text-tertiary)', fontSize: '0.76rem' }}>{person.role === 'host' ? 'Created this room' : 'Joined the lobby'}</div>
                                         </div>
                                         {person.role === 'host' && <span style={{ padding: '0.27rem 0.55rem', borderRadius: 'var(--radius-full)', background: 'rgba(245,158,11,0.13)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.23)', fontSize: '0.72rem', fontWeight: 800 }}>Host</span>}
-                                    </motion.div>
+                                    </MotionDiv>
                                 ))}
                             </AnimatePresence>
                             {participants.length === 0 && <p style={{ color: 'var(--text-secondary)', textAlign: 'center', padding: '1.75rem 0' }}>Connecting to participants…</p>}
