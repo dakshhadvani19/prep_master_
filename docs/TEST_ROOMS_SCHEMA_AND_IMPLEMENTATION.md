@@ -2,7 +2,7 @@
 
 **Last verified:** 2026-10-25  
 **Supabase project:** prepmaster (llqwtgwjlwgrftihtern)  
-**Status:** Live database schema verified; UI/room lifecycle implementation is not yet complete.
+**Status:** Live database schema verified; temporary frontend/Realtime implementation is in progress. The feature deliberately does not write room-session data to database tables.
 
 This document separates the live database contract from the requested application behavior. Do not treat planned fields or flows as already implemented in Supabase.
 
@@ -12,13 +12,14 @@ This document separates the live database contract from the requested applicatio
 - Maximum room size is 50 participants total, including the host.
 - A room has a generated join code. There is no public/private room selector.
 - The normal exam setup still determines department/course/subject/exam type/difficulty and whether questions come from AI generation or a user-uploaded PDF.
-- For a room exam, generate or select the exam once, persist it as a compatible MCQ test, and point the room to its TestId. Every participant must receive the same source questions and underlying correct answers.
+- For a room exam, generate the MCQ paper once in the host's active browser flow. Do not write the join code, host/session metadata, generated paper, timer, answers, or room state to database tables for this temporary feature. Send only a student-safe question copy through Realtime Broadcast; keep the answer key in the host's in-memory canonical question set.
 - The exam-choice UI should offer Start Exam and Test Room for eligible MCQ exams. Test Room opens a Create/Join choice; it should not immediately send the user into a room.
 - Creating a room requires a timer duration. After successful creation, show the join code with copy support and an Enter Test Room action.
 - The waiting lobby must make it clear that participants wait for the host to start. Show the joined participant roster with a distinct Host tag for the creator. Only the host can start the room.
 - Joining must validate that the code resolves to a room, that the room is joinable/not started, that the user is not already present, and that the room has fewer than 50 participants. Enforce these checks atomically on the server/database, not only in the browser.
 - The timer begins once when the host starts the room. Persist one authoritative start timestamp and duration so every participant sees the same deadline.
 - The room lobby/attempt needs real-time updates for participant arrival and the host starting the test.
+- The backend generates the room code using a cryptographically secure random generator and verifies signed-in users against the live host Presence payload. The code is not stored in a database table or a serverless in-memory registry.
 
 ## 2. Live public."TestRooms" schema
 
@@ -54,35 +55,35 @@ Question and option shuffling is per participant and may change both the questio
 
 This matches the current trigger, which compares each Answers[participant][canonicalQuestion] cell to TestsData.Answers[canonicalQuestion]. The trigger expects canonical saved-test order and original option indexes, not display order or displayed letter labels.
 
-## 4. Schema and security gaps to resolve before feature implementation
+## 4. Persistence boundary and temporary-session architecture
 
-These points were checked against the live database on 2026-10-25:
+The user-selected behavior is explicitly ephemeral. Do not create a migration to add join codes, host IDs, timer duration, status, timestamps, or participant session state, and do not add any of those values to `public."TestRooms"` or another database table for this feature.
 
-- The table has no columns for a join code, explicit host StudentId, timer duration, room state (waiting/started/finished), start timestamp, or finish timestamp. Add a deliberate migration or introduce a separate room-session table before implementing those behaviours. Do not overload RoomId as the join code.
-- Row Level Security is enabled, but the live pg_policies query returned no policies for TestRooms.
-- The live table grants query showed permissions for postgres and service_role, but no anon or authenticated table grants. Direct browser Supabase-client access is therefore not a ready-to-use room API. Do not add broad grants/policies as a shortcut.
-- TestRooms is not in the supabase_realtime publication. A Postgres Changes subscription to this table will not work until the table is added to that publication. Alternatively, use an appropriately authorized Realtime Presence/Broadcast or a sanitized server-generated roster event.
-- Answers, scores, and participant IDs belong to the room record. Do not expose whole room rows or the answer grid to participants during an active test. Only trusted server/database logic should validate submissions and store canonical answers/scores; the answer key must not be sent to participants before submission/end.
-- Use a server-authoritative operation (for example, a carefully scoped Edge Function or database RPC) for room creation, atomic code lookup/join, participant cap enforcement, host-only start, timer transition, submission, and final scoring. Never ship a Supabase service-role key to the frontend. Design the access policies and function permissions together and verify them with signed-in-user tests.
-- The live migration list did not show a migration specifically creating TestRooms; the current database structure should therefore be captured in a checked-in migration/schema source before future changes rely on it.
+- **Backend API — Vercel:** `api/test-room-code.js` generates a random 10-character code using `node:crypto`. It checks the Supabase Auth access token and validates an entered code by subscribing to the matching live Realtime channel and inspecting host Presence. The backend returns a server timestamp for the host-only start operation. It does not write the code or session to Postgres or keep an in-process map of rooms.
+- **Live room state — Supabase Realtime Presence/Broadcast:** The host advertises a temporary presence payload containing the code, host identity/display name, subject/exam labels, difficulty, timer duration, status, question count, and start timestamp. Participant identities and the live roster also exist in Presence. The host shares a student-safe question payload over Broadcast and receives participant answers for scoring. These messages are not durable records.
+- **Browser memory — React/router state:** The generated question set and correct-answer key stay in the host's current page state/router state. Each participant holds their own shuffled display model and answers in React state. Do not put room secrets/answer keys in localStorage, sessionStorage, URL query strings, or participant broadcasts.
+- **No database writes:** This implementation does not insert rows into `TestRooms` or `TestsData`. The existing `TestRooms` table remains a separate legacy/persistent schema; its existing trigger and answer-grid structure do not define the persistence model for this temporary feature.
+- **Realtime privacy:** Use random high-entropy codes, sign-in checks at the API, host-only server-authorized start, and allowlisted data in API responses. Do not include the answer key in the room Presence payload or student-safe Broadcast. Since Presence/Broadcast room state is ephemeral and the channel is identified by its code, anyone who obtains the code may be able to observe channel metadata or attempt to join; do not transmit answer keys or other secrets on that channel.
+- **Capacity:** The 50-participant limit is enforced by the host's join-request handler and tracked/reserved identities in memory. Because no database is allowed for a durable atomic lock, this temporary model is best suited to ordinary rooms with one stable host browser; host disconnect ends the room.
+- **Lifecycle:** Room code verification succeeds only while the host's expected Presence payload exists. Reloading/closing the host page, losing its Realtime connection for long enough, or navigating away removes the temporary session. There is no recovery of a room after host disconnect and no historic room results.
 
-Supabase security references:
-- [Securing the Data API: grants and RLS](https://supabase.com/docs/guides/api/securing-your-api)
-- [Realtime Postgres Changes](https://supabase.com/docs/guides/realtime/postgres-changes)
-- [Realtime authorization](https://supabase.com/docs/guides/realtime/authorization)
+Supabase references for the transient transport:
+- [Realtime Presence](https://supabase.com/docs/guides/realtime/presence)
+- [Realtime Broadcast](https://supabase.com/docs/guides/realtime/broadcast)
 
-## 5. Recommended creation/join/start flow
+## 5. Creation/join/start flow
 
-1. On the normal exam selection screen, show Test Room only when the chosen exam type is MCQ. Theory exams continue to show only their normal exam action.
-2. Test Room opens a lightweight Create Test Room / Join Test Room modal.
-3. Create flow reuses the selected course/subject/exam type/difficulty and Auto AI vs PDF source choice. Generate/select one MCQ exam, validate it, persist it to TestsData using the repository's explicit TestId rules, then create the room referencing that TestId. Prompt for timer duration before creation.
-4. Generate a non-sequential join code independently from RoomId, enforce uniqueness in the database, and store the host's student identity and waiting state in the room/session schema.
-5. Show the code with copy support. Enter Test Room navigates to the waiting lobby.
-6. Join flow accepts the code and executes a server-side atomic lookup/check/append. Reject nonexistent codes, duplicate participation, full rooms, and rooms that have already started or finished.
-7. Lobby updates the roster in real time, marks the creator as Host, and displays the waiting state. Only the validated host can start the room.
-8. Start is an atomic host-authorized transition that records the server timestamp once. All participants use that same deadline; client clocks are display helpers, not the source of truth.
-9. Each participant sees their own independently shuffled rendering, but every response maps back to the same canonical test. Submission/timeout must resolve to canonical question and option indexes before being scored and persisted.
-10. Reveal results/review data only when the test's submission/finish policy allows it. Keep the database's participant ordering aligned across StudentId, all statistic arrays, and the first dimension of Answers.
+1. The normal subject configuration screen shows Test Room only for MCQ exams. Theory exams keep the normal exam flow.
+2. Test Room opens a Create Test Room / Join Test Room choice. It does not immediately navigate to a room.
+3. The create path reuses the selected subject, MCQ exam type, difficulty and Auto AI vs file-upload mode. After generation, validate the 30 four-option questions and answer indexes. Pass the question set to the temporary create page through React Router state; do not save the new room paper to database tables.
+4. The backend issues a random code. The host then publishes the code and host metadata through Realtime Presence. The share page displays the code with copy support and an Enter Test Room action.
+5. Join path asks for the code. `api/test-room-code.js` checks the signed-in user's token and verifies that matching host Presence is live, waiting, and has a valid code. No database query is used as a room registry.
+6. After the backend pre-check, the joiner sends a live join request. The host checks duplicate membership, room state, and the 50-person cap before accepting and tracking the participant. The host's handler reserves a slot before replying, reducing simultaneous-join overbooking.
+7. The waiting lobby renders a subtle animated live roster and labels the creator **Host**. Only the host sees the Start Test Room action.
+8. Starting calls the backend API. It validates that the caller is the active host and returns a single server timestamp; the host publishes status/start time through Presence. Every client calculates its deadline from the same server timestamp with a client clock-offset estimate.
+9. Each participant independently shuffles the same question set and independently shuffles each question's own options. Keep each option attached to its source question. When selected, map the option to its original zero-based index and place the answer at its original question index. Displayed A/B/C/D labels are never canonical indexes by themselves.
+10. The host scores submitted canonical answer arrays using the host-only answer key and returns only the submitting participant's result via Broadcast. A participant never receives the answer key before results. Results are temporary and are not written to history/database in this implementation.
+11. If the host disconnects, the room closes; there is no room recovery because no durable room session exists. The UI explains this limitation.
 
 ## 6. Database verification record
 
