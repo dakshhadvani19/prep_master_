@@ -41,8 +41,21 @@ describe('Test Room question/option shuffling', () => {
         });
     });
 
-    it('maps displayed option positions back to original indexes before scoring', () => {
-        const canonicalAnswers = toCanonicalAnswerArray({ 0: 0, 1: 2, 2: 3 }, fixture.length);
+    it('maps a correct option from its shuffled display label back to the original index', () => {
+        const shuffled = shuffleRoomQuestions(fixture, () => 0);
+        const displayedAnswers = {};
+
+        shuffled.forEach((question) => {
+            const source = fixture[question.canonicalIndex];
+            const displayIndex = question.options.findIndex(
+                (option) => option.originalOptionIndex === source.answer,
+            );
+            expect(displayIndex).toBeGreaterThanOrEqual(0);
+            // The label position can differ, but the stored answer must be source index.
+            displayedAnswers[question.canonicalIndex] = question.options[displayIndex].originalOptionIndex;
+        });
+
+        const canonicalAnswers = toCanonicalAnswerArray(displayedAnswers, fixture.length);
         expect(canonicalAnswers).toEqual([0, 2, 3]);
         expect(scoreRoomAnswers(fixture, canonicalAnswers)).toEqual({
             correct: 3,
