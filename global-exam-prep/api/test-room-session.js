@@ -504,13 +504,21 @@ export default async function handler(req, res) {
             const startedRoom = parseJson(started);
             const memberIds = await redis('SMEMBERS', keys(code).members);
             const startIso = new Date(Number(startedRoom.startedAt)).toISOString();
-            for (const uid of Array.isArray(memberIds) ? memberIds : []) {
+            // One database update handles all room attempts. Serial per-person reads
+            // and writes can exceed serverless request limits at the 50-person cap.
+            const { error: attemptsUpdateError } = await admin.from('exam_attempts')
+                .update({ status: 'in_progress', started_at: startIso, updated_at: new Date().toISOString() })
+                .eq('room_code', code)
+                .eq('attempt_type', 'test_room')
+                .eq('status', 'waiting');
+            if (attemptsUpdateError) throw new Error(attemptsUpdateError.message);
+
+            await Promise.allSettled((Array.isArray(memberIds) ? memberIds : []).map(async (uid) => {
                 const p = await getParticipant(code, uid);
-                if (!p?.attemptId) continue;
-                const { error } = await admin.from('exam_attempts').update({ status: 'in_progress', started_at: startIso, updated_at: new Date().toISOString() }).eq('id', p.attemptId).eq('user_id', uid).eq('status', 'waiting');
-                if (error) throw new Error(error.message);
-                if (p.status === 'waiting') await patchParticipant(code, uid, { status: 'connected', connected: true, lastHeartbeat: Date.now() }).catch(() => {});
-            }
+                if (p?.status === 'waiting') {
+                    await patchParticipant(code, uid, { status: 'connected', connected: true, lastHeartbeat: Date.now() });
+                }
+            }));
             return res.status(200).json({ startedAt: Number(startedRoom.startedAt), serverNow: Date.now(), deadlineAt: Number(startedRoom.deadlineAt), room: startedRoom });
         }
 
