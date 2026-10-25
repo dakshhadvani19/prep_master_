@@ -195,7 +195,7 @@ async function closeParticipantSnapshot(code, uid, status, reason, submittedAnsw
         "  redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[7])",
         "end",
         "return cjson.encode(p)"
-    ].join('\\n');
+    ].join('\n');
     const raw = await redis(
         'EVAL', script, 1, participantKey, status, reason, normalized, revision,
         participantStatus, Date.now(), ROOM_TTL_SECONDS,
@@ -676,11 +676,11 @@ export default async function handler(req, res) {
             const p = await getParticipant(code, user.id);
             if (!p || p.status === 'disconnected' || p.status === 'submitted') return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
             if (room.status === 'started' && Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt)) {
-                return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers }) });
+                return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers, submittedRevision: body.revision }) });
             }
             if (room.status === 'started' && Number(p.lastHeartbeat || 0) > 0 && Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
                 const final = await finalizeAttempt(admin, {
-                    code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers,
+                    code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers, submittedRevision: body.revision,
                 });
                 return res.status(200).json({ active: false, ...final });
             }
