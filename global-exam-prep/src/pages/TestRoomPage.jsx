@@ -631,7 +631,13 @@ export default function TestRoomPage() {
         let cancelled = false;
         const heartbeat = async () => {
             try {
-                const result = await callRoomApi({ action: 'heartbeat', code: roomCode });
+                const revision = ++answerRevisionRef.current;
+                const result = await callRoomApi({
+                    action: 'heartbeat',
+                    code: roomCode,
+                    answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                    revision,
+                });
                 if (cancelled) return;
                 if (!result.active) {
                     connectionLostRef.current = true;
