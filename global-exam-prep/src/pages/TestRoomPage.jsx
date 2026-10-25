@@ -294,6 +294,7 @@ export default function TestRoomPage() {
                         action: 'disconnect',
                         code: roomCode,
                         answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                        revision: ++answerRevisionRef.current,
                     }, { keepalive: true }).catch(() => {});
                     connectionLostRef.current = true;
                 }
@@ -426,6 +427,7 @@ export default function TestRoomPage() {
                         action: 'disconnect',
                         code: roomCode,
                         answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                        revision: ++answerRevisionRef.current,
                     }, { keepalive: true }).catch(() => {});
                     setError('This started attempt was disconnected and cannot be rejoined. Your saved result is available on the dashboard.');
                     setView('error');
@@ -465,6 +467,7 @@ export default function TestRoomPage() {
                         action: 'disconnect',
                         code: roomCode,
                         answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                        revision: ++answerRevisionRef.current,
                     }, { keepalive: true }).catch(() => {});
                     setError('The live connection was lost during the test. Rejoining is disabled; your saved attempt is available on the dashboard.');
                 } else {
@@ -581,6 +584,7 @@ export default function TestRoomPage() {
         if (submittedRef.current || !canonicalQuestionsRef.current.length || !roomCode) return;
         submittedRef.current = true;
         const canonicalAnswers = toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length);
+        const revision = ++answerRevisionRef.current;
         setSubmissionPending(true);
         setView('submitting');
         try {
@@ -649,6 +653,7 @@ export default function TestRoomPage() {
                         action: 'disconnect',
                         code: roomCode,
                         answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                        revision: ++answerRevisionRef.current,
                     }).catch(() => {});
                     setError('Your connection was interrupted during the test. Rejoining is disabled; your saved attempt is on the dashboard.');
                     setConnected(false);
@@ -679,6 +684,7 @@ export default function TestRoomPage() {
                 action: 'disconnect',
                 code: roomCode,
                 answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                        revision: ++answerRevisionRef.current,
             }, { keepalive }).catch(() => {}).finally(() => {
                 setError('Your connection was interrupted. You cannot rejoin this started test; your saved attempt is available on the dashboard.');
                 setConnected(false);
