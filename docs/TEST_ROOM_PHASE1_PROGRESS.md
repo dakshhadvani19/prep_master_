@@ -34,10 +34,13 @@ This is a continuation of the existing Test Room implementation, not a rewrite. 
 
 ## Phase 1 verification still required
 
-- [ ] Confirm the latest Vercel production build/deployment result for the final Phase 1 commit.
-- [ ] Run `npm test`, `npm run lint`, and `npm run build` against this exact commit. These were not run locally in this session because the workspace could not clone GitHub (DNS resolution failure); do not assume they passed.
-- [ ] Exercise the live flow with a host and participant in separate browser sessions.
-- [ ] Test disconnect during save, hard tab/browser close, host disconnection, Redis failure, and temporary Supabase/Postgres failure. Confirm the last server-accepted answer snapshot and score appear in dashboard history.
+- [ ] Confirm the Vercel production deployment for the latest Phase 1 commit. Its status was still `pending` at the last check: [deployment](https://vercel.com/daksh-hadvanis-projects/prep_master_/2NihttysQEoTCMaHxKhuSbmt2Krh).
+- [x] GitHub Actions focused Test Room regression job passed: server-side question/answer validation, score mapping, persistence/RLS and private-key checks, shuffled answer handling, and monotonic durable revision test all passed.
+- [x] GitHub Actions `npm run build` passed.
+- [x] The latest TestRoomPage lint errors were removed. Repository-wide `npm run lint` still fails with 65 errors and 2 warnings in unrelated/pre-existing files.
+- [ ] Full Vitest suite is not green: 12 failures across 5 of 37 test files (410 passed of 422). Reported failures are in auth/profile/catalog tests, not in the focused Test Room regression set; do not claim the whole repository suite passes.
+- [ ] Exercise the deployed live flow with a host and participant in separate browser sessions.
+- [ ] Test hard tab/browser close, host disconnection, Redis failure, and Supabase/Postgres failure under live conditions. Confirm the last server-accepted answer snapshot and score appear in dashboard history.
 
 ## Phase 2 plan
 
