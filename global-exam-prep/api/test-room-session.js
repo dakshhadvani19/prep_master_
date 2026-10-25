@@ -426,9 +426,34 @@ export default async function handler(req, res) {
             const p = await getParticipant(code, user.id);
             if (!p || p.status === 'disconnected' || p.status === 'submitted') return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
             if (room.status === 'started' && Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt)) {
-                return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired' }) });
+                return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers }) });
             }
-            await patchParticipant(code, user.id, { lastHeartbeat: Date.now(), connected: true });
+
+            // Heartbeats also retry the newest answer snapshot. This closes the gap
+            // where a transient save_answer request failed and the student made no
+            // further selections before disconnecting.
+            if (Array.isArray(body.answers)) {
+                const questions = await getQuestions(code);
+                const normalized = normalizeAnswers(body.answers, questions?.length || 30);
+                const revision = Number.isFinite(Number(body.revision)) ? Number(body.revision) : Date.now();
+                const snapshotScript = [
+                    "local raw = redis.call('GET', KEYS[1])",
+                    "if not raw then return 'ERR:PARTICIPANT_NOT_FOUND' end",
+                    "local participant = cjson.decode(raw)",
+                    "if participant.status == 'disconnected' or participant.status == 'submitted' then return 'ERR:ATTEMPT_CLOSED' end",
+                    "local revision = tonumber(ARGV[2])",
+                    "if not participant.answerRevision or revision >= tonumber(participant.answerRevision) then participant.answers = cjson.decode(ARGV[1]); participant.answerRevision = revision end",
+                    "participant.lastHeartbeat = tonumber(ARGV[3]); participant.connected = true",
+                    "redis.call('SET', KEYS[1], cjson.encode(participant), 'EX', ARGV[4])",
+                    "return cjson.encode(participant)"
+                ].join('\\n');
+                const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), ROOM_TTL_SECONDS));
+                if (savedRaw.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active.');
+                const saved = parseJson(savedRaw);
+                await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || normalized, questions?.length || 30));
+            } else {
+                await patchParticipant(code, user.id, { lastHeartbeat: Date.now(), connected: true });
+            }
             return res.status(200).json({ active: true, serverNow: Date.now(), deadlineAt: room.deadlineAt });
         }
 
