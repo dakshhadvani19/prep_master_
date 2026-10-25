@@ -466,19 +466,23 @@ export default function TestRoomPage() {
         if (!isHostFlow || !channelRef.current || roomMetaRef.current?.status !== 'waiting' || working) return;
         setWorking(true);
         setError('');
+        const previous = roomMetaRef.current;
         try {
             const startResponse = await callRoomApi({ action: 'start', code: roomCode });
             const next = {
-                ...roomMetaRef.current,
+                ...previous,
                 status: 'started',
                 startedAt: Number(startResponse.startedAt),
                 serverNow: Number(startResponse.serverNow),
             };
+            await channelRef.current.track(next);
             roomMetaRef.current = next;
             setRoomMeta(next);
-            await channelRef.current.track(next);
             setView('attempt');
         } catch (err) {
+            // Keep the lobby in the waiting state if the Realtime start update fails.
+            roomMetaRef.current = previous;
+            setRoomMeta(previous);
             setError(err.message || 'Could not start the room. No timer was started.');
         } finally {
             setWorking(false);
@@ -596,7 +600,7 @@ export default function TestRoomPage() {
                         value={joinCodeInput}
                         onChange={(event) => setJoinCodeInput(normalizedCode(event.target.value).slice(0, 10))}
                         onKeyDown={(event) => { if (event.key === 'Enter' && codeLooksValid) navigate('/test-rooms/' + normalizedCode(joinCodeInput)); }}
-                        placeholder="e.g. 7KMR-2QXN"
+                        placeholder="e.g. 7KMR2QXNA8"
                         aria-describedby="room-code-hint"
                         style={{ width: '100%', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.9rem 1rem', background: 'var(--bg-tertiary)', color: 'var(--text-primary)', font: 'inherit', fontSize: '1.1rem', letterSpacing: '0.1em', marginBottom: '0.6rem' }}
                     />
