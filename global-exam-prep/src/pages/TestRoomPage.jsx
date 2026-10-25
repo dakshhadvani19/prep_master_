@@ -153,6 +153,7 @@ export default function TestRoomPage() {
     const hostSeenRef = useRef(false);
     const submittedRef = useRef(false);
     const serverClockOffsetRef = useRef(0);
+    const startingRoomRef = useRef(false);
     const submitHandlerRef = useRef(null);
     const latestViewRef = useRef(view);
 
@@ -273,11 +274,11 @@ export default function TestRoomPage() {
                 ...live.map((person) => person.userId),
                 ...reservedUsersRef.current,
             ]);
-            if (meta?.status !== 'waiting') {
+            if (startingRoomRef.current || meta?.status !== 'waiting') {
                 await send('join_response', {
                     toUid: requestingUid,
                     accepted: false,
-                    reason: 'This room has already started.',
+                    reason: startingRoomRef.current ? 'The host is starting the test now.' : 'This room has already started.',
                 });
                 return;
             }
@@ -423,7 +424,7 @@ export default function TestRoomPage() {
             return;
         }
         if (canonicalQuestions.length !== 30 || canonicalQuestions.some((question) => (
-            question.options.length !== 4 || !Number.isInteger(question.answer)
+            !question.text.trim() || question.options.length !== 4 || !Number.isInteger(question.answer)
             || question.answer < 0 || question.answer > 3
         ))) {
             setError('This question set is not a valid four-option MCQ exam.');
@@ -492,6 +493,7 @@ export default function TestRoomPage() {
             // Keep the lobby in the waiting state if the Realtime start update fails.
             roomMetaRef.current = previous;
             setRoomMeta(previous);
+            startingRoomRef.current = false;
             setError(err.message || 'Could not start the room. No timer was started.');
         } finally {
             setWorking(false);
