@@ -476,6 +476,7 @@ export default function TestRoomPage() {
     const startRoom = async () => {
         if (!isHostFlow || !channelRef.current || roomMetaRef.current?.status !== 'waiting' || working) return;
         setWorking(true);
+        startingRoomRef.current = true;
         setError('');
         const previous = roomMetaRef.current;
         try {
