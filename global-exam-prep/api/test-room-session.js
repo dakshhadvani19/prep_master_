@@ -234,9 +234,23 @@ export default async function handler(req, res) {
                 participantLimit: MAX_PARTICIPANTS, createdAt: new Date().toISOString(), serverNow: Date.now(),
             };
             let code = '';
+            // Reserve the metadata key atomically BEFORE writing any room-specific
+            // keys. Otherwise two simultaneous creators could both pass EXISTS and
+            // one could overwrite the other room's questions/participants.
             for (let i = 0; i < 5; i += 1) {
                 const candidate = generateCode();
-                if (!(await redis('EXISTS', keys(candidate).meta))) { code = candidate; break; }
+                const reservation = await redis(
+                    'SET',
+                    keys(candidate).meta,
+                    JSON.stringify({ ...room, roomCode: candidate }),
+                    'EX',
+                    ROOM_TTL_SECONDS,
+                    'NX',
+                );
+                if (reservation === 'OK') {
+                    code = candidate;
+                    break;
+                }
             }
             if (!code) return fail(res, 503, 'Could not allocate a unique room code. Please retry.');
             room.roomCode = code;
@@ -246,21 +260,27 @@ export default async function handler(req, res) {
                 connected: true, joinedAt: room.createdAt, lastHeartbeat: Date.now(),
                 answers: Array(30).fill(null), answerRevision: 0, attemptId: null,
             };
-            await setJson(keys(code).questions, questions);
-            await redis('SADD', keys(code).members, user.id);
-            await redis('EXPIRE', keys(code).members, ROOM_TTL_SECONDS);
-            await setJson(keys(code, user.id).participant, host);
-            const created = await redis('SET', keys(code).meta, JSON.stringify(room), 'EX', ROOM_TTL_SECONDS, 'NX');
-            if (created !== 'OK') {
-                await redis('DEL', keys(code).questions, keys(code).members, keys(code, user.id).participant);
-                return fail(res, 503, 'A room code collision occurred. Please retry.');
-            }
             try {
+                await setJson(keys(code).questions, questions);
+                await redis('SADD', keys(code).members, user.id);
+                await redis('EXPIRE', keys(code).members, ROOM_TTL_SECONDS);
+                await setJson(keys(code, user.id).participant, host);
+
                 const attempt = await createAttempt(admin, room, user.id, room.hostName, 'host', safe);
                 host.attemptId = attempt.id;
                 await setJson(keys(code, user.id).participant, host);
                 return res.status(200).json({ code, room, attemptId: attempt.id, questions: safe, serverNow: Date.now() });
             } catch (error) {
+                // Preserve an audit record if the DB attempt was inserted but a later
+                // step failed; never leave a dangling "waiting" attempt in the dashboard.
+                const partialAttempt = await getAttempt(admin, code, user.id).catch(() => null);
+                if (partialAttempt && ['waiting', 'in_progress'].includes(partialAttempt.status)) {
+                    await admin.from('exam_attempts').update({
+                        status: 'cancelled',
+                        end_reason: 'room_creation_failed',
+                        updated_at: new Date().toISOString(),
+                    }).eq('id', partialAttempt.id).eq('user_id', user.id).catch(() => {});
+                }
                 await redis('DEL', keys(code).meta, keys(code).questions, keys(code).members, keys(code, user.id).participant).catch(() => {});
                 return fail(res, 503, 'The room was not created because its attempt could not be saved: ' + error.message);
             }
