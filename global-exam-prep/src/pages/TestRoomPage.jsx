@@ -398,7 +398,7 @@ export default function TestRoomPage() {
                         displayName: String(displayName).slice(0, 80),
                     });
                     joinTimeout = setTimeout(() => {
-                        if (cancelled || connected || latestViewRef.current !== 'connecting') return;
+                        if (cancelled || latestViewRef.current !== 'connecting') return;
                         setError('The host is no longer reachable. Ask them to reopen the room and share a new code.');
                         setView('error');
                     }, 6000);
@@ -549,19 +549,6 @@ export default function TestRoomPage() {
         } catch {
             setError('Clipboard access was blocked. Select and copy the code manually.');
         }
-    };
-
-    const leaveRoom = async () => {
-        if (isHostFlow && channelRef.current) {
-            try {
-                await channelRef.current.track({
-                    ...roomMetaRef.current,
-                    status: 'finished',
-                    hostDisconnectedAt: Date.now(),
-                });
-            } catch { /* closing the channel will still remove this temporary room */ }
-        }
-        navigate('/dashboard', { replace: true });
     };
 
     const currentQuestion = displayQuestions[currentQuestionIndex];
