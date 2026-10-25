@@ -760,7 +760,7 @@ export default async function handler(req, res) {
             if (!p) return fail(res, 404, 'Participant attempt not found.');
             if (room.status !== 'started') return fail(res, 409, 'The test has not started.');
             const timedOut = Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt);
-            const status = action === 'submit' ? (timedOut ? 'timed_out' : 'submitted') : 'disconnected';
+            const status = timedOut ? 'timed_out' : action === 'submit' ? 'submitted' : 'disconnected';
             if (timedOut) reason = 'timer_expired';
             const inputAnswers = targetUid === user.id ? body.answers : null;
             const finalized = await finalizeAttempt(admin, { code, uid: targetUid, status, reason, submittedAnswers: inputAnswers, submittedRevision: body.revision });
