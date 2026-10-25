@@ -446,7 +446,7 @@ export default async function handler(req, res) {
                     "participant.lastHeartbeat = tonumber(ARGV[3]); participant.connected = true",
                     "redis.call('SET', KEYS[1], cjson.encode(participant), 'EX', ARGV[4])",
                     "return cjson.encode(participant)"
-                ].join('\\n');
+                ].join('\n');
                 const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), ROOM_TTL_SECONDS));
                 if (savedRaw.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active.');
                 const saved = parseJson(savedRaw);
