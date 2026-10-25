@@ -128,7 +128,8 @@ export default function TestRoomPage() {
     const [roomCode, setRoomCode] = useState('');
     const [roomMeta, setRoomMeta] = useState(null);
     const [participants, setParticipants] = useState([]);
-    const [view, setView] = useState(routeCode ? 'connecting' : 'setup');
+    const [view, setView] = useState(routeCode ? 'connecting' : (createPayload ? 'setup' : 'join'));
+    const [joinCodeInput, setJoinCodeInput] = useState('');
     const [durationMinutes, setDurationMinutes] = useState(
         Number(createPayload?.timeMinutes) || 45,
     );
@@ -455,19 +456,24 @@ export default function TestRoomPage() {
     };
 
     const startRoom = async () => {
-        if (!isHostFlow || !channelRef.current || roomMetaRef.current?.status !== 'waiting') return;
-        const next = {
-            ...roomMetaRef.current,
-            status: 'started',
-            startedAt: Date.now(),
-        };
-        roomMetaRef.current = next;
-        setRoomMeta(next);
+        if (!isHostFlow || !channelRef.current || roomMetaRef.current?.status !== 'waiting' || working) return;
+        setWorking(true);
+        setError('');
         try {
+            const startResponse = await callRoomApi({ action: 'start', code: roomCode });
+            const next = {
+                ...roomMetaRef.current,
+                status: 'started',
+                startedAt: Number(startResponse.startedAt),
+            };
+            roomMetaRef.current = next;
+            setRoomMeta(next);
             await channelRef.current.track(next);
             setView('attempt');
-        } catch {
-            setError('Could not start the room. No timer was started.');
+        } catch (err) {
+            setError(err.message || 'Could not start the room. No timer was started.');
+        } finally {
+            setWorking(false);
         }
     };
 
@@ -552,6 +558,47 @@ export default function TestRoomPage() {
                     <h2 style={{ marginBottom: '0.75rem' }}>Sign in to use Test Rooms</h2>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>Room codes and participant presence are available only to signed-in students.</p>
                     <button style={roomButtonStyle()} onClick={() => navigate('/signup?mode=login', { state: { from: location } })}>Sign in</button>
+                </div>
+            </div>
+        );
+    }
+
+    if (view === 'join' && !routeCode && !isHostFlow) {
+        const normalized = normalizedCode(joinCodeInput);
+        const codeLooksValid = /^[A-HJ-NP-Z2-9]{10}$/.test(normalized);
+        return (
+            <div className="container animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
+                <button onClick={() => navigate(-1)} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+                    <ArrowLeft size={17} /> Back
+                </button>
+                <div className="glass-panel" style={{ padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
+                    <div style={{ width: 58, height: 58, borderRadius: 17, background: 'rgba(141,123,255,0.15)', color: '#b9adff', display: 'grid', placeItems: 'center', marginBottom: '1rem' }}>
+                        <Users size={27} />
+                    </div>
+                    <h1 style={{ fontSize: '1.8rem', marginBottom: '0.65rem' }}>Join a Test Room</h1>
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: 1.65 }}>
+                        Enter the 10-character code shared by the host. The backend will check that the temporary room is active before you join.
+                    </p>
+                    <label htmlFor="test-room-code" style={{ display: 'block', fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.55rem' }}>Room code</label>
+                    <input
+                        id="test-room-code"
+                        autoComplete="off"
+                        spellCheck={false}
+                        value={joinCodeInput}
+                        onChange={(event) => setJoinCodeInput(normalizedCode(event.target.value).slice(0, 10))}
+                        onKeyDown={(event) => { if (event.key === 'Enter' && codeLooksValid) navigate('/test-rooms/' + normalizedCode(joinCodeInput)); }}
+                        placeholder="e.g. 7KMR-2QXN"
+                        aria-describedby="room-code-hint"
+                        style={{ width: '100%', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.9rem 1rem', background: 'var(--bg-tertiary)', color: 'var(--text-primary)', font: 'inherit', fontSize: '1.1rem', letterSpacing: '0.1em', marginBottom: '0.6rem' }}
+                    />
+                    <p id="room-code-hint" style={{ color: 'var(--text-tertiary)', fontSize: '0.8rem', marginBottom: '1.3rem' }}>Letters I/O and digits 0/1 are excluded to make codes easier to read.</p>
+                    {error && <p role="alert" style={{ color: '#fca5a5', fontSize: '0.88rem', marginBottom: '1rem' }}>{error}</p>}
+                    <button disabled={!codeLooksValid} onClick={() => navigate('/test-rooms/' + normalizedCode(joinCodeInput))} style={roomButtonStyle('primary', !codeLooksValid)}>
+                        <DoorOpen size={18} /> Check Code &amp; Join
+                    </button>
+                    <p style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', lineHeight: 1.55, marginTop: '1rem' }}>
+                        Only currently active rooms can be joined. Closing the host's room ends its code; no room session is stored in a database table.
+                    </p>
                 </div>
             </div>
         );
@@ -727,7 +774,7 @@ export default function TestRoomPage() {
                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '1rem' }}>Everyone stays here until the host starts the test. The shared {roomMeta?.durationMinutes || durationMinutes}-minute timer will begin at the same moment for every participant.</p>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.7rem 0.8rem', background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.18)', borderRadius: 'var(--radius-md)', color: '#fbbf24', fontSize: '0.82rem', marginBottom: '1.2rem' }}><Clock3 size={16} /> {roomMeta?.durationMinutes || durationMinutes} minutes · {roomMeta?.questionCount || canonicalQuestions.length || 30} questions</div>
                         {isHostFlow ? (
-                            <button disabled={!connected || participantCount > MAX_PARTICIPANTS} onClick={startRoom} style={roomButtonStyle('success', !connected || participantCount > MAX_PARTICIPANTS)}><Play size={18} /> Start Test Room</button>
+                            <button disabled={!connected || working || participantCount > MAX_PARTICIPANTS} onClick={startRoom} style={roomButtonStyle('success', !connected || working || participantCount > MAX_PARTICIPANTS)}>{working ? <><LoaderCircle size={18} className="spin" /> Starting…</> : <><Play size={18} /> Start Test Room</>}</button>
                         ) : (
                             <div style={{ ...roomButtonStyle('secondary', true), cursor: 'default', lineHeight: 1.4 }}><LoaderCircle size={17} className="spin" /> Waiting for host to start…</div>
                         )}
