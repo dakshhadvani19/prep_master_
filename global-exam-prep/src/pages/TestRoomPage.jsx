@@ -178,6 +178,7 @@ export default function TestRoomPage() {
         }
         setDisplayQuestions(shuffleRoomQuestions(canonicalQuestions));
         setCurrentQuestionIndex(0);
+        answersRef.current = {};
         setAnswers({});
         submittedRef.current = false;
         setScoreResult(null);
@@ -610,22 +611,39 @@ export default function TestRoomPage() {
 
     useEffect(() => { submitHandlerRef.current = handleSubmit; }, [handleSubmit]);
 
-    // Persist every answer change to Redis and Supabase. A monotonically increasing
-    // revision prevents slow network responses from overwriting newer selections.
-    useEffect(() => {
-        if (view !== 'attempt' || roomMeta?.status !== 'started' || !attemptId || !roomCode || submittedRef.current) return undefined;
+    // Reflect the choice in the ref synchronously so pagehide/disconnect handlers
+    // use the latest click even if React effects have not run yet. Persist each
+    // selection immediately; heartbeat retries the latest snapshot after transient
+    // request failures, while revisions protect against responses arriving out of order.
+    const selectOption = useCallback(async (canonicalQuestionIndex, originalOptionIndex) => {
+        const nextAnswers = {
+            ...answersRef.current,
+            [canonicalQuestionIndex]: originalOptionIndex,
+        };
+        answersRef.current = nextAnswers;
+        setAnswers(nextAnswers);
+
+        if (view !== 'attempt' || roomMetaRef.current?.status !== 'started' || !attemptId || !roomCode || submittedRef.current) {
+            return;
+        }
+
         const revision = ++answerRevisionRef.current;
-        const snapshot = toCanonicalAnswerArray(answers, canonicalQuestions.length || 30);
-        const timer = setTimeout(async () => {
-            try {
-                await callRoomApi({ action: 'save_answer', code: roomCode, answers: snapshot, revision });
-                setPersistenceError('');
-            } catch (err) {
-                setPersistenceError(err.message || 'Your latest answer has not synced yet.');
+        const snapshot = toCanonicalAnswerArray(nextAnswers, canonicalQuestionsRef.current.length || 30);
+        try {
+            const saved = await callRoomApi({ action: 'save_answer', code: roomCode, answers: snapshot, revision });
+            if (saved?.active === false) {
+                submittedRef.current = true;
+                setSubmissionPending(false);
+                setScoreResult(saved.result || null);
+                setView('error');
+                setError('Your attempt has been finalized. Its saved result is available on the dashboard.');
+                return;
             }
-        }, 220);
-        return () => clearTimeout(timer);
-    }, [answers, attemptId, canonicalQuestions.length, roomCode, roomMeta?.status, view]);
+            setPersistenceError('');
+        } catch (err) {
+            setPersistenceError(err.message || 'Your latest answer has not synced yet.');
+        }
+    }, [attemptId, roomCode, view]);
 
     // Heartbeats let the backend detect dead connections and finalize the last
     // server-saved answers without allowing a participant to rejoin a started test.
@@ -1018,7 +1036,7 @@ export default function TestRoomPage() {
                             {currentQuestion.options.map((option, displayIndex) => {
                                 const selected = answers[currentQuestion.canonicalIndex] === option.originalOptionIndex;
                                 return (
-                                    <button key={option.originalOptionIndex} onClick={() => setAnswers((previous) => ({ ...previous, [currentQuestion.canonicalIndex]: option.originalOptionIndex }))} style={{ padding: '1rem', display: 'flex', gap: '0.85rem', alignItems: 'center', textAlign: 'left', borderRadius: 'var(--radius-md)', border: selected ? '1px solid var(--accent-primary)' : '1px solid var(--border-color)', background: selected ? 'var(--accent-light)' : 'var(--bg-tertiary)', color: 'var(--text-primary)', transition: 'all 0.14s ease' }}>
+                                    <button key={option.originalOptionIndex} onClick={() => selectOption(currentQuestion.canonicalIndex, option.originalOptionIndex)} style={{ padding: '1rem', display: 'flex', gap: '0.85rem', alignItems: 'center', textAlign: 'left', borderRadius: 'var(--radius-md)', border: selected ? '1px solid var(--accent-primary)' : '1px solid var(--border-color)', background: selected ? 'var(--accent-light)' : 'var(--bg-tertiary)', color: 'var(--text-primary)', transition: 'all 0.14s ease' }}>
                                         <span style={{ flexShrink: 0, width: 32, height: 32, display: 'grid', placeItems: 'center', borderRadius: 10, background: selected ? 'var(--accent-primary)' : 'var(--bg-secondary)', color: selected ? 'white' : 'var(--text-secondary)', fontWeight: 800 }}>{String.fromCharCode(65 + displayIndex)}</span>
                                         <span style={{ flex: 1, lineHeight: 1.5 }}>{option.text}</span>
                                         {selected && <Check size={18} color="var(--accent-primary)" />}
