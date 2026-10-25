@@ -242,12 +242,7 @@ async function finalizeAttempt(admin, {
     // If the following DB write fails, dashboard reconciliation can retry using
     // this same closed snapshot and its stored finalStatus/endReason.
     const participantSnapshot = code
-        ? await closeParticipantSnapshot(code, uid, status, reason, submittedAnswers, submittedRevision).catch((error) => {
-            // If Redis expired or is temporarily unavailable, fall back to the last
-            // durable snapshot. The persistent answer key remains in Postgres.
-            if (/redis|upstash|fetch failed|credentials/i.test(String(error?.message || ''))) return null;
-            throw error;
-        })
+        ? await closeParticipantSnapshot(code, uid, status, reason, submittedAnswers, submittedRevision)
         : null;
     const questionList = code ? await getQuestions(code).catch(() => null) : null;
     const answerKey = await privateAnswerKey(admin, attempt.id, questionList);
@@ -453,9 +448,14 @@ export default async function handler(req, res) {
                     await reconcileRoom(admin, attempt.room_code);
                     const p = await getParticipant(attempt.room_code, user.id).catch(() => null);
                     const refreshed = await getAttempt(admin, attempt.room_code, user.id).catch(() => null);
-                    if (refreshed?.status === 'in_progress' && (!p || !Number(p.lastHeartbeat) || Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS)) {
+                    if (refreshed?.status === 'in_progress' && (
+                        ['disconnected', 'submitted'].includes(p?.status)
+                        || !p
+                        || !Number(p.lastHeartbeat)
+                        || Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS
+                    )) {
                         const timedOut = Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt);
-                        await finalizeAttempt(admin, {\n                            code: attempt.room_code,\n                            uid: user.id,\n                            status: p?.finalStatus || (timedOut ? 'timed_out' : p?.status === 'submitted' ? 'submitted' : 'disconnected'),\n                            reason: p?.endReason || (timedOut ? 'timer_expired' : 'connection_lost'),\n                        }).catch(() => {});
+                        await finalizeAttempt(admin, { code: attempt.room_code, uid: user.id, status: p?.finalStatus || (timedOut ? 'timed_out' : p?.status === 'submitted' ? 'submitted' : 'disconnected'), reason: p?.endReason || (timedOut ? 'timer_expired' : 'connection_lost') }).catch(() => {});
                     }
                 } else if (attempt.status === 'in_progress') {
                     await finalizeAttempt(admin, { code: attempt.room_code, uid: user.id, status: 'disconnected', reason: 'room_expired_after_disconnect' }).catch(() => {});
@@ -680,7 +680,7 @@ export default async function handler(req, res) {
             }
             if (room.status === 'started' && Number(p.lastHeartbeat || 0) > 0 && Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
                 const final = await finalizeAttempt(admin, {
-                    code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers, submittedRevision: body.revision, submittedRevision: body.revision,
+                    code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers, submittedRevision: body.revision,
                 });
                 return res.status(200).json({ active: false, ...final });
             }
@@ -763,7 +763,6 @@ export default async function handler(req, res) {
             const status = action === 'submit' ? (timedOut ? 'timed_out' : 'submitted') : 'disconnected';
             if (timedOut) reason = 'timer_expired';
             const inputAnswers = targetUid === user.id ? body.answers : null;
-            if (Array.isArray(inputAnswers)) await patchParticipant(code, targetUid, { answers: normalizeAnswers(inputAnswers), lastHeartbeat: Date.now() }).catch(() => {});
             const finalized = await finalizeAttempt(admin, { code, uid: targetUid, status, reason, submittedAnswers: inputAnswers, submittedRevision: body.revision });
             if (!finalized.ok) return fail(res, 409, finalized.error || 'Could not finalize the attempt.');
             return res.status(200).json(finalized);
