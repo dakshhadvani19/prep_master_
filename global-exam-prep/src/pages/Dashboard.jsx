@@ -4,6 +4,7 @@ import { domains, examPrompts } from '../data/mockData';
 import { Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle, Loader } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistory } from '../utils/examHistoryStorage';
+import { getMyAttempts, reconcileTestRoomAttempts } from '../utils/supabaseExam';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -15,17 +16,88 @@ export default function Dashboard() {
     const { currentUser } = useAuth();
 
     useEffect(() => {
-        if (!currentUser) {
+        if (!currentUser?.uid) {
             setHistory([]);
-            return;
+            setLoading(false);
+            return undefined;
         }
 
-        setHistory(getExamHistory(currentUser.uid));
+        let cancelled = false;
+        let firstLoad = true;
+        let hasUnfinishedRoomAttempts = false;
+        let bannerTimer = null;
+        const localHistory = getExamHistory(currentUser.uid);
 
         if (location.state?.justSubmitted) {
             setJustSubmitted(true);
-            setTimeout(() => setJustSubmitted(false), 5000);
+            bannerTimer = setTimeout(() => setJustSubmitted(false), 5000);
         }
+
+        const refreshHistory = async () => {
+            if (cancelled) return;
+            if (firstLoad) setLoading(true);
+            try {
+                // This finalizes rooms whose heartbeat stopped while the student
+                // was disconnected; repeated calls are safe and do not duplicate rows.
+                await reconcileTestRoomAttempts();
+                const { attempts, error } = await getMyAttempts(100);
+                if (error) throw new Error(error);
+
+                const roomHistory = (attempts || [])
+                    .filter((attempt) => (
+                        attempt.attempt_type === 'test_room'
+                        && !['waiting', 'cancelled'].includes(attempt.status)
+                    ))
+                    .map((attempt) => ({
+                        id: attempt.id,
+                        date: attempt.started_at || attempt.created_at,
+                        subjectId: attempt.subject_code || attempt.subject_name,
+                        subjectName: attempt.subject_name,
+                        examType: attempt.exam_type,
+                        difficulty: attempt.difficulty || 'medium',
+                        type: 'objective',
+                        score: attempt.score === null || attempt.score === undefined ? null : Number(attempt.score),
+                        totalMarks: Number(attempt.total_marks || 30),
+                        questions: Array.isArray(attempt.questions) ? attempt.questions : [],
+                        userAnswers: attempt.answers || [],
+                        attemptType: 'test_room',
+                        status: attempt.status,
+                        endReason: attempt.end_reason,
+                        correctCount: attempt.correct_count,
+                        incorrectCount: attempt.incorrect_count,
+                        attemptedCount: attempt.attempted_count,
+                        unattemptedCount: attempt.unattempted_count,
+                    }));
+
+                hasUnfinishedRoomAttempts = roomHistory.some((attempt) => attempt.status === 'in_progress');
+                if (!cancelled) {
+                    setHistory([...localHistory, ...roomHistory].sort(
+                        (a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime()
+                    ));
+                }
+            } catch (error) {
+                console.warn('Could not load persisted Test Room attempts:', error.message);
+                if (!cancelled) setHistory(localHistory);
+            } finally {
+                if (firstLoad) {
+                    firstLoad = false;
+                    if (!cancelled) setLoading(false);
+                }
+            }
+        };
+
+        refreshHistory();
+        // An in-progress row may need the stale-heartbeat grace period to pass
+        // before the dashboard can finalize it after a hard tab/browser close.
+        const poll = setInterval(() => {
+            if (hasUnfinishedRoomAttempts) refreshHistory();
+        }, 15000);
+
+        return () => {
+            cancelled = true;
+            clearInterval(poll);
+            if (bannerTimer) clearTimeout(bannerTimer);
+        };
     }, [currentUser?.uid, location.state?.justSubmitted]);
 
     const getSubjectName = (subjectId) => {
@@ -175,7 +247,7 @@ export default function Dashboard() {
                             }}>
                                 <div style={{ flex: 1 }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-                                        <h3 style={{ fontSize: '1.25rem' }}>{getSubjectName(record.subjectId)}</h3>
+                                        <h3 style={{ fontSize: '1.25rem' }}>{record.subjectName || getSubjectName(record.subjectId)}</h3>
                                         <span style={{
                                             background: 'var(--bg-tertiary)',
                                             padding: '0.25rem 0.75rem',
@@ -196,6 +268,11 @@ export default function Dashboard() {
                                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                                             <Clock size={14} /> {date}
                                         </span>
+                                        {record.attemptType === 'test_room' && (
+                                            <span style={{ textTransform: 'capitalize', color: record.status === 'in_progress' ? 'var(--warning)' : 'var(--text-tertiary)' }}>
+                                                Room attempt · {String(record.status || 'saved').replaceAll('_', ' ')}
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
 
@@ -206,17 +283,21 @@ export default function Dashboard() {
                                                 {record.score} <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/ {record.totalMarks}</span>
                                             </div>
                                             <div style={{ color: statusColor, fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.75rem' }}>
-                                                {percentage >= 50 ? 'Passed' : 'Needs Review'}
+                                                {record.attemptType === 'test_room' && record.status !== 'submitted'
+                                                    ? String(record.status).replaceAll('_', ' ')
+                                                    : percentage >= 50 ? 'Passed' : 'Needs Review'}
                                             </div>
                                         </>
+                                    ) : record.attemptType === 'test_room' ? (
+                                        <div style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--warning)', marginBottom: '0.75rem' }}>
+                                            {record.status === 'in_progress' ? 'Awaiting finalization' : 'Score unavailable'}
+                                        </div>
                                     ) : (
-                                        <>
-                                            <div style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '0.75rem' }}>
-                                                Subjective
-                                            </div>
-                                        </>
+                                        <div style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '0.75rem' }}>
+                                            Subjective
+                                        </div>
                                     )}
-                                    {record.questions && (
+                                    {record.questions && (record.attemptType !== 'test_room' || ['submitted', 'auto_submitted', 'disconnected', 'timed_out'].includes(record.status)) && (
                                         <Link
                                             to={`/review/${record.id}`}
                                             style={{
