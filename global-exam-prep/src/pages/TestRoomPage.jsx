@@ -152,6 +152,7 @@ export default function TestRoomPage() {
     const reservedUsersRef = useRef(new Set());
     const hostSeenRef = useRef(false);
     const submittedRef = useRef(false);
+    const serverClockOffsetRef = useRef(0);
     const submitHandlerRef = useRef(null);
     const latestViewRef = useRef(view);
 
@@ -187,6 +188,9 @@ export default function TestRoomPage() {
                 if (cancelled) return;
                 if (!response.valid || !response.joinable || !response.room) {
                     throw new Error(response.error || 'This room is not accepting participants.');
+                }
+                if (Number.isFinite(Number(response.serverNow))) {
+                    serverClockOffsetRef.current = Number(response.serverNow) - Date.now();
                 }
                 roomMetaRef.current = response.room;
                 setRoomMeta(response.room);
@@ -236,6 +240,9 @@ export default function TestRoomPage() {
                 person.role === 'host' && person.roomCode === normalizedCode(roomCode)
             ));
             if (host) {
+                if (Number.isFinite(Number(host.serverNow))) {
+                    serverClockOffsetRef.current = Number(host.serverNow) - Date.now();
+                }
                 hostSeenRef.current = true;
                 roomMetaRef.current = host;
                 setRoomMeta(host);
@@ -407,7 +414,7 @@ export default function TestRoomPage() {
             setError('The generated MCQ set is missing. Return to exam setup and generate it again.');
             return;
         }
-        if (canonicalQuestions.length > 30 || canonicalQuestions.some((question) => (
+        if (canonicalQuestions.length !== 30 || canonicalQuestions.some((question) => (
             question.options.length !== 4 || !Number.isInteger(question.answer)
             || question.answer < 0 || question.answer > 3
         ))) {
@@ -465,6 +472,7 @@ export default function TestRoomPage() {
                 ...roomMetaRef.current,
                 status: 'started',
                 startedAt: Number(startResponse.startedAt),
+                serverNow: Number(startResponse.serverNow),
             };
             roomMetaRef.current = next;
             setRoomMeta(next);
@@ -510,7 +518,8 @@ export default function TestRoomPage() {
         if (roomMeta?.status !== 'started' || !roomMeta.startedAt || view !== 'attempt') return undefined;
         const updateRemaining = () => {
             const deadline = Number(roomMeta.startedAt) + Number(roomMeta.durationMinutes) * 60 * 1000;
-            const remaining = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+            const serverAdjustedNow = Date.now() + serverClockOffsetRef.current;
+            const remaining = Math.max(0, Math.ceil((deadline - serverAdjustedNow) / 1000));
             setTimeLeft(remaining);
             if (remaining === 0) submitHandlerRef.current?.();
         };
@@ -539,7 +548,7 @@ export default function TestRoomPage() {
                 });
             } catch { /* closing the channel will still remove this temporary room */ }
         }
-        navigate('/courses/' + String(createPayload?.courseId || '') + '/subjects', { replace: true });
+        navigate('/dashboard', { replace: true });
     };
 
     const currentQuestion = displayQuestions[currentQuestionIndex];
