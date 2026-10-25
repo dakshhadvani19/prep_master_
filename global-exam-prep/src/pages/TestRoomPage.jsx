@@ -584,7 +584,7 @@ export default function TestRoomPage() {
         setSubmissionPending(true);
         setView('submitting');
         try {
-            const saved = await callRoomApi({ action: 'submit', code: roomCode, answers: canonicalAnswers });
+            const saved = await callRoomApi({ action: 'submit', code: roomCode, answers: canonicalAnswers, revision });
             if (!saved?.result) throw new Error('The server did not return a saved result.');
             setScoreResult(saved.result);
             setSubmissionPending(false);
