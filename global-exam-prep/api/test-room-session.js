@@ -386,9 +386,43 @@ export default async function handler(req, res) {
             if (saved?.status === 'disconnected') return fail(res, 409, 'You have already disconnected from this room and cannot rejoin it.');
             const safe = safeQuestions(await getQuestions(code));
             const attempt = await createAttempt(admin, room, user.id, person.displayName, 'participant', safe);
-            saved = { ...saved, attemptId: attempt.id, lastHeartbeat: Date.now(), connected: true };
+
+            // Join reservation and start are atomic Redis operations, but the DB
+            // attempt is created just after the reservation. Re-read the room so a
+            // start occurring during that short window cannot leave this attempt
+            // permanently in "waiting".
+            const latestRoom = await getRoom(code);
+            if (!latestRoom) throw new Error('The room expired while the participant was joining.');
+            let participantStatus = 'waiting';
+            if (latestRoom.status === 'started') {
+                const { error } = await admin.from('exam_attempts')
+                    .update({
+                        status: 'in_progress',
+                        started_at: new Date(Number(latestRoom.startedAt)).toISOString(),
+                        updated_at: new Date().toISOString(),
+                    })
+                    .eq('id', attempt.id).eq('user_id', user.id).eq('status', 'waiting');
+                if (error) throw new Error(error.message);
+                participantStatus = 'connected';
+            } else if (latestRoom.status !== 'waiting') {
+                return fail(res, 409, 'This room has already ended.');
+            }
+
+            saved = {
+                ...saved,
+                attemptId: attempt.id,
+                status: participantStatus,
+                lastHeartbeat: Date.now(),
+                connected: true,
+            };
             await setJson(participantKey, saved);
-            return res.status(200).json({ accepted: true, room, attemptId: attempt.id, questions: safe, serverNow: Date.now() });
+            return res.status(200).json({
+                accepted: true,
+                room: latestRoom,
+                attemptId: attempt.id,
+                questions: safe,
+                serverNow: Date.now(),
+            });
         }
 
         if (action === 'start') {
