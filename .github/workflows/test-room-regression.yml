@@ -17,8 +17,8 @@ permissions:
   contents: read
 
 jobs:
-  unit-tests:
-    name: Vitest suite
+  focused-test-room-regression:
+    name: Test Room regression tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -31,11 +31,16 @@ jobs:
           cache: npm
           cache-dependency-path: global-exam-prep/package-lock.json
       - run: npm ci
-      - name: Run unit and regression tests
-        run: npm test
+      - name: Run Test Room and persistence tests
+        run: >-
+          npm test --
+          tests/testRoomSessionApi.test.js
+          tests/test-room-session-utils.test.js
+          tests/test-room-persistence-sql.test.js
+          tests/testRoomShuffle.test.js
 
-  static-checks:
-    name: ESLint and production build
+  full-test-suite:
+    name: Full Vitest suite
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -48,7 +53,36 @@ jobs:
           cache: npm
           cache-dependency-path: global-exam-prep/package-lock.json
       - run: npm ci
-      - name: Lint
-        run: npm run lint
-      - name: Production build
-        run: npm run build
+      - run: npm test
+
+  lint:
+    name: Repository ESLint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: global-exam-prep
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: global-exam-prep/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+
+  production-build:
+    name: Vite production build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: global-exam-prep
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: global-exam-prep/package-lock.json
+      - run: npm ci
+      - run: npm run build
