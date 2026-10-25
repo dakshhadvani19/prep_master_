@@ -74,7 +74,7 @@ async function inspectActiveRoom(client, code) {
         };
 
         timeoutId = setTimeout(
-            () => finish({ unavailable: true, room: null }),
+            () => finish({ unavailable: false, room: null }),
             PRESENCE_CHECK_TIMEOUT_MS,
         );
 
@@ -96,10 +96,9 @@ async function inspectActiveRoom(client, code) {
                     && ['waiting', 'started'].includes(presence.status)
                 ));
 
-                if (!host) {
-                    finish({ unavailable: false, room: null });
-                    return;
-                }
+                // Presence can emit an initial empty snapshot while membership converges.
+                // Keep listening until the timeout before deciding the code is invalid.
+                if (!host) return;
 
                 // Only allowlisted metadata is returned; question payloads and answers
                 // must never travel through this verification endpoint.
@@ -151,7 +150,7 @@ export default async function handler(req, res) {
 
     const body = req.body || {};
     const action = String(body.action || '');
-    if (!['create', 'verify'].includes(action)) {
+    if (!['create', 'verify', 'start'].includes(action)) {
         return res.status(400).json({ error: 'Unsupported action.' });
     }
 
@@ -179,7 +178,6 @@ export default async function handler(req, res) {
 
     if (action === 'create') {
         // The generated code is never written to a table or serverless memory.
-        // Active-room validation uses the matching host Presence on Realtime.
         return res.status(200).json({
             code: generateCode(),
             generatedBy: 'backend',
@@ -207,6 +205,18 @@ export default async function handler(req, res) {
     }
     if (inspected.room.hostUid === user.id && inspected.room.status === 'waiting') {
         // Host may revisit the code page. Frontend can still use the validated metadata.
+    }
+
+    if (action === 'start') {
+        if (inspected.room.hostUid !== user.id) {
+            return res.status(403).json({ error: 'Only the room host can start this test.' });
+        }
+        if (inspected.room.status !== 'waiting') {
+            return res.status(409).json({ error: 'This room has already started.' });
+        }
+        // Authoritative timestamp from the backend. It is shared through host Presence,
+        // but is never persisted to a database table.
+        return res.status(200).json({ startedAt: Date.now() });
     }
 
     if (inspected.room.status !== 'waiting') {
