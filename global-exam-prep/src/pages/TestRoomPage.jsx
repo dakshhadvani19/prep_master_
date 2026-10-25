@@ -363,6 +363,9 @@ export default function TestRoomPage() {
                 const admission = await callRoomApi({ action: 'join', code: roomCode });
                 if (cancelled) return;
                 setAttemptId(admission.attemptId);
+                if (Array.isArray(admission.questions)) {
+                    setCanonicalQuestions(buildCanonicalRoomQuestions(admission.questions));
+                }
                 const participantPresence = {
                     role: 'participant',
                     roomCode: normalizedCode(roomCode),
