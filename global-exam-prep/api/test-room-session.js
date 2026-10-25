@@ -36,7 +36,7 @@ function parseJson(value) {
     if (typeof value === 'object') return value;
     try { return JSON.parse(value); } catch { return null; }
 }
-function normalizeCode(value) {
+export function normalizeCode(value) {
     const code = String(value ?? '').trim().toUpperCase().replace(/[\s-]/g, '');
     return new RegExp('^[' + CODE_ALPHABET + ']{10}$').test(code) ? code : null;
 }
@@ -51,7 +51,7 @@ function displayName(user) {
     const metadata = user?.user_metadata || {};
     return String(metadata.full_name || metadata.name || user?.email?.split('@')[0] || 'Student').trim().slice(0, 80) || 'Student';
 }
-function cleanQuestions(input) {
+export function cleanQuestions(input) {
     if (!Array.isArray(input) || input.length !== 30) throw new Error('A Test Room must contain exactly 30 MCQs.');
     return input.map((q, index) => {
         const options = Array.isArray(q?.options) ? q.options : [];
@@ -69,16 +69,16 @@ function cleanQuestions(input) {
         return { id: String(q.id || ('room_q' + index)).slice(0, 120), canonicalIndex: index, text: String(q.text).trim().slice(0, 4000), options: normalized, answer };
     });
 }
-function safeQuestions(questions) {
+export function safeQuestions(questions) {
     return questions.map(({ id, canonicalIndex, text, options }) => ({
         id, canonicalIndex, text, options: options.map((option) => ({ text: option.text, originalOptionIndex: option.originalOptionIndex })),
     }));
 }
-function normalizeAnswers(input, count = 30) {
+export function normalizeAnswers(input, count = 30) {
     const source = Array.isArray(input) ? input : [];
     return Array.from({ length: count }, (_, index) => Number.isInteger(source[index]) && source[index] >= 0 && source[index] <= 3 ? source[index] : null);
 }
-function scoreAnswers(key, input) {
+export function scoreAnswers(key, input) {
     const answers = normalizeAnswers(input, key.length);
     let correct = 0, attempted = 0;
     answers.forEach((answer, index) => {
