@@ -6,6 +6,7 @@ const MIGRATIONS = [
     '20261025095212_add_persistent_exam_attempts_and_grades.sql',
     '20261025095445_unique_test_room_attempt_per_student.sql',
     '20261025095507_keep_test_room_answer_keys_server_only.sql',
+    '20261025104251_add_test_room_answer_revision.sql',
 ].map((filename) => readFileSync(
     `${globalThis.process.cwd()}/supabase/migrations/${filename}`,
     'utf8',
@@ -109,4 +110,37 @@ describe('Test Room persistence migration', () => {
             values ('${USER_A}', 'Room A again', 'test_room', 'UNIQUE1111')
         `)).rejects.toThrow(/unique|duplicate/i);
     });
+    
+    it('prevents an out-of-order answer save from overwriting a newer durable snapshot', async () => {
+        const inserted = await db.query(`
+            insert into public.exam_attempts
+                (user_id, subject_name, questions, answers, attempt_type, status, room_code, answer_revision)
+            values
+                ('${USER_A}', 'Revision test', '[]'::jsonb, '[null,null]'::jsonb, 'test_room', 'in_progress', 'REVISION1111', 0)
+            returning id
+        `);
+        const id = inserted.rows[0].id;
+
+        // A newer request commits first.
+        await db.query(`
+            update public.exam_attempts
+            set answers = '[2,3]'::jsonb, answer_revision = 2
+            where id = '${id}' and status = 'in_progress' and answer_revision < 2
+        `);
+        // A delayed older request is guarded by the same compare-and-set rule
+        // used by the API and must not roll back the accepted selection.
+        await db.query(`
+            update public.exam_attempts
+            set answers = '[1,null]'::jsonb, answer_revision = 1
+            where id = '${id}' and status = 'in_progress' and answer_revision < 1
+        `);
+
+        const saved = await db.query(
+            'select answers, answer_revision from public.exam_attempts where id = $1',
+            [id],
+        );
+        expect(saved.rows[0].answer_revision).toBe(2);
+        expect(saved.rows[0].answers).toEqual([2, 3]);
+    });
+
 });
