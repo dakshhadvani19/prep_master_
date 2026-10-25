@@ -118,9 +118,9 @@ async function inspectActiveRoom(client, code) {
                             : 30,
                         status: host.status,
                         serverNow: Number.isFinite(Number(host.serverNow)) ? Number(host.serverNow) : Date.now(),
-                        startedAt: Number.isFinite(Number(host.startedAt))
-                            ? Number(host.startedAt)
-                            : null,
+                        startedAt: host.startedAt == null || !Number.isFinite(Number(host.startedAt))
+                            ? null
+                            : Number(host.startedAt),
                         questionCount: Number.isInteger(host.questionCount)
                             ? Math.min(30, Math.max(1, host.questionCount))
                             : 30,
@@ -204,10 +204,6 @@ export default async function handler(req, res) {
             error: 'No active room was found for that code. Check it and try again.',
         });
     }
-    if (inspected.room.hostUid === user.id && inspected.room.status === 'waiting') {
-        // Host may revisit the code page. Frontend can still use the validated metadata.
-    }
-
     if (action === 'start') {
         if (inspected.room.hostUid !== user.id) {
             return res.status(403).json({ error: 'Only the room host can start this test.' });
