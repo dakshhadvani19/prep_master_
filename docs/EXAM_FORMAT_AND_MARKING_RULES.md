@@ -87,7 +87,11 @@ Every code question must specify the language/format and any relevant input, out
 3. Validate the generated output against this document and the live `TestsData` schema before saving it.
 4. Use the repository's `TestId` rules and check collisions against the live table immediately before insertion. Do not overwrite an existing TestId.
 5. Store student responses and results in `TestAttempts`; do not use browser-local storage for persistent attempt selection or history.
-6. For TestRooms, accept MCQ tests only, with the agreed native 2D answer grid aligned to participant order and question order.
+6. Test Rooms are available **only for MCQ exams**; theory exams must not show a Test Room option or enter its create/join flow. Room capacity is at most 50 participants total, including the host.
+7. A room uses one validated, persisted TestsData.TestId so every participant takes the same source exam. Follow the explicit TestId allocation rule in docs/primary_key_rules.md; do not make up a conflicting ID.
+8. Each participant may receive an independently shuffled question order and independently shuffled options per question. Shuffling must preserve stable source-question identity and each option's original zero-based index. On answer selection, map displayed choices back to canonical saved question order and original option indexes before persisting; never store a displayed A/B/C/D index unless it equals the original index.
+9. Keep TestRooms.StudentId, the participant-statistics arrays, and the first dimension of the native Answers grid in identical participant order. Answers[participantPosition][canonicalQuestionPosition] stores the original option index 0–3, or NULL when unanswered. The current database trigger relies on this convention for scoring.
+10. The existing TestRooms table does not yet contain join-code, host, duration, room-state, or start-time fields; it has RLS enabled but no table policies, and it is not currently in the supabase_realtime publication. Do not assume direct browser CRUD/realtime works. Follow docs/TEST_ROOMS_SCHEMA_AND_IMPLEMENTATION.md before implementing room lifecycle/access.
 
 ## 7. Reference-sample policy for this repository
 
