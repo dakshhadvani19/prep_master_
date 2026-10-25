@@ -419,6 +419,16 @@ export default function TestRoomPage() {
         channel.subscribe(async (status) => {
             if (cancelled) return;
             if (status === 'SUBSCRIBED') {
+                if (!isHostFlow && connectionLostRef.current) {
+                    callRoomApi({
+                        action: 'disconnect',
+                        code: roomCode,
+                        answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                    }, { keepalive: true }).catch(() => {});
+                    setError('This started attempt was disconnected and cannot be rejoined. Your saved result is available on the dashboard.');
+                    setView('error');
+                    return;
+                }
                 if (isHostFlow) {
                     const hostPresence = roomMetaRef.current;
                     if (!hostPresence) {
@@ -447,7 +457,17 @@ export default function TestRoomPage() {
                     }, 6000);
                 }
             } else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
-                setError('The live room connection failed. Check your connection and retry.');
+                if (roomMetaRef.current?.status === 'started' && !submittedRef.current) {
+                    connectionLostRef.current = true;
+                    callRoomApi({
+                        action: 'disconnect',
+                        code: roomCode,
+                        answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                    }, { keepalive: true }).catch(() => {});
+                    setError('The live connection was lost during the test. Rejoining is disabled; your saved attempt is available on the dashboard.');
+                } else {
+                    setError('The live room connection failed. Check your connection and retry.');
+                }
                 setView('error');
             }
         });
@@ -584,6 +604,94 @@ export default function TestRoomPage() {
 
     useEffect(() => { submitHandlerRef.current = handleSubmit; }, [handleSubmit]);
 
+    // Persist every answer change to Redis and Supabase. A monotonically increasing
+    // revision prevents slow network responses from overwriting newer selections.
+    useEffect(() => {
+        if (view !== 'attempt' || roomMeta?.status !== 'started' || !attemptId || !roomCode || submittedRef.current) return undefined;
+        const revision = ++answerRevisionRef.current;
+        const snapshot = toCanonicalAnswerArray(answers, canonicalQuestions.length || 30);
+        const timer = setTimeout(async () => {
+            try {
+                await callRoomApi({ action: 'save_answer', code: roomCode, answers: snapshot, revision });
+                setPersistenceError('');
+            } catch (err) {
+                setPersistenceError(err.message || 'Your latest answer has not synced yet.');
+            }
+        }, 220);
+        return () => clearTimeout(timer);
+    }, [answers, attemptId, canonicalQuestions.length, roomCode, roomMeta?.status, view]);
+
+    // Heartbeats let the backend detect dead connections and finalize the last
+    // server-saved answers without allowing a participant to rejoin a started test.
+    useEffect(() => {
+        if (roomMeta?.status !== 'started' || view !== 'attempt' || !attemptId || !roomCode) return undefined;
+        let cancelled = false;
+        const heartbeat = async () => {
+            try {
+                const result = await callRoomApi({ action: 'heartbeat', code: roomCode });
+                if (cancelled) return;
+                if (!result.active) {
+                    connectionLostRef.current = true;
+                    setError('Your attempt was finalized after the connection was lost. View the saved result on your dashboard.');
+                    setConnected(false);
+                    setView('error');
+                } else if (connectionLostRef.current && navigator.onLine && !disconnectingRef.current && !submittedRef.current) {
+                    disconnectingRef.current = true;
+                    await callRoomApi({
+                        action: 'disconnect',
+                        code: roomCode,
+                        answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                    }).catch(() => {});
+                    setError('Your connection was interrupted during the test. Rejoining is disabled; your saved attempt is on the dashboard.');
+                    setConnected(false);
+                    setView('error');
+                }
+            } catch (err) {
+                if (String(err.message || '').includes('no longer active') || String(err.message || '').includes('Rejoining is disabled')) {
+                    connectionLostRef.current = true;
+                    setError('This attempt is no longer active. Its saved data is available on the dashboard.');
+                    setConnected(false);
+                    setView('error');
+                }
+            }
+        };
+        const timer = setInterval(heartbeat, 10000);
+        heartbeat();
+        return () => { cancelled = true; clearInterval(timer); };
+    }, [attemptId, roomCode, roomMeta?.status, view]);
+
+    // Best-effort explicit finalization when the tab closes or the device goes offline.
+    useEffect(() => {
+        if (roomMeta?.status !== 'started' || view !== 'attempt' || submittedRef.current || !roomCode) return undefined;
+        const finalizeDisconnect = (keepalive = false) => {
+            if (disconnectingRef.current || submittedRef.current) return;
+            connectionLostRef.current = true;
+            disconnectingRef.current = true;
+            callRoomApi({
+                action: 'disconnect',
+                code: roomCode,
+                answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+            }, { keepalive }).catch(() => {}).finally(() => {
+                setError('Your connection was interrupted. You cannot rejoin this started test; your saved attempt is available on the dashboard.');
+                setConnected(false);
+                setView('error');
+            });
+        };
+        const onOffline = () => { connectionLostRef.current = true; };
+        const onOnline = () => {
+            if (connectionLostRef.current) finalizeDisconnect(false);
+        };
+        const onPageHide = () => { finalizeDisconnect(true); };
+        window.addEventListener('offline', onOffline);
+        window.addEventListener('online', onOnline);
+        window.addEventListener('pagehide', onPageHide);
+        return () => {
+            window.removeEventListener('offline', onOffline);
+            window.removeEventListener('online', onOnline);
+            window.removeEventListener('pagehide', onPageHide);
+        };
+    }, [roomCode, roomMeta?.status, view]);
+
     useEffect(() => {
         if (roomMeta?.status !== 'started' || !roomMeta.startedAt || view !== 'attempt') return undefined;
         const updateRemaining = () => {
@@ -663,7 +771,7 @@ export default function TestRoomPage() {
                         <DoorOpen size={18} /> Check Code &amp; Join
                     </button>
                     <p style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', lineHeight: 1.55, marginTop: '1rem' }}>
-                        Only currently active rooms can be joined. Closing the host's room ends its code; no room session is stored in a database table.
+                        Only rooms still waiting to start can be joined. Once the test starts, a disconnected participant cannot rejoin; saved answers and results are retained on the dashboard.
                     </p>
                 </div>
             </div>
@@ -705,6 +813,7 @@ export default function TestRoomPage() {
                     </div>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>{error || 'The live room is no longer available.'}</p>
                     <button style={roomButtonStyle('secondary')} onClick={() => navigate(-1)}><ArrowLeft size={17} /> Go back</button>
+                    {attemptId && <button style={{ ...roomButtonStyle('primary'), marginTop: '0.75rem' }} onClick={() => navigate('/dashboard')}>View saved attempt on dashboard</button>}
                 </div>
             </div>
         );
@@ -869,6 +978,7 @@ export default function TestRoomPage() {
                 <div className="glass-panel" style={{ position: 'sticky', top: 64, zIndex: 50, padding: '0.85rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
                     <div style={{ fontWeight: 700 }}>{roomMeta?.examTitle || 'Test Room'} <span style={{ display: 'block', color: 'var(--text-tertiary)', fontSize: '0.77rem', fontWeight: 500 }}>{roomMeta?.subjectName || 'MCQ exam'}</span></div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: timeLeft < 300 ? 'var(--danger)' : 'var(--accent-primary)', fontWeight: 800, fontSize: '1.2rem', fontVariantNumeric: 'tabular-nums' }}><Clock3 size={20} /> {timeLabel}</div>
+                    {persistenceError && <span role="status" style={{ color: 'var(--warning)', fontSize: '0.78rem', maxWidth: 200 }}>{persistenceError}</span>}
                     <button disabled={submissionPending || submittedRef.current} onClick={() => submitHandlerRef.current?.()} style={{ ...roomButtonStyle('success', submissionPending || submittedRef.current), width: 'auto', minWidth: 130 }}><CheckCircle2 size={17} /> Submit</button>
                 </div>
 
