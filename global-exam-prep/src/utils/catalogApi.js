@@ -13,7 +13,7 @@ import courseMapping from '../data/courseMapping.json';
 export { CATALOG_DOMAINS, getCatalogDomain };
 
 const COURSE_COLS = 'CourseId,CourseName,Sems';
-const SUBJECT_COLS = 'SubjectId,SubjectName,CourseId,Semester';
+const SUBJECT_COLS = 'SubjectId,SubjectName,CourseId,Semester,isDepartmentalSubject';
 
 const coursesByDomain = new Map();
 const coursePages = new Map();
@@ -62,6 +62,7 @@ function mapSubjectRow(row, expectedCourseId) {
         subjectName: row.SubjectName,
         courseId,
         sem: Number(row.Semester),
+        isDepartmentalSubject: row.isDepartmentalSubject === true || row.isDepartmentalSubject === 'true',
     };
 }
 
