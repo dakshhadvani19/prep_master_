@@ -57,6 +57,24 @@ export function roomJoinError(status) {
     return 'This room has already ended.';
 }
 
+export function hostResumeError(room, participant, attempt, userId) {
+    if (!room) return 'No active Test Room was found for that code. Check the code and try again.';
+    if (String(room.hostUid || '') !== String(userId || '')) {
+        return 'Only the account that created this Test Room can restore the host session.';
+    }
+    if (room.status === 'started') {
+        return 'This Test Room has already started. Reopening the host session is disabled.';
+    }
+    if (room.status !== 'waiting') return 'This Test Room has already ended and is no longer available.';
+    if (!participant || participant.role !== 'host' || participant.status === 'disconnected') {
+        return 'This host session is no longer active. Create a new Test Room.';
+    }
+    if (!attempt || attempt.status !== 'waiting') {
+        return 'The saved host attempt is no longer active. Create a new Test Room.';
+    }
+    return null;
+}
+
 export function normalizeCode(value) {
     const code = String(value ?? '').trim().toUpperCase().replace(/[\s-]/g, '');
     return new RegExp('^[' + CODE_ALPHABET + ']{10}$').test(code) ? code : null;
@@ -580,6 +598,51 @@ export default async function handler(req, res) {
         const code = normalizeCode(body.code);
         if (!code) return fail(res, 400, 'Enter a valid 10-character room code.');
         const room = await getRoom(code);
+
+        if (action === 'host_resume') {
+            if (!room) return fail(res, 404, 'No active Test Room was found for that code. Check the code and try again.');
+            if (String(room.hostUid || '') !== String(user.id)) {
+                return fail(res, 403, 'Only the account that created this Test Room can restore the host session.');
+            }
+
+            const participant = await getParticipant(code, user.id);
+            const attempt = await getAttempt(admin, code, user.id);
+            const resumeError = hostResumeError(room, participant, attempt, user.id);
+            if (resumeError) return fail(res, 409, resumeError);
+
+            // The original generated question set remains in the host's route state.
+            // Resume returns only active host metadata and the host's own attempt id;
+            // it never returns questions or the private answer key.
+            const serverNow = Date.now();
+            const hostPresence = {
+                role: 'host',
+                roomCode: room.roomCode,
+                userId: user.id,
+                hostUid: user.id,
+                hostName: room.hostName || displayName(user),
+                displayName: participant.displayName || room.hostName || displayName(user),
+                joinedAt: participant.joinedAt || room.createdAt,
+                connected: true,
+                status: room.status,
+                subjectCode: room.subjectCode || '',
+                subjectName: room.subjectName || 'MCQ Exam',
+                examTitle: room.examTitle || 'MCQ Exam',
+                difficulty: room.difficulty || 'medium',
+                durationMinutes: room.durationMinutes || 45,
+                startedAt: room.startedAt || null,
+                deadlineAt: room.deadlineAt || null,
+                questionCount: room.questionCount || 30,
+                participantLimit: room.participantLimit || MAX_PARTICIPANTS,
+                createdAt: room.createdAt,
+                serverNow,
+            };
+            return res.status(200).json({
+                resumed: true,
+                room: hostPresence,
+                attemptId: participant.attemptId || attempt.id,
+                serverNow,
+            });
+        }
 
         if (action === 'verify') {
             if (!room) return fail(res, 404, 'No active room was found for that code.');

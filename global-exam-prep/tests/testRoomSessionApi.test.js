@@ -3,6 +3,7 @@ import {
     cleanQuestions,
     normalizeAnswers,
     normalizeCode,
+    hostResumeError,
     resolveFinalization,
     roomJoinError,
     shouldFinalizeStaleHeartbeat,
@@ -60,6 +61,23 @@ describe('Test Room join lifecycle policy', () => {
         expect(normalizeCode('  ABCDE-FGHJK ')).toBe('ABCDEFGHJK');
         expect(normalizeCode('INVALID-ROOM')).toBeNull();
         expect(normalizeCode('')).toBeNull();
+    });
+});
+
+describe('Test Room host recovery policy', () => {
+    const room = { roomCode: 'ABCDEFGHJK', hostUid: 'host-1', status: 'waiting' };
+    const participant = { userId: 'host-1', role: 'host', status: 'waiting', attemptId: 'attempt-1' };
+    const attempt = { id: 'attempt-1', status: 'waiting' };
+
+    it('allows recovery only for the owning host with an active waiting attempt', () => {
+        expect(hostResumeError(room, participant, attempt, 'host-1')).toBeNull();
+    });
+
+    it('rejects non-hosts, started rooms, and stale host attempts', () => {
+        expect(hostResumeError(room, participant, attempt, 'other-user')).toMatch(/account that created/i);
+        expect(hostResumeError({ ...room, status: 'started' }, participant, attempt, 'host-1')).toMatch(/already started/i);
+        expect(hostResumeError(room, { ...participant, status: 'disconnected' }, attempt, 'host-1')).toMatch(/no longer active/i);
+        expect(hostResumeError(room, participant, { ...attempt, status: 'cancelled' }, 'host-1')).toMatch(/attempt is no longer active/i);
     });
 });
 

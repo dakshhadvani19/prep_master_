@@ -35,7 +35,7 @@ vi.mock('../src/pages/FeedbackPage', () => ({ default: () => <div>FEEDBACK</div>
 vi.mock('../src/pages/UserGuide', () => ({ default: () => <div>GUIDE</div> }));
 vi.mock('../src/pages/SubjectDetails', () => ({ default: () => <div>SUBJECTS</div> }));
 
-const { state, resetSupabaseStub } = await import('./supabaseMock.js');
+const { state, resetSupabaseStub, client } = await import('./supabaseMock.js');
 const App = (await import('../src/App.jsx')).default;
 
 /**
@@ -98,6 +98,104 @@ describe('homepage', () => {
     expect(screen.getByLabelText(/Room code/i)).toBeTruthy();
     expect(screen.queryByRole('heading', { name: /Sign in to use Test Rooms/i })).toBeNull();
     expect(screen.queryByText('404')).toBeNull();
+  }, 20000);
+
+  it('restores the creator on the room-code route after a component remount', async () => {
+    const originalFetch = globalThis.fetch;
+    const originalChannel = client.channel;
+    const originalRemoveChannel = client.removeChannel;
+    const roomCode = 'ABCDEFGHJK';
+    const questions = Array.from({ length: 30 }, (_, index) => ({
+      id: 'q' + index,
+      text: 'Question ' + (index + 1),
+      options: ['A', 'B', 'C', 'D'],
+      answer: 0,
+    }));
+    state.session = {
+      user: {
+        id: 'host-u1',
+        email: 'host@example.com',
+        user_metadata: { full_name: 'Test Host' },
+        app_metadata: {},
+        identities: [{ provider: 'email' }],
+      },
+      access_token: 'host-token',
+    };
+    state.profile = {
+      student_id: 77,
+      auth_uid: 'host-u1',
+      full_name: 'Test Host',
+      email: 'host@example.com',
+      is_spam: false,
+      role: 'student',
+      created_at: '2026-01-01T00:00:00.000Z',
+    };
+    let mockChannel;
+    mockChannel = {
+      on: vi.fn(() => mockChannel),
+      subscribe: vi.fn((callback) => {
+        Promise.resolve().then(() => callback('SUBSCRIBED'));
+        return mockChannel;
+      }),
+      track: vi.fn(async () => ({ status: 'ok' })),
+      send: vi.fn(async () => ({ status: 'ok' })),
+      presenceState: vi.fn(() => ({})),
+    };
+    client.channel = vi.fn(() => mockChannel);
+    client.removeChannel = vi.fn(async () => ({ status: 'ok' }));
+    globalThis.fetch = vi.fn(async (_url, options) => {
+      const request = JSON.parse(options.body);
+      expect(request.action).toBe('host_resume');
+      expect(request.code).toBe(roomCode);
+      return {
+        ok: true,
+        status: 200,
+        json: async () => ({
+          resumed: true,
+          attemptId: 'attempt-host-1',
+          serverNow: Date.now(),
+          room: {
+            role: 'host',
+            roomCode,
+            userId: 'host-u1',
+            hostUid: 'host-u1',
+            hostName: 'Test Host',
+            displayName: 'Test Host',
+            status: 'waiting',
+            subjectName: 'Demo Subject',
+            examTitle: 'Demo MCQ',
+            difficulty: 'medium',
+            durationMinutes: 45,
+            questionCount: 30,
+            participantLimit: 50,
+            createdAt: '2026-10-26T00:00:00.000Z',
+            serverNow: Date.now(),
+          },
+        }),
+      };
+    });
+
+    try {
+      await at({
+        pathname: '/test-rooms/' + roomCode,
+        state: {
+          testRoomMode: 'create',
+          testRoomHost: true,
+          subjectName: 'Demo Subject',
+          examTitle: 'Demo MCQ',
+          difficulty: 'medium',
+          timeMinutes: 45,
+          questions,
+        },
+      });
+      expect(await screen.findByRole('heading', { name: /Your room is ready/i })).toBeTruthy();
+      expect(screen.queryByText(/The host session cannot be resumed/i)).toBeNull();
+      expect(client.channel).toHaveBeenCalledWith('test-room:' + roomCode, expect.any(Object));
+    } finally {
+      globalThis.fetch = originalFetch;
+      client.channel = originalChannel;
+      client.removeChannel = originalRemoveChannel;
+    }
   }, 20000);
 
   it('shows a clear invalid-code message for malformed input', async () => {

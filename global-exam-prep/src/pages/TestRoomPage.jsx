@@ -48,6 +48,12 @@ function uniqueParticipants(channel) {
 function safeRoomError(message, status) {
     const raw = String(message || '').toLowerCase();
 
+    if (/host session.*no longer active|saved host attempt/.test(raw)) {
+        return 'This host session is no longer active. Create a new Test Room.';
+    }
+    if (/only the account that created|only the host/.test(raw) || status === 403) {
+        return 'Only the account that created this Test Room can restore the host session.';
+    }
     if (/already started|room_started|not accepting participants/.test(raw)) {
         return 'This Test Room has already started and is no longer accepting participants.';
     }
@@ -218,10 +224,15 @@ export default function TestRoomPage() {
     const connectionLostRef = useRef(false);
     const disconnectingRef = useRef(false);
     const visibilityRevisionRef = useRef(0);
-    const hostCreatedRoomRef = useRef(false);
+    const hostCreatedRoomRef = useRef('');
+    const attemptIdRef = useRef(attemptId);
+    const joinRequestPendingRef = useRef(false);
+    const joinRetryEligibleRef = useRef(false);
+    const hostConnectionLostRef = useRef(false);
 
     useEffect(() => { canonicalQuestionsRef.current = canonicalQuestions; }, [canonicalQuestions]);
     useEffect(() => { answersRef.current = answers; }, [answers]);
+    useEffect(() => { attemptIdRef.current = attemptId; }, [attemptId]);
     useEffect(() => { roomMetaRef.current = roomMeta; }, [roomMeta]);
     useEffect(() => { participantsRef.current = participants; }, [participants]);
     useEffect(() => { latestViewRef.current = view; }, [view]);
@@ -240,17 +251,46 @@ export default function TestRoomPage() {
         setSubmissionPending(false);
     }, [canonicalQuestions]);
 
-    // The user-entered code is checked server-side against live Realtime Presence.
-    // The host's presence contains the temporary session summary; no room row is created.
+    // Route changes can remount TestRoomPage and reset refs, even when the host
+    // just created the room. A host-specific server check restores only a still-waiting
+    // room owned by this signed-in user. Joiners use the ordinary read-only preflight.
     useEffect(() => {
         if (!routeCode) return undefined;
-        if (isHostFlow) {
-            if (hostCreatedRoomRef.current) return undefined;
-            setError('The host session cannot be resumed from a room URL. Create a new room to start another session.');
-            setView('error');
-            return undefined;
-        }
         let cancelled = false;
+
+        if (isHostFlow) {
+            if (hostCreatedRoomRef.current === normalizedCode(routeCode)) return undefined;
+            (async () => {
+                setView('connecting');
+                setError('');
+                try {
+                    const response = await callRoomApi({ action: 'host_resume', code: routeCode });
+                    if (cancelled) return;
+                    if (!response?.resumed || response.room?.role !== 'host' || !response.room?.roomCode) {
+                        throw new Error('The host session could not be restored. Create a new Test Room.');
+                    }
+                    const hostPresence = response.room;
+                    const serverNow = response.serverNow ?? hostPresence.serverNow;
+                    if (Number.isFinite(Number(serverNow))) {
+                        serverClockOffsetRef.current = Number(serverNow) - Date.now();
+                    }
+                    hostCreatedRoomRef.current = normalizedCode(hostPresence.roomCode);
+                    roomMetaRef.current = hostPresence;
+                    setRoomMeta(hostPresence);
+                    setRoomCode(normalizedCode(hostPresence.roomCode));
+                    setAttemptId(response.attemptId || null);
+                    setDurationMinutes(Number(hostPresence.durationMinutes) || Number(createPayload?.timeMinutes) || 45);
+                    setVerifiedJoin(true);
+                    setPersistenceError('');
+                    setView('share');
+                } catch (err) {
+                    if (cancelled) return;
+                    setError(err.message || 'The host session could not be restored. Create a new Test Room.');
+                    setView('error');
+                }
+            })();
+            return () => { cancelled = true; };
+        }
 
         (async () => {
             setView('connecting');
@@ -290,6 +330,7 @@ export default function TestRoomPage() {
         let cancelled = false;
         const supabase = requireSupabase();
         let joinTimeout = null;
+        let channelIsSubscribed = false;
         const channel = supabase.channel('test-room:' + normalizedCode(roomCode), {
             config: {
                 presence: { key: userId },
@@ -303,6 +344,49 @@ export default function TestRoomPage() {
             event,
             payload,
         });
+
+        const requestJoin = async () => {
+            if (cancelled || !channelIsSubscribed || isHostFlow || attemptIdRef.current || joinRequestPendingRef.current) return;
+            if (joinTimeout) clearTimeout(joinTimeout);
+
+            const hostIsPresent = uniqueParticipants(channel).some((person) => (
+                person.role === 'host' && person.roomCode === normalizedCode(roomCode)
+            ));
+            setView('connecting');
+            setError('');
+            if (!hostIsPresent) {
+                joinRetryEligibleRef.current = false;
+                joinTimeout = setTimeout(() => {
+                    if (cancelled || latestViewRef.current !== 'connecting' || attemptIdRef.current) return;
+                    joinRetryEligibleRef.current = true;
+                    setError('The host is not connected yet. Keep this page open; it will retry when the host reconnects.');
+                    setView('error');
+                }, 12000);
+                return;
+            }
+
+            joinRequestPendingRef.current = true;
+            joinRetryEligibleRef.current = false;
+            try {
+                await send('join_request', {
+                    userId,
+                    displayName: String(displayName).slice(0, 80),
+                });
+            } catch {
+                joinRequestPendingRef.current = false;
+                joinRetryEligibleRef.current = true;
+                setError('The live room connection was interrupted. Retrying when the host is available.');
+                setView('error');
+                return;
+            }
+            joinTimeout = setTimeout(() => {
+                if (cancelled || latestViewRef.current !== 'connecting' || attemptIdRef.current) return;
+                joinRequestPendingRef.current = false;
+                joinRetryEligibleRef.current = true;
+                setError('The host has not responded yet. The connection will retry if the host reconnects.');
+                setView('error');
+            }, 12000);
+        };
 
         channel.on('presence', { event: 'sync' }, () => {
             const liveParticipants = uniqueParticipants(channel);
@@ -341,12 +425,24 @@ export default function TestRoomPage() {
                 person.role === 'host' && person.roomCode === normalizedCode(roomCode)
             ));
             if (host) {
+                if (hostConnectionLostRef.current) {
+                    hostConnectionLostRef.current = false;
+                    setError('');
+                }
                 if (Number.isFinite(Number(host.serverNow))) {
                     serverClockOffsetRef.current = Number(host.serverNow) - Date.now();
                 }
                 hostSeenRef.current = true;
                 roomMetaRef.current = host;
                 setRoomMeta(host);
+
+                if (!isHostFlow && !attemptIdRef.current && host.status === 'waiting'
+                    && (joinRetryEligibleRef.current || latestViewRef.current === 'connecting')) {
+                    requestJoin().catch(() => {});
+                } else if (!isHostFlow && attemptIdRef.current && host.status === 'waiting'
+                    && latestViewRef.current === 'lobby' && canonicalQuestionsRef.current.length === 0) {
+                    send('request_exam', { toUid: host.userId }).catch(() => {});
+                }
                 if (host.status === 'started' && canonicalQuestionsRef.current.length > 0) {
                     setView((previous) => (
                         previous === 'result' || previous === 'submitting' ? previous : 'attempt'
@@ -354,19 +450,26 @@ export default function TestRoomPage() {
                 }
                 if (host.status === 'finished') setView('finished');
             } else if (!isHostFlow && hostSeenRef.current) {
-                if (roomMetaRef.current?.status === 'started' && !submittedRef.current && !disconnectingRef.current) {
-                    disconnectingRef.current = true;
-                    callRoomApi({
-                        action: 'disconnect',
-                        code: roomCode,
-                        answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
-                        revision: ++answerRevisionRef.current,
-                    }, { keepalive: true }).catch(() => {});
-                    connectionLostRef.current = true;
+                if (roomMetaRef.current?.status === 'waiting') {
+                    // Presence can disappear briefly while the host's page reconnects.
+                    // Keep the lobby alive and clear this warning if the host returns.
+                    hostConnectionLostRef.current = true;
+                    setError('The host connection is temporarily interrupted. Waiting for the host to reconnect…');
+                } else {
+                    if (roomMetaRef.current?.status === 'started' && !submittedRef.current && !disconnectingRef.current) {
+                        disconnectingRef.current = true;
+                        callRoomApi({
+                            action: 'disconnect',
+                            code: roomCode,
+                            answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
+                            revision: ++answerRevisionRef.current,
+                        }, { keepalive: true }).catch(() => {});
+                        connectionLostRef.current = true;
+                    }
+                    setError('The host connection was lost. Your last saved answers and result are available on the dashboard. This started test cannot be rejoined.');
+                    setConnected(false);
+                    setView('error');
                 }
-                setError('The host connection was lost. Your last saved answers and result are available on the dashboard. This started test cannot be rejoined.');
-                setConnected(false);
-                setView('error');
             }
         });
 
@@ -420,6 +523,8 @@ export default function TestRoomPage() {
             if (isHostFlow || payload?.toUid !== userId) return;
             if (joinTimeout) clearTimeout(joinTimeout);
             if (!payload.accepted) {
+                joinRequestPendingRef.current = false;
+                joinRetryEligibleRef.current = false;
                 setError(payload.reason || 'The host could not admit you to this room.');
                 setView('error');
                 return;
@@ -428,6 +533,9 @@ export default function TestRoomPage() {
             try {
                 const admission = await callRoomApi({ action: 'join', code: roomCode });
                 if (cancelled) return;
+                joinRequestPendingRef.current = false;
+                joinRetryEligibleRef.current = false;
+                attemptIdRef.current = admission.attemptId;
                 setAttemptId(admission.attemptId);
                 if (Array.isArray(admission.questions)) {
                     setCanonicalQuestions(buildCanonicalRoomQuestions(admission.questions));
@@ -444,8 +552,10 @@ export default function TestRoomPage() {
                 setConnected(true);
                 setView('lobby');
                 await send('request_exam', { toUid: roomMetaRef.current?.hostUid });
-            } catch {
-                setError('Could not join the live room. Please try entering the code again.');
+            } catch (err) {
+                joinRequestPendingRef.current = false;
+                joinRetryEligibleRef.current = false;
+                setError(err.message || 'Could not join the live room. Please try entering the code again.');
                 setView('error');
             }
         });
@@ -488,6 +598,7 @@ export default function TestRoomPage() {
         channel.subscribe(async (status) => {
             if (cancelled) return;
             if (status === 'SUBSCRIBED') {
+                channelIsSubscribed = true;
                 if (!isHostFlow && connectionLostRef.current) {
                     callRoomApi({
                         action: 'disconnect',
@@ -516,17 +627,12 @@ export default function TestRoomPage() {
                         setView('error');
                     }
                 } else {
-                    await send('join_request', {
-                        userId,
-                        displayName: String(displayName).slice(0, 80),
-                    });
-                    joinTimeout = setTimeout(() => {
-                        if (cancelled || latestViewRef.current !== 'connecting') return;
-                        setError('The host is no longer reachable. Ask them to reopen the room and share a new code.');
-                        setView('error');
-                    }, 6000);
+                    await requestJoin();
                 }
             } else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
+                channelIsSubscribed = false;
+                joinRequestPendingRef.current = false;
+                joinRetryEligibleRef.current = roomMetaRef.current?.status === 'waiting';
                 if (roomMetaRef.current?.status === 'started' && !submittedRef.current) {
                     connectionLostRef.current = true;
                     callRoomApi({
@@ -603,8 +709,8 @@ export default function TestRoomPage() {
             setPersistenceError('');
             setView('share');
             // Keep the join code in the address bar for the host and any copied invite link.
-            // This ref distinguishes the live host flow from a fresh tab/reload of that URL.
-            hostCreatedRoomRef.current = true;
+            // Store the exact code so only this room's current instance skips server recovery.
+            hostCreatedRoomRef.current = normalizedCode(response.code);
             navigate('/test-rooms/' + normalizedCode(response.code), {
                 replace: true,
                 state: { ...location.state, testRoomHost: true },
@@ -991,6 +1097,11 @@ export default function TestRoomPage() {
                     </div>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>{error || 'The live room is no longer available.'}</p>
                     <button style={roomButtonStyle('secondary')} onClick={() => navigate(-1)}><ArrowLeft size={17} /> Go back</button>
+                    {!isHostFlow && routeCode && roomMeta?.status === 'waiting' && /host|connection/i.test(error) && (
+                        <button style={{ ...roomButtonStyle('primary'), marginTop: '0.75rem' }} onClick={() => navigate(0)}>
+                            Retry connection
+                        </button>
+                    )}
                     {attemptId && <button style={{ ...roomButtonStyle('primary'), marginTop: '0.75rem' }} onClick={() => navigate('/dashboard')}>View saved attempt on dashboard</button>}
                 </div>
             </div>
@@ -1036,7 +1147,7 @@ export default function TestRoomPage() {
                     </div>
 
                     <div style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.18)', marginBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.6 }}>
-                        The join code and room state are temporary. The host must keep this page open; leaving or disconnecting ends the live room.
+                        The join code and room state are temporary. Keep this page open while the room is live. If the host page reloads while the room is still waiting, the host can restore it from this browser session; disconnecting after the test starts finalizes the attempt.
                     </div>
 
                     {error && <p style={{ color: '#fca5a5', marginBottom: '1rem', fontSize: '0.9rem' }}>{error}</p>}
