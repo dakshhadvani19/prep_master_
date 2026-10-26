@@ -94,10 +94,10 @@ function App() {
                 <Route path="feedback" element={<FeedbackPage />} />
                 <Route path="guide" element={<UserGuide />} />
                 <Route path="courses/:courseId/subjects" element={<SubjectDetails />} />
-                <Route path="test-rooms" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
+                <Route path="test-rooms" element={<TestRoomPage />} />
                 <Route path="test-rooms/create" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
                 <Route path="test-rooms/session" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
-                <Route path="test-rooms/:roomCode" element={<ProtectedRoute><TestRoomPage /></ProtectedRoute>} />
+                <Route path="test-rooms/:roomCode" element={<TestRoomPage />} />
                 <Route
                   path="exams/:subjectId/:examType/:difficulty"
                   element={

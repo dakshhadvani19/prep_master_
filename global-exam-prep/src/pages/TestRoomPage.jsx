@@ -45,29 +45,71 @@ function uniqueParticipants(channel) {
     });
 }
 
+function safeRoomError(message, status) {
+    const raw = String(message || '').toLowerCase();
+
+    if (/already started|room_started|not accepting participants/.test(raw)) {
+        return 'This Test Room has already started and is no longer accepting participants.';
+    }
+    if (/invalid.*code|valid 10-character|enter a valid/.test(raw) || status === 400) {
+        return 'That room code is invalid. Enter the 10-character code exactly as shared.';
+    }
+    if (/no active room|room not found|room expired|not available/.test(raw) || status === 404) {
+        return 'No active Test Room was found for that code. Check the code and try again.';
+    }
+    if (/room.*full|participant limit/.test(raw)) {
+        return 'This Test Room is full and cannot accept more participants.';
+    }
+    if (/already disconnected|cannot rejoin|rejoining is disabled|attempt is no longer active/.test(raw)) {
+        return 'This attempt is no longer active. Rejoining a started test is disabled.';
+    }
+    if (status === 401 || /sign in|session.*invalid/.test(raw)) {
+        return 'Sign in to join this Test Room.';
+    }
+    if (status >= 500 || /redis|upstash|database|postgres|supabase|websocket|socket|fetch failed|credentials|service unavailable/i.test(raw)) {
+        return 'Test Rooms are temporarily unavailable. Please try again shortly.';
+    }
+    if (status === 409) {
+        return 'This Test Room is no longer accepting participants. It may have started or ended.';
+    }
+    return 'We could not complete this Test Room request. Double-check the code and try again.';
+}
+
 async function callRoomApi(payload, options = {}) {
     const supabase = requireSupabase();
-    const { data, error } = await supabase.auth.getSession();
-    const accessToken = data?.session?.access_token;
-    if (error || !accessToken) throw new Error('Sign in again before using Test Rooms.');
+    let session = null;
+    try {
+        session = await supabase.auth.getSession();
+    } catch {
+        if (!options.allowAnonymous) throw new Error('Sign in to join this Test Room.');
+    }
+    const accessToken = session?.data?.session?.access_token;
+    if (!accessToken && !options.allowAnonymous) {
+        throw new Error('Sign in to join this Test Room.');
+    }
 
-    const response = await fetch('/api/test-room-session', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: 'Bearer ' + accessToken,
-        },
-        body: JSON.stringify(payload),
-        keepalive: Boolean(options.keepalive),
-    });
+    const headers = { 'Content-Type': 'application/json' };
+    if (accessToken) headers.Authorization = 'Bearer ' + accessToken;
+
+    let response;
+    try {
+        response = await fetch('/api/test-room-session', {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(payload),
+            keepalive: Boolean(options.keepalive),
+        });
+    } catch {
+        throw new Error('Test Rooms are temporarily unavailable. Please try again shortly.');
+    }
 
     let body = null;
     try {
         body = await response.json();
     } catch {
-        throw new Error('The Test Room service returned an unreadable response.');
+        throw new Error('Test Rooms are temporarily unavailable. Please try again shortly.');
     }
-    if (!response.ok) throw new Error(body?.error || 'The Test Room request failed.');
+    if (!response.ok) throw new Error(safeRoomError(body?.error, response.status));
     return body;
 }
 
@@ -195,7 +237,7 @@ export default function TestRoomPage() {
     // The user-entered code is checked server-side against live Realtime Presence.
     // The host's presence contains the temporary session summary; no room row is created.
     useEffect(() => {
-        if (!routeCode || !userId) return undefined;
+        if (!routeCode) return undefined;
         if (isHostFlow) {
             if (hostCreatedRoomRef.current) return undefined;
             setError('The host session cannot be resumed from a room URL. Create a new room to start another session.');
@@ -208,7 +250,10 @@ export default function TestRoomPage() {
             setView('connecting');
             setError('');
             try {
-                const response = await callRoomApi({ action: 'verify', code: routeCode });
+                const response = await callRoomApi(
+                    { action: userId ? 'verify' : 'public_verify', code: routeCode },
+                    { allowAnonymous: !userId },
+                );
                 if (cancelled) return;
                 if (!response.valid || !response.joinable || !response.room) {
                     throw new Error(response.error || 'This room is not accepting participants.');
@@ -219,7 +264,8 @@ export default function TestRoomPage() {
                 roomMetaRef.current = response.room;
                 setRoomMeta(response.room);
                 setRoomCode(response.room.roomCode || normalizedCode(routeCode));
-                setVerifiedJoin(true);
+                setVerifiedJoin(Boolean(userId));
+                if (!userId) setView('auth-required');
             } catch (err) {
                 if (cancelled) return;
                 setError(err.message || 'Could not verify this room.');
@@ -824,7 +870,7 @@ export default function TestRoomPage() {
         return String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
     }, [timeLeft]);
 
-    if (!userId) {
+    if (!userId && !routeCode && view !== 'join') {
         return (
             <div className="container" style={{ maxWidth: 680, marginTop: '3rem' }}>
                 <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
@@ -886,6 +932,32 @@ export default function TestRoomPage() {
                     <h2 style={{ marginBottom: '0.75rem' }}>Room setup expired</h2>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>The generated exam and room setup are held temporarily in this browser session. Return to the subject page and create the room again.</p>
                     <button style={roomButtonStyle()} onClick={() => navigate(-1)}>Return to exam setup</button>
+                </div>
+            </div>
+        );
+    }
+
+    if (!userId && routeCode && view === 'auth-required') {
+        return (
+            <div className="container animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
+                <div className="glass-panel" style={{ padding: 'clamp(1.5rem,4vw,2.5rem)', textAlign: 'center' }}>
+                    <div style={{ width: 62, height: 62, borderRadius: 19, background: 'rgba(16,185,129,0.12)', color: 'var(--success)', display: 'grid', placeItems: 'center', margin: '0 auto 1rem' }}>
+                        <CheckCircle2 size={30} />
+                    </div>
+                    <h1 style={{ fontSize: '1.8rem', marginBottom: '0.65rem' }}>Room is ready to join</h1>
+                    <p style={{ color: 'var(--text-secondary)', lineHeight: 1.65, marginBottom: '1.25rem' }}>
+                        {roomMeta?.subjectName || 'This Test Room'} is still waiting for the host to start. Sign in to join and save your answers and result.
+                    </p>
+                    <div style={{ border: '1px solid var(--border-color)', borderRadius: 'var(--radius-lg)', background: 'var(--bg-tertiary)', padding: '1rem', margin: '0 auto 1.25rem', maxWidth: 360 }}>
+                        <div style={{ color: 'var(--text-tertiary)', fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Room code</div>
+                        <div style={{ fontWeight: 800, fontSize: '1.45rem', letterSpacing: '0.12em', marginTop: '0.35rem' }}>{formattedCode(roomCode || routeCode)}</div>
+                    </div>
+                    <button style={{ ...roomButtonStyle('primary'), maxWidth: 320, margin: '0 auto' }} onClick={() => navigate('/signup?mode=login', { state: { from: location } })}>
+                        <LockKeyhole size={17} /> Sign in to join
+                    </button>
+                    <button style={{ ...roomButtonStyle('secondary'), maxWidth: 320, margin: '0.7rem auto 0' }} onClick={() => navigate('/test-rooms')}>
+                        <ArrowLeft size={17} /> Try another code
+                    </button>
                 </div>
             </div>
         );

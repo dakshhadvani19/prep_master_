@@ -385,12 +385,49 @@ function fail(res, status, error) { return res.status(status).json({ error }); }
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') { res.setHeader('Allow', 'POST'); return fail(res, 405, 'Method not allowed.'); }
-    let admin, user;
-    try { admin = adminClient(); user = await authenticate(req, admin); }
-    catch (error) { return fail(res, 503, error.message || 'Test Room services are unavailable.'); }
-    if (!user) return fail(res, 401, 'Sign in again before using Test Rooms.');
     const body = req.body && typeof req.body === 'object' ? req.body : {};
     const action = String(body.action || '');
+
+    // This unauthenticated action only reveals whether a high-entropy code is
+    // valid and waiting. Joining, Realtime presence, and attempts still require auth.
+    if (action === 'public_verify') {
+        const code = normalizeCode(body.code);
+        if (!code) return fail(res, 400, 'That room code is invalid. Enter the 10-character code shared by the host.');
+        try {
+            const room = await getRoom(code);
+            if (!room) return fail(res, 404, 'No active Test Room was found for that code. Check the code and try again.');
+            const joinError = roomJoinError(room.status);
+            if (joinError) return res.status(409).json({ valid: false, joinable: false, error: joinError });
+            return res.status(200).json({
+                valid: true,
+                joinable: true,
+                serverNow: Date.now(),
+                room: {
+                    roomCode: room.roomCode,
+                    subjectName: room.subjectName,
+                    examTitle: room.examTitle,
+                    difficulty: room.difficulty,
+                    durationMinutes: room.durationMinutes,
+                    status: room.status,
+                    startedAt: room.startedAt,
+                    serverNow: Date.now(),
+                    questionCount: room.questionCount,
+                    participantLimit: room.participantLimit,
+                },
+            });
+        } catch (error) {
+            console.error('[test-room-session] public room verification failed:', error?.message || error);
+            return fail(res, 503, 'Test Rooms are temporarily unavailable. Please try again shortly.');
+        }
+    }
+
+    let admin, user;
+    try { admin = adminClient(); user = await authenticate(req, admin); }
+    catch (error) {
+        console.error('[test-room-session] authentication service failed:', error?.message || error);
+        return fail(res, 503, 'Test Rooms are temporarily unavailable. Please try again shortly.');
+    }
+    if (!user) return fail(res, 401, 'Sign in to join this Test Room.');
     try {
         if (action === 'create') {
             const questions = cleanQuestions(body.questions);
@@ -832,7 +869,14 @@ export default async function handler(req, res) {
         return fail(res, 400, 'Unknown Test Room action.');
     } catch (error) {
         const message = String(error?.message || 'Test Room operation failed.');
-        const unavailable = /redis|upstash|fetch failed|credentials|supabase server/i.test(message);
-        return fail(res, unavailable ? 503 : 500, message);
+        const unavailable = /redis|upstash|fetch failed|credentials|supabase|database|postgres/i.test(message);
+        console.error('[test-room-session] request failed:', { action, message });
+        return fail(
+            res,
+            unavailable ? 503 : 500,
+            unavailable
+                ? 'Test Rooms are temporarily unavailable. Please try again shortly.'
+                : 'We could not complete this Test Room request. Please try again.',
+        );
     }
 }

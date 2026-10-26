@@ -55,6 +55,12 @@ describe('Test Room join lifecycle policy', () => {
         expect(roomJoinError('started')).toMatch(/already started.*rejoining is disabled/i);
         expect(roomJoinError('finished')).toMatch(/already ended/i);
     });
+
+    it('normalizes the public code-entry validation for valid and invalid codes', () => {
+        expect(normalizeCode('  ABCDE-FGHJK ')).toBe('ABCDEFGHJK');
+        expect(normalizeCode('INVALID-ROOM')).toBeNull();
+        expect(normalizeCode('')).toBeNull();
+    });
 });
 
 describe('Test Room background-tab heartbeat behavior', () => {

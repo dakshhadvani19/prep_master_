@@ -128,8 +128,8 @@ export default function LandingPage() {
                         <button className="btn-primary" onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}>
                             Explore Programs <Icons.ChevronDown size={20} />
                         </button>
-                        <button className="btn-secondary" onClick={() => navigate('/signup?mode=signup')}>
-                            Create Free Account
+                        <button className="btn-secondary" onClick={() => navigate('/test-rooms')}>
+                            Join Test Room
                         </button>
                         {/* <button className="btn-google-cta" onClick={() => navigate('/signup?mode=signup&method=google')}>
                             <svg width="18" height="18" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>

@@ -90,16 +90,14 @@ describe('homepage', () => {
     expect(container.querySelector('a[href="/signup?mode=signup"]')).toBeTruthy();
   }, 20000);
 
-  it('"Create Free Account" opens the sign-up tab of the auth screen', async () => {
+  it('"Join Test Room" opens the join-code screen without forcing subject selection or sign-in first', async () => {
     await at('/');
-    const cta = await screen.findByRole('button', { name: /Create Free Account/i });
+    const cta = await screen.findByRole('button', { name: /Join Test Room/i });
     fireEvent.click(cta);
-    await waitFor(() => expect(activeTab()).toBe('Create account'));
-    // that tab opens on the method picker (SRS flow); the details form is one more
-    // click in, so assert the picker, not a form that is not there yet
-    expect(screen.getByRole('button', { name: /Continue with Email/i })).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: /Continue with Email/i }));
-    await waitFor(() => expect(document.querySelector('.auth-form input')).toBeTruthy());
+    expect(await screen.findByRole('heading', { name: /Join a Test Room/i })).toBeTruthy();
+    expect(screen.getByLabelText(/Room code/i)).toBeTruthy();
+    expect(screen.queryByRole('heading', { name: /Sign in to use Test Rooms/i })).toBeNull();
+    expect(screen.queryByText('404')).toBeNull();
   }, 20000);
 
   it('the landing-page Google CTA is intentionally absent; Google remains on /signup', async () => {
