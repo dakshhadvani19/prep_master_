@@ -1,6 +1,6 @@
 # Test Rooms: Live Schema and Feature Contract
 
-**Last verified:** 2026-10-25  
+**Last verified:** 2026-10-26  
 **Supabase project:** prepmaster (llqwtgwjlwgrftihtern)  
 **Status as of 2026-10-25:** Redis-backed Test Room API, durable attempts, dashboard/review integration, and monotonic answer-revision persistence are implemented. The `answer_revision` migration has been applied to Supabase. Latest Vercel deployment and automated test execution still require final verification. Active room state is temporary in Redis; each participant's questions, accepted answers, and result are durable in Supabase.
 
@@ -11,6 +11,8 @@ This document separates the live database contract from the requested applicatio
 - Test Rooms are available only for MCQ exams. Theory exam types must not show a Test Room action or enter the Test Room flow.
 - Maximum room size is 50 participants total, including the host.
 - A room has a generated join code. There is no public/private room selector.
+- Room URLs use `/test-rooms/:roomCode`. After room creation, the host is routed to the code URL; entering a code also routes joiners to that URL, and the host can copy a direct invite link.
+- Switching to another browser tab is allowed and does not finalize an attempt. When a started exam tab closes or navigates away, the client sends a best-effort disconnect; server heartbeats/reconciliation finalize the attempt if that event is missed. Started rooms reject all new joins, and a disconnected/submitted participant cannot rejoin.
 - The normal exam setup still determines department/course/subject/exam type/difficulty and whether questions come from AI generation or a user-uploaded PDF.
 - For a room exam, the host's generated paper is validated by `api/test-room-session.js`. Store active room metadata, join code, timer deadline, live participants, and accepted answer snapshots in Redis with a 72-hour TTL. Persist each participant's student-safe question snapshot, accepted answers, status, and final score in `public.exam_attempts`. Store the correct-answer key only in the server-only `public.exam_attempt_keys` table. Do not write the active room registry to the legacy `public."TestRooms"` or `public."TestsData"` tables.
 - The exam-choice UI should offer Start Exam and Test Room for eligible MCQ exams. Test Room opens a Create/Join choice; it should not immediately send the user into a room.
@@ -77,8 +79,8 @@ Supabase references for the transient transport:
 1. The normal subject configuration screen shows Test Room only for MCQ exams. Theory exams keep the normal exam flow.
 2. Test Room opens a Create Test Room / Join Test Room choice. It does not immediately navigate to a room.
 3. The create path reuses the selected subject, MCQ exam type, difficulty and Auto AI vs file-upload mode. After generation, validate the 30 four-option questions and answer indexes. Pass the question set to the temporary create page through React Router state; do not save the new room paper to database tables.
-4. The backend reserves a random code in Redis and creates the host's durable attempt. The UI publishes minimal live roster state through Realtime Presence. The share page displays the code with copy support and an Enter Test Room action.
-5. Join path asks for the code. `api/test-room-session.js` verifies the signed-in user's token and checks Redis for a waiting room. Redis—not Presence—is the room registry.
+4. The backend reserves a random code in Redis and creates the host's durable attempt. The host route becomes `/test-rooms/:roomCode`, so the join code stays visible in the address bar. The share page supports copying both the code and direct invite URL.
+5. Join path accepts a code or direct invite URL. Entering a code navigates to `/test-rooms/:roomCode`; `api/test-room-session.js` verifies the signed-in user's token and checks Redis for a waiting room. Redis—not Presence—is the room registry. Once started, the URL remains visible but server verification and join actions reject new participants.
 6. The joiner requests host admission through Realtime, then the backend atomically validates the waiting state and reserves a slot in Redis. It rejects duplicate/closed attempts and writes the student's `exam_attempts` row before returning a safe question copy.
 7. The waiting lobby renders a subtle animated live roster and labels the creator **Host**. Only the host sees the Start Test Room action.
 8. Starting calls the backend API. It validates the host, atomically marks the Redis room started, stores a server timestamp/deadline, and advances waiting attempt rows to `in_progress`. All clients derive the visible countdown from the shared deadline.
