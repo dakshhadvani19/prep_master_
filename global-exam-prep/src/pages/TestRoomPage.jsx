@@ -57,6 +57,9 @@ function safeRoomError(message, status) {
     if (/no active room|room not found|room expired|not available/.test(raw) || status === 404) {
         return 'No active Test Room was found for that code. Check the code and try again.';
     }
+    if (/already ended|room has ended/.test(raw)) {
+        return 'This Test Room has already ended and is no longer available.';
+    }
     if (/room.*full|participant limit/.test(raw)) {
         return 'This Test Room is full and cannot accept more participants.';
     }
@@ -76,14 +79,17 @@ function safeRoomError(message, status) {
 }
 
 async function callRoomApi(payload, options = {}) {
-    const supabase = requireSupabase();
-    let session = null;
+    let accessToken = null;
     try {
-        session = await supabase.auth.getSession();
+        const supabase = requireSupabase();
+        const session = await supabase.auth.getSession();
+        accessToken = session?.data?.session?.access_token || null;
+        if (session?.error && !options.allowAnonymous) {
+            throw new Error('Sign in to join this Test Room.');
+        }
     } catch {
         if (!options.allowAnonymous) throw new Error('Sign in to join this Test Room.');
     }
-    const accessToken = session?.data?.session?.access_token;
     if (!accessToken && !options.allowAnonymous) {
         throw new Error('Sign in to join this Test Room.');
     }
