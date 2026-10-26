@@ -45,6 +45,12 @@ export function resolveFinalization(action, deadlineAt, now = Date.now()) {
     return { status: 'disconnected', reason: 'connection_lost' };
 }
 
+export function shouldFinalizeStaleHeartbeat(participant, now = Date.now()) {
+    return participant?.tabHidden !== true
+        && Number(participant?.lastHeartbeat || 0) > 0
+        && now - Number(participant.lastHeartbeat) > STALE_AFTER_MS;
+}
+
 export function roomJoinError(status) {
     if (status === 'waiting') return null;
     if (status === 'started') return 'This room has already started. Rejoining is disabled.';
@@ -370,7 +376,7 @@ async function reconcileRoom(admin, code, skipUid = '') {
         if (!['waiting', 'connected'].includes(p.status) || room.status !== 'started') continue;
         if (Number(room.deadlineAt) > 0 && now >= Number(room.deadlineAt)) {
             await finalizeAttempt(admin, { code, uid, status: 'timed_out', reason: 'timer_expired' }).catch(() => {});
-        } else if (Number(p.lastHeartbeat || 0) > 0 && now - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
+        } else if (shouldFinalizeStaleHeartbeat(p, now)) {
             await finalizeAttempt(admin, { code, uid, status: 'disconnected', reason: 'heartbeat_lost' }).catch(() => {});
         }
     }
@@ -466,8 +472,8 @@ export default async function handler(req, res) {
                     if (refreshed?.status === 'in_progress' && (
                         ['disconnected', 'submitted'].includes(p?.status)
                         || !p
-                        || !Number(p.lastHeartbeat)
-                        || Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS
+                        || (p?.tabHidden !== true && !Number(p?.lastHeartbeat))
+                        || shouldFinalizeStaleHeartbeat(p)
                     )) {
                         const timedOut = Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt);
                         await finalizeAttempt(admin, { code: attempt.room_code, uid: user.id, status: p?.finalStatus || (timedOut ? 'timed_out' : p?.status === 'submitted' ? 'submitted' : 'disconnected'), reason: p?.endReason || (timedOut ? 'timer_expired' : 'connection_lost') }).catch(() => {});
@@ -688,6 +694,39 @@ export default async function handler(req, res) {
             return res.status(200).json({ startedAt: Number(startedRoom.startedAt), serverNow: Date.now(), deadlineAt: Number(startedRoom.deadlineAt), room: startedRoom });
         }
 
+        if (action === 'visibility') {
+            if (room.status !== 'started') return fail(res, 409, 'The test is not active.');
+            const p = await getParticipant(code, user.id);
+            if (!p || p.status === 'disconnected' || p.status === 'submitted') {
+                return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
+            }
+            const now = Date.now();
+            if (Number(room.deadlineAt) > 0 && now >= Number(room.deadlineAt)) {
+                return res.status(200).json({
+                    active: false,
+                    ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired' }),
+                });
+            }
+            const isVisible = body.isVisible !== false;
+            const script = [
+                "local raw = redis.call('GET', KEYS[1])",
+                "if not raw then return 'ERR:PARTICIPANT_NOT_FOUND' end",
+                "local p = cjson.decode(raw)",
+                "if p.status == 'disconnected' or p.status == 'submitted' then return 'ERR:ATTEMPT_CLOSED' end",
+                "p.tabHidden = ARGV[1] == 'false'",
+                "if p.tabHidden then p.tabHiddenSince = p.tabHiddenSince or tonumber(ARGV[2]) else p.tabHiddenSince = nil end",
+                "p.lastHeartbeat = tonumber(ARGV[2]); p.lastVisibilityChange = tonumber(ARGV[2]); p.connected = true",
+                "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[3])",
+                "return cjson.encode(p)"
+            ].join('\\n');
+            const updated = String(await redis(
+                'EVAL', script, 1, keys(code, user.id).participant,
+                isVisible ? 'true' : 'false', now, ROOM_TTL_SECONDS,
+            ));
+            if (updated.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
+            return res.status(200).json({ active: true, isVisible, serverNow: now, deadlineAt: room.deadlineAt });
+        }
+
         if (action === 'heartbeat') {
             await reconcileRoom(admin, code, user.id);
             const p = await getParticipant(code, user.id);
@@ -695,7 +734,7 @@ export default async function handler(req, res) {
             if (room.status === 'started' && Number(room.deadlineAt) > 0 && Date.now() >= Number(room.deadlineAt)) {
                 return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers, submittedRevision: body.revision }) });
             }
-            if (room.status === 'started' && Number(p.lastHeartbeat || 0) > 0 && Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
+            if (room.status === 'started' && shouldFinalizeStaleHeartbeat(p)) {
                 const final = await finalizeAttempt(admin, {
                     code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers, submittedRevision: body.revision,
                 });
@@ -717,10 +756,12 @@ export default async function handler(req, res) {
                     "local revision = tonumber(ARGV[2])",
                     "if not participant.answerRevision or revision > tonumber(participant.answerRevision) then participant.answers = cjson.decode(ARGV[1]); participant.answerRevision = revision end",
                     "participant.lastHeartbeat = tonumber(ARGV[3]); participant.connected = true",
+                    "participant.tabHidden = ARGV[5] == 'false'",
+                    "if participant.tabHidden then participant.tabHiddenSince = participant.tabHiddenSince or tonumber(ARGV[3]) else participant.tabHiddenSince = nil end",
                     "redis.call('SET', KEYS[1], cjson.encode(participant), 'EX', ARGV[4])",
                     "return cjson.encode(participant)"
                 ].join('\n');
-                const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), ROOM_TTL_SECONDS));
+                const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), ROOM_TTL_SECONDS, body.isVisible === false ? 'false' : 'true'));
                 if (savedRaw.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active.');
                 const saved = parseJson(savedRaw);
                 await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || normalized, questions?.length || 30), Number(saved?.answerRevision ?? revision));
@@ -739,7 +780,7 @@ export default async function handler(req, res) {
             if (Date.now() >= Number(currentRoom.deadlineAt)) {
                 return res.status(200).json({ active: false, ...await finalizeAttempt(admin, { code, uid: user.id, status: 'timed_out', reason: 'timer_expired', submittedAnswers: body.answers, submittedRevision: body.revision }) });
             }
-            if (Number(p.lastHeartbeat || 0) > 0 && Date.now() - Number(p.lastHeartbeat) > STALE_AFTER_MS) {
+            if (shouldFinalizeStaleHeartbeat(p)) {
                 const final = await finalizeAttempt(admin, {
                     code, uid: user.id, status: 'disconnected', reason: 'heartbeat_lost', submittedAnswers: body.answers,
                 });
@@ -754,7 +795,7 @@ export default async function handler(req, res) {
                 "if p.status == 'disconnected' or p.status == 'submitted' then return 'ERR:ATTEMPT_CLOSED' end",
                 "local revision = tonumber(ARGV[2])",
                 "if not p.answerRevision or revision > tonumber(p.answerRevision) then p.answers = cjson.decode(ARGV[1]); p.answerRevision = revision end",
-                "p.lastHeartbeat = tonumber(ARGV[3]); p.connected = true",
+                "p.lastHeartbeat = tonumber(ARGV[3]); p.connected = true; p.tabHidden = false; p.tabHiddenSince = nil",
                 "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[4])",
                 "return cjson.encode(p)"
             ].join('\n');
