@@ -13,9 +13,11 @@ export function getExamTypesForSubject(isDepartmentalSubject) {
 }
 
 export function getSubjectExamInfo(examType, isDepartmentalSubject, prompts = examPrompts) {
+    const isDepartmental = normalizeDepartmentalFlag(isDepartmentalSubject);
+    if (isDepartmental && !DEPARTMENTAL_EXAM_TYPES.includes(examType)) return undefined;
     const base = prompts[examType];
     if (!base) return base;
-    if (normalizeDepartmentalFlag(isDepartmentalSubject) && examType === 'mid-1') {
+    if (isDepartmental && examType === 'mid-1') {
         return {
             ...base,
             title: 'Mid-Term 1 (MCQ / Objective)',
