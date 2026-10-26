@@ -45,6 +45,12 @@ export function resolveFinalization(action, deadlineAt, now = Date.now()) {
     return { status: 'disconnected', reason: 'connection_lost' };
 }
 
+export function roomJoinError(status) {
+    if (status === 'waiting') return null;
+    if (status === 'started') return 'This room has already started. Rejoining is disabled.';
+    return 'This room has already ended.';
+}
+
 export function normalizeCode(value) {
     const code = String(value ?? '').trim().toUpperCase().replace(/[\s-]/g, '');
     return new RegExp('^[' + CODE_ALPHABET + ']{10}$').test(code) ? code : null;
@@ -534,7 +540,8 @@ export default async function handler(req, res) {
 
         if (action === 'verify') {
             if (!room) return fail(res, 404, 'No active room was found for that code.');
-            if (room.status !== 'waiting') return res.status(409).json({ valid: false, joinable: false, error: 'This room has already started. Rejoining is disabled.' });
+            const joinError = roomJoinError(room.status);
+            if (joinError) return res.status(409).json({ valid: false, joinable: false, error: joinError });
             return res.status(200).json({ valid: true, joinable: true, room: {
                 roomCode: room.roomCode, hostUid: room.hostUid, hostName: room.hostName, subjectName: room.subjectName,
                 examTitle: room.examTitle, difficulty: room.difficulty, durationMinutes: room.durationMinutes,
@@ -572,7 +579,8 @@ export default async function handler(req, res) {
         }
 
         if (action === 'join') {
-            if (room.status !== 'waiting') return fail(res, 409, 'This room has already started. Rejoining is disabled.');
+            const joinError = roomJoinError(room.status);
+            if (joinError) return fail(res, 409, joinError);
             const participantKey = keys(code, user.id).participant;
             const previous = await getParticipant(code, user.id);
             if (previous?.status === 'disconnected') return fail(res, 409, 'You have already disconnected from this room and cannot rejoin it.');
