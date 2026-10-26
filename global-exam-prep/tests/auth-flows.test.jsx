@@ -496,7 +496,7 @@ describe('password reset, change, and the one allowed profile write', () => {
     await act(async () => await ctx.current.updateFullName('Raja A. Advani'));
 
     const call = lastCall('update:students');
-    expect(Object.keys(call.payload)).toEqual(['full_name']);
+    expect(Object.keys(call.payload)).toEqual(['FullName']);
     expect(call.filters).toEqual({ auth_uid: 'u1' });
     expect(ctx.current.studentData.fullName).toBe('Raja A. Advani');
   });

@@ -302,8 +302,12 @@ function ownAdminRow() {
 }
 
 export function makeBuilder(table) {
+  const normalizedTable = String(table).toLowerCase();
+  const canonicalTable = normalizedTable === 'courses' ? 'Courses'
+    : normalizedTable === 'subjects' ? 'Subjects'
+      : normalizedTable;
   const record = () => state.calls.push({
-    name: `${b._op}:${table}`, op: b._op, table,
+    name: `${b._op}:${normalizedTable}`, op: b._op, table: normalizedTable,
     cols: b._cols, payload: b._payload, filters: { ...b._filters },
   });
   const b = {
@@ -318,17 +322,17 @@ export function makeBuilder(table) {
     eq: vi.fn((k, v) => { b._filters[k] = v; return b; }),
     in: vi.fn((k, v) => { b._filters[k] = v; return b; }),
     maybeSingle: vi.fn(async () => {
-      if (state.catalogDelayMs && (table === 'Courses' || table === 'Subjects')) {
+      if (state.catalogDelayMs && (canonicalTable === 'Courses' || canonicalTable === 'Subjects')) {
         await new Promise((r) => setTimeout(r, state.catalogDelayMs));
       }
       record();
       if (b._op !== 'select') return { data: null, error: null };
-      if (table === 'Courses' || table === 'Subjects') {
+      if (canonicalTable === 'Courses' || canonicalTable === 'Subjects') {
         if (state.catalogError) return { data: null, error: state.catalogError };
-        const rows = catalogRows(table, b._filters);
+        const rows = catalogRows(canonicalTable, b._filters);
         return { data: rows[0] ?? null, error: null };
       }
-      if (table === 'admins') {
+      if (normalizedTable === 'admins') {
         return state.adminsSelfRead
           ? { data: ownAdminRow(), error: state.adminRowError ?? null }
           : { data: null, error: null };   // RLS with no self-read policy: no rows
@@ -340,12 +344,12 @@ export function makeBuilder(table) {
       const written = { ...b._payload };
       record();
       if (b._op === 'select') {
-        if (table === 'Courses' || table === 'Subjects') {
+        if (canonicalTable === 'Courses' || canonicalTable === 'Subjects') {
           if (state.catalogError) return { data: null, error: state.catalogError };
-          const rows = catalogRows(table, b._filters);
+          const rows = catalogRows(canonicalTable, b._filters);
           return { data: rows[0] ?? null, error: null };
         }
-        if (table === 'admins') return { data: state.adminsSelfRead ? ownAdminRow() : null, error: null };
+        if (normalizedTable === 'admins') return { data: state.adminsSelfRead ? ownAdminRow() : null, error: null };
         return { data: state.profile ?? null, error: state.profileError ?? null };
       }
       return { data: { ...state.profile, ...written }, error: null };
@@ -358,18 +362,18 @@ export function makeBuilder(table) {
         try {
           record();
           if (b._op === 'select') {
-            if (table === 'Courses' || table === 'Subjects') {
+            if (canonicalTable === 'Courses' || canonicalTable === 'Subjects') {
               if (state.catalogError) return resolve({ data: null, error: state.catalogError });
-              return resolve({ data: catalogRows(table, b._filters), error: null });
+              return resolve({ data: catalogRows(canonicalTable, b._filters), error: null });
             }
-            resolve(table === 'admins'
+            resolve(normalizedTable === 'admins'
               ? { data: state.adminsSelfRead ? ownAdminRow() : null, error: null }
               : { data: state.profile ?? null, error: state.profileError ?? null });
           }
           else resolve({ data: b._op === 'update' ? { ...state.profile, ...written } : null, error: null });
         } catch (e) { reject(e); }
       };
-      if (state.catalogDelayMs && (table === 'Courses' || table === 'Subjects')) {
+      if (state.catalogDelayMs && (canonicalTable === 'Courses' || canonicalTable === 'Subjects')) {
         return new Promise((r) => setTimeout(r, state.catalogDelayMs)).then(finish, reject);
       }
       return finish();
@@ -379,7 +383,7 @@ export function makeBuilder(table) {
 }
 
 function catalogRows(table, filters) {
-  const rows = table === 'Courses' ? state.catalogCourses : state.catalogSubjects;
+  const rows = canonicalTable === 'Courses' ? state.catalogCourses : state.catalogSubjects;
   const wanted = filters?.CourseId;
   if (wanted === undefined) return [...rows];
   if (Array.isArray(wanted)) {

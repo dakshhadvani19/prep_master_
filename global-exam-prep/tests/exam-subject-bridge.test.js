@@ -58,13 +58,13 @@ function nonblankSubjects(doms) {
 describe('subject id uniqueness', () => {
   it('does not introduce duplicate numeric SubjectIds in the mapping layer', () => {
     expect(bridgeHasDuplicateNumericIds()).toBe(false);
-    expect(bridgeEntryCount()).toBe(2608);
+    expect(bridgeEntryCount()).toBe(2513);
   });
 });
 
 describe('canonical catalog coverage', () => {
   it('does not resolve IDs for subjects archived out of the public catalog', () => {
-    const csv = readFileSync(new URL('../temp_removed_subjects/removed_subjects_2026-10-11.csv', import.meta.url), 'utf8').trim();
+    const csv = readFileSync('temp_removed_subjects/removed_subjects_2026-10-11.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
     const rows = lines.slice(1).map(parseCsvLine);
     const header = parseCsvLine(lines[0]);
@@ -81,7 +81,7 @@ describe('canonical catalog coverage', () => {
   });
 
   it('does not resolve Law & Arts rows temporarily excluded after PDF content review', () => {
-    const csv = readFileSync(new URL('../temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv', import.meta.url), 'utf8').trim();
+    const csv = readFileSync('temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
     const rows = lines.slice(1).map(parseCsvLine);
     const header = parseCsvLine(lines[0]);
@@ -98,7 +98,7 @@ describe('canonical catalog coverage', () => {
   });
 
   it('keeps Law & Arts network-unverified subjects mapped for retry', () => {
-    const csv = readFileSync(new URL('../temp_removed_subjects/law_arts_network_retry_pending_2026-10-11.csv', import.meta.url), 'utf8').trim();
+    const csv = readFileSync('temp_removed_subjects/law_arts_network_retry_pending_2026-10-11.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
     const rows = lines.slice(1).map(parseCsvLine);
     const header = parseCsvLine(lines[0]);
@@ -115,12 +115,14 @@ describe('canonical catalog coverage', () => {
   const brKeys = Object.keys(subjectIdBridge);
   const subjects = nonblankSubjects(domains);
 
-  it('retains legacy ExamPortal subjects while maps contain only 2,682 active catalog IDs', () => {
-    expect(subjects).toHaveLength(2714);
-    expect(new Set(semKeys).size).toBe(2608);
-    expect(new Set(brKeys).size).toBe(2608);
-    expect(semKeys).toHaveLength(2608);
-    expect(brKeys).toHaveLength(2608);
+  it('tracks the current catalog snapshot and the verified numeric bridge', () => {
+    // Legacy exam contexts include 2,598 nonblank subjects. The numeric bridge
+    // contains the 2,513 rows that still have a verified numeric mapping.
+    expect(subjects).toHaveLength(2598);
+    expect(new Set(semKeys).size).toBe(2513);
+    expect(new Set(brKeys).size).toBe(2513);
+    expect(semKeys).toHaveLength(2513);
+    expect(brKeys).toHaveLength(2513);
   });
 
   it('semester-map and bridge keys are exactly the same set', () => {

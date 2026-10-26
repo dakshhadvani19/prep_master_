@@ -94,6 +94,7 @@ import {
 // hash, store, or compare a code — that all happens behind /api/send-otp and
 // /api/verify-otp against public.auth_otp. See src/utils/otpService.js.
 import { createAndSendOTP, verifyOTP } from '../utils/otpService';
+import { clearExamHistory } from '../utils/examHistoryStorage';
 
 const AuthContext = createContext(null);
 
@@ -477,6 +478,13 @@ export function AuthProvider({ children }) {
     }, []);
 
     const logout = useCallback(async () => {
+        // Clear the signed-in user's local fallback history on logout, and remove
+        // the old shared cache key used by earlier builds.
+        const uidToClear = currentUser?.uid || supabaseUser?.id || session?.user?.id;
+        try {
+            if (uidToClear) clearExamHistory(uidToClear);
+            localStorage.removeItem('userExamHistory');
+        } catch { /* browser storage may be unavailable in private mode */ }
         try { sessionStorage.removeItem('prepmaster_google_signup_pending'); } catch { /* noop */ }
         clearOAuthAttempt();
         reportGoogle('idle', '');
@@ -495,7 +503,7 @@ export function AuthProvider({ children }) {
 
         if (!supabase) return;
         await sbLogout(supabase);
-    }, [reportGoogle]);
+    }, [reportGoogle, currentUser?.uid, supabaseUser?.id, session?.user?.id]);
 
     // ─── Google (redirect + PKCE) ────────────────────────────────────────────
     /**
