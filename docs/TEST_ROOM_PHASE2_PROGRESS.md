@@ -13,6 +13,7 @@
 - [x] Rechecked the dashboard reconcile helper: it catches reconciliation failures and returns an error object, so a failed reconciliation alone does not prevent the subsequent durable-attempt fetch. No change was needed there.
 - [x] Routed created rooms and code-based joins through `/test-rooms/:roomCode`, keeping the code in the address bar and adding a copy-invite-link action.
 - [x] Kept tab switching separate from disconnection handling: no visibility-change penalty is applied; closing/leaving a started test triggers best-effort disconnect finalization, backed by server heartbeat/reconciliation.
+- [x] Added a server-authoritative visibility signal and stale-heartbeat guard so a throttled background tab is not finalized as disconnected solely because its timer was delayed; visible participants still use the normal stale-heartbeat threshold.
 - [x] Kept the backend as the authority for room joining: only waiting rooms accept joins; verification and join actions reject started rooms, and start/join state changes retain the atomic Redis guard.
 - [x] Added an explicit host-session guard so a fresh page mount cannot resume the host from the join-code URL.
 - [x] Added a unit test for waiting/started/ended room joinability.
