@@ -38,6 +38,8 @@ jobs:
           tests/test-room-session-utils.test.js
           tests/test-room-persistence-sql.test.js
           tests/testRoomShuffle.test.js
+          tests/contextFitter.test.js
+          tests/subjectExamPolicy.test.js
 
   full-test-suite:
     name: Full Vitest suite
