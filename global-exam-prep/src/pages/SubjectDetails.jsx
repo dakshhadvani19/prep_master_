@@ -54,7 +54,6 @@ export default function SubjectDetails() {
                 title: s.subjectName,
                 sem: s.sem,
                 isDepartmentalSubject: normalizeDepartmentalFlag(s.isDepartmentalSubject),
-                exams: getExamTypesForSubject(s.isDepartmentalSubject),
             })));
             setLoading(false);
         }).catch((err) => {
@@ -296,7 +295,7 @@ export default function SubjectDetails() {
                                                 Choose Exam Type
                                             </p>
                                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
-                                                {subject.exams.map(examType => {
+                                                {getExamTypesForSubject(subject.isDepartmentalSubject).map(examType => {
                                                     const info = getSubjectExamInfo(examType, subject.isDepartmentalSubject);
                                                     const isSel = selectedExamType === examType;
                                                     return (

@@ -130,7 +130,7 @@ describe('course → subjects', () => {
     await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
     const subjectSelects = callsTo('select:Subjects');
     expect(subjectSelects.length).toBe(1);
-    expect(subjectSelects[0].cols).toBe('SubjectId,SubjectName,CourseId,Semester');
+    expect(subjectSelects[0].cols).toBe('SubjectId,SubjectName,CourseId,Semester,isDepartmentalSubject');
     expect(subjectSelects[0].filters.CourseId).toBe(1);
     fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
     expect(screen.getByText('Mathematics-I')).toBeTruthy();
@@ -157,6 +157,28 @@ describe('course → subjects', () => {
     expect(screen.getByText('Database Systems')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
     expect(screen.getByText('Mathematics-I')).toBeTruthy();
+  });
+
+  it('lists exams from each subject departmental flag and gives departmental Mid-1 a 30-MCQ format', async () => {
+    seedEngineering();
+    state.catalogSubjects = [
+      { SubjectId: MATH_ID, SubjectName: 'Non-Departmental Subject', CourseId: 1, Semester: 1, isDepartmentalSubject: false },
+      { SubjectId: MATH_ID + 1, SubjectName: 'Departmental Subject', CourseId: 1, Semester: 1, isDepartmentalSubject: true },
+    ];
+    renderSubjects(1);
+    await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
+    fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
+
+    fireEvent.click(screen.getByRole('button', { name: /Non-Departmental Subject/i }));
+    expect(screen.getByRole('button', { name: /Mid-Term 1 \\(Theory\\)/i })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Mid-Term 2 \\(MCQ \\/ Objective\\)/i })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Final Examination \\(ESE/i })).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /Mid-Term 1 \\(MCQ \\/ Objective\\)/i })).toBeNull();
+
+    fireEvent.click(screen.getByRole('button', { name: /Departmental Subject/i }));
+    expect(screen.getByRole('button', { name: /Mid-Term 1 \\(MCQ \\/ Objective\\).*45m.*30M/i })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Mid-Term 2 \\(MCQ \\/ Objective\\).*45m.*30M/i })).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /Final Examination \\(ESE/i })).toBeNull();
   });
 
   it('accepts numeric database CourseIds in the route', async () => {

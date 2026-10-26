@@ -30,7 +30,10 @@ describe('subject-specific exam availability', () => {
 
     it('does not change non-departmental Mid-1 or common Mid-2 format', () => {
         expect(getSubjectExamInfo('mid-1', false)).toEqual(examPrompts['mid-1']);
-        expect(getSubjectExamInfo('mid-2', true).type).toBe('objective');
+        const departmentalMid2 = getSubjectExamInfo('mid-2', true);
+        expect(departmentalMid2.type).toBe('objective');
+        expect(departmentalMid2.totalMarks).toBe(30);
+        expect(departmentalMid2.timeMinutes).toBe(45);
         expect(getSubjectExamInfo('final', true)).toBeUndefined();
     });
 });
