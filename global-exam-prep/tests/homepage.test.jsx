@@ -192,6 +192,7 @@ describe('homepage', () => {
       expect(screen.queryByText(/The host session cannot be resumed/i)).toBeNull();
       await waitFor(() => expect(client.channel).toHaveBeenCalledWith('test-room:' + roomCode, expect.any(Object)));
     } finally {
+      cleanup();
       globalThis.fetch = originalFetch;
       client.channel = originalChannel;
       client.removeChannel = originalRemoveChannel;
