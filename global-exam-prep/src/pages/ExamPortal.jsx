@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { examPrompts, domains } from '../data/mockData';
 import { findSubjectContext } from '../utils/subjectResolver';
+import { getSubjectExamInfo } from '../utils/subjectExamPolicy';
 import { universitySyllabus } from '../data/universitySyllabus';
 import { pdfSyllabus } from '../data/pdfSyllabus';
 import { extractTextFromFile, MAX_PDF_PAGES } from '../utils/fileParser';
@@ -80,7 +81,8 @@ export default function ExamPortal() {
     const domainDetail = subjectContext.domain;
     const sourceSubjectId = subjectContext.sourceSubjectId || subjectId;
 
-    const examInfo = examPrompts[examType];
+    const isDepartmentalSubject = location.state?.isDepartmentalSubject === true;
+    const examInfo = getSubjectExamInfo(examType, isDepartmentalSubject, examPrompts);
     const testRoomMode = location.state?.testRoomMode === 'create' ? 'create' : null;
 
     const contextPrefix = domainDetail && courseDetail ? `Academic Context: 
@@ -215,7 +217,7 @@ export default function ExamPortal() {
                 }
 
                 // \u2500\u2500 Context fitting: scope selection + batching under 6,000-char cap \u2500\u2500
-                const { batches, coveragePlan, config } = fitContext(syllabusRecord, examType);
+                const { batches, coveragePlan, config } = fitContext(syllabusRecord, examType, { isDepartmentalSubject });
 
                 // Build academic context prefix for the model
                 const contextPrefixText = domainDetail && courseDetail
