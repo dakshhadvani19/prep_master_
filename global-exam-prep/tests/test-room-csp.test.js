@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-
-const html = readFileSync(fileURLToPath(new URL('../index.html', import.meta.url)), 'utf8');
+// The Vite test runner can rewrite import.meta.url to an HTTP URL. CI runs
+// Vitest from global-exam-prep/, so read the checked-in HTML from the working dir.
+const html = readFileSync('index.html', 'utf8');
 const csp = html.match(/http-equiv="Content-Security-Policy"[^>]*content="([^"]+)"/i)?.[1] || '';
 const connectSrc = csp.split(';').find((directive) => directive.trim().startsWith('connect-src')) || '';
 

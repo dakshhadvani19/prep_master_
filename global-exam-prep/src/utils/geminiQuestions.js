@@ -91,6 +91,53 @@ export function parseModelQuestions(cleaned) {
     throw new Error('AI response must be a JSON object containing a questions array.');
 }
 
+function optionText(value) {
+    if (typeof value === 'string') return value.trim();
+    if (typeof value === 'number' || typeof value === 'boolean') return String(value);
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return '';
+    for (const key of ['text', 'label', 'value', 'option', 'content']) {
+        const candidate = value[key];
+        if (typeof candidate === 'string' || typeof candidate === 'number') {
+            const normalized = String(candidate).trim();
+            if (normalized) return normalized;
+        }
+    }
+    return '';
+}
+
+// Models sometimes encode the same four options as objects or as A/B/C/D keys
+// even when JSON-object mode is used. Canonicalize equivalent shapes, but never
+// invent missing distractors: incomplete questions must still be retried.
+function normalizeObjectiveQuestion(question) {
+    if (!question || typeof question !== 'object' || Array.isArray(question)) return question;
+
+    let rawOptions = question.options ?? question.choices ?? question.answers;
+    if (!Array.isArray(rawOptions) && rawOptions && typeof rawOptions === 'object') {
+        const letterKeys = ['A', 'B', 'C', 'D'];
+        rawOptions = letterKeys.every((key) => Object.prototype.hasOwnProperty.call(rawOptions, key))
+            ? letterKeys.map((key) => rawOptions[key])
+            : Object.values(rawOptions);
+    }
+    if (!Array.isArray(rawOptions)) {
+        const namedOptions = [
+            question.optionA ?? question.option_a ?? question.A,
+            question.optionB ?? question.option_b ?? question.B,
+            question.optionC ?? question.option_c ?? question.C,
+            question.optionD ?? question.option_d ?? question.D,
+        ];
+        rawOptions = namedOptions.some((value) => value !== undefined) ? namedOptions : rawOptions;
+    }
+
+    const options = Array.isArray(rawOptions) ? rawOptions.map(optionText) : rawOptions;
+    let answer = question.answer ?? question.correctAnswer ?? question.correct_answer;
+    if (typeof answer === 'string' && Array.isArray(options) && !/^[A-D]$/i.test(answer.trim())) {
+        const answerText = answer.trim().toLocaleLowerCase();
+        const matchingIndex = options.findIndex((option) => option.toLocaleLowerCase() === answerText);
+        if (matchingIndex >= 0) answer = matchingIndex;
+    }
+    return { ...question, options, answer };
+}
+
 /**
  * Minimal response-shape checks only. Semantic quality, difficulty heuristics,
  * duplicate rejection, and option-plausibility filters are intentionally not
@@ -129,8 +176,11 @@ function validateCommonQuestions(questions, count, isObjective = false) {
  * Build a correction prompt that tells the model exactly what went wrong so
  * the next attempt fixes the specific validation failure.
  */
-function buildCorrectionPrompt(basePrompt, validationError, attempt) {
-    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\n\nReturn corrected JSON only — no markdown or extra prose. Ensure the requested count, required fields, four MCQ options, valid answer index, and requested theory marks.`;
+function buildCorrectionPrompt(basePrompt, validationError, attempt, previousOutput = '') {
+    const previousOutputSection = previousOutput
+        ? `\n\nPREVIOUS INVALID MODEL OUTPUT TO CORRECT (preserve valid content, repair the invalid fields):\n${previousOutput.slice(0, 8000)}\n`
+        : '';
+    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}${previousOutputSection}\nReturn corrected JSON only — no markdown or extra prose. Ensure the requested count, required fields, exactly four non-empty string MCQ options, valid answer index, and requested theory marks.`;
 }
 
 export async function generateQuestionsFromText({
@@ -251,6 +301,7 @@ ${source}
     }
 
     let lastError = null;
+    let lastRawResponse = '';
     let rateLimitRetries = 0;
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
@@ -264,7 +315,7 @@ ${source}
                         messages: [
                             { role: 'system', content: systemMessage },
                             { role: 'user', content: attempt > 1
-                                ? buildCorrectionPrompt(userPrompt, lastError.message, attempt)
+                                ? buildCorrectionPrompt(userPrompt, lastError.message, attempt, lastRawResponse)
                                 : userPrompt },
                         ],
                         model: 'openai/gpt-oss-20b',
@@ -310,6 +361,7 @@ ${source}
                 if (match?.[1]) cleaned = match[1].trim();
             }
 
+            lastRawResponse = cleaned;
             const parsedQuestions = parseModelQuestions(cleaned);
             if (!Array.isArray(parsedQuestions) || parsedQuestions.length === 0) {
                 throw new Error('AI returned no questions. Please retry generation.');
@@ -317,7 +369,10 @@ ${source}
 
             // Trust the generated content. If the provider over-returns, use the requested
             // count; if it under-returns, make a bounded request for only the missing items.
-            const questions = parsedQuestions.slice(0, count);
+            const slicedQuestions = parsedQuestions.slice(0, count);
+            const questions = isObjective
+                ? slicedQuestions.map(normalizeObjectiveQuestion)
+                : slicedQuestions;
             const isPartialResponse = questions.length < count;
             validateCommonQuestions(questions, questions.length, isObjective);
 

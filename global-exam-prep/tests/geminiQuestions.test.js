@@ -285,6 +285,62 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
             })).rejects.toThrow(/invalid JSON|no questions|retry generation/i);
         });
 
+        it('normalizes object-shaped MCQ options into four strings and preserves the keyed answer', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, {
+                choices: [{ message: { content: JSON.stringify({ questions: [{
+                    text: 'Which storage can persist data between sessions?',
+                    options: [
+                        { label: 'In-memory variable' },
+                        { text: 'Persistent database' },
+                        { value: 'Temporary stack frame' },
+                        { content: 'CPU register' },
+                    ],
+                    answer: 'B',
+                }] }) } }],
+            }));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content about application data persistence. ' + 'x'.repeat(100),
+                difficulty: 'medium',
+                count: 1,
+                isObjective: true,
+            });
+
+            expect(result).toHaveLength(1);
+            expect(result[0].options).toHaveLength(4);
+            expect(result[0].options.every((option) => typeof option === 'string' && option.trim())).toBe(true);
+            expect(result[0].options[result[0].answer]).toBe('Persistent database');
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+        });
+
+        it('includes the previous invalid output in the bounded correction attempt', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            const invalid = {
+                choices: [{ message: { content: JSON.stringify({ questions: [{
+                    text: 'Which storage can persist data between sessions?',
+                    options: ['Cache', '', 'Stack', 'Register'],
+                    answer: 1,
+                }] }) } }],
+            };
+            fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(200, invalid))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(1)));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content about application data persistence. ' + 'x'.repeat(100),
+                difficulty: 'medium',
+                count: 1,
+                isObjective: true,
+            });
+
+            expect(result).toHaveLength(1);
+            expect(fetchMock).toHaveBeenCalledTimes(2);
+            const correction = JSON.parse(fetchMock.mock.calls[1][1].body).messages[1].content;
+            expect(correction).toContain('PREVIOUS INVALID MODEL OUTPUT');
+            expect(correction).toContain('Which storage can persist data between sessions?');
+        });
+
         it('rejects invalid answer index (5)', async () => {
             const { generateQuestionsFromText } = await importModule();
             fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, {
