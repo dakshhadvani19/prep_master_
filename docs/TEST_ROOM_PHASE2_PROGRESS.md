@@ -21,7 +21,11 @@
 
 ## Verification status
 
-- [ ] Re-run focused Test Room tests, full Vitest, ESLint, production build, and confirm Vercel deployment for the latest 2026-10-26 URL/lifecycle changes.
+- [x] Focused Test Room regression job passed for the URL/visibility implementation commit `eda1a0eca289973694b78842f63faa6b2a42f265` (workflow run [40297719872](https://github.com/dakshhadvani19/prep_master_/actions/runs/40297719872)).
+- [x] Vite production build passed for that implementation commit.
+- [ ] Full Vitest suite remains red due failures in existing auth/profile/catalog tests (`admin-auth`, `auth-flows`, `auth-otp`, `exam-subject-bridge`, `google-oauth-return`); the Test Room focused job passed. See the workflow run above.
+- [ ] Repository ESLint remains red for pre-existing issues outside the changed Test Room files (the current lint output did not report the changed TestRoomPage/API/Test Room test files).
+- [ ] Confirm Vercel deployment for the final URL/visibility changes; deployment status was pending at the last check.
 - [ ] Browser-level verification remains required: switch tabs during a started room, close/reopen a participant tab, try opening the code URL after the host starts, and verify no new participant is admitted after start.
 
 - [x] Focused Test Room regression CI passed on source commit `a4755fd563fc21f3df90d818a7a6c2929a147c92` (workflow run [40187723249](https://github.com/dakshhadvani19/prep_master_/actions/runs/40187723249)).
