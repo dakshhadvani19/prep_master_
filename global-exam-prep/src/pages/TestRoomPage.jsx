@@ -169,6 +169,7 @@ export default function TestRoomPage() {
     const previousPresenceIdsRef = useRef(new Set());
     const connectionLostRef = useRef(false);
     const disconnectingRef = useRef(false);
+    const visibilityRevisionRef = useRef(0);
     const hostCreatedRoomRef = useRef(false);
 
     useEffect(() => { canonicalQuestionsRef.current = canonicalQuestions; }, [canonicalQuestions]);
@@ -677,7 +678,6 @@ export default function TestRoomPage() {
                     code: roomCode,
                     answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
                     revision,
-                    isVisible: document.visibilityState === 'visible',
                 });
                 if (cancelled) return;
                 if (!result.active) {
@@ -720,7 +720,12 @@ export default function TestRoomPage() {
             const isVisible = document.visibilityState === 'visible';
             try {
                 const result = await callRoomApi(
-                    { action: 'visibility', code: roomCode, isVisible },
+                    {
+                        action: 'visibility',
+                        code: roomCode,
+                        isVisible,
+                        visibilityRevision: ++visibilityRevisionRef.current,
+                    },
                     { keepalive: !isVisible },
                 );
                 if (cancelled || result?.active !== false) return;
