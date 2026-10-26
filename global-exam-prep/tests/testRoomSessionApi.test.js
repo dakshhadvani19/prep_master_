@@ -4,6 +4,7 @@ import {
     normalizeAnswers,
     normalizeCode,
     resolveFinalization,
+    roomJoinError,
     safeQuestions,
     scoreAnswers,
 } from '../api/test-room-session.js';
@@ -44,6 +45,14 @@ describe('Test Room finalization decisions', () => {
             status: 'disconnected',
             reason: 'participant_connection_lost',
         });
+    });
+});
+
+describe('Test Room join lifecycle policy', () => {
+    it('allows verification/join only while a room is waiting', () => {
+        expect(roomJoinError('waiting')).toBeNull();
+        expect(roomJoinError('started')).toMatch(/already started.*rejoining is disabled/i);
+        expect(roomJoinError('finished')).toMatch(/already ended/i);
     });
 });
 
