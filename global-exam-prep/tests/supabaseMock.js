@@ -234,6 +234,10 @@ export const client = {
     }),
   },
 
+  realtime: {
+    setAuth: vi.fn(async () => {}),
+  },
+
   from: vi.fn((table) => makeBuilder(table)),
 
   // PostgREST /rpc. admin_role_for_uid() takes no arguments, so the row is looked up

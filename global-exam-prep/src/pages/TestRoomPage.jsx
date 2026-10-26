@@ -206,6 +206,7 @@ export default function TestRoomPage() {
     const [submissionPending, setSubmissionPending] = useState(false);
     const [attemptId, setAttemptId] = useState(null);
     const [persistenceError, setPersistenceError] = useState('');
+    const [channelRetryNonce, setChannelRetryNonce] = useState(0);
 
     const channelRef = useRef(null);
     const canonicalQuestionsRef = useRef(canonicalQuestions);
@@ -229,6 +230,8 @@ export default function TestRoomPage() {
     const joinRequestPendingRef = useRef(false);
     const joinRetryEligibleRef = useRef(false);
     const hostConnectionLostRef = useRef(false);
+    const channelErrorReturnViewRef = useRef('share');
+    const participantPresenceRef = useRef(null);
 
     useEffect(() => { canonicalQuestionsRef.current = canonicalQuestions; }, [canonicalQuestions]);
     useEffect(() => { answersRef.current = answers; }, [answers]);
@@ -333,6 +336,7 @@ export default function TestRoomPage() {
         let channelIsSubscribed = false;
         const channel = supabase.channel('test-room:' + normalizedCode(roomCode), {
             config: {
+                private: true,
                 presence: { key: userId },
                 broadcast: { self: false, ack: true },
             },
@@ -428,6 +432,8 @@ export default function TestRoomPage() {
                 if (hostConnectionLostRef.current) {
                     hostConnectionLostRef.current = false;
                     setError('');
+                    setPersistenceError('');
+                    setConnected(true);
                 }
                 if (Number.isFinite(Number(host.serverNow))) {
                     serverClockOffsetRef.current = Number(host.serverNow) - Date.now();
@@ -450,24 +456,18 @@ export default function TestRoomPage() {
                 }
                 if (host.status === 'finished') setView('finished');
             } else if (!isHostFlow && hostSeenRef.current) {
+                hostConnectionLostRef.current = true;
+                setConnected(false);
                 if (roomMetaRef.current?.status === 'waiting') {
-                    // Presence can disappear briefly while the host's page reconnects.
-                    // Keep the lobby alive and clear this warning if the host returns.
-                    hostConnectionLostRef.current = true;
+                    // A waiting-room Presence gap should not eject the participant.
                     setError('The host connection is temporarily interrupted. Waiting for the host to reconnect…');
+                } else if (roomMetaRef.current?.status === 'started' && !submittedRef.current) {
+                    // The host's WebSocket can disappear while this participant still
+                    // has a healthy HTTP connection. Do not finalize their attempt on
+                    // a Presence event alone; heartbeats and answer persistence decide.
+                    setPersistenceError('The host live connection is interrupted. Your answers continue saving while we wait for reconnection.');
                 } else {
-                    if (roomMetaRef.current?.status === 'started' && !submittedRef.current && !disconnectingRef.current) {
-                        disconnectingRef.current = true;
-                        callRoomApi({
-                            action: 'disconnect',
-                            code: roomCode,
-                            answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
-                            revision: ++answerRevisionRef.current,
-                        }, { keepalive: true }).catch(() => {});
-                        connectionLostRef.current = true;
-                    }
-                    setError('The host connection was lost. Your last saved answers and result are available on the dashboard. This started test cannot be rejoined.');
-                    setConnected(false);
+                    setError('The host session has ended. Your saved attempt remains available on the dashboard.');
                     setView('error');
                 }
             }
@@ -547,6 +547,7 @@ export default function TestRoomPage() {
                     displayName: String(displayName).slice(0, 80),
                     joinedAt: new Date().toISOString(),
                 };
+                participantPresenceRef.current = participantPresence;
                 await channel.track(participantPresence);
                 if (cancelled) return;
                 setConnected(true);
@@ -595,7 +596,13 @@ export default function TestRoomPage() {
             setView('result');
         });
 
-        channel.subscribe(async (status) => {
+        const subscribeWithAuth = async () => {
+            const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
+            const accessToken = sessionData?.session?.access_token;
+            if (sessionError || !accessToken) throw new Error('A valid sign-in session is required for a private Test Room connection.');
+            await supabase.realtime.setAuth(accessToken);
+            if (cancelled) return;
+            channel.subscribe(async (status, channelError) => {
             if (cancelled) return;
             if (status === 'SUBSCRIBED') {
                 channelIsSubscribed = true;
@@ -621,10 +628,34 @@ export default function TestRoomPage() {
                         await channel.track(hostPresence);
                         if (cancelled) return;
                         setConnected(true);
-                        setView((previous) => previous === 'setup' ? 'share' : previous);
+                        setError('');
+                        setPersistenceError('');
+                        setView((previous) => {
+                            if (previous === 'setup') return 'share';
+                            if (previous === 'error') {
+                                return roomMetaRef.current?.status === 'started'
+                                    ? 'attempt'
+                                    : channelErrorReturnViewRef.current;
+                            }
+                            return previous;
+                        });
                     } catch {
                         setError('Could not activate the temporary room. Please try again.');
                         setView('error');
+                    }
+                } else if (attemptIdRef.current) {
+                    try {
+                        if (participantPresenceRef.current) {
+                            await channel.track(participantPresenceRef.current);
+                        }
+                        setConnected(true);
+                        setPersistenceError('');
+                        if (roomMetaRef.current?.status === 'waiting' && canonicalQuestionsRef.current.length === 0) {
+                            await send('request_exam', { toUid: roomMetaRef.current?.hostUid });
+                        }
+                    } catch (presenceError) {
+                        console.error('[TestRoom] Could not restore participant Presence:', presenceError?.message || presenceError);
+                        setPersistenceError('Live updates are reconnecting. Your answers continue syncing.');
                     }
                 } else {
                     await requestJoin();
@@ -633,29 +664,42 @@ export default function TestRoomPage() {
                 channelIsSubscribed = false;
                 joinRequestPendingRef.current = false;
                 joinRetryEligibleRef.current = roomMetaRef.current?.status === 'waiting';
-                if (roomMetaRef.current?.status === 'started' && !submittedRef.current) {
-                    connectionLostRef.current = true;
-                    callRoomApi({
-                        action: 'disconnect',
-                        code: roomCode,
-                        answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
-                        revision: ++answerRevisionRef.current,
-                    }, { keepalive: true }).catch(() => {});
-                    setError('The live connection was lost during the test. Rejoining is disabled; your saved attempt is available on the dashboard.');
-                } else {
-                    setError('The live room connection failed. Check your connection and retry.');
-                }
-                setView('error');
-            }
-        });
+                console.error('[TestRoom] Realtime subscription failed:', {
+                    status,
+                    message: channelError?.message || channelError?.reason || '',
+                    code: channelError?.code || '',
+                });
 
+                if (roomMetaRef.current?.status === 'started' && !submittedRef.current) {
+                    // A Realtime socket failure is not proof that the student left.
+                    // HTTP heartbeats and answer snapshots continue to persist progress;
+                    // only explicit page-close/offline signals or stale heartbeats finalize.
+                    setConnected(false);
+                    setPersistenceError('Live updates are reconnecting. Your answers continue syncing.');
+                } else {
+                    channelErrorReturnViewRef.current = latestViewRef.current === 'lobby' ? 'lobby' : 'share';
+                    setError('Could not connect to the live Test Room. Your room and saved attempt are still stored. Retry the connection.');
+                    setView('error');
+                }
+            }
+            });
+        };
+        subscribeWithAuth().catch((subscriptionError) => {
+            if (cancelled) return;
+            console.error('[TestRoom] Could not initialize the authenticated Realtime channel:', {
+                message: subscriptionError?.message || '',
+                code: subscriptionError?.code || '',
+            });
+            setError('Your live room session could not connect. Retry the connection or sign in again.');
+            setView('error');
+        });
         return () => {
             cancelled = true;
             if (joinTimeout) clearTimeout(joinTimeout);
             if (channelRef.current === channel) channelRef.current = null;
             Promise.resolve(supabase.removeChannel(channel)).catch(() => {});
         };
-    }, [roomCode, userId, displayName, isHostFlow, verifiedJoin]);
+    }, [roomCode, userId, displayName, isHostFlow, verifiedJoin, channelRetryNonce]);
 
     const createRoom = async () => {
         if (!isHostFlow || !canonicalQuestions.length) {
@@ -1097,8 +1141,12 @@ export default function TestRoomPage() {
                     </div>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>{error || 'The live room is no longer available.'}</p>
                     <button style={roomButtonStyle('secondary')} onClick={() => navigate(-1)}><ArrowLeft size={17} /> Go back</button>
-                    {!isHostFlow && routeCode && roomMeta?.status === 'waiting' && /host|connection/i.test(error) && (
-                        <button style={{ ...roomButtonStyle('primary'), marginTop: '0.75rem' }} onClick={() => navigate(0)}>
+                    {routeCode && roomMeta?.status === 'waiting' && /connect|host|connection|session/i.test(error) && (
+                        <button style={{ ...roomButtonStyle('primary'), marginTop: '0.75rem' }} onClick={() => {
+                            setChannelRetryNonce((current) => current + 1);
+                            setError('');
+                            setView(isHostFlow ? channelErrorReturnViewRef.current : 'connecting');
+                        }}>
                             Retry connection
                         </button>
                     )}

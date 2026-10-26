@@ -4,6 +4,8 @@ import {
     normalizeAnswers,
     normalizeCode,
     hostResumeError,
+    roomExpiryForStart,
+    roomTtlSeconds,
     resolveFinalization,
     roomJoinError,
     shouldFinalizeStaleHeartbeat,
@@ -61,6 +63,16 @@ describe('Test Room join lifecycle policy', () => {
         expect(normalizeCode('  ABCDE-FGHJK ')).toBe('ABCDEFGHJK');
         expect(normalizeCode('INVALID-ROOM')).toBeNull();
         expect(normalizeCode('')).toBeNull();
+    });
+});
+
+describe('Test Room retention policy', () => {
+    it('keeps waiting rooms for one hour and started rooms through the test plus cleanup grace', () => {
+        const startedAt = 1_000_000;
+        expect(roomExpiryForStart(startedAt, 45)).toBe(startedAt + 60 * 60 * 1000);
+        expect(roomExpiryForStart(startedAt, 180)).toBe(startedAt + (180 * 60 + 5 * 60) * 1000);
+        expect(roomTtlSeconds({ expiresAt: startedAt + 30_000 }, startedAt)).toBe(30);
+        expect(roomTtlSeconds({ expiresAt: startedAt - 1 }, startedAt)).toBe(1);
     });
 });
 

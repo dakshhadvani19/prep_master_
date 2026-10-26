@@ -190,7 +190,13 @@ describe('homepage', () => {
       });
       expect(await screen.findByRole('heading', { name: /Your room is ready/i })).toBeTruthy();
       expect(screen.queryByText(/The host session cannot be resumed/i)).toBeNull();
-      await waitFor(() => expect(client.channel).toHaveBeenCalledWith('test-room:' + roomCode, expect.any(Object)));
+      await waitFor(() => {
+        expect(client.channel).toHaveBeenCalledWith(
+          'test-room:' + roomCode,
+          expect.objectContaining({ config: expect.objectContaining({ private: true }) }),
+        );
+        expect(client.realtime.setAuth).toHaveBeenCalledWith('host-token');
+      });
     } finally {
       cleanup();
       globalThis.fetch = originalFetch;

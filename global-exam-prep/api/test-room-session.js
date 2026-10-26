@@ -2,10 +2,12 @@ import { createClient } from '@supabase/supabase-js';
 import { randomInt } from 'node:crypto';
 
 const process = globalThis.process;
-const ROOM_TTL_SECONDS = 72 * 60 * 60;
+const ROOM_TTL_SECONDS = 60 * 60;
+const ROOM_CLEANUP_GRACE_SECONDS = 5 * 60;
 const MAX_PARTICIPANTS = 50;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const STALE_AFTER_MS = 35_000;
+const FINAL_ATTEMPT_STATUSES = new Set(['submitted', 'auto_submitted', 'disconnected', 'timed_out', 'cancelled']);
 
 function envFirst(...names) {
     for (const name of names) if (process.env[name]?.trim()) return process.env[name].trim();
@@ -55,6 +57,20 @@ export function roomJoinError(status) {
     if (status === 'waiting') return null;
     if (status === 'started') return 'This room has already started. Rejoining is disabled.';
     return 'This room has already ended.';
+}
+
+export function roomExpiryForStart(startedAt, durationMinutes) {
+    const durationSeconds = Math.max(1, Number(durationMinutes) || 45) * 60;
+    return Number(startedAt) + Math.max(
+        ROOM_TTL_SECONDS,
+        durationSeconds + ROOM_CLEANUP_GRACE_SECONDS,
+    ) * 1000;
+}
+
+export function roomTtlSeconds(room, now = Date.now()) {
+    const expiresAt = Number(room?.expiresAt);
+    if (!Number.isFinite(expiresAt) || expiresAt <= 0) return ROOM_TTL_SECONDS;
+    return Math.max(1, Math.ceil((expiresAt - now) / 1000));
 }
 
 export function hostResumeError(room, participant, attempt, userId) {
@@ -136,8 +152,12 @@ async function authenticate(req, admin) {
 async function getRoom(code) { return parseJson(await redis('GET', keys(code).meta)); }
 async function getQuestions(code) { return parseJson(await redis('GET', keys(code).questions)); }
 async function getParticipant(code, uid) { return parseJson(await redis('GET', keys(code, uid).participant)); }
-async function setJson(key, value) { return redis('SET', key, JSON.stringify(value), 'EX', ROOM_TTL_SECONDS); }
+async function setJson(key, value, ttlSeconds = ROOM_TTL_SECONDS) {
+    return redis('SET', key, JSON.stringify(value), 'EX', Math.max(1, Math.floor(ttlSeconds)));
+}
 async function patchParticipant(code, uid, patch) {
+    const room = await getRoom(code).catch(() => null);
+    const ttlSeconds = roomTtlSeconds(room);
     const script = [
         "local raw = redis.call('GET', KEYS[1])",
         "if not raw then return 'ERR:PARTICIPANT_NOT_FOUND' end",
@@ -147,7 +167,7 @@ async function patchParticipant(code, uid, patch) {
         "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[2])",
         "return cjson.encode(p)"
     ].join('\n');
-    const result = String(await redis('EVAL', script, 1, keys(code, uid).participant, JSON.stringify(patch), ROOM_TTL_SECONDS));
+    const result = String(await redis('EVAL', script, 1, keys(code, uid).participant, JSON.stringify(patch), ttlSeconds));
     if (result.startsWith('ERR:')) throw new Error(result.slice(4));
     return parseJson(result);
 }
@@ -156,6 +176,34 @@ async function getAttempt(admin, code, uid) {
     if (error) throw new Error(error.message);
     return data;
 }
+async function purgeLiveRoom(code) {
+    const memberIds = await redis('SMEMBERS', keys(code).members).catch(() => []);
+    const uniqueIds = Array.isArray(memberIds) ? [...new Set(memberIds.map(String))] : [];
+    const liveKeys = [
+        keys(code).meta,
+        keys(code).questions,
+        keys(code).members,
+        keys(code).reconcileLock,
+        ...uniqueIds.map((uid) => keys(code, uid).participant),
+    ];
+    await redis('DEL', ...liveKeys);
+}
+
+async function cleanupRoomIfComplete(admin, code) {
+    const { data, error } = await admin.from('exam_attempts')
+        .select('user_id,status,room_role')
+        .eq('room_code', code)
+        .eq('attempt_type', 'test_room')
+        .limit(MAX_PARTICIPANTS);
+    if (error) throw new Error(error.message);
+    const attempts = Array.isArray(data) ? data : [];
+    if (attempts.length > 0 && attempts.every((attempt) => FINAL_ATTEMPT_STATUSES.has(attempt.status))) {
+        await purgeLiveRoom(code);
+        return true;
+    }
+    return false;
+}
+
 async function createAttempt(admin, room, uid, name, role, safe) {
     let attempt = await getAttempt(admin, room.roomCode, uid);
     if (!attempt) {
@@ -237,7 +285,7 @@ async function closeParticipantSnapshot(code, uid, status, reason, submittedAnsw
     ].join('\n');
     const raw = await redis(
         'EVAL', script, 1, participantKey, status, reason, normalized, revision,
-        participantStatus, Date.now(), ROOM_TTL_SECONDS,
+        participantStatus, Date.now(), roomTtlSeconds(await getRoom(code).catch(() => null)),
     );
     if (!raw) return null;
     const participant = parseJson(raw);
@@ -362,6 +410,13 @@ async function finalizeAttempt(admin, {
             disconnectedAt: Date.now(),
         }).catch(() => {});
     }
+    if (code) {
+        // Remove only ephemeral Redis keys once every room attempt is finalized.
+        // Saved answers, answer keys and review data remain durable in Supabase.
+        await cleanupRoomIfComplete(admin, code).catch((error) => {
+            console.error('[test-room-session] completed-room cleanup deferred:', error?.message || error);
+        });
+    }
     return { ok: true, status: data.status, result, alreadyFinalized: false };
 }
 
@@ -450,6 +505,7 @@ export default async function handler(req, res) {
         if (action === 'create') {
             const questions = cleanQuestions(body.questions);
             const input = body.room && typeof body.room === 'object' ? body.room : {};
+            const createdAtMs = Date.now();
             const room = {
                 roomCode: '', hostUid: user.id, hostName: displayName(user),
                 subjectCode: String(input.subjectCode || '').slice(0, 120),
@@ -458,7 +514,8 @@ export default async function handler(req, res) {
                 difficulty: ['easy', 'medium', 'hard'].includes(input.difficulty) ? input.difficulty : 'medium',
                 durationMinutes: Math.min(180, Math.max(1, Math.floor(Number(input.durationMinutes) || 45))),
                 status: 'waiting', startedAt: null, deadlineAt: null, questionCount: 30,
-                participantLimit: MAX_PARTICIPANTS, createdAt: new Date().toISOString(), serverNow: Date.now(),
+                participantLimit: MAX_PARTICIPANTS, createdAt: new Date(createdAtMs).toISOString(),
+                expiresAt: createdAtMs + ROOM_TTL_SECONDS * 1000, serverNow: createdAtMs,
             };
             let code = '';
             // Reserve the metadata key atomically BEFORE writing any room-specific
@@ -471,7 +528,7 @@ export default async function handler(req, res) {
                     keys(candidate).meta,
                     JSON.stringify({ ...room, roomCode: candidate }),
                     'EX',
-                    ROOM_TTL_SECONDS,
+                    roomTtlSeconds(room, createdAtMs),
                     'NX',
                 );
                 if (reservation === 'OK') {
@@ -482,20 +539,21 @@ export default async function handler(req, res) {
             if (!code) return fail(res, 503, 'Could not allocate a unique room code. Please retry.');
             room.roomCode = code;
             const safe = safeQuestions(questions);
+            const initialTtl = roomTtlSeconds(room);
             const host = {
                 userId: user.id, displayName: room.hostName, role: 'host', status: 'waiting',
                 connected: true, joinedAt: room.createdAt, lastHeartbeat: Date.now(),
                 answers: Array(30).fill(null), answerRevision: 0, attemptId: null,
             };
             try {
-                await setJson(keys(code).questions, questions);
+                await setJson(keys(code).questions, questions, initialTtl);
                 await redis('SADD', keys(code).members, user.id);
-                await redis('EXPIRE', keys(code).members, ROOM_TTL_SECONDS);
-                await setJson(keys(code, user.id).participant, host);
+                await redis('EXPIRE', keys(code).members, initialTtl);
+                await setJson(keys(code, user.id).participant, host, initialTtl);
 
                 const attempt = await createAttempt(admin, room, user.id, room.hostName, 'host', safe);
                 host.attemptId = attempt.id;
-                await setJson(keys(code, user.id).participant, host);
+                await setJson(keys(code, user.id).participant, host, roomTtlSeconds(room));
                 return res.status(200).json({ code, room, attemptId: attempt.id, questions: safe, serverNow: Date.now() });
             } catch (error) {
                 // Preserve an audit record if the DB attempt was inserted but a later
@@ -634,6 +692,7 @@ export default async function handler(req, res) {
                 questionCount: room.questionCount || 30,
                 participantLimit: room.participantLimit || MAX_PARTICIPANTS,
                 createdAt: room.createdAt,
+                expiresAt: room.expiresAt,
                 serverNow,
             };
             return res.status(200).json({
@@ -655,10 +714,11 @@ export default async function handler(req, res) {
                 questionCount: room.questionCount, participantLimit: room.participantLimit,
             }, serverNow: Date.now() });
         }
-        if (!room) return fail(res, 404, 'This room expired or is no longer available.');
-
         if (action === 'room_results') {
-            if (user.id !== room.hostUid) return fail(res, 403, 'Only the host can view the room-wide results.');
+            const hostAttempt = room ? null : await getAttempt(admin, code, user.id);
+            if ((room && user.id !== room.hostUid) || (!room && hostAttempt?.room_role !== 'host')) {
+                return fail(res, 403, 'Only the host can view the room-wide results.');
+            }
             const { data, error } = await admin.from('exam_attempts')
                 .select('user_id,participant_name,room_role,status,score,total_marks,correct_count,incorrect_count,attempted_count,unattempted_count,end_reason,submitted_at')
                 .eq('room_code', code)
@@ -684,6 +744,30 @@ export default async function handler(req, res) {
             });
         }
 
+        if (!room) {
+            // A client may retry a submit after the last participant caused the
+            // ephemeral room to be purged. Return its durable result idempotently.
+            if (action === 'submit') {
+                const attempt = await getAttempt(admin, code, user.id);
+                if (attempt && ['submitted', 'auto_submitted', 'disconnected', 'timed_out'].includes(attempt.status)) {
+                    return res.status(200).json({
+                        ok: true,
+                        alreadyFinalized: true,
+                        status: attempt.status,
+                        result: attempt.score == null ? null : {
+                            correct: attempt.correct_count || 0,
+                            incorrect: attempt.incorrect_count || 0,
+                            attempted: attempt.attempted_count || 0,
+                            unattempted: attempt.unattempted_count ?? attempt.total_marks,
+                            points: attempt.score,
+                            totalQuestions: attempt.total_marks,
+                        },
+                    });
+                }
+            }
+            return fail(res, 404, 'This room expired or is no longer available.');
+        }
+
         if (action === 'join') {
             const joinError = roomJoinError(room.status);
             if (joinError) return fail(res, 409, joinError);
@@ -706,7 +790,7 @@ export default async function handler(req, res) {
                 "redis.call('EXPIRE', KEYS[2], ARGV[4])",
                 "return 'NEW'"
             ].join('\n');
-            const joined = String(await redis('EVAL', joinScript, 3, keys(code).meta, keys(code).members, participantKey, MAX_PARTICIPANTS, JSON.stringify(person), user.id, ROOM_TTL_SECONDS));
+            const joined = String(await redis('EVAL', joinScript, 3, keys(code).meta, keys(code).members, participantKey, MAX_PARTICIPANTS, JSON.stringify(person), user.id, roomTtlSeconds(room)));
             if (joined.startsWith('ERR:')) {
                 const reason = joined.slice(4);
                 const map = { ROOM_NOT_FOUND: 'This room expired or is no longer available.', ROOM_STARTED: 'This room has already started. Rejoining is disabled.', ROOM_FULL: 'This room has reached the 50-participant limit.' };
@@ -761,20 +845,34 @@ export default async function handler(req, res) {
                 "if not raw then return 'ERR:ROOM_NOT_FOUND' end",
                 "local meta = cjson.decode(raw)",
                 "if meta.hostUid ~= ARGV[1] then return 'ERR:HOST_ONLY' end",
+                "local now = tonumber(ARGV[2])",
+                "local ttl = tonumber(ARGV[4])",
                 "if meta.status == 'waiting' then",
-                "  meta.status = 'started'; meta.startedAt = tonumber(ARGV[2]); meta.serverNow = tonumber(ARGV[2])",
-                "  meta.deadlineAt = tonumber(ARGV[2]) + tonumber(meta.durationMinutes) * 60000",
-                "elseif meta.status ~= 'started' then return 'ERR:ROOM_NOT_WAITING' end",
-                "redis.call('SET', KEYS[1], cjson.encode(meta), 'EX', ARGV[3])",
+                "  meta.status = 'started'; meta.startedAt = now; meta.serverNow = now",
+                "  meta.deadlineAt = now + tonumber(meta.durationMinutes) * 60000",
+                "  ttl = math.max(ttl, tonumber(meta.durationMinutes) * 60 + tonumber(ARGV[5]))",
+                "  meta.expiresAt = now + ttl * 1000",
+                "elseif meta.status == 'started' then",
+                "  ttl = math.max(1, math.ceil((tonumber(meta.expiresAt or (now + ttl * 1000)) - now) / 1000))",
+                "else return 'ERR:ROOM_NOT_WAITING' end",
+                "redis.call('SET', KEYS[1], cjson.encode(meta), 'EX', ttl)",
                 "return cjson.encode(meta)"
             ].join('\n');
-            const started = String(await redis('EVAL', script, 1, keys(code).meta, user.id, Date.now(), ROOM_TTL_SECONDS));
+            const started = String(await redis(
+                'EVAL', script, 1, keys(code).meta, user.id, Date.now(),
+                ROOM_TTL_SECONDS, ROOM_CLEANUP_GRACE_SECONDS,
+            ));
             if (started.startsWith('ERR:')) {
                 const reason = started.slice(4);
                 return fail(res, reason === 'HOST_ONLY' ? 403 : reason === 'ROOM_NOT_FOUND' ? 404 : 409, ({ HOST_ONLY: 'Only the room host can start this test.', ROOM_NOT_FOUND: 'This room expired or is no longer available.', ROOM_NOT_WAITING: 'This room cannot be started.' })[reason] || 'Could not start the room.');
             }
             const startedRoom = parseJson(started);
+            const startedTtl = roomTtlSeconds(startedRoom);
             const memberIds = await redis('SMEMBERS', keys(code).members);
+            await Promise.all([
+                redis('EXPIRE', keys(code).questions, startedTtl),
+                redis('EXPIRE', keys(code).members, startedTtl),
+            ]);
             const startIso = new Date(Number(startedRoom.startedAt)).toISOString();
             // One database update handles all room attempts. Serial per-person reads
             // and writes can exceed serverless request limits at the 50-person cap.
@@ -827,7 +925,7 @@ export default async function handler(req, res) {
                 : now;
             const updated = String(await redis(
                 'EVAL', script, 1, keys(code, user.id).participant,
-                isVisible ? 'true' : 'false', visibilityRevision, now, ROOM_TTL_SECONDS,
+                isVisible ? 'true' : 'false', visibilityRevision, now, roomTtlSeconds(room),
             ));
             if (updated.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
             return res.status(200).json({ active: true, isVisible, serverNow: now, deadlineAt: room.deadlineAt });
@@ -865,7 +963,7 @@ export default async function handler(req, res) {
                     "redis.call('SET', KEYS[1], cjson.encode(participant), 'EX', ARGV[4])",
                     "return cjson.encode(participant)"
                 ].join('\n');
-                const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), ROOM_TTL_SECONDS));
+                const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), roomTtlSeconds(room)));
                 if (savedRaw.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active.');
                 const saved = parseJson(savedRaw);
                 await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || normalized, questions?.length || 30), Number(saved?.answerRevision ?? revision));
@@ -903,7 +1001,7 @@ export default async function handler(req, res) {
                 "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[4])",
                 "return cjson.encode(p)"
             ].join('\n');
-            const result = String(await redis('EVAL', script, 1, keys(code, user.id).participant, JSON.stringify(answers), Number(body.revision) || Date.now(), Date.now(), ROOM_TTL_SECONDS));
+            const result = String(await redis('EVAL', script, 1, keys(code, user.id).participant, JSON.stringify(answers), Number(body.revision) || Date.now(), Date.now(), roomTtlSeconds(currentRoom)));
             if (result.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active.');
             const saved = parseJson(result);
             await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || answers, questions?.length || 30), Number(saved?.answerRevision ?? body.revision ?? Date.now()));
