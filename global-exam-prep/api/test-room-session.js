@@ -713,15 +713,21 @@ export default async function handler(req, res) {
                 "if not raw then return 'ERR:PARTICIPANT_NOT_FOUND' end",
                 "local p = cjson.decode(raw)",
                 "if p.status == 'disconnected' or p.status == 'submitted' then return 'ERR:ATTEMPT_CLOSED' end",
+                "local revision = tonumber(ARGV[2])",
+                "if p.visibilityRevision and revision <= tonumber(p.visibilityRevision) then return cjson.encode(p) end",
+                "p.visibilityRevision = revision",
                 "p.tabHidden = ARGV[1] == 'false'",
-                "if p.tabHidden then p.tabHiddenSince = p.tabHiddenSince or tonumber(ARGV[2]) else p.tabHiddenSince = nil end",
-                "p.lastHeartbeat = tonumber(ARGV[2]); p.lastVisibilityChange = tonumber(ARGV[2]); p.connected = true",
-                "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[3])",
+                "if p.tabHidden then p.tabHiddenSince = p.tabHiddenSince or tonumber(ARGV[3]) else p.tabHiddenSince = nil end",
+                "p.lastHeartbeat = tonumber(ARGV[3]); p.lastVisibilityChange = tonumber(ARGV[3]); p.connected = true",
+                "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[4])",
                 "return cjson.encode(p)"
             ].join('\n');
+            const visibilityRevision = Number.isSafeInteger(Number(body.visibilityRevision)) && Number(body.visibilityRevision) > 0
+                ? Number(body.visibilityRevision)
+                : now;
             const updated = String(await redis(
                 'EVAL', script, 1, keys(code, user.id).participant,
-                isVisible ? 'true' : 'false', now, ROOM_TTL_SECONDS,
+                isVisible ? 'true' : 'false', visibilityRevision, now, ROOM_TTL_SECONDS,
             ));
             if (updated.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active. Rejoining is disabled.');
             return res.status(200).json({ active: true, isVisible, serverNow: now, deadlineAt: room.deadlineAt });
@@ -756,12 +762,10 @@ export default async function handler(req, res) {
                     "local revision = tonumber(ARGV[2])",
                     "if not participant.answerRevision or revision > tonumber(participant.answerRevision) then participant.answers = cjson.decode(ARGV[1]); participant.answerRevision = revision end",
                     "participant.lastHeartbeat = tonumber(ARGV[3]); participant.connected = true",
-                    "participant.tabHidden = ARGV[5] == 'false'",
-                    "if participant.tabHidden then participant.tabHiddenSince = participant.tabHiddenSince or tonumber(ARGV[3]) else participant.tabHiddenSince = nil end",
                     "redis.call('SET', KEYS[1], cjson.encode(participant), 'EX', ARGV[4])",
                     "return cjson.encode(participant)"
                 ].join('\n');
-                const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), ROOM_TTL_SECONDS, body.isVisible === false ? 'false' : 'true'));
+                const savedRaw = String(await redis('EVAL', snapshotScript, 1, keys(code, user.id).participant, JSON.stringify(normalized), revision, Date.now(), ROOM_TTL_SECONDS));
                 if (savedRaw.startsWith('ERR:')) return fail(res, 409, 'This attempt is no longer active.');
                 const saved = parseJson(savedRaw);
                 await writeAnswers(admin, p.attemptId, user.id, normalizeAnswers(saved?.answers || normalized, questions?.length || 30), Number(saved?.answerRevision ?? revision));
@@ -795,7 +799,7 @@ export default async function handler(req, res) {
                 "if p.status == 'disconnected' or p.status == 'submitted' then return 'ERR:ATTEMPT_CLOSED' end",
                 "local revision = tonumber(ARGV[2])",
                 "if not p.answerRevision or revision > tonumber(p.answerRevision) then p.answers = cjson.decode(ARGV[1]); p.answerRevision = revision end",
-                "p.lastHeartbeat = tonumber(ARGV[3]); p.connected = true; p.tabHidden = false; p.tabHiddenSince = nil",
+                "p.lastHeartbeat = tonumber(ARGV[3]); p.connected = true",
                 "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[4])",
                 "return cjson.encode(p)"
             ].join('\n');
