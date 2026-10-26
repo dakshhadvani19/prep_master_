@@ -100,6 +100,56 @@ describe('homepage', () => {
     expect(screen.queryByText('404')).toBeNull();
   }, 20000);
 
+  it('shows a clear invalid-code message for malformed input', async () => {
+    const originalFetch = globalThis.fetch;
+    globalThis.fetch = vi.fn().mockResolvedValue({
+      ok: false,
+      status: 400,
+      json: async () => ({ error: 'That room code is invalid. Enter the 10-character code shared by the host.' }),
+    });
+    try {
+      await at('/test-rooms');
+      fireEvent.change(screen.getByLabelText(/Room code/i), { target: { value: 'BAD' } });
+      fireEvent.click(screen.getByRole('button', { name: /Check Code & Join/i }));
+      expect(await screen.findByText(/That room code is invalid/i)).toBeTruthy();
+      expect(screen.queryByText(/Redis|WebSocket|database/i)).toBeNull();
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  }, 20000);
+
+  it('explains when a Test Room has already started without exposing service details', async () => {
+    const originalFetch = globalThis.fetch;
+    globalThis.fetch = vi.fn().mockResolvedValue({
+      ok: false,
+      status: 409,
+      json: async () => ({ error: 'This room has already started. Rejoining is disabled.' }),
+    });
+    try {
+      await at('/test-rooms/ABCDEFGHJK');
+      expect(await screen.findByText(/This Test Room has already started and is no longer accepting participants/i)).toBeTruthy();
+      expect(screen.queryByText(/Redis|WebSocket|database/i)).toBeNull();
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  }, 20000);
+
+  it('replaces backend infrastructure errors with a safe user-facing message', async () => {
+    const originalFetch = globalThis.fetch;
+    globalThis.fetch = vi.fn().mockResolvedValue({
+      ok: false,
+      status: 503,
+      json: async () => ({ error: 'Redis WebSocket database credentials failed' }),
+    });
+    try {
+      await at('/test-rooms/ABCDEFGHJK');
+      expect(await screen.findByText(/Test Rooms are temporarily unavailable/i)).toBeTruthy();
+      expect(screen.queryByText(/Redis|WebSocket|database|credentials/i)).toBeNull();
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  }, 20000);
+
   it('the landing-page Google CTA is intentionally absent; Google remains on /signup', async () => {
     // Owner commit 4804603 commented the hero "Continue with Google" button out.
     // Do not restore it. Google signup/login still lives on the auth page.
