@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { examPrompts, DEFAULT_EXAM_TYPES } from '../data/examPrompts';
+import { examPrompts } from '../data/examPrompts';
+import { getExamTypesForSubject, getSubjectExamInfo, normalizeDepartmentalFlag } from '../utils/subjectExamPolicy';
 import { fetchCourseAndSubjects } from '../utils/catalogApi';
 import {
     ChevronLeft, Book, Target, Activity, Flame, Shield,
@@ -53,7 +54,8 @@ export default function SubjectDetails() {
                 id: s.subjectId,
                 title: s.subjectName,
                 sem: s.sem,
-                exams: DEFAULT_EXAM_TYPES,
+                isDepartmentalSubject: normalizeDepartmentalFlag(s.isDepartmentalSubject),
+                exams: getExamTypesForSubject(s.isDepartmentalSubject),
             })));
             setLoading(false);
         }).catch((err) => {
@@ -115,21 +117,22 @@ export default function SubjectDetails() {
         if (!selectedSubject || !selectedExamType || !selectedMode || !selectedDifficulty) return;
         navigate(
             `/exams/${selectedSubject.id}/${selectedExamType}/${selectedDifficulty}`,
-            { state: { examMode: selectedMode } }
+            { state: { examMode: selectedMode, isDepartmentalSubject: selectedSubject.isDepartmentalSubject } }
         );
     };
 
     const canStart = selectedSubject && selectedExamType && selectedMode && selectedDifficulty;
-    const canUseTestRoom = Boolean(canStart && examPrompts[selectedExamType]?.type === 'objective');
+    const canUseTestRoom = Boolean(canStart && getSubjectExamInfo(selectedExamType, selectedSubject?.isDepartmentalSubject)?.type === 'objective');
 
     const handleCreateTestRoom = () => {
         if (!canUseTestRoom) return;
-        const info = examPrompts[selectedExamType];
+        const info = getSubjectExamInfo(selectedExamType, selectedSubject?.isDepartmentalSubject);
         navigate(
             `/exams/${selectedSubject.id}/${selectedExamType}/${selectedDifficulty}`,
             {
                 state: {
                     examMode: selectedMode,
+                    isDepartmentalSubject: selectedSubject.isDepartmentalSubject,
                     testRoomMode: 'create',
                     courseId: String(courseId),
                     subjectName: selectedSubject.title,
@@ -295,7 +298,7 @@ export default function SubjectDetails() {
                                             </p>
                                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                                                 {subject.exams.map(examType => {
-                                                    const info = examPrompts[examType];
+                                                    const info = getSubjectExamInfo(examType, subject.isDepartmentalSubject);
                                                     const isSel = selectedExamType === examType;
                                                     return (
                                                         <button
