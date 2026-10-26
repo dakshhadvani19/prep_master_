@@ -718,7 +718,7 @@ export default async function handler(req, res) {
                 "p.lastHeartbeat = tonumber(ARGV[2]); p.lastVisibilityChange = tonumber(ARGV[2]); p.connected = true",
                 "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[3])",
                 "return cjson.encode(p)"
-            ].join('\\n');
+            ].join('\n');
             const updated = String(await redis(
                 'EVAL', script, 1, keys(code, user.id).participant,
                 isVisible ? 'true' : 'false', now, ROOM_TTL_SECONDS,
