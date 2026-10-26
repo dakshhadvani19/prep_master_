@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import {
     AlertCircle, ArrowLeft, ArrowRight, Check, CheckCircle2, Clipboard,
     Clock3, DoorOpen, GraduationCap, LoaderCircle, LockKeyhole, Play,
-    ShieldCheck, Sparkles, Users, XCircle,
+    Link as LinkIcon, ShieldCheck, Sparkles, Users, XCircle,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { requireSupabase } from '../supabase';
@@ -120,7 +120,9 @@ export default function TestRoomPage() {
     const createPayload = location.state?.testRoomMode === 'create' && Array.isArray(location.state?.questions)
         ? location.state
         : null;
-    const isHostFlow = !routeCode && Boolean(createPayload);
+    // Host status is explicit when the newly-created room moves to /test-rooms/:code.
+    // A page reload creates a fresh ref, so an old host route cannot resume the session.
+    const isHostFlow = Boolean(createPayload) && (!routeCode || location.state?.testRoomHost === true);
     const userId = currentUser?.uid || currentUser?.id || '';
     const displayName = currentUser?.displayName || currentUser?.email?.split('@')[0] || 'Student';
 
@@ -141,6 +143,7 @@ export default function TestRoomPage() {
     const [verifiedJoin, setVerifiedJoin] = useState(false);
     const [error, setError] = useState('');
     const [copied, setCopied] = useState(false);
+    const [linkCopied, setLinkCopied] = useState(false);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answers, setAnswers] = useState({});
     const [timeLeft, setTimeLeft] = useState(0);
@@ -166,6 +169,7 @@ export default function TestRoomPage() {
     const previousPresenceIdsRef = useRef(new Set());
     const connectionLostRef = useRef(false);
     const disconnectingRef = useRef(false);
+    const hostCreatedRoomRef = useRef(false);
 
     useEffect(() => { canonicalQuestionsRef.current = canonicalQuestions; }, [canonicalQuestions]);
     useEffect(() => { answersRef.current = answers; }, [answers]);
@@ -191,6 +195,12 @@ export default function TestRoomPage() {
     // The host's presence contains the temporary session summary; no room row is created.
     useEffect(() => {
         if (!routeCode || !userId) return undefined;
+        if (isHostFlow) {
+            if (hostCreatedRoomRef.current) return undefined;
+            setError('The host session cannot be resumed from a room URL. Create a new room to start another session.');
+            setView('error');
+            return undefined;
+        }
         let cancelled = false;
 
         (async () => {
@@ -217,7 +227,7 @@ export default function TestRoomPage() {
         })();
 
         return () => { cancelled = true; };
-    }, [routeCode, userId]);
+    }, [routeCode, userId, isHostFlow]);
 
     // A single Realtime channel holds only live Presence/Broadcast state. Unmounting
     // closes this browser's connection; the session is intentionally not durable.
@@ -539,6 +549,13 @@ export default function TestRoomPage() {
             setRoomCode(response.code);
             setPersistenceError('');
             setView('share');
+            // Keep the join code in the address bar for the host and any copied invite link.
+            // This ref distinguishes the live host flow from a fresh tab/reload of that URL.
+            hostCreatedRoomRef.current = true;
+            navigate('/test-rooms/' + normalizedCode(response.code), {
+                replace: true,
+                state: { ...location.state, testRoomHost: true },
+            });
         } catch (err) {
             setError(err.message || 'Could not create a Test Room.');
         } finally {
@@ -715,6 +732,8 @@ export default function TestRoomPage() {
         const onOnline = () => {
             if (connectionLostRef.current) finalizeDisconnect(false);
         };
+        // Do not treat visibilitychange as a disconnect: switching tabs is allowed.
+        // pagehide is the best-effort close/navigation signal; server heartbeats reconcile missed events.
         const onPageHide = () => { finalizeDisconnect(true); };
         window.addEventListener('offline', onOffline);
         window.addEventListener('online', onOnline);
@@ -747,6 +766,17 @@ export default function TestRoomPage() {
             setTimeout(() => setCopied(false), 1800);
         } catch {
             setError('Clipboard access was blocked. Select and copy the code manually.');
+        }
+    };
+
+    const copyRoomLink = async () => {
+        try {
+            const joinUrl = window.location.origin + '/test-rooms/' + normalizedCode(roomCode);
+            await navigator.clipboard.writeText(joinUrl);
+            setLinkCopied(true);
+            setTimeout(() => setLinkCopied(false), 1800);
+        } catch {
+            setError('Clipboard access was blocked. Copy the room URL from the address bar.');
         }
     };
 
@@ -794,14 +824,14 @@ export default function TestRoomPage() {
                         spellCheck={false}
                         value={joinCodeInput}
                         onChange={(event) => setJoinCodeInput(normalizedCode(event.target.value).slice(0, 10))}
-                        onKeyDown={(event) => { if (event.key === 'Enter' && codeLooksValid) navigate('/test-rooms/session', { state: { temporaryRoomCode: normalizedCode(joinCodeInput) } }); }}
+                        onKeyDown={(event) => { if (event.key === 'Enter' && codeLooksValid) navigate('/test-rooms/' + normalizedCode(joinCodeInput)); }}
                         placeholder="e.g. 7KMR2QXNA8"
                         aria-describedby="room-code-hint"
                         style={{ width: '100%', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.9rem 1rem', background: 'var(--bg-tertiary)', color: 'var(--text-primary)', font: 'inherit', fontSize: '1.1rem', letterSpacing: '0.1em', marginBottom: '0.6rem' }}
                     />
                     <p id="room-code-hint" style={{ color: 'var(--text-tertiary)', fontSize: '0.8rem', marginBottom: '1.3rem' }}>Letters I/O and digits 0/1 are excluded to make codes easier to read.</p>
                     {error && <p role="alert" style={{ color: '#fca5a5', fontSize: '0.88rem', marginBottom: '1rem' }}>{error}</p>}
-                    <button disabled={!codeLooksValid} onClick={() => navigate('/test-rooms/session', { state: { temporaryRoomCode: normalizedCode(joinCodeInput) } })} style={roomButtonStyle('primary', !codeLooksValid)}>
+                    <button disabled={!codeLooksValid} onClick={() => navigate('/test-rooms/' + normalizedCode(joinCodeInput))} style={roomButtonStyle('primary', !codeLooksValid)}>
                         <DoorOpen size={18} /> Check Code &amp; Join
                     </button>
                     <p style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', lineHeight: 1.55, marginTop: '1rem' }}>
@@ -917,9 +947,14 @@ export default function TestRoomPage() {
                     <div style={{ border: '1px solid var(--border-color)', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-xl)', padding: '1.5rem', maxWidth: 500, margin: '0 auto 1.5rem' }}>
                         <div style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '0.55rem' }}>Room join code</div>
                         <div style={{ fontSize: 'clamp(1.7rem,6vw,2.5rem)', fontWeight: 800, letterSpacing: '0.13em', fontVariantNumeric: 'tabular-nums' }}>{formattedCode(roomCode)}</div>
-                        <button onClick={copyRoomCode} style={{ ...roomButtonStyle('secondary'), marginTop: '1.1rem', maxWidth: 220, marginInline: 'auto' }}>
-                            {copied ? <><Check size={17} /> Copied</> : <><Clipboard size={17} /> Copy code</>}
-                        </button>
+                        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '0.65rem', marginTop: '1.1rem' }}>
+                            <button onClick={copyRoomCode} style={{ ...roomButtonStyle('secondary'), maxWidth: 220, marginInline: 'auto' }}>
+                                {copied ? <><Check size={17} /> Copied</> : <><Clipboard size={17} /> Copy code</>}
+                            </button>
+                            <button onClick={copyRoomLink} style={{ ...roomButtonStyle('secondary'), maxWidth: 240, marginInline: 'auto' }}>
+                                {linkCopied ? <><Check size={17} /> Link copied</> : <><LinkIcon size={17} /> Copy invite link</>}
+                            </button>
+                        </div>
                     </div>
 
                     <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '0.88rem' }}>
