@@ -5,6 +5,7 @@ import {
     normalizeCode,
     resolveFinalization,
     roomJoinError,
+    shouldFinalizeStaleHeartbeat,
     safeQuestions,
     scoreAnswers,
 } from '../api/test-room-session.js';
@@ -53,6 +54,25 @@ describe('Test Room join lifecycle policy', () => {
         expect(roomJoinError('waiting')).toBeNull();
         expect(roomJoinError('started')).toMatch(/already started.*rejoining is disabled/i);
         expect(roomJoinError('finished')).toMatch(/already ended/i);
+    });
+});
+
+describe('Test Room background-tab heartbeat behavior', () => {
+    it('does not treat a hidden tab with throttled timers as a disconnect', () => {
+        expect(shouldFinalizeStaleHeartbeat({
+            lastHeartbeat: 100,
+            tabHidden: true,
+        }, 500_000)).toBe(false);
+    });
+
+    it('still detects an overdue visible participant or one without visibility state', () => {
+        expect(shouldFinalizeStaleHeartbeat({
+            lastHeartbeat: 100,
+            tabHidden: false,
+        }, 36_000)).toBe(true);
+        expect(shouldFinalizeStaleHeartbeat({
+            lastHeartbeat: 100,
+        }, 36_000)).toBe(true);
     });
 });
 
