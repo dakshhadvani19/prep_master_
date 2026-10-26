@@ -175,7 +175,7 @@ describe('course → subjects', () => {
     expect(screen.getByRole('button', { name: /Final Examination \(ESE/i })).toBeTruthy();
     expect(screen.queryByRole('button', { name: /Mid-Term 1 \(MCQ \/ Objective\)/i })).toBeNull();
 
-    fireEvent.click(screen.getByRole('button', { name: /Departmental Subject/i }));
+    fireEvent.click(screen.getByRole('button', { name: /^Departmental Subject$/i }));
     expect(screen.getByRole('button', { name: /Mid-Term 1 \(MCQ \/ Objective\).*45m.*30M/i })).toBeTruthy();
     expect(screen.getByRole('button', { name: /Mid-Term 2 \(MCQ \/ Objective\).*45m.*30M/i })).toBeTruthy();
     expect(screen.queryByRole('button', { name: /Final Examination \(ESE/i })).toBeNull();
