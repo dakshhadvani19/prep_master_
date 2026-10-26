@@ -383,7 +383,7 @@ export function makeBuilder(table) {
 }
 
 function catalogRows(table, filters) {
-  const rows = canonicalTable === 'Courses' ? state.catalogCourses : state.catalogSubjects;
+  const rows = table === 'Courses' ? state.catalogCourses : state.catalogSubjects;
   const wanted = filters?.CourseId;
   if (wanted === undefined) return [...rows];
   if (Array.isArray(wanted)) {
