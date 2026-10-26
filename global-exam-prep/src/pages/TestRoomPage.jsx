@@ -677,6 +677,7 @@ export default function TestRoomPage() {
                     code: roomCode,
                     answers: toCanonicalAnswerArray(answersRef.current, canonicalQuestionsRef.current.length || 30),
                     revision,
+                    isVisible: document.visibilityState === 'visible',
                 });
                 if (cancelled) return;
                 if (!result.active) {
@@ -708,6 +709,36 @@ export default function TestRoomPage() {
         const timer = setInterval(heartbeat, 10000);
         heartbeat();
         return () => { cancelled = true; clearInterval(timer); };
+    }, [attemptId, roomCode, roomMeta?.status, view]);
+
+    // Send tab visibility to the server so throttled background timers do not
+    // cause a normal tab switch to look like a dead connection.
+    useEffect(() => {
+        if (roomMeta?.status !== 'started' || view !== 'attempt' || !attemptId || !roomCode) return undefined;
+        let cancelled = false;
+        const syncVisibility = async () => {
+            const isVisible = document.visibilityState === 'visible';
+            try {
+                const result = await callRoomApi(
+                    { action: 'visibility', code: roomCode, isVisible },
+                    { keepalive: !isVisible },
+                );
+                if (cancelled || result?.active !== false) return;
+                connectionLostRef.current = true;
+                setError('This attempt is no longer active. Your saved result is available on the dashboard.');
+                setConnected(false);
+                setView('error');
+            } catch {
+                // Regular answer saves and heartbeats remain the fallback if this
+                // best-effort visibility signal cannot reach the server.
+            }
+        };
+        document.addEventListener('visibilitychange', syncVisibility);
+        syncVisibility();
+        return () => {
+            cancelled = true;
+            document.removeEventListener('visibilitychange', syncVisibility);
+        };
     }, [attemptId, roomCode, roomMeta?.status, view]);
 
     // Best-effort explicit finalization when the tab closes or the device goes offline.
