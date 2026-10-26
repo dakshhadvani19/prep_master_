@@ -18,6 +18,20 @@ export function lookupNumericSubject(routeId) {
     };
 }
 
+function unknownSubjectContext(raw) {
+    return {
+        kind: 'unknown',
+        sourceSubjectId: raw == null ? '' : String(raw),
+        numericSubjectId: null,
+        courseSourceId: null,
+        courseId: null,
+        sem: undefined,
+        subject: null,
+        course: null,
+        domain: null,
+    };
+}
+
 export function findSubjectContext(domains, routeSubjectId) {
     const numeric = lookupNumericSubject(routeSubjectId);
     if (numeric) {
@@ -36,6 +50,11 @@ export function findSubjectContext(domains, routeSubjectId) {
     }
 
     const raw = routeSubjectId;
+    // Numeric IDs are canonical public-catalog routes. If the bridge no longer
+    // contains one, it was archived or is invalid; never fall back to an old
+    // legacy mockData row that could accidentally resurrect the removed route.
+    if (/^\d+$/.test(String(raw ?? ''))) return unknownSubjectContext(raw);
+
     for (const domain of domains || []) {
         for (const course of domain.courses || []) {
             const subject = (course.subjects || []).find((s) => s.id === raw);
@@ -66,17 +85,7 @@ export function findSubjectContext(domains, routeSubjectId) {
         }
     }
 
-    return {
-        kind: 'unknown',
-        sourceSubjectId: raw == null ? '' : String(raw),
-        numericSubjectId: null,
-        courseSourceId: null,
-        courseId: null,
-        sem: undefined,
-        subject: null,
-        course: null,
-        domain: null,
-    };
+    return unknownSubjectContext(raw);
 }
 
 export function bridgeEntryCount() {

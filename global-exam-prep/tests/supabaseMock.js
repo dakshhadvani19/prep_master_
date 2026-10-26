@@ -306,8 +306,11 @@ export function makeBuilder(table) {
   const canonicalTable = normalizedTable === 'courses' ? 'Courses'
     : normalizedTable === 'subjects' ? 'Subjects'
       : normalizedTable;
+  const reportedTable = canonicalTable === 'Courses' || canonicalTable === 'Subjects'
+    ? canonicalTable
+    : normalizedTable;
   const record = () => state.calls.push({
-    name: `${b._op}:${normalizedTable}`, op: b._op, table: normalizedTable,
+    name: `${b._op}:${reportedTable}`, op: b._op, table: reportedTable,
     cols: b._cols, payload: b._payload, filters: { ...b._filters },
   });
   const b = {
