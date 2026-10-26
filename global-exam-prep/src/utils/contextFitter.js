@@ -291,18 +291,34 @@ export function buildBalancedObjectiveSource(record, chapterIndices, prefix = ''
  * @param {string} examType — 'mid1' | 'mid2' | 'ese'
  * @returns {object} { chapterIndices, batches, coveragePlan, config }
  */
-export function fitContext(record, examType) {
+export function fitContext(record, examType, { isDepartmentalSubject = false } = {}) {
     const normalizedType = normalizeExamType(examType);
     const chapterIndices = selectScopeChapters(record, normalizedType);
+    const isDepartmentalMid1 = isDepartmentalSubject === true && normalizedType === 'mid1';
+    const config = isDepartmentalMid1
+        ? {
+            ...EXAM_CONFIG.mid1,
+            type: 'objective',
+            timeMinutes: 45,
+            questionCount: 30,
+            markSequence: undefined,
+            markDistribution: { mcqCount: 30 },
+            questionTypes: ['mcq'],
+        }
+        : EXAM_CONFIG[normalizedType];
     if (chapterIndices.length === 0) {
         throw new Error(`No in-scope chapters found for exam type ${examType}`);
     }
     const batches = buildBatches(record, chapterIndices);
     const coveragePlan = buildCoveragePlan(record, normalizedType, chapterIndices, batches);
+    if (isDepartmentalMid1) {
+        coveragePlan.markDistribution = config.markDistribution;
+        coveragePlan.questionTypes = config.questionTypes;
+    }
     return {
         chapterIndices,
         batches,
         coveragePlan,
-        config: EXAM_CONFIG[normalizedType],
+        config,
     };
 }
