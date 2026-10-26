@@ -47,6 +47,11 @@ describe('contextFitter', () => {
         expect(normalizeExamType('mid-2')).toBe('mid2');
         expect(normalizeExamType('final')).toBe('ese');
         expect(fitContext(makeRecord(4), 'mid-1').config.totalMarks).toBe(30);
+        const departmentalMid1 = fitContext(makeRecord(4), 'mid-1', { isDepartmentalSubject: true });
+        expect(departmentalMid1.config.type).toBe('objective');
+        expect(departmentalMid1.config.questionCount).toBe(30);
+        expect(departmentalMid1.config.markDistribution).toEqual({ mcqCount: 30 });
+        expect(departmentalMid1.coveragePlan.questionTypes).toEqual(['mcq']);
         expect(fitContext(makeRecord(4), 'mid-2').config.type).toBe('objective');
         expect(fitContext(makeRecord(4), 'final').config.totalMarks).toBe(60);
     });
