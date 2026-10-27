@@ -3,6 +3,7 @@
  * Does not import mockData.js. ExamPortal passes `domains` in.
  */
 import bridge from '../data/subjectIdBridge.json';
+import liveSubjectContextOverrides from '../data/liveSubjectContextOverrides.json';
 
 export function lookupNumericSubject(routeId) {
     const key = String(routeId ?? '');
@@ -44,6 +45,26 @@ export function findSubjectContext(domains, routeSubjectId) {
             ));
             if (subject) {
                 return { ...numeric, kind: 'numeric', subject, course, domain };
+            }
+        }
+        const override = liveSubjectContextOverrides.subjects?.[String(routeSubjectId)];
+        if (override) {
+            for (const domain of domains || []) {
+                const course = (domain.courses || []).find((c) => c.id === numeric.courseSourceId);
+                if (!course) continue;
+                return {
+                    ...numeric,
+                    kind: 'numeric',
+                    subject: {
+                        id: String(routeSubjectId),
+                        title: override.subjectName,
+                        sem: numeric.sem,
+                        exams: ['mid-1', 'mid-2', 'final'],
+                    },
+                    course,
+                    domain,
+                    liveCatalogOverride: true,
+                };
             }
         }
         return { ...numeric, kind: 'numeric', subject: null, course: null, domain: null };

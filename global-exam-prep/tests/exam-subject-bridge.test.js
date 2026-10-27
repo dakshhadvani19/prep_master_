@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import { domains } from '../src/data/mockData';
 import subjectSemesterMap from '../src/data/subjectSemesterMap.json';
 import subjectIdBridge from '../src/data/subjectIdBridge.json';
+import liveSubjectContextOverrides from '../src/data/liveSubjectContextOverrides.json';
 import {
   findSubjectContext,
   lookupNumericSubject,
@@ -167,6 +168,29 @@ describe('canonical catalog coverage', () => {
     );
   });
 
+});
+
+describe('live numeric subjects missing from legacy mockData', () => {
+  it('resolves the 60 live BCA/MCA subject IDs with authoritative catalog metadata', () => {
+    expect(liveSubjectContextOverrides.count).toBe(60);
+    expect(Object.keys(liveSubjectContextOverrides.subjects)).toHaveLength(60);
+    for (const [id, override] of Object.entries(liveSubjectContextOverrides.subjects)) {
+      const context = findSubjectContext(domains, id);
+      expect(context.kind).toBe('numeric');
+      expect(context.liveCatalogOverride).toBe(true);
+      expect(context.sourceSubjectId).toBe(subjectIdBridge[id].s);
+      expect(context.course.id).toBe(override.courseSourceId);
+      expect(context.subject.id).toBe(id);
+      expect(context.subject.title).toBe(override.subjectName);
+      expect(context.sem).toBe(override.semester);
+    }
+  });
+
+  it('does not create overrides for any other live catalog subject', () => {
+    expect(Object.keys(liveSubjectContextOverrides.subjects).every((id) => (
+      ['bca', 'mca'].includes(subjectIdBridge[id]?.c)
+    ))).toBe(true);
+  });
 });
 
 describe('ExamPortal numeric / legacy resolution', () => {
