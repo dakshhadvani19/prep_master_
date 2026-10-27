@@ -342,6 +342,7 @@ export default function ExamPortal() {
                             subjectCode: sourceSubjectId,
                             subjectName: subjectDetail.title,
                             examType,
+                            difficulty,
                             questions: generatedQuestions,
                             totalMarks: config.totalMarks,
                             timeMinutes: config.timeMinutes,
