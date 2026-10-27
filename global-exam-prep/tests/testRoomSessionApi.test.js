@@ -86,6 +86,16 @@ describe('Test Room join lifecycle policy', () => {
     });
 });
 
+describe('Test Room start Redis script arguments', () => {
+    it('reads TTL and cleanup grace from the arguments actually passed to EVAL', () => {
+        const apiSource = readFileSync(new URL('../api/test-room-session.js', import.meta.url), 'utf8');
+        expect(apiSource).toContain('"local ttl = tonumber(ARGV[3]) or 3600"');
+        expect(apiSource).toContain('"  ttl = math.max(ttl, (tonumber(meta.durationMinutes) or 45) * 60 + (tonumber(ARGV[4]) or 300))"');
+        expect(apiSource).not.toContain('tonumber(ARGV[5])');
+        expect(apiSource).toContain('ROOM_TTL_SECONDS, ROOM_CLEANUP_GRACE_SECONDS,');
+    });
+});
+
 describe('Test Room retention policy', () => {
     it('keeps waiting rooms for one hour and started rooms through the test plus cleanup grace', () => {
         const startedAt = 1_000_000;
