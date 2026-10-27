@@ -16,6 +16,7 @@ const MIGRATIONS = [
     '20261027112959_leaderboard_completed_subject_filters.sql',
     '20261027113555_leaderboard_canonical_subject_binding.sql',
     '20261027114334_backfill_unambiguous_legacy_leaderboard_subjects.sql',
+    '20261027115731_leaderboard_include_finalized_attempts.sql',
 ].map((filename) => readFileSync(
     `${globalThis.process.cwd()}/supabase/migrations/${filename}`,
     'utf8',
@@ -432,6 +433,16 @@ describe('Private attempt persistence and public ERD mirroring', () => {
         );
         expect(pendingTag.rows[0].result.ok).toBe(true);
 
+        const beforeTimeout = await db.query(
+            `select public.pm_leaderboard_completed_subjects('${USER_A}'::uuid) as result`,
+        );
+        expect(beforeTimeout.rows[0].result).toHaveLength(1);
+        await db.query(`
+            update private.exam_attempts
+               set status='timed_out', score=0, submitted_at=now(), updated_at=now()
+             where id=$1
+        `, [pending.rows[0].id]);
+
         const projection = await db.query(
             `select public.pm_leaderboard_completed_subjects('${USER_A}'::uuid) as result`,
         );
@@ -439,15 +450,23 @@ describe('Private attempt persistence and public ERD mirroring', () => {
             `select public.pm_leaderboard_completed_subjects('${USER_B}'::uuid) as result`,
         );
         expect(otherStudent.rows[0].result).toEqual([]);
-        expect(projection.rows[0].result).toHaveLength(1);
-        expect(projection.rows[0].result[0]).toMatchObject({
+        expect(projection.rows[0].result).toHaveLength(2);
+        expect(projection.rows[0].result).toContainEqual(expect.objectContaining({
             subject_id: 1001,
             course_id: 1,
             semester: 1,
             subject_code: '01ma0106',
             subject_name: 'Calculus',
             exam_type: 'Mid-Term 2',
-        });
+        }));
+        expect(projection.rows[0].result).toContainEqual(expect.objectContaining({
+            subject_id: 1002,
+            course_id: 1,
+            semester: 1,
+            subject_code: '01ce1101',
+            subject_name: 'Computer Programming',
+            exam_type: 'Mid-Term 2',
+        }));
 
         const privileges = await db.query(`
             select

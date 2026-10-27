@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
     cleanQuestions,
     buildStartRoomScript,
+    buildCloseParticipantSnapshotScript,
     buildLobbySnapshot,
     normalizeAnswers,
     normalizeCode,
@@ -84,6 +85,18 @@ describe('Test Room join lifecycle policy', () => {
         expect(normalizeCode('  ABCDE-FGHJK ')).toBe('ABCDEFGHJK');
         expect(normalizeCode('INVALID-ROOM')).toBeNull();
         expect(normalizeCode('')).toBeNull();
+    });
+});
+
+describe('Test Room participant finalization script', () => {
+    it('atomically closes the participant snapshot and preserves the newest accepted answer revision', () => {
+        const script = buildCloseParticipantSnapshotScript();
+        expect(script).toContain("if p.finalStatus then return cjson.encode(p) end");
+        expect(script).toContain("local wasClosed = p.status == 'submitted' or p.status == 'disconnected'");
+        expect(script).toContain("incomingRevision > tonumber(p.answerRevision)");
+        expect(script).toContain("p.status = ARGV[3]; p.finalStatus = ARGV[4]; p.endReason = ARGV[5]");
+        expect(script).toContain("p.connected = false; p.disconnectedAt = tonumber(ARGV[6]) or 0");
+        expect(script).toContain("redis.call('SET', KEYS[1], cjson.encode(p), 'EX', tonumber(ARGV[7]) or 3600)");
     });
 });
 

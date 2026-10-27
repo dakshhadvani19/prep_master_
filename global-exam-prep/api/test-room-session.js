@@ -315,6 +315,57 @@ async function writeAnswers(admin, attemptId, uid, answers, revision) {
     });
     return Boolean(data?.id);
 }
+export function buildCloseParticipantSnapshotScript() {
+    return [
+        "local raw = redis.call('GET', KEYS[1])",
+        "if not raw then return 'ERR:PARTICIPANT_NOT_FOUND' end",
+        "local p = cjson.decode(raw)",
+        "if p.finalStatus then return cjson.encode(p) end",
+        "local wasClosed = p.status == 'submitted' or p.status == 'disconnected'",
+        "local incomingRevision = tonumber(ARGV[2]) or 0",
+        "if not wasClosed and ARGV[1] ~= 'none' and (not p.answerRevision or incomingRevision > tonumber(p.answerRevision)) then",
+        "  p.answers = cjson.decode(ARGV[1]); p.answerRevision = incomingRevision",
+        "end",
+        "p.status = ARGV[3]; p.finalStatus = ARGV[4]; p.endReason = ARGV[5]",
+        "p.connected = false; p.disconnectedAt = tonumber(ARGV[6]) or 0",
+        "redis.call('SET', KEYS[1], cjson.encode(p), 'EX', tonumber(ARGV[7]) or 3600)",
+        "return cjson.encode(p)"
+    ].join('\n');
+}
+
+async function closeParticipantSnapshot(code, uid, status, reason, submittedAnswers = null, submittedRevision = null) {
+    const room = await getRoom(code).catch(() => null);
+    const questions = await getQuestions(code).catch(() => null);
+    const answerCount = Array.isArray(questions) && questions.length
+        ? questions.length
+        : Array.isArray(submittedAnswers) && submittedAnswers.length
+            ? submittedAnswers.length
+            : 30;
+    const answersJson = Array.isArray(submittedAnswers)
+        ? JSON.stringify(normalizeAnswers(submittedAnswers, answerCount))
+        : 'none';
+    const revision = Math.max(0, Math.floor(Number(submittedRevision) || 0));
+    const participantStatus = ['submitted', 'auto_submitted', 'timed_out'].includes(status)
+        ? 'submitted'
+        : 'disconnected';
+    const now = Date.now();
+    const result = String(await redis(
+        'EVAL',
+        buildCloseParticipantSnapshotScript(),
+        1,
+        keys(code, uid).participant,
+        answersJson,
+        revision,
+        participantStatus,
+        status,
+        reason,
+        now,
+        roomTtlSeconds(room),
+    ));
+    if (result.startsWith('ERR:')) return null;
+    return parseJson(result);
+}
+
 async function privateAnswerKey(admin, attemptId, questions = null) {
     if (Array.isArray(questions) && questions.length) return questions.map((q) => q.answer);
     const data = await privateExamData(admin, 'get_answer_key', { attempt_id: attemptId });

@@ -15,7 +15,7 @@ Changing an earlier filter clears downstream choices. Search inputs only narrow 
 
 ### Unlock policy
 
-- A student unlocks a subject after a qualifying attempt is **submitted/auto-submitted**, has a submission timestamp, has a score, and has a positive maximum mark.
+- A student unlocks a subject after a qualifying attempt is finalized with a submission timestamp, score, and positive maximum mark. Qualifying statuses are `submitted`, `auto_submitted`, `timed_out`, and `disconnected`; waiting/in-progress attempts and pre-start cancellations do not unlock a subject.
 - The subject is identified by its canonical `public.Subjects.SubjectId`, not only by a display name or short code.
 - A new attempt submits a numeric catalog SubjectId to the authenticated backend. The backend verifies that ID against `public.Subjects` and stores the related SubjectId, CourseId and Semester in `private.exam_attempts`. Those values are not trusted from the browser.
 - The browser never queries the private schema. `POST /api/leaderboard-filters` verifies the current Supabase access token and calls the service-role-only `pm_leaderboard_completed_subjects` function for that user. The data contains that student's qualifying subject access only, not other students or scores.
