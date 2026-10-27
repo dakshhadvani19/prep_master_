@@ -520,7 +520,7 @@ export default function Leaderboard() {
                                     <h3>{selectedSubject.subjectName}</h3>
                                     <p>{selectedIsUnlocked
                                         ? isAdmin
-                                            ? 'The department, course, semester, and subject filters are set. Verified leaderboard rankings will be connected in the next phase.'
+                                            ? 'Administrator preview: your department, course, semester, and subject filters are set. Verified leaderboard rankings will be connected in the next phase.'
                                             : 'Your completed exam unlocks this subject. The ranking list and verified scores will be connected in the next phase.'
                                         : accessError
                                             ? 'We could not confirm your exam history. Retry the access check before trying again.'
