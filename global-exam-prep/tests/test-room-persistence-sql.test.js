@@ -11,6 +11,8 @@ const MIGRATIONS = [
     '20261027102327_create_private_leaderboard_attempt_results.sql',
     '20261027103817_move_exam_support_to_private_and_remove_grades.sql',
     '20261027110601_mirror_private_attempts_to_core_test_tables.sql',
+    '20261027111619_mirror_private_test_rooms_to_public_testrooms.sql',
+    '20261027112142_index_private_exam_core_mirror_foreign_keys.sql',
 ].map((filename) => readFileSync(
     `${globalThis.process.cwd()}/supabase/migrations/${filename}`,
     'utf8',
@@ -73,6 +75,28 @@ beforeAll(async () => {
             unique ("StudentId", "TestId"),
             check ("Attempted" + "UnAttempted" = cardinality("Answers")),
             check ("Correct" + "InCorrect" <= "Attempted")
+        );
+
+        create table public."TestRooms" (
+            "RoomId" bigint generated always as identity primary key,
+            "TestId" bigint not null references public."TestsData"("TestId") on delete restrict,
+            "StudentId" bigint[] not null,
+            "Points" smallint[] not null,
+            "Difficulty" varchar(10) not null check ("Difficulty" in ('easy','medium','hard')),
+            "Correct" smallint[] not null,
+            "InCorrect" smallint[] not null,
+            "Attempted" smallint[] not null,
+            "Unattempted" smallint[] not null,
+            "Answers" smallint[][] not null,
+            check (cardinality("StudentId") between 1 and 50),
+            check (cardinality("StudentId") = cardinality("Points")),
+            check (cardinality("StudentId") = cardinality("Correct")),
+            check (cardinality("StudentId") = cardinality("InCorrect")),
+            check (cardinality("StudentId") = cardinality("Attempted")),
+            check (cardinality("StudentId") = cardinality("Unattempted")),
+            check (array_ndims("Answers") = 2),
+            check (array_length("Answers", 1) = cardinality("StudentId")),
+            check (array_length("Answers", 2) between 1 and 30)
         );
     `);
     for (const migration of MIGRATIONS) await db.exec(migration);
@@ -211,6 +235,54 @@ describe('Private attempt persistence and public ERD mirroring', () => {
             from public."TestAttempts" where "TestId"=$1
         `, [host.rows[0].core_test_id]);
         expect(rows.rows[0]).toEqual({ attempts: 2, papers: 1 });
+
+        const aggregateBeforeSubmit = await db.query(`
+            select r."RoomId", r."StudentId", r."Points", r."Correct", r."InCorrect",
+                   r."Attempted", r."Unattempted", r."Answers"
+            from public."TestRooms" r
+            join private.exam_attempts a on a.core_room_id = r."RoomId"
+            where a.id = $1
+        `, [host.rows[0].id]);
+        expect(aggregateBeforeSubmit.rows).toHaveLength(1);
+        expect(aggregateBeforeSubmit.rows[0].StudentId).toEqual([1, 2]);
+        expect(aggregateBeforeSubmit.rows[0].Points).toEqual([0, 0]);
+        expect(aggregateBeforeSubmit.rows[0].Answers).toEqual([[null], [null]]);
+
+        await db.query(`
+            update private.exam_attempts
+               set answers='[0]'::jsonb, score=1, status='submitted',
+                   submitted_at=now(), updated_at=now(), correct_count=1,
+                   incorrect_count=0, attempted_count=1, unattempted_count=0
+             where id=$1
+        `, [host.rows[0].id]);
+        await db.query(`
+            update private.exam_attempts
+               set answers='[1]'::jsonb, score=0, status='submitted',
+                   submitted_at=now(), updated_at=now(), correct_count=0,
+                   incorrect_count=1, attempted_count=1, unattempted_count=0
+             where id=$1
+        `, [participant.rows[0].id]);
+
+        const aggregateAfterSubmit = await db.query(`
+            select r."Points", r."Correct", r."InCorrect", r."Attempted",
+                   r."Unattempted", r."Answers", cardinality(r."StudentId")::int AS participants
+            from public."TestRooms" r
+            join private.exam_attempts a on a.core_room_id = r."RoomId"
+            where a.id=$1
+        `, [host.rows[0].id]);
+        expect(aggregateAfterSubmit.rows).toHaveLength(1);
+        expect(aggregateAfterSubmit.rows[0]).toEqual({
+            Points: [1, 0], Correct: [1, 0], InCorrect: [0, 1],
+            Attempted: [1, 1], Unattempted: [0, 0], Answers: [[0], [1]], participants: 2,
+        });
+
+        const privateReview = await db.query(`
+            select a.answers, k.answer_key
+            from private.exam_attempts a
+            join private.exam_attempt_keys k on k.attempt_id=a.id
+            where a.id=$1
+        `, [participant.rows[0].id]);
+        expect(privateReview.rows[0]).toEqual({ answers: [1], answer_key: [0] });
     });
 
     it('prevents duplicate Test Room attempts for the same user and room code', async () => {
@@ -233,6 +305,10 @@ describe('Private attempt persistence and public ERD mirroring', () => {
         `);
         const id = inserted.rows[0].id;
         await db.query(`
+            insert into private.exam_attempt_keys(attempt_id, answer_key)
+            values ($1, '[0,1]'::jsonb)
+        `, [id]);
+        await db.query(`
             update private.exam_attempts set answers='[2,3]'::jsonb, answer_revision=2
             where id=$1 and status='in_progress' and answer_revision<2
         `, [id]);
@@ -245,6 +321,11 @@ describe('Private attempt persistence and public ERD mirroring', () => {
         expect(saved.rows[0].answers).toEqual([2, 3]);
         const mirrored = await db.query('select "Answers" from public."TestAttempts" where "AttemptId"=$1', [inserted.rows[0].core_attempt_id]);
         expect(mirrored.rows[0].Answers).toEqual([2, 3]);
+        const roomMirror = await db.query(`
+            select r."Answers" from public."TestRooms" r
+            join private.exam_attempts a on a.core_room_id=r."RoomId" where a.id=$1
+        `, [id]);
+        expect(roomMirror.rows[0].Answers).toEqual([[2, 3]]);
     });
 
     it('does not let a second finalizer overwrite an already-submitted result', async () => {
@@ -255,8 +336,13 @@ describe('Private attempt persistence and public ERD mirroring', () => {
             returning id
         `);
         const id = inserted.rows[0].id;
+        await db.query(`
+            insert into private.exam_attempt_keys(attempt_id, answer_key)
+            values ($1, '[1,2]'::jsonb)
+        `, [id]);
         const firstFinalizer = await db.query(`
-            update private.exam_attempts set status='submitted', score=2, submitted_at=now(), answers='[1,2]'::jsonb
+            update private.exam_attempts set status='submitted', score=2, submitted_at=now(), answers='[1,2]'::jsonb,
+                correct_count=2, incorrect_count=0, attempted_count=2, unattempted_count=0
             where id=$1 and user_id='${USER_A}' and attempt_type='test_room' and status='in_progress'
             returning id
         `, [id]);

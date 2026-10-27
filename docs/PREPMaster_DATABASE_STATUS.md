@@ -1,6 +1,6 @@
 # PrepMaster — Database Status
 
-> Schema updates (2026-10-27): operational `exam_attempts`, `exam_attempt_keys`, and `auth_otp` live in the unexposed `private` schema; the empty `exam_grades` table was removed. Phase 1 now mirrors 18 private attempts into 13 existing public `TestsData` papers and 18 public `TestAttempts` rows without changing their structure. `public.TestRooms` aggregate persistence remains phase 2. Older counts below are point-in-time snapshots unless explicitly updated.
+> Schema updates (2026-10-27): operational `exam_attempts`, `exam_attempt_keys`, and `auth_otp` live in the unexposed `private` schema; the empty `exam_grades` table was removed. Phase 1 mirrors 18 private attempts into 13 public `TestsData` papers and 18 public `TestAttempts` rows; phase 2 maintains 13 `public.TestRooms` aggregates. Core ERD tables are unchanged. Older counts below are point-in-time snapshots unless explicitly updated.
 
 _Last live verification: 2026-10-13 06:22 UTC (11:52 IST)_
 
