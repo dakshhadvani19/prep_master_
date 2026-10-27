@@ -339,7 +339,7 @@ export default function ExamPortal() {
                 if (!testRoomMode) {
                     try {
                         const attemptPayload = {
-                            catalogSubjectId: subjectContext.numericSubjectId || null,
+                            catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
                             subjectCode: sourceSubjectId,
                             subjectName: subjectDetail.title,
                             examType,
@@ -365,7 +365,7 @@ export default function ExamPortal() {
                             testRoomMode: 'create',
                             questions: generatedQuestions,
                             courseId: String(location.state?.courseId || ''),
-                            catalogSubjectId: subjectContext.numericSubjectId || null,
+                            catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
                             subjectId: sourceSubjectId,
                             subjectName: subjectDetail.title,
                             examType,
@@ -474,7 +474,7 @@ export default function ExamPortal() {
                         testRoomMode: 'create',
                         questions: blueprintQuestions,
                         courseId: String(location.state?.courseId || ''),
-                        catalogSubjectId: subjectContext.numericSubjectId || null,
+                        catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
                         subjectId: sourceSubjectId,
                         subjectName: subjectDetail.title,
                         examType,
