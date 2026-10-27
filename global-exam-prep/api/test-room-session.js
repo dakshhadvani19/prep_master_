@@ -106,6 +106,37 @@ function displayName(user) {
     const metadata = user?.user_metadata || {};
     return String(metadata.full_name || metadata.name || user?.email?.split('@')[0] || 'Student').trim().slice(0, 80) || 'Student';
 }
+export function buildLobbySnapshot(room, participants = []) {
+    return {
+        room: {
+            roomCode: String(room?.roomCode || ''),
+            subjectCode: String(room?.subjectCode || ''),
+            subjectName: String(room?.subjectName || 'MCQ Exam'),
+            examTitle: String(room?.examTitle || 'MCQ Exam'),
+            difficulty: ['easy', 'medium', 'hard'].includes(room?.difficulty) ? room.difficulty : 'medium',
+            durationMinutes: Math.max(1, Number(room?.durationMinutes) || 45),
+            status: String(room?.status || 'waiting'),
+            startedAt: room?.startedAt ?? null,
+            deadlineAt: room?.deadlineAt ?? null,
+            questionCount: Math.max(1, Number(room?.questionCount) || 30),
+            participantLimit: Math.max(1, Number(room?.participantLimit) || MAX_PARTICIPANTS),
+            createdAt: room?.createdAt || null,
+            expiresAt: room?.expiresAt ?? null,
+            serverNow: Date.now(),
+        },
+        participants: (Array.isArray(participants) ? participants : []).filter((person) => (
+            person && person.userId && ['host', 'participant'].includes(person.role)
+        )).map((person) => ({
+            userId: String(person.userId),
+            displayName: String(person.displayName || 'Student').slice(0, 80),
+            role: person.role,
+            status: String(person.status || 'waiting'),
+            connected: person.connected === true,
+            joinedAt: person.joinedAt || null,
+        })),
+    };
+}
+
 export function cleanQuestions(input) {
     if (!Array.isArray(input) || input.length !== 30) throw new Error('A Test Room must contain exactly 30 MCQs.');
     return input.map((q, index) => {
@@ -766,6 +797,25 @@ export default async function handler(req, res) {
                 }
             }
             return fail(res, 404, 'This room expired or is no longer available.');
+        }
+
+        if (action === 'poll_lobby') {
+            const memberIds = await redis('SMEMBERS', keys(code).members);
+            const isHost = String(room.hostUid || '') === String(user.id);
+            const isMember = Array.isArray(memberIds) && memberIds.map(String).includes(String(user.id));
+            const ownParticipant = isHost ? null : await getParticipant(code, user.id);
+            if (!isHost && (!isMember || !ownParticipant)) {
+                return fail(res, 403, 'Only members of this Test Room can read its live lobby.');
+            }
+            const participants = await Promise.all((Array.isArray(memberIds) ? memberIds : []).map(
+                (uid) => getParticipant(code, String(uid)).catch(() => null),
+            ));
+            const snapshot = buildLobbySnapshot(room, participants);
+            if (room.status === 'started' && !isHost) {
+                const questions = await getQuestions(code);
+                snapshot.questions = Array.isArray(questions) ? safeQuestions(questions) : [];
+            }
+            return res.status(200).json(snapshot);
         }
 
         if (action === 'join') {

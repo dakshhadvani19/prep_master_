@@ -232,6 +232,7 @@ export default function TestRoomPage() {
     const hostConnectionLostRef = useRef(false);
     const channelErrorReturnViewRef = useRef('share');
     const participantPresenceRef = useRef(null);
+    const fallbackJoinPendingRef = useRef(false);
 
     useEffect(() => { canonicalQuestionsRef.current = canonicalQuestions; }, [canonicalQuestions]);
     useEffect(() => { answersRef.current = answers; }, [answers]);
@@ -349,6 +350,52 @@ export default function TestRoomPage() {
             payload,
         });
 
+        const joinViaServer = async () => {
+            if (cancelled || isHostFlow || attemptIdRef.current || fallbackJoinPendingRef.current) return;
+            fallbackJoinPendingRef.current = true;
+            joinRequestPendingRef.current = true;
+            try {
+                const admission = await callRoomApi({ action: 'join', code: roomCode });
+                if (cancelled) return;
+                attemptIdRef.current = admission.attemptId;
+                setAttemptId(admission.attemptId);
+                if (Array.isArray(admission.questions)) {
+                    setCanonicalQuestions(buildCanonicalRoomQuestions(admission.questions));
+                }
+                if (admission.room) {
+                    const nextRoom = { ...(roomMetaRef.current || {}), ...admission.room };
+                    roomMetaRef.current = nextRoom;
+                    setRoomMeta(nextRoom);
+                }
+                const participantPresence = {
+                    role: 'participant',
+                    roomCode: normalizedCode(roomCode),
+                    userId,
+                    displayName: String(displayName).slice(0, 80),
+                    joinedAt: new Date().toISOString(),
+                };
+                participantPresenceRef.current = participantPresence;
+                try {
+                    await channel.track(participantPresence);
+                } catch (presenceError) {
+                    console.warn('[TestRoom] Joined through server fallback; live Presence unavailable:', presenceError?.message || presenceError);
+                    setPersistenceError('Live updates are reconnecting. Room status and participants will sync through the server.');
+                }
+                setConnected(true);
+                setError('');
+                setView('lobby');
+            } catch (joinError) {
+                if (!cancelled) {
+                    setError(joinError.message || 'Could not join this Test Room. Check the code and retry.');
+                    setView('error');
+                }
+            } finally {
+                fallbackJoinPendingRef.current = false;
+                joinRequestPendingRef.current = false;
+                joinRetryEligibleRef.current = false;
+            }
+        };
+
         const requestJoin = async () => {
             if (cancelled || !channelIsSubscribed || isHostFlow || attemptIdRef.current || joinRequestPendingRef.current) return;
             if (joinTimeout) clearTimeout(joinTimeout);
@@ -363,8 +410,8 @@ export default function TestRoomPage() {
                 joinTimeout = setTimeout(() => {
                     if (cancelled || latestViewRef.current !== 'connecting' || attemptIdRef.current) return;
                     joinRetryEligibleRef.current = true;
-                    setError('The host is not connected yet. Keep this page open; it will retry when the host reconnects.');
-                    setView('error');
+                    setPersistenceError('Live updates are unavailable. Joining through the server instead.');
+                    joinViaServer();
                 }, 12000);
                 return;
             }
@@ -387,8 +434,8 @@ export default function TestRoomPage() {
                 if (cancelled || latestViewRef.current !== 'connecting' || attemptIdRef.current) return;
                 joinRequestPendingRef.current = false;
                 joinRetryEligibleRef.current = true;
-                setError('The host has not responded yet. The connection will retry if the host reconnects.');
-                setView('error');
+                setPersistenceError('Live updates are unavailable. Joining through the server instead.');
+                joinViaServer();
             }, 12000);
         };
 
@@ -529,36 +576,7 @@ export default function TestRoomPage() {
                 setView('error');
                 return;
             }
-
-            try {
-                const admission = await callRoomApi({ action: 'join', code: roomCode });
-                if (cancelled) return;
-                joinRequestPendingRef.current = false;
-                joinRetryEligibleRef.current = false;
-                attemptIdRef.current = admission.attemptId;
-                setAttemptId(admission.attemptId);
-                if (Array.isArray(admission.questions)) {
-                    setCanonicalQuestions(buildCanonicalRoomQuestions(admission.questions));
-                }
-                const participantPresence = {
-                    role: 'participant',
-                    roomCode: normalizedCode(roomCode),
-                    userId,
-                    displayName: String(displayName).slice(0, 80),
-                    joinedAt: new Date().toISOString(),
-                };
-                participantPresenceRef.current = participantPresence;
-                await channel.track(participantPresence);
-                if (cancelled) return;
-                setConnected(true);
-                setView('lobby');
-                await send('request_exam', { toUid: roomMetaRef.current?.hostUid });
-            } catch (err) {
-                joinRequestPendingRef.current = false;
-                joinRetryEligibleRef.current = false;
-                setError(err.message || 'Could not join the live room. Please try entering the code again.');
-                setView('error');
-            }
+            await joinViaServer();
         });
 
         channel.on('broadcast', { event: 'request_exam' }, async ({ payload }) => {
@@ -670,16 +688,13 @@ export default function TestRoomPage() {
                     code: channelError?.code || '',
                 });
 
-                if (roomMetaRef.current?.status === 'started' && !submittedRef.current) {
-                    // A Realtime socket failure is not proof that the student left.
-                    // HTTP heartbeats and answer snapshots continue to persist progress;
-                    // only explicit page-close/offline signals or stale heartbeats finalize.
-                    setConnected(false);
-                    setPersistenceError('Live updates are reconnecting. Your answers continue syncing.');
-                } else {
-                    channelErrorReturnViewRef.current = latestViewRef.current === 'lobby' ? 'lobby' : 'share';
-                    setError('Could not connect to the live Test Room. Your room and saved attempt are still stored. Retry the connection.');
-                    setView('error');
+                // Realtime accelerates updates; Redis/API is the fallback source of truth.
+                channelErrorReturnViewRef.current = latestViewRef.current === 'lobby' ? 'lobby' : 'share';
+                setConnected(false);
+                setError('');
+                setPersistenceError('Live updates are reconnecting. Room status and participants will sync through the server.');
+                if (!isHostFlow && roomMetaRef.current?.status === 'waiting' && !attemptIdRef.current) {
+                    joinViaServer();
                 }
             }
             });
@@ -690,8 +705,11 @@ export default function TestRoomPage() {
                 message: subscriptionError?.message || '',
                 code: subscriptionError?.code || '',
             });
-            setError('Your live room session could not connect. Retry the connection or sign in again.');
-            setView('error');
+            setError('');
+            setPersistenceError('Live updates are unavailable. Room status and participants will sync through the server.');
+            if (!isHostFlow && roomMetaRef.current?.status === 'waiting' && !attemptIdRef.current) {
+                joinViaServer();
+            }
         });
         return () => {
             cancelled = true;
@@ -700,6 +718,58 @@ export default function TestRoomPage() {
             Promise.resolve(supabase.removeChannel(channel)).catch(() => {});
         };
     }, [roomCode, userId, displayName, isHostFlow, verifiedJoin, channelRetryNonce]);
+
+    // Redis is authoritative for room state. Poll while waiting and during the
+    // attempt so a lost Realtime socket does not block roster/start/question updates.
+    useEffect(() => {
+        if (!roomCode || !userId || !attemptId || !['waiting', 'started'].includes(roomMeta?.status)
+            || ['result', 'finished'].includes(view)) return undefined;
+        let cancelled = false;
+        const pollLobby = async () => {
+            try {
+                const snapshot = await callRoomApi({ action: 'poll_lobby', code: roomCode });
+                if (cancelled) return;
+                const previousRoom = roomMetaRef.current || {};
+                const nextRoom = { ...previousRoom, ...(snapshot.room || {}) };
+                const roomChanged = previousRoom.status !== nextRoom.status
+                    || previousRoom.startedAt !== nextRoom.startedAt
+                    || previousRoom.deadlineAt !== nextRoom.deadlineAt;
+                roomMetaRef.current = nextRoom;
+                if (Number.isFinite(Number(nextRoom.serverNow))) {
+                    serverClockOffsetRef.current = Number(nextRoom.serverNow) - Date.now();
+                }
+                const nextParticipants = Array.isArray(snapshot.participants) ? snapshot.participants : [];
+                if (JSON.stringify(participantsRef.current) !== JSON.stringify(nextParticipants)) {
+                    participantsRef.current = nextParticipants;
+                    setParticipants(nextParticipants);
+                }
+                if (roomChanged) setRoomMeta(nextRoom);
+                if (!isHostFlow && Array.isArray(snapshot.questions) && snapshot.questions.length
+                    && canonicalQuestionsRef.current.length === 0) {
+                    setCanonicalQuestions(buildCanonicalRoomQuestions(snapshot.questions));
+                }
+                if (!isHostFlow && nextRoom.status === 'started' && canonicalQuestionsRef.current.length > 0) {
+                    setError('');
+                    setPersistenceError('');
+                    setConnected(true);
+                    setView((previous) => previous === 'result' || previous === 'submitting' ? previous : 'attempt');
+                }
+                if (latestViewRef.current === 'error' && nextRoom.status === 'waiting' && (isHostFlow || attemptIdRef.current)) {
+                    setError('');
+                    setView(isHostFlow ? 'share' : 'lobby');
+                }
+                setConnected(true);
+            } catch (pollError) {
+                if (!cancelled) console.warn('[TestRoom] Redis-backed lobby poll failed:', pollError?.message || pollError);
+            }
+        };
+        pollLobby();
+        const pollTimer = setInterval(pollLobby, 3000);
+        return () => {
+            cancelled = true;
+            clearInterval(pollTimer);
+        };
+    }, [roomCode, userId, attemptId, roomMeta?.status, isHostFlow, view]);
 
     const createRoom = async () => {
         if (!isHostFlow || !canonicalQuestions.length) {
@@ -775,7 +845,7 @@ export default function TestRoomPage() {
     };
 
     const startRoom = async () => {
-        if (!isHostFlow || !channelRef.current || roomMetaRef.current?.status !== 'waiting' || working) return;
+        if (!isHostFlow || roomMetaRef.current?.status !== 'waiting' || working) return;
         setWorking(true);
         startingRoomRef.current = true;
         setError('');
@@ -788,16 +858,27 @@ export default function TestRoomPage() {
                 startedAt: Number(startResponse.startedAt),
                 serverNow: Number(startResponse.serverNow),
             };
-            await channelRef.current.track(next);
+            // The API commits the authoritative timer in Redis. Live broadcast is best effort.
             roomMetaRef.current = next;
             setRoomMeta(next);
+            setConnected(true);
             setView('attempt');
+            try {
+                await channelRef.current?.track(next);
+                await channelRef.current?.send({
+                    type: 'broadcast',
+                    event: 'room_started',
+                    payload: { roomCode: normalizedCode(roomCode), startedAt: next.startedAt, serverNow: next.serverNow },
+                });
+            } catch (realtimeError) {
+                console.warn('[TestRoom] Start committed through server; polling will update participants:', realtimeError?.message || realtimeError);
+                setPersistenceError('The test has started. Live updates are reconnecting; answers will still sync through the server.');
+            }
         } catch (err) {
-            // Keep the lobby in the waiting state if the Realtime start update fails.
             roomMetaRef.current = previous;
             setRoomMeta(previous);
             startingRoomRef.current = false;
-            setError(err.message || 'Could not start the room. No timer was started.');
+            setError(err.message || 'Could not start the room. Please retry.');
         } finally {
             setWorking(false);
         }
@@ -817,11 +898,15 @@ export default function TestRoomPage() {
             setSubmissionPending(false);
             setPersistenceError('');
             setView('result');
-            await channelRef.current?.send({
-                type: 'broadcast',
-                event: 'room_submission',
-                payload: { userId, result: saved.result },
-            });
+            try {
+                await channelRef.current?.send({
+                    type: 'broadcast',
+                    event: 'room_submission',
+                    payload: { userId, result: saved.result },
+                });
+            } catch (realtimeError) {
+                console.warn('[TestRoom] Result saved; live result broadcast will be recovered:', realtimeError?.message || realtimeError);
+            }
         } catch (err) {
             submittedRef.current = false;
             setSubmissionPending(false);

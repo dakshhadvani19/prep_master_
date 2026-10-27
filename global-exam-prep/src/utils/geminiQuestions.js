@@ -176,11 +176,10 @@ function validateCommonQuestions(questions, count, isObjective = false) {
  * Build a correction prompt that tells the model exactly what went wrong so
  * the next attempt fixes the specific validation failure.
  */
-function buildCorrectionPrompt(basePrompt, validationError, attempt, previousOutput = '') {
-    const previousOutputSection = previousOutput
-        ? `\n\nPREVIOUS INVALID MODEL OUTPUT TO CORRECT (preserve valid content, repair the invalid fields):\n${previousOutput.slice(0, 8000)}\n`
-        : '';
-    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}${previousOutputSection}\nReturn corrected JSON only — no markdown or extra prose. Ensure the requested count, required fields, exactly four non-empty string MCQ options, valid answer index, and requested theory marks.`;
+function buildCorrectionPrompt(basePrompt, validationError, attempt) {
+    // Avoid echoing an entire invalid payload into the next request. That can add
+    // thousands of tokens and trigger the provider's TPM limit during recovery.
+    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\nRegenerate the complete requested output from the original material. Return corrected JSON only. Ensure the requested count, exactly four non-empty string MCQ options, a valid answer index, and requested theory marks. Do not reuse invalid option values.`;
 }
 
 export async function generateQuestionsFromText({
@@ -301,7 +300,6 @@ ${source}
     }
 
     let lastError = null;
-    let lastRawResponse = '';
     let rateLimitRetries = 0;
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
@@ -315,7 +313,7 @@ ${source}
                         messages: [
                             { role: 'system', content: systemMessage },
                             { role: 'user', content: attempt > 1
-                                ? buildCorrectionPrompt(userPrompt, lastError.message, attempt, lastRawResponse)
+                                ? buildCorrectionPrompt(userPrompt, lastError.message, attempt)
                                 : userPrompt },
                         ],
                         model: 'openai/gpt-oss-20b',
@@ -361,7 +359,6 @@ ${source}
                 if (match?.[1]) cleaned = match[1].trim();
             }
 
-            lastRawResponse = cleaned;
             const parsedQuestions = parseModelQuestions(cleaned);
             if (!Array.isArray(parsedQuestions) || parsedQuestions.length === 0) {
                 throw new Error('AI returned no questions. Please retry generation.');

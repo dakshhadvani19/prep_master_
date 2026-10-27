@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
     cleanQuestions,
+    buildLobbySnapshot,
     normalizeAnswers,
     normalizeCode,
     hostResumeError,
@@ -19,6 +20,25 @@ const questions = Array.from({ length: 30 }, (_, index) => ({
     options: ['A', 'B', 'C', 'D'].map((text, originalOptionIndex) => ({ text, originalOptionIndex })),
     answer: index % 4,
 }));
+
+describe('Test Room lobby fallback contract', () => {
+    it('returns safe metadata without exposing attempt ids or answers', () => {
+        const snapshot = buildLobbySnapshot({
+            roomCode: 'DHUTCGEEZR', hostUid: 'private-host-uid',
+            subjectName: 'Fundamentals of Machine Learning', status: 'waiting', durationMinutes: 15,
+        }, [{
+            userId: 'participant-uid', displayName: 'Participant', role: 'participant',
+            status: 'waiting', connected: true, answers: [1, 2], attemptId: 'private-attempt-id',
+        }]);
+        expect(snapshot.room.roomCode).toBe('DHUTCGEEZR');
+        expect(snapshot.room.hostUid).toBeUndefined();
+        expect(snapshot.participants).toEqual([{
+            userId: 'participant-uid', displayName: 'Participant', role: 'participant',
+            status: 'waiting', connected: true, joinedAt: null,
+        }]);
+        expect(JSON.stringify(snapshot)).not.toMatch(/private-host-uid|private-attempt-id|answers/i);
+    });
+});
 
 describe('Test Room finalization decisions', () => {
     it('uses the exact deadline boundary for timeout classification', () => {

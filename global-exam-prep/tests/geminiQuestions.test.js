@@ -314,31 +314,24 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
             expect(fetchMock).toHaveBeenCalledTimes(1);
         });
 
-        it('includes the previous invalid output in the bounded correction attempt', async () => {
+        it('keeps correction prompts bounded after invalid MCQ options', async () => {
             const { generateQuestionsFromText } = await importModule();
-            const invalid = {
-                choices: [{ message: { content: JSON.stringify({ questions: [{
-                    text: 'Which storage can persist data between sessions?',
-                    options: ['Cache', '', 'Stack', 'Register'],
-                    answer: 1,
-                }] }) } }],
-            };
-            fetchMock
-                .mockResolvedValueOnce(mockJsonResponse(200, invalid))
+            const invalid = { choices: [{ message: { content: JSON.stringify({ questions: [{
+                text: 'Which storage persists between sessions?',
+                options: ['Cache', '', 'Stack', 'Register'], answer: 1,
+            }] }) } }] };
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, invalid))
                 .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(1)));
-
             const result = await generateQuestionsFromText({
-                text: 'Syllabus content about application data persistence. ' + 'x'.repeat(100),
-                difficulty: 'medium',
-                count: 1,
-                isObjective: true,
+                text: 'Study material about persistence. ' + 'x'.repeat(100),
+                difficulty: 'medium', count: 1, isObjective: true,
             });
-
             expect(result).toHaveLength(1);
             expect(fetchMock).toHaveBeenCalledTimes(2);
             const correction = JSON.parse(fetchMock.mock.calls[1][1].body).messages[1].content;
-            expect(correction).toContain('PREVIOUS INVALID MODEL OUTPUT');
-            expect(correction).toContain('Which storage can persist data between sessions?');
+            expect(correction).toContain('Regenerate the complete requested output');
+            expect(correction).not.toContain('PREVIOUS INVALID MODEL OUTPUT');
+            expect(correction.length).toBeLessThan(5000);
         });
 
         it('rejects invalid answer index (5)', async () => {
