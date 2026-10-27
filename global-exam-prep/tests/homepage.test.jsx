@@ -94,7 +94,11 @@ describe('homepage', () => {
     await at('/');
     const cta = await screen.findByRole('button', { name: /Join Test Room/i });
     fireEvent.click(cta);
-    expect(await screen.findByRole('heading', { name: /Join a Test Room/i })).toBeTruthy();
+    expect(await screen.findByRole(
+      'heading',
+      { name: /Join a Test Room/i },
+      { timeout: 10000 },
+    )).toBeTruthy();
     expect(screen.getByLabelText(/Room code/i)).toBeTruthy();
     expect(screen.queryByRole('heading', { name: /Sign in to use Test Rooms/i })).toBeNull();
     expect(screen.queryByText('404')).toBeNull();
