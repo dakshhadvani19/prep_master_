@@ -8,6 +8,7 @@ import { domains } from '../src/data/mockData';
 import subjectSemesterMap from '../src/data/subjectSemesterMap.json';
 import subjectIdBridge from '../src/data/subjectIdBridge.json';
 import liveSubjectContextOverrides from '../src/data/liveSubjectContextOverrides.json';
+import { getSubjectExamInfo } from '../src/utils/subjectExamPolicy';
 import {
   findSubjectContext,
   lookupNumericSubject,
@@ -183,6 +184,20 @@ describe('live numeric subjects missing from legacy mockData', () => {
       expect(context.subject.id).toBe(id);
       expect(context.subject.title).toBe(override.subjectName);
       expect(context.sem).toBe(override.semester);
+      expect(context.isDepartmentalSubject).toBe(override.isDepartmentalSubject);
+
+      // The same live subject must still resolve if legacy course metadata has
+      // disappeared entirely. This guards the exact "Exam details not found"
+      // failure seen when opening live BCA/MCA subjects by URL.
+      const withoutLegacyData = findSubjectContext([], id);
+      expect(withoutLegacyData.kind).toBe('numeric');
+      expect(withoutLegacyData.subject.title).toBe(override.subjectName);
+      expect(withoutLegacyData.course.title).toBe(override.courseName);
+      expect(withoutLegacyData.domain.title).toBe('Computer Applications');
+      expect(getSubjectExamInfo('mid-2', withoutLegacyData.isDepartmentalSubject)).toBeTruthy();
+      if (override.isDepartmentalSubject) {
+        expect(getSubjectExamInfo('final', withoutLegacyData.isDepartmentalSubject)).toBeUndefined();
+      }
     }
   });
 

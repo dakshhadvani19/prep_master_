@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { examPrompts, domains } from '../data/mockData';
+import { domains } from '../data/mockData';
+import { examPrompts } from '../data/examPrompts';
 import { findSubjectContext } from '../utils/subjectResolver';
 import { getSubjectExamInfo } from '../utils/subjectExamPolicy';
 import { universitySyllabus } from '../data/universitySyllabus';
@@ -81,7 +82,10 @@ export default function ExamPortal() {
     const domainDetail = subjectContext.domain;
     const sourceSubjectId = subjectContext.sourceSubjectId || subjectId;
 
-    const isDepartmentalSubject = location.state?.isDepartmentalSubject === true;
+    // Live catalog overrides carry the authoritative departmental flag. For
+    // legacy entries, retain navigation state when present.
+    const isDepartmentalSubject = subjectContext.isDepartmentalSubject
+        ?? (location.state?.isDepartmentalSubject === true);
     const examInfo = getSubjectExamInfo(examType, isDepartmentalSubject, examPrompts);
     const testRoomMode = location.state?.testRoomMode === 'create' ? 'create' : null;
 

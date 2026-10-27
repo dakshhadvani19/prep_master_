@@ -19,6 +19,54 @@ export function lookupNumericSubject(routeId) {
     };
 }
 
+function buildLiveOverrideContext(numeric, routeSubjectId, override, domains = []) {
+    const isDepartmentalSubject = override.isDepartmentalSubject === true;
+    let domain = (domains || []).find((item) => (
+        (item.courses || []).some((candidate) => candidate.id === numeric.courseSourceId)
+    ));
+    let course = domain?.courses?.find((candidate) => candidate.id === numeric.courseSourceId);
+
+    // The live Supabase catalog is authoritative for these explicit overrides.
+    // Create a minimal display hierarchy if the corresponding legacy mockData
+    // course/domain has been removed or renamed.
+    if (!course) {
+        course = {
+            id: numeric.courseSourceId || override.courseSourceId,
+            title: override.courseName || 'Academic Course',
+            subjects: [],
+        };
+        if (domain) {
+            domain = { ...domain, courses: [...(domain.courses || []), course] };
+        } else {
+            domain = {
+                id: override.domainSourceId || 'computer-applications',
+                title: override.domainName || 'Computer Applications',
+                icon: 'BookOpen',
+                description: 'Courses and subjects from the current academic catalog.',
+                courses: [course],
+            };
+        }
+    }
+
+    const subject = {
+        id: String(routeSubjectId),
+        title: override.subjectName || 'Untitled Subject',
+        sem: Number(override.semester || numeric.sem) || 1,
+        exams: isDepartmentalSubject ? ['mid-1', 'mid-2'] : ['mid-1', 'mid-2', 'final'],
+        isDepartmentalSubject,
+    };
+
+    return {
+        ...numeric,
+        kind: 'numeric',
+        subject,
+        course,
+        domain,
+        isDepartmentalSubject,
+        liveCatalogOverride: true,
+    };
+}
+
 function unknownSubjectContext(raw) {
     return {
         kind: 'unknown',
@@ -36,6 +84,11 @@ function unknownSubjectContext(raw) {
 export function findSubjectContext(domains, routeSubjectId) {
     const numeric = lookupNumericSubject(routeSubjectId);
     if (numeric) {
+        const override = liveSubjectContextOverrides.subjects?.[String(routeSubjectId)];
+        if (override) {
+            return buildLiveOverrideContext(numeric, routeSubjectId, override, domains);
+        }
+
         for (const domain of domains || []) {
             const course = (domain.courses || []).find((c) => c.id === numeric.courseSourceId);
             if (!course) continue;
@@ -45,26 +98,6 @@ export function findSubjectContext(domains, routeSubjectId) {
             ));
             if (subject) {
                 return { ...numeric, kind: 'numeric', subject, course, domain };
-            }
-        }
-        const override = liveSubjectContextOverrides.subjects?.[String(routeSubjectId)];
-        if (override) {
-            for (const domain of domains || []) {
-                const course = (domain.courses || []).find((c) => c.id === numeric.courseSourceId);
-                if (!course) continue;
-                return {
-                    ...numeric,
-                    kind: 'numeric',
-                    subject: {
-                        id: String(routeSubjectId),
-                        title: override.subjectName,
-                        sem: numeric.sem,
-                        exams: ['mid-1', 'mid-2', 'final'],
-                    },
-                    course,
-                    domain,
-                    liveCatalogOverride: true,
-                };
             }
         }
         return { ...numeric, kind: 'numeric', subject: null, course: null, domain: null };
