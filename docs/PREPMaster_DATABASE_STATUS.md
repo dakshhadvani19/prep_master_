@@ -1,6 +1,6 @@
 # PrepMaster — Database Status
 
-> Schema update (2026-10-27): `exam_attempts`, `exam_attempt_keys`, and `auth_otp` were moved to the unexposed `private` schema. The empty `public.exam_grades` table was removed. This file's earlier counts are a point-in-time snapshot unless explicitly updated below.
+> Schema update (2026-10-27): `exam_attempts`, `exam_attempt_keys`, and `auth_otp` were moved to the unexposed `private` schema. The empty `(retired) exam_grades` table was removed. This file's earlier counts are a point-in-time snapshot unless explicitly updated below.
 
 _Last live verification: 2026-10-13 06:22 UTC (11:52 IST)_
 

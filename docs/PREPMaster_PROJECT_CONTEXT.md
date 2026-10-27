@@ -58,7 +58,7 @@ Relevant files:
 Signup order:
 1. User enters details.
 2. /api/send-otp generates the code server-side.
-3. Only an HMAC digest is stored in public.auth_otp.
+3. Only an HMAC digest is stored in private.auth_otp.
 4. /api/verify-otp verifies the code.
 5. Only after verification does Supabase Auth create the account.
 6. The auth.users trigger creates public.students.

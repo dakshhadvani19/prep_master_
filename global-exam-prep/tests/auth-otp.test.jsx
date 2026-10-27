@@ -26,7 +26,7 @@ import { render, fireEvent, waitFor, cleanup } from '@testing-library/react';
 import { createHash } from 'node:crypto';
 
 const holder = vi.hoisted(() => ({ entry: '/' }));
-/** The fake `public.auth_otp` table, plus everything the "mailer" was asked to send. */
+/** The mocked OTP store (mirrors the private.auth_otp table), plus everything the "mailer" was asked to send. */
 const srv = vi.hoisted(() => ({
   rows: new Map(),
   mails: [],

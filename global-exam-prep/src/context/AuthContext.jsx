@@ -7,7 +7,7 @@
  *
  * Signup verification order (deadline-critical, so it is stated at the top):
  *   details -> POST /api/send-otp: the SERVER generates the code, stores
- *              HMAC-SHA256(OTP_PEPPER, email:code) in public.auth_otp, mails it
+ *              HMAC-SHA256(OTP_PEPPER, email:code) in private.auth_otp, mails it
  *   typed code -> POST /api/verify-otp: the SERVER re-derives that digest and
  *              verifies it in SQL (single use, 3 attempts, 60 s resend, 10 min TTL)
  *   -> ONLY then supabase.auth.signUp() -> session -> trigger creates the profile
@@ -92,7 +92,7 @@ import {
 // The client half of the OTP gate: it asks the server to send a code, submits what
 // was typed, and enforces the server's timings on the UI. It does not generate,
 // hash, store, or compare a code — that all happens behind /api/send-otp and
-// /api/verify-otp against public.auth_otp. See src/utils/otpService.js.
+// /api/verify-otp against private.auth_otp. See src/utils/otpService.js.
 import { createAndSendOTP, verifyOTP } from '../utils/otpService';
 import { clearExamHistory } from '../utils/examHistoryStorage';
 
