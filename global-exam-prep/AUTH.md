@@ -7,7 +7,7 @@ PrepMaster uses **Supabase Auth as the only authentication system**.
 - Email/password authentication is handled by Supabase Auth.
 - Google OAuth uses Supabase PKCE.
 - Signup is gated by the project's serverless OTP flow:
-  - /api/send-otp generates and stores an HMAC digest in public.auth_otp.
+  - /api/send-otp generates and stores an HMAC digest in private.auth_otp; the underlying table is unexposed and the RPCs are server-only.
   - /api/verify-otp verifies the code.
   - Only after successful verification does the browser create the Supabase Auth account.
 - public.students is created by the database trigger attached to auth.users.

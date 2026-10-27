@@ -17,7 +17,7 @@ courseMapping.json and subjectIdBridge.json are compatibility data, not replacem
 
 ## Authentication
 
-Supabase Auth is the only identity provider. AuthContext owns session state and role routing. OTP is generated/verified by serverless endpoints against public.auth_otp.
+Supabase Auth is the only identity provider. AuthContext owns session state and role routing. OTP is generated/verified by serverless endpoints against private.auth_otp.
 
 ## Exam flow
 

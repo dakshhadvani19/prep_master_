@@ -18,7 +18,7 @@ import {
  * The contract changed with the Firestore -> Postgres move, and it changed in the
  * direction that matters: **the browser no longer supplies the code.** It sends
  * `{ email, userName }`, this function generates the code with the CSPRNG, stores
- * only its keyed digest in Postgres (`public.auth_otp`, see
+ * only its keyed digest in Postgres (`private.auth_otp`, see
  * supabase/migrations/20260905120000_auth_otp.sql), and mails it. That removes the
  * race where a client-generated code had to survive a round trip through two
  * back-ends, and it means a tampered client cannot pick its own challenge.

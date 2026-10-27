@@ -63,6 +63,6 @@ Do not restart the architecture. Continue from the code and migration already pr
 ## Persistence boundaries
 
 - Temporary room code, room status, timer and live membership remain in Redis with TTL.
-- Durable per-user attempts and selected answers remain in `public.exam_attempts`.
-- Correct answers remain in `public.exam_attempt_keys`, inaccessible to browser roles.
+- Durable per-user attempts and selected answers remain in `private.exam_attempts`, accessible through server-side RPCs only.
+- Correct answers remain in `private.exam_attempt_keys`, in an unexposed schema inaccessible to browser roles.
 - The existing legacy `public."TestRooms"` and `public."TestsData"` tables are not used for this room-session registry.

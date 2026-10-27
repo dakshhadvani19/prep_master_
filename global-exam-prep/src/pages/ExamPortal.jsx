@@ -22,7 +22,6 @@ import {
     saveExamAttempt,
     updateAttemptAnswers,
     submitExamAttempt,
-    saveExamGrade,
 } from '../utils/supabaseExam';
 
 
@@ -324,8 +323,15 @@ export default function ExamPortal() {
                     throw new Error('Generated exam failed blueprint validation: ' + validation.errors.join(', '));
                 }
 
-                // Keep grading/review metadata server-side; only the display-safe fields go to the UI.
-                const studentSafeQuestions = stripReviewMetadata(allQuestions);
+                // Keep the answer key separate from the active exam UI and saved question snapshot.
+                const generatedQuestions = stripReviewMetadata(allQuestions);
+                const studentSafeQuestions = generatedQuestions.map((question) => {
+                    if (question?.type === 'mcq') {
+                        const { answer, ...safeQuestion } = question;
+                        return safeQuestion;
+                    }
+                    return question;
+                });
                 setAiQuestions(studentSafeQuestions);
 
                 // Keep a room paper only in the host's temporary router state/Realtime session.
@@ -336,18 +342,18 @@ export default function ExamPortal() {
                             subjectCode: sourceSubjectId,
                             subjectName: subjectDetail.title,
                             examType,
-                            questions: studentSafeQuestions,
+                            questions: generatedQuestions,
                             totalMarks: config.totalMarks,
                             timeMinutes: config.timeMinutes,
                         };
                         const result = await saveExamAttempt(attemptPayload);
-                        if (result.error) {
-                            setSupabaseError(result.error);
-                        } else if (result.id) {
-                            setAttemptId(result.id);
+                        if (result.error || !result.id) {
+                            throw new Error(result.error || 'Attempt could not be persisted.');
                         }
+                        setAttemptId(result.id);
                     } catch (supabaseErr) {
                         setSupabaseError(supabaseErr.message || 'Supabase unavailable');
+                        throw new Error('The exam cannot start until its attempt and answer key are saved securely.');
                     }
                 }
 
@@ -355,7 +361,7 @@ export default function ExamPortal() {
                     navigate('/test-rooms/create', {
                         state: {
                             testRoomMode: 'create',
-                            questions: studentSafeQuestions,
+                            questions: generatedQuestions,
                             courseId: String(location.state?.courseId || ''),
                             subjectId: sourceSubjectId,
                             subjectName: subjectDetail.title,
@@ -506,50 +512,26 @@ export default function ExamPortal() {
             setIsSubmitting(true);
             setSubmitError('');
 
-            let score = null; // Theory responses are not auto-graded.
+            let score = null;
             let actualTotalMarks = examInfo.totalMarks;
+            let percentage = null;
 
-            if (examInfo.type === 'objective') {
-                score = 0;
-                actualTotalMarks = questions.length; // 1 Mark per question safely
-                questions.forEach(q => {
-                    if (answers[q.id] !== undefined && answers[q.id] == q.answer) {
-                        score += 1;
-                    }
-                });
-            } else {
-                // For theory, calculate actual sum of marks defined in questions
-                const sum = questions.reduce((acc, current) => acc + (current.marks || 0), 0);
-                if (sum > 0) actualTotalMarks = sum;
+            // Score calculation happens in the server API using the answer key saved before the exam began.
+            if (!attemptId) {
+                throw new Error('This exam has no saved attempt. Restart it so persistence can be established before submission.');
             }
-
-            const percentage = examInfo.type === 'objective' && actualTotalMarks > 0
+            const submitResult = await submitExamAttempt(attemptId, null, answers);
+            if (submitResult.error && !submitResult.alreadySubmitted) throw new Error(submitResult.error);
+            if (!submitResult.ok) throw new Error('The server did not confirm this submission.');
+            score = submitResult.score !== null && submitResult.score !== undefined && Number.isFinite(Number(submitResult.score))
+                ? Number(submitResult.score)
+                : null;
+            actualTotalMarks = Number.isFinite(Number(submitResult.totalMarks))
+                ? Number(submitResult.totalMarks)
+                : actualTotalMarks;
+            percentage = score !== null && actualTotalMarks > 0
                 ? Math.round((score / actualTotalMarks) * 100)
                 : null;
-
-            // ── Persist to Supabase (idempotent: only in_progress → submitted) ──
-            let submitResult = { ok: false, error: null, alreadySubmitted: false };
-            if (attemptId) {
-                submitResult = await submitExamAttempt(attemptId, score, answers);
-                if (submitResult.error && !submitResult.alreadySubmitted) {
-                    throw new Error(submitResult.error);
-                }
-            }
-
-            // Save grade record
-            if (attemptId && submitResult.ok && examInfo.type === 'objective') {
-                try {
-                    await saveExamGrade(attemptId, {
-                        score,
-                        totalMarks: actualTotalMarks,
-                        percentage,
-                        grade: percentage >= 80 ? 'Distinction' : percentage >= 60 ? 'First Class' : percentage >= 40 ? 'Second Class' : 'Fail',
-                    });
-                } catch (gradeErr) {
-                    // Grade save is non-fatal; attempt is already recorded
-                    console.warn('Grade save failed:', gradeErr.message);
-                }
-            }
 
             // Also keep local history for offline fallback / dashboard display
             const questionSnapshot = questions.map(q => ({

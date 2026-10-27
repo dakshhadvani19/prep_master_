@@ -1,5 +1,7 @@
 # PrepMaster — Database Status
 
+> Schema update (2026-10-27): `exam_attempts`, `exam_attempt_keys`, and `auth_otp` were moved to the unexposed `private` schema. The empty `public.exam_grades` table was removed. This file's earlier counts are a point-in-time snapshot unless explicitly updated below.
+
 _Last live verification: 2026-10-13 06:22 UTC (11:52 IST)_
 
 This document records the current live Supabase database state and the most recent catalog changes. Live row counts are a snapshot and can change when users register or submit data.
@@ -32,7 +34,7 @@ Row counts below were checked with direct SQL queries against the live project, 
 | `public.Feedbacks` | 0 | Persistent feedback table is empty |
 | `public.Leaderboards` | 0 | No persistent leaderboard rows |
 | `public.exam_history` | 0 | No persistent exam-history rows; app history currently uses browser-local storage |
-| `public.auth_otp` | 1 | Short-lived OTP-challenge table; this count is transient |
+| `private.auth_otp` | 1 | Short-lived OTP-challenge table; this count is transient |
 | `public.temp_subjects_removed` | **96** | Internal recovery archive for the Diploma cleanup |
 
 The totals of 40 Courses and 1,938 Subjects are the current catalog baseline as of the timestamp above. Older figures in historical notes (49 Courses or earlier Subject totals) predate later exclusions/removals and are not the current database state.
@@ -124,7 +126,7 @@ All listed application tables in the exposed `public` schema currently have Row 
 | `public.Feedbacks` | `FeedbackId` BIGINT identity | `Description`, `Type`, `isSpam`, `isBookmark`, `isSeen`, `StudentId` → `Students.StudentId` |
 | `public.Leaderboards` | `LeaderboardId` BIGINT | `StudentId` BIGINT[], `Points` BIGINT[], `SubjectId` → `Subjects.SubjectId`, `TotalTests` BIGINT[] |
 | `public.exam_history` | `id` BIGINT | `auth_uid` → `auth.users.id`, exam metadata, score, question snapshot and user answers in JSONB |
-| `public.auth_otp` | `email` TEXT | OTP digest, nonce, attempt count, creation and expiry times; short-lived auth support data |
+| `private.auth_otp` | `email` TEXT | OTP digest, nonce, attempt count, creation and expiry times; short-lived auth support data |
 | `public.temp_subjects_removed` | `SubjectId` BIGINT | Internal Diploma recovery archive with original course/title/semester data, source code, reason, replacement data, restorable flag and source JSONB |
 
 There is intentionally **no `Departments` table**. Department selection is frontend-static in `global-exam-prep/src/data/catalogDomains.js`.

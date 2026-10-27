@@ -223,10 +223,18 @@ async function patchParticipant(code, uid, patch) {
     if (result.startsWith('ERR:')) throw new Error(result.slice(4));
     return parseJson(result);
 }
-async function getAttempt(admin, code, uid) {
-    const { data, error } = await admin.from('exam_attempts').select('*').eq('room_code', code).eq('user_id', uid).eq('attempt_type', 'test_room').maybeSingle();
+async function privateExamData(admin, action, payload = {}) {
+    const { data, error } = await admin.rpc('pm_private_exam_data', {
+        p_action: action,
+        p_payload: payload,
+    });
     if (error) throw new Error(error.message);
     return data;
+}
+async function getAttempt(admin, code, uid) {
+    return privateExamData(admin, 'get_attempt', {
+        room_code: code, user_id: uid, attempt_type: 'test_room',
+    });
 }
 async function purgeLiveRoom(code) {
     const memberIds = await redis('SMEMBERS', keys(code).members).catch(() => []);
@@ -242,12 +250,9 @@ async function purgeLiveRoom(code) {
 }
 
 async function cleanupRoomIfComplete(admin, code) {
-    const { data, error } = await admin.from('exam_attempts')
-        .select('user_id,status,room_role')
-        .eq('room_code', code)
-        .eq('attempt_type', 'test_room')
-        .limit(MAX_PARTICIPANTS);
-    if (error) throw new Error(error.message);
+    const data = await privateExamData(admin, 'list_attempts', {
+        room_code: code, attempt_type: 'test_room', limit: MAX_PARTICIPANTS,
+    });
     const attempts = Array.isArray(data) ? data : [];
     if (attempts.length > 0 && attempts.every((attempt) => FINAL_ATTEMPT_STATUSES.has(attempt.status))) {
         await purgeLiveRoom(code);
@@ -259,7 +264,7 @@ async function cleanupRoomIfComplete(admin, code) {
 async function createAttempt(admin, room, uid, name, role, safe) {
     let attempt = await getAttempt(admin, room.roomCode, uid);
     if (!attempt) {
-        const { data, error } = await admin.from('exam_attempts').insert({
+        const payload = {
             user_id: uid, subject_code: room.subjectCode || null, subject_name: room.subjectName,
             exam_type: room.examTitle || 'MCQ', difficulty: room.difficulty, questions: safe,
             total_marks: room.questionCount || 30, time_minutes: room.durationMinutes,
@@ -268,86 +273,33 @@ async function createAttempt(admin, room, uid, name, role, safe) {
             attempt_type: 'test_room', room_code: room.roomCode, room_role: role,
             participant_name: name, started_at: room.startedAt ? new Date(room.startedAt).toISOString() : new Date().toISOString(),
             updated_at: new Date().toISOString(),
-        }).select('*').single();
-        if (error) {
+        };
+        try {
+            attempt = await privateExamData(admin, 'create_attempt', payload);
+        } catch (error) {
             attempt = await getAttempt(admin, room.roomCode, uid);
-            if (!attempt) throw new Error(error.message);
-        } else attempt = data;
+            if (!attempt) throw error;
+        }
     }
     const questions = await getQuestions(room.roomCode).catch(() => null);
     const answerKey = Array.isArray(questions) ? questions.map((q) => q.answer) : [];
     if (answerKey.length) {
-        const { error } = await admin.from('exam_attempt_keys').upsert({ attempt_id: attempt.id, answer_key: answerKey }, { onConflict: 'attempt_id' });
-        if (error) throw new Error(error.message);
+        await privateExamData(admin, 'set_answer_key', { attempt_id: attempt.id, answer_key: answerKey });
     }
     return attempt;
 }
 async function writeAnswers(admin, attemptId, uid, answers, revision) {
     const acceptedRevision = Math.max(0, Math.floor(Number(revision) || 0));
-    // Compare-and-set in Postgres makes the durable copy monotonic too. Redis
-    // guards the live snapshot, but network responses can complete out of order.
-    const { data, error } = await admin.from('exam_attempts')
-        .update({
-            answers,
-            answer_revision: acceptedRevision,
-            updated_at: new Date().toISOString(),
-        })
-        .eq('id', attemptId)
-        .eq('user_id', uid)
-        .eq('attempt_type', 'test_room')
-        .eq('status', 'in_progress')
-        .lt('answer_revision', acceptedRevision)
-        .select('id')
-        .maybeSingle();
-    if (error) throw new Error(error.message);
+    const data = await privateExamData(admin, 'update_attempt', {
+        id: attemptId, user_id: uid, attempt_type: 'test_room',
+        statuses: ['in_progress'], before_revision: acceptedRevision,
+        patch: { answers, answer_revision: acceptedRevision, updated_at: new Date().toISOString() },
+    });
     return Boolean(data?.id);
-}
-
-/**
- * Atomically closes a participant's Redis snapshot before it is finalized in
- * Postgres. Any in-flight save_answer/heartbeat that arrives after this point
- * is rejected, and duplicate finalizers reuse the same accepted snapshot.
- */
-async function closeParticipantSnapshot(code, uid, status, reason, submittedAnswers = null, submittedRevision = null) {
-    const participantKey = keys(code, uid).participant;
-    const normalized = Array.isArray(submittedAnswers)
-        ? JSON.stringify(normalizeAnswers(submittedAnswers, 30))
-        : '';
-    const revision = Number.isSafeInteger(Number(submittedRevision)) && Number(submittedRevision) >= 0
-        ? Number(submittedRevision)
-        : -1;
-    const participantStatus = ['submitted', 'auto_submitted', 'timed_out'].includes(status)
-        ? 'submitted'
-        : 'disconnected';
-    const script = [
-        "local raw = redis.call('GET', KEYS[1])",
-        "if not raw then return '' end",
-        "local p = cjson.decode(raw)",
-        "if p.status ~= 'disconnected' and p.status ~= 'submitted' then",
-        "  local incomingRevision = tonumber(ARGV[4]) or -1",
-        "  local currentRevision = tonumber(p.answerRevision) or 0",
-        "  if ARGV[3] ~= '' and incomingRevision > currentRevision then",
-        "    p.answers = cjson.decode(ARGV[3]); p.answerRevision = incomingRevision",
-        "  end",
-        "  p.status = ARGV[5]; p.finalStatus = ARGV[1]; p.endReason = ARGV[2]",
-        "  p.connected = false; p.disconnectedAt = tonumber(ARGV[6])",
-        "  redis.call('SET', KEYS[1], cjson.encode(p), 'EX', ARGV[7])",
-        "end",
-        "return cjson.encode(p)"
-    ].join('\n');
-    const raw = await redis(
-        'EVAL', script, 1, participantKey, status, reason, normalized, revision,
-        participantStatus, Date.now(), roomTtlSeconds(await getRoom(code).catch(() => null)),
-    );
-    if (!raw) return null;
-    const participant = parseJson(raw);
-    if (!participant || typeof participant !== 'object') throw new Error('Could not read the final answer snapshot.');
-    return participant;
 }
 async function privateAnswerKey(admin, attemptId, questions = null) {
     if (Array.isArray(questions) && questions.length) return questions.map((q) => q.answer);
-    const { data, error } = await admin.from('exam_attempt_keys').select('answer_key').eq('attempt_id', attemptId).maybeSingle();
-    if (error) throw new Error(error.message);
+    const data = await privateExamData(admin, 'get_answer_key', { attempt_id: attemptId });
     return Array.isArray(data?.answer_key) ? data.answer_key : [];
 }
 async function finalizeAttempt(admin, {
@@ -418,15 +370,10 @@ async function finalizeAttempt(admin, {
         unattempted_count: result.unattempted,
     });
 
-    const { data, error } = await admin.from('exam_attempts')
-        .update(patch)
-        .eq('id', attempt.id)
-        .eq('user_id', uid)
-        .eq('attempt_type', 'test_room')
-        .eq('status', 'in_progress')
-        .select('*')
-        .maybeSingle();
-    if (error) throw new Error(error.message);
+    const data = await privateExamData(admin, 'update_attempt', {
+        id: attempt.id, user_id: uid, attempt_type: 'test_room',
+        statuses: ['in_progress'], patch,
+    });
 
     if (!data) {
         // Another request may have finalized the row concurrently. Return the
@@ -612,11 +559,10 @@ export default async function handler(req, res) {
                 // step failed; never leave a dangling "waiting" attempt in the dashboard.
                 const partialAttempt = await getAttempt(admin, code, user.id).catch(() => null);
                 if (partialAttempt && ['waiting', 'in_progress'].includes(partialAttempt.status)) {
-                    await admin.from('exam_attempts').update({
-                        status: 'cancelled',
-                        end_reason: 'room_creation_failed',
-                        updated_at: new Date().toISOString(),
-                    }).eq('id', partialAttempt.id).eq('user_id', user.id).catch(() => {});
+                    await privateExamData(admin, 'update_attempt', {
+                        id: partialAttempt.id, user_id: user.id, statuses: ['waiting', 'in_progress'],
+                        patch: { status: 'cancelled', end_reason: 'room_creation_failed', updated_at: new Date().toISOString() },
+                    }).catch(() => {});
                 }
                 await redis('DEL', keys(code).meta, keys(code).questions, keys(code).members, keys(code, user.id).participant).catch(() => {});
                 return fail(res, 503, 'The room was not created because its attempt could not be saved: ' + error.message);
@@ -624,10 +570,9 @@ export default async function handler(req, res) {
         }
 
         if (action === 'reconcile_my_attempts') {
-            const { data, error } = await admin.from('exam_attempts')
-                .select('id,room_code,user_id,status,answers,total_marks,started_at')
-                .eq('user_id', user.id).eq('attempt_type', 'test_room').in('status', ['waiting', 'in_progress']).limit(100);
-            if (error) throw new Error(error.message);
+            const data = await privateExamData(admin, 'list_attempts', {
+                user_id: user.id, attempt_type: 'test_room', statuses: ['waiting', 'in_progress'], limit: 100,
+            });
             for (const attempt of data || []) {
                 const room = attempt.room_code ? await getRoom(attempt.room_code).catch(() => null) : null;
                 if (room) {
@@ -646,7 +591,10 @@ export default async function handler(req, res) {
                 } else if (attempt.status === 'in_progress') {
                     await finalizeAttempt(admin, { code: attempt.room_code, uid: user.id, status: 'disconnected', reason: 'room_expired_after_disconnect' }).catch(() => {});
                 } else if (attempt.status === 'waiting') {
-                    await admin.from('exam_attempts').update({ status: 'cancelled', end_reason: 'room_expired_before_start', updated_at: new Date().toISOString() }).eq('id', attempt.id).eq('user_id', user.id).eq('status', 'waiting');
+                    await privateExamData(admin, 'update_attempt', {
+                        id: attempt.id, user_id: user.id, statuses: ['waiting'],
+                        patch: { status: 'cancelled', end_reason: 'room_expired_before_start', updated_at: new Date().toISOString() },
+                    });
                 }
             }
             return res.status(200).json({ ok: true });
@@ -655,17 +603,14 @@ export default async function handler(req, res) {
         if (action === 'get_attempt_review') {
             const attemptId = String(body.attemptId || '');
             if (!/^[0-9a-f-]{36}$/i.test(attemptId)) return fail(res, 400, 'Invalid attempt identifier.');
-            const { data: attempt, error: attemptError } = await admin.from('exam_attempts')
-                .select('*').eq('id', attemptId).eq('user_id', user.id)
-                .eq('attempt_type', 'test_room').maybeSingle();
-            if (attemptError) throw new Error(attemptError.message);
+            const attempt = await privateExamData(admin, 'get_attempt', {
+                id: attemptId, user_id: user.id, attempt_type: 'test_room',
+            });
             if (!attempt) return fail(res, 404, 'Attempt not found.');
             if (!['submitted', 'auto_submitted', 'disconnected', 'timed_out'].includes(attempt.status)) {
                 return fail(res, 409, 'This attempt is not finalized yet. Its saved progress is still being reconciled.');
             }
-            const { data: keyRow, error: keyError } = await admin.from('exam_attempt_keys')
-                .select('answer_key').eq('attempt_id', attempt.id).maybeSingle();
-            if (keyError) throw new Error(keyError.message);
+            const keyRow = await privateExamData(admin, 'get_answer_key', { attempt_id: attempt.id });
             const key = Array.isArray(keyRow?.answer_key) ? keyRow.answer_key : [];
             const safeQuestionsForReview = Array.isArray(attempt.questions) ? attempt.questions : [];
             const answers = normalizeAnswers(attempt.answers, safeQuestionsForReview.length || 30);
@@ -771,15 +716,11 @@ export default async function handler(req, res) {
             if ((room && user.id !== room.hostUid) || (!room && hostAttempt?.room_role !== 'host')) {
                 return fail(res, 403, 'Only the host can view the room-wide results.');
             }
-            const { data, error } = await admin.from('exam_attempts')
-                .select('user_id,participant_name,room_role,status,score,total_marks,correct_count,incorrect_count,attempted_count,unattempted_count,end_reason,submitted_at')
-                .eq('room_code', code)
-                .eq('attempt_type', 'test_room')
-                .eq('room_role', 'participant')
-                .in('status', ['submitted', 'auto_submitted', 'disconnected', 'timed_out'])
-                .order('submitted_at', { ascending: true })
-                .limit(MAX_PARTICIPANTS);
-            if (error) throw new Error(error.message);
+            const data = await privateExamData(admin, 'list_attempts', {
+                room_code: code, attempt_type: 'test_room', room_role: 'participant',
+                statuses: ['submitted', 'auto_submitted', 'disconnected', 'timed_out'],
+                order: 'submitted_at_asc', limit: MAX_PARTICIPANTS,
+            });
             return res.status(200).json({
                 results: (data || []).filter((row) => row.score !== null).map((row) => ({
                     userId: row.user_id,
@@ -880,14 +821,10 @@ export default async function handler(req, res) {
             if (!latestRoom) throw new Error('The room expired while the participant was joining.');
             let participantStatus = 'waiting';
             if (latestRoom.status === 'started') {
-                const { error } = await admin.from('exam_attempts')
-                    .update({
-                        status: 'in_progress',
-                        started_at: new Date(Number(latestRoom.startedAt)).toISOString(),
-                        updated_at: new Date().toISOString(),
-                    })
-                    .eq('id', attempt.id).eq('user_id', user.id).eq('status', 'waiting');
-                if (error) throw new Error(error.message);
+                await privateExamData(admin, 'update_attempt', {
+                    id: attempt.id, user_id: user.id, statuses: ['waiting'],
+                    patch: { status: 'in_progress', started_at: new Date(Number(latestRoom.startedAt)).toISOString(), updated_at: new Date().toISOString() },
+                });
                 participantStatus = 'connected';
             } else if (latestRoom.status !== 'waiting') {
                 return fail(res, 409, 'This room has already ended.');
@@ -930,12 +867,10 @@ export default async function handler(req, res) {
             const startIso = new Date(Number(startedRoom.startedAt)).toISOString();
             // One database update handles all room attempts. Serial per-person reads
             // and writes can exceed serverless request limits at the 50-person cap.
-            const { error: attemptsUpdateError } = await admin.from('exam_attempts')
-                .update({ status: 'in_progress', started_at: startIso, updated_at: new Date().toISOString() })
-                .eq('room_code', code)
-                .eq('attempt_type', 'test_room')
-                .eq('status', 'waiting');
-            if (attemptsUpdateError) throw new Error(attemptsUpdateError.message);
+            await privateExamData(admin, 'update_attempt', {
+                room_code: code, attempt_type: 'test_room', statuses: ['waiting'],
+                patch: { status: 'in_progress', started_at: startIso, updated_at: new Date().toISOString() },
+            });
 
             await Promise.allSettled((Array.isArray(memberIds) ? memberIds : []).map(async (uid) => {
                 const p = await getParticipant(code, uid);

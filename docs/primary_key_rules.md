@@ -19,10 +19,10 @@ A primary key is not generated the same way for every table. Follow the specific
 | `public."TestsData"` | `TestId` | `BIGINT`, no identity and no default | **Caller supplies TestId explicitly** for every insert, as requested in the TestsData design. Values must be unique. |
 | `public."TestAttempts"` | `AttemptId` | `BIGINT` identity, `GENERATED ALWAYS` | Database-generated primary key for each attempt; includes `TestId` and `StudentId` foreign keys. |
 | `public."TestRooms"` | `RoomId` | `BIGINT` identity, `GENERATED ALWAYS` | Database-generated row ID; `TestId` references `TestsData.TestId`. The live legacy table contains participant IDs, a 2D answer grid and positional result arrays; the new Test Room feature does **not** write room/session rows to this legacy table. `RoomId` is not a join code. See [`docs/TEST_ROOMS_SCHEMA_AND_IMPLEMENTATION.md`](./TEST_ROOMS_SCHEMA_AND_IMPLEMENTATION.md). |
-| `public.exam_attempts` | `id` | `UUID`, default `gen_random_uuid()` | Database-generated ID for a student's exam or Test Room attempt. `user_id` references `auth.users.id`; Test Room attempts are uniquely constrained by `(room_code, user_id)`. |
-| `public.exam_grades` | `id` | `UUID`, default `gen_random_uuid()` | Database-generated grade ID; `attempt_id` references the owning `exam_attempts.id`. The table prevents duplicate grade rows per attempt. |
-| `public.exam_attempt_keys` | `attempt_id` | `UUID`, PK/FK to `exam_attempts.id` | One server-only answer key per attempt. Browser roles have no table grants and RLS denies client access. The primary key is the attempt ID, not a separately generated identifier. |
-| `public.auth_otp` | `email` | `TEXT` primary key | Email is the normalized challenge key; this private OTP table does not use a numeric ID. |
+| `private.exam_attempts` | `id` | `UUID`, default `gen_random_uuid()` | Durable student exam/Test Room attempt. `user_id` references `auth.users.id`; server-side persistence RPCs are the only application access path. |
+| *(retired)* `exam_grades` | — | Removed on 2026-10-27. The authoritative score and total marks remain on `private.exam_attempts`; the separate table was redundant and empty. |
+| `private.exam_attempt_keys` | `attempt_id` | `UUID`, PK/FK to `private.exam_attempts.id` | One server-only answer key per attempt. The table is unexposed and browser roles have no schema/table privileges. |
+| `private.auth_otp` | `email` | `TEXT` primary key | Short-lived signup challenge storage, accessible only through server-only OTP functions. |
 
 Live schema verification on 2026-10-25 confirmed that `TestRooms` and `TestAttempts` exist. No live `Subscribers` or `Subscriptions` table was verified in this review. For the complete current `TestRooms` field/constraint/access-control snapshot and the feature gaps, see [`docs/TEST_ROOMS_SCHEMA_AND_IMPLEMENTATION.md`](./TEST_ROOMS_SCHEMA_AND_IMPLEMENTATION.md). Do not treat ER diagram labels alone as proof a table exists.
 
