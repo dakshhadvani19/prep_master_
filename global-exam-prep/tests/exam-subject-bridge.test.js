@@ -240,4 +240,25 @@ describe('ExamPortal numeric / legacy resolution', () => {
     expect(ctx.kind).toBe('unknown');
     expect(findSubjectContext(domains, 'not-a-real-id').kind).toBe('unknown');
   });
+
+  it('resolves every current BCA/MCA subject ID and accepts its Mid-2 exam route', () => {
+    const liveComputerApplicationsIds = Object.entries(subjectIdBridge)
+      .filter(([, row]) => ['bca', 'mca'].includes(row.c))
+      .map(([id]) => id);
+
+    expect(liveComputerApplicationsIds).toHaveLength(77);
+
+    for (const id of liveComputerApplicationsIds) {
+      const context = findSubjectContext(domains, id);
+      expect(context.subject, `Expected subject context for ${id}`).toBeTruthy();
+      expect(context.course, `Expected course context for ${id}`).toBeTruthy();
+      expect(
+        getSubjectExamInfo(
+          'mid-2',
+          context.isDepartmentalSubject ?? context.subject.isDepartmentalSubject ?? false,
+        ),
+        `Expected Mid-2 exam metadata for ${id}`,
+      ).toBeTruthy();
+    }
+  });
 });
