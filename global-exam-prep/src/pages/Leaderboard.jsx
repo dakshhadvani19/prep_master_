@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { createElement, useCallback, useEffect, useMemo, useState } from 'react';
 import {
     AlertCircle,
     ArrowLeft,
@@ -60,10 +60,10 @@ function subjectIsCompleted(subject, completedSubjects) {
     return completedSubjects.some((entry) => Number(entry?.subject_id) === subjectId);
 }
 
-function EmptyState({ icon: Icon = BookOpen, title, children }) {
+function EmptyState({ icon = BookOpen, title, children }) {
     return (
         <div className="lb-empty-state">
-            <span className="lb-empty-state__icon"><Icon size={21} strokeWidth={1.8} /></span>
+            <span className="lb-empty-state__icon">{createElement(icon, { size: 21, strokeWidth: 1.8 })}</span>
             <h3>{title}</h3>
             {children && <p>{children}</p>}
         </div>
@@ -71,7 +71,7 @@ function EmptyState({ icon: Icon = BookOpen, title, children }) {
 }
 
 function ChoiceCard({
-    icon: Icon,
+    icon,
     title,
     subtitle,
     meta,
@@ -99,7 +99,7 @@ function ChoiceCard({
                     ? <LoaderCircle size={21} className="lb-spin" />
                     : locked
                         ? <LockKeyhole size={20} strokeWidth={1.8} />
-                        : <Icon size={21} strokeWidth={1.8} />}
+                        : createElement(icon, { size: 21, strokeWidth: 1.8 })}
             </span>
             <span className="lb-choice__copy">
                 <span className="lb-choice__title">{title}</span>

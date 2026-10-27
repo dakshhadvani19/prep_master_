@@ -68,6 +68,7 @@ function signedInAs({ uid, email, staff, fullName }) {
 }
 
 async function at(url = '/leaderboards') {
+  holder.entry = url;
   const view = render(<App />);
   await waitFor(() => expect(view.container.firstChild).toBeTruthy());
   return view;

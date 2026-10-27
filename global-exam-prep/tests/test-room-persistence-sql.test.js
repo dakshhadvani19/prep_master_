@@ -233,7 +233,7 @@ describe('Private attempt persistence and public ERD mirroring', () => {
             insert into private.exam_attempts
               (user_id, subject_name, questions, answers, total_marks, attempt_type, status, room_code, room_role, difficulty)
             values ('${USER_A}', 'Shared Room Paper', '${ONE_QUESTION}'::jsonb, '[null]'::jsonb, 1, 'test_room', 'waiting', 'SHAREROOM01', 'host', 'easy')
-            returning id, core_test_id
+            returning id
         `);
         await db.query(`
             insert into private.exam_attempt_keys(attempt_id, answer_key)
@@ -243,17 +243,28 @@ describe('Private attempt persistence and public ERD mirroring', () => {
             insert into private.exam_attempts
               (user_id, subject_name, questions, answers, total_marks, attempt_type, status, room_code, room_role, difficulty)
             values ('${USER_B}', 'Shared Room Paper', '${ONE_QUESTION}'::jsonb, '[null]'::jsonb, 1, 'test_room', 'waiting', 'SHAREROOM01', 'participant', 'easy')
-            returning id, core_test_id
+            returning id
         `);
         await db.query(`
             insert into private.exam_attempt_keys(attempt_id, answer_key)
             values ('${participant.rows[0].id}', '[0]'::jsonb)
         `);
-        expect(Number(participant.rows[0].core_test_id)).toBe(Number(host.rows[0].core_test_id));
+        const links = await db.query(`
+            select id, core_test_id, core_attempt_id, core_room_id
+            from private.exam_attempts
+            where id = any($1::uuid[])
+        `, [[host.rows[0].id, participant.rows[0].id]]);
+        const hostLink = links.rows.find((row) => row.id === host.rows[0].id);
+        const participantLink = links.rows.find((row) => row.id === participant.rows[0].id);
+        expect(Number(participantLink.core_test_id)).toBe(Number(hostLink.core_test_id));
+        expect(Number(hostLink.core_attempt_id)).toBeGreaterThan(0);
+        expect(Number(participantLink.core_attempt_id)).toBeGreaterThan(0);
+        expect(Number(hostLink.core_room_id)).toBeGreaterThan(0);
+        expect(Number(participantLink.core_room_id)).toBe(Number(hostLink.core_room_id));
         const rows = await db.query(`
-            select count(*)::int as attempts, count(distinct "TestId")::int as papers
-            from public."TestAttempts" where "TestId"=$1
-        `, [host.rows[0].core_test_id]);
+            select (select count(*)::int from public."TestsData" where "TestId"=$1) as papers,
+                   (select count(*)::int from public."TestAttempts" where "TestId"=$1) as attempts
+        `, [hostLink.core_test_id]);
         expect(rows.rows[0]).toEqual({ attempts: 2, papers: 1 });
 
         const aggregateBeforeSubmit = await db.query(`
@@ -321,7 +332,7 @@ describe('Private attempt persistence and public ERD mirroring', () => {
             insert into private.exam_attempts
                 (user_id, subject_name, questions, answers, attempt_type, status, room_code, answer_revision)
             values ('${USER_A}', 'Revision test', '${TWO_QUESTIONS}'::jsonb, '[null,null]'::jsonb, 'test_room', 'in_progress', 'REVISION1111', 0)
-            returning id, core_attempt_id
+            returning id
         `);
         const id = inserted.rows[0].id;
         await db.query(`
@@ -339,7 +350,10 @@ describe('Private attempt persistence and public ERD mirroring', () => {
         const saved = await db.query('select answers, answer_revision from private.exam_attempts where id=$1', [id]);
         expect(saved.rows[0].answer_revision).toBe(2);
         expect(saved.rows[0].answers).toEqual([2, 3]);
-        const mirrored = await db.query('select "Answers" from public."TestAttempts" where "AttemptId"=$1', [inserted.rows[0].core_attempt_id]);
+        const link = await db.query('select core_test_id, core_attempt_id, core_room_id from private.exam_attempts where id=$1', [id]);
+        expect(Number(link.rows[0].core_attempt_id)).toBeGreaterThan(0);
+        expect(Number(link.rows[0].core_room_id)).toBeGreaterThan(0);
+        const mirrored = await db.query('select "Answers" from public."TestAttempts" where "AttemptId"=$1', [link.rows[0].core_attempt_id]);
         expect(mirrored.rows[0].Answers).toEqual([2, 3]);
         const roomMirror = await db.query(`
             select r."Answers" from public."TestRooms" r
