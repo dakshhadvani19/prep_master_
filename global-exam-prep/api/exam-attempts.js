@@ -28,6 +28,16 @@ async function privateExamData(admin, action, payload = {}) {
     if (error) throw new Error(error.message);
     return data;
 }
+async function tagAttemptSubject(admin, attemptId, userId, subjectId) {
+    const { data, error } = await admin.rpc('pm_private_exam_tag_subject', {
+        p_attempt_id: attemptId,
+        p_user_id: userId,
+        p_subject_id: subjectId,
+    });
+    if (error) throw new Error(error.message);
+    if (!data?.ok) throw new Error('The saved attempt could not be linked to its catalog subject.');
+    return data;
+}
 function studentSafeQuestion(question) {
     if (!question || typeof question !== 'object') return null;
     const { answer, review, ...safe } = question;
@@ -76,6 +86,21 @@ export default async function handler(req, res) {
                 }
                 safeQuestions.push(studentSafeQuestion(question));
             }
+            let catalogSubjectId = null;
+            if (body.catalogSubjectId !== undefined && body.catalogSubjectId !== null && body.catalogSubjectId !== '') {
+                catalogSubjectId = Number(body.catalogSubjectId);
+                if (!Number.isSafeInteger(catalogSubjectId) || catalogSubjectId <= 0) {
+                    return fail(res, 400, 'Invalid catalog subject identifier.');
+                }
+                const { data: catalogSubject, error: catalogError } = await admin
+                    .from('Subjects')
+                    .select('SubjectId')
+                    .eq('SubjectId', catalogSubjectId)
+                    .maybeSingle();
+                if (catalogError) throw new Error(catalogError.message);
+                if (!catalogSubject) return fail(res, 400, 'The selected catalog subject no longer exists.');
+            }
+
             const payload = {
                 user_id: user.id,
                 subject_code: body.subjectCode == null ? null : String(body.subjectCode).slice(0, 120),
@@ -95,6 +120,21 @@ export default async function handler(req, res) {
             };
             const attempt = await privateExamData(admin, 'create_attempt', payload);
             if (!attempt?.id) throw new Error('The attempt was not persisted.');
+            if (catalogSubjectId !== null) {
+                try {
+                    await tagAttemptSubject(admin, attempt.id, user.id, catalogSubjectId);
+                } catch (error) {
+                    await privateExamData(admin, 'update_attempt', {
+                        id: attempt.id, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
+                        patch: {
+                            status: 'cancelled',
+                            end_reason: 'catalog_subject_link_failed',
+                            updated_at: new Date().toISOString(),
+                        },
+                    }).catch(() => {});
+                    throw error;
+                }
+            }
             return res.status(201).json({ id: attempt.id });
         }
 

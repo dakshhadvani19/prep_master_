@@ -1,23 +1,43 @@
-/**
- * Phase 4 — leaderboard UI. Real App + Layout + Leaderboard.
- * Ranks stay in memory; no Supabase/legacy auth/data backend writes.
- */
+/** Real catalog-filter phase tests. Ranking rows are intentionally absent until result projection is implemented. */
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, waitFor, cleanup, fireEvent } from '@testing-library/react';
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
-const holder = { entry: '/leaderboards' };
 
-vi.mock('react-router-dom', async (importOriginal) => {
+vi.mock('../src/data/subjectIdBridge.json', () => ({
+  default: {
+    '1001131010601': { s: '01ma0106', c: 'btech-ce', n: 1, sem: 1 },
+    '1000135110101': { s: '01ce1101', c: 'btech-ce', n: 1, sem: 1 },
+    '1000135010401': { s: '01ce0104', c: 'btech-ce', n: 1, sem: 2 },
+  },
+}));
+
+vi.mock('../src/utils/catalogApi', async (importOriginal) => {
   const actual = await importOriginal();
+  const course = {
+    courseId: 1,
+    courseName: 'B.Tech - Computer Engineering',
+    sems: [1, 2],
+    domainId: 'engineering',
+    courseSourceId: 'btech-ce',
+  };
+  const subjects = [
+    { subjectId: 1001131010601, subjectName: 'Calculus', courseId: 1, sem: 1, isDepartmentalSubject: false },
+    { subjectId: 1000135110101, subjectName: 'Computer Programming', courseId: 1, sem: 1, isDepartmentalSubject: false },
+    { subjectId: 1000135010401, subjectName: 'Object Oriented Programming', courseId: 1, sem: 2, isDepartmentalSubject: false },
+  ];
   return {
     ...actual,
-    BrowserRouter: ({ children }) => (
-      <actual.MemoryRouter key={holder.entry} initialEntries={[holder.entry]}>
-        {children}
-      </actual.MemoryRouter>
-    ),
+    fetchCoursesForDomain: vi.fn(async (domainId) => ({
+      domain: actual.getCatalogDomain(domainId),
+      courses: domainId === 'engineering' ? [course] : [],
+      error: null,
+    })),
+    fetchCourseAndSubjects: vi.fn(async (courseId) => Number(courseId) === 1
+      ? { course, subjects, unmapped: [], error: null }
+      : { course: null, subjects: [], unmapped: [], error: new Error('Course not found.') }),
+    mappingForCourseId: vi.fn((courseId) => Number(courseId) === 1 ? { subjectCount: 3 } : actual.mappingForCourseId(courseId)),
   };
 });
 
@@ -47,131 +67,98 @@ function signedInAs({ uid, email, staff, fullName }) {
   }
 }
 
-async function at(url) {
-  holder.entry = url;
+async function at(url = '/leaderboards') {
   const view = render(<App />);
   await waitFor(() => expect(view.container.firstChild).toBeTruthy());
   return view;
 }
 
-function writes() {
-  return state.calls.filter((c) => c.op && c.op !== 'select' && c.op !== 'rpc');
+function mockUnlockResponse(completedSubjects = []) {
+  vi.stubGlobal('fetch', vi.fn(async () => ({
+    ok: true,
+    status: 200,
+    json: async () => ({ completedSubjects }),
+  })));
 }
 
 beforeEach(() => {
   cleanup();
   resetSupabaseStub();
-  holder.entry = '/leaderboards';
+  vi.unstubAllGlobals();
   sessionStorage.clear();
   localStorage.clear();
 });
 
-describe('access', () => {
+describe('leaderboard filtering access', () => {
   it('sends a guest to sign in', async () => {
-    await at('/leaderboards');
+    await at();
     await waitFor(() => expect(screen.getByText('SIGNUP')).toBeInTheDocument());
-    expect(screen.queryByRole('heading', { name: 'Leaderboard' })).toBeNull();
+    expect(screen.queryByRole('heading', { name: 'Leaderboards' })).toBeNull();
   });
 
-  it('lets a student open the student leaderboard', async () => {
-    signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Stu Kapoor' });
-    await at('/leaderboards');
-    await waitFor(() => expect(screen.getByRole('heading', { name: 'Leaderboard' })).toBeInTheDocument());
-    expect(screen.getByText(/Student · Rankings/)).toBeInTheDocument();
-    expect(screen.getByTestId('lb-student-boards')).toBeInTheDocument();
-    expect(screen.queryByTestId('lb-admin-filters')).toBeNull();
-    expect(screen.queryByLabelText(/^Course$/i)).toBeNull();
+  it('loads the real department-first hierarchy without showing mock ranks', async () => {
+    signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Student One' });
+    mockUnlockResponse([]);
+    await at();
+
+    expect(await screen.findByRole('heading', { name: 'Choose a department' })).toBeInTheDocument();
+    expect(screen.getByTestId('lb-departments')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Engineering & Technology/ })).toBeInTheDocument();
+    expect(screen.queryByText(/Top 100/i)).toBeNull();
+    expect(screen.queryByText(/Preview ranks/i)).toBeNull();
+    expect(screen.queryByTestId('lb-top100')).toBeNull();
   });
 
-  it('lets an admin open the all-boards view', async () => {
-    signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
-    await at('/leaderboards');
-    await waitFor(() => expect(screen.getByTestId('lb-admin-filters')).toBeInTheDocument());
-    expect(screen.getByLabelText(/^Course$/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/^Semester$/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/^Subject$/i)).toBeInTheDocument();
-    expect(screen.queryByTestId('lb-student-boards')).toBeNull();
-    expect(screen.queryByTestId('lb-you')).toBeNull();
+  it('unlocks only a matching completed subject and leaves another subject locked', async () => {
+    signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Student One' });
+    mockUnlockResponse([
+      { subject_id: 1001131010601, course_id: 1, semester: 1, subject_code: '01ma0106', subject_name: 'Calculus', exam_type: 'Mid-Term 2', completed_at: '2026-10-27T10:00:00Z' },
+    ]);
+    await at();
+
+    fireEvent.click(await screen.findByTestId('lb-department-engineering'));
+    fireEvent.click(await screen.findByTestId('lb-course-1'));
+    fireEvent.click(await screen.findByTestId('lb-semester-1'));
+
+    const calculus = await screen.findByTestId('lb-subject-1001131010601');
+    const programming = await screen.findByTestId('lb-subject-1000135110101');
+    expect(calculus.textContent).toMatch(/Unlocked/);
+    expect(programming.textContent).toMatch(/Locked/);
+
+    fireEvent.click(calculus);
+    expect((await screen.findByTestId('lb-selected-subject')).textContent).toMatch(/Your completed exam unlocks this subject/i);
+    expect(screen.queryByTestId('lb-top100')).toBeNull();
+
+    fireEvent.click(programming);
+    expect(screen.getByTestId('lb-selected-subject').textContent).toMatch(/BOARD LOCKED/i);
+    expect(screen.getByTestId('lb-selected-subject').textContent).toMatch(/submit an exam/i);
+    expect(screen.queryByText(/Preview ranks/i)).toBeNull();
   });
 
-  it('super admin inherits the admin leaderboard, with no extra controls', async () => {
-    signedInAs({ uid: 'r1', email: 'root@x.com', fullName: 'Root', staff: 'super' });
-    await at('/leaderboards');
-    await waitFor(() => expect(screen.getByTestId('lb-admin-filters')).toBeInTheDocument());
-    expect(screen.queryByText(/Super Admin only/i)).toBeNull();
+  it('fails closed when exam access cannot be verified and lets the student retry', async () => {
+    signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Student One' });
+    vi.stubGlobal('fetch', vi.fn(async () => ({
+      ok: false,
+      status: 503,
+      json: async () => ({ error: 'Could not verify completed exams right now. Please retry.' }),
+    })));
+    await at();
+    expect(await screen.findByRole('alert')).toHaveTextContent(/couldn’t verify completed exams/i);
+    expect(screen.getByRole('button', { name: 'Retry' })).toBeInTheDocument();
   });
 
-  it('student navbar is unchanged', async () => {
-    signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Stu Kapoor' });
-    await at('/dashboard');
-    await waitFor(() => expect(screen.getByText('STUDENT DASHBOARD')).toBeInTheDocument());
-    const labels = [...document.querySelectorAll('.nav-desktop a')].map((a) => a.textContent.trim());
-    expect(labels).toContain('Home');
-    expect(labels).toContain('Subscriptions');
-    expect(labels).toContain('Leaderboards');
-  });
-});
-
-describe('student ranking', () => {
-  beforeEach(() => {
-    signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Stu Kapoor' });
-  });
-
-  it('shows Top 100, own rank outside that list, and percentile', async () => {
-    await at('/leaderboards');
-    await waitFor(() => expect(screen.getByTestId('lb-you')).toBeInTheDocument());
-    expect(screen.getByRole('heading', { name: /Top 100/ })).toBeInTheDocument();
-    const rows = document.querySelectorAll('[data-testid="lb-top100"] .lb-row');
-    expect(rows.length).toBe(97);
-    expect(rows[0].querySelector('.lb-badge').textContent).toBe('4');
-    expect(screen.getByTestId('lb-scroll')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Jump to bottom of list/i })).toBeInTheDocument();
-    expect(screen.getByTestId('lb-you').textContent).toMatch(/#118/);
-    expect(screen.getByTestId('lb-you').textContent).toMatch(/Stu Kapoor/);
-    expect(screen.getByTestId('lb-percentile').textContent).toMatch(/%/);
-    expect(screen.getByTestId('lb-you').textContent).toMatch(/Outside the Top 100/i);
-    expect(writes()).toHaveLength(0);
-  });
-
-  it('switching a participating board updates rank', async () => {
-    await at('/leaderboards');
-    await waitFor(() => expect(screen.getByRole('button', { name: 'Computer Programming' })).toBeInTheDocument());
-    fireEvent.click(screen.getByRole('button', { name: 'Computer Programming' }));
-    await waitFor(() => expect(screen.getByTestId('lb-you').textContent).toMatch(/#14/));
-    expect(screen.getByRole('status').textContent).toMatch(/Preview ranks/i);
-    expect(writes()).toHaveLength(0);
-  });
-});
-
-describe('admin filters', () => {
-  beforeEach(() => {
-    signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
-  });
-
-  it('Course selection restricts semester/subject lists', async () => {
-    await at('/leaderboards');
-    await waitFor(() => expect(screen.getByLabelText(/^Subject$/i)).toBeInTheDocument());
-    expect(screen.getByLabelText(/^Subject$/i).textContent).toMatch(/Calculus/);
-    fireEvent.change(screen.getByLabelText(/^Course$/i), { target: { value: 'btech-it' } });
-    await waitFor(() => expect(screen.getByLabelText(/^Subject$/i).textContent).toMatch(/Digital Logic/));
-    expect(screen.getByLabelText(/^Subject$/i).textContent).not.toMatch(/Calculus/);
-    expect(screen.getByRole('status').textContent).toMatch(/Preview ranks/i);
-  });
-
-  it('semester selection loads that semester’s subjects', async () => {
-    await at('/leaderboards');
-    await waitFor(() => expect(screen.getByLabelText(/^Semester$/i)).toBeInTheDocument());
-    fireEvent.change(screen.getByLabelText(/^Semester$/i), { target: { value: '2' } });
-    await waitFor(() => expect(screen.getByLabelText(/^Subject$/i).textContent).toMatch(/Object Oriented Programming/));
-    expect(screen.getByLabelText(/^Subject$/i).textContent).not.toMatch(/Calculus/);
-  });
-
-  it('renders Top 100 for the selected board and does not persist', async () => {
-    await at('/leaderboards');
-    await waitFor(() => expect(screen.getByTestId('lb-top100')).toBeInTheDocument());
-    expect(document.querySelectorAll('[data-testid="lb-top100"] .lb-row').length).toBe(97);
-    expect(screen.getByTestId('lb-scroll')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Jump to bottom of list/i })).toBeInTheDocument();
-    expect(writes()).toHaveLength(0);
+  it('allows admins to browse all filters without student-specific locks', async () => {
+    signedInAs({ uid: 'admin-1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
+    mockUnlockResponse([]);
+    await at();
+    fireEvent.click(await screen.findByTestId('lb-department-engineering'));
+    fireEvent.click(await screen.findByTestId('lb-course-1'));
+    fireEvent.click(await screen.findByTestId('lb-semester-1'));
+    const calculus = await screen.findByTestId('lb-subject-1001131010601');
+    expect(calculus.textContent).toMatch(/Preview/);
+    expect(calculus.textContent).not.toMatch(/Locked/);
+    fireEvent.click(calculus);
+    expect(screen.getByTestId('lb-selected-subject').textContent).toMatch(/Administrator preview/i);
+    expect(screen.queryByTestId('lb-top100')).toBeNull();
   });
 });

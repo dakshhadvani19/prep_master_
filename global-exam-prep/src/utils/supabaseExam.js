@@ -101,6 +101,28 @@ export async function getMyAttempts(limit = 50) {
     }
 }
 
+export async function getLeaderboardCompletedSubjects() {
+    try {
+        const token = await getAccessToken();
+        const response = await fetch('/api/leaderboard-filters', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+            body: JSON.stringify({ action: 'load' }),
+        });
+        const result = await response.json().catch(() => null);
+        if (!response.ok) throw new Error(result?.error || 'Could not verify leaderboard access.');
+        return {
+            subjects: Array.isArray(result?.completedSubjects) ? result.completedSubjects : [],
+            error: null,
+        };
+    } catch (error) {
+        return { subjects: [], error: error.message || 'Could not verify leaderboard access.' };
+    }
+}
+
 export async function getAttempt(attemptId) {
     try {
         const result = await callExamAttemptApi({ action: 'get', attemptId });

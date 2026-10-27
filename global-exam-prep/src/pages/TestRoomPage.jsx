@@ -790,6 +790,7 @@ export default function TestRoomPage() {
                 action: 'create',
                 room: {
                     subjectCode: createPayload?.subjectId || createPayload?.subjectCode || '',
+                    catalogSubjectId: createPayload?.catalogSubjectId || null,
                     subjectName: createPayload?.subjectName || 'MCQ Exam',
                     examTitle: createPayload?.examTitle || 'MCQ Exam',
                     difficulty: createPayload?.difficulty,

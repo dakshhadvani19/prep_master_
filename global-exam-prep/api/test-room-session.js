@@ -231,6 +231,21 @@ async function privateExamData(admin, action, payload = {}) {
     if (error) throw new Error(error.message);
     return data;
 }
+async function tagAttemptSubject(admin, attemptId, userId, subjectId) {
+    if (subjectId == null || subjectId === '') return null;
+    const parsedSubjectId = Number(subjectId);
+    if (!Number.isSafeInteger(parsedSubjectId) || parsedSubjectId <= 0) {
+        throw new Error('Invalid catalog subject identifier.');
+    }
+    const { data, error } = await admin.rpc('pm_private_exam_tag_subject', {
+        p_attempt_id: attemptId,
+        p_user_id: userId,
+        p_subject_id: parsedSubjectId,
+    });
+    if (error) throw new Error(error.message);
+    if (!data?.ok) throw new Error('The Test Room attempt could not be linked to its catalog subject.');
+    return data;
+}
 async function getAttempt(admin, code, uid) {
     return privateExamData(admin, 'get_attempt', {
         room_code: code, user_id: uid, attempt_type: 'test_room',
@@ -285,6 +300,9 @@ async function createAttempt(admin, room, uid, name, role, safe) {
     const answerKey = Array.isArray(questions) ? questions.map((q) => q.answer) : [];
     if (answerKey.length) {
         await privateExamData(admin, 'set_answer_key', { attempt_id: attempt.id, answer_key: answerKey });
+    }
+    if (room.catalogSubjectId != null) {
+        await tagAttemptSubject(admin, attempt.id, uid, room.catalogSubjectId);
     }
     return attempt;
 }
@@ -504,9 +522,25 @@ export default async function handler(req, res) {
         if (action === 'create') {
             const questions = cleanQuestions(body.questions);
             const input = body.room && typeof body.room === 'object' ? body.room : {};
+            let catalogSubjectId = null;
+            if (input.catalogSubjectId !== undefined && input.catalogSubjectId !== null && input.catalogSubjectId !== '') {
+                catalogSubjectId = Number(input.catalogSubjectId);
+                if (!Number.isSafeInteger(catalogSubjectId) || catalogSubjectId <= 0) {
+                    return fail(res, 400, 'Invalid catalog subject identifier.');
+                }
+                const { data: catalogSubject, error: catalogError } = await admin
+                    .from('Subjects')
+                    .select('SubjectId')
+                    .eq('SubjectId', catalogSubjectId)
+                    .maybeSingle();
+                if (catalogError) throw new Error(catalogError.message);
+                if (!catalogSubject) return fail(res, 400, 'The selected catalog subject no longer exists.');
+                catalogSubjectId = Number(catalogSubject.SubjectId);
+            }
             const createdAtMs = Date.now();
             const room = {
                 roomCode: '', hostUid: user.id, hostName: displayName(user),
+                catalogSubjectId,
                 subjectCode: String(input.subjectCode || '').slice(0, 120),
                 subjectName: String(input.subjectName || 'MCQ Exam').slice(0, 160),
                 examTitle: String(input.examTitle || 'MCQ Exam').slice(0, 100),
