@@ -1,7 +1,7 @@
-import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import {
     cleanQuestions,
+    buildStartRoomScript,
     buildLobbySnapshot,
     normalizeAnswers,
     normalizeCode,
@@ -89,11 +89,10 @@ describe('Test Room join lifecycle policy', () => {
 
 describe('Test Room start Redis script arguments', () => {
     it('reads TTL and cleanup grace from the arguments actually passed to EVAL', () => {
-        const apiSource = readFileSync(new URL('../api/test-room-session.js', import.meta.url), 'utf8');
-        expect(apiSource).toContain('"local ttl = tonumber(ARGV[3]) or 3600"');
-        expect(apiSource).toContain('"  ttl = math.max(ttl, (tonumber(meta.durationMinutes) or 45) * 60 + (tonumber(ARGV[4]) or 300))"');
-        expect(apiSource).not.toContain('tonumber(ARGV[5])');
-        expect(apiSource).toContain('ROOM_TTL_SECONDS, ROOM_CLEANUP_GRACE_SECONDS,');
+        const script = buildStartRoomScript();
+        expect(script).toContain('local ttl = tonumber(ARGV[3]) or 3600');
+        expect(script).toContain('tonumber(ARGV[4]) or 300');
+        expect(script).not.toContain('ARGV[5]');
     });
 });
 

@@ -106,6 +106,27 @@ function displayName(user) {
     const metadata = user?.user_metadata || {};
     return String(metadata.full_name || metadata.name || user?.email?.split('@')[0] || 'Student').trim().slice(0, 80) || 'Student';
 }
+export function buildStartRoomScript() {
+    return [
+        "local raw = redis.call('GET', KEYS[1])",
+        "if not raw then return 'ERR:ROOM_NOT_FOUND' end",
+        "local meta = cjson.decode(raw)",
+        "if meta.hostUid ~= ARGV[1] then return 'ERR:HOST_ONLY' end",
+        "local now = tonumber(ARGV[2])",
+        "local ttl = tonumber(ARGV[3]) or 3600",
+        "if meta.status == 'waiting' then",
+        "  meta.status = 'started'; meta.startedAt = now; meta.serverNow = now",
+        "  meta.deadlineAt = now + tonumber(meta.durationMinutes) * 60000",
+        "  ttl = math.max(ttl, (tonumber(meta.durationMinutes) or 45) * 60 + (tonumber(ARGV[4]) or 300))",
+        "  meta.expiresAt = now + ttl * 1000",
+        "elseif meta.status == 'started' then",
+        "  ttl = math.max(1, math.ceil((tonumber(meta.expiresAt or (now + ttl * 1000)) - now) / 1000))",
+        "else return 'ERR:ROOM_NOT_WAITING' end",
+        "redis.call('SET', KEYS[1], cjson.encode(meta), 'EX', ttl)",
+        "return cjson.encode(meta)"
+    ].join('\n');
+}
+
 export function buildLobbySnapshot(room, participants = []) {
     return {
         room: {
@@ -890,24 +911,7 @@ export default async function handler(req, res) {
         }
 
         if (action === 'start') {
-            const script = [
-                "local raw = redis.call('GET', KEYS[1])",
-                "if not raw then return 'ERR:ROOM_NOT_FOUND' end",
-                "local meta = cjson.decode(raw)",
-                "if meta.hostUid ~= ARGV[1] then return 'ERR:HOST_ONLY' end",
-                "local now = tonumber(ARGV[2])",
-                "local ttl = tonumber(ARGV[3]) or 3600",
-                "if meta.status == 'waiting' then",
-                "  meta.status = 'started'; meta.startedAt = now; meta.serverNow = now",
-                "  meta.deadlineAt = now + tonumber(meta.durationMinutes) * 60000",
-                "  ttl = math.max(ttl, (tonumber(meta.durationMinutes) or 45) * 60 + (tonumber(ARGV[4]) or 300))",
-                "  meta.expiresAt = now + ttl * 1000",
-                "elseif meta.status == 'started' then",
-                "  ttl = math.max(1, math.ceil((tonumber(meta.expiresAt or (now + ttl * 1000)) - now) / 1000))",
-                "else return 'ERR:ROOM_NOT_WAITING' end",
-                "redis.call('SET', KEYS[1], cjson.encode(meta), 'EX', ttl)",
-                "return cjson.encode(meta)"
-            ].join('\n');
+            const script = buildStartRoomScript();
             const started = String(await redis(
                 'EVAL', script, 1, keys(code).meta, user.id, Date.now(),
                 ROOM_TTL_SECONDS, ROOM_CLEANUP_GRACE_SECONDS,
