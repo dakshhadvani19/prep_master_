@@ -36,6 +36,7 @@ beforeEach(() => {
     vi.unstubAllEnvs();
     vi.stubEnv('SUPABASE_URL', 'https://leaderboard-test.supabase.co');
     vi.stubEnv('SUPABASE_SERVICE_ROLE_KEY', 'test-service-role-key');
+    mocks.createClient.mockClear();
     mocks.createClient.mockImplementation(() => ({
         auth: { getUser: mocks.getUser },
         rpc: mocks.rpc,
