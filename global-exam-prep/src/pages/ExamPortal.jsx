@@ -474,6 +474,7 @@ export default function ExamPortal() {
                         testRoomMode: 'create',
                         questions: blueprintQuestions,
                         courseId: String(location.state?.courseId || ''),
+                        catalogSubjectId: subjectContext.numericSubjectId || null,
                         subjectId: sourceSubjectId,
                         subjectName: subjectDetail.title,
                         examType,
