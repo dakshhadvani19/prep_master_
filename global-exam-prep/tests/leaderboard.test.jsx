@@ -116,8 +116,8 @@ describe('leaderboard filtering access', () => {
     expect(await screen.findByRole('heading', { name: 'Choose a department' })).toBeInTheDocument();
     expect(screen.getByTestId('lb-departments')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Engineering & Technology/ })).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByTestId('lb-department-engineering')).toHaveTextContent(/Locked/));
     expect(screen.getByTestId('lb-department-engineering')).toBeDisabled();
-    expect(screen.getByTestId('lb-department-engineering')).toHaveTextContent(/Locked/);
     expect(screen.queryByText(/Top 100/i)).toBeNull();
     expect(screen.queryByText(/Preview ranks/i)).toBeNull();
     expect(screen.queryByTestId('lb-top100')).toBeNull();
@@ -129,10 +129,13 @@ describe('leaderboard filtering access', () => {
       { subject_id: 1001131010601, course_id: 1, semester: 1, subject_code: '01ma0106', subject_name: 'Calculus', exam_type: 'Mid-Term 2', completed_at: '2026-10-27T10:00:00Z' },
     ]);
     await at();
+    await waitFor(() => expect(screen.getByTestId('lb-department-engineering')).not.toBeDisabled());
 
-    fireEvent.click(await screen.findByTestId('lb-department-engineering'));
-    fireEvent.click(await screen.findByTestId('lb-course-1'));
-    fireEvent.click(await screen.findByTestId('lb-semester-1'));
+    fireEvent.click(screen.getByTestId('lb-department-engineering'));
+    await waitFor(() => expect(screen.getByTestId('lb-course-1')).not.toBeDisabled());
+    fireEvent.click(screen.getByTestId('lb-course-1'));
+    await waitFor(() => expect(screen.getByTestId('lb-semester-1')).not.toBeDisabled());
+    fireEvent.click(screen.getByTestId('lb-semester-1'));
 
     const calculus = await screen.findByTestId('lb-subject-1001131010601');
     const programming = await screen.findByTestId('lb-subject-1000135110101');
@@ -140,7 +143,7 @@ describe('leaderboard filtering access', () => {
     expect(programming.textContent).toMatch(/Locked/);
 
     fireEvent.click(calculus);
-    expect((await screen.findByTestId('lb-selected-subject')).textContent).toMatch(/Your completed exam unlocks this subject/i);
+    expect((await screen.findByTestId('lb-selected-subject')).textContent).toMatch(/Your completed exam unlocks this exact subject/i);
     expect(screen.queryByTestId('lb-top100')).toBeNull();
 
     expect(programming).toBeDisabled();
@@ -160,12 +163,15 @@ describe('leaderboard filtering access', () => {
     fireEvent.click(lockedDepartment);
     expect(screen.getByRole('heading', { name: 'Choose a department' })).toBeInTheDocument();
 
-    fireEvent.click(await screen.findByTestId('lb-department-engineering'));
+    await waitFor(() => expect(screen.getByTestId('lb-department-engineering')).not.toBeDisabled());
+    fireEvent.click(screen.getByTestId('lb-department-engineering'));
+    await waitFor(() => expect(screen.getByTestId('lb-course-1')).not.toBeDisabled());
     const lockedCourseButton = await screen.findByTestId('lb-course-2');
     fireEvent.click(lockedCourseButton);
     expect(screen.getByRole('heading', { name: 'Select your course' })).toBeInTheDocument();
 
-    fireEvent.click(await screen.findByTestId('lb-course-1'));
+    fireEvent.click(screen.getByTestId('lb-course-1'));
+    await waitFor(() => expect(screen.getByTestId('lb-semester-1')).not.toBeDisabled());
     const lockedSemester = await screen.findByTestId('lb-semester-2');
     fireEvent.click(lockedSemester);
     expect(screen.getByRole('heading', { name: 'Choose a semester' })).toBeInTheDocument();
