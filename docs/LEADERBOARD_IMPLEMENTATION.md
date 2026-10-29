@@ -1,17 +1,17 @@
 # Leaderboard implementation
 
-## Phase 1 — hierarchy filters and subject access
+## Hierarchy filters and subject access
 
-**Status as of 2026-10-27:** Phase-1 filtering is implemented; database migrations are applied and smoke-tested. Ranking rows are intentionally not part of this phase.
+**Status as of 2026-10-27:** Hierarchical access checks are implemented; database migrations are applied and smoke-tested. Ranking rows are not yet populated from verified exam results.
 
-### Filter sequence
+### Filter sequence and access policy
 
-1. **Department** — the six student-catalog groups from `src/data/catalogDomains.js`.
-2. **Course** — loaded from the live `public.Courses` table and limited using `src/data/courseMapping.json`, because the public schema has no department column.
-3. **Semester** — derived from live `public.Subjects.Semester` rows for the chosen course.
-4. **Subject** — live catalog subjects for the selected course and semester.
+1. **Department** — enabled only when a qualifying completed attempt exists in a course mapped to that department.
+2. **Course** — enabled only when the verified completed-attempt feed includes a subject from that exact course.
+3. **Semester** — enabled only when a qualifying completed attempt exists in that exact course and semester.
+4. **Subject** — enabled only when the canonical `SubjectId`, `CourseId`, and semester all match a qualifying completed attempt.
 
-Changing an earlier filter clears downstream choices. Search inputs only narrow the currently displayed course or subject list. The UI is responsive, keyboard-focusable, and uses restrained violet and gold accents rather than a full-page gradient.
+The catalog can show locked options, but locked buttons are disabled and the navigation handlers independently reject them. This prevents direct interaction from bypassing a locked ancestor. During loading or an access verification error, student access fails closed. Administrator preview remains unrestricted. Changing an earlier filter clears downstream choices. Search inputs only narrow the currently displayed course or subject list. The UI is responsive, keyboard-focusable, and uses restrained violet and gold accents rather than a full-page gradient.
 
 ### Unlock policy
 
@@ -27,7 +27,7 @@ Attempts created before the canonical SubjectId field existed stored a short sub
 
 ### What is deliberately deferred
 
-The private `leaderboard_attempt_results` projection currently has no populated ranking feed. Phase 1 does **not** display mock ranks, fabricated scores, a podium, or percentages. The next phase must populate/validate the private result projection from finalized attempts and implement ranking calculations, tie handling, pagination, own-rank display, and the visual results table against real data.
+The private `leaderboard_attempt_results` projection currently has no populated ranking feed. Phase 1 does **not** display mock ranks, fabricated scores, a podium, or percentages. Future ranking work must populate/validate the private result projection from finalized attempts and implement ranking calculations, tie handling, pagination, own-rank display, and the visual results table against real data.
 
 ### Verification
 
