@@ -27,11 +27,11 @@ Attempts created before the canonical SubjectId field existed stored a short sub
 
 ### What is deliberately deferred
 
-The private `leaderboard_attempt_results` projection currently has no populated ranking feed. Phase 1 does **not** display mock ranks, fabricated scores, a podium, or percentages. Future ranking work must populate/validate the private result projection from finalized attempts and implement ranking calculations, tie handling, pagination, own-rank display, and the visual results table against real data.
+The private `leaderboard_attempt_results` projection currently has no populated ranking feed. The UI does **not** display mock ranks, fabricated scores, a podium, or percentages. Ranking implementation remains outstanding: populate and validate the private result projection from finalized attempts, then implement ranking calculations, tie handling, pagination, own-rank display, and the results table against real data.
 
 ### Verification
 
 - Live SQL smoke test: a temporary attempt was created, linked to catalog SubjectId `1001131010601`, submitted, and appeared in the server-side completed-subject feed with CourseId `1` and Semester `1`.
 - Browser roles cannot execute the two privileged leaderboard RPCs; only `service_role` can.
 - The temporary smoke-test attempt, its private key, public attempt row, and public paper were deleted after verification.
-- Automated regression tests were updated, but a local full test/build run still needs to be executed.
+- Regression tests cover completed-subject matching, ancestor-level locks, blocked direct navigation, access-verification failures, and unrestricted administrator preview. Run the project’s CI/build checks before release.
