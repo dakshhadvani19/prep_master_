@@ -56,8 +56,38 @@ function normalizeName(value) {
 
 function subjectIsCompleted(subject, completedSubjects) {
     const subjectId = Number(subject?.subjectId);
-    if (!Number.isSafeInteger(subjectId) || subjectId <= 0) return false;
-    return completedSubjects.some((entry) => Number(entry?.subject_id) === subjectId);
+    const courseId = Number(subject?.courseId);
+    const semester = Number(subject?.sem);
+    if (!Number.isSafeInteger(subjectId) || subjectId <= 0
+        || !Number.isSafeInteger(courseId) || courseId <= 0
+        || !Number.isFinite(semester)) return false;
+    return completedSubjects.some((entry) => (
+        Number(entry?.subject_id) === subjectId
+        && Number(entry?.course_id) === courseId
+        && Number(entry?.semester) === semester
+    ));
+}
+
+function departmentHasCompletion(domain, completedSubjects) {
+    return completedSubjects.some((entry) => (
+        mappingForCourseId(entry?.course_id)?.domainId === domain?.id
+    ));
+}
+
+function courseHasCompletion(course, completedSubjects) {
+    const courseId = Number(course?.courseId);
+    return Number.isSafeInteger(courseId) && courseId > 0
+        && completedSubjects.some((entry) => Number(entry?.course_id) === courseId);
+}
+
+function semesterHasCompletion(courseId, semester, completedSubjects) {
+    const id = Number(courseId);
+    const sem = Number(semester);
+    return Number.isSafeInteger(id) && id > 0
+        && Number.isFinite(sem)
+        && completedSubjects.some((entry) => (
+            Number(entry?.course_id) === id && Number(entry?.semester) === sem
+        ));
 }
 
 function EmptyState({ icon = BookOpen, title, children }) {
@@ -78,6 +108,7 @@ function ChoiceCard({
     selected = false,
     locked = false,
     checking = false,
+    disabled = false,
     badge,
     onClick,
     testId,
@@ -91,6 +122,7 @@ function ChoiceCard({
                 locked ? 'is-locked' : '',
             ].filter(Boolean).join(' ')}
             onClick={onClick}
+            disabled={disabled}
             aria-pressed={selected}
             data-testid={testId}
         >
@@ -190,16 +222,36 @@ export default function Leaderboard() {
             .filter((item) => !query || normalizeName(item.subjectName).includes(query));
     }, [subjects, semester, subjectQuery]);
 
+    const semesterSubjects = useMemo(
+        () => subjects.filter((item) => Number(item.sem) === Number(semester)),
+        [subjects, semester],
+    );
     const unlockedCount = useMemo(
-        () => subjects.filter((item) => subjectIsCompleted(item, completedSubjects)).length,
-        [subjects, completedSubjects],
+        () => semesterSubjects.filter((item) => subjectIsCompleted(item, completedSubjects)).length,
+        [semesterSubjects, completedSubjects],
     );
 
     const selectedSubject = subjects.find((item) => String(item.subjectId) === String(selectedSubjectId)) || null;
     const selectedIsUnlocked = Boolean(isAdmin || (!loadingAccess && !accessError && selectedSubject && subjectIsCompleted(selectedSubject, completedSubjects)));
     const stepIndex = Math.max(0, STEPS.findIndex((item) => item.id === step));
 
+    function canOpenDepartment(candidate) {
+        return isAdmin || (!loadingAccess && !accessError
+            && departmentHasCompletion(candidate, completedSubjects));
+    }
+
+    function canOpenCourse(candidate) {
+        return isAdmin || (!loadingAccess && !accessError
+            && courseHasCompletion(candidate, completedSubjects));
+    }
+
+    function canOpenSemester(candidateSemester) {
+        return isAdmin || (!loadingAccess && !accessError && course
+            && semesterHasCompletion(course.courseId, candidateSemester, completedSubjects));
+    }
+
     async function chooseDomain(nextDomain) {
+        if (!canOpenDepartment(nextDomain)) return;
         setDomain(nextDomain);
         setCourse(null);
         setSubjects([]);
@@ -217,6 +269,7 @@ export default function Leaderboard() {
     }
 
     async function chooseCourse(nextCourse) {
+        if (!canOpenCourse(nextCourse)) return;
         setCourse(nextCourse);
         setSemester(null);
         setSelectedSubjectId(null);
@@ -239,6 +292,7 @@ export default function Leaderboard() {
     }
 
     function chooseSemester(value) {
+        if (!canOpenSemester(value)) return;
         setSemester(Number(value));
         setSelectedSubjectId(null);
         setSubjectQuery('');
@@ -297,10 +351,9 @@ export default function Leaderboard() {
                 <div>
                     <strong>Subject-based access</strong>
                     <p>{isAdmin
-                        ? 'Administrator preview: explore the full course catalog. Ranking data will be connected in the next phase.'
-                        : 'A subject unlocks after you submit a scored exam for that subject. Locked subjects remain visible so you can see what is available.'}</p>
+                        ? 'Administrator preview: explore the full catalog. Verified ranking data is not available yet.'
+                        : 'Departments, courses, and semesters unlock only when your saved exam history contains a completed exam within that exact branch. A subject unlocks only for its own completed exam.'}</p>
                 </div>
-                <div className="lb-guidance__phase">FILTERS · PHASE 1</div>
             </section>
 
             {accessError && !isAdmin && (
@@ -380,13 +433,27 @@ export default function Leaderboard() {
                     <div className="lb-grid lb-grid--departments" data-testid="lb-departments">
                         {CATALOG_DOMAINS.map((item) => {
                             const Icon = DOMAIN_ICONS[item.id] || Building2;
+                            const checking = !isAdmin && loadingAccess;
+                            const unlocked = canOpenDepartment(item);
                             return (
                                 <ChoiceCard
                                     key={item.id}
                                     icon={Icon}
                                     title={item.title}
                                     subtitle={item.description}
-                                    meta="Browse courses"
+                                    meta={isAdmin
+                                        ? 'Browse courses'
+                                        : checking
+                                            ? 'Checking completed exams'
+                                            : accessError
+                                                ? 'Access check unavailable'
+                                                : unlocked
+                                                    ? 'Completed exam found in this department'
+                                                    : 'Complete an exam in this department to unlock'}
+                                    locked={!unlocked && !checking}
+                                    checking={checking}
+                                    disabled={!unlocked}
+                                    badge={checking ? 'Checking' : isAdmin ? 'Preview' : unlocked ? 'Unlocked' : 'Locked'}
                                     onClick={() => chooseDomain(item)}
                                     testId={`lb-department-${item.id}`}
                                 />
@@ -412,15 +479,29 @@ export default function Leaderboard() {
                             <div className="lb-grid lb-grid--courses" data-testid="lb-courses">
                                 {filteredCourses.map((item) => {
                                     const mapping = mappingForCourseId(item.courseId);
+                                    const checking = !isAdmin && loadingAccess;
+                                    const unlocked = canOpenCourse(item);
                                     return (
                                         <ChoiceCard
                                             key={item.courseId}
                                             icon={GraduationCap}
                                             title={item.courseName}
                                             subtitle={`${item.sems?.length || 0} listed semesters`}
-                                            meta={mapping?.subjectCount ? `${mapping.subjectCount} catalog subjects` : 'Explore subjects'}
-                                            onClick={() => chooseCourse(item)}
+                                            meta={isAdmin
+                                                ? (mapping?.subjectCount ? `${mapping.subjectCount} catalog subjects` : 'Explore subjects')
+                                                : checking
+                                                    ? 'Checking completed exams'
+                                                    : accessError
+                                                        ? 'Access check unavailable'
+                                                        : unlocked
+                                                            ? (mapping?.subjectCount ? `${mapping.subjectCount} catalog subjects` : 'Completed exam found')
+                                                            : 'Complete an exam in this course to unlock'}
                                             selected={course?.courseId === item.courseId}
+                                            locked={!unlocked && !checking}
+                                            checking={checking}
+                                            disabled={!unlocked}
+                                            badge={checking ? 'Checking' : isAdmin ? 'Preview' : unlocked ? 'Unlocked' : 'Locked'}
+                                            onClick={() => chooseCourse(item)}
                                             testId={`lb-course-${item.courseId}`}
                                         />
                                     );
@@ -443,15 +524,28 @@ export default function Leaderboard() {
                                 const count = subjects.filter((item) => Number(item.sem) === value).length;
                                 const ready = subjects.filter((item) => Number(item.sem) === value
                                     && subjectIsCompleted(item, completedSubjects)).length;
+                                const checking = !isAdmin && loadingAccess;
+                                const unlocked = canOpenSemester(value);
                                 return (
                                     <ChoiceCard
                                         key={value}
                                         icon={Layers3}
                                         title={value === 0 ? 'Semester 0' : `Semester ${value}`}
                                         subtitle={`${count} subjects`}
-                                        meta={isAdmin ? 'All subjects available to inspect' : loadingAccess ? 'Checking access' : `${ready} unlocked`}
+                                        meta={isAdmin
+                                            ? 'All subjects available to inspect'
+                                            : checking
+                                                ? 'Checking completed exams'
+                                                : accessError
+                                                    ? 'Access check unavailable'
+                                                    : unlocked
+                                                        ? `${ready} completed subject${ready === 1 ? '' : 's'}`
+                                                        : 'Complete an exam in this semester to unlock'}
                                         selected={semester === value}
-                                        checking={!isAdmin && loadingAccess}
+                                        locked={!unlocked && !checking}
+                                        checking={checking}
+                                        disabled={!unlocked}
+                                        badge={checking ? 'Checking' : isAdmin ? 'Preview' : unlocked ? 'Unlocked' : 'Locked'}
                                         onClick={() => chooseSemester(value)}
                                         testId={`lb-semester-${value}`}
                                     />
@@ -486,7 +580,8 @@ export default function Leaderboard() {
                         )}
                         <div className="lb-grid lb-grid--subjects" data-testid="lb-subjects">
                             {filteredSubjects.map((item) => {
-                                const unlocked = isAdmin || (!loadingAccess && subjectIsCompleted(item, completedSubjects));
+                                const unlocked = isAdmin || (!loadingAccess && !accessError
+                                    && subjectIsCompleted(item, completedSubjects));
                                 const checking = !isAdmin && loadingAccess;
                                 return (
                                     <ChoiceCard
@@ -494,12 +589,21 @@ export default function Leaderboard() {
                                         icon={unlocked ? BookOpen : LockKeyhole}
                                         title={item.subjectName}
                                         subtitle={`Subject ID ${item.subjectId}`}
-                                        meta={unlocked ? (isAdmin ? 'Administrator preview' : 'Exam completed') : 'Complete and submit an exam to unlock'}
+                                        meta={unlocked
+                                            ? (isAdmin ? 'Administrator preview' : 'Exam completed')
+                                            : checking
+                                                ? 'Checking completed exams'
+                                                : accessError
+                                                    ? 'Access check unavailable'
+                                                    : 'Complete and submit an exam for this exact subject to unlock'}
                                         selected={String(selectedSubjectId) === String(item.subjectId)}
                                         locked={!unlocked && !checking}
                                         checking={checking}
+                                        disabled={!unlocked}
                                         badge={checking ? 'Checking' : unlocked ? (isAdmin ? 'Preview' : 'Unlocked') : 'Locked'}
-                                        onClick={() => setSelectedSubjectId(item.subjectId)}
+                                        onClick={() => {
+                                            if (unlocked) setSelectedSubjectId(item.subjectId);
+                                        }}
                                         testId={`lb-subject-${item.subjectId}`}
                                     />
                                 );
@@ -520,8 +624,8 @@ export default function Leaderboard() {
                                     <h3>{selectedSubject.subjectName}</h3>
                                     <p>{selectedIsUnlocked
                                         ? isAdmin
-                                            ? 'Administrator preview: your department, course, semester, and subject filters are set. Verified leaderboard rankings will be connected in the next phase.'
-                                            : 'Your completed exam unlocks this subject. The ranking list and verified scores will be connected in the next phase.'
+                                            ? 'Administrator preview: your department, course, semester, and subject filters are set. Verified ranking data is not available yet.'
+                                            : 'Your completed exam unlocks this exact subject. Verified scores and rankings appear when the live ranking feed is available.'
                                         : accessError
                                             ? 'We could not confirm your exam history. Retry the access check before trying again.'
                                             : 'Submit an exam for this exact subject and wait for it to be recorded as completed. The subject will unlock automatically when your saved result can be verified.'}</p>
