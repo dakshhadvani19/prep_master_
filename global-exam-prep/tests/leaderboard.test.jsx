@@ -22,6 +22,13 @@ vi.mock('../src/utils/catalogApi', async (importOriginal) => {
     domainId: 'engineering',
     courseSourceId: 'btech-ce',
   };
+  const lockedCourse = {
+    courseId: 2,
+    courseName: 'B.Tech - Information Technology',
+    sems: [1, 2],
+    domainId: 'engineering',
+    courseSourceId: 'btech-it',
+  };
   const subjects = [
     { subjectId: 1001131010601, subjectName: 'Calculus', courseId: 1, sem: 1, isDepartmentalSubject: false },
     { subjectId: 1000135110101, subjectName: 'Computer Programming', courseId: 1, sem: 1, isDepartmentalSubject: false },
@@ -31,13 +38,17 @@ vi.mock('../src/utils/catalogApi', async (importOriginal) => {
     ...actual,
     fetchCoursesForDomain: vi.fn(async (domainId) => ({
       domain: actual.getCatalogDomain(domainId),
-      courses: domainId === 'engineering' ? [course] : [],
+      courses: domainId === 'engineering' ? [course, lockedCourse] : [],
       error: null,
     })),
     fetchCourseAndSubjects: vi.fn(async (courseId) => Number(courseId) === 1
       ? { course, subjects, unmapped: [], error: null }
       : { course: null, subjects: [], unmapped: [], error: new Error('Course not found.') }),
-    mappingForCourseId: vi.fn((courseId) => Number(courseId) === 1 ? { subjectCount: 3 } : actual.mappingForCourseId(courseId)),
+    mappingForCourseId: vi.fn((courseId) => Number(courseId) === 1
+      ? { courseId: 1, domainId: 'engineering', subjectCount: 3 }
+      : Number(courseId) === 2
+        ? { courseId: 2, domainId: 'engineering', subjectCount: 2 }
+        : actual.mappingForCourseId(courseId)),
   };
 });
 
@@ -105,6 +116,8 @@ describe('leaderboard filtering access', () => {
     expect(await screen.findByRole('heading', { name: 'Choose a department' })).toBeInTheDocument();
     expect(screen.getByTestId('lb-departments')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Engineering & Technology/ })).toBeInTheDocument();
+    expect(screen.getByTestId('lb-department-engineering')).toBeDisabled();
+    expect(screen.getByTestId('lb-department-engineering')).toHaveTextContent(/Locked/);
     expect(screen.queryByText(/Top 100/i)).toBeNull();
     expect(screen.queryByText(/Preview ranks/i)).toBeNull();
     expect(screen.queryByTestId('lb-top100')).toBeNull();
@@ -130,10 +143,32 @@ describe('leaderboard filtering access', () => {
     expect((await screen.findByTestId('lb-selected-subject')).textContent).toMatch(/Your completed exam unlocks this subject/i);
     expect(screen.queryByTestId('lb-top100')).toBeNull();
 
-    fireEvent.click(programming);
-    expect(screen.getByTestId('lb-selected-subject').textContent).toMatch(/BOARD LOCKED/i);
-    expect(screen.getByTestId('lb-selected-subject').textContent).toMatch(/submit an exam/i);
+    expect(programming).toBeDisabled();
+    expect(screen.getByTestId('lb-selected-subject').textContent).not.toMatch(/BOARD LOCKED/i);
     expect(screen.queryByText(/Preview ranks/i)).toBeNull();
+  });
+
+  it('prevents direct navigation through locked hierarchy levels', async () => {
+    signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Student One' });
+    mockUnlockResponse([
+      { subject_id: 1001131010601, course_id: 1, semester: 1, subject_code: '01ma0106', subject_name: 'Calculus', exam_type: 'Mid-Term 2', completed_at: '2026-10-27T10:00:00Z' },
+    ]);
+    await at();
+
+    const lockedDepartment = await screen.findByTestId('lb-department-computer-apps');
+    expect(lockedDepartment).toBeDisabled();
+    fireEvent.click(lockedDepartment);
+    expect(screen.getByRole('heading', { name: 'Choose a department' })).toBeInTheDocument();
+
+    fireEvent.click(await screen.findByTestId('lb-department-engineering'));
+    const lockedCourseButton = await screen.findByTestId('lb-course-2');
+    fireEvent.click(lockedCourseButton);
+    expect(screen.getByRole('heading', { name: 'Select your course' })).toBeInTheDocument();
+
+    fireEvent.click(await screen.findByTestId('lb-course-1'));
+    const lockedSemester = await screen.findByTestId('lb-semester-2');
+    fireEvent.click(lockedSemester);
+    expect(screen.getByRole('heading', { name: 'Choose a semester' })).toBeInTheDocument();
   });
 
   it('fails closed when exam access cannot be verified and lets the student retry', async () => {
@@ -152,9 +187,20 @@ describe('leaderboard filtering access', () => {
     signedInAs({ uid: 'admin-1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     mockUnlockResponse([]);
     await at();
-    fireEvent.click(await screen.findByTestId('lb-department-engineering'));
-    fireEvent.click(await screen.findByTestId('lb-course-1'));
-    fireEvent.click(await screen.findByTestId('lb-semester-1'));
+    const engineering = await screen.findByTestId('lb-department-engineering');
+    expect(engineering).not.toBeDisabled();
+    expect(screen.getByTestId('lb-department-computer-apps')).toBeDisabled();
+    fireEvent.click(engineering);
+    const unlockedCourse = await screen.findByTestId('lb-course-1');
+    const lockedCourseButton = await screen.findByTestId('lb-course-2');
+    expect(unlockedCourse).not.toBeDisabled();
+    expect(lockedCourseButton).toBeDisabled();
+    fireEvent.click(unlockedCourse);
+    const unlockedSemester = await screen.findByTestId('lb-semester-1');
+    const lockedSemester = await screen.findByTestId('lb-semester-2');
+    expect(unlockedSemester).not.toBeDisabled();
+    expect(lockedSemester).toBeDisabled();
+    fireEvent.click(unlockedSemester);
     const calculus = await screen.findByTestId('lb-subject-1001131010601');
     expect(calculus.textContent).toMatch(/Preview/);
     expect(calculus.textContent).not.toMatch(/Locked/);
