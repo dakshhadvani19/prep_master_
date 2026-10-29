@@ -83,7 +83,7 @@
 
 .lb-guidance {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.85rem;
     padding: 0.95rem 1rem;
