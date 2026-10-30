@@ -5,9 +5,12 @@ const mocks = vi.hoisted(() => ({
     getUser: vi.fn(),
     rpc: vi.fn(),
     from: vi.fn(),
-    select: vi.fn(),
-    eq: vi.fn(),
-    maybeSingle: vi.fn(),
+    adminSelect: vi.fn(),
+    adminEq: vi.fn(),
+    adminMaybeSingle: vi.fn(),
+    subjectSelect: vi.fn(),
+    subjectEq: vi.fn(),
+    subjectMaybeSingle: vi.fn(),
 }));
 
 vi.mock('@supabase/supabase-js', () => ({
@@ -53,29 +56,44 @@ function validLeaderboard() {
     };
 }
 
+function allowSubjectAccess() {
+    mocks.rpc.mockImplementation(async (name) => {
+        if (name === 'pm_leaderboard_completed_subjects') {
+            return { data: [{ subject_id: SUBJECT_ID }], error: null };
+        }
+        if (name === 'pm_leaderboard_rankings') {
+            return { data: validLeaderboard(), error: null };
+        }
+        throw new Error('Unexpected RPC: ' + name);
+    });
+}
+
 beforeEach(() => {
     vi.unstubAllGlobals();
     vi.unstubAllEnvs();
     vi.stubEnv('SUPABASE_URL', 'https://leaderboard-test.supabase.co');
     vi.stubEnv('SUPABASE_SERVICE_ROLE_KEY', 'test-service-role-key');
 
-    mocks.createClient.mockReset();
-    mocks.getUser.mockReset();
-    mocks.rpc.mockReset();
-    mocks.from.mockReset();
-    mocks.select.mockReset();
-    mocks.eq.mockReset();
-    mocks.maybeSingle.mockReset();
+    for (const mock of Object.values(mocks)) mock.mockReset();
 
-    const subjectQuery = {
-        select: mocks.select,
-        eq: mocks.eq,
-        maybeSingle: mocks.maybeSingle,
+    const adminQuery = {
+        select: mocks.adminSelect,
+        eq: mocks.adminEq,
+        maybeSingle: mocks.adminMaybeSingle,
     };
-    mocks.select.mockReturnValue(subjectQuery);
-    mocks.eq.mockReturnValue(subjectQuery);
-    mocks.maybeSingle.mockResolvedValue({ data: { SubjectId: SUBJECT_ID }, error: null });
-    mocks.from.mockReturnValue(subjectQuery);
+    const subjectQuery = {
+        select: mocks.subjectSelect,
+        eq: mocks.subjectEq,
+        maybeSingle: mocks.subjectMaybeSingle,
+    };
+    mocks.adminSelect.mockReturnValue(adminQuery);
+    mocks.adminEq.mockReturnValue(adminQuery);
+    mocks.subjectSelect.mockReturnValue(subjectQuery);
+    mocks.subjectEq.mockReturnValue(subjectQuery);
+    mocks.from.mockImplementation((table) => table === 'Admins' ? adminQuery : subjectQuery);
+
+    mocks.adminMaybeSingle.mockResolvedValue({ data: null, error: null });
+    mocks.subjectMaybeSingle.mockResolvedValue({ data: { SubjectId: SUBJECT_ID }, error: null });
 
     mocks.createClient.mockReturnValue({
         auth: { getUser: mocks.getUser },
@@ -86,7 +104,7 @@ beforeEach(() => {
         data: { user: { id: USER_A, email: 'student@example.com' } },
         error: null,
     });
-    mocks.rpc.mockResolvedValue({ data: validLeaderboard(), error: null });
+    allowSubjectAccess();
 });
 
 afterEach(() => {
@@ -102,16 +120,16 @@ describe('POST /api/leaderboard-rankings', () => {
 
         expect(res.statusCode).toBe(401);
         expect(res.payload.error).toMatch(/sign in again/i);
-        expect(mocks.createClient).toHaveBeenCalledTimes(1);
         expect(mocks.rpc).not.toHaveBeenCalled();
     });
 
-    it('uses only the user ID verified from the bearer token and returns safe ranking data', async () => {
+    it('uses the verified token user ID and checks exact subject access server-side', async () => {
         const res = makeRes();
         await handler(req({
             subjectId: String(SUBJECT_ID),
             userId: USER_B,
             studentAuthUid: USER_B,
+            role: 'admin',
             examType: 'Mid-Term 2',
             difficulty: 'MEDIUM',
             attemptType: 'TEST_ROOM',
@@ -124,10 +142,16 @@ describe('POST /api/leaderboard-rankings', () => {
         expect(res.statusCode).toBe(200);
         expect(res.payload.leaderboard.source).toBe('published');
         expect(mocks.getUser).toHaveBeenCalledWith('verified-student-token');
-        expect(mocks.from).toHaveBeenCalledWith('Subjects');
-        expect(mocks.select).toHaveBeenCalledWith('SubjectId');
-        expect(mocks.eq).toHaveBeenCalledWith('SubjectId', SUBJECT_ID);
-        expect(mocks.rpc).toHaveBeenCalledWith('pm_leaderboard_rankings', {
+        expect(mocks.from).toHaveBeenNthCalledWith(1, 'Subjects');
+        expect(mocks.from).toHaveBeenNthCalledWith(2, 'Admins');
+        expect(mocks.subjectSelect).toHaveBeenCalledWith('SubjectId');
+        expect(mocks.subjectEq).toHaveBeenCalledWith('SubjectId', SUBJECT_ID);
+        expect(mocks.adminSelect).toHaveBeenCalledWith('AdminId');
+        expect(mocks.adminEq).toHaveBeenCalledWith('auth_uid', USER_A);
+        expect(mocks.rpc).toHaveBeenNthCalledWith(1, 'pm_leaderboard_completed_subjects', {
+            p_user_id: USER_A,
+        });
+        expect(mocks.rpc).toHaveBeenNthCalledWith(2, 'pm_leaderboard_rankings', {
             p_subject_id: SUBJECT_ID,
             p_user_id: USER_A,
             p_exam_type: 'Mid-Term 2',
@@ -152,7 +176,7 @@ describe('POST /api/leaderboard-rankings', () => {
         }, { authorization: 'Bearer token' }), res);
 
         expect(res.statusCode).toBe(200);
-        expect(mocks.rpc).toHaveBeenCalledWith('pm_leaderboard_rankings', {
+        expect(mocks.rpc).toHaveBeenNthCalledWith(2, 'pm_leaderboard_rankings', {
             p_subject_id: SUBJECT_ID,
             p_user_id: USER_A,
             p_exam_type: null,
@@ -188,7 +212,7 @@ describe('POST /api/leaderboard-rankings', () => {
     });
 
     it('returns a friendly not-found message for a subject outside the catalog', async () => {
-        mocks.maybeSingle.mockResolvedValue({ data: null, error: null });
+        mocks.subjectMaybeSingle.mockResolvedValue({ data: null, error: null });
         const res = makeRes();
         await handler(req({ subjectId: SUBJECT_ID }, { authorization: 'Bearer token' }), res);
 
@@ -197,12 +221,51 @@ describe('POST /api/leaderboard-rankings', () => {
         expect(mocks.rpc).not.toHaveBeenCalled();
     });
 
+    it('blocks a student who has not completed the requested subject, regardless of UI state or caller claims', async () => {
+        mocks.rpc.mockResolvedValueOnce({ data: [], error: null });
+        const res = makeRes();
+        await handler(req({
+            subjectId: SUBJECT_ID,
+            userId: USER_A,
+            role: 'admin',
+        }, { authorization: 'Bearer verified-student-token' }), res);
+
+        expect(res.statusCode).toBe(403);
+        expect(res.payload.error).toMatch(/complete an exam in this subject/i);
+        expect(mocks.rpc).toHaveBeenCalledTimes(1);
+        expect(mocks.rpc).toHaveBeenCalledWith('pm_leaderboard_completed_subjects', {
+            p_user_id: USER_A,
+        });
+    });
+
+    it('allows administrator preview only when public.Admins confirms the caller', async () => {
+        mocks.adminMaybeSingle.mockResolvedValue({ data: { AdminId: 7 }, error: null });
+        const res = makeRes();
+        await handler(req({ subjectId: SUBJECT_ID }, { authorization: 'Bearer verified-admin-token' }), res);
+
+        expect(res.statusCode).toBe(200);
+        expect(mocks.rpc).toHaveBeenCalledTimes(1);
+        expect(mocks.rpc).toHaveBeenCalledWith('pm_leaderboard_rankings', {
+            p_subject_id: SUBJECT_ID,
+            p_user_id: USER_A,
+            p_exam_type: null,
+            p_difficulty: null,
+            p_attempt_type: null,
+            p_limit: 50,
+            p_offset: 0,
+        });
+    });
+
     it('hides provider/database errors from the user but logs the actual error server-side', async () => {
         const providerError = Object.assign(new Error('PostgREST private schema permission denied'), {
             code: '42501',
             details: 'private.leaderboard_attempt_results',
         });
-        mocks.rpc.mockResolvedValue({ data: null, error: providerError });
+        mocks.rpc.mockImplementation(async (name) => (
+            name === 'pm_leaderboard_completed_subjects'
+                ? { data: [{ subject_id: SUBJECT_ID }], error: null }
+                : { data: null, error: providerError }
+        ));
         const logger = vi.spyOn(console, 'error').mockImplementation(() => {});
 
         const res = makeRes();
