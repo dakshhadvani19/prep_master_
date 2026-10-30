@@ -130,6 +130,31 @@ export default async function handler(req, res) {
         if (subjectError) throw subjectError;
         if (!subject) return fail(res, 404, 'This subject is no longer available in the catalog.');
 
+        // UI locks are not an authorization boundary. Re-check the caller's
+        // database-backed role and exact completed-subject access on every request.
+        // Admin status is derived only from public.Admins, never user metadata or
+        // caller-supplied role fields. Lookup failures fail closed.
+        const { data: adminRecord, error: adminLookupError } = await admin
+            .from('Admins')
+            .select('AdminId')
+            .eq('auth_uid', auth.user.id)
+            .maybeSingle();
+        if (adminLookupError) throw adminLookupError;
+
+        if (!adminRecord) {
+            const { data: completedSubjects, error: accessError } = await admin.rpc(
+                'pm_leaderboard_completed_subjects',
+                { p_user_id: auth.user.id },
+            );
+            if (accessError) throw accessError;
+
+            const hasCompletedSubject = Array.isArray(completedSubjects)
+                && completedSubjects.some((entry) => Number(entry?.subject_id) === subjectId);
+            if (!hasCompletedSubject) {
+                return fail(res, 403, 'Complete an exam in this subject before viewing its leaderboard.');
+            }
+        }
+
         // The user ID comes only from Supabase Auth's verified access token.
         // Caller-supplied userId/studentId fields are intentionally ignored.
         const { data, error } = await admin.rpc('pm_leaderboard_rankings', {
