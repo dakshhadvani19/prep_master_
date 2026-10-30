@@ -72,6 +72,30 @@ describe('FeedbackPage', () => {
         expect(await screen.findByText(/saved successfully/i)).toBeTruthy();
     });
 
+    it('shows the loading state until the API confirms that feedback was saved', async () => {
+        let resolveResponse;
+        globalThis.fetch.mockImplementation(() => new Promise((resolve) => {
+            resolveResponse = resolve;
+        }));
+
+        renderPage();
+        fireEvent.change(screen.getByRole('textbox', { name: /description/i }), {
+            target: { value: 'Wait for the server response.' },
+        });
+        fireEvent.click(screen.getByRole('button', { name: /send feedback/i }));
+
+        const loadingButton = await screen.findByRole('button', { name: /sending/i });
+        expect(loadingButton).toBeDisabled();
+        expect(screen.queryByText(/saved successfully/i)).toBeNull();
+
+        resolveResponse({
+            ok: true,
+            status: 201,
+            json: async () => ({ success: true, feedbackId: 102 }),
+        });
+        expect(await screen.findByText(/saved successfully/i)).toBeTruthy();
+    });
+
     it('enforces the 1,000-character limit in the browser', () => {
         renderPage();
         const field = screen.getByRole('textbox', { name: /description/i });
