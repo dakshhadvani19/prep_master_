@@ -71,7 +71,7 @@ These titles suggest that an ordinary theory-only question bank may be unsuitabl
 | BA LLB (Hons) | 2 | MOOT COURT TRAINING |
 | B.Com LLB (HONS) | 2 | MOOT COURT TRAINING |
 
-### Other practical / activity subjects — 14
+### Other practical / activity subjects — 16
 
 | Course | Semester | Subject title |
 |---|---:|---|
