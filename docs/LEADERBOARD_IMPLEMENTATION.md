@@ -2,7 +2,7 @@
 
 ## Hierarchy filters and subject access
 
-**Status as of 2026-10-30:** Hierarchical access checks, Phase 1's database result projection and Top 100 publisher, Phase 2's authenticated ranking API and competition-rank rules, and Phase 3's verified ranking UI are implemented. The ranking RPC and authorization boundary have been smoke-tested in the live database; frontend build/test and an authenticated end-to-end browser request still require execution.
+**Status as of 2026-10-30:** Hierarchical access checks, Phase 1's database result projection and Top 100 publisher, Phase 2's authenticated ranking API and competition-rank rules, and Phase 3's verified ranking UI are implemented. The live database RPC and privilege boundary are smoke-tested. GitHub CI reports 42/42 Vitest files and 466/466 tests passed, Test Room regression tests passed, and the Vite production build passed. Repository-wide ESLint still fails on existing issues in unrelated files; no leaderboard UI/test lint issue is reported after the ranking API validator was corrected. A real browser-authenticated HTTP request has not yet been exercised.
 
 ### Filter sequence and access policy
 
@@ -114,10 +114,12 @@ The normalized result table and published leaderboard table remain unavailable t
 
 ### Verification status
 
-- Added `tests/leaderboard-board.test.jsx` to cover competition-rank rendering (including `1, 2, 2, 4`), an outside-Top-100 viewer summary, filters, pagination, and friendly failures.
-- The existing API tests continue to cover verified identity binding, authorization, caller-claim rejection, validation, and server-side error logging.
-- The live ranking RPC now ranks by exact weighted percentage and cumulative points, returns real filter options, and retains service-role-only execution. Database smoke tests and a synthetic rank-order query are recorded after this migration.
-- A browser-authenticated HTTP test, frontend `npm test`, `npm run lint`, and `npm run build` have not been run from this environment. They remain required before release.
+- Added `tests/leaderboard-board.test.jsx` to cover competition-rank rendering (including `1, 2, 2, 4`), an outside-Top-100 viewer summary, filters, pagination, and friendly failures. GitHub CI ran the complete Vitest suite successfully: **42 test files and 466 tests passed**.
+- The existing API tests passed in the full suite and continue to cover verified identity binding, authorization, caller-claim rejection, validation, and server-side error logging.
+- The Test Room regression job passed, and the Vite production build passed.
+- Repository-wide ESLint remains failing on pre-existing errors in unrelated files, including `ExamPortal.jsx`, `Layout.jsx`, `contextFitter.js`, and older API/utilities. The leaderboard ranking API's control-character validation lint issue was fixed; the new leaderboard component, page and tests are not listed among the remaining lint findings.
+- The live ranking RPC now ranks by exact weighted percentage and cumulative points, returns real filter options, and retains service-role-only execution. The synthetic rank-order query returned `1, 2, 2, 4` for equal displayed percentages with descending earned points and a true tie for the two equal-score rows; live RPC and privilege smoke tests also passed.
+- A real browser-authenticated HTTP request against the deployed endpoint has not yet been exercised.
 
 ## Previous hierarchy verification
 
