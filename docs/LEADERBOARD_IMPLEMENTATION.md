@@ -126,7 +126,7 @@ The normalized result table and published leaderboard table remain unavailable t
 ### Data contract
 
 - The dashboard summary is sourced exclusively from `private.leaderboard_attempt_results`, the normalized projection of eligible finalized normal exams and Test Room results. It does not aggregate browser local storage, unfinished attempts, waiting attempts, or cancelled attempts.
-- The summary RPC joins the canonical subject catalog and returns aggregate total attempts, total earned marks, total maximum marks, weighted overall percentage, distinct subjects attempted, subject-level aggregates for the five most recently attempted subjects, and up to eight recent verified results.
+- The summary RPC joins the canonical subject catalog and returns aggregate total attempts, total earned marks, total maximum marks, weighted overall percentage, distinct subjects attempted, the five strongest subject aggregates by weighted percentage, and up to eight recent verified results.
 - Weighted overall percentage is calculated from the aggregate totals (sum of earned marks divided by sum of maximum marks), not by averaging rounded per-attempt percentages.
 - No leaderboard rank, percentile, or other students' data is included in the dashboard performance response. The dashboard history list remains a separate existing feature and was not replaced.
 
