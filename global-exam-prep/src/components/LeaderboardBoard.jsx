@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import {
     AlertCircle,
     BookOpen,
-    ChevronRight,
     LoaderCircle,
     RotateCcw,
     Trophy,
+    UsersRound,
 } from 'lucide-react';
 import { getLeaderboardRankings } from '../utils/supabaseExam';
 
-const PAGE_SIZE = 25;
+const PAGE_SIZE = 10;
 const FRIENDLY_ERROR = 'We could not load this leaderboard right now. Please try again.';
 
 function formatNumber(value) {
@@ -19,7 +19,7 @@ function formatNumber(value) {
 
 function formatPercentage(value) {
     const parsed = Number(value);
-    return Number.isFinite(parsed) ? `${parsed.toFixed(2)}%` : '—';
+    return Number.isFinite(parsed) ? parsed.toFixed(2) : '—';
 }
 
 function EmptyState({ title, children }) {
@@ -39,7 +39,6 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
     const [examType, setExamType] = useState('');
     const [difficulty, setDifficulty] = useState('');
     const [attemptType, setAttemptType] = useState('');
-    const [offset, setOffset] = useState(0);
     const [retryCount, setRetryCount] = useState(0);
 
     useEffect(() => {
@@ -53,7 +52,7 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
             difficulty: difficulty || null,
             attemptType: attemptType || null,
             limit: PAGE_SIZE,
-            offset,
+            offset: 0,
         }).then((result) => {
             if (!active) return;
             if (result.error || !result.leaderboard
@@ -76,22 +75,19 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
         });
 
         return () => { active = false; };
-    }, [subject?.subjectId, examType, difficulty, attemptType, offset, retryCount]);
+    }, [subject?.subjectId, examType, difficulty, attemptType, retryCount]);
 
     const filterOptions = leaderboard?.filterOptions || {};
-    const entries = Array.isArray(leaderboard?.entries) ? leaderboard.entries : [];
+    const entries = Array.isArray(leaderboard?.entries) ? leaderboard.entries.slice(0, PAGE_SIZE) : [];
     const viewer = leaderboard?.viewer || null;
     const participantCount = Number(leaderboard?.participantCount) || 0;
     const availableEntries = Number(leaderboard?.availableEntries) || 0;
-    const pageLimit = Number(leaderboard?.pagination?.limit) || PAGE_SIZE;
-    const hasMore = Boolean(leaderboard?.pagination?.hasMore);
     const hasFilters = Boolean(examType || difficulty || attemptType);
 
     function clearFilters() {
         setExamType('');
         setDifficulty('');
         setAttemptType('');
-        setOffset(0);
     }
 
     return (
@@ -124,7 +120,6 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                         value={examType}
                         onChange={(event) => {
                             setExamType(event.target.value);
-                            setOffset(0);
                         }}
                     >
                         <option value="">All exam types</option>
@@ -162,7 +157,7 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                         <option value="">All attempt sources</option>
                         {(Array.isArray(filterOptions.attemptTypes) ? filterOptions.attemptTypes : []).map((value) => (
                             <option key={value} value={value}>
-                                {value === 'test_room' ? 'Test Room' : value === 'exam' ? 'Normal exam' : value}
+                                {value === 'test_room' ? 'Test Room' : value === 'exam' ? 'Exam' : value}
                             </option>
                         ))}
                     </select>
@@ -193,10 +188,23 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
 
             {!loading && !error && leaderboard && (
                 <>
-                    <div className="lb-board__stats">
-                        <div><strong>{formatNumber(participantCount)}</strong><span>Participants</span></div>
-                        <div><strong>{formatNumber(availableEntries)}</strong><span>{leaderboard.source === 'published' ? 'Published entries' : 'Filtered entries'}</span></div>
-                        <div><strong>{hasFilters ? 'Filtered' : 'Overall'}</strong><span>Board view</span></div>
+                    <div
+                        className="lb-board__participants"
+                        key={`${subject?.subjectId}:${examType}:${difficulty}:${attemptType}:${participantCount}`}
+                        data-testid="lb-participant-count"
+                        role="status"
+                        aria-live="polite"
+                    >
+                        <span className="lb-board__participants-icon" aria-hidden="true">
+                            <UsersRound size={21} strokeWidth={1.8} />
+                        </span>
+                        <span className="lb-board__participants-copy">
+                            <strong>{formatNumber(participantCount)}</strong>
+                            <span>{participantCount === 1 ? 'participant' : 'participants'}</span>
+                        </span>
+                        <span className="lb-board__participants-context">
+                            {hasFilters ? 'Matching your selected filters' : 'In this leaderboard'}
+                        </span>
                     </div>
 
                     {viewer ? (
@@ -207,19 +215,20 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                                 <div className="lb-viewer__identity">
                                     <strong>{viewer.displayName || 'Your account'}</strong>
                                     <span>
-                                        {viewer.isTop100
-                                            ? (hasFilters ? 'Inside the Top 100 for these filters' : 'Inside the published Top 100')
-                                            : (hasFilters ? 'Outside the Top 100 for these filters' : 'Outside the published Top 100')}
+                                        {entries.some((entry) => String(entry.studentId) === String(viewer.studentId))
+                                            ? 'Inside the displayed Top 10'
+                                            : 'Outside the displayed Top 10'}
                                         {viewer.position ? ` · Position ${viewer.position}` : ''}
                                     </span>
                                 </div>
-                                {viewer.topPercent != null && (
-                                    <div className="lb-viewer__percent">Top {viewer.topPercent}%</div>
-                                )}
+                                {!entries.some((entry) => String(entry.studentId) === String(viewer.studentId))
+                                    && viewer.topPercent != null && (
+                                        <div className="lb-viewer__percent">Top {viewer.topPercent}%</div>
+                                    )}
                             </div>
                             <div className="lb-viewer__metrics">
                                 <span><strong>{formatNumber(viewer.points)}</strong> points</span>
-                                <span><strong>{formatPercentage(viewer.percentage)}</strong> weighted percentage</span>
+                                <span><strong>{formatPercentage(viewer.percentage)}</strong> percentage</span>
                                 <span><strong>{formatNumber(viewer.totalTests)}</strong> attempts</span>
                             </div>
                         </section>
@@ -249,7 +258,7 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                                             <th scope="col">Rank</th>
                                             <th scope="col">Student</th>
                                             <th scope="col">Points</th>
-                                            <th scope="col">Weighted %</th>
+                                            <th scope="col">Percentage</th>
                                             <th scope="col">Attempts</th>
                                         </tr>
                                     </thead>
@@ -273,27 +282,11 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                                     </tbody>
                                 </table>
                             </div>
-                            <div className="lb-board__pagination">
+                            <div className="lb-board__pagination" data-testid="lb-top10-summary">
                                 <span>
-                                    Showing {offset + 1}–{Math.min(offset + entries.length, availableEntries)}
-                                    {' '}of {formatNumber(availableEntries)}
+                                    Showing {entries.length} of {formatNumber(participantCount)} participants
                                 </span>
-                                <div>
-                                    <button
-                                        type="button"
-                                        onClick={() => setOffset((value) => Math.max(0, value - pageLimit))}
-                                        disabled={loading || offset <= 0}
-                                    >
-                                        <ChevronRight size={15} className="lb-flip" /> Previous
-                                    </button>
-                                    <button
-                                        type="button"
-                                        onClick={() => setOffset((value) => value + pageLimit)}
-                                        disabled={loading || !hasMore}
-                                    >
-                                        Next <ChevronRight size={15} />
-                                    </button>
-                                </div>
+                                <strong>Top 10</strong>
                             </div>
                         </>
                     ) : (
@@ -303,7 +296,7 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                     )}
 
                     <p className="lb-board__rule">
-                        Rankings use total earned points divided by total possible marks. For equal weighted percentages, higher cumulative points rank first; only equal percentages and equal points share the same rank.
+                        Rankings use total earned points divided by total possible marks. When percentages are equal, higher cumulative points rank first; only equal percentages and equal points share the same rank.
                     </p>
                 </>
             )}
