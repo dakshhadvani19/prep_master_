@@ -12,6 +12,8 @@ import FeedbackPage from '../src/pages/FeedbackPage';
 function renderPage() {
     mocks.useAuth.mockReturnValue({
         studentId: 42,
+        currentUser: { uid: 'verified-student-uid' },
+        isAdmin: false,
         session: { access_token: 'verified-session-token' },
     });
     return render(<MemoryRouter><FeedbackPage /></MemoryRouter>);
@@ -42,6 +44,39 @@ describe('FeedbackPage', () => {
         expect(screen.queryByLabelText(/your name/i)).toBeNull();
         expect(screen.queryByLabelText(/your email/i)).toBeNull();
         expect(screen.queryByLabelText(/^subject/i)).toBeNull();
+    });
+
+    it('does not show a sign-in prompt when the student session is valid but studentId has not loaded', async () => {
+        mocks.useAuth.mockReturnValue({
+            studentId: null,
+            currentUser: { uid: 'verified-student-uid' },
+            isAdmin: false,
+            session: { access_token: 'verified-session-token' },
+        });
+        globalThis.fetch.mockResolvedValue({
+            ok: true,
+            status: 201,
+            json: async () => ({ success: true, feedbackId: 103 }),
+        });
+
+        render(<MemoryRouter><FeedbackPage /></MemoryRouter>);
+        expect(screen.queryByText(/sign in with a student account/i)).toBeNull();
+
+        fireEvent.change(screen.getByRole('textbox', { name: /description/i }), {
+            target: { value: 'The profile ID is still loading.' },
+        });
+        const submitButton = screen.getByRole('button', { name: /send feedback/i });
+        expect(submitButton).not.toBeDisabled();
+        fireEvent.click(submitButton);
+
+        await waitFor(() => expect(globalThis.fetch).toHaveBeenCalledTimes(1));
+        const [, options] = globalThis.fetch.mock.calls[0];
+        expect(options.headers.Authorization).toBe('Bearer verified-session-token');
+        expect(JSON.parse(options.body)).toEqual({
+            type: 'general',
+            description: 'The profile ID is still loading.',
+        });
+        expect(await screen.findByText(/saved successfully/i)).toBeTruthy();
     });
 
     it('shows the Other helper and submits only type and description with the bearer token', async () => {
