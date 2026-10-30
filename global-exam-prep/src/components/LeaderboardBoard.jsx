@@ -208,8 +208,8 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                                     <strong>{viewer.displayName || 'Your account'}</strong>
                                     <span>
                                         {viewer.isTop100
-                                            ? 'Inside the published Top 100'
-                                            : 'Outside the published Top 100'}
+                                            ? (hasFilters ? 'Inside the Top 100 for these filters' : 'Inside the published Top 100')
+                                            : (hasFilters ? 'Outside the Top 100 for these filters' : 'Outside the published Top 100')}
                                         {viewer.position ? ` · Position ${viewer.position}` : ''}
                                     </span>
                                 </div>
