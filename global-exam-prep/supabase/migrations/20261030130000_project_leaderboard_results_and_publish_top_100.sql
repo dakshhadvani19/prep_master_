@@ -98,7 +98,7 @@ BEGIN
       AND room."Difficulty"::text = a.difficulty
       AND participant.student_id = student."StudentId"
       AND room."Points"[participant.ordinality::integer]
-          = pg_catalog.least(255, pg_catalog.greatest(0, a.score))::smallint
+          = LEAST(255, GREATEST(0, a.score))::smallint
   ) THEN
     RAISE EXCEPTION 'Test Room result does not match its StudentId/Points position in public.TestRooms';
   END IF;
@@ -374,7 +374,7 @@ BEGIN
       AND room."TestId" = attempt.core_test_id
       AND room."Difficulty"::text = attempt.difficulty
       AND room."Points"[participant.ordinality::integer]
-          = pg_catalog.least(255, pg_catalog.greatest(0, attempt.score))::smallint
+          = LEAST(255, GREATEST(0, attempt.score))::smallint
       AND attempt.status IN ('submitted', 'auto_submitted', 'disconnected', 'timed_out')
       AND attempt.submitted_at IS NOT NULL
       AND attempt.score IS NOT NULL
@@ -574,6 +574,11 @@ SECURITY DEFINER
 SET search_path = ''
 AS $function$
 BEGIN
+  -- Remove explicitly as well as relying on the FK cascade, so the snapshot
+  -- refresh never observes a stale normalized row regardless of trigger order.
+  DELETE FROM private.leaderboard_attempt_results
+  WHERE source_attempt_id = OLD.id;
+
   IF OLD.attempt_type = 'test_room' AND OLD.core_room_id IS NOT NULL THEN
     PERFORM private.project_testroom_results_to_leaderboard(OLD.core_room_id);
   END IF;
