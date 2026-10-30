@@ -56,7 +56,7 @@ public.Courses: CourseId BIGINT identity PK, CourseName, Sems INTEGER[], **40 li
 
 ### Subjects
 
-public.Subjects: SubjectId BIGINT PK, SubjectName, CourseId FK, Semester INTEGER NOT NULL, **1,938 live rows** at the 2026-10-13 snapshot; integrity checks found no null semesters, blank subject names, or orphan CourseIds. RLS is enabled.
+public.Subjects: SubjectId BIGINT PK, SubjectName, CourseId FK, Semester INTEGER NOT NULL, **1,855 live rows** after the 2026-10-30 catalog exclusions; integrity checks found no null semesters, blank subject names, or orphan CourseIds. RLS is enabled.
 
 There is deliberately **no Departments table**.
 
@@ -111,7 +111,7 @@ Exam submission writes a compact result to browser-local history and navigates i
 - /admin/courses remains an in-memory preview; persistent catalog CRUD is not complete.
 - /admin/syllabus extracts PDF text but currently stores it locally.
 - Leaderboard UI exists; persistent attempt/ranking storage is pending.
-- Feedback submission/API plumbing exists; complete persistent admin feedback storage is pending.
+- Feedback submissions persist through authenticated `/api/feedback` into `public.\"Feedbacks\"`; the endpoint derives StudentId from the verified Auth UID.
 
 ## 10. Security rules
 
@@ -154,8 +154,7 @@ Unless the requested task directly requires them, avoid opportunistic rewrites o
 4. Finish admin persistence.
 5. Finish attempts/history persistence.
 6. Finish leaderboard persistence.
-7. Finish feedback persistence.
-8. Keep project documentation synchronized with actual code.
+7. Keep project documentation synchronized with actual code; feedback persistence is implemented.
 - The 88 archived Law & Arts IDs were also removed from the legacy `src/data/mockData.js` exam context (74 nonblank subject rows; 14 blank-title rows had no usable display label), preventing fallback resolution outside the numeric bridge. The 33 network-retry occurrences remain in the catalog and mapping files.
 
 ## Management Studies recovery cleanup — 2026-10-11
@@ -247,3 +246,11 @@ The active Supabase catalog was audited across all departments/courses and **46 
 - The source syllabus JSON archives were retained; the runtime catalog and numeric exam routes are what were removed.
 
 A separate list of **58 potential non-standard-assessment occurrences** (internship, seminar, colloquium, moot court, attachment, practice school, NCC, and physical education/wellness) is stored at `global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`. They have **not** been removed. Review the official subject-level assessment schemes before disabling written exams or changing their assessment modes.
+
+## 17. Feedback submission flow — 2026-10-30
+
+- Feedback form fields: Feedback Type, Only Rating (required 1–5), and Description (required, maximum 1,000 characters).
+- Feedback categories: General Feedback, Bug Report, Feature Request, Content Issue, and Other. The previous AI Quality category is no longer offered.
+- The browser sends type, rating, description and the verified Supabase bearer token. The API resolves the student's numeric StudentId using the authenticated UID; it does not trust a caller-supplied StudentId.
+- The backend inserts `Description`, `Type`, `Rating`, and `StudentId`. PostgreSQL creates `FeedbackId`; moderation flags retain their defaults.
+- The database rating constraint and feedback API/UI tests cover invalid ratings, unsupported categories, authentication, missing student profiles, and description length.

@@ -2,7 +2,7 @@
 
 > Schema updates (2026-10-27): operational `exam_attempts`, `exam_attempt_keys`, and `auth_otp` live in the unexposed `private` schema; the empty `exam_grades` table was removed. Phase 1 mirrors 18 private attempts into 13 public `TestsData` papers and 18 public `TestAttempts` rows; phase 2 maintains 13 `public.TestRooms` aggregates. Core ERD tables are unchanged. Older counts below are point-in-time snapshots unless explicitly updated.
 
-_Last live verification: 2026-10-13 06:22 UTC (11:52 IST)_
+_Last live verification: 2026-10-30 12:16 UTC (17:46 IST)_
 
 This document records the current live Supabase database state and the most recent catalog changes. Live row counts are a snapshot and can change when users register or submit data.
 
@@ -28,10 +28,10 @@ Row counts below were checked with direct SQL queries against the live project, 
 | Table | Rows at verification | Notes |
 |---|---:|---|
 | `public.Courses` | **40** | Course catalog |
-| `public.Subjects` | **1,938** | Subject catalog |
+| `public.Subjects` | **1,855** | Subject catalog after project and activity-based exam-catalog exclusions |
 | `public.Students` | 7 | Student-profile rows; not a count of all Auth users |
 | `public.Admins` | 1 | Admin-profile row |
-| `public.Feedbacks` | 0 | Persistent feedback table is empty |
+| `public.Feedbacks` | 0 | Authenticated feedback submission endpoint is live; table was empty at this verification |
 | `public.Leaderboards` | 0 | No persistent leaderboard rows |
 | `public.exam_history` | 0 | No persistent exam-history rows; app history currently uses browser-local storage |
 | `private.auth_otp` | 1 | Short-lived OTP-challenge table; this count is transient |
@@ -123,7 +123,7 @@ All listed application tables in the exposed `public` schema currently have Row 
 | `public.Subjects` | `SubjectId` BIGINT identity | `SubjectName`, `CourseId` → `Courses.CourseId`, `Semester` INTEGER |
 | `public.Students` | `StudentId` BIGINT identity | `auth_uid` → `auth.users.id`, `FullName`, unique lowercase `Email`, `IsSpam`, `role`, `created_at` |
 | `public.Admins` | `AdminId` BIGINT identity | `auth_uid` → `auth.users.id`, `FullName`, unique lowercase `Email`, `isSuperAdmin`, `created_at` |
-| `public.Feedbacks` | `FeedbackId` BIGINT identity | `Description`, `Type`, `isSpam`, `isBookmark`, `isSeen`, `StudentId` → `Students.StudentId` |
+| `public.Feedbacks` | `FeedbackId` BIGINT identity | `Description` (max 1,000), `Type`, `Rating` SMALLINT (1–5), moderation flags, `StudentId` → `Students.StudentId` |
 | `public.Leaderboards` | `LeaderboardId` BIGINT | `StudentId` BIGINT[], `Points` BIGINT[], `SubjectId` → `Subjects.SubjectId`, `TotalTests` BIGINT[] |
 | `public.exam_history` | `id` BIGINT | `auth_uid` → `auth.users.id`, exam metadata, score, question snapshot and user answers in JSONB |
 | `private.auth_otp` | `email` TEXT | OTP digest, nonce, attempt count, creation and expiry times; short-lived auth support data |
@@ -205,5 +205,14 @@ A live catalog audit identified 46 subjects whose titles represented project del
 
 - A second scan found **20 more project-deliverable records** only in inactive/older static course data. They are archived separately in [`legacy_project_subjects_removed_2026-10-30.csv`](../global-exam-prep/temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv) and removed from `mockData.js`; 15 stale numeric bridge entries and their semester-map keys were also removed. These 20 did not exist as live Supabase subject rows and did not require database deletion. Following both passes, 2,538 nonblank static subject entries and 2,452 numeric compatibility entries remain.
 
-A separate title-based screen identified **58 occurrences** that may need non-standard or mixed assessment instead of a conventional theory-only question bank (internships/placements, seminars, colloquia, moot court, attachment, practice school, NCC, and physical education/wellness). They remain in the live catalog pending course-specific assessment-scheme review. See [`global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`](../global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md). This is a review list, not a finding that those subjects have no exam or assessment at all.
+A separate title-based audit identified **58 activity-/workplace-based occurrences** (internships/placements, seminars, colloquia, moot court, attachment, practice school, NCC, and physical education/wellness). They were subsequently removed from the active exam catalog in migration `20261030115624_remove_non_exam_activity_subjects_from_catalog`; this catalog exclusion does not mean the university does not assess them through practical, oral, workplace or activity-based methods. See [`global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`](../global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md) for the course/semester list.
 
+
+## 12. Feedback persistence — 2026-10-30
+
+- Migration: `20261030121639_add_feedback_rating` adds required `public."Feedbacks"."Rating"` as SMALLINT with a database constraint of 1–5.
+- The active form has three inputs: feedback type (General, Bug Report, Feature Request, Content Issue, Other), rating, and description.
+- Description is limited to 1,000 characters in the browser and validated again by the server.
+- `POST /api/feedback` verifies the caller's Supabase bearer token, resolves `StudentId` from the matching `Students.auth_uid` row, and inserts only `Description`, `Type`, `Rating`, and `StudentId` into `public."Feedbacks"`.
+- The server omits `FeedbackId` and moderation flags so PostgreSQL generates the identity and applies existing defaults. The service-role credential remains server-only; direct browser table access remains closed by RLS and grants.
+- The endpoint no longer depends on the optional Gmail mailer to record a submission. A successful response is returned only after the database insert completes.
