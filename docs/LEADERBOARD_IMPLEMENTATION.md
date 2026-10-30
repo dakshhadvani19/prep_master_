@@ -65,7 +65,46 @@ No eligible normal-exam attempt currently exists in this database, so the normal
 
 The normalized result table and published leaderboard table remain unavailable to `anon` and `authenticated`. Projection and publisher functions live in the non-exposed `private` schema, pin an empty search path, and revoke direct execution from browser roles. Browser clients continue to use authenticated server endpoints; service-role credentials remain server-side only.
 
-## What remains
+## Phase 2: secure ranking API
+
+### Endpoint and authorization
+
+- `POST /api/leaderboard-rankings` is the only browser-facing ranking endpoint. It requires a Bearer access token and verifies it with Supabase Auth `getUser` before making any ranking request.
+- The server verifies that `subjectId` exists in `public."Subjects"`. It then checks administrator authorization through the caller's own `public."Admins"` row. Only a verified admin may use full-catalog preview.
+- Non-admin callers must have that exact canonical SubjectId in the service-role-only `pm_leaderboard_completed_subjects` result. This is checked on every ranking request, independently of the UI's locked/unlocked state. Caller-supplied `userId`, `studentId`, `role`, course, or semester values are never used as authority.
+- The server supplies the user ID to `pm_leaderboard_rankings` only from the verified Auth user. The RPC itself is in `public` for server-side PostgREST access, but it is `SECURITY DEFINER`, has an empty pinned search path, and has `EXECUTE` revoked from `PUBLIC`, `anon`, and `authenticated`. Only `service_role` can call it.
+- The normalized results table remains private and is never queried from the browser. The endpoint does not return Auth UIDs, email addresses, answers, attempt IDs, room codes, or other private attempt details.
+- Responses are `private, no-store` and vary by Authorization. Invalid inputs are rejected, page size is capped at 100, and offset is bounded.
+
+### Ranking and response semantics
+
+- **Weighted percentage** = sum of earned marks divided by sum of maximum marks, multiplied by 100. It is calculated from unrounded sums; only the displayed percentage is rounded to two decimal places.
+- **Competition ranking** uses PostgreSQL `rank()`: tied weighted percentages receive the same rank, and the next rank skips positions (for example, 1, 1, 3). A stable secondary ordering by total score, attempt count, and StudentId determines display position without breaking a percentage tie.
+- **Top X%** = `ceil(competition rank × 100 / participant count)`. The response supplies the numeric percentile value; the UI can render it as “Top X%”.
+- The overall board reads its Top 100 membership, display order, cumulative `Points`, and `TotalTests` from `public."Leaderboards"`. The private normalized results supply maximum marks, weighted percentages, full participant counts, and an authenticated viewer's rank even when that student is outside the published Top 100.
+- Filtered boards (exam type, difficulty, and/or attempt type: `exam` or `test_room`) are calculated from `private.leaderboard_attempt_results`, because the public snapshot stores only the overall list. Filtered boards paginate the full filtered population and mark the first 100 deterministic positions as the filtered Top 100.
+- The response includes `subject`, normalized `filters`, `source` (`published` or `filtered`), `participantCount`, `availableEntries`, paginated `entries`, the caller's `viewer` summary, and `pagination`. The viewer summary is independent of the requested page and is returned outside the Top 100 when a qualifying result exists.
+- The public overall snapshot is capped at exactly 100 rows. A tie at its cutoff does not expand the published arrays; tied users still receive the same competition rank and their deterministic positions are available from the full private aggregate for the viewer summary.
+
+### User-facing and developer error handling
+
+- Authentication failures return a sign-in message; invalid filters/pagination return friendly validation messages; subjects outside the catalog return a not-found message; students without completed-subject access receive a clear access-denied message.
+- Supabase Auth, PostgREST, SQL, and infrastructure errors are logged with the endpoint's server-side `console.error` tag and the original error object. The response contains only: “We could not load this leaderboard right now. Please try again.” Core provider messages, SQL details, and codes are not returned to the browser.
+- The browser helper `getLeaderboardRankings()` also logs request failures for developer diagnostics and returns a stable friendly error string. The ranking UI is not wired to this helper yet; that is Phase 3.
+
+### Phase 2 verification
+
+- Live overall RPC smoke test: Basics of Accounting returns two participants, sourced from the public published snapshot; the verified caller's result and rank are returned separately.
+- Live filtered RPC smoke test: exact exam type + medium difficulty + Test Room returns the same two participants with filtered source metadata.
+- Live empty-filter smoke test: the Fundamentals of Machine Learning hard-difficulty board returns zero participants and an empty viewer result without an error.
+- Privilege check: `anon EXECUTE = false`, `authenticated EXECUTE = false`, `service_role EXECUTE = true`.
+- The implementation includes API tests for verified identity binding, exact completed-subject checks, admin lookup, untrusted caller identity/role fields, filter and pagination validation, missing subjects, friendly errors, and server-side error logging.
+- A live runtime test of the API handler with an actual browser access token and a test/build run have not been performed in this environment.
+
+## Phase 3: leaderboard UI integration
+
+Connect the existing department/course/semester/subject flow to `getLeaderboardRankings()`. Add ranking cards/table, filters, current-student summary, pagination, loading/empty/error states, and administrator preview. Keep all ranking data hidden when the request fails; do not fall back to mock scores or expose raw server errors.
+
 
 Phase 2: build the secure ranking API and calculate overall/category-specific weighted percentages, competition ranks and ties, participant counts, Top X% / outside-Top-100 position, and the student's own rank. Then connect the existing leaderboard UI to real published snapshots and private supplemental metrics. No mock scores or ranks should be displayed.
 
