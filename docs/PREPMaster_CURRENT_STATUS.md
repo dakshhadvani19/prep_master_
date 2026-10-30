@@ -242,6 +242,8 @@ The active Supabase catalog was audited across all departments/courses and **46 
 - All 46 rows had zero exam attempts, normalized leaderboard results, and published leaderboard snapshots before deletion.
 - The same IDs were removed from the ExamPortal bridge, semester map, legacy mock subject hierarchy, and BCA/MCA live context overrides. An automated bridge regression test now covers the 46 archived IDs.
 - Academic project-management subjects were retained because they are taught theory/management subjects, not student project submissions.
+
+- A follow-up scan removed **20 additional legacy-only project deliverables** from the inactive/older course hierarchy (not live Supabase rows). Their original titles, course/semester details and IDs are archived in `global-exam-prep/temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv`. Their 15 remaining numeric bridge/semester keys were also removed. Current legacy static counts: 2,538 nonblank subjects and 2,452 numeric bridge/semester entries.
 - The source syllabus JSON archives were retained; the runtime catalog and numeric exam routes are what were removed.
 
 A separate list of **58 potential non-standard-assessment occurrences** (internship, seminar, colloquium, moot court, attachment, practice school, NCC, and physical education/wellness) is stored at `global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`. They have **not** been removed. Review the official subject-level assessment schemes before disabling written exams or changing their assessment modes.
