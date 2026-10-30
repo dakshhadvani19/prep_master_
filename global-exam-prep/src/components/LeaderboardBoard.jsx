@@ -197,7 +197,7 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                         </span>
                         <span className="lb-board__participants-copy">
                             <strong>{formatNumber(participantCount)}</strong>
-                            <span>{participantCount === 1 ? 'participant' : 'participants'}</span>
+                            <span>{' '}{participantCount === 1 ? 'participant' : 'participants'}</span>
                         </span>
                         <span className="lb-board__participants-context">
                             {hasFilters ? 'Matching your selected filters' : 'In this leaderboard'}
