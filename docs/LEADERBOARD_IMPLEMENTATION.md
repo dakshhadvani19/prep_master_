@@ -2,7 +2,7 @@
 
 ## Hierarchy filters and subject access
 
-**Status as of 2026-10-30:** Hierarchical access checks, Phase 1's database result projection and Top 100 publisher, and Phase 2's authenticated ranking API are implemented and live-verified at the database layer. The ranking page integration remains outstanding.
+**Status as of 2026-10-30:** Hierarchical access checks, Phase 1's database result projection and Top 100 publisher, Phase 2's authenticated ranking API and competition-rank rules, and Phase 3's verified ranking UI are implemented. The ranking RPC and authorization boundary have been smoke-tested in the live database; frontend build/test and an authenticated end-to-end browser request still require execution.
 
 ### Filter sequence and access policy
 
@@ -79,11 +79,11 @@ The normalized result table and published leaderboard table remain unavailable t
 ### Ranking and response semantics
 
 - **Weighted percentage** = sum of earned marks divided by sum of maximum marks, multiplied by 100. It is calculated from unrounded sums; only the displayed percentage is rounded to two decimal places.
-- **Competition ranking** uses PostgreSQL `rank()`: tied weighted percentages receive the same rank, and the next rank skips positions (for example, 1, 1, 3). A stable secondary ordering by total score, attempt count, and StudentId determines display position without breaking a percentage tie.
+- **Competition ranking** uses PostgreSQL `rank()` over the exact weighted percentage (descending) and cumulative earned points (descending). A higher percentage ranks first; when percentages tie, higher cumulative points receive the better rank. Only students tied on both values share a rank, and the next rank skips positions (for example, `1, 2, 2, 4`; when the first two criteria both tie, `1, 1, 3`). Attempt count and StudentId are used only for deterministic display order and never break a competition-rank tie.
 - **Top X%** = `ceil(competition rank × 100 / participant count)`. The response supplies the numeric percentile value; the UI can render it as “Top X%”.
 - The overall board reads its Top 100 membership, display order, cumulative `Points`, and `TotalTests` from `public."Leaderboards"`. The private normalized results supply maximum marks, weighted percentages, full participant counts, and an authenticated viewer's rank even when that student is outside the published Top 100.
 - Filtered boards (exam type, difficulty, and/or attempt type: `exam` or `test_room`) are calculated from `private.leaderboard_attempt_results`, because the public snapshot stores only the overall list. Filtered boards paginate the full filtered population and mark the first 100 deterministic positions as the filtered Top 100.
-- The response includes `subject`, normalized `filters`, `source` (`published` or `filtered`), `participantCount`, `availableEntries`, paginated `entries`, the caller's `viewer` summary, and `pagination`. The viewer summary is independent of the requested page and is returned outside the Top 100 when a qualifying result exists.
+- The response includes `subject`, normalized `filters`, subject-specific `filterOptions` (only exam types, difficulties and attempt sources present in the finalized result set), `source` (`published` or `filtered`), `participantCount`, `availableEntries`, paginated `entries`, the caller's `viewer` summary, and `pagination`. The viewer summary is independent of the requested page and is returned outside the Top 100 when a qualifying result exists.
 - The public overall snapshot is capped at exactly 100 rows. A tie at its cutoff does not expand the published arrays; tied users still receive the same competition rank and their deterministic positions are available from the full private aggregate for the viewer summary.
 
 ### User-facing and developer error handling
@@ -103,8 +103,21 @@ The normalized result table and published leaderboard table remain unavailable t
 
 ## Phase 3: leaderboard UI integration
 
-Connect the existing department/course/semester/subject flow to `getLeaderboardRankings()`. Add ranking cards/table, filters, current-student summary, pagination, loading/empty/error states, and administrator preview. Keep all ranking data hidden when the request fails; do not fall back to mock scores or expose raw server errors.
+### Implemented UI
 
+- The existing department → course → semester → subject browser now mounts `LeaderboardBoard` only after the selected subject is unlocked. The server independently rechecks the user's exact subject access or administrator record on every ranking request; client-side locks are not treated as authorization.
+- The board displays verified competition ranks, student names, cumulative points, weighted percentages, attempt counts, total participants, and published/filtered entry counts. The API's rank value is rendered directly, so ties retain the same rank and skipped positions are preserved.
+- Exam type, difficulty, and attempt-source filters are populated from the RPC's subject-specific `filterOptions`, not hard-coded exam labels. The overall view reads from the published Top 100; category-filtered views use the normalized private result projection.
+- The signed-in student's rank, percentage, points, Top X% and deterministic position are shown independently of the current page, including when the student is outside the published Top 100. Pagination uses 25 entries per page.
+- Loading, empty, API-error, retry, filter-reset and administrator-preview states are implemented. The UI does not fall back to mock scores or display raw provider/database messages. Browser-side request failures are logged to the console; server-side endpoints log full provider/database error objects while returning user-friendly messages.
+- Responsive styling follows the existing restrained violet-and-gold palette.
+
+### Verification status
+
+- Added `tests/leaderboard-board.test.jsx` to cover competition-rank rendering (including `1, 2, 2, 4`), an outside-Top-100 viewer summary, filters, pagination, and friendly failures.
+- The existing API tests continue to cover verified identity binding, authorization, caller-claim rejection, validation, and server-side error logging.
+- The live ranking RPC now ranks by exact weighted percentage and cumulative points, returns real filter options, and retains service-role-only execution. Database smoke tests and a synthetic rank-order query are recorded after this migration.
+- A browser-authenticated HTTP test, frontend `npm test`, `npm run lint`, and `npm run build` have not been run from this environment. They remain required before release.
 
 ## Previous hierarchy verification
 
