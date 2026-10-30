@@ -131,3 +131,51 @@ export async function getAttempt(attemptId) {
         return { attempt: null, error: error.message || 'Could not load exam attempt.' };
     }
 }
+
+/**
+ * Loads a subject leaderboard through the authenticated server API.
+ * Provider/database errors are logged for developers; callers receive a
+ * stable, user-friendly message instead of raw infrastructure details.
+ */
+export async function getLeaderboardRankings({
+    subjectId,
+    examType = null,
+    difficulty = null,
+    attemptType = null,
+    limit = 50,
+    offset = 0,
+} = {}) {
+    try {
+        const token = await getAccessToken();
+        const response = await fetch('/api/leaderboard-rankings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+            body: JSON.stringify({
+                subjectId,
+                examType,
+                difficulty,
+                attemptType,
+                limit,
+                offset,
+            }),
+        });
+        const result = await response.json().catch(() => null);
+        if (!response.ok) {
+            throw new Error(result?.error || 'Leaderboard data is temporarily unavailable.');
+        }
+        return {
+            leaderboard: result?.leaderboard || null,
+            error: null,
+        };
+    } catch (error) {
+        console.error('[leaderboard] Could not load leaderboard data:', error);
+        return {
+            leaderboard: null,
+            error: 'We could not load this leaderboard right now. Please try again.',
+        };
+    }
+}
+
