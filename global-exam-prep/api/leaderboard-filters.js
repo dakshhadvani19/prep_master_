@@ -55,7 +55,7 @@ export default async function handler(req, res) {
             completedSubjects: Array.isArray(data) ? data : [],
         });
     } catch (error) {
-        console.error('[leaderboard-filters] request failed:', error?.message || error);
+        console.error('[leaderboard-filters] request failed:', error);
         return fail(res, 503, 'Could not verify completed exams right now. Please retry.');
     }
 }
