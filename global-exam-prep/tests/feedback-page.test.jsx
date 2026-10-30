@@ -25,7 +25,7 @@ describe('FeedbackPage', () => {
         renderPage();
         expect(screen.getByText('Feedback Type')).toBeTruthy();
         expect(screen.getByText('Only Rating')).toBeTruthy();
-        expect(screen.getByLabelText('Description').getAttribute('maxLength')).toBe('1000');
+        expect(screen.getByRole('textbox', { name: 'Description' }).getAttribute('maxLength')).toBe('1000');
         expect(screen.queryByText('AI Quality')).toBeNull();
         expect(screen.queryByText('Your Name')).toBeNull();
         expect(screen.queryByText('Your Email')).toBeNull();
@@ -49,7 +49,7 @@ describe('FeedbackPage', () => {
         renderPage();
         fireEvent.click(screen.getByRole('button', { name: 'Other' }));
         fireEvent.click(screen.getByRole('button', { name: 'Rate 4 out of 5' }));
-        fireEvent.change(screen.getByLabelText('Description'), { target: { value: 'A useful suggestion.' } });
+        fireEvent.change(screen.getByRole('textbox', { name: 'Description' }), { target: { value: 'A useful suggestion.' } });
         fireEvent.click(screen.getByRole('button', { name: /Send Feedback/i }));
 
         await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));

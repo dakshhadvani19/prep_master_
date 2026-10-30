@@ -181,6 +181,7 @@ export default function FeedbackPage() {
                         <textarea
                             id="feedback-description"
                             name="description"
+                            aria-label="Description"
                             required
                             maxLength={MAX_DESCRIPTION_LENGTH}
                             rows={5}
