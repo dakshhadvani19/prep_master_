@@ -309,7 +309,7 @@ export default function Dashboard() {
                                 <div className="sd-subjects__header">
                                     <div>
                                         <h3>Subject performance</h3>
-                                        <p>Your five most recently attempted subjects</p>
+                                        <p>Your strongest subjects by weighted percentage</p>
                                     </div>
                                     <BookMarked size={19} aria-hidden="true" />
                                 </div>
