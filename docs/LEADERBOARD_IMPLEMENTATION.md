@@ -90,7 +90,7 @@ The normalized result table and published leaderboard table remain unavailable t
 
 - Authentication failures return a sign-in message; invalid filters/pagination return friendly validation messages; subjects outside the catalog return a not-found message; students without completed-subject access receive a clear access-denied message.
 - Supabase Auth, PostgREST, SQL, and infrastructure errors are logged with the endpoint's server-side `console.error` tag and the original error object. The response contains only: “We could not load this leaderboard right now. Please try again.” Core provider messages, SQL details, and codes are not returned to the browser.
-- The browser helper `getLeaderboardRankings()` also logs request failures for developer diagnostics and returns a stable friendly error string. The ranking UI is not wired to this helper yet; that is Phase 3.
+- The browser helper `getLeaderboardRankings()` also logs request failures for developer diagnostics and returns a stable friendly error string. The Phase 3 ranking UI uses this helper and does not receive raw provider/database errors.
 
 ### Phase 2 verification
 
@@ -106,10 +106,12 @@ The normalized result table and published leaderboard table remain unavailable t
 ### Implemented UI
 
 - The existing department → course → semester → subject browser now mounts `LeaderboardBoard` only after the selected subject is unlocked. The server independently rechecks the user's exact subject access or administrator record on every ranking request; client-side locks are not treated as authorization.
-- The board displays verified competition ranks, student names, cumulative points, weighted percentages, attempt counts, total participants, and published/filtered entry counts. The API's rank value is rendered directly, so ties retain the same rank and skipped positions are preserved.
-- Exam type, difficulty, and attempt-source filters are populated from the RPC's subject-specific `filterOptions`, not hard-coded exam labels. The overall view reads from the published Top 100; category-filtered views use the normalized private result projection.
-- The signed-in student's rank, percentage, points, Top X% and deterministic position are shown independently of the current page, including when the student is outside the published Top 100. Pagination uses 25 entries per page.
+- The board displays the ten highest deterministic positions for the selected subject/filter, with verified competition ranks, student names, cumulative points, percentages, and attempt counts. It requests ten entries and enforces a ten-row client-side cap. The API's competition rank is rendered directly, so ties retain the same rank and skipped positions are preserved.
+- Exam type, difficulty, and attempt-source filters are populated from the RPC's subject-specific `filterOptions`, not hard-coded labels. The RPC returns only values present among finalized results for that subject, so absent categories (for example, Mid-Term 1 or ESE when no such results exist) are not shown. The overall view reads from the published snapshot; category-filtered views use the normalized private result projection.
+- The signed-in student's rank, points, percentage and deterministic position are shown independently of the table. The Top X% badge appears only when the student is outside the displayed Top 10; students already in the list do not receive a percentile badge. The table has no pagination and displays at most ten entries.
 - Loading, empty, API-error, retry, filter-reset and administrator-preview states are implemented. The UI does not fall back to mock scores or display raw provider/database messages. Browser-side request failures are logged to the console; server-side endpoints log full provider/database error objects while returning user-friendly messages.
+- The visible score column and viewer metric are labelled **Percentage** and render the numeric value without a percent sign. The separate Top X% percentile badge retains its percent notation and is hidden for students inside the Top 10.
+- The three redundant status cards have been replaced with one participant-count panel. Its entrance is a brief, non-repeating motion; reduced-motion preferences disable it. The panel reports the actual participant count and matching-filter context.
 - Responsive styling follows the existing restrained violet-and-gold palette.
 
 ### Verification status
