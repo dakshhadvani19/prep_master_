@@ -1,130 +1,127 @@
 PREPMASTER FEEDBACK — REMOVED RATING UI ARCHIVE
 ================================================
 
-This is a plain-text archive of the former five-star feedback rating UI.
-It is intentionally not imported by the application. It preserves the
-previous rating state, markup, hover/focus animation and CSS for reference.
+This file preserves the rating UI removed from FeedbackPage.jsx.
+It is plain text only and is not imported by the application.
 
-Former imports and state
-------------------------
+The source was the pre-removal FeedbackPage.jsx. The former rating UI
+used inline React styles and Lucide's Star icon; it did not have a
+separate stylesheet or a dedicated rating keyframes animation.
+The hover/focus feedback used hoveredStar state and the inline
+transform transition shown below.
 
-import { useState } from 'react';
-import { Star } from 'lucide-react';
+1. Former import and state
+--------------------------
 
-const RATING_LABELS = ['', 'Poor', 'Fair', 'Good', 'Great', 'Excellent'];
+import { MessageSquare, Send, Star, ChevronLeft, CheckCircle, Loader, AlertCircle } from 'lucide-react';
 
-const [rating, setRating] = useState(0);
+const [formData, setFormData] = useState({
+    type: 'general',
+    rating: 0,
+    description: '',
+});
 const [hoveredStar, setHoveredStar] = useState(0);
 
-Former JSX
-----------
+const handleChange = (field, value) => {
+    setFormData((previous) => ({ ...previous, [field]: value }));
+};
 
-<div className="feedback-rating">
-    <label className="feedback-rating__label">
+2. Former validation and request payload
+----------------------------------------
+
+if (formData.rating < 1 || formData.rating > 5) {
+    setStatus('error');
+    setErrorMsg('Please select a rating from 1 to 5.');
+    return;
+}
+
+body: JSON.stringify({
+    type: formData.type,
+    rating: formData.rating,
+    description,
+})
+
+const canSubmit = Boolean(
+    studentId && session?.access_token && formData.description.trim()
+    && formData.rating >= 1 && status !== 'loading'
+);
+
+3. Former rating JSX
+--------------------
+
+<div>
+    <label
+        style={{
+            display: 'block',
+            fontWeight: 600,
+            marginBottom: '0.875rem',
+            fontSize: '0.95rem',
+        }}
+    >
         Only Rating
-        {rating > 0 && (
-            <span className="feedback-rating__value">
-                — {RATING_LABELS[rating]}
+        {formData.rating > 0 && (
+            <span
+                style={{
+                    color: 'var(--text-secondary)',
+                    fontWeight: 400,
+                    marginLeft: '0.5rem',
+                }}
+            >
+                {formData.rating}/5
             </span>
         )}
     </label>
-    <div className="feedback-rating__stars" role="group" aria-label="Only Rating">
+
+    <div
+        style={{ display: 'flex', gap: '0.5rem' }}
+        role="group"
+        aria-label="Only Rating"
+    >
         {[1, 2, 3, 4, 5].map((star) => (
             <button
                 type="button"
                 key={star}
-                className="feedback-rating__star"
-                aria-label={star + ' out of 5'}
-                aria-pressed={rating === star}
+                aria-label={`Rate ${star} out of 5`}
+                aria-pressed={formData.rating === star}
                 onMouseEnter={() => setHoveredStar(star)}
                 onMouseLeave={() => setHoveredStar(0)}
                 onFocus={() => setHoveredStar(star)}
                 onBlur={() => setHoveredStar(0)}
-                onClick={() => setRating(star)}
+                onClick={() => handleChange('rating', star)}
+                style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: '4px',
+                    transition: 'transform 0.15s',
+                }}
             >
                 <Star
                     size={32}
-                    fill={(hoveredStar || rating) >= star ? '#fbbf24' : 'transparent'}
-                    color={(hoveredStar || rating) >= star ? '#fbbf24' : 'rgba(255,255,255,0.2)'}
+                    fill={(hoveredStar || formData.rating) >= star
+                        ? '#fbbf24'
+                        : 'transparent'}
+                    color={(hoveredStar || formData.rating) >= star
+                        ? '#fbbf24'
+                        : 'rgba(255,255,255,0.2)'}
                 />
             </button>
         ))}
     </div>
 </div>
 
-Former CSS and animation
------------------------
-
-.feedback-rating {
-    display: flex;
-    flex-direction: column;
-    gap: 0.875rem;
-}
-
-.feedback-rating__label {
-    display: block;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-}
-
-.feedback-rating__value {
-    color: var(--text-secondary);
-    font-weight: 400;
-}
-
-.feedback-rating__stars {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.feedback-rating__star {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px;
-    border: 0;
-    background: transparent;
-    color: rgba(255,255,255,0.2);
-    cursor: pointer;
-    transform: scale(1);
-    transition: transform 0.15s ease, color 0.15s ease;
-}
-
-.feedback-rating__star:hover,
-.feedback-rating__star:focus-visible {
-    transform: scale(1.2);
-}
-
-.feedback-rating__star:focus-visible {
-    outline: 2px solid #8b5cf6;
-    outline-offset: 3px;
-    border-radius: 8px;
-}
-
-.feedback-rating__star svg {
-    transition: fill 0.15s ease, color 0.15s ease;
-}
-
-Former inline interaction
+4. Former visual behavior
 -------------------------
 
-style={{
-    background: 'none',
-    border: 'none',
-    cursor: 'pointer',
-    padding: '4px',
-    transition: 'transform 0.15s',
-}}
+- Five selectable Star icons represented values 1 through 5.
+- Hover and keyboard focus temporarily previewed the active star range
+  through hoveredStar.
+- Leaving or blurring the star button reset the preview to zero.
+- Selected stars were filled yellow (#fbbf24); unselected stars were
+  transparent with a muted outline.
+- The star buttons used a 0.15-second transform transition.
+- The selected value was displayed beside the label as N/5.
 
-onMouseOver={(event) => {
-    event.currentTarget.style.transform = 'scale(1.2)';
-}}
-
-onMouseOut={(event) => {
-    event.currentTarget.style.transform = 'scale(1)';
-}}
-
-No part of this archived rating code runs in the current feedback page.
-The active form submits only type and description.
+No rating state, markup, validation, request field, star interaction,
+or rating styling from this archive is active in the current page.
+The current feedback form submits only type and description.
