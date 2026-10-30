@@ -232,3 +232,16 @@ See `docs/PREPMaster_DATABASE_STATUS.md` for details.
 The immediate task is **GitHub-only**: verify and complete the subject-folder exam JSON layout for Diploma Computer Engineering and Diploma Chemical Engineering, Semesters 1–6. The user explicitly excluded Supabase work for this task. Read [DIPLOMA_EXAM_BANK_HANDOFF.md](DIPLOMA_EXAM_BANK_HANDOFF.md) for the exact target tree, exam rules, existing v2 counts, verified progress, gaps, validation checklist, and a paste-ready prompt for a new ChatGPT conversation.
 
 Current truth: course- and semester-level v2 banks are documented in the repository, and some subject folders exist. The full inventory of the requested `Mid 1.json`, `Mid 2.json`, and conditionally `ESE.json` files across all 12 semesters is **not yet verified**. Do not claim the requested layout is complete until every subject is checked. Do not query/change Supabase or run staged SQL.
+
+## 16. Project deliverable subject removal — 2026-10-30
+
+The active Supabase catalog was audited across all departments/courses and **46 project/dissertation/research-project deliverable subjects were removed** from `public."Subjects"`. Their exact SubjectIds and original course/semester metadata are preserved in `global-exam-prep/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv`.
+
+- Migration `20261030113013_remove_project_deliverable_subjects_from_catalog` is applied.
+- Live verification after the change: 40 courses, 1,913 active subjects, and zero remaining project/dissertation/research-project deliverables under the audited title rules.
+- All 46 rows had zero exam attempts, normalized leaderboard results, and published leaderboard snapshots before deletion.
+- The same IDs were removed from the ExamPortal bridge, semester map, legacy mock subject hierarchy, and BCA/MCA live context overrides. An automated bridge regression test now covers the 46 archived IDs.
+- Academic project-management subjects were retained because they are taught theory/management subjects, not student project submissions.
+- The source syllabus JSON archives were retained; the runtime catalog and numeric exam routes are what were removed.
+
+A separate list of **58 potential non-standard-assessment occurrences** (internship, seminar, colloquium, moot court, attachment, practice school, NCC, and physical education/wellness) is stored at `global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`. They have **not** been removed. Review the official subject-level assessment schemes before disabling written exams or changing their assessment modes.
