@@ -39,7 +39,11 @@ function readOptionalFilter(value, field, { allowed = null, maxLength = 80 } = {
 
     const normalized = value.trim();
     if (!normalized || normalized.toLowerCase() === 'all') return { value: null, error: null };
-    if (normalized.length > maxLength || /[\u0000-\u001f\u007f]/.test(normalized)) {
+    const hasControlCharacters = Array.from(normalized).some((character) => {
+        const code = character.charCodeAt(0);
+        return code <= 0x1f || code === 0x7f;
+    });
+    if (normalized.length > maxLength || hasControlCharacters) {
         return { value: null, error: `The ${field} filter is invalid.` };
     }
 
