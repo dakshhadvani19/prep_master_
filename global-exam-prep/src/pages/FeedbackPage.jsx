@@ -198,7 +198,7 @@ export default function FeedbackPage() {
                         </div>
                     </div>
 
-                    {!studentId && (
+                    {(!studentId || !accessToken) && (
                         <div style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.25)', borderRadius: 'var(--radius-md)', padding: '0.9rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
                             <span style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
                                 Sign in with a student account to submit feedback.

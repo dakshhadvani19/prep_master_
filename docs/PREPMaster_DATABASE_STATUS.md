@@ -2,7 +2,7 @@
 
 > Schema updates (2026-10-27): operational `exam_attempts`, `exam_attempt_keys`, and `auth_otp` live in the unexposed `private` schema; the empty `exam_grades` table was removed. Phase 1 mirrors 18 private attempts into 13 public `TestsData` papers and 18 public `TestAttempts` rows; phase 2 maintains 13 `public.TestRooms` aggregates. Core ERD tables are unchanged. Older counts below are point-in-time snapshots unless explicitly updated.
 
-_Last live verification: 2026-10-30 12:16 UTC (17:46 IST)_
+_Last live verification: 2026-10-30 12:30 UTC (18:00 IST)_
 
 This document records the current live Supabase database state and the most recent catalog changes. Live row counts are a snapshot and can change when users register or submit data.
 
