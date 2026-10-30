@@ -16,22 +16,32 @@ const FEEDBACK_TYPES = [
 
 export default function FeedbackPage() {
     const navigate = useNavigate();
-    const { session, studentId } = useAuth();
+    const { session, currentUser, isAdmin } = useAuth();
     const [type, setType] = useState('general');
     const [description, setDescription] = useState('');
     const [status, setStatus] = useState('idle'); // idle | loading | success | error
     const [errorMsg, setErrorMsg] = useState('');
 
     const accessToken = session?.access_token || '';
-    const canSubmit = Boolean(studentId && accessToken && description.trim() && status !== 'loading');
+    // studentId is populated by a separate profile read and can be unavailable
+    // even when the Supabase session is valid. The API derives and validates
+    // StudentId from the verified Auth UID, so do not treat this as signed out.
+    const hasAuthenticatedSession = Boolean(currentUser && accessToken);
+    const canSubmit = Boolean(
+        hasAuthenticatedSession && !isAdmin && description.trim() && status !== 'loading'
+    );
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const cleanDescription = description.trim();
 
-        if (!studentId || !accessToken) {
+        if (!hasAuthenticatedSession || isAdmin) {
             setStatus('error');
-            setErrorMsg('Sign in with a student account before submitting feedback.');
+            setErrorMsg(
+                !hasAuthenticatedSession
+                    ? 'Sign in with a student account before submitting feedback.'
+                    : 'Feedback submission is available to student accounts.'
+            );
             return;
         }
         if (!cleanDescription) {
@@ -198,7 +208,7 @@ export default function FeedbackPage() {
                         </div>
                     </div>
 
-                    {(!studentId || !accessToken) && (
+                    {!hasAuthenticatedSession && (
                         <div style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.25)', borderRadius: 'var(--radius-md)', padding: '0.9rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
                             <span style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
                                 Sign in with a student account to submit feedback.
@@ -210,6 +220,12 @@ export default function FeedbackPage() {
                             >
                                 <LogIn size={16} /> Sign In
                             </button>
+                        </div>
+                    )}
+
+                    {hasAuthenticatedSession && isAdmin && (
+                        <div style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.25)', borderRadius: 'var(--radius-md)', padding: '0.9rem 1rem', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
+                            Feedback submission is available to student accounts.
                         </div>
                     )}
 
