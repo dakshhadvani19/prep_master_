@@ -60,7 +60,7 @@ function nonblankSubjects(doms) {
 describe('subject id uniqueness', () => {
   it('does not introduce duplicate numeric SubjectIds in the mapping layer', () => {
     expect(bridgeHasDuplicateNumericIds()).toBe(false);
-    expect(bridgeEntryCount()).toBe(2467);
+    expect(bridgeEntryCount()).toBe(2452);
   });
 });
 
@@ -119,6 +119,25 @@ describe('canonical catalog coverage', () => {
     }
   });
 
+  it('does not resolve the 20 legacy-only project subjects removed from inactive course definitions', () => {
+    const csv = readFileSync('temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv', 'utf8').trim();
+    const lines = csv.split(/\r?\n/);
+    const rows = lines.slice(1).map(parseCsvLine);
+    const header = parseCsvLine(lines[0]);
+    const idIndex = header.indexOf('legacy_subject_id');
+    const removedIds = rows.map((row) => row[idIndex]).filter(Boolean);
+    expect(removedIds).toHaveLength(20);
+    expect(new Set(removedIds).size).toBe(20);
+    const legacySubjects = new Set(nonblankSubjects(domains).map((row) => String(row.id)));
+    for (const id of removedIds) {
+      expect(subjectIdBridge[id]).toBeUndefined();
+      expect(subjectSemesterMap[id]).toBeUndefined();
+      expect(legacySubjects.has(id)).toBe(false);
+      expect(lookupNumericSubject(id)).toBeNull();
+      expect(findSubjectContext(domains, id).kind).toBe('unknown');
+    }
+  });
+
   it('keeps Law & Arts network-unverified subjects mapped for retry', () => {
     const csv = readFileSync('temp_removed_subjects/law_arts_network_retry_pending_2026-10-11.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
@@ -139,13 +158,13 @@ describe('canonical catalog coverage', () => {
 
   it('tracks the current catalog snapshot and the verified numeric bridge', () => {
     // Forty-six project/dissertation subjects are excluded from the active
-    // bridge. Legacy contexts retain 2,558 nonblank exam-capable subjects;
-    // 2,467 of them still have a verified numeric mapping.
-    expect(subjects).toHaveLength(2558);
-    expect(new Set(semKeys).size).toBe(2467);
-    expect(new Set(brKeys).size).toBe(2467);
-    expect(semKeys).toHaveLength(2467);
-    expect(brKeys).toHaveLength(2467);
+    // bridge. Legacy contexts retain 2,538 nonblank exam-capable subjects;
+    // 2,452 of them still have a verified numeric mapping.
+    expect(subjects).toHaveLength(2538);
+    expect(new Set(semKeys).size).toBe(2452);
+    expect(new Set(brKeys).size).toBe(2452);
+    expect(semKeys).toHaveLength(2452);
+    expect(brKeys).toHaveLength(2452);
   });
 
   it('semester-map and bridge keys are exactly the same set', () => {
