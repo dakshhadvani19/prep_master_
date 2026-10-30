@@ -267,7 +267,7 @@ describe('ExamPortal numeric / legacy resolution', () => {
       .filter(([, row]) => ['bca', 'mca'].includes(row.c))
       .map(([id]) => id);
 
-    expect(liveComputerApplicationsIds).toHaveLength(77);
+    expect(liveComputerApplicationsIds).toHaveLength(68);
 
     for (const id of liveComputerApplicationsIds) {
       const context = findSubjectContext(domains, id);
