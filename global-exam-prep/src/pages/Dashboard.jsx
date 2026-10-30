@@ -1,16 +1,25 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { domains, examPrompts } from '../data/mockData';
-import { Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle, Loader } from 'lucide-react';
+import {
+    Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle,
+    BarChart3, TrendingUp, RefreshCw, BookMarked,
+} from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistory } from '../utils/examHistoryStorage';
-import { getMyAttempts, reconcileTestRoomAttempts } from '../utils/supabaseExam';
+import {
+    getMyAttempts, reconcileTestRoomAttempts, getDashboardPerformanceSummary,
+} from '../utils/supabaseExam';
 import './Dashboard.css';
 
 export default function Dashboard() {
     const [history, setHistory] = useState([]);
     const [loading, setLoading] = useState(false);
     const [justSubmitted, setJustSubmitted] = useState(false);
+    const [performance, setPerformance] = useState(null);
+    const [performanceLoading, setPerformanceLoading] = useState(false);
+    const [performanceError, setPerformanceError] = useState('');
+    const [performanceRetry, setPerformanceRetry] = useState(0);
     const navigate = useNavigate();
     const location = useLocation();
     const { currentUser } = useAuth();
@@ -99,6 +108,41 @@ export default function Dashboard() {
             if (bannerTimer) clearTimeout(bannerTimer);
         };
     }, [currentUser?.uid, location.state?.justSubmitted]);
+
+    useEffect(() => {
+        if (!currentUser?.uid) {
+            setPerformance(null);
+            setPerformanceError('');
+            setPerformanceLoading(false);
+            return undefined;
+        }
+
+        let cancelled = false;
+        setPerformanceLoading(true);
+        setPerformanceError('');
+
+        getDashboardPerformanceSummary().then(({ performance: result, error }) => {
+            if (cancelled) return;
+            if (error) {
+                setPerformance(null);
+                setPerformanceError(error);
+                return;
+            }
+            setPerformance(result);
+        }).catch((error) => {
+            // The helper already logs provider errors; this is a defensive
+            // guard for unexpected client-side failures.
+            console.error('[dashboard] Unexpected performance summary failure:', error);
+            if (!cancelled) {
+                setPerformance(null);
+                setPerformanceError('We could not load your performance summary right now. Please try again.');
+            }
+        }).finally(() => {
+            if (!cancelled) setPerformanceLoading(false);
+        });
+
+        return () => { cancelled = true; };
+    }, [currentUser?.uid, performanceRetry]);
 
     const getSubjectName = (subjectId) => {
         for (const d of domains) {
@@ -191,6 +235,132 @@ export default function Dashboard() {
                     </div>
                 )}
             </header>
+
+            <section className="sd-performance" aria-labelledby="sd-performance-title">
+                <div className="sd-performance__header">
+                    <div>
+                        <span className="sd-performance__eyebrow">YOUR PROGRESS</span>
+                        <h2 id="sd-performance-title">Performance overview</h2>
+                        <p>Calculated from your verified, completed examination results.</p>
+                    </div>
+                    <button
+                        type="button"
+                        className="sd-performance__refresh"
+                        onClick={() => setPerformanceRetry((value) => value + 1)}
+                        disabled={performanceLoading}
+                        aria-label="Refresh performance summary"
+                    >
+                        <RefreshCw size={16} />
+                        <span>Refresh</span>
+                    </button>
+                </div>
+
+                {performanceLoading ? (
+                    <div className="sd-performance__loading" role="status" aria-live="polite">
+                        <span className="sd-performance__skeleton sd-performance__skeleton--wide" />
+                        <span className="sd-performance__skeleton" />
+                        <span className="sd-performance__skeleton" />
+                        <span className="sd-performance__skeleton" />
+                        <span className="sd-performance__loading-copy">Loading verified results…</span>
+                    </div>
+                ) : performanceError ? (
+                    <div className="sd-performance__error" role="alert">
+                        <div>
+                            <strong>Performance data is unavailable</strong>
+                            <p>{performanceError}</p>
+                        </div>
+                        <button type="button" onClick={() => setPerformanceRetry((value) => value + 1)}>
+                            Try again
+                        </button>
+                    </div>
+                ) : performance?.hasResults ? (
+                    <>
+                        <div className="sd-performance__metrics">
+                            <article className="sd-metric">
+                                <span className="sd-metric__label">Completed exams</span>
+                                <strong>{Number(performance.summary?.totalAttempts || 0).toLocaleString()}</strong>
+                                <span className="sd-metric__detail">Normal exams and Test Rooms</span>
+                            </article>
+                            <article className="sd-metric sd-metric--gold">
+                                <span className="sd-metric__label">Total score</span>
+                                <strong>
+                                    {Number(performance.summary?.totalScore || 0).toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                    <small> / {Number(performance.summary?.totalMaxMarks || 0).toLocaleString(undefined, { maximumFractionDigits: 2 })}</small>
+                                </strong>
+                                <span className="sd-metric__detail">Across verified attempts</span>
+                            </article>
+                            <article className="sd-metric sd-metric--violet">
+                                <span className="sd-metric__label">Overall percentage</span>
+                                <strong>
+                                    {Number(performance.summary?.overallPercentage || 0).toFixed(2)}
+                                    <small>%</small>
+                                </strong>
+                                <span className="sd-metric__detail">Weighted by maximum marks</span>
+                            </article>
+                            <article className="sd-metric">
+                                <span className="sd-metric__label">Subjects attempted</span>
+                                <strong>{Number(performance.summary?.subjectsAttempted || 0).toLocaleString()}</strong>
+                                <span className="sd-metric__detail">Distinct subjects with results</span>
+                            </article>
+                        </div>
+
+                        {Array.isArray(performance.subjectPerformance) && performance.subjectPerformance.length > 0 && (
+                            <div className="sd-subjects">
+                                <div className="sd-subjects__header">
+                                    <div>
+                                        <h3>Subject performance</h3>
+                                        <p>Your five most recently attempted subjects</p>
+                                    </div>
+                                    <BookMarked size={19} aria-hidden="true" />
+                                </div>
+                                <div className="sd-subjects__list">
+                                    {performance.subjectPerformance.map((subject) => {
+                                        const percentage = Math.min(100, Math.max(0, Number(subject.percentage) || 0));
+                                        return (
+                                            <div className="sd-subject" key={subject.subjectId}>
+                                                <div className="sd-subject__top">
+                                                    <div className="sd-subject__name">
+                                                        <strong>{subject.subjectName}</strong>
+                                                        <span>
+                                                            Semester {subject.semester} · {subject.attempts} {Number(subject.attempts) === 1 ? 'attempt' : 'attempts'}
+                                                        </span>
+                                                    </div>
+                                                    <div className="sd-subject__score">
+                                                        <strong>{percentage.toFixed(2)}%</strong>
+                                                        <span>
+                                                            {Number(subject.totalScore).toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                                            {' / '}
+                                                            {Number(subject.totalMaxMarks).toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="sd-subject__track"
+                                                    role="progressbar"
+                                                    aria-label={`${subject.subjectName} overall percentage`}
+                                                    aria-valuemin={0}
+                                                    aria-valuemax={100}
+                                                    aria-valuenow={percentage}
+                                                >
+                                                    <span style={{ width: `${percentage}%` }} />
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        )}
+                    </>
+                ) : (
+                    <div className="sd-performance__empty">
+                        <div className="sd-performance__empty-icon"><BarChart3 size={22} /></div>
+                        <div>
+                            <strong>No verified results yet</strong>
+                            <p>Complete a scored exam to see your overall performance and subject breakdown here.</p>
+                        </div>
+                    </div>
+                )}
+            </section>
 
             {loading ? (
                 <div className="glass-panel" style={{ padding: '4rem', textAlign: 'center' }}>
