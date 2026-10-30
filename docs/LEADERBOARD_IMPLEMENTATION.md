@@ -106,8 +106,6 @@ The normalized result table and published leaderboard table remain unavailable t
 Connect the existing department/course/semester/subject flow to `getLeaderboardRankings()`. Add ranking cards/table, filters, current-student summary, pagination, loading/empty/error states, and administrator preview. Keep all ranking data hidden when the request fails; do not fall back to mock scores or expose raw server errors.
 
 
-Phase 2: build the secure ranking API and calculate overall/category-specific weighted percentages, competition ranks and ties, participant counts, Top X% / outside-Top-100 position, and the student's own rank. Then connect the existing leaderboard UI to real published snapshots and private supplemental metrics. No mock scores or ranks should be displayed.
-
 ## Previous hierarchy verification
 
 - Live SQL smoke test: a temporary attempt was created, linked to catalog SubjectId `1001131010601`, submitted, and appeared in the server-side completed-subject feed with CourseId `1` and Semester `1`.
