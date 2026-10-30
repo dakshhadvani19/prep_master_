@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { domains, examPrompts } from '../data/mockData';
 import {
     Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle,
-    BarChart3, TrendingUp, RefreshCw, BookMarked,
+    BarChart3, RefreshCw, BookMarked, Loader,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistory } from '../utils/examHistoryStorage';
