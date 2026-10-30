@@ -44,3 +44,16 @@ This is an internal recovery archive, not a public website data source. Do not i
 - The reconciled active list is `diploma_catalog_sync_2026-10-12.csv`; it records the current `SubjectId`, source code, semester, official syllabus URL and action for all six Diploma programs.
 - The current official Marwadi inventory contains 245 distinct code-level subject rows for Diploma CourseIds 44–49. Duplicate page-code aliases were canonicalized from the linked PDF's own subject title where available.
 - An archived row means the current official PDF-backed inventory did not retain its old catalog ID; it does not prove a historical syllabus never existed.
+
+## Project and dissertation deliverable cleanup — 2026-10-30
+
+- Archive: `project_deliverable_subjects_removed_2026-10-30.csv`.
+- **46 exact SubjectIds** were archived before removal from live `public."Subjects"` across B.Tech, Diploma, Computer Applications (BCA/MCA), Management Studies, Law & Arts, and Science & Pharmacy.
+- The deletion is recorded in Supabase migration `20261030113013_remove_project_deliverable_subjects_from_catalog`.
+- Before deletion, the 46 rows had **zero** linked `private.exam_attempts`, **zero** `private.leaderboard_attempt_results`, and **zero** `public."Leaderboards"` snapshots. The migration repeats these checks and aborts if any dependent record is present.
+- After deletion, a live query found **zero remaining project/dissertation/research-project deliverable subjects** using the audited title rules. The course-management/theory subjects Project Management, Software Project Management, Construction Project Management, Project Appraisal, Portfolio Management, and Design Engineering and Project Management were intentionally retained.
+- The 46 numeric IDs were removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, legacy subject entries in `src/data/mockData.js`, and six matching BCA/MCA entries in `src/data/liveSubjectContextOverrides.json`. This prevents the removed numeric exam routes from resolving through old compatibility data.
+- The bridge and semester map each now contain 2,467 entries (down from 2,513); live Computer Applications overrides now contain 54 entries (down from 60).
+- The source syllabus JSON collections under `all_departments_syllabus/` and `public/syllabus/` are retained as reference/archive material. They are not runtime catalog sources; only the live catalog and route mappings were removed.
+- Additional activity-/practice-based subjects were **not** deleted. The 58 live occurrences identified for manual assessment-mode review are documented in `non_exam_subjects_for_review_2026-10-30.md`. That list is a title-based screening only, not an official declaration that those subjects have no assessment.
+
