@@ -1,0 +1,130 @@
+PREPMASTER FEEDBACK — REMOVED RATING UI ARCHIVE
+================================================
+
+This is a plain-text archive of the former five-star feedback rating UI.
+It is intentionally not imported by the application. It preserves the
+previous rating state, markup, hover/focus animation and CSS for reference.
+
+Former imports and state
+------------------------
+
+import { useState } from 'react';
+import { Star } from 'lucide-react';
+
+const RATING_LABELS = ['', 'Poor', 'Fair', 'Good', 'Great', 'Excellent'];
+
+const [rating, setRating] = useState(0);
+const [hoveredStar, setHoveredStar] = useState(0);
+
+Former JSX
+----------
+
+<div className="feedback-rating">
+    <label className="feedback-rating__label">
+        Only Rating
+        {rating > 0 && (
+            <span className="feedback-rating__value">
+                — {RATING_LABELS[rating]}
+            </span>
+        )}
+    </label>
+    <div className="feedback-rating__stars" role="group" aria-label="Only Rating">
+        {[1, 2, 3, 4, 5].map((star) => (
+            <button
+                type="button"
+                key={star}
+                className="feedback-rating__star"
+                aria-label={star + ' out of 5'}
+                aria-pressed={rating === star}
+                onMouseEnter={() => setHoveredStar(star)}
+                onMouseLeave={() => setHoveredStar(0)}
+                onFocus={() => setHoveredStar(star)}
+                onBlur={() => setHoveredStar(0)}
+                onClick={() => setRating(star)}
+            >
+                <Star
+                    size={32}
+                    fill={(hoveredStar || rating) >= star ? '#fbbf24' : 'transparent'}
+                    color={(hoveredStar || rating) >= star ? '#fbbf24' : 'rgba(255,255,255,0.2)'}
+                />
+            </button>
+        ))}
+    </div>
+</div>
+
+Former CSS and animation
+-----------------------
+
+.feedback-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.feedback-rating__label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.feedback-rating__value {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.feedback-rating__stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feedback-rating__star {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border: 0;
+    background: transparent;
+    color: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.feedback-rating__star:hover,
+.feedback-rating__star:focus-visible {
+    transform: scale(1.2);
+}
+
+.feedback-rating__star:focus-visible {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
+.feedback-rating__star svg {
+    transition: fill 0.15s ease, color 0.15s ease;
+}
+
+Former inline interaction
+-------------------------
+
+style={{
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    padding: '4px',
+    transition: 'transform 0.15s',
+}}
+
+onMouseOver={(event) => {
+    event.currentTarget.style.transform = 'scale(1.2)';
+}}
+
+onMouseOut={(event) => {
+    event.currentTarget.style.transform = 'scale(1)';
+}}
+
+No part of this archived rating code runs in the current feedback page.
+The active form submits only type and description.

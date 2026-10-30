@@ -249,8 +249,8 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 
 ## 17. Feedback submission flow — 2026-10-30
 
-- Feedback form fields: Feedback Type, Only Rating (required 1–5), and Description (required, maximum 1,000 characters).
-- Feedback categories: General Feedback, Bug Report, Feature Request, Content Issue, and Other. The previous AI Quality category is no longer offered.
-- The browser sends type, rating, description and the verified Supabase bearer token. The API resolves the student's numeric StudentId using the authenticated UID; it does not trust a caller-supplied StudentId.
-- The backend inserts `Description`, `Type`, `Rating`, and `StudentId`. PostgreSQL creates `FeedbackId`; moderation flags retain their defaults.
-- The database rating constraint and feedback API/UI tests cover invalid ratings, unsupported categories, authentication, missing student profiles, and description length.
+- The active form contains only Feedback Type and Description. The five categories are General Feedback, Bug Report, Feature Request, Content Issue, and Other (renamed from AI Quality).
+- Description is required and limited to 1,000 characters in both the browser and API. Rating, name, email and subject inputs have been removed.
+- POST /api/feedback verifies the Supabase bearer session, derives StudentId from the authenticated UID, and inserts only Description, Type and StudentId. PostgreSQL generates FeedbackId.
+- The original Feedbacks schema is retained; no Rating column or rating values remain. The temporary rating-column migration was reversed by 20261030123011_remove_feedback_rating_from_feedbacks. The former rating UI/CSS/animation is archived in src/pages/remoed_rating_ui.txt.
+- API and page tests cover authentication, type validation, persistence fields, compatibility mapping and the 1,000-character limit.

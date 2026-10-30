@@ -35,31 +35,38 @@ function request(body = {}, headers = {}) {
     return { method: 'POST', body, headers };
 }
 
+const studentQuery = {
+    select: mocks.studentSelect,
+    eq: mocks.studentEq,
+    maybeSingle: mocks.studentMaybeSingle,
+};
+const feedbackQuery = {
+    insert: mocks.insert,
+    select: mocks.feedbackSelect,
+    single: mocks.feedbackSingle,
+};
+
 beforeEach(() => {
     vi.unstubAllEnvs();
     vi.stubEnv('SUPABASE_URL', 'https://feedback-test.supabase.co');
-    vi.stubEnv('SUPABASE_SERVICE_ROLE_KEY', 'test-service-role-key');
+    vi.stubEnv('SUPABASE_SERVICE_ROLE_KEY', 'service-role-key-under-test');
     for (const mock of Object.values(mocks)) mock.mockReset();
 
-    const studentQuery = {
-        select: mocks.studentSelect,
-        eq: mocks.studentEq,
-        maybeSingle: mocks.studentMaybeSingle,
-    };
-    const feedbackQuery = {
-        insert: mocks.insert,
-        select: mocks.feedbackSelect,
-        single: mocks.feedbackSingle,
-    };
+    mocks.from.mockImplementation((table) => {
+        if (table === 'Students') return studentQuery;
+        if (table === 'Feedbacks') return feedbackQuery;
+        throw new Error('Unexpected table: ' + table);
+    });
     mocks.studentSelect.mockReturnValue(studentQuery);
     mocks.studentEq.mockReturnValue(studentQuery);
+    mocks.studentMaybeSingle.mockResolvedValue({ data: { StudentId: 42 }, error: null });
     mocks.insert.mockReturnValue(feedbackQuery);
     mocks.feedbackSelect.mockReturnValue(feedbackQuery);
-
-    mocks.studentMaybeSingle.mockResolvedValue({ data: { StudentId: 42 }, error: null });
     mocks.feedbackSingle.mockResolvedValue({ data: { FeedbackId: 101 }, error: null });
-    mocks.getUser.mockResolvedValue({ data: { user: { id: USER_ID } }, error: null });
-    mocks.from.mockImplementation((table) => (table === 'Students' ? studentQuery : feedbackQuery));
+    mocks.getUser.mockResolvedValue({
+        data: { user: { id: USER_ID } },
+        error: null,
+    });
     mocks.createClient.mockReturnValue({
         auth: { getUser: mocks.getUser },
         from: mocks.from,
@@ -67,43 +74,66 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-    vi.restoreAllMocks();
     vi.unstubAllEnvs();
+    vi.restoreAllMocks();
 });
 
 describe('POST /api/feedback', () => {
-    it('requires a verified bearer token', async () => {
+    it('rejects unsupported methods without initializing Supabase', async () => {
         const res = makeRes();
-        await handler(request({ type: 'general', rating: 5, description: 'Useful feedback' }), res);
+        await handler({ method: 'GET', headers: {} }, res);
+        expect(res.statusCode).toBe(405);
+        expect(mocks.createClient).not.toHaveBeenCalled();
+    });
+
+    it('requires a verified bearer session', async () => {
+        const res = makeRes();
+        await handler(request({ type: 'general', description: 'A useful comment.' }), res);
         expect(res.statusCode).toBe(401);
+        expect(res.payload.error).toMatch(/session could not be verified/i);
         expect(mocks.from).not.toHaveBeenCalled();
     });
 
-    it('validates category, rating, and description before database access', async () => {
-        const cases = [
-            { type: 'ai', rating: 5, description: 'Text' },
-            { type: 'other', rating: 0, description: 'Text' },
-            { type: 'other', rating: 6, description: 'Text' },
-            { type: 'other', rating: 2.5, description: 'Text' },
-            { type: 'other', rating: 5, description: 'x'.repeat(1001) },
-            { type: 'other', rating: 5, description: '   ' },
-        ];
-        for (const body of cases) {
+    it('validates category and the 1,000-character description limit before creating the client', async () => {
+        const headers = { authorization: 'Bearer verified-token' };
+        for (const body of [
+            { type: 'unknown', description: 'Text' },
+            { type: 'other', description: 'x'.repeat(1001) },
+            { type: 'other', description: '   ' },
+            { type: 'ai quality', description: 'Text' },
+        ]) {
             const res = makeRes();
-            await handler(request(body, { authorization: 'Bearer verified-token' }), res);
+            await handler(request(body, headers), res);
             expect(res.statusCode).toBe(400);
-            expect(mocks.createClient).not.toHaveBeenCalled();
         }
+        expect(mocks.createClient).not.toHaveBeenCalled();
     });
 
-    it('derives StudentId from the verified Auth UID and inserts only submitted fields', async () => {
+    it('maps older AI category submissions to Other', async () => {
+        const res = makeRes();
+        await handler(request(
+            { type: 'ai', message: 'The AI answer was not relevant.' },
+            { authorization: 'Bearer verified-token' },
+        ), res);
+        expect(res.statusCode).toBe(201);
+        expect(mocks.insert).toHaveBeenCalledWith({
+            Description: 'The AI answer was not relevant.',
+            Type: 'other',
+            StudentId: 42,
+        });
+    });
+
+    it('derives StudentId from the verified Auth UID and inserts only Description, Type and StudentId', async () => {
         const res = makeRes();
         await handler(request({
             type: 'other',
-            rating: 4,
             description: '  A suggestion for the feedback form.  ',
-            studentId: 999,
-            name: 'untrusted',
+            StudentId: 999,
+            FeedbackId: 123,
+            rating: 4,
+            subject: 'not stored',
+            email: 'not stored',
+            name: 'not stored',
         }, { authorization: 'Bearer verified-token' }), res);
 
         expect(res.statusCode).toBe(201);
@@ -116,18 +146,19 @@ describe('POST /api/feedback', () => {
         expect(mocks.insert).toHaveBeenCalledWith({
             Description: 'A suggestion for the feedback form.',
             Type: 'other',
-            Rating: 4,
             StudentId: 42,
         });
+        expect(mocks.insert.mock.calls[0][0]).not.toHaveProperty('Rating');
+        expect(mocks.insert.mock.calls[0][0]).not.toHaveProperty('FeedbackId');
         expect(res.payload).toEqual({ success: true, feedbackId: 101 });
         expect(res.headers['Cache-Control']).toContain('no-store');
         expect(res.headers.Vary).toBe('Authorization');
     });
 
-    it('rejects sessions without a student profile', async () => {
+    it('requires a student profile', async () => {
         mocks.studentMaybeSingle.mockResolvedValue({ data: null, error: null });
         const res = makeRes();
-        await handler(request({ type: 'general', rating: 3, description: 'Test' }, {
+        await handler(request({ type: 'general', description: 'Test' }, {
             authorization: 'Bearer verified-token',
         }), res);
         expect(res.statusCode).toBe(403);
@@ -139,19 +170,12 @@ describe('POST /api/feedback', () => {
         mocks.feedbackSingle.mockResolvedValue({ data: null, error: providerError });
         const logger = vi.spyOn(console, 'error').mockImplementation(() => {});
         const res = makeRes();
-        await handler(request({ type: 'bug', rating: 2, description: 'Something is broken.' }, {
+        await handler(request({ type: 'bug', description: 'Something is broken.' }, {
             authorization: 'Bearer verified-token',
         }), res);
         expect(res.statusCode).toBe(503);
         expect(res.payload.error).toMatch(/could not save your feedback/i);
         expect(JSON.stringify(res.payload)).not.toContain('PostgREST');
         expect(logger).toHaveBeenCalledWith('[feedback] request failed:', providerError);
-    });
-
-    it('rejects unsupported methods without initializing Supabase', async () => {
-        const res = makeRes();
-        await handler({ method: 'GET', headers: {} }, res);
-        expect(res.statusCode).toBe(405);
-        expect(mocks.createClient).not.toHaveBeenCalled();
     });
 });

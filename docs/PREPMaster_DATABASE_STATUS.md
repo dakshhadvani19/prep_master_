@@ -123,7 +123,7 @@ All listed application tables in the exposed `public` schema currently have Row 
 | `public.Subjects` | `SubjectId` BIGINT identity | `SubjectName`, `CourseId` → `Courses.CourseId`, `Semester` INTEGER |
 | `public.Students` | `StudentId` BIGINT identity | `auth_uid` → `auth.users.id`, `FullName`, unique lowercase `Email`, `IsSpam`, `role`, `created_at` |
 | `public.Admins` | `AdminId` BIGINT identity | `auth_uid` → `auth.users.id`, `FullName`, unique lowercase `Email`, `isSuperAdmin`, `created_at` |
-| `public.Feedbacks` | `FeedbackId` BIGINT identity | `Description` (max 1,000), `Type`, `Rating` SMALLINT (1–5), moderation flags, `StudentId` → `Students.StudentId` |
+| `public.Feedbacks` | `FeedbackId` BIGINT identity | `Description` (max 1,000), `Type`, moderation flags, `StudentId` → `Students.StudentId`; no `Rating` column |
 | `public.Leaderboards` | `LeaderboardId` BIGINT | `StudentId` BIGINT[], `Points` BIGINT[], `SubjectId` → `Subjects.SubjectId`, `TotalTests` BIGINT[] |
 | `public.exam_history` | `id` BIGINT | `auth_uid` → `auth.users.id`, exam metadata, score, question snapshot and user answers in JSONB |
 | `private.auth_otp` | `email` TEXT | OTP digest, nonce, attempt count, creation and expiry times; short-lived auth support data |
@@ -210,9 +210,8 @@ A separate title-based audit identified **58 activity-/workplace-based occurrenc
 
 ## 12. Feedback persistence — 2026-10-30
 
-- Migration: `20261030121639_add_feedback_rating` adds required `public."Feedbacks"."Rating"` as SMALLINT with a database constraint of 1–5.
-- The active form has three inputs: feedback type (General, Bug Report, Feature Request, Content Issue, Other), rating, and description.
-- Description is limited to 1,000 characters in the browser and validated again by the server.
-- `POST /api/feedback` verifies the caller's Supabase bearer token, resolves `StudentId` from the matching `Students.auth_uid` row, and inserts only `Description`, `Type`, `Rating`, and `StudentId` into `public."Feedbacks"`.
-- The server omits `FeedbackId` and moderation flags so PostgreSQL generates the identity and applies existing defaults. The service-role credential remains server-only; direct browser table access remains closed by RLS and grants.
-- The endpoint no longer depends on the optional Gmail mailer to record a submission. A successful response is returned only after the database insert completes.
+- The original `public."Feedbacks"` schema is retained: `FeedbackId` identity, `Description`, `Type`, moderation flags, and `StudentId` foreign key. There is no `Rating` column.
+- The temporary migration `20261030121639_add_feedback_rating` was reversed by `20261030123011_remove_feedback_rating_from_feedbacks`. The live column check confirms Rating is absent.
+- The active form has only Feedback Type and Description; Description is required and limited to 1,000 characters.
+- `POST /api/feedback` verifies the caller's Supabase bearer token, resolves `StudentId` from `Students.auth_uid`, and inserts only `Description`, `Type`, and `StudentId`. PostgreSQL generates `FeedbackId` and applies the existing moderation defaults.
+- The service-role credential remains server-only and direct browser table access remains closed by RLS and grants.
