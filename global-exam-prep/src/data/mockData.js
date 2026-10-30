@@ -1,4 +1,4 @@
-export const domains =[
+export const domains = [
   {
     "id": "engineering",
     "title": "Engineering & Technology",
@@ -480,16 +480,6 @@ export const domains =[
             ]
           },
           {
-            "id": "1001920170301",
-            "title": "Major Project – 1",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "1000135170301",
             "title": "iOS Programming",
             "sem": 7,
@@ -603,16 +593,6 @@ export const domains =[
             "id": "1000135071301",
             "title": "Natural Language Processing",
             "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "1001920180101",
-            "title": "Major Project – 2",
-            "sem": 8,
             "exams": [
               "mid-1",
               "mid-2",
@@ -2754,16 +2734,6 @@ export const domains =[
             ]
           },
           {
-            "id": "5001920170301",
-            "title": "Major Project – 1",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "5001920071701",
             "title": "UI/UX design and Agile Development",
             "sem": 7,
@@ -2847,16 +2817,6 @@ export const domains =[
             "id": "5001920071301",
             "title": "Natural Language Processing",
             "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "5001920180101",
-            "title": "Major Project – 2",
-            "sem": 8,
             "exams": [
               "mid-1",
               "mid-2",
@@ -4134,16 +4094,6 @@ export const domains =[
               "mid-2",
               "final"
             ]
-          },
-          {
-            "id": "7001320080101",
-            "title": "Project / Industrial Training",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
           }
         ]
       },
@@ -4602,16 +4552,6 @@ export const domains =[
             ]
           },
           {
-            "id": "8000135060901",
-            "title": "Mini Project",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "8001318060201",
             "title": "Quantitative Aptitude and Verbal Ability",
             "sem": 6,
@@ -4712,16 +4652,6 @@ export const domains =[
             ]
           },
           {
-            "id": "8000135071501",
-            "title": "Major Project – 1",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "8000135071701",
             "title": "DevOps Essentials",
             "sem": 7,
@@ -4775,16 +4705,6 @@ export const domains =[
             "id": "8000135072201",
             "title": "Software Testing",
             "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "8000135080701",
-            "title": "Intenship / Major Project - 2",
-            "sem": 8,
             "exams": [
               "mid-1",
               "mid-2",
@@ -5348,16 +5268,6 @@ export const domains =[
             ]
           },
           {
-            "id": "9000135071501",
-            "title": "Major Project – 1",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "9000135071701",
             "title": "DevOps Essentials",
             "sem": 7,
@@ -5411,16 +5321,6 @@ export const domains =[
             "id": "9000133070601",
             "title": "Biometrics",
             "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "9000135080701",
-            "title": "Intenship / Major Project - 2",
-            "sem": 8,
             "exams": [
               "mid-1",
               "mid-2",
@@ -5934,16 +5834,6 @@ export const domains =[
             ]
           },
           {
-            "id": "10001920170301",
-            "title": "Major Project – 1",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "10000135070401",
             "title": "Android Programming",
             "sem": 7,
@@ -5997,16 +5887,6 @@ export const domains =[
             "id": "10000119070401",
             "title": "Virtual and Augmented Reality",
             "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "10001920080101",
-            "title": "Industrial Internship/Major Project-II",
-            "sem": 8,
             "exams": [
               "mid-1",
               "mid-2",
@@ -11386,16 +11266,6 @@ export const domains =[
             ]
           },
           {
-            "id": "19005133020401",
-            "title": "Mini Project – 1",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "19005133020501",
             "title": "NoSQL Databases",
             "sem": 2,
@@ -11466,16 +11336,6 @@ export const domains =[
             ]
           },
           {
-            "id": "19005133030401",
-            "title": "Mini Project – 2",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "19005133030501",
             "title": "Big Data Tools",
             "sem": 3,
@@ -11509,16 +11369,6 @@ export const domains =[
             "id": "19005133030801",
             "title": "ASP.Net",
             "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "19005133040101",
-            "title": "Industry Defined Project (Internship)",
-            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -11992,16 +11842,6 @@ export const domains =[
           {
             "id": "20000422061401",
             "title": "MANAGEMENT INFORMATION SYSTEM",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "20000422061501",
-            "title": "RESEARCH PROJECT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -13278,16 +13118,6 @@ export const domains =[
             ]
           },
           {
-            "id": "21000422061501",
-            "title": "RESEARCH PROJECT",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "21000422160101",
             "title": "BUSINESS ETHICS & CORPORATE GOVERNANCE",
             "sem": 6,
@@ -14419,16 +14249,6 @@ export const domains =[
             "id": "22000423054201",
             "title": "Sales Management",
             "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "22000423160601",
-            "title": "Research Project",
-            "sem": 6,
             "exams": [
               "mid-1",
               "mid-2",
@@ -16804,16 +16624,6 @@ export const domains =[
             ]
           },
           {
-            "id": "26000422061501",
-            "title": "RESEARCH PROJECT",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "26000422160101",
             "title": "BUSINESS ETHICS & CORPORATE GOVERNANCE",
             "sem": 6,
@@ -18674,16 +18484,6 @@ export const domains =[
           {
             "id": "27000422061401",
             "title": "MANAGEMENT INFORMATION SYSTEM",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "27000422061501",
-            "title": "RESEARCH PROJECT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -21283,16 +21083,6 @@ export const domains =[
               "mid-2",
               "final"
             ]
-          },
-          {
-            "id": "32002132035401",
-            "title": "Dissertation Project",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
           }
         ],
         "scenarios": []
@@ -22189,16 +21979,6 @@ export const domains =[
             ]
           },
           {
-            "id": "34002325155401",
-            "title": "DISSERTATION/PROJECT",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "34002325055102",
             "title": "RESEARCH METHODOLOGY",
             "sem": 4,
@@ -22211,16 +21991,6 @@ export const domains =[
           {
             "id": "34002325155301",
             "title": "PHARMA REGULATORY AFFAIRS",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "34002325155402",
-            "title": "DISSERTATION/PROJECT",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -22399,16 +22169,6 @@ export const domains =[
             "id": "35021912050101",
             "title": "Effective Communication skills-II",
             "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "35002132055201",
-            "title": "Dissertation Project",
-            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -23080,16 +22840,6 @@ export const domains =[
             ]
           },
           {
-            "id": "37013168081301",
-            "title": "Project Work",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "37013155000103",
             "title": "Pharma Marketing Management",
             "sem": 8,
@@ -23269,16 +23019,6 @@ export const domains =[
           {
             "id": "38013133030301",
             "title": "Research Proposal Presentation",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "38013133030401",
-            "title": "Research Project Work",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -23494,16 +23234,6 @@ export const domains =[
             ]
           },
           {
-            "id": "39131317030401",
-            "title": "Research Project Work",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "39131317030501",
             "title": "Interpretation of spectra*",
             "sem": 3,
@@ -23693,16 +23423,6 @@ export const domains =[
           {
             "id": "40131318030301",
             "title": "Research Proposal Presentation",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "40131318030401",
-            "title": "Research Project Work",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -26072,16 +25792,6 @@ export const domains =[
             ]
           },
           {
-            "id": "43101625080601",
-            "title": "Dissertation",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "43101619080101",
             "title": "Political theories/ ideologies",
             "sem": 8,
@@ -26458,16 +26168,6 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935150501",
-            "title": "Project-I",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "44000935050901",
             "title": "Summer Internship",
             "sem": 5,
@@ -26510,16 +26210,6 @@ export const domains =[
           {
             "id": "44000935160101",
             "title": "Multimedia and Animation Tools",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "44000935160201",
-            "title": "Project-II",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -26825,16 +26515,6 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135150501",
-            "title": "PROJECT – I",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "45009135050801",
             "title": "SUMMER INTERNSHIP",
             "sem": 5,
@@ -26897,16 +26577,6 @@ export const domains =[
           {
             "id": "45009135160601",
             "title": "POWER PLANT ENGINEERING",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135160501",
-            "title": "PROJECT-II",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27232,16 +26902,6 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938250401",
-            "title": "PROJECT - I",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "46000938050801",
             "title": "SUMMER INTERNSHIP",
             "sem": 5,
@@ -27284,16 +26944,6 @@ export const domains =[
           {
             "id": "46000938260401",
             "title": "ENTREPRENEURSHIP DEVELOPMENT",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "46000938260301",
-            "title": "PROJECT-II",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27601,16 +27251,6 @@ export const domains =[
           {
             "id": "47000955250301",
             "title": "Power Electronics and Electrical Drives",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "47000955250701",
-            "title": "Project-I",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -28056,16 +27696,6 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939250501",
-            "title": "PROJECT-I",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "48000939250801",
             "title": "RAILWAY HARBOUR AND TUNNEL ENGINEERING",
             "sem": 5,
@@ -28108,16 +27738,6 @@ export const domains =[
           {
             "id": "48000939061301",
             "title": "INTELLECTUAL PROPERTY RIGHTS",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "48000939260501",
-            "title": "PROJECT-II",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -28443,16 +28063,6 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320050401",
-            "title": "Project I",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "49009320051001",
             "title": "VLSI",
             "sem": 5,
@@ -28543,16 +28153,6 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320060201",
-            "title": "Project-II",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "49009320060401",
             "title": "RF and Microwave Communication",
             "sem": 6,
@@ -28586,9 +28186,7 @@ export const domains =[
       }
     ]
   }
-];
-
-export const examPrompts = {
+];export const examPrompts = {
   'mid-1': {
     title: 'Mid-Term 1 (Theory)',
     timeMinutes: 60,
