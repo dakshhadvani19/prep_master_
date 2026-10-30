@@ -28,6 +28,7 @@ import {
     mappingForCourseId,
 } from '../utils/catalogApi';
 import { getLeaderboardCompletedSubjects } from '../utils/supabaseExam';
+import LeaderboardBoard from '../components/LeaderboardBoard';
 import './Leaderboard.css';
 
 const DOMAIN_ICONS = {
@@ -624,8 +625,8 @@ export default function Leaderboard() {
                                     <h3>{selectedSubject.subjectName}</h3>
                                     <p>{selectedIsUnlocked
                                         ? isAdmin
-                                            ? 'Administrator preview: your department, course, semester, and subject filters are set. Verified ranking data is not available yet.'
-                                            : 'Your completed exam unlocks this exact subject. Verified scores and rankings appear when the live ranking feed is available.'
+                                            ? 'Administrator preview: your department, course, semester, and subject filters are set. The board below uses verified results.'
+                                            : 'Your completed exam unlocks this exact subject. The board below uses finalized, verified results for this subject.'
                                         : accessError
                                             ? 'We could not confirm your exam history. Retry the access check before trying again.'
                                             : 'Submit an exam for this exact subject and wait for it to be recorded as completed. The subject will unlock automatically when your saved result can be verified.'}</p>
@@ -635,12 +636,19 @@ export default function Leaderboard() {
                                     : <span className="lb-selection__state"><LockKeyhole size={16} /> Locked</span>}
                             </section>
                         )}
+                        {selectedIsUnlocked && selectedSubject && (
+                            <LeaderboardBoard
+                                key={selectedSubject.subjectId}
+                                subject={selectedSubject}
+                                isAdmin={isAdmin}
+                            />
+                        )}
                     </>
                 )}
             </section>
 
             <footer className="lb-footer">
-                <div><span className="lb-footer__dot" /> Rankings are not fabricated or shown until the verified result feed is enabled.</div>
+                <div><span className="lb-footer__dot" /> Rankings are generated only from finalized, verified results; no mock scores are displayed.</div>
                 <button type="button" onClick={resetPath}><RotateCcw size={15} /> Start over</button>
             </footer>
         </main>
