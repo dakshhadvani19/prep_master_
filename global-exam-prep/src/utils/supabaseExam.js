@@ -186,4 +186,35 @@ export async function getLeaderboardRankings({
         };
     }
 }
+/**
+ * Retrieves the signed-in student's verified aggregate performance.
+ * Raw provider/database errors are logged for developers, never shown in UI.
+ */
+export async function getDashboardPerformanceSummary() {
+    try {
+        const token = await getAccessToken();
+        const response = await fetch('/api/dashboard-performance', {
+            method: 'GET',
+            headers: { Authorization: 'Bearer ' + token },
+            cache: 'no-store',
+        });
+        const result = await response.json().catch(() => null);
+        if (!response.ok) {
+            throw new Error(result?.error || 'Performance summary is temporarily unavailable.');
+        }
+        if (!result?.performance || typeof result.performance !== 'object'
+            || !result.performance.summary
+            || !Array.isArray(result.performance.subjectPerformance)
+            || !Array.isArray(result.performance.recentResults)) {
+            throw new Error('Performance summary service returned an invalid response.');
+        }
+        return { performance: result.performance, error: null };
+    } catch (error) {
+        console.error('[dashboard] Could not load verified performance summary:', error);
+        return {
+            performance: null,
+            error: 'We could not load your performance summary right now. Please try again.',
+        };
+    }
+}
 
