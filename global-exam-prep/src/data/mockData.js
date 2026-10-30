@@ -28186,7 +28186,9 @@ export const domains = [
       }
     ]
   }
-];export const examPrompts = {
+];
+
+export const examPrompts = {
   'mid-1': {
     title: 'Mid-Term 1 (Theory)',
     timeMinutes: 60,
