@@ -245,7 +245,7 @@ The active Supabase catalog was audited across all departments/courses and **46 
 - A follow-up scan removed **20 additional legacy-only project deliverables** from the inactive/older course hierarchy (not live Supabase rows). Their original titles, course/semester details and IDs are archived in `global-exam-prep/temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv`. Their 15 remaining numeric bridge/semester keys were also removed. Current legacy static counts: 2,538 nonblank subjects and 2,452 numeric bridge/semester entries.
 - The source syllabus JSON archives were retained; the runtime catalog and numeric exam routes are what were removed.
 
-A separate list of **58 potential non-standard-assessment occurrences** (internship, seminar, colloquium, moot court, attachment, practice school, NCC, and physical education/wellness) is stored at `global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`. They have **not** been removed. Review the official subject-level assessment schemes before disabling written exams or changing their assessment modes.
+The 58 internship, seminar, colloquium, moot court, attachment, practice school, NCC, and physical education/wellness occurrences were removed from the active exam catalogue by migration `20261030115624_remove_non_exam_activity_subjects_from_catalog`. Their original course/semester details remain archived in `global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`. This excludes them from PrepMaster's conventional exam bank; it does not imply that the university does not assess them through practical, oral, workplace, or activity-based methods.
 
 ## 17. Feedback submission flow — 2026-10-30
 
