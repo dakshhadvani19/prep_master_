@@ -2,7 +2,7 @@
 
 ## Hierarchy filters and subject access
 
-**Status as of 2026-10-30:** Hierarchical access checks, Phase 1's database result projection and Top 100 publisher, Phase 2's authenticated ranking API and competition-rank rules, and Phase 3's verified ranking UI are implemented. The live database RPC and privilege boundary are smoke-tested. GitHub CI reports 42/42 Vitest files and 466/466 tests passed, Test Room regression tests passed, and the Vite production build passed. Repository-wide ESLint still fails on existing issues in unrelated files; no leaderboard UI/test lint issue is reported after the ranking API validator was corrected. A real browser-authenticated HTTP request has not yet been exercised.
+**Status as of 2026-10-30:** Phases 1–3 are implemented. Earlier GitHub CI verification reported 42/42 Vitest files and 466/466 tests passed, the Test Room regression checks passed, and the Vite build passed; repository-wide ESLint had pre-existing failures in unrelated files. Phase 4's verified dashboard summary RPC, authenticated API, client helper, dashboard panel and new tests are now committed. The Phase 4 test/build suite has not yet been run: this execution environment could not clone the repository because GitHub DNS resolution failed. The latest Vercel status was pending when checked. A real browser-authenticated dashboard request has not yet been exercised.
 
 ### Filter sequence and access policy
 
@@ -120,6 +120,39 @@ The normalized result table and published leaderboard table remain unavailable t
 - Repository-wide ESLint remains failing on pre-existing errors in unrelated files, including `ExamPortal.jsx`, `Layout.jsx`, `contextFitter.js`, and older API/utilities. The leaderboard ranking API's control-character validation lint issue was fixed; the new leaderboard component, page and tests are not listed among the remaining lint findings.
 - The live ranking RPC now ranks by exact weighted percentage and cumulative points, returns real filter options, and retains service-role-only execution. The synthetic rank-order query returned `1, 2, 2, 4` for equal displayed percentages with descending earned points and a true tie for the two equal-score rows; live RPC and privilege smoke tests also passed.
 - A real browser-authenticated HTTP request against the deployed endpoint has not yet been exercised.
+
+## Phase 4: verified dashboard performance summary
+
+### Data contract
+
+- The dashboard summary is sourced exclusively from `private.leaderboard_attempt_results`, the normalized projection of eligible finalized normal exams and Test Room results. It does not aggregate browser local storage, unfinished attempts, waiting attempts, or cancelled attempts.
+- The summary RPC joins the canonical subject catalog and returns aggregate total attempts, total earned marks, total maximum marks, weighted overall percentage, distinct subjects attempted, subject-level aggregates for the five most recently attempted subjects, and up to eight recent verified results.
+- Weighted overall percentage is calculated from the aggregate totals (sum of earned marks divided by sum of maximum marks), not by averaging rounded per-attempt percentages.
+- No leaderboard rank, percentile, or other students' data is included in the dashboard performance response. The dashboard history list remains a separate existing feature and was not replaced.
+
+### Security
+
+- `GET /api/dashboard-performance` verifies the Bearer token with Supabase Auth and confirms that the authenticated user has a public student profile.
+- The server derives the user ID exclusively from the verified Supabase Auth token. It does not accept user IDs or roles from query parameters or request bodies.
+- `public.pm_dashboard_performance_summary(uuid)` uses `SECURITY DEFINER`, a pinned empty search path, and explicit privileges: `anon` and `authenticated` cannot execute it; `service_role` can.
+- The browser never reads the private result table. Personalized responses use `Cache-Control: private, no-store` and `Vary: Authorization`.
+- Detailed Supabase/Postgres failures are logged server-side with the original error object. The browser receives only a stable, friendly message and a retry action.
+
+### Dashboard experience
+
+- The student Dashboard now displays completed attempt count, total score / maximum marks, weighted overall percentage, distinct subjects attempted, and a compact subject-performance breakdown.
+- The existing exam-history list, answer-review links, and Test Room reconciliation flow remain intact.
+- Loading, no-verified-results, error and retry states are distinct. A static placeholder is used while loading; there are no pulsing dots, fake live status indicators, sample numbers, or mock rankings.
+- Visual styling uses the existing PrepMaster dark surface with restrained violet and warm-gold accents. Motion is limited to a brief one-time entrance and progress-bar width transition, both disabled by the reduced-motion preference. Progress bars expose their values through accessible progressbar semantics.
+- Design review drew on the supplied Apple Design Skill's principles and its `layout.md`, `typography.md`, `color.md`, `motion.md`, `loading.md`, `feedback.md`, `accessibility.md`, and React/web translation guidance. These are design principles applied to the web app, not claims of native Apple platform conformance.
+
+### Phase 4 verification
+
+- Live database smoke test: the dashboard summary RPC returned two actual verified Test Room results for an existing student: 2 attempts, 2 earned marks, 60 maximum marks, 3.33% weighted overall percentage, and two distinct subjects. Subject and recent-result breakdowns matched those two records.
+- Privilege check: `anon EXECUTE = false`, `authenticated EXECUTE = false`, `service_role EXECUTE = true`.
+- Added `tests/dashboard-performance-api.test.js` for verified authentication, student-profile enforcement, privacy, friendly failures, and server-side diagnostic logging.
+- Added `tests/dashboard-performance.test.jsx` for real summary rendering, no-results state, friendly error display, and retry behavior.
+- These new tests have not been executed in this environment. A local clone attempt failed because the execution environment could not resolve GitHub; the latest Vercel deployment check was pending. No Phase 4 build, test-suite, or production-deployment success is claimed.
 
 ## Previous hierarchy verification
 
