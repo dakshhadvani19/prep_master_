@@ -189,3 +189,18 @@ The existing CourseIds were retained to avoid breaking references. Course names 
 SubjectIds follow `docs/primary_key_rules.md`: actual CourseId prefix, official subject code letter/digit encoding, and two-digit occurrence suffix; no rule exception or arbitrary IDs were introduced. The `subjectIdBridge.json` and `subjectSemesterMap.json` compatibility maps were synchronized to the same 77 records, replacing 56 old BCA/MCA mapping entries. The primary-key rules document did not require a deviation note.
 
 The inventory includes some rows without an attached PDF URL and should be treated as the current subject inventory, not as proof that every syllabus PDF has been text-verified.
+
+## 11. Project/dissertation subject cleanup — 2026-10-30
+
+A live catalog audit identified 46 subjects whose titles represented project deliverables rather than ordinary teachable/examinable course units. The exact original rows are preserved in [`global-exam-prep/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv`](../global-exam-prep/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv).
+
+- **Live migration:** `20261030113013_remove_project_deliverable_subjects_from_catalog`.
+- **Deleted:** 46 exact rows from `public."Subjects"`, across B.Tech, Diploma, BCA/MCA, Management Studies, Law & Arts, and Science & Pharmacy.
+- **Pre-delete dependency check:** zero matching rows in `private.exam_attempts`, zero in `private.leaderboard_attempt_results`, and zero subject snapshots in `public."Leaderboards"`. The migration performs these checks again and aborts if they are no longer zero.
+- **Post-delete verification (2026-10-30):** 40 courses and 1,913 active subjects; zero of the 46 archived SubjectIds remain; zero project/dissertation/research-project deliverable rows remain under the audit's title rules.
+- **Compatibility cleanup:** `subjectIdBridge.json` and `subjectSemesterMap.json` each now contain 2,467 entries (previously 2,513); `liveSubjectContextOverrides.json` now has 54 BCA/MCA entries (previously 60); 40 matching legacy subject records were removed from the static `mockData.js` hierarchy. The remaining six BCA project records were present only in the live numeric bridge/override, not in that legacy hierarchy.
+- **Intentionally retained:** taught subjects such as Project Management, Software Project Management, Construction Project Management, Project Appraisal, Portfolio Management, and Design Engineering and Project Management. Their titles contain “project”, but their content is academic theory/management and can support conventional examination.
+- The full original syllabus JSON collections are retained as source/reference archives; they are not runtime catalog sources.
+
+A separate title-based screen identified **58 occurrences** that may need non-standard or mixed assessment instead of a conventional theory-only question bank (internships/placements, seminars, colloquia, moot court, attachment, practice school, NCC, and physical education/wellness). They remain in the live catalog pending course-specific assessment-scheme review. See [`global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`](../global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md). This is a review list, not a finding that those subjects have no exam or assessment at all.
+
