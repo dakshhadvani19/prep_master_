@@ -116,9 +116,9 @@ The normalized result table and published leaderboard table remain unavailable t
 
 ### Verification status
 
-- Added `tests/leaderboard-board.test.jsx` to cover competition-rank rendering (including `1, 2, 2, 4`), an outside-Top-100 viewer summary, filters, pagination, and friendly failures. GitHub CI ran the complete Vitest suite successfully: **42 test files and 466 tests passed**.
-- The existing API tests passed in the full suite and continue to cover verified identity binding, authorization, caller-claim rejection, validation, and server-side error logging.
-- The Test Room regression job passed, and the Vite production build passed.
+- Updated `tests/leaderboard-board.test.jsx` to cover the ten-row cutoff, preserved competition-rank ties (`1, 2, 2, 4`), percentile suppression for a viewer in the displayed Top 10, outside-Top-10 percentile display, dynamic exam/difficulty/source options, and omission of unavailable filter values.
+- The updated leaderboard UI tests have not yet been run. A local verification attempt could not clone the repository because this execution environment could not resolve `github.com`. Earlier CI results (before the current Top 10 changes) reported **42 test files and 466 tests passed**, with Test Room regression checks and the Vite build passing; those earlier checks do not verify the current edits.
+- The current commit's Vercel status is pending and no new GitHub Actions run was returned by the workflow-run lookup. No current test, build, or deployment success is claimed.
 - Repository-wide ESLint remains failing on pre-existing errors in unrelated files, including `ExamPortal.jsx`, `Layout.jsx`, `contextFitter.js`, and older API/utilities. The leaderboard ranking API's control-character validation lint issue was fixed; the new leaderboard component, page and tests are not listed among the remaining lint findings.
 - The live ranking RPC now ranks by exact weighted percentage and cumulative points, returns real filter options, and retains service-role-only execution. The synthetic rank-order query returned `1, 2, 2, 4` for equal displayed percentages with descending earned points and a true tie for the two equal-score rows; live RPC and privilege smoke tests also passed.
 - A real browser-authenticated HTTP request against the deployed endpoint has not yet been exercised.
