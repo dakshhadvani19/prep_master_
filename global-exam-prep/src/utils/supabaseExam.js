@@ -119,7 +119,11 @@ export async function getLeaderboardCompletedSubjects() {
             error: null,
         };
     } catch (error) {
-        return { subjects: [], error: error.message || 'Could not verify leaderboard access.' };
+        console.error('[leaderboard] Completed-subject access request failed:', error);
+        return {
+            subjects: [],
+            error: 'Could not verify completed exams right now. Please retry.',
+        };
     }
 }
 
@@ -166,8 +170,12 @@ export async function getLeaderboardRankings({
         if (!response.ok) {
             throw new Error(result?.error || 'Leaderboard data is temporarily unavailable.');
         }
+        if (!result?.leaderboard || typeof result.leaderboard !== 'object'
+            || Array.isArray(result.leaderboard)) {
+            throw new Error('Leaderboard service returned an invalid response.');
+        }
         return {
-            leaderboard: result?.leaderboard || null,
+            leaderboard: result.leaderboard,
             error: null,
         };
     } catch (error) {
