@@ -98,7 +98,7 @@ describe('verified Top 10 leaderboard board', () => {
         expect(within(table).getAllByRole('row')).toHaveLength(11);
         expect(within(table).getByRole('columnheader', { name: 'Percentage' })).toBeInTheDocument();
         expect(within(table).queryByRole('columnheader', { name: /weighted/i })).toBeNull();
-        expect(within(table).getByText('80.00')).toBeInTheDocument();
+        expect(within(table).getAllByText('80.00')).toHaveLength(4);
         expect(within(table).queryByText('80.00%')).toBeNull();
 
         const viewer = screen.getByTestId('lb-viewer-summary');
