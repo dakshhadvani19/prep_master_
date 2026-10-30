@@ -2,7 +2,7 @@
 
 ## Hierarchy filters and subject access
 
-**Status as of 2026-10-30:** Hierarchical access checks are implemented. Phase 1's database result projection, Test Room integration, backfill, and per-subject Top 100 publisher are installed and live-verified. Ranking API/UI work remains outstanding.
+**Status as of 2026-10-30:** Hierarchical access checks, Phase 1's database result projection and Top 100 publisher, and Phase 2's authenticated ranking API are implemented and live-verified at the database layer. The ranking page integration remains outstanding.
 
 ### Filter sequence and access policy
 
