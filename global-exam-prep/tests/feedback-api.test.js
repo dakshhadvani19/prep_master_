@@ -112,7 +112,7 @@ describe('POST /api/feedback', () => {
     it('maps older AI category submissions to Other', async () => {
         const res = makeRes();
         await handler(request(
-            { type: 'ai', message: 'The AI answer was not relevant.' },
+            { type: 'ai', description: 'The AI answer was not relevant.' },
             { authorization: 'Bearer verified-token' },
         ), res);
         expect(res.statusCode).toBe(201);
