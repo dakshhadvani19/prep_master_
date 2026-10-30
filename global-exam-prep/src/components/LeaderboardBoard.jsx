@@ -81,7 +81,6 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
     const entries = Array.isArray(leaderboard?.entries) ? leaderboard.entries.slice(0, PAGE_SIZE) : [];
     const viewer = leaderboard?.viewer || null;
     const participantCount = Number(leaderboard?.participantCount) || 0;
-    const availableEntries = Number(leaderboard?.availableEntries) || 0;
     const hasFilters = Boolean(examType || difficulty || attemptType);
 
     function clearFilters() {
@@ -135,7 +134,6 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                         value={difficulty}
                         onChange={(event) => {
                             setDifficulty(event.target.value);
-                            setOffset(0);
                         }}
                     >
                         <option value="">All difficulties</option>
@@ -151,7 +149,6 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                         value={attemptType}
                         onChange={(event) => {
                             setAttemptType(event.target.value);
-                            setOffset(0);
                         }}
                     >
                         <option value="">All attempt sources</option>
