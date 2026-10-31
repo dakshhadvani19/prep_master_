@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-    MessageSquare, MoreVertical, Eye, Bookmark, Flag, UserX, ShieldAlert,
+    MoreVertical, Eye, Bookmark, Flag, UserX, ShieldAlert,
 } from 'lucide-react';
 import { supabase } from '../supabase';
 import './AdminFeedbackInbox.css';

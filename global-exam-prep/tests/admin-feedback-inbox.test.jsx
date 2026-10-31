@@ -90,7 +90,9 @@ describe('AdminFeedbackInbox', () => {
 
         await openActions();
         fireEvent.click(screen.getByRole('button', { name: 'Mark student as spam' }));
-        await waitFor(() => expect(screen.getByText('1')).toBeInTheDocument());
+        const spamStudentCount = document.querySelector('.admin-feedback-inbox__spam .admin-feedback-inbox__section-head > span');
+        expect(spamStudentCount).not.toBeNull();
+        await waitFor(() => expect(spamStudentCount).toHaveTextContent('1'));
 
         expect(state.calls.filter((call) => call.fn === 'admin_update_feedback_flag').map((call) => call.args.p_action))
             .toEqual(['bookmark', 'seen', 'spam']);

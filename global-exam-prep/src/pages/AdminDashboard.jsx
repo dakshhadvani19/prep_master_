@@ -1,6 +1,6 @@
 /**
  * Admin Dashboard (Phase 2) — command-center shell.
- * Role from AuthContext. Mock writes only. No database.
+ * Role and feedback summary are read from Supabase. Staff controls remain preview-only.
  */
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
