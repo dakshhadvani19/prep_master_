@@ -61,6 +61,20 @@ describe('review answer status', () => {
         expect(filterReviewQuestionIndices(questions, answers, true, 'unattempted')).toEqual([2, 3, 4]);
     });
 
+    it('does not mark options green or red when a correct answer key is unavailable', () => {
+        expect(getReviewStatus({ id: 'q-missing-key', answer: null }, { 'q-missing-key': 2 }, true)).toBe('attempted');
+        expect(getReviewOptionState(0, null, 2)).toEqual({
+            isCorrect: false,
+            isUserChoice: false,
+            isWrongChoice: false,
+        });
+        expect(getReviewOptionState(2, null, 2)).toEqual({
+            isCorrect: false,
+            isUserChoice: true,
+            isWrongChoice: false,
+        });
+    });
+
     it('treats a non-empty theory response as attempted', () => {
         expect(getReviewStatus({ id: 'theory-q' }, { 'theory-q': 'Written explanation' }, false)).toBe('attempted');
         expect(getReviewStatus({ id: 'theory-q' }, { 'theory-q': '' }, false)).toBe('unattempted');
