@@ -64,6 +64,16 @@ describe('secure exam review record construction', () => {
         });
     });
 
+    it('keeps missing answer-key entries unavailable instead of treating null as option A', () => {
+        const review = buildAttemptReviewRecord({
+            id: 'attempt-missing-key',
+            questions: [{ id: 'q1', type: 'mcq', options: ['A', 'B', 'C', 'D'] }],
+            answers: { q1: 0 },
+        }, { q1: null });
+
+        expect(review.questions[0].answer).toBeNull();
+    });
+
     it('does not manufacture an answer key for theory questions', () => {
         const review = buildAttemptReviewRecord({
             id: 'attempt-theory',
