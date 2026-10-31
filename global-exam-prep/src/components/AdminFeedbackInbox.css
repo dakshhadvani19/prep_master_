@@ -334,10 +334,6 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.admin-feedback-menu__panel .admin-feedback-menu__student-action {
-    margin-top: 0.05rem;
-}
-
 .admin-feedback-toggle--seen {
     --toggle-color: #d1d5db;
 }
@@ -346,7 +342,8 @@
     --toggle-color: #ffb454;
 }
 
-.admin-feedback-toggle--spam {
+.admin-feedback-toggle--spam,
+.admin-feedback-toggle--student-spam {
     --toggle-color: #f08080;
 }
 
