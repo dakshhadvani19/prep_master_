@@ -130,8 +130,9 @@ export function findSubjectContext(domains, routeSubjectId) {
 
     // mockData may store final numeric IDs; still accept the original source SubjectId.
     if (raw) {
+        const sourceSubjectCode = String(raw).toLowerCase();
         for (const [numericId, row] of Object.entries(bridge)) {
-            if (row.s !== raw) continue;
+            if (String(row.s).toLowerCase() !== sourceSubjectCode) continue;
             const viaNumeric = findSubjectContext(domains, numericId);
             if (viaNumeric.subject) {
                 return { ...viaNumeric, kind: 'legacy', sourceSubjectId: row.s };
