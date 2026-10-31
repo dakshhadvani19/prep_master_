@@ -43,7 +43,7 @@ function studentSafeQuestion(question) {
     const { answer, review, ...safe } = question;
     return safe;
 }
-export export function buildAttemptReviewRecord(attempt, answerKey) {
+export function buildAttemptReviewRecord(attempt, answerKey) {
     const savedQuestions = Array.isArray(attempt?.questions) ? attempt.questions : [];
     const questions = savedQuestions.map((question, index) => {
         if (question?.type !== 'mcq') return question;
@@ -77,7 +77,7 @@ export export function buildAttemptReviewRecord(attempt, answerKey) {
     };
 }
 
-function normalizeAnswers(input, mcqQuestionIds = []) {
+export function normalizeAnswers(input, mcqQuestionIds = []) {
     const entries = input && typeof input === 'object' && !Array.isArray(input)
         ? Object.entries(input).slice(0, 100)
         : [];
