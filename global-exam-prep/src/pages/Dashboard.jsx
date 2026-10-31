@@ -316,7 +316,9 @@ export default function Dashboard() {
                                             <div className="sd-subject" key={subject.subjectId}>
                                                 <div className="sd-subject__top">
                                                     <div className="sd-subject__name">
-                                                        <strong>{subject.subjectName || getSubjectName(subject.subjectId)}</strong>
+                                                        <strong>{subject.subjectName && !/^unknown subject$/i.test(subject.subjectName)
+                                                            ? subject.subjectName
+                                                            : getSubjectName(subject.subjectId)}</strong>
                                                         <span>
                                                             Semester {subject.semester} · {subject.attempts} {Number(subject.attempts) === 1 ? 'attempt' : 'attempts'}
                                                         </span>
@@ -333,7 +335,7 @@ export default function Dashboard() {
                                                 <div
                                                     className="sd-subject__track"
                                                     role="progressbar"
-                                                    aria-label={`${subject.subjectName || getSubjectName(subject.subjectId)} overall percentage`}
+                                                    aria-label={`${subject.subjectName && !/^unknown subject$/i.test(subject.subjectName) ? subject.subjectName : getSubjectName(subject.subjectId)} overall percentage`}
                                                     aria-valuemin={0}
                                                     aria-valuemax={100}
                                                     aria-valuenow={percentage}
