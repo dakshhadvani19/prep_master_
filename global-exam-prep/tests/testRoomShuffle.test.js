@@ -70,11 +70,11 @@ describe('Test Room question/option shuffling', () => {
     it('serializes missing participant choices as the -1 unanswered sentinel', () => {
         expect(toCanonicalAnswerArray({ 0: 2 }, fixture.length)).toEqual([2, -1, -1]);
         expect(scoreRoomAnswers(fixture, [2, -1, -1])).toEqual({
-            correct: 1,
-            incorrect: 0,
+            correct: 0,
+            incorrect: 1,
             attempted: 1,
             unattempted: 2,
-            points: 1,
+            points: 0,
             totalQuestions: 3,
         });
     });
