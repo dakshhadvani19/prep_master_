@@ -15,6 +15,18 @@ function signInAdmin() {
     });
 }
 
+async function openFeedbackActions() {
+    const menuButton = screen.getByRole('button', { name: 'Feedback actions' });
+    if (menuButton.getAttribute('aria-expanded') !== 'true') fireEvent.click(menuButton);
+    return screen.getByRole('group', { name: 'Feedback and student actions' });
+}
+
+async function toggleFlag(name, expected) {
+    if (!screen.queryByRole('switch', { name })) await openFeedbackActions();
+    fireEvent.click(screen.getByRole('switch', { name }));
+    await waitFor(() => expect(screen.getByRole('switch', { name })).toHaveAttribute('aria-checked', String(expected)));
+}
+
 beforeEach(() => {
     cleanup();
     resetSupabaseStub();
@@ -26,7 +38,7 @@ afterEach(() => {
 });
 
 describe('AdminFeedbackInbox', () => {
-    it('loads feedback, displays the moderation switches, and expands the full description', async () => {
+    it('keeps moderation switches inside the three-dot menu and expands the full description', async () => {
         state.feedbackRows = [{
             feedbackId: 91,
             description: 'The new exam attempt page loads quickly but the timer sometimes freezes when I switch between questions and return to the earlier section during practice.',
@@ -46,6 +58,12 @@ describe('AdminFeedbackInbox', () => {
         expect(screen.getByText('Student ID: 4205')).toBeInTheDocument();
         expect(screen.queryByText(/Feedback ID/i)).toBeNull();
         expect(state.calls.filter((call) => call.fn === 'admin_get_feedback_dashboard')).toHaveLength(1);
+
+        expect(screen.queryByRole('switch', { name: 'Seen' })).not.toBeInTheDocument();
+        expect(screen.queryByRole('switch', { name: 'Bookmark' })).not.toBeInTheDocument();
+        expect(screen.queryByRole('switch', { name: 'Spam' })).not.toBeInTheDocument();
+
+        await openFeedbackActions();
         expect(screen.getByRole('switch', { name: 'Seen' })).toHaveAttribute('aria-checked', 'false');
         expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'false');
         expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'false');
@@ -71,25 +89,14 @@ describe('AdminFeedbackInbox', () => {
         render(<AdminFeedbackInbox />);
         await screen.findByText('A suggestion from the student.');
 
-        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'true'));
+        await toggleFlag('Bookmark', true);
+        await toggleFlag('Seen', true);
+        await toggleFlag('Seen', false);
+        await toggleFlag('Bookmark', false);
+        await toggleFlag('Spam', true);
+        await toggleFlag('Spam', false);
 
-        fireEvent.click(screen.getByRole('switch', { name: 'Seen' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Seen' })).toHaveAttribute('aria-checked', 'true'));
-
-        fireEvent.click(screen.getByRole('switch', { name: 'Seen' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Seen' })).toHaveAttribute('aria-checked', 'false'));
-
-        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'false'));
-
-        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'true'));
-
-        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'false'));
-
-        fireEvent.click(screen.getByRole('button', { name: 'More student actions' }));
+        await openFeedbackActions();
         fireEvent.click(screen.getByRole('button', { name: 'Mark student as spam' }));
         const spamStudentCount = document.querySelector('.admin-feedback-inbox__spam .admin-feedback-inbox__section-head > span');
         expect(spamStudentCount).not.toBeNull();
@@ -103,7 +110,7 @@ describe('AdminFeedbackInbox', () => {
         expect(state.spamStudents).toEqual([{ studentId: 4206, studentName: 'Another Student' }]);
     });
 
-    it('blocks bookmarking a spam feedback item, logs the blocked click, and allows the admin to unspam it first', async () => {
+    it('blocks bookmarking spam feedback, logs the blocked click, and allows unspamming before bookmarking', async () => {
         state.feedbackRows = [{
             feedbackId: 93,
             description: 'This feedback is currently marked as spam.',
@@ -119,9 +126,10 @@ describe('AdminFeedbackInbox', () => {
         render(<AdminFeedbackInbox />);
         await screen.findByText('This feedback is currently marked as spam.');
 
+        await openFeedbackActions();
         fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
         expect(await screen.findByText('This feedback is marked as spam. Turn Spam off before bookmarking.')).toBeInTheDocument();
-        expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'false');
+        expect(screen.queryByRole('switch', { name: 'Bookmark' })).not.toBeInTheDocument();
         expect(state.feedbackActionEvents[0]).toMatchObject({
             feedbackId: 93,
             action: 'bookmark',
@@ -130,11 +138,8 @@ describe('AdminFeedbackInbox', () => {
             outcome: 'blocked',
         });
 
-        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'false'));
-
-        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'true'));
+        await toggleFlag('Spam', false);
+        await toggleFlag('Bookmark', true);
 
         expect(state.feedbackActionEvents.map((event) => event.outcome)).toEqual(['blocked', 'updated', 'updated']);
         expect(state.feedbackRows[0]).toMatchObject({ isSpam: false, isBookmark: true });
@@ -156,15 +161,14 @@ describe('AdminFeedbackInbox', () => {
         render(<AdminFeedbackInbox />);
         await screen.findByText('This feedback is bookmarked.');
 
+        await openFeedbackActions();
         fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
         expect(await screen.findByText('Remove the Bookmark flag before marking this feedback as spam.')).toBeInTheDocument();
-        expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'false');
+        expect(screen.queryByRole('switch', { name: 'Spam' })).not.toBeInTheDocument();
 
-        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'false'));
+        await toggleFlag('Bookmark', false);
+        await toggleFlag('Spam', true);
 
-        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
-        await waitFor(() => expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'true'));
         expect(state.feedbackActionEvents.map((event) => event.outcome)).toEqual(['blocked', 'updated', 'updated']);
     });
 });
