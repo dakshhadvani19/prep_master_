@@ -549,13 +549,16 @@ export default function ExamPortal() {
             const sanitizedAnswers = {};
             questions.forEach(q => {
                 const val = answers[q.id];
-                sanitizedAnswers[q.id] = val !== undefined ? val : "";
+                sanitizedAnswers[q.id] = val !== undefined && val !== null && val !== ''
+                    ? val
+                    : (examInfo.type === 'objective' ? -1 : '');
             });
 
             saveExamHistory(currentUser.uid, {
                 id: Date.now(),
                 date: new Date().toISOString(),
                 subjectId: sourceSubjectId || "unknown",
+                subjectName: subjectDetail?.title || null,
                 examType: examType || "unknown",
                 difficulty: difficulty || "medium",
                 type: examInfo.type,
