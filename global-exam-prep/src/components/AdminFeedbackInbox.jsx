@@ -7,7 +7,7 @@ import { supabase } from '../supabase';
 import './AdminFeedbackInbox.css';
 
 function getFeedbackPreview(description, wordLimit = 15) {
-    const words = String(description || '').trim().split(/\\s+/).filter(Boolean);
+    const words = String(description || '').trim().split(/\s+/).filter(Boolean);
     return {
         text: words.length > wordLimit ? words.slice(0, wordLimit).join(' ') + '…' : words.join(' '),
         canExpand: words.length > wordLimit,
@@ -17,7 +17,7 @@ function getFeedbackPreview(description, wordLimit = 15) {
 function formatFeedbackType(type) {
     return String(type || 'other')
         .replace(/[_-]/g, ' ')
-        .replace(/\\b\\w/g, (letter) => letter.toUpperCase());
+        .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
 const FEEDBACK_FLAG_CONFIG = Object.freeze([
