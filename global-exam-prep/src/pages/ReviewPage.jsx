@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, CheckCircle, XCircle, MinusCircle, BarChart2, BookOpen, Loader } from 'lucide-react';
 import { domains, examPrompts } from '../data/mockData';
 import { findSubjectContext } from '../utils/subjectResolver';
@@ -9,97 +9,43 @@ import {
     getReviewStatus,
 } from '../utils/reviewAnswerStatus';
 import { useAuth } from '../context/AuthContext';
-import { getExamHistoryRecord } from '../utils/examHistoryStorage';
-import { getExamAttemptReview, getMyAttempts, getTestRoomAttemptReview } from '../utils/supabaseExam';
+import { getExamAttemptReview, getTestRoomAttemptReview } from '../utils/supabaseExam';
+import AttemptSourceBadge from '../components/AttemptSourceBadge';
 
 export default function ReviewPage() {
     const { historyId } = useParams();
     const navigate = useNavigate();
+    const location = useLocation();
+    const requestedAttemptType = new URLSearchParams(location.search).get('attemptType');
     const [currentQ, setCurrentQ] = useState(0);
     const [activeFilter, setActiveFilter] = useState(null);
     const [record, setRecord] = useState(null);
     const [loadingRecord, setLoadingRecord] = useState(true);
     const { currentUser } = useAuth();
 
-    // Normal exams retrieve answer keys only after owner-verified submission.
-    // Test Room reviews use their separate owner-checked endpoint.
+    // Reviews load only from owner-authenticated durable attempt APIs.
     useEffect(() => {
-        let cancelled = false;
-        async function loadRecord() {
-            setCurrentQ(0);
-            setActiveFilter(null);
-            setLoadingRecord(true);
-
-            if (!currentUser?.uid) {
-                setRecord(null);
-                setLoadingRecord(false);
-                return;
-            }
-
-            const localRecord = getExamHistoryRecord(currentUser.uid, historyId);
-            if (localRecord) {
-                let attemptId = localRecord.attemptId || null;
-
-                // Older local history entries predate attemptId being saved.
-                // Match only a uniquely closest finalized attempt with the same
-                // subject/exam/difficulty and a near-identical submission time.
-                if (!attemptId && localRecord.date && localRecord.subjectId) {
-                    const { attempts } = await getMyAttempts(100);
-                    const localTime = new Date(localRecord.date).getTime();
-                    const candidates = (attempts || [])
-                        .filter((attempt) => (
-                            attempt.attempt_type === 'exam'
-                            && ['submitted', 'auto_submitted'].includes(attempt.status)
-                            && String(attempt.subject_code || '').toLowerCase() === String(localRecord.subjectId).toLowerCase()
-                            && String(attempt.exam_type || '').toLowerCase() === String(localRecord.examType || '').toLowerCase()
-                            && String(attempt.difficulty || '').toLowerCase() === String(localRecord.difficulty || '').toLowerCase()
-                            && Number.isFinite(localTime)
-                            && attempt.submitted_at
-                        ))
-                        .map((attempt) => ({
-                            attempt,
-                            difference: Math.abs(new Date(attempt.submitted_at).getTime() - localTime),
-                        }))
-                        .filter((candidate) => Number.isFinite(candidate.difference) && candidate.difference <= 120000)
-                        .sort((a, b) => a.difference - b.difference);
-
-                    const nearest = candidates[0];
-                    const secondNearest = candidates[1];
-                    if (nearest && (!secondNearest || secondNearest.difference - nearest.difference > 1500)) {
-                        attemptId = nearest.attempt.id;
-                    }
+        let cancelled=false;
+        async function loadRecord(){
+            setCurrentQ(0);setActiveFilter(null);setLoadingRecord(true);
+            if(!currentUser?.uid){setRecord(null);setLoadingRecord(false);return;}
+            try{
+                let savedReview=null;
+                if(requestedAttemptType==='test_room')savedReview=(await getTestRoomAttemptReview(historyId)).record;
+                else if(requestedAttemptType==='exam')savedReview=(await getExamAttemptReview(historyId)).record;
+                else{
+                    const [examResult,roomResult]=await Promise.all([getExamAttemptReview(historyId),getTestRoomAttemptReview(historyId)]);
+                    savedReview=examResult.record||roomResult.record;
                 }
-
-                if (attemptId) {
-                    const { record: savedReview } = await getExamAttemptReview(attemptId);
-                    if (cancelled) return;
-                    setRecord(savedReview
-                        ? { ...localRecord, ...savedReview, id: localRecord.id, attemptId }
-                        : localRecord);
-                } else {
-                    setRecord(localRecord);
-                }
-                if (!cancelled) setLoadingRecord(false);
-                return;
-            }
-
-            const { record: roomRecord } = await getTestRoomAttemptReview(historyId);
-            if (!cancelled) {
-                setRecord(roomRecord);
-                setLoadingRecord(false);
-            }
+                if(!cancelled)setRecord(savedReview||null);
+            }finally{if(!cancelled)setLoadingRecord(false);}
         }
-
-        loadRecord().catch((error) => {
-            console.error('[review] Failed to load answer review:', error);
-            if (!cancelled) {
-                setRecord(null);
-                setLoadingRecord(false);
-            }
+        loadRecord().catch(error=>{
+            console.error('[review] Failed to load persisted answer review:',error);
+            if(!cancelled){setRecord(null);setLoadingRecord(false);}
         });
-
-        return () => { cancelled = true; };
-    }, [currentUser?.uid, historyId]);
+        return ()=>{cancelled=true;};
+    },[currentUser?.uid,historyId,requestedAttemptType]);
 
     // Summary stats - MUST be above conditional returns to satisfy React Hook rules
     const stats = useMemo(() => {
@@ -149,7 +95,7 @@ export default function ReviewPage() {
                 <BookOpen size={48} style={{ color: 'var(--text-secondary)', margin: '0 auto 1.5rem auto', display: 'block' }} />
                 <h2 style={{ marginBottom: '1rem' }}>Review Not Available</h2>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-                    This exam was taken before answer review was supported, or the data is unavailable.
+                    This saved attempt could not be found, is not finalized, or its answer review is unavailable.
                 </p>
                 <button
                     onClick={() => navigate('/dashboard')}
@@ -234,20 +180,13 @@ export default function ReviewPage() {
                             {record.attemptType === 'test_room' && <> &bull; {String(record.status || '').replaceAll('_', ' ')}</>}
                         </p>
                     </div>
-                    {isObjective && record.score !== null && (
-                        <div style={{
-                            background: 'var(--bg-tertiary)',
-                            padding: '0.75rem 1.5rem',
-                            borderRadius: 'var(--radius-lg)',
-                            border: '1px solid var(--glass-border)',
-                            textAlign: 'center',
-                        }}>
-                            <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--accent-primary)' }}>
-                                {record.score}<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}> / {record.totalMarks}</span>
-                            </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
+                        <AttemptSourceBadge attemptType={record.attemptType} />
+                        {isObjective && record.score !== null && <div style={{ background: 'var(--bg-tertiary)', padding: '0.75rem 1.5rem', borderRadius: 'var(--radius-lg)', border: '1px solid var(--glass-border)', textAlign: 'center' }}>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--accent-primary)' }}>{record.score}<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}> / {record.totalMarks}</span></div>
                             <div style={{ fontSize: '0.78rem', color: 'var(--text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Final Score</div>
-                        </div>
-                    )}
+                        </div>}
+                    </div>
                 </div>
             </div>
 

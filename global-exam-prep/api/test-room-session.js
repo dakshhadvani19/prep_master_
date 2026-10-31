@@ -246,6 +246,32 @@ async function tagAttemptSubject(admin, attemptId, userId, subjectId) {
     if (!data?.ok) throw new Error('The Test Room attempt could not be linked to its catalog subject.');
     return data;
 }
+export function buildStudentSafeTestRoomAttemptSummary(attempt) {
+    if (!attempt || typeof attempt !== 'object') return null;
+    return {
+        id: attempt.id,
+        created_at: attempt.created_at || null,
+        started_at: attempt.started_at || null,
+        submitted_at: attempt.submitted_at || null,
+        updated_at: attempt.updated_at || null,
+        subject_code: attempt.subject_code || null,
+        subject_name: attempt.subject_name || null,
+        exam_type: attempt.exam_type || null,
+        difficulty: attempt.difficulty || null,
+        questions: Array.isArray(attempt.questions) ? attempt.questions : [],
+        answers: Array.isArray(attempt.answers) ? attempt.answers : [],
+        score: attempt.score ?? null,
+        total_marks: attempt.total_marks ?? null,
+        status: attempt.status || null,
+        end_reason: attempt.end_reason || null,
+        correct_count: attempt.correct_count ?? null,
+        incorrect_count: attempt.incorrect_count ?? null,
+        attempted_count: attempt.attempted_count ?? null,
+        unattempted_count: attempt.unattempted_count ?? null,
+        attempt_type: 'test_room',
+    };
+}
+
 async function getAttempt(admin, code, uid) {
     return privateExamData(admin, 'get_attempt', {
         room_code: code, user_id: uid, attempt_type: 'test_room',
@@ -683,6 +709,20 @@ export default async function handler(req, res) {
                 }
             }
             return res.status(200).json({ ok: true });
+        }
+
+        if (action === 'list_my_attempts') {
+            const limit = Math.max(1, Math.min(100, Math.trunc(Number(body.limit) || 50)));
+            const data = await privateExamData(admin, 'list_attempts', {
+                user_id: user.id,
+                attempt_type: 'test_room',
+                limit,
+                order: 'started_at_desc',
+            });
+            const attempts = (Array.isArray(data) ? data : [])
+                .map(buildStudentSafeTestRoomAttemptSummary)
+                .filter(Boolean);
+            return res.status(200).json({ attempts });
         }
 
         if (action === 'get_attempt_review') {

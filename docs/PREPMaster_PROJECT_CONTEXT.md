@@ -86,10 +86,11 @@ Deleted:
 - Legacy environment variables and CSP endpoints
 - Legacy test mocks
 
-Features that previously required remote persistence now use explicit local/static adapters until their Supabase schemas are designed:
-- src/utils/examHistoryStorage.js for exam history
+Features without an implemented persistent Supabase contract continue to use explicit local/static adapters:
 - src/utils/syllabusStorage.js for syllabus metadata/text
 - browser-local counters in src/utils/hashUtil.js
+
+Exam/Test Room attempts are handled by the durable authenticated attempt system described in the Exam system section below.
 
 These adapters must be fast and must not simulate network fetching with arbitrary delays.
 
@@ -149,10 +150,15 @@ Exam generation can use:
 - configured AI generation
 - existing subject-resolution compatibility
 
-Exam submission creates a compact record containing date, subject, exam type, difficulty, type, score, total marks, question snapshot, and sanitized answers.
+Normal exam submissions and Test Room participant sessions persist as per-student records in private.exam_attempts; the private answer keys remain in private.exam_attempt_keys. Database triggers mirror student results to public.TestAttempts and room aggregates to public.TestRooms. The private operational tables are accessed only through authenticated server APIs and the service-role-only persistence RPC.
 
-Current temporary persistence: src/utils/examHistoryStorage.js.
-Future target: a properly designed Supabase attempts/history schema with RLS.
+The student Performance History page fetches only:
+- Normal exam attempts from /api/exam-attempts (attempt_type = exam).
+- Test Room participant attempts from /api/test-room-session (action = list_my_attempts; attempt_type = test_room).
+
+Both lists are scoped to the verified Auth UID. Test Room history returns a safe field allowlist without room codes, user IDs, room roles, revision metadata, or answer keys. Performance totals are derived from these same attempt records; the dashboard does not call the separate leaderboard performance-summary endpoint.
+
+Answer review fetches the selected attempt through the matching owner-checked normal-exam or Test Room review endpoint. No localStorage or in-memory exam-history fallback is used. The old examHistoryStorage.js adapter and its writes have been retired. See docs/ATTEMPT_HISTORY_PROGRESS.md.
 
 ## Syllabus
 

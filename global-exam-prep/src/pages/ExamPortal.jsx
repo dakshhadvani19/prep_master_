@@ -13,7 +13,6 @@ import { fetchSyllabus } from '../utils/syllabusStorage';
 import predictedSyllabus from '../data/predicted_ai_syllabus.json';
 import { Clock, AlertCircle, CheckCircle, ChevronLeft, ArrowRight, ArrowLeft, Upload, Cpu, BookOpen, FileText, X, Loader } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { saveExamHistory } from '../utils/examHistoryStorage';
 
 import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
 import { fitContext, contentToString, buildBalancedObjectiveSource } from '../utils/contextFitter';
@@ -537,39 +536,7 @@ export default function ExamPortal() {
                 ? Math.round((score / actualTotalMarks) * 100)
                 : null;
 
-            // Also keep local history for offline fallback / dashboard display
-            const questionSnapshot = questions.map(q => ({
-                id: q.id,
-                text: q.text || "",
-                options: q.options || null,
-                answer: q.answer !== undefined ? q.answer : null,
-                marks: q.marks || null,
-            }));
-
-            const sanitizedAnswers = {};
-            questions.forEach(q => {
-                const val = answers[q.id];
-                sanitizedAnswers[q.id] = val !== undefined && val !== null && val !== ''
-                    ? val
-                    : (examInfo.type === 'objective' ? -1 : '');
-            });
-
-            saveExamHistory(currentUser.uid, {
-                id: Date.now(),
-                attemptId,
-                date: new Date().toISOString(),
-                subjectId: sourceSubjectId || "unknown",
-                subjectName: subjectDetail?.title || null,
-                examType: examType || "unknown",
-                difficulty: difficulty || "medium",
-                type: examInfo.type,
-                score: examInfo.type === 'objective' ? score : null,
-                totalMarks: actualTotalMarks,
-                questions: questionSnapshot,
-                userAnswers: sanitizedAnswers,
-            });
-
-            setExamState('submitted');
+            setExamState('submitted');            setExamState('submitted');
             navigate('/dashboard', { state: { justSubmitted: true, score, totalMarks: actualTotalMarks } });
 
         } catch (err) {

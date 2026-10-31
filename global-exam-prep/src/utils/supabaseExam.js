@@ -83,6 +83,15 @@ export async function reconcileTestRoomAttempts() {
     }
 }
 
+export async function getMyTestRoomAttempts(limit = 50) {
+    try {
+        const result = await callTestRoomSessionApi({ action: 'list_my_attempts', limit });
+        return { attempts: Array.isArray(result.attempts) ? result.attempts : [], error: null };
+    } catch (error) {
+        return { attempts: [], error: error.message || 'Could not load Test Room history.' };
+    }
+}
+
 export async function getTestRoomAttemptReview(attemptId) {
     try {
         const result = await callTestRoomSessionApi({ action: 'get_attempt_review', attemptId });

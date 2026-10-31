@@ -1,0 +1,16 @@
+.attempt-source-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    padding: 0.3rem 0.72rem;
+    border: 1px solid rgba(141, 123, 255, 0.42);
+    border-radius: var(--radius-full);
+    background: rgba(98, 79, 174, 0.28);
+    color: #d2caff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+}

@@ -1,120 +1,67 @@
 import React from 'react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 const mocks = vi.hoisted(() => ({
     currentUser: { uid: 'student-1', displayName: 'Student One', email: 'student@example.com' },
-    performance: null,
-    performanceError: null,
-    getDashboardPerformanceSummary: vi.fn(),
     getMyAttempts: vi.fn(),
+    getMyTestRoomAttempts: vi.fn(),
     reconcileTestRoomAttempts: vi.fn(),
 }));
 
 vi.mock('../src/context/AuthContext', () => ({
     useAuth: () => ({ currentUser: mocks.currentUser }),
 }));
-
-vi.mock('../src/utils/examHistoryStorage', () => ({
-    getExamHistory: () => [],
-}));
-
 vi.mock('../src/utils/supabaseExam', () => ({
-    getDashboardPerformanceSummary: (...args) => mocks.getDashboardPerformanceSummary(...args),
     getMyAttempts: (...args) => mocks.getMyAttempts(...args),
+    getMyTestRoomAttempts: (...args) => mocks.getMyTestRoomAttempts(...args),
     reconcileTestRoomAttempts: (...args) => mocks.reconcileTestRoomAttempts(...args),
 }));
 
 import Dashboard from '../src/pages/Dashboard.jsx';
+function renderDashboard(){return render(<MemoryRouter><Dashboard /></MemoryRouter>);}
 
-function summary() {
-    return {
-        hasResults: true,
-        dataBasis: 'verified_completed_attempts',
-        summary: {
-            totalAttempts: 3,
-            totalScore: 72,
-            totalMaxMarks: 90,
-            overallPercentage: 80,
-            subjectsAttempted: 2,
-        },
-        subjectPerformance: [{
-            subjectId: 1001,
-            subjectName: 'Data Structures',
-            semester: 3,
-            attempts: 2,
-            totalScore: 48,
-            totalMaxMarks: 60,
-            percentage: 80,
-        }],
-        recentResults: [],
-    };
-}
-
-function renderDashboard() {
-    return render(<MemoryRouter><Dashboard /></MemoryRouter>);
-}
-
-beforeEach(() => {
-    mocks.currentUser = { uid: 'student-1', displayName: 'Student One', email: 'student@example.com' };
-    mocks.performanceError = null;
-    mocks.performance = summary();
-    mocks.getDashboardPerformanceSummary.mockReset();
-    mocks.getDashboardPerformanceSummary.mockImplementation(async () => ({
-        performance: mocks.performance,
-        error: mocks.performanceError,
-    }));
-    mocks.getMyAttempts.mockReset();
-    mocks.getMyAttempts.mockResolvedValue({ attempts: [], error: null });
-    mocks.reconcileTestRoomAttempts.mockReset();
-    mocks.reconcileTestRoomAttempts.mockResolvedValue({ ok: true, error: null });
+beforeEach(()=>{
+    mocks.currentUser={uid:'student-1',displayName:'Student One',email:'student@example.com'};
+    mocks.getMyAttempts.mockReset().mockResolvedValue({attempts:[{
+        id:'exam-attempt-1',attempt_type:'exam',status:'submitted',subject_code:'CE101',
+        subject_name:'Data Structures',exam_type:'MCQ',difficulty:'easy',
+        questions:[{id:'q1',type:'mcq',text:'Question',options:['A','B','C','D']}],
+        answers:{q1:1},score:8,total_marks:10,submitted_at:'2026-10-31T10:00:00.000Z',
+    }],error:null});
+    mocks.getMyTestRoomAttempts.mockReset().mockResolvedValue({attempts:[{
+        id:'room-attempt-1',attempt_type:'test_room',status:'submitted',subject_code:'CE102',
+        subject_name:'Operating Systems',exam_type:'MCQ',difficulty:'medium',
+        questions:[{id:'q2',text:'Question 2',options:['A','B','C','D']}],answers:[2],
+        score:1,total_marks:1,started_at:'2026-10-31T09:00:00.000Z',submitted_at:'2026-10-31T09:15:00.000Z',
+    }],error:null});
+    mocks.reconcileTestRoomAttempts.mockReset().mockResolvedValue({ok:true,error:null});
 });
+afterEach(()=>{cleanup();vi.restoreAllMocks();});
 
-afterEach(() => {
-    cleanup();
-    vi.restoreAllMocks();
-});
-
-describe('student dashboard verified performance summary', () => {
-    it('renders only the verified summary aggregates and subject breakdown', async () => {
+describe('student attempt history',()=>{
+    it('loads only the two persisted attempt sources and marks Test Room cards',async()=>{
+        window.localStorage.setItem('prepmaster_exam_history_v1:student-1',JSON.stringify([{id:'legacy-local',subjectName:'Legacy local attempt'}]));
         renderDashboard();
-
-        expect(await screen.findByRole('heading', { name: 'Performance overview' })).toBeInTheDocument();
-        expect(await screen.findByText('Completed exams')).toBeInTheDocument();
-        expect(screen.getByText('3', { selector: '.sd-metric strong' })).toBeInTheDocument();
-        expect(screen.getByText('80.00')).toBeInTheDocument();
+        expect(await screen.findByText('Operating Systems')).toBeInTheDocument();
         expect(screen.getByText('Data Structures')).toBeInTheDocument();
-        expect(screen.getByRole('progressbar', { name: /Data Structures overall percentage/i })).toHaveAttribute('aria-valuenow', '80');
-        expect(screen.queryByText(/top 10|your rank|live/i)).toBeNull();
+        expect(screen.getByText('Test Room',{selector:'.attempt-source-badge'})).toBeInTheDocument();
+        expect(window.localStorage.getItem('prepmaster_exam_history_v1:student-1')).toBeNull();
+        expect(screen.queryByText('Legacy local attempt')).toBeNull();
+        expect(mocks.reconcileTestRoomAttempts).toHaveBeenCalledTimes(1);
+        expect(mocks.getMyAttempts).toHaveBeenCalledWith(100);
+        expect(mocks.getMyTestRoomAttempts).toHaveBeenCalledWith(100);
+        expect(screen.getByText('2',{selector:'.sd-metric strong'})).toBeInTheDocument();
+        expect(screen.getByRole('link',{name:/review answers/i})).toHaveAttribute('href','/review/room-attempt-1?attemptType=test_room');
     });
-
-    it('shows an honest empty state when no verified results exist', async () => {
-        mocks.performance = {
-            hasResults: false,
-            summary: { totalAttempts: 0, totalScore: 0, totalMaxMarks: 0, overallPercentage: null, subjectsAttempted: 0 },
-            subjectPerformance: [],
-            recentResults: [],
-        };
+    it('does not show local history when persisted attempt retrieval fails',async()=>{
+        window.localStorage.setItem('prepmaster_exam_history_v1:student-1',JSON.stringify([{id:'legacy-local',subjectName:'Legacy local attempt'}]));
+        mocks.getMyAttempts.mockResolvedValue({attempts:[],error:'request failed'});
+        mocks.getMyTestRoomAttempts.mockResolvedValue({attempts:[],error:null});
         renderDashboard();
-
-        expect(await screen.findByText('No verified results yet')).toBeInTheDocument();
-        expect(screen.getByText(/complete a scored exam/i)).toBeInTheDocument();
-        expect(screen.queryByText('80.00')).toBeNull();
-    });
-
-    it('shows a friendly error and allows retry without exposing database errors', async () => {
-        mocks.performance = null;
-        mocks.performanceError = 'We could not load your performance summary right now. Please try again.';
-        renderDashboard();
-
-        expect(await screen.findByRole('alert')).toHaveTextContent(/performance data is unavailable/i);
-        expect(screen.getByRole('alert')).not.toHaveTextContent(/postgres|supabase|42501/i);
-
-        mocks.performanceError = null;
-        mocks.performance = summary();
-        fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
-        expect(await screen.findByText('Data Structures')).toBeInTheDocument();
-        expect(mocks.getDashboardPerformanceSummary).toHaveBeenCalledTimes(2);
+        expect(await screen.findByText('Attempt history unavailable')).toBeInTheDocument();
+        expect(screen.queryByText('Legacy local attempt')).toBeNull();
+        expect(window.localStorage.getItem('prepmaster_exam_history_v1:student-1')).toBeNull();
     });
 });

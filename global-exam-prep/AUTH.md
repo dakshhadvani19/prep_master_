@@ -58,12 +58,11 @@ The service-role key is used only by serverless code that must write the private
 
 ## Current non-auth fallbacks
 
-Some non-auth features do not yet have persistent Supabase tables. They therefore use explicit browser-local/static adapters:
-- Exam history: src/utils/examHistoryStorage.js
+Some non-auth features continue to use explicit browser-local/static adapters:
 - Syllabus metadata/text: src/utils/syllabusStorage.js
 - Temporary numeric helper counters: src/utils/hashUtil.js
 
-These are intentionally temporary. They do not provide cross-device persistence or server-side durability.
+Normal exam and Test Room participant attempts are persisted through authenticated Vercel APIs backed by private.exam_attempts. Per-student results mirror to public.TestAttempts, and room-level aggregates mirror to public.TestRooms. The dashboard and review pages do not use browser-local attempt history.
 
 ## Rules
 

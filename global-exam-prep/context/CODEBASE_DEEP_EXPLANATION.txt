@@ -7,7 +7,7 @@ This file is a concise current guide. The authoritative detailed context is in d
 1. React/Vite application
 2. Supabase Auth and Postgres
 3. Vercel serverless endpoints for protected server-side operations
-4. Browser-local/static adapters for unfinished persistence
+4. Browser-local/static adapters for features still awaiting persistent storage
 
 ## Catalog
 
@@ -21,7 +21,7 @@ Supabase Auth is the only identity provider. AuthContext owns session state and 
 
 ## Exam flow
 
-ExamPortal resolves the selected subject, prepares questions, runs the exam, and stores a compact result through src/utils/examHistoryStorage.js until persistent attempts are migrated.
+ExamPortal resolves the selected subject, prepares questions, runs the exam, and stores the submission in the authenticated durable attempt system. Normal exams and Test Room participants are represented by per-student private.exam_attempts rows; student results mirror to public.TestAttempts. The dashboard lists the two attempt types through owner-authenticated APIs, and ReviewPage fetches the saved answer review through the matching owner-checked endpoint. Browser-local exam history has been retired.
 
 ## Syllabus flow
 

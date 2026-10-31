@@ -1,6 +1,6 @@
 # PrepMaster — Current Status
 
-_Last updated: 2026-10-13_
+_Last updated: 2026-10-31_
 
 ## 1. Repository and deployment
 
@@ -37,8 +37,8 @@ Replacement behavior:
 
 | Previous capability | Current temporary behavior |
 |---|---|
-| Exam history | Browser-local examHistoryStorage.js |
-| Exam review | Reads the same browser-local history |
+| Exam history | Authenticated persisted attempt APIs (normal exams and Test Room participant attempts) |
+| Exam review | Owner-checked review APIs; no browser-local fallback |
 | Syllabus upload | Extract PDF text and keep metadata/text in browser storage |
 | Syllabus PDF URL | Current-session object URL only |
 | Numeric helper counters | Browser-local counters |
@@ -254,3 +254,14 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - POST /api/feedback verifies the Supabase bearer session, derives StudentId from the authenticated UID, and inserts only Description, Type and StudentId. PostgreSQL generates FeedbackId.
 - The original Feedbacks schema is retained; no Rating column or rating values remain. The temporary rating-column migration was reversed by 20261030123011_remove_feedback_rating_from_feedbacks. The former rating UI/CSS/animation is archived in src/pages/remoed_rating_ui.txt.
 - API and page tests cover authentication, type validation, persistence fields, compatibility mapping and the 1,000-character limit.
+
+
+## 18. Unified persisted attempt history — 2026-10-31
+
+- Student Performance History reads only the authenticated normal-exam attempt list and Test Room participant-attempt list. Dashboard cards and performance totals do not read browser-local history, the leaderboard summary table, or unrelated sources.
+- Normal exam attempts use `/api/exam-attempts` (`attempt_type: 'exam'`). Test Room attempts use `/api/test-room-session` (`action: 'list_my_attempts'`, `attempt_type: 'test_room'`). Both are scoped to the verified Supabase Auth user through the private attempt-data RPC.
+- Test Room responses use a student-safe field allowlist and omit room codes, user IDs, room-role metadata, answer revisions, and private answer keys.
+- Answer review uses only the owner-checked normal exam or Test Room review endpoint. Dashboard links carry the source type; older direct links try only those two persisted review APIs.
+- Browser-local exam history writing and reading have been removed. The dashboard and logout flow remove legacy per-user/anonymous history keys; no local history fallback remains.
+- The Performance overview is calculated from finalized scored records in the same two attempt lists, not from a third leaderboard-performance request.
+- No public ERD table or Supabase schema was changed. `public.TestAttempts` remains the per-student mirror, and `public.TestRooms` remains the room-level aggregate documented in `TEST_ROOMS_SCHEMA_AND_IMPLEMENTATION.md`.

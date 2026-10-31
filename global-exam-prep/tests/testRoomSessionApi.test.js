@@ -14,6 +14,7 @@ import {
     shouldFinalizeStaleHeartbeat,
     safeQuestions,
     scoreAnswers,
+    buildStudentSafeTestRoomAttemptSummary,
 } from '../api/test-room-session.js';
 
 const questions = Array.from({ length: 30 }, (_, index) => ({
@@ -39,6 +40,50 @@ describe('Test Room lobby fallback contract', () => {
             status: 'waiting', connected: true, joinedAt: null,
         }]);
         expect(JSON.stringify(snapshot)).not.toMatch(/private-host-uid|private-attempt-id|answers/i);
+    });
+});
+
+describe('Test Room student attempt history response', () => {
+    it('returns only safe fields from the signed-in student room attempt', () => {
+        const record = buildStudentSafeTestRoomAttemptSummary({
+            id: 'attempt-1',
+            user_id: 'private-user-id',
+            room_code: 'PRIVATE1234',
+            room_role: 'participant',
+            answer_revision: 8,
+            created_at: '2026-10-31T10:00:00.000Z',
+            started_at: '2026-10-31T10:01:00.000Z',
+            submitted_at: '2026-10-31T10:16:00.000Z',
+            subject_code: 'SUB-101',
+            subject_name: 'Data Structures',
+            exam_type: 'MCQ',
+            difficulty: 'medium',
+            questions: [{ id: 'q1', text: 'Question?', options: ['A', 'B', 'C', 'D'] }],
+            answers: [2],
+            score: 1,
+            total_marks: 1,
+            status: 'submitted',
+            end_reason: 'manual_submit',
+            correct_count: 1,
+            incorrect_count: 0,
+            attempted_count: 1,
+            unattempted_count: 0,
+        });
+        expect(record).toMatchObject({
+            id: 'attempt-1',
+            subject_name: 'Data Structures',
+            status: 'submitted',
+            attempt_type: 'test_room',
+            answers: [2],
+        });
+        expect(record).not.toHaveProperty('user_id');
+        expect(record).not.toHaveProperty('room_code');
+        expect(record).not.toHaveProperty('room_role');
+        expect(record).not.toHaveProperty('answer_revision');
+    });
+
+    it('rejects a missing attempt record', () => {
+        expect(buildStudentSafeTestRoomAttemptSummary(null)).toBeNull();
     });
 });
 
