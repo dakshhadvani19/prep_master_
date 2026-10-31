@@ -326,13 +326,17 @@ export const client = {
       if (studentRows.length === 0) {
         return { data: null, error: { code: 'P0002', message: 'student_not_found' } };
       }
-      studentRows.forEach((row) => { row.studentIsSpam = true; });
-      const student = state.spamStudents.find((item) => String(item.studentId) === String(studentId))
-        || { studentId, studentName: studentRows[0].studentName };
-      if (!state.spamStudents.some((item) => String(item.studentId) === String(studentId))) {
-        state.spamStudents.push(student);
-      }
-      return { data: { ...student, isSpam: true }, error: null };
+      const isSpam = !Boolean(studentRows[0].studentIsSpam);
+      studentRows.forEach((row) => { row.studentIsSpam = isSpam; });
+      const existingStudent = state.spamStudents.find((item) => String(item.studentId) === String(studentId));
+      const student = {
+        studentId,
+        studentName: existingStudent?.studentName || studentRows[0].studentName,
+      };
+      state.spamStudents = isSpam
+        ? (existingStudent ? state.spamStudents : [...state.spamStudents, student])
+        : state.spamStudents.filter((item) => String(item.studentId) !== String(studentId));
+      return { data: { ...student, isSpam }, error: null };
     }
 
     if (fn === 'admin_get_feedback_summary') {
