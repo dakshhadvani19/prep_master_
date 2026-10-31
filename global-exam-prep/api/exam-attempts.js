@@ -43,7 +43,41 @@ function studentSafeQuestion(question) {
     const { answer, review, ...safe } = question;
     return safe;
 }
-export function normalizeAnswers(input, mcqQuestionIds = []) {
+export export function buildAttemptReviewRecord(attempt, answerKey) {
+    const savedQuestions = Array.isArray(attempt?.questions) ? attempt.questions : [];
+    const questions = savedQuestions.map((question, index) => {
+        if (question?.type !== 'mcq') return question;
+        const expected = Array.isArray(answerKey)
+            ? answerKey[index]
+            : answerKey && typeof answerKey === 'object'
+                ? answerKey[String(question.id)]
+                : null;
+        const correctIndex = Number(expected);
+        return {
+            ...question,
+            answer: Number.isInteger(correctIndex) && correctIndex >= 0 && correctIndex <= 3
+                ? correctIndex
+                : null,
+        };
+    });
+
+    return {
+        id: attempt.id,
+        attemptId: attempt.id,
+        date: attempt.submitted_at || attempt.updated_at || attempt.started_at,
+        subjectId: attempt.subject_code || null,
+        subjectName: attempt.subject_name || null,
+        examType: attempt.exam_type,
+        difficulty: attempt.difficulty,
+        type: questions.some((question) => question?.type === 'mcq') ? 'objective' : 'theory',
+        score: attempt.score ?? null,
+        totalMarks: attempt.total_marks ?? null,
+        questions,
+        userAnswers: attempt.answers && typeof attempt.answers === 'object' ? attempt.answers : {},
+    };
+}
+
+function normalizeAnswers(input, mcqQuestionIds = []) {
     const entries = input && typeof input === 'object' && !Array.isArray(input)
         ? Object.entries(input).slice(0, 100)
         : [];
@@ -251,38 +285,8 @@ export default async function handler(req, res) {
             }
 
             const answerRow = await privateExamData(admin, 'get_answer_key', { attempt_id: attemptId });
-            const answerKey = answerRow?.answer_key;
-            const questions = (Array.isArray(attempt.questions) ? attempt.questions : []).map((question, index) => {
-                if (question?.type !== 'mcq') return question;
-                const expected = Array.isArray(answerKey)
-                    ? answerKey[index]
-                    : answerKey && typeof answerKey === 'object'
-                        ? answerKey[String(question.id)]
-                        : null;
-                const correctIndex = Number(expected);
-                return {
-                    ...question,
-                    answer: Number.isInteger(correctIndex) && correctIndex >= 0 && correctIndex <= 3
-                        ? correctIndex
-                        : null,
-                };
-            });
-
             return res.status(200).json({
-                record: {
-                    id: attempt.id,
-                    attemptId: attempt.id,
-                    date: attempt.submitted_at || attempt.updated_at || attempt.started_at,
-                    subjectId: attempt.subject_code || null,
-                    subjectName: attempt.subject_name || null,
-                    examType: attempt.exam_type,
-                    difficulty: attempt.difficulty,
-                    type: questions.some((question) => question?.type === 'mcq') ? 'objective' : 'theory',
-                    score: attempt.score ?? null,
-                    totalMarks: attempt.total_marks ?? null,
-                    questions,
-                    userAnswers: attempt.answers && typeof attempt.answers === 'object' ? attempt.answers : {},
-                },
+                record: buildAttemptReviewRecord(attempt, answerRow?.answer_key),
             });
         }
 
