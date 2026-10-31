@@ -293,21 +293,21 @@ export default function ReviewPage() {
                                     style={{
                                         aspectRatio: '1',
                                         borderRadius: 'var(--radius-sm)',
-                                        background: currentQ === idx ? (c.bg) : c.bg,
+                                        background: displayQuestionIndex === questionIndex ? c.bg : c.bg,
                                         color: c.text,
                                         fontWeight: 700,
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
-                                        border: `2px solid ${currentQ === idx ? c.border : c.border}`,
+                                        border: `2px solid ${c.border}`,
                                         fontSize: '0.8rem',
-                                        outline: currentQ === idx ? `2px solid ${c.border}` : 'none',
+                                        outline: displayQuestionIndex === questionIndex ? `2px solid ${c.border}` : 'none',
                                         outlineOffset: '2px',
                                         cursor: 'pointer',
                                         transition: 'all 0.15s ease',
                                     }}
                                 >
-                                    {idx + 1}
+                                    {questionIndex + 1}
                                 </button>
                             );
                         })}
@@ -324,7 +324,7 @@ export default function ReviewPage() {
                     {/* Q Number + Status */}
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.75rem' }}>
                         <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 500 }}>
-                            Question {currentQ + 1} of {questions.length}
+                            Question {displayQuestionIndex + 1} of {questions.length}
                         </h2>
                         {isObjective && (
                             <span style={{
@@ -360,7 +360,8 @@ export default function ReviewPage() {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
                             {q.options.map((opt, idx) => {
                                 const hasUserAttempt = !isUnansweredAnswer(userAnswer);
-                                const isCorrect = Number(idx) === Number(q.answer);
+                                const hasCorrectAnswer = q.answer !== null && q.answer !== undefined;
+                                const isCorrect = hasCorrectAnswer && Number(idx) === Number(q.answer);
                                 const isUserChoice = hasUserAttempt && Number(userAnswer) === idx;
 
                                 let bg = 'var(--bg-tertiary)';
