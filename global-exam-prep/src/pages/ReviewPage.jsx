@@ -5,6 +5,7 @@ import { domains, examPrompts } from '../data/mockData';
 import { findSubjectContext } from '../utils/subjectResolver';
 import {
     filterReviewQuestionIndices,
+    getReviewOptionState,
     getReviewStatus,
     isUnansweredAnswer,
 } from '../utils/reviewAnswerStatus';
@@ -340,10 +341,7 @@ export default function ReviewPage() {
                     {isObjective && q.options && (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
                             {q.options.map((opt, idx) => {
-                                const hasUserAttempt = !isUnansweredAnswer(userAnswer);
-                                const hasCorrectAnswer = q.answer !== null && q.answer !== undefined;
-                                const isCorrect = hasCorrectAnswer && Number(idx) === Number(q.answer);
-                                const isUserChoice = hasUserAttempt && Number(userAnswer) === idx;
+                                const { isCorrect, isUserChoice } = getReviewOptionState(idx, q.answer, userAnswer);
 
                                 let bg = 'var(--bg-tertiary)';
                                 let border = 'var(--glass-border)';
