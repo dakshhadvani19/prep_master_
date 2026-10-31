@@ -42,6 +42,7 @@ export const state = {
   catalogDelayMs: 0,
   feedbackRows: [],
   spamStudents: [],
+  feedbackActionEvents: [],
 
   // What the page load arrived with, in the shape src/supabase.js produces. Tests set
   // this instead of rewriting window.location, because in the real app the code is
@@ -75,6 +76,7 @@ export function resetSupabaseStub() {
   state.catalogDelayMs = 0;
   state.feedbackRows = [];
   state.spamStudents = [];
+  state.feedbackActionEvents = [];
   state.authCallback = null;
   state.exchangeError = null;
   state.exchangeDelayMs = 0;
@@ -286,9 +288,30 @@ export const client = {
         if (!row || !field) {
           return { data: null, error: { code: 'P0002', message: 'feedback_not_found' } };
         }
-        row[field] = true;
+
+        const previousValue = Boolean(row[field]);
+        const requestedValue = !previousValue;
+        const blockedMessage = (
+          requestedValue && args?.p_action === 'bookmark' && row.isSpam
+            ? 'This feedback is marked as spam. Turn Spam off before bookmarking.'
+            : requestedValue && args?.p_action === 'spam' && row.isBookmark
+              ? 'Remove the Bookmark flag before marking this feedback as spam.'
+              : null
+        );
+        state.feedbackActionEvents.push({
+          feedbackId: row.feedbackId,
+          action: args?.p_action,
+          previousValue,
+          requestedValue,
+          outcome: blockedMessage ? 'blocked' : 'updated',
+          reason: blockedMessage,
+        });
+
+        if (!blockedMessage) row[field] = requestedValue;
         return {
           data: {
+            ok: !blockedMessage,
+            message: blockedMessage,
             feedbackId: row.feedbackId,
             isSpam: Boolean(row.isSpam),
             isBookmark: Boolean(row.isBookmark),
