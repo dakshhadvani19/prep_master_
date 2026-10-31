@@ -121,7 +121,6 @@ export default function AdminFeedbackInbox() {
 
         const feedbackId = String(feedback.feedbackId);
         setActionBusy(feedbackId + ':' + action);
-        setOpenFeedbackMenu(null);
 
         try {
             if (!supabase) throw new Error('Feedback service is not configured.');
@@ -162,34 +161,37 @@ export default function AdminFeedbackInbox() {
     }
 
     async function handleStudentSpam(feedback) {
-        if (actionBusy || feedback.studentIsSpam) return;
+        if (actionBusy) return;
 
-        setOpenFeedbackMenu(null);
-        setActionBusy('student:' + feedback.studentId);
+        const studentId = String(feedback.studentId);
+        setActionBusy('student:' + studentId);
         try {
             if (!supabase) throw new Error('Feedback service is not configured.');
-            const { error } = await supabase.rpc('admin_mark_student_spam', {
+            const { data, error } = await supabase.rpc('admin_mark_student_spam', {
                 p_student_id: feedback.studentId,
             });
             if (error) throw error;
+            if (!data) throw new Error('The student spam status could not be confirmed. Please refresh and try again.');
 
+            const isSpam = Boolean(data.isSpam);
             setFeedbackRows((rows) => rows.map((row) => (
-                String(row.studentId) === String(feedback.studentId)
-                    ? { ...row, studentIsSpam: true }
+                String(row.studentId) === studentId
+                    ? { ...row, studentIsSpam: isSpam }
                     : row
             )));
-            setSpamStudents((students) => (
-                students.some((student) => String(student.studentId) === String(feedback.studentId))
-                    ? students
-                    : [...students, {
-                        studentId: feedback.studentId,
-                        studentName: feedback.studentName,
+            setSpamStudents((students) => {
+                const withoutStudent = students.filter((student) => String(student.studentId) !== studentId);
+                return isSpam
+                    ? [...withoutStudent, {
+                        studentId: data.studentId ?? feedback.studentId,
+                        studentName: data.studentName || feedback.studentName,
                     }].sort((a, b) => Number(b.studentId) - Number(a.studentId))
-            ));
-            showToast('Student marked as spam.');
+                    : withoutStudent;
+            });
+            showToast(isSpam ? 'Student marked as spam.' : 'Student spam flag removed.');
         } catch (error) {
             console.error('[admin-feedback] Student spam action failed:', error);
-            showToast(error?.message || 'The student could not be marked as spam.', 'error');
+            showToast(error?.message || 'The student spam status could not be changed.', 'error');
         } finally {
             setActionBusy('');
         }
@@ -308,12 +310,19 @@ export default function AdminFeedbackInbox() {
                                                             <div className="admin-feedback-menu__divider" aria-hidden="true" />
                                                             <button
                                                                 type="button"
-                                                                className="is-danger admin-feedback-menu__student-action"
-                                                                disabled={item.studentIsSpam || Boolean(actionBusy)}
+                                                                role="switch"
+                                                                aria-label="Student spam"
+                                                                aria-checked={Boolean(item.studentIsSpam)}
+                                                                className={'admin-feedback-toggle admin-feedback-toggle--student-spam' + (item.studentIsSpam ? ' is-active' : '')}
+                                                                disabled={Boolean(actionBusy)}
                                                                 onClick={() => handleStudentSpam(item)}
                                                             >
-                                                                <UserX size={15} />
-                                                                {item.studentIsSpam ? 'Student already marked as spam' : 'Mark student as spam'}
+                                                                <UserX size={16} aria-hidden="true" />
+                                                                <span className="admin-feedback-toggle__label">Student spam</span>
+                                                                <span className="admin-feedback-toggle__state" aria-hidden="true">
+                                                                    {item.studentIsSpam ? 'On' : 'Off'}
+                                                                </span>
+                                                                <span className="admin-feedback-toggle__track" aria-hidden="true" />
                                                             </button>
                                                         </motion.div>
                                                     )}
