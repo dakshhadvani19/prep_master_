@@ -78,14 +78,14 @@ describe('Test Room API input and scoring helpers', () => {
 
     it('normalizes malformed answer values to unanswered instead of granting a choice', () => {
         expect(normalizeAnswers([0, 3, -1, 4, '2', null, true], 7))
-            .toEqual([0, 3, null, null, null, null, null]);
-        expect(normalizeAnswers([1], 4)).toEqual([1, null, null, null]);
-        expect(normalizeAnswers({ 0: 1 }, 2)).toEqual([null, null]);
+            .toEqual([0, 3, -1, -1, -1, -1, -1]);
+        expect(normalizeAnswers([1], 4)).toEqual([1, -1, -1, -1]);
+        expect(normalizeAnswers({ 0: 1 }, 2)).toEqual([-1, -1]);
     });
 
     it('scores the canonical option indexes and counts unanswered questions', () => {
         const key = [0, 1, 2, 3];
-        expect(scoreAnswers(key, [0, 2, null, 3])).toEqual({
+        expect(scoreAnswers(key, [0, 2, -1, 3])).toEqual({
             correct: 2,
             incorrect: 1,
             attempted: 3,
