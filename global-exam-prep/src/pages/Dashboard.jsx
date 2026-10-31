@@ -247,7 +247,7 @@ export default function Dashboard() {
                 )}
             </section>
 
-            {loading ? (            {loading ? (
+            {loading ? (
                 <div className="glass-panel" style={{ padding: '4rem', textAlign: 'center' }}>
                     <Loader size={36} color="var(--accent-primary)" style={{ margin: '0 auto 1rem auto', display: 'block', animation: 'spin 1s linear infinite' }} />
                     <p style={{ color: 'var(--text-secondary)' }}>Loading your history...</p>

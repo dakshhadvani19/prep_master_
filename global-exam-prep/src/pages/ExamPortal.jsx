@@ -536,7 +536,7 @@ export default function ExamPortal() {
                 ? Math.round((score / actualTotalMarks) * 100)
                 : null;
 
-            setExamState('submitted');            setExamState('submitted');
+            setExamState('submitted');
             navigate('/dashboard', { state: { justSubmitted: true, score, totalMarks: actualTotalMarks } });
 
         } catch (err) {
