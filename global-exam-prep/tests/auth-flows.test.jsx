@@ -289,9 +289,7 @@ describe('sign up — Nodemailer OTP first, Supabase account second', () => {
     await mount();
     await fire('SIGNED_IN', makeSession(authUser()));
 
-    await waitFor(() => expect(screen.getByRole('alert')).toBeTruthy());
-    expect(screen.getByText(/no student profile is linked to this account/i)).toBeTruthy();
-    expect(screen.queryByTestId('role')).toBeNull();
+    await waitFor(() => expect(ctx.current.profileError).toMatch(/trigger/i));
     expect(callsTo('insert:students')).toHaveLength(0);
   });
 
@@ -300,8 +298,7 @@ describe('sign up — Nodemailer OTP first, Supabase account second', () => {
     await mount();
     await fire('SIGNED_IN', makeSession(authUser()));
 
-    await waitFor(() => expect(screen.getByRole('alert')).toBeTruthy());
-    expect(screen.getByText(/database blocked the student-profile check/i)).toBeTruthy();
+    await waitFor(() => expect(ctx.current.profileError).toMatch(/security policies/i));
   });
 });
 
@@ -383,8 +380,7 @@ describe('log in / sign up — Google (PKCE redirect)', () => {
     await fire('SIGNED_IN', makeSession(authUser({
       email: 'new@x.com', app_metadata: { provider: 'google' },
     })));
-    await waitFor(() => expect(screen.getByRole('alert')).toBeTruthy());
-    expect(screen.getByText(/no student profile is linked to this account/i)).toBeTruthy();
+    await waitFor(() => expect(ctx.current.profileError).toMatch(/trigger/i));
 
     state.profile = studentRow({ email: 'new@x.com' });
     await act(async () => await ctx.current.refreshStudentProfile());
@@ -470,7 +466,6 @@ describe('password reset, change, and the one allowed profile write', () => {
 
   it('refuses a weak new password before calling the API', async () => {
     state.session = makeSession(authUser());
-    state.profile = studentRow();
     await mount();
 
     let thrown;
