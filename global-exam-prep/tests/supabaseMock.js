@@ -40,6 +40,8 @@ export const state = {
   catalogSubjects: [],
   catalogError: null,
   catalogDelayMs: 0,
+  feedbackRows: [],
+  spamStudents: [],
 
   // What the page load arrived with, in the shape src/supabase.js produces. Tests set
   // this instead of rewriting window.location, because in the real app the code is
@@ -71,6 +73,8 @@ export function resetSupabaseStub() {
   state.catalogSubjects = [];
   state.catalogError = null;
   state.catalogDelayMs = 0;
+  state.feedbackRows = [];
+  state.spamStudents = [];
   state.authCallback = null;
   state.exchangeError = null;
   state.exchangeDelayMs = 0;
@@ -258,6 +262,56 @@ export const client = {
         error: null,
       };
     }
+    if ([
+      'admin_get_feedback_dashboard',
+      'admin_update_feedback_flag',
+      'admin_mark_student_spam',
+    ].includes(fn)) {
+      const mine = ownAdminRow();
+      if (!mine) return { data: null, error: { code: '42501', message: 'not_authorized' } };
+
+      if (fn === 'admin_get_feedback_dashboard') {
+        return {
+          data: {
+            feedbacks: state.feedbackRows.map((row) => ({ ...row })),
+            spamStudents: state.spamStudents.map((row) => ({ ...row })),
+          },
+          error: null,
+        };
+      }
+
+      if (fn === 'admin_update_feedback_flag') {
+        const row = state.feedbackRows.find((item) => String(item.feedbackId) === String(args?.p_feedback_id));
+        const field = { seen: 'isSeen', bookmark: 'isBookmark', spam: 'isSpam' }[args?.p_action];
+        if (!row || !field) {
+          return { data: null, error: { code: 'P0002', message: 'feedback_not_found' } };
+        }
+        row[field] = true;
+        return {
+          data: {
+            feedbackId: row.feedbackId,
+            isSpam: Boolean(row.isSpam),
+            isBookmark: Boolean(row.isBookmark),
+            isSeen: Boolean(row.isSeen),
+          },
+          error: null,
+        };
+      }
+
+      const studentId = args?.p_student_id;
+      const studentRows = state.feedbackRows.filter((item) => String(item.studentId) === String(studentId));
+      if (studentRows.length === 0) {
+        return { data: null, error: { code: 'P0002', message: 'student_not_found' } };
+      }
+      studentRows.forEach((row) => { row.studentIsSpam = true; });
+      const student = state.spamStudents.find((item) => String(item.studentId) === String(studentId))
+        || { studentId, studentName: studentRows[0].studentName };
+      if (!state.spamStudents.some((item) => String(item.studentId) === String(studentId))) {
+        state.spamStudents.push(student);
+      }
+      return { data: { ...student, isSpam: true }, error: null };
+    }
+
     if (fn !== 'admin_role_for_uid' || state.adminLookup === 'missing') {
       return {
         data: null,
