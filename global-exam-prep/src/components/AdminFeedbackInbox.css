@@ -105,17 +105,6 @@
     font-variant-numeric: tabular-nums;
 }
 
-.admin-feedback-inbox__notice {
-    margin-top: 0.8rem;
-    padding: 0.7rem 0.8rem;
-    border: 1px solid rgba(141, 123, 255, 0.22);
-    border-radius: 9px;
-    background: rgba(141, 123, 255, 0.08);
-    color: #d0c8ff;
-    font-size: 0.78rem;
-}
-
-/* Live feedback review — compact cards with a single overflow action menu. */
 .admin-feedback-list {
     display: grid;
     gap: 0.7rem;
@@ -157,38 +146,18 @@
     gap: 0.38rem;
 }
 
-.admin-feedback-type,
-.admin-feedback-state-tag {
+.admin-feedback-type {
     display: inline-flex;
     align-items: center;
     min-height: 23px;
     padding: 0.18rem 0.55rem;
+    border: 1px solid rgba(141, 123, 255, 0.2);
     border-radius: 999px;
+    background: rgba(141, 123, 255, 0.12);
+    color: #c8befd;
     font-size: 0.68rem;
     font-weight: 650;
     line-height: 1.2;
-    background: rgba(141, 123, 255, 0.12);
-    color: #c8befd;
-    border: 1px solid rgba(141, 123, 255, 0.2);
-}
-
-.admin-feedback-state-tag {
-    background: rgba(255, 255, 255, 0.045);
-    border-color: rgba(255, 255, 255, 0.08);
-    color: var(--muted);
-    font-weight: 550;
-}
-
-.admin-feedback-state-tag--bookmark {
-    color: var(--gold);
-    border-color: rgba(255, 180, 84, 0.22);
-    background: rgba(255, 180, 84, 0.08);
-}
-
-.admin-feedback-state-tag--spam {
-    color: #f0a0a0;
-    border-color: rgba(239, 68, 68, 0.22);
-    background: rgba(239, 68, 68, 0.08);
 }
 
 .admin-feedback-menu {
@@ -234,7 +203,7 @@
 }
 
 .admin-feedback-menu__panel button {
-    min-height: 40px;
+    min-height: 44px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -258,7 +227,7 @@
 }
 
 .admin-feedback-menu__panel button.is-danger {
-    color: #e7b0b0;
+    color: #f0a0a0;
 }
 
 .admin-feedback-menu__panel button.is-danger:hover:not(:disabled) {
@@ -300,6 +269,7 @@
 
 .admin-feedback-card__expand {
     justify-self: start;
+    min-height: 32px;
     padding: 0.15rem 0;
     color: #b9adff;
     font-size: 0.74rem;
@@ -311,6 +281,117 @@
     color: #ded8ff;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.admin-feedback-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.15rem;
+}
+
+.admin-feedback-toggle {
+    --toggle-color: #b8bec9;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.48rem;
+    flex: 1 1 132px;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0.42rem 0.62rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--muted);
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.14s ease, background-color 0.14s ease, color 0.14s ease;
+}
+
+.admin-feedback-toggle--seen {
+    --toggle-color: #d1d5db;
+}
+
+.admin-feedback-toggle--bookmark {
+    --toggle-color: #ffb454;
+}
+
+.admin-feedback-toggle--spam {
+    --toggle-color: #f08080;
+}
+
+.admin-feedback-toggle.is-active {
+    border-color: color-mix(in srgb, var(--toggle-color) 35%, transparent);
+    background: color-mix(in srgb, var(--toggle-color) 9%, transparent);
+    color: var(--toggle-color);
+}
+
+.admin-feedback-toggle:disabled {
+    opacity: 0.55;
+    cursor: progress;
+}
+
+.admin-feedback-toggle:focus-visible,
+.admin-feedback-menu__trigger:focus-visible,
+.admin-feedback-menu__panel button:focus-visible,
+.admin-feedback-card__expand:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+.admin-feedback-toggle__label {
+    white-space: nowrap;
+}
+
+.admin-feedback-toggle__state {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 0.65rem;
+    font-weight: 550;
+}
+
+.admin-feedback-toggle.is-active .admin-feedback-toggle__state {
+    color: var(--toggle-color);
+}
+
+.admin-feedback-toggle__track {
+    position: relative;
+    flex: 0 0 auto;
+    width: 31px;
+    height: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: #30343c;
+    transition: border-color 0.14s ease, background-color 0.14s ease;
+}
+
+.admin-feedback-toggle__track::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #c3c7cf;
+    content: '';
+    transition: transform 0.14s ease, background-color 0.14s ease;
+}
+
+.admin-feedback-toggle.is-active .admin-feedback-toggle__track {
+    border-color: var(--toggle-color);
+    background: color-mix(in srgb, var(--toggle-color) 28%, #20232a);
+}
+
+.admin-feedback-toggle.is-active .admin-feedback-toggle__track::after {
+    transform: translateX(13px);
+    background: var(--toggle-color);
+}
+
+.admin-feedback-toggle:hover:not(:disabled) {
+    border-color: color-mix(in srgb, var(--toggle-color) 42%, transparent);
 }
 
 .admin-feedback-state {
@@ -346,6 +427,37 @@
     cursor: pointer;
 }
 
+.admin-feedback-toast {
+    position: fixed;
+    z-index: 100;
+    bottom: max(1.1rem, env(safe-area-inset-bottom));
+    left: 50%;
+    width: max-content;
+    max-width: min(440px, calc(100vw - 2rem));
+    padding: 0.68rem 0.9rem;
+    transform: translateX(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: #252830;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
+    color: #f0f1f4;
+    font-size: 0.78rem;
+    font-weight: 550;
+    line-height: 1.45;
+    text-align: center;
+    pointer-events: none;
+}
+
+.admin-feedback-toast[data-tone="success"] {
+    border-color: rgba(255, 180, 84, 0.28);
+}
+
+.admin-feedback-toast[data-tone="warning"],
+.admin-feedback-toast[data-tone="error"] {
+    border-color: rgba(239, 68, 68, 0.38);
+    color: #ffcaca;
+}
+
 .admin-spam-user-list {
     display: grid;
     gap: 0.5rem;
@@ -372,6 +484,10 @@
         padding: 0.8rem;
     }
 
+    .admin-feedback-toggle {
+        flex-basis: 100%;
+    }
+
     .admin-feedback-state--error {
         align-items: flex-start;
         flex-direction: column;
@@ -382,7 +498,10 @@
     .admin-feedback-card,
     .admin-feedback-menu__trigger,
     .admin-feedback-menu__panel,
-    .admin-feedback-menu__panel button {
+    .admin-feedback-menu__panel button,
+    .admin-feedback-toggle,
+    .admin-feedback-toggle__track,
+    .admin-feedback-toggle__track::after {
         animation: none !important;
         transition: none !important;
     }
