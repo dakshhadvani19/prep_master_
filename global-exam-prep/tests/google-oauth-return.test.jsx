@@ -90,6 +90,7 @@ describe('a Google return leg that works', () => {
   });
 
   it('leaves no stale pending marker behind, so the next sign-in is not blocked', async () => {
+    state.profile = studentRow({ auth_uid: 'u1' });
     setAuthCallback({ kind: 'code', code: 'c2' });
     sessionStorage.setItem('prepmaster_google_signup_pending', '1');
     localStorage.setItem('prepmaster_oauth_attempt_v1', String(Date.now()));
