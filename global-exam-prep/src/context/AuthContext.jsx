@@ -95,7 +95,6 @@ import {
 // /api/verify-otp against private.auth_otp. See src/utils/otpService.js.
 import { createAndSendOTP, verifyOTP } from '../utils/otpService';
 import { clearExamHistory } from '../utils/examHistoryStorage';
-import AuthLaunchScreen from '../components/AuthLaunchScreen';
 
 const AuthContext = createContext(null);
 
@@ -139,8 +138,6 @@ export function AuthProvider({ children }) {
     // A build with no Supabase project has no session to wait for: start settled,
     // so the SPA never flashes a splash screen it cannot leave.
     const [authLoading, setAuthLoading] = useState(() => Boolean(supabase));
-    const [authStage, setAuthStage] = useState('loading-content');
-    const [identityStatus, setIdentityStatus] = useState('anonymous');
     const [profileError, setProfileError] = useState(() => (supabase
     ? ''
     // Known at module load: surface it on the first paint instead of after an
@@ -172,7 +169,6 @@ export function AuthProvider({ children }) {
     // fires hourly; refetching on every one of those is how a refresh race with the
     // post-redirect effects gets invented.
     const loadedForRef = useRef(null);
-    const identityLoadRef = useRef(null);
     const settledRef = useRef(false);
 
     const markSettled = useCallback(() => {
@@ -184,115 +180,67 @@ export function AuthProvider({ children }) {
 
     // ─── Profile + authorization (public.students, public.admins; via RLS) ───
     /**
-     * Resolve the signed-in identity from the database. A row in public.Admins
-     * means staff; otherwise a row in public.Students is required to verify a
-     * student. If neither answer can be established, keep the app behind the
-     * launch screen rather than silently treating an unknown account as a student.
+     * One read per user id, keyed to auth.uid(). The students row says who the signed
+     * in student is; the admins row says whether that same identity is staff. A
+     * student without an admins row follows exactly the path it did before; an admin
+     * is never asked for a student profile, because staff are not students.
      */
     const loadIdentity = useCallback(async (user) => {
         if (!user) {
             loadedForRef.current = null;
-            identityLoadRef.current = null;
             setStudentData(null);
             setProfileError('');
             setAdminRecord(null);
             setAuthorizationError('');
-            setIdentityStatus('anonymous');
-            setAuthStage('preparing-workspace');
             return null;
         }
 
-        setAuthStage('authorizing-user');
+        // Authorization first, and never fatal: an unreadable lookup degrades to
+        // "student", the branch that grants nothing.
         const authorization = await resolveAuthorization(supabase, user.id);
+        // A newer uid may have been claimed while this was in flight; if so this
+        // answer is stale and gets dropped rather than painted over it.
         if (loadedForRef.current !== user.id) return null;
+        setAdminRecord(authorization.row);
+        setAuthorizationError(authorization.error
+            ? 'Admin access could not be verified for this account, so the session is '
+              + 'being treated as a student. Check that the admin-role lookup is applied.'
+            : '');
 
-        if (authorization.error) {
-            setStudentData(null);
-            setAdminRecord(null);
-            setProfileError('');
-            setAuthorizationError(
-                'We could not verify your access level with the database. Check your connection and retry. '
-                + 'PrepMaster will not open a student or admin workspace until this check succeeds.'
-            );
-            setIdentityStatus('error');
-            setAuthStage('identity-error');
-            return null;
-        }
-
-        setAuthorizationError('');
-        if (authorization.row) {
-            setAdminRecord(authorization.row);
-            setStudentData(null);
-            setProfileError('');
-            setIdentityStatus('admin');
-            setAuthStage('preparing-workspace');
-            return { role: deriveRole(authorization.row), admin: authorization.row };
-        }
-
-        setAdminRecord(null);
-        setAuthStage('loading-profile');
         try {
             const { row } = await fetchStudentProfile(supabase, user.id);
-            if (loadedForRef.current !== user.id) return null;
 
-            if (!row) {
-                setStudentData(null);
-                setProfileError(
-                    'No student profile is linked to this account yet. The account cannot be classified as a student. '
-                    + 'Retry the check, or sign out and use the correct account.'
-                );
-                setIdentityStatus('error');
-                setAuthStage('identity-error');
-                return null;
+            if (row) {
+                const profile = mapStudentProfile(row, user);
+                setStudentData(profile);
+                setProfileError('');
+                return profile;
             }
 
-            const profile = mapStudentProfile(row, user);
-            setStudentData(profile);
-            setProfileError('');
-            setIdentityStatus('student');
-            setAuthStage('preparing-workspace');
-            return { role: 'student', profile };
-        } catch (err) {
-            if (loadedForRef.current !== user.id) return null;
+            // No row for a real session. For a student that means the signup trigger
+            // did not run (or the Phase-1 SQL is not deployed) and the account is not
+            // usable yet — and the client must NOT paper over it by inserting its own
+            // profile, which is the path RLS exists to close.
             setStudentData(null);
-            setProfileError(
+            setProfileError(authorization.row ? '' : (
+                'Your student profile is missing. The auth.users -> students trigger '
+                + 'did not create it, so an operator needs to check the Supabase '
+                + 'SQL migration before this account can be used.'
+            ));
+            return null;
+        } catch (err) {
+            loadedForRef.current = null;
+            setStudentData(null);
+            // Staff accounts are not students: when only the profile read failed, an
+            // admin still holds a valid, fully resolved session and gets no banner.
+            setProfileError(authorization.row ? '' : (
                 err?.isProfileBlocked
-                    ? 'The database blocked the student-profile check. Ask an administrator to verify the Students table security policies, then retry.'
-                    : 'We could not load the student profile. Check your connection and retry.'
-            );
-            setIdentityStatus('error');
-            setAuthStage('identity-error');
+                    ? 'Your profile is blocked by the database security policies. Enable RLS on public.students and apply the Phase-1 policies.'
+                    : 'Could not load your profile. Please refresh and try again.'
+            ));
             return null;
         }
     }, []);
-
-    const resolveIdentityForUser = useCallback(async (user, force = false) => {
-        if (!user?.id) return null;
-
-        if (
-            !force
-            && loadedForRef.current === user.id
-            && identityLoadRef.current?.uid === user.id
-        ) {
-            return identityLoadRef.current.promise;
-        }
-
-        setAuthLoading(true);
-        setAuthStage('authorizing-user');
-        setIdentityStatus('pending');
-        setProfileError('');
-        setAuthorizationError('');
-        loadedForRef.current = user.id;
-
-        const promise = loadIdentity(user);
-        identityLoadRef.current = { uid: user.id, promise };
-
-        try {
-            return await promise;
-        } finally {
-            if (loadedForRef.current === user.id) setAuthLoading(false);
-        }
-    }, [loadIdentity]);
 
     // ─── Session plumbing ────────────────────────────────────────────────────
     useEffect(() => {
@@ -311,11 +259,7 @@ export function AuthProvider({ children }) {
                 setProfileError('');
                 setAdminRecord(null);
                 setAuthorizationError('');
-                setIdentityStatus('anonymous');
-                setAuthStage('preparing-workspace');
                 loadedForRef.current = null;
-                identityLoadRef.current = null;
-                setAuthLoading(false);
                 markSettled();
                 return;
             }
@@ -326,28 +270,16 @@ export function AuthProvider({ children }) {
             setCurrentUser(toCurrentUser(user));
 
             if (event === 'PASSWORD_RECOVERY') setRecoveryMode(true);
+            // A completed sign-in ends any recovery mode; functional form keeps
+            // this callback free of a stale `recoveryMode` dependency.
             if (event === 'SIGNED_IN') setRecoveryMode((prev) => (prev ? false : prev));
 
-            if (user) {
-                // Reuse an in-flight identity check when the SDK emits duplicate
-                // INITIAL_SESSION / TOKEN_REFRESHED events for the same uid.
-                if (loadedForRef.current !== user.id) {
-                    await resolveIdentityForUser(user);
-                } else if (identityLoadRef.current?.uid === user.id) {
-                    await identityLoadRef.current.promise;
-                } else {
-                    await resolveIdentityForUser(user, true);
-                }
-            } else {
-                setStudentData(null);
-                setAdminRecord(null);
-                setProfileError('');
-                setAuthorizationError('');
-                setIdentityStatus('anonymous');
-                setAuthStage('preparing-workspace');
-                loadedForRef.current = null;
-                identityLoadRef.current = null;
-                setAuthLoading(false);
+            if (user && loadedForRef.current !== user.id) {
+                // Claim the uid before awaiting: a second event for the same user
+                // (TOKEN_REFRESHED, or the duplicate INITIAL_SESSION read) starts no
+                // second load, so no answer can land out of order.
+                loadedForRef.current = user.id;
+                await loadIdentity(user);
             }
 
             markSettled();
@@ -363,7 +295,6 @@ export function AuthProvider({ children }) {
         // is exchanged here and only here, before the initial session is read, so
         // no effect anywhere has to guess whether sign-in is still finishing.
         (async () => {
-            setAuthStage('restoring-session');
             const callback = consumeAuthCallback();
             const verdict = callback ? describeAuthCallback(callback) : null;
 
@@ -412,7 +343,7 @@ export function AuthProvider({ children }) {
             clearTimeout(failsafe);
             sub?.subscription?.unsubscribe?.();
         };
-    }, [resolveIdentityForUser, markSettled, reportGoogle]);
+    }, [loadIdentity, markSettled, reportGoogle]);
 
     // ─── Sign up: custom OTP first, Supabase account second ──────────────────
     /**
@@ -502,15 +433,16 @@ export function AuthProvider({ children }) {
         const { user, session: nextSession } = result;
         // onAuthStateChange normally lands first; this covers the tick where it has
         // not, so the success overlay and the redirect see one consistent state.
-        if (user) {
+        if (user && loadedForRef.current !== user.id) {
+            loadedForRef.current = user.id;
             setSession(nextSession ?? null);
             setSupabaseUser(user);
             setCurrentUser(toCurrentUser(user));
-            await resolveIdentityForUser(user);
+            await loadIdentity(user);
         }
         markSettled();
         return { status: result.status };
-    }, [resolveIdentityForUser, markSettled]);
+    }, [loadIdentity, markSettled]);
 
     /** Back out of the OTP screen without leaving a password or a live challenge
      *  around: the code itself is superseded the next time one is requested. */
@@ -660,10 +592,10 @@ export function AuthProvider({ children }) {
             const { data } = await supabase.auth.getUser();
             // Re-read profile AND role: a staff account resets its password through
             // this same flow and must come back with its admin status intact.
-            if (data?.user) await resolveIdentityForUser(data.user, true);
+            if (data?.user) await loadIdentity(data.user);
         } catch { /* the session may have ended by design */ }
         return true;
-    }, [resolveIdentityForUser]);
+    }, [loadIdentity]);
 
     /**
      * Password change for a signed-in account. There is no current-password check
@@ -683,39 +615,9 @@ export function AuthProvider({ children }) {
         if (!data?.user) return null;
         setSupabaseUser(data.user);
         setCurrentUser(toCurrentUser(data.user));
-        return resolveIdentityForUser(data.user, true);
-    }, [resolveIdentityForUser]);
-
-    const retryIdentity = useCallback(async () => {
-        if (!supabase) return null;
-        try {
-            const [{ data: userData, error: userError }, { data: sessionData }] = await Promise.all([
-                supabase.auth.getUser(),
-                supabase.auth.getSession(),
-            ]);
-            if (userError || !userData?.user) {
-                setAuthorizationError('Your session could not be verified. Sign in again to continue.');
-                setProfileError('');
-                setIdentityStatus('error');
-                setAuthStage('identity-error');
-                setAuthLoading(false);
-                return null;
-            }
-
-            const user = userData.user;
-            setSession(sessionData?.session ?? null);
-            setSupabaseUser(user);
-            setCurrentUser(toCurrentUser(user));
-            return await resolveIdentityForUser(user, true);
-        } catch {
-            setAuthorizationError('We could not contact the account service. Check your connection and try again.');
-            setProfileError('');
-            setIdentityStatus('error');
-            setAuthStage('identity-error');
-            setAuthLoading(false);
-            return null;
-        }
-    }, [resolveIdentityForUser]);
+        loadedForRef.current = data.user.id;
+        return loadIdentity(data.user);
+    }, [loadIdentity]);
 
     const updateFullName = useCallback(async (fullName) => {
         if (!supabase || !supabaseUser) throw new Error('You are not signed in.');
@@ -755,11 +657,7 @@ export function AuthProvider({ children }) {
         needsEmailVerification,
 
         role,
-        identityStatus,
-        authStage,
-        isIdentityVerified: identityStatus === 'student' || identityStatus === 'admin',
-        retryIdentity,
-        isAdmin: identityStatus === 'admin' && ROLE_RANK[role] >= ROLE_RANK.admin,
+        isAdmin: ROLE_RANK[role] >= ROLE_RANK.admin,
         isSuperAdmin: role === 'superAdmin',
         /** The caller's own public.admins row (whitelisted fields), or null. */
         adminProfile: adminRecord,
@@ -804,8 +702,8 @@ export function AuthProvider({ children }) {
             throw new Error('Email availability is reported by Supabase Auth at signup.');
         },
     }), [
-        currentUser, supabaseUser, session, studentData, authLoading, authStage,
-        identityStatus, retryIdentity, profileError, adminRecord, authorizationError,
+        currentUser, supabaseUser, session, studentData, authLoading, profileError,
+        adminRecord, authorizationError,
         recoveryMode, googleStatus, googleError, clearGoogleError,
         needsEmailVerification, role, requestSignup, signupWithEmail,
         verifySignupOtp, resendSignupOtp, cancelSignupOtp, resendSupabaseVerification,
@@ -817,13 +715,45 @@ export function AuthProvider({ children }) {
 
     return (
         <AuthContext.Provider value={value}>
-            {(authLoading || (currentUser && identityStatus !== 'student' && identityStatus !== 'admin')) ? (
-                <AuthLaunchScreen
-                    stage={identityStatus === 'error' ? 'identity-error' : authStage}
-                    error={authorizationError || profileError}
-                    onRetry={retryIdentity}
-                    onSignOut={logout}
-                />
+            {authLoading ? (
+                <div
+                    style={{
+                        minHeight: '100vh',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '1rem',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: 'var(--bg-primary, #0f1115)',
+                        color: '#e5e7eb',
+                        fontFamily: 'inherit',
+                        padding: '2rem',
+                        textAlign: 'center',
+                    }}
+                >
+                    <style>{`
+                        @keyframes spin {
+                            to { transform: rotate(360deg); }
+                        }
+                    `}</style>
+
+                    <div
+                        style={{
+                            width: 40,
+                            height: 40,
+                            border: '3px solid rgba(255,255,255,0.1)',
+                            borderTopColor: 'var(--accent-primary, #3b82f6)',
+                            borderRadius: '50%',
+                            animation: 'spin 0.8s linear infinite',
+                        }}
+                    />
+
+                    {profileError && (
+                        <p style={{ margin: 0, color: '#fca5a5', fontSize: 14, lineHeight: 1.6, maxWidth: 420 }}>
+                            {profileError}
+                        </p>
+                    )}
+                </div>
             ) : (
                 children
             )}
