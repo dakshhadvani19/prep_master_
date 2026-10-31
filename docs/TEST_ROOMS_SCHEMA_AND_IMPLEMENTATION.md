@@ -1,6 +1,6 @@
 # Test Rooms: Live Schema and Feature Contract
 
-**Last verified:** 2026-10-26  
+**Last verified:** 2026-10-31  
 **Supabase project:** prepmaster (llqwtgwjlwgrftihtern)  
 **Status as of 2026-10-27:** Redis-backed Test Room API, private operational attempts, owner-checked review, monotonic answer-revision persistence, and room-aggregate persistence are implemented. Redis remains authoritative for active room state. Papers mirror to `public.TestsData`, student results to `public.TestAttempts`, and each room's participant IDs, scores, counts, and canonical answer grid to `public.TestRooms`. Answer keys and operational lifecycle details remain in the unexposed `private` schema.
 
@@ -40,7 +40,7 @@ The table exists and currently has 0 rows. It has RLS enabled, a validation trig
 | InCorrect | SMALLINT[] | One incorrect-answer count per participant. |
 | Attempted | SMALLINT[] | One attempted count per participant. |
 | Unattempted | SMALLINT[] | One unanswered count per participant. |
-| Answers | SMALLINT[][] | Native two-dimensional answer grid: first dimension is participant order; second dimension is canonical saved-test question order. Each cell is 0–3 for the canonical saved option index, or NULL for unanswered. |
+| Answers | SMALLINT[][] | Native two-dimensional answer grid: first dimension is participant order; second dimension is canonical saved-test question order. Each cell is 0–3 for the canonical saved option index, or -1 for unanswered. |
 
 The FK target public."TestsData" has these required columns: TestId BIGINT (manually supplied; no identity/default), Questions JSONB[], Options JSONB[], and Answers JSONB[]. The current exam specification uses 30 MCQs, four options per question, and zero-based original answer indexes. The live TestRooms_validate_before_write trigger validates a room's saved test as 1–30 MCQs, requires exactly four flattened option entries per question, validates original answer keys to 0–3, checks answer-grid dimensions, and derives/checks each participant's statistics from the submitted grid.
 
