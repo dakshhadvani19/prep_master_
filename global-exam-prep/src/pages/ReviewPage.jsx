@@ -348,7 +348,7 @@ export default function ReviewPage() {
                     {isObjective && q.options && (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
                             {q.options.map((opt, idx) => {
-                                const { isCorrect, isUserChoice } = getReviewOptionState(idx, q.answer, userAnswer);
+                                const { isCorrect, isUserChoice, isWrongChoice } = getReviewOptionState(idx, q.answer, userAnswer);
 
                                 let bg = 'var(--bg-tertiary)';
                                 let border = 'var(--glass-border)';
@@ -360,7 +360,7 @@ export default function ReviewPage() {
                                     border = 'var(--success)';
                                     textColor = 'var(--success)';
                                     icon = <CheckCircle size={18} color="var(--success)" style={{ flexShrink: 0 }} />;
-                                } else if (isUserChoice && !isCorrect) {
+                                } else if (isWrongChoice) {
                                     bg = 'rgba(239,68,68,0.12)';
                                     border = 'var(--danger)';
                                     textColor = 'var(--danger)';
@@ -380,7 +380,7 @@ export default function ReviewPage() {
                                     }}>
                                         <span style={{
                                             width: 28, height: 28, borderRadius: '50%',
-                                            background: isCorrect ? 'rgba(16,185,129,0.2)' : isUserChoice ? 'rgba(239,68,68,0.2)' : 'rgba(255,255,255,0.05)',
+                                            background: isCorrect ? 'rgba(16,185,129,0.2)' : isWrongChoice ? 'rgba(239,68,68,0.2)' : 'rgba(255,255,255,0.05)',
                                             border: `1px solid ${border}`,
                                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                                             fontSize: '0.8rem', fontWeight: 700, flexShrink: 0,
