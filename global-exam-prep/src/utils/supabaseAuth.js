@@ -505,29 +505,10 @@ export async function resolveAuthorization(client, authUid) {
         if (error) return { row: null, error: normalizeAuthError(error), source: 'self-select' };
 
         const accepted = acceptAdminRow(data, authUid);
-        if (accepted.mismatch) {
-            return { row: null, error: new Error(ADMIN_UID_MISMATCH), source: 'self-select' };
-        }
-
-        // When the RPC is unavailable, a successful self-select that returns no
-        // row is not proof that the caller is a student: RLS may simply hide the
-        // caller's Admins row. Only a visible own row verifies staff; otherwise
-        // keep the launch gate closed until the security-definer lookup is applied
-        // or a suitable self-read policy exists.
-        if (!accepted.row) {
-            return {
-                row: null,
-                error: new Error(
-                    'Admin status could not be verified because the Admins self-read returned no visible row. '
-                    + 'Apply the admin_role_for_uid lookup or verify the Admins self-read policy.'
-                ),
-                source: 'self-select',
-            };
-        }
 
         return {
             row: accepted.row,
-            error: null,
+            error: accepted.mismatch ? new Error(ADMIN_UID_MISMATCH) : null,
             source: 'self-select',
         };
     } catch (err) {
