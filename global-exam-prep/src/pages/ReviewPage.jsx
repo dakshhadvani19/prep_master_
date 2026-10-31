@@ -3,20 +3,14 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, CheckCircle, XCircle, MinusCircle, BarChart2, BookOpen, Loader } from 'lucide-react';
 import { domains, examPrompts } from '../data/mockData';
 import { findSubjectContext } from '../utils/subjectResolver';
+import {
+    filterReviewQuestionIndices,
+    getReviewStatus,
+    isUnansweredAnswer,
+} from '../utils/reviewAnswerStatus';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistoryRecord } from '../utils/examHistoryStorage';
 import { getTestRoomAttemptReview } from '../utils/supabaseExam';
-
-function isUnansweredAnswer(value) {
-    return value === undefined || value === null || value === '' || value === -1 || value === '-1';
-}
-
-function getReviewStatus(question, userAnswers, isObjective) {
-    const answer = userAnswers?.[question.id];
-    if (isUnansweredAnswer(answer)) return 'unattempted';
-    if (!isObjective) return 'attempted';
-    return Number(answer) === Number(question.answer) ? 'correct' : 'wrong';
-}
 
 export default function ReviewPage() {
     const { historyId } = useParams();
@@ -72,23 +66,14 @@ export default function ReviewPage() {
         return { ...counts, attempted: counts.correct + counts.wrong };
     }, [record]);
 
-    const visibleQuestionIndices = useMemo(() => {
-        if (!Array.isArray(record?.questions)) return [];
-        const questions = record.questions;
-        const userAnswers = record.userAnswers || {};
-        const objective = record.type === 'objective';
-
-        if (!activeFilter) return questions.map((_, index) => index);
-
-        return questions.reduce((indices, question, index) => {
-            const status = getReviewStatus(question, userAnswers, objective);
-            const matches = activeFilter === 'attempted'
-                ? status === 'correct' || status === 'wrong'
-                : status === activeFilter;
-            if (matches) indices.push(index);
-            return indices;
-        }, []);
-    }, [record, activeFilter]);
+    const visibleQuestionIndices = useMemo(() => (
+        filterReviewQuestionIndices(
+            record?.questions,
+            record?.userAnswers || {},
+            record?.type === 'objective',
+            activeFilter,
+        )
+    ), [record, activeFilter]);
 
     if (loadingRecord) {
         return (
@@ -149,16 +134,12 @@ export default function ReviewPage() {
     function applyQuestionFilter(filter) {
         const nextFilter = filter === 'all' ? null : filter;
         setActiveFilter(nextFilter);
-        const nextIndices = nextFilter
-            ? questions.reduce((indices, question, index) => {
-                const status = getStatus(question);
-                const matches = nextFilter === 'attempted'
-                    ? status === 'correct' || status === 'wrong'
-                    : status === nextFilter;
-                if (matches) indices.push(index);
-                return indices;
-            }, [])
-            : questions.map((_, index) => index);
+        const nextIndices = filterReviewQuestionIndices(
+            questions,
+            userAnswers,
+            isObjective,
+            nextFilter,
+        );
         setCurrentQ(nextIndices[0] ?? 0);
     }
 
