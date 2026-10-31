@@ -183,13 +183,13 @@ export function safeQuestions(questions) {
 }
 export function normalizeAnswers(input, count = 30) {
     const source = Array.isArray(input) ? input : [];
-    return Array.from({ length: count }, (_, index) => Number.isInteger(source[index]) && source[index] >= 0 && source[index] <= 3 ? source[index] : null);
+    return Array.from({ length: count }, (_, index) => Number.isInteger(source[index]) && source[index] >= 0 && source[index] <= 3 ? source[index] : -1);
 }
 export function scoreAnswers(key, input) {
     const answers = normalizeAnswers(input, key.length);
     let correct = 0, attempted = 0;
     answers.forEach((answer, index) => {
-        if (answer === null) return;
+        if (answer < 0) return;
         attempted += 1;
         if (answer === key[index]) correct += 1;
     });
@@ -283,7 +283,7 @@ async function createAttempt(admin, room, uid, name, role, safe) {
             user_id: uid, subject_code: room.subjectCode || null, subject_name: room.subjectName,
             exam_type: room.examTitle || 'MCQ', difficulty: room.difficulty, questions: safe,
             total_marks: room.questionCount || 30, time_minutes: room.durationMinutes,
-            answers: Array(room.questionCount || 30).fill(null), score: null,
+            answers: Array(room.questionCount || 30).fill(-1), score: null,
             status: room.status === 'started' ? 'in_progress' : 'waiting',
             attempt_type: 'test_room', room_code: room.roomCode, room_role: role,
             participant_name: name, started_at: room.startedAt ? new Date(room.startedAt).toISOString() : new Date().toISOString(),
@@ -627,7 +627,7 @@ export default async function handler(req, res) {
             const host = {
                 userId: user.id, displayName: room.hostName, role: 'host', status: 'waiting',
                 connected: true, joinedAt: room.createdAt, lastHeartbeat: Date.now(),
-                answers: Array(30).fill(null), answerRevision: 0, attemptId: null,
+                answers: Array(30).fill(-1), answerRevision: 0, attemptId: null,
             };
             try {
                 await setJson(keys(code).questions, questions, initialTtl);
@@ -709,7 +709,7 @@ export default async function handler(req, res) {
             }));
             const userAnswers = Object.fromEntries(correct.map((question, index) => [
                 question.id,
-                answers[index] === null || answers[index] === undefined ? '' : answers[index],
+                answers[index],
             ]));
             return res.status(200).json({
                 record: {
