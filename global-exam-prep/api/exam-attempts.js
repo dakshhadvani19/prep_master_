@@ -238,6 +238,54 @@ export default async function handler(req, res) {
             });
         }
 
+        if (action === 'review') {
+            const attemptId = String(body.attemptId || '');
+            if (!UUID_RE.test(attemptId)) return fail(res, 400, 'Invalid attempt identifier.');
+
+            const attempt = await privateExamData(admin, 'get_attempt', {
+                id: attemptId, user_id: user.id, attempt_type: 'exam',
+            });
+            if (!attempt) return fail(res, 404, 'Attempt not found.');
+            if (!['submitted', 'auto_submitted'].includes(attempt.status)) {
+                return fail(res, 409, 'Answer review is available after the exam has been submitted.');
+            }
+
+            const answerRow = await privateExamData(admin, 'get_answer_key', { attempt_id: attemptId });
+            const answerKey = answerRow?.answer_key;
+            const questions = (Array.isArray(attempt.questions) ? attempt.questions : []).map((question, index) => {
+                if (question?.type !== 'mcq') return question;
+                const expected = Array.isArray(answerKey)
+                    ? answerKey[index]
+                    : answerKey && typeof answerKey === 'object'
+                        ? answerKey[String(question.id)]
+                        : null;
+                const correctIndex = Number(expected);
+                return {
+                    ...question,
+                    answer: Number.isInteger(correctIndex) && correctIndex >= 0 && correctIndex <= 3
+                        ? correctIndex
+                        : null,
+                };
+            });
+
+            return res.status(200).json({
+                record: {
+                    id: attempt.id,
+                    attemptId: attempt.id,
+                    date: attempt.submitted_at || attempt.updated_at || attempt.started_at,
+                    subjectId: attempt.subject_code || null,
+                    subjectName: attempt.subject_name || null,
+                    examType: attempt.exam_type,
+                    difficulty: attempt.difficulty,
+                    type: questions.some((question) => question?.type === 'mcq') ? 'objective' : 'theory',
+                    score: attempt.score ?? null,
+                    totalMarks: attempt.total_marks ?? null,
+                    questions,
+                    userAnswers: attempt.answers && typeof attempt.answers === 'object' ? attempt.answers : {},
+                },
+            });
+        }
+
         if (action === 'list') {
             const limit = Math.max(1, Math.min(100, Math.trunc(Number(body.limit) || 50)));
             const attempts = await privateExamData(admin, 'list_attempts', {
