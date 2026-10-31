@@ -10,6 +10,7 @@ import { getExamHistory } from '../utils/examHistoryStorage';
 import {
     getMyAttempts, reconcileTestRoomAttempts, getDashboardPerformanceSummary,
 } from '../utils/supabaseExam';
+import { findSubjectContext } from '../utils/subjectResolver';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -144,15 +145,10 @@ export default function Dashboard() {
         return () => { cancelled = true; };
     }, [currentUser?.uid, performanceRetry]);
 
-    const getSubjectName = (subjectId) => {
-        for (const d of domains) {
-            for (const c of d.courses) {
-                const sub = c.subjects.find(s => s.id === subjectId);
-                if (sub) return sub.title;
-            }
-        }
-        return 'Unknown Subject';
-    };
+    const getSubjectName = (subjectId) => (
+        findSubjectContext(domains, subjectId).subject?.title
+        || (subjectId && !/^unknown$/i.test(String(subjectId)) ? String(subjectId) : 'Unknown Subject')
+    );
 
     const getExamName = (examType) => {
         return examPrompts[examType]?.title || examType;
@@ -320,7 +316,7 @@ export default function Dashboard() {
                                             <div className="sd-subject" key={subject.subjectId}>
                                                 <div className="sd-subject__top">
                                                     <div className="sd-subject__name">
-                                                        <strong>{subject.subjectName}</strong>
+                                                        <strong>{subject.subjectName || getSubjectName(subject.subjectId)}</strong>
                                                         <span>
                                                             Semester {subject.semester} · {subject.attempts} {Number(subject.attempts) === 1 ? 'attempt' : 'attempts'}
                                                         </span>
@@ -337,7 +333,7 @@ export default function Dashboard() {
                                                 <div
                                                     className="sd-subject__track"
                                                     role="progressbar"
-                                                    aria-label={`${subject.subjectName} overall percentage`}
+                                                    aria-label={`${subject.subjectName || getSubjectName(subject.subjectId)} overall percentage`}
                                                     aria-valuemin={0}
                                                     aria-valuemax={100}
                                                     aria-valuenow={percentage}
@@ -417,7 +413,7 @@ export default function Dashboard() {
                             }}>
                                 <div style={{ flex: 1 }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-                                        <h3 style={{ fontSize: '1.25rem' }}>{record.subjectName || getSubjectName(record.subjectId)}</h3>
+                                        <h3 style={{ fontSize: '1.25rem' }}>{record.subjectName && !/^unknown subject$/i.test(record.subjectName) ? record.subjectName : getSubjectName(record.subjectId)}</h3>
                                         <span style={{
                                             background: 'var(--bg-tertiary)',
                                             padding: '0.25rem 0.75rem',
