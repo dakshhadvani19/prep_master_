@@ -70,12 +70,12 @@ export function shuffleRoomQuestions(questions, random = Math.random) {
 
 /**
  * Convert a participant's displayed choices into canonical order. The input map
- * is canonicalQuestionIndex -> original option index; null means unanswered.
+ * is canonicalQuestionIndex -> original option index; -1 means unanswered.
  */
 export function toCanonicalAnswerArray(answers, questionCount) {
     return Array.from({ length: questionCount }, (_, index) => {
         const raw = answers?.[index] ?? answers?.[String(index)];
-        return Number.isInteger(raw) && raw >= 0 && raw <= 3 ? raw : null;
+        return Number.isInteger(raw) && raw >= 0 && raw <= 3 ? raw : -1;
     });
 }
 
@@ -89,7 +89,7 @@ export function scoreRoomAnswers(questions, answerArray) {
         const selected = Array.isArray(answerArray)
             ? answerArray[index]
             : answerArray?.[question.canonicalIndex];
-        if (selected === null || selected === undefined) return;
+        if (!Number.isInteger(selected) || selected < 0) return;
         attempted += 1;
         if (selected === question.answer) correct += 1;
     });
