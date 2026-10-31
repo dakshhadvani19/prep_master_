@@ -37,3 +37,19 @@ export function filterReviewQuestionIndices(questions, userAnswers, isObjective,
         return indices;
     }, []);
 }
+
+export function getReviewOptionState(optionIndex, correctAnswer, userAnswer) {
+    const index = Number(optionIndex);
+    const correctIndex = Number(correctAnswer);
+    const selectedIndex = Number(userAnswer);
+    const hasCorrectAnswer = Number.isInteger(correctIndex) && correctIndex >= 0 && correctIndex <= 3;
+    const hasUserAttempt = !isUnansweredAnswer(userAnswer);
+    const isCorrect = hasCorrectAnswer && index === correctIndex;
+    const isUserChoice = hasUserAttempt && index === selectedIndex;
+
+    return {
+        isCorrect,
+        isUserChoice,
+        isWrongChoice: isUserChoice && !isCorrect,
+    };
+}
