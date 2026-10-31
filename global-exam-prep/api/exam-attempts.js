@@ -43,7 +43,7 @@ function studentSafeQuestion(question) {
     const { answer, review, ...safe } = question;
     return safe;
 }
-function normalizeAnswers(input, mcqQuestionIds = []) {
+export function normalizeAnswers(input, mcqQuestionIds = []) {
     const entries = input && typeof input === 'object' && !Array.isArray(input)
         ? Object.entries(input).slice(0, 100)
         : [];
