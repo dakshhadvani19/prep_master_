@@ -292,7 +292,7 @@ export function AuthProvider({ children }) {
         } finally {
             if (loadedForRef.current === user.id) setAuthLoading(false);
         }
-    }, [resolveIdentityForUser]);
+    }, [loadIdentity]);
 
     // ─── Session plumbing ────────────────────────────────────────────────────
     useEffect(() => {
@@ -412,7 +412,7 @@ export function AuthProvider({ children }) {
             clearTimeout(failsafe);
             sub?.subscription?.unsubscribe?.();
         };
-    }, [loadIdentity, markSettled, reportGoogle]);
+    }, [resolveIdentityForUser, markSettled, reportGoogle]);
 
     // ─── Sign up: custom OTP first, Supabase account second ──────────────────
     /**
@@ -663,7 +663,7 @@ export function AuthProvider({ children }) {
             if (data?.user) await resolveIdentityForUser(data.user, true);
         } catch { /* the session may have ended by design */ }
         return true;
-    }, [loadIdentity]);
+    }, [resolveIdentityForUser]);
 
     /**
      * Password change for a signed-in account. There is no current-password check
