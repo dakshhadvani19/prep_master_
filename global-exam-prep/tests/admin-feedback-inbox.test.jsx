@@ -26,7 +26,7 @@ afterEach(() => {
 });
 
 describe('AdminFeedbackInbox', () => {
-    it('loads all feedback in one dashboard request and displays only the requested student details', async () => {
+    it('loads feedback, displays the moderation switches, and expands the full description', async () => {
         state.feedbackRows = [{
             feedbackId: 91,
             description: 'The new exam attempt page loads quickly but the timer sometimes freezes when I switch between questions and return to the earlier section during practice.',
@@ -45,15 +45,17 @@ describe('AdminFeedbackInbox', () => {
         expect(screen.getByText('Student Example')).toBeInTheDocument();
         expect(screen.getByText('Student ID: 4205')).toBeInTheDocument();
         expect(screen.queryByText(/Feedback ID/i)).toBeNull();
-        expect(screen.queryByText(/between questions and return to the earlier section/)).toBeNull();
         expect(state.calls.filter((call) => call.fn === 'admin_get_feedback_dashboard')).toHaveLength(1);
+        expect(screen.getByRole('switch', { name: 'Seen' })).toHaveAttribute('aria-checked', 'false');
+        expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'false');
+        expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'false');
 
         fireEvent.click(screen.getByRole('button', { name: 'Review full feedback' }));
         expect(screen.getByText(/between questions and return to the earlier section during practice/)).toBeInTheDocument();
         fireEvent.click(screen.getByRole('button', { name: 'Show less' }));
     });
 
-    it('persists all four moderation actions and updates the inbox after success', async () => {
+    it('toggles each feedback flag in both directions and keeps the student spam action separate', async () => {
         state.feedbackRows = [{
             feedbackId: 92,
             description: 'A suggestion from the student.',
@@ -69,34 +71,100 @@ describe('AdminFeedbackInbox', () => {
         render(<AdminFeedbackInbox />);
         await screen.findByText('A suggestion from the student.');
 
-        async function openActions() {
-            fireEvent.click(screen.getByRole('button', { name: 'Feedback actions' }));
-            return screen.getByRole('group', { name: 'Feedback actions' });
-        }
+        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'true'));
 
-        const firstMenu = await openActions();
-        expect(firstMenu.querySelectorAll('button')).toHaveLength(4);
+        fireEvent.click(screen.getByRole('switch', { name: 'Seen' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Seen' })).toHaveAttribute('aria-checked', 'true'));
 
-        fireEvent.click(screen.getByRole('button', { name: 'Bookmark feedback' }));
-        await waitFor(() => expect(screen.getByText('Bookmarked')).toBeInTheDocument());
+        fireEvent.click(screen.getByRole('switch', { name: 'Seen' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Seen' })).toHaveAttribute('aria-checked', 'false'));
 
-        await openActions();
-        fireEvent.click(screen.getByRole('button', { name: 'Mark as seen' }));
-        await waitFor(() => expect(screen.getByText('Seen')).toBeInTheDocument());
+        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'false'));
 
-        await openActions();
-        fireEvent.click(screen.getByRole('button', { name: 'Mark feedback as spam' }));
-        await waitFor(() => expect(screen.getByText('Spam')).toBeInTheDocument());
+        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'true'));
 
-        await openActions();
+        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'false'));
+
+        fireEvent.click(screen.getByRole('button', { name: 'More student actions' }));
         fireEvent.click(screen.getByRole('button', { name: 'Mark student as spam' }));
         const spamStudentCount = document.querySelector('.admin-feedback-inbox__spam .admin-feedback-inbox__section-head > span');
         expect(spamStudentCount).not.toBeNull();
         await waitFor(() => expect(spamStudentCount).toHaveTextContent('1'));
 
+        expect(state.feedbackActionEvents).toHaveLength(6);
+        expect(state.feedbackActionEvents.every((event) => event.outcome === 'updated')).toBe(true);
         expect(state.calls.filter((call) => call.fn === 'admin_update_feedback_flag').map((call) => call.args.p_action))
-            .toEqual(['bookmark', 'seen', 'spam']);
+            .toEqual(['bookmark', 'seen', 'seen', 'bookmark', 'spam', 'spam']);
         expect(state.calls.filter((call) => call.fn === 'admin_mark_student_spam')).toHaveLength(1);
         expect(state.spamStudents).toEqual([{ studentId: 4206, studentName: 'Another Student' }]);
+    });
+
+    it('blocks bookmarking a spam feedback item, logs the blocked click, and allows the admin to unspam it first', async () => {
+        state.feedbackRows = [{
+            feedbackId: 93,
+            description: 'This feedback is currently marked as spam.',
+            type: 'other',
+            isSpam: true,
+            isBookmark: false,
+            isSeen: false,
+            studentId: 4207,
+            studentName: 'Third Student',
+            studentIsSpam: false,
+        }];
+
+        render(<AdminFeedbackInbox />);
+        await screen.findByText('This feedback is currently marked as spam.');
+
+        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
+        expect(await screen.findByText('This feedback is marked as spam. Turn Spam off before bookmarking.')).toBeInTheDocument();
+        expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'false');
+        expect(state.feedbackActionEvents[0]).toMatchObject({
+            feedbackId: 93,
+            action: 'bookmark',
+            previousValue: false,
+            requestedValue: true,
+            outcome: 'blocked',
+        });
+
+        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'false'));
+
+        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'true'));
+
+        expect(state.feedbackActionEvents.map((event) => event.outcome)).toEqual(['blocked', 'updated', 'updated']);
+        expect(state.feedbackRows[0]).toMatchObject({ isSpam: false, isBookmark: true });
+    });
+
+    it('blocks marking bookmarked feedback as spam until the bookmark is removed', async () => {
+        state.feedbackRows = [{
+            feedbackId: 94,
+            description: 'This feedback is bookmarked.',
+            type: 'other',
+            isSpam: false,
+            isBookmark: true,
+            isSeen: false,
+            studentId: 4208,
+            studentName: 'Fourth Student',
+            studentIsSpam: false,
+        }];
+
+        render(<AdminFeedbackInbox />);
+        await screen.findByText('This feedback is bookmarked.');
+
+        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
+        expect(await screen.findByText('Remove the Bookmark flag before marking this feedback as spam.')).toBeInTheDocument();
+        expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'false');
+
+        fireEvent.click(screen.getByRole('switch', { name: 'Bookmark' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Bookmark' })).toHaveAttribute('aria-checked', 'false'));
+
+        fireEvent.click(screen.getByRole('switch', { name: 'Spam' }));
+        await waitFor(() => expect(screen.getByRole('switch', { name: 'Spam' })).toHaveAttribute('aria-checked', 'true'));
+        expect(state.feedbackActionEvents.map((event) => event.outcome)).toEqual(['blocked', 'updated', 'updated']);
     });
 });
