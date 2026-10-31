@@ -322,7 +322,7 @@ export default function AdminDashboard() {
                                                     type="button"
                                                     className="admin-feedback-menu__trigger"
                                                     aria-label="Feedback actions"
-                                                    aria-haspopup="menu"
+                                                    aria-controls={`feedback-actions-${feedback.feedbackId}`}
                                                     aria-expanded={String(openFeedbackMenu) === String(feedback.feedbackId)}
                                                     onClick={() => setOpenFeedbackMenu((current) => (
                                                         String(current) === String(feedback.feedbackId) ? null : feedback.feedbackId
@@ -334,24 +334,25 @@ export default function AdminDashboard() {
                                                 <AnimatePresence>
                                                     {String(openFeedbackMenu) === String(feedback.feedbackId) && (
                                                         <motion.div
+                                                            id={`feedback-actions-${feedback.feedbackId}`}
                                                             className="admin-feedback-menu__panel"
-                                                            role="menu"
+                                                            role="group"
                                                             aria-label="Feedback actions"
                                                             initial={{ opacity: 0, y: -4, scale: 0.98 }}
                                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                                             exit={{ opacity: 0, y: -3, scale: 0.98 }}
                                                             transition={{ duration: 0.14 }}
                                                         >
-                                                            <button type="button" role="menuitem" disabled={feedback.isSeen || isBusy} onClick={() => handleFeedbackAction(feedback, 'seen')}>
+                                                            <button type="button" disabled={feedback.isSeen || isBusy} onClick={() => handleFeedbackAction(feedback, 'seen')}>
                                                                 <Eye size={15} /> {feedback.isSeen ? 'Already marked as seen' : 'Mark as seen'}
                                                             </button>
-                                                            <button type="button" role="menuitem" disabled={feedback.isBookmark || isBusy} onClick={() => handleFeedbackAction(feedback, 'bookmark')}>
+                                                            <button type="button" disabled={feedback.isBookmark || isBusy} onClick={() => handleFeedbackAction(feedback, 'bookmark')}>
                                                                 <Bookmark size={15} /> {feedback.isBookmark ? 'Already bookmarked' : 'Bookmark feedback'}
                                                             </button>
-                                                            <button type="button" role="menuitem" className="is-danger" disabled={feedback.isSpam || isBusy} onClick={() => handleFeedbackAction(feedback, 'spam')}>
+                                                            <button type="button" className="is-danger" disabled={feedback.isSpam || isBusy} onClick={() => handleFeedbackAction(feedback, 'spam')}>
                                                                 <Flag size={15} /> {feedback.isSpam ? 'Already marked as spam' : 'Mark feedback as spam'}
                                                             </button>
-                                                            <button type="button" role="menuitem" className="is-danger" disabled={feedback.studentIsSpam || isBusy} onClick={() => handleFeedbackAction(feedback, 'student_spam')}>
+                                                            <button type="button" className="is-danger" disabled={feedback.studentIsSpam || isBusy} onClick={() => handleFeedbackAction(feedback, 'student_spam')}>
                                                                 <UserX size={15} /> {feedback.studentIsSpam ? 'Student already marked as spam' : 'Mark student as spam'}
                                                             </button>
                                                         </motion.div>

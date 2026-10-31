@@ -685,6 +685,12 @@
 
 
 /* Live feedback review — compact cards with a single overflow action menu. */
+.admin-card--feedback {
+    /* The action popover must be able to extend beyond the card edge. */
+    overflow: visible;
+    z-index: 5;
+}
+
 .admin-feedback-list {
     display: grid;
     gap: 0.7rem;
