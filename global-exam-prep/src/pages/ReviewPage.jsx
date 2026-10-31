@@ -58,14 +58,20 @@ export default function ReviewPage() {
 
         const userAnswers = record.userAnswers || {};
         const isObjective = record.type === 'objective';
-        const counts = { correct: 0, wrong: 0, unattempted: 0 };
+        const counts = { correct: 0, wrong: 0, unattempted: 0, attemptedWithoutKey: 0 };
 
         record.questions.forEach((question) => {
             const status = getReviewStatus(question, userAnswers, isObjective);
-            if (status in counts) counts[status] += 1;
+            if (status === 'correct' || status === 'wrong' || status === 'unattempted') counts[status] += 1;
+            else if (status === 'attempted') counts.attemptedWithoutKey += 1;
         });
 
-        return { ...counts, attempted: counts.correct + counts.wrong };
+        return {
+            correct: counts.correct,
+            wrong: counts.wrong,
+            unattempted: counts.unattempted,
+            attempted: counts.correct + counts.wrong + counts.attemptedWithoutKey,
+        };
     }, [record]);
 
     const visibleQuestionIndices = useMemo(() => (
