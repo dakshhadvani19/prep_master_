@@ -10,7 +10,7 @@ import {
 } from '../utils/reviewAnswerStatus';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistoryRecord } from '../utils/examHistoryStorage';
-import { getExamAttemptReview, getTestRoomAttemptReview } from '../utils/supabaseExam';
+import { getExamAttemptReview, getMyAttempts, getTestRoomAttemptReview } from '../utils/supabaseExam';
 
 export default function ReviewPage() {
     const { historyId } = useParams();
@@ -37,21 +37,49 @@ export default function ReviewPage() {
             }
 
             const localRecord = getExamHistoryRecord(currentUser.uid, historyId);
-            if (localRecord?.attemptId) {
-                const { record: savedReview } = await getExamAttemptReview(localRecord.attemptId);
-                if (cancelled) return;
-                setRecord(savedReview
-                    ? { ...localRecord, ...savedReview, id: localRecord.id, attemptId: localRecord.attemptId }
-                    : localRecord);
-                setLoadingRecord(false);
-                return;
-            }
-
             if (localRecord) {
-                if (!cancelled) {
-                    setRecord(localRecord);
-                    setLoadingRecord(false);
+                let attemptId = localRecord.attemptId || null;
+
+                // Older local history entries predate attemptId being saved.
+                // Match only a uniquely closest finalized attempt with the same
+                // subject/exam/difficulty and a near-identical submission time.
+                if (!attemptId && localRecord.date && localRecord.subjectId) {
+                    const { attempts } = await getMyAttempts(100);
+                    const localTime = new Date(localRecord.date).getTime();
+                    const candidates = (attempts || [])
+                        .filter((attempt) => (
+                            attempt.attempt_type === 'exam'
+                            && ['submitted', 'auto_submitted'].includes(attempt.status)
+                            && String(attempt.subject_code || '').toLowerCase() === String(localRecord.subjectId).toLowerCase()
+                            && String(attempt.exam_type || '').toLowerCase() === String(localRecord.examType || '').toLowerCase()
+                            && String(attempt.difficulty || '').toLowerCase() === String(localRecord.difficulty || '').toLowerCase()
+                            && Number.isFinite(localTime)
+                            && attempt.submitted_at
+                        ))
+                        .map((attempt) => ({
+                            attempt,
+                            difference: Math.abs(new Date(attempt.submitted_at).getTime() - localTime),
+                        }))
+                        .filter((candidate) => Number.isFinite(candidate.difference) && candidate.difference <= 120000)
+                        .sort((a, b) => a.difference - b.difference);
+
+                    const nearest = candidates[0];
+                    const secondNearest = candidates[1];
+                    if (nearest && (!secondNearest || secondNearest.difference - nearest.difference > 1500)) {
+                        attemptId = nearest.attempt.id;
+                    }
                 }
+
+                if (attemptId) {
+                    const { record: savedReview } = await getExamAttemptReview(attemptId);
+                    if (cancelled) return;
+                    setRecord(savedReview
+                        ? { ...localRecord, ...savedReview, id: localRecord.id, attemptId }
+                        : localRecord);
+                } else {
+                    setRecord(localRecord);
+                }
+                if (!cancelled) setLoadingRecord(false);
                 return;
             }
 
