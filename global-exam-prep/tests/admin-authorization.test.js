@@ -113,6 +113,26 @@ describe('resolveAuthorization()', () => {
     expect(deriveRole(out.row)).toBe('admin');
   });
 
+  it('does not treat an RLS-hidden empty self-read as proof that the caller is a student', async () => {
+    const client = fakeClient({
+      rpcResult: {
+        data: null,
+        error: {
+          code: 'PGRST202',
+          message: 'Could not find the function public.admin_role_for_uid within the schema cache',
+        },
+      },
+      selectResult: { data: null, error: null },
+    });
+
+    const out = await resolveAuthorization(client, 'u1');
+
+    expect(out.row).toBeNull();
+    expect(out.source).toBe('self-select');
+    expect(out.error).toBeTruthy();
+    expect(out.error.message).toMatch(/Admins self-read returned no visible row/i);
+  });
+
   it('does not go looking for a wider read when the function exists but denies', async () => {
     const client = fakeClient({
       rpcResult: {
