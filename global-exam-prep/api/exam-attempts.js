@@ -43,13 +43,24 @@ function studentSafeQuestion(question) {
     const { answer, review, ...safe } = question;
     return safe;
 }
-function normalizeAnswers(input) {
-    if (!input || typeof input !== 'object' || Array.isArray(input)) return {};
-    const entries = Object.entries(input).slice(0, 100);
-    return Object.fromEntries(entries.map(([key, value]) => [
+function normalizeAnswers(input, mcqQuestionIds = []) {
+    const entries = input && typeof input === 'object' && !Array.isArray(input)
+        ? Object.entries(input).slice(0, 100)
+        : [];
+    const normalized = Object.fromEntries(entries.map(([key, value]) => [
         String(key).slice(0, 120),
         value == null ? null : (typeof value === 'string' ? value.slice(0, 10000) : (Number.isFinite(Number(value)) ? Number(value) : null)),
     ]));
+
+    // MCQ answers use -1 as the explicit unattempted sentinel; theory text remains unchanged.
+    mcqQuestionIds.forEach((questionId) => {
+        const answer = normalized[questionId];
+        normalized[questionId] = Number.isInteger(answer) && answer >= 0 && answer <= 3
+            ? answer
+            : -1;
+    });
+
+    return normalized;
 }
 
 export default async function handler(req, res) {
@@ -110,7 +121,7 @@ export default async function handler(req, res) {
                 questions: safeQuestions,
                 total_marks: Math.max(0, Math.min(1000, Math.trunc(Number(body.totalMarks) || 0))),
                 time_minutes: Math.max(0, Math.min(600, Math.trunc(Number(body.timeMinutes) || 0))),
-                answers: {},
+                answers: Object.fromEntries(Object.keys(answerKey).map((questionId) => [questionId, -1])),
                 score: null,
                 status: 'in_progress',
                 attempt_type: 'exam',
@@ -146,7 +157,10 @@ export default async function handler(req, res) {
             });
             if (!attempt) return fail(res, 404, 'Attempt not found.');
             if (attempt.status !== 'in_progress') return fail(res, 409, 'This attempt is no longer accepting answers.');
-            const answers = normalizeAnswers(body.answers);
+            const mcqQuestionIds = (Array.isArray(attempt.questions) ? attempt.questions : [])
+                .filter((question) => question?.type === 'mcq')
+                .map((question) => String(question.id));
+            const answers = normalizeAnswers(body.answers, mcqQuestionIds);
             const updated = await privateExamData(admin, 'update_attempt', {
                 id: attemptId, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
                 patch: { answers, updated_at: new Date().toISOString() },
@@ -174,19 +188,20 @@ export default async function handler(req, res) {
             const answerRow = await privateExamData(admin, 'get_answer_key', { attempt_id: attemptId });
             const key = answerRow?.answer_key && typeof answerRow.answer_key === 'object' && !Array.isArray(answerRow.answer_key)
                 ? answerRow.answer_key : {};
-            const answers = normalizeAnswers(body.answers);
             const keys = Object.entries(key);
+            const answers = normalizeAnswers(body.answers, keys.map(([questionId]) => questionId));
             let score = null;
             let correct = null;
-            let attempted = Object.values(answers).filter((value) => value !== null && value !== '').length;
+            let attempted = Object.values(answers).filter((value) => value !== null && value !== '' && value !== -1).length;
             let totalMarks = Number(attempt.total_marks) || 0;
             if (keys.length) {
                 score = keys.reduce((sum, [questionId, expected]) => (
-                    sum + (answers[questionId] != null && String(answers[questionId]) === String(expected) ? 1 : 0)
+                    sum + (answers[questionId] !== -1 && answers[questionId] != null
+                        && String(answers[questionId]) === String(expected) ? 1 : 0)
                 ), 0);
                 correct = score;
                 totalMarks = keys.length;
-                attempted = keys.filter(([questionId]) => answers[questionId] != null && answers[questionId] !== '').length;
+                attempted = keys.filter(([questionId]) => answers[questionId] !== -1 && answers[questionId] != null).length;
             }
             const patch = {
                 answers,
