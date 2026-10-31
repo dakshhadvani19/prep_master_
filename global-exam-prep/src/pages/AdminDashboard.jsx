@@ -2,12 +2,12 @@
  * Admin Dashboard (Phase 2) — command-center shell.
  * Role from AuthContext. Mock writes only. No database.
  */
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     MessageSquare, ShieldAlert, BookOpen, Trophy,
-    Shield, UserPlus, UserMinus, Crown, Bookmark, Eye, Flag,
+    Shield, UserPlus, UserMinus, Crown, Bookmark, Eye, Flag, MoreVertical, UserX,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../supabase';
@@ -15,14 +15,19 @@ import { manageAdminStaff } from '../utils/supabaseAuth';
 import AdminController from '../components/AdminController';
 import './AdminDashboard.css';
 
-/** Neutral placeholders. Swap later — do not treat as live data. */
-export const FEEDBACK_PLACEHOLDER = { total: 24, seen: 9 };
+function getFeedbackPreview(description, wordLimit = 15) {
+    const words = String(description || '').trim().split(/\\s+/).filter(Boolean);
+    return {
+        text: words.length > wordLimit ? `${words.slice(0, wordLimit).join(' ')}…` : words.join(' '),
+        canExpand: words.length > wordLimit,
+    };
+}
 
-const PREVIEW_FEEDBACK = [
-    { id: 'p1', title: 'Question wording in Mid-1 felt ambiguous', type: 'content', from: 'preview.student@example.com' },
-    { id: 'p2', title: 'Timer jumped during a timed attempt', type: 'bug', from: 'preview.student@example.com' },
-    { id: 'p3', title: 'Request: more numericals in Physics', type: 'feature', from: 'preview.student@example.com' },
-];
+function formatFeedbackType(type) {
+    return String(type || 'other')
+        .replace(/[_-]/g, ' ')
+        .replace(/\\b\\w/g, (letter) => letter.toUpperCase());
+}
 
 const PREVIEW_ADMINS = [
     { id: 'a1', name: 'Preview Admin', email: 'admin.preview@example.com' },
@@ -84,12 +89,127 @@ export default function AdminDashboard() {
     const [form, setForm] = useState({ name: '', email: '', target: '' });
     const [fbFocus, setFbFocus] = useState(null);
     const [staffBusy, setStaffBusy] = useState(false);
+    const [feedbackRows, setFeedbackRows] = useState([]);
+    const [spamStudents, setSpamStudents] = useState([]);
+    const [feedbackLoading, setFeedbackLoading] = useState(true);
+    const [feedbackError, setFeedbackError] = useState('');
+    const [feedbackRetry, setFeedbackRetry] = useState(0);
+    const [expandedFeedbackId, setExpandedFeedbackId] = useState(null);
+    const [openFeedbackMenu, setOpenFeedbackMenu] = useState(null);
+    const [feedbackActionBusy, setFeedbackActionBusy] = useState('');
 
     const stats = useMemo(() => {
-        const total = FEEDBACK_PLACEHOLDER.total;
-        const seen = FEEDBACK_PLACEHOLDER.seen;
+        const total = feedbackRows.length;
+        const seen = feedbackRows.filter((row) => row.isSeen).length;
         return { total, seen, remaining: total - seen };
+    }, [feedbackRows]);
+
+    useEffect(() => {
+        let cancelled = false;
+
+        async function loadFeedbackDashboard() {
+            setFeedbackLoading(true);
+            setFeedbackError('');
+            try {
+                const { data, error } = await supabase.rpc('admin_get_feedback_dashboard');
+                if (error) throw error;
+                if (cancelled) return;
+
+                setFeedbackRows(Array.isArray(data?.feedbacks) ? data.feedbacks : []);
+                setSpamStudents(Array.isArray(data?.spamStudents) ? data.spamStudents : []);
+            } catch (error) {
+                if (cancelled) return;
+                console.error('[admin-feedback] Failed to load feedback dashboard:', error);
+                setFeedbackError(error?.message || 'Feedback could not be loaded. Please try again.');
+            } finally {
+                if (!cancelled) setFeedbackLoading(false);
+            }
+        }
+
+        loadFeedbackDashboard();
+        return () => { cancelled = true; };
+    }, [feedbackRetry]);
+
+    useEffect(() => {
+        function closeFeedbackMenu(event) {
+            if (!event.target?.closest?.('.admin-feedback-menu')) setOpenFeedbackMenu(null);
+        }
+        function closeFeedbackMenuOnEscape(event) {
+            if (event.key === 'Escape') setOpenFeedbackMenu(null);
+        }
+
+        document.addEventListener('pointerdown', closeFeedbackMenu);
+        document.addEventListener('keydown', closeFeedbackMenuOnEscape);
+        return () => {
+            document.removeEventListener('pointerdown', closeFeedbackMenu);
+            document.removeEventListener('keydown', closeFeedbackMenuOnEscape);
+        };
     }, []);
+
+    async function handleFeedbackAction(feedback, action) {
+        const actionKey = `${feedback.feedbackId}:${action}`;
+        if (feedbackActionBusy) return;
+
+        setOpenFeedbackMenu(null);
+        setFeedbackActionBusy(actionKey);
+        setNotice('');
+        try {
+            if (action === 'student_spam') {
+                if (feedback.studentIsSpam) return;
+                const { error } = await supabase.rpc('admin_mark_student_spam', {
+                    p_student_id: feedback.studentId,
+                });
+                if (error) throw error;
+
+                setFeedbackRows((rows) => rows.map((row) => (
+                    String(row.studentId) === String(feedback.studentId)
+                        ? { ...row, studentIsSpam: true }
+                        : row
+                )));
+                setSpamStudents((students) => (
+                    students.some((student) => String(student.studentId) === String(feedback.studentId))
+                        ? students
+                        : [...students, {
+                            studentId: feedback.studentId,
+                            studentName: feedback.studentName,
+                        }].sort((a, b) => Number(b.studentId) - Number(a.studentId))
+                ));
+                setNotice('Student marked as spam.');
+                return;
+            }
+
+            const statusField = {
+                seen: 'isSeen',
+                bookmark: 'isBookmark',
+                spam: 'isSpam',
+            }[action];
+            if (!statusField || feedback[statusField]) return;
+
+            const { error } = await supabase.rpc('admin_update_feedback_flag', {
+                p_feedback_id: feedback.feedbackId,
+                p_action: action,
+            });
+            if (error) throw error;
+
+            setFeedbackRows((rows) => rows.map((row) => (
+                String(row.feedbackId) === String(feedback.feedbackId)
+                    ? { ...row, [statusField]: true }
+                    : row
+            )));
+            setNotice(
+                action === 'seen'
+                    ? 'Feedback marked as seen.'
+                    : action === 'bookmark'
+                        ? 'Feedback bookmarked.'
+                        : 'Feedback marked as spam.'
+            );
+        } catch (error) {
+            console.error('[admin-feedback] Moderation action failed:', error);
+            setNotice(error?.message || 'That feedback action could not be saved. Please try again.');
+        } finally {
+            setFeedbackActionBusy('');
+        }
+    }
 
     const displayName = adminProfile?.full_name || currentUser?.displayName || 'Administrator';
 
@@ -137,7 +257,7 @@ export default function AdminDashboard() {
                     <div className="admin-dash__kicker">Admin control center</div>
                     <h1 className="admin-dash__title">Command</h1>
                     <p className="admin-dash__sub">{displayName}</p>
-                    <div className="admin-pills" aria-label="Preview system counts">
+                    <div className="admin-pills" aria-label="Feedback counts">
                         <span><b>{stats.total}</b> Feedback</span>
                         <span><b>{stats.seen}</b> Seen</span>
                         <span className="is-gold"><b>{stats.remaining}</b> Remaining</span>
@@ -157,34 +277,113 @@ export default function AdminDashboard() {
                     <div className="admin-card__head">
                         <h2 className="admin-card__title" id="feedback-heading">
                             <MessageSquare size={16} style={{ marginRight: 8, verticalAlign: -2 }} />
-                            Feedback overview
+                            Student feedback
                         </h2>
+                        <span className="admin-card__tag">{stats.total} total</span>
                     </div>
+
                     <FeedbackDonut total={stats.total} seen={stats.seen} focus={fbFocus} onFocus={setFbFocus} />
-                    <ul className="admin-mod-list">
-                        {PREVIEW_FEEDBACK.map((row) => (
-                            <li className="admin-mod-row" key={row.id}>
-                                <div>
-                                    <div className="admin-row__title">{row.title}</div>
-                                    <div className="admin-row__sub">{row.type}</div>
-                                </div>
-                                <div className="admin-actions">
-                                    <button type="button" className="admin-chip admin-chip--seen" onClick={() => previewOnly('Preview: Set as seen — not saved.')}>
-                                        <Eye size={12} /> <span className="admin-chip__txt">Set as seen</span>
-                                    </button>
-                                    <button type="button" className="admin-chip admin-chip--mark" onClick={() => previewOnly('Preview: Bookmark — not saved.')}>
-                                        <Bookmark size={12} /> <span className="admin-chip__txt">Bookmark</span>
-                                    </button>
-                                    <button type="button" className="admin-chip admin-chip--flag" onClick={() => previewOnly('Preview: Flag feedback as spam — not saved.')}>
-                                        <Flag size={12} /> <span className="admin-chip__txt">Spam</span>
-                                    </button>
-                                    <button type="button" className="admin-chip admin-chip--gold" onClick={() => previewOnly('Preview: Set user as spam — not saved.')}>
-                                        Set user as spam
-                                    </button>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+
+                    {feedbackLoading ? (
+                        <div className="admin-feedback-state" role="status">Loading student feedback…</div>
+                    ) : feedbackError ? (
+                        <div className="admin-feedback-state admin-feedback-state--error" role="alert">
+                            <span>{feedbackError}</span>
+                            <button type="button" onClick={() => setFeedbackRetry((value) => value + 1)}>Retry</button>
+                        </div>
+                    ) : feedbackRows.length === 0 ? (
+                        <div className="admin-feedback-state">No student feedback has been submitted yet.</div>
+                    ) : (
+                        <div className="admin-feedback-list">
+                            {feedbackRows.map((feedback) => {
+                                const isExpanded = String(expandedFeedbackId) === String(feedback.feedbackId);
+                                const preview = getFeedbackPreview(feedback.description);
+                                const isBusy = feedbackActionBusy.startsWith(`${feedback.feedbackId}:`);
+
+                                return (
+                                    <motion.article
+                                        layout
+                                        key={feedback.feedbackId}
+                                        className="admin-feedback-card"
+                                        initial={{ opacity: 0, y: 8 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                                    >
+                                        <div className="admin-feedback-card__top">
+                                            <div className="admin-feedback-card__labels">
+                                                <span className="admin-feedback-type">{formatFeedbackType(feedback.type)}</span>
+                                                {feedback.isSeen && <span className="admin-feedback-state-tag">Seen</span>}
+                                                {feedback.isBookmark && <span className="admin-feedback-state-tag admin-feedback-state-tag--bookmark">Bookmarked</span>}
+                                                {feedback.isSpam && <span className="admin-feedback-state-tag admin-feedback-state-tag--spam">Spam</span>}
+                                            </div>
+
+                                            <div className="admin-feedback-menu">
+                                                <button
+                                                    type="button"
+                                                    className="admin-feedback-menu__trigger"
+                                                    aria-label="Feedback actions"
+                                                    aria-haspopup="menu"
+                                                    aria-expanded={String(openFeedbackMenu) === String(feedback.feedbackId)}
+                                                    onClick={() => setOpenFeedbackMenu((current) => (
+                                                        String(current) === String(feedback.feedbackId) ? null : feedback.feedbackId
+                                                    ))}
+                                                >
+                                                    <MoreVertical size={18} />
+                                                </button>
+
+                                                <AnimatePresence>
+                                                    {String(openFeedbackMenu) === String(feedback.feedbackId) && (
+                                                        <motion.div
+                                                            className="admin-feedback-menu__panel"
+                                                            role="menu"
+                                                            aria-label="Feedback actions"
+                                                            initial={{ opacity: 0, y: -4, scale: 0.98 }}
+                                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                            exit={{ opacity: 0, y: -3, scale: 0.98 }}
+                                                            transition={{ duration: 0.14 }}
+                                                        >
+                                                            <button type="button" role="menuitem" disabled={feedback.isSeen || isBusy} onClick={() => handleFeedbackAction(feedback, 'seen')}>
+                                                                <Eye size={15} /> {feedback.isSeen ? 'Already marked as seen' : 'Mark as seen'}
+                                                            </button>
+                                                            <button type="button" role="menuitem" disabled={feedback.isBookmark || isBusy} onClick={() => handleFeedbackAction(feedback, 'bookmark')}>
+                                                                <Bookmark size={15} /> {feedback.isBookmark ? 'Already bookmarked' : 'Bookmark feedback'}
+                                                            </button>
+                                                            <button type="button" role="menuitem" className="is-danger" disabled={feedback.isSpam || isBusy} onClick={() => handleFeedbackAction(feedback, 'spam')}>
+                                                                <Flag size={15} /> {feedback.isSpam ? 'Already marked as spam' : 'Mark feedback as spam'}
+                                                            </button>
+                                                            <button type="button" role="menuitem" className="is-danger" disabled={feedback.studentIsSpam || isBusy} onClick={() => handleFeedbackAction(feedback, 'student_spam')}>
+                                                                <UserX size={15} /> {feedback.studentIsSpam ? 'Student already marked as spam' : 'Mark student as spam'}
+                                                            </button>
+                                                        </motion.div>
+                                                    )}
+                                                </AnimatePresence>
+                                            </div>
+                                        </div>
+
+                                        <div className="admin-feedback-card__student">
+                                            <strong>{feedback.studentName || 'Unknown student'}</strong>
+                                            <span>Student ID: {feedback.studentId}</span>
+                                        </div>
+
+                                        <div className="admin-feedback-card__description">
+                                            {isExpanded ? String(feedback.description || '') : preview.text}
+                                        </div>
+                                        {preview.canExpand && (
+                                            <button
+                                                type="button"
+                                                className="admin-feedback-card__expand"
+                                                aria-expanded={isExpanded}
+                                                onClick={() => setExpandedFeedbackId(isExpanded ? null : feedback.feedbackId)}
+                                            >
+                                                {isExpanded ? 'Show less' : 'Review full feedback'}
+                                            </button>
+                                        )}
+                                    </motion.article>
+                                );
+                            })}
+                        </div>
+                    )}
+
                     {notice && <div className="admin-banner" role="status">{notice}</div>}
                 </section>
 
@@ -194,19 +393,23 @@ export default function AdminDashboard() {
                             <ShieldAlert size={16} style={{ marginRight: 8, verticalAlign: -2 }} />
                             Spam users
                         </h2>
+                        <span className="admin-card__tag">{spamStudents.length} flagged</span>
                     </div>
-                    <p className="admin-empty">No flagged students yet.</p>
-                    <div className="admin-mod-row is-preview">
-                        <span className="admin-status" aria-hidden />
-                        <div>
-                            <div className="admin-row__title">Sample preview row</div>
-                            <div className="admin-row__sub">preview.user@example.com</div>
+                    {spamStudents.length === 0 ? (
+                        <p className="admin-empty">No students have been marked as spam.</p>
+                    ) : (
+                        <div className="admin-spam-user-list">
+                            {spamStudents.map((student) => (
+                                <div className="admin-spam-user" key={student.studentId}>
+                                    <span className="admin-status" aria-hidden />
+                                    <div>
+                                        <div className="admin-row__title">{student.studentName || 'Unknown student'}</div>
+                                        <div className="admin-row__sub">Student ID: {student.studentId}</div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    </div>
-                    <div className="admin-actions" style={{ marginTop: '0.75rem' }}>
-                        <button type="button" className="admin-chip" onClick={() => previewOnly('Preview control — no user is flagged or restored.')}>Restore (preview)</button>
-                        <button type="button" className="admin-chip admin-chip--danger" onClick={() => previewOnly('Preview control — no user is deleted.')}>Remove flag (preview)</button>
-                    </div>
+                    )}
                 </section>
 
                 <Link to="/admin/courses" className="admin-card admin-card--span-4 admin-entry admin-entry--courses" aria-labelledby="courses-entry">
