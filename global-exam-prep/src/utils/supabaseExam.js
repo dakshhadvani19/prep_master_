@@ -92,6 +92,15 @@ export async function getTestRoomAttemptReview(attemptId) {
     }
 }
 
+export async function getExamAttemptReview(attemptId) {
+    try {
+        const result = await callExamAttemptApi({ action: 'review', attemptId });
+        return { record: result?.record || null, error: null };
+    } catch (error) {
+        return { record: null, error: error.message || 'Could not load this exam review.' };
+    }
+}
+
 export async function getMyAttempts(limit = 50) {
     try {
         const result = await callExamAttemptApi({ action: 'list', limit });
