@@ -264,12 +264,14 @@ describe('ExamPortal numeric / legacy resolution', () => {
     expect(ctx.subject.title).toBe('Calculus');
   });
 
-  it('legacy source SubjectId still resolves', () => {
-    const ctx = findSubjectContext(domains, SOURCE);
-    expect(ctx.kind).toBe('legacy');
-    expect(ctx.sourceSubjectId).toBe(SOURCE);
-    expect(ctx.course.id).toBe('btech-ce');
-    expect(ctx.subject.title).toBe('Calculus');
+  it('legacy source SubjectId still resolves regardless of code casing', () => {
+    for (const sourceId of [SOURCE, SOURCE.toUpperCase()]) {
+      const ctx = findSubjectContext(domains, sourceId);
+      expect(ctx.kind).toBe('legacy');
+      expect(ctx.sourceSubjectId).toBe(SOURCE);
+      expect(ctx.course.id).toBe('btech-ce');
+      expect(ctx.subject.title).toBe('Calculus');
+    }
   });
 
   it('unknown ids are not guessed into a subject', () => {
