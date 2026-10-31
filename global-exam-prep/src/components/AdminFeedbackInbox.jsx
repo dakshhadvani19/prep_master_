@@ -7,7 +7,7 @@ import { supabase } from '../supabase';
 import './AdminFeedbackInbox.css';
 
 function getFeedbackPreview(description, wordLimit = 15) {
-    const words = String(description || '').trim().split(/\s+/).filter(Boolean);
+    const words = String(description || '').trim().split(/\\s+/).filter(Boolean);
     return {
         text: words.length > wordLimit ? words.slice(0, wordLimit).join(' ') + '…' : words.join(' '),
         canExpand: words.length > wordLimit,
@@ -17,8 +17,35 @@ function getFeedbackPreview(description, wordLimit = 15) {
 function formatFeedbackType(type) {
     return String(type || 'other')
         .replace(/[_-]/g, ' ')
-        .replace(/\b\w/g, (letter) => letter.toUpperCase());
+        .replace(/\\b\\w/g, (letter) => letter.toUpperCase());
 }
+
+const FEEDBACK_FLAG_CONFIG = Object.freeze([
+    {
+        action: 'seen',
+        field: 'isSeen',
+        label: 'Seen',
+        Icon: Eye,
+        enabledMessage: 'Feedback marked as seen.',
+        disabledMessage: 'Feedback marked as unseen.',
+    },
+    {
+        action: 'bookmark',
+        field: 'isBookmark',
+        label: 'Bookmark',
+        Icon: Bookmark,
+        enabledMessage: 'Feedback bookmarked.',
+        disabledMessage: 'Bookmark removed.',
+    },
+    {
+        action: 'spam',
+        field: 'isSpam',
+        label: 'Spam',
+        Icon: Flag,
+        enabledMessage: 'Feedback marked as spam.',
+        disabledMessage: 'Spam flag removed.',
+    },
+]);
 
 export default function AdminFeedbackInbox() {
     const [feedbackRows, setFeedbackRows] = useState([]);
@@ -26,7 +53,7 @@ export default function AdminFeedbackInbox() {
     const [loading, setLoading] = useState(true);
     const [loadError, setLoadError] = useState('');
     const [retry, setRetry] = useState(0);
-    const [notice, setNotice] = useState('');
+    const [toast, setToast] = useState(null);
     const [expandedFeedbackId, setExpandedFeedbackId] = useState(null);
     const [openFeedbackMenu, setOpenFeedbackMenu] = useState(null);
     const [actionBusy, setActionBusy] = useState('');
@@ -74,69 +101,91 @@ export default function AdminFeedbackInbox() {
         };
     }, []);
 
-    async function handleFeedbackAction(feedback, action) {
-        const feedbackId = String(feedback.feedbackId);
-        const actionKey = feedbackId + ':' + action;
-        if (actionBusy) return;
+    useEffect(() => {
+        if (!toast) return undefined;
+        const timeoutId = window.setTimeout(() => setToast(null), 2800);
+        return () => window.clearTimeout(timeoutId);
+    }, [toast]);
 
+    function showToast(message, tone = 'success') {
+        setToast({ message, tone, id: String(Date.now()) + '-' + String(Math.random()) });
+    }
+
+    async function handleFeedbackToggle(feedback, action) {
+        const flag = FEEDBACK_FLAG_CONFIG.find((item) => item.action === action);
+        if (!flag || actionBusy) return;
+
+        const feedbackId = String(feedback.feedbackId);
+        setActionBusy(feedbackId + ':' + action);
         setOpenFeedbackMenu(null);
-        setActionBusy(actionKey);
-        setNotice('');
+
         try {
             if (!supabase) throw new Error('Feedback service is not configured.');
 
-            if (action === 'student_spam') {
-                if (feedback.studentIsSpam) return;
-                const { error } = await supabase.rpc('admin_mark_student_spam', {
-                    p_student_id: feedback.studentId,
-                });
-                if (error) throw error;
-
-                setFeedbackRows((rows) => rows.map((row) => (
-                    String(row.studentId) === String(feedback.studentId)
-                        ? { ...row, studentIsSpam: true }
-                        : row
-                )));
-                setSpamStudents((students) => (
-                    students.some((student) => String(student.studentId) === String(feedback.studentId))
-                        ? students
-                        : [...students, {
-                            studentId: feedback.studentId,
-                            studentName: feedback.studentName,
-                        }].sort((a, b) => Number(b.studentId) - Number(a.studentId))
-                ));
-                setNotice('Student marked as spam.');
-                return;
-            }
-
-            const statusField = {
-                seen: 'isSeen',
-                bookmark: 'isBookmark',
-                spam: 'isSpam',
-            }[action];
-            if (!statusField || feedback[statusField]) return;
-
-            const { error } = await supabase.rpc('admin_update_feedback_flag', {
+            const { data, error } = await supabase.rpc('admin_update_feedback_flag', {
                 p_feedback_id: feedback.feedbackId,
                 p_action: action,
             });
             if (error) throw error;
+            if (!data) throw new Error('The feedback status could not be confirmed. Please refresh and try again.');
 
             setFeedbackRows((rows) => rows.map((row) => (
                 String(row.feedbackId) === feedbackId
-                    ? { ...row, [statusField]: true }
+                    ? {
+                        ...row,
+                        isSeen: Boolean(data.isSeen),
+                        isBookmark: Boolean(data.isBookmark),
+                        isSpam: Boolean(data.isSpam),
+                    }
                     : row
             )));
-            setNotice(
-                action === 'seen'
-                    ? 'Feedback marked as seen.'
-                    : action === 'bookmark'
-                        ? 'Feedback bookmarked.'
-                        : 'Feedback marked as spam.'
+
+            if (data.ok === false) {
+                showToast(data.message || 'That status change is not allowed.', 'warning');
+                return;
+            }
+
+            showToast(
+                data[flag.field] ? flag.enabledMessage : flag.disabledMessage,
+                'success',
             );
         } catch (error) {
-            console.error('[admin-feedback] Moderation action failed:', error);
-            setNotice(error?.message || 'That feedback action could not be saved. Please try again.');
+            console.error('[admin-feedback] Moderation toggle failed:', error);
+            showToast(error?.message || 'That feedback action could not be saved. Please try again.', 'error');
+        } finally {
+            setActionBusy('');
+        }
+    }
+
+    async function handleStudentSpam(feedback) {
+        if (actionBusy || feedback.studentIsSpam) return;
+
+        setOpenFeedbackMenu(null);
+        setActionBusy('student:' + feedback.studentId);
+        try {
+            if (!supabase) throw new Error('Feedback service is not configured.');
+            const { error } = await supabase.rpc('admin_mark_student_spam', {
+                p_student_id: feedback.studentId,
+            });
+            if (error) throw error;
+
+            setFeedbackRows((rows) => rows.map((row) => (
+                String(row.studentId) === String(feedback.studentId)
+                    ? { ...row, studentIsSpam: true }
+                    : row
+            )));
+            setSpamStudents((students) => (
+                students.some((student) => String(student.studentId) === String(feedback.studentId))
+                    ? students
+                    : [...students, {
+                        studentId: feedback.studentId,
+                        studentName: feedback.studentName,
+                    }].sort((a, b) => Number(b.studentId) - Number(a.studentId))
+            ));
+            showToast('Student marked as spam.');
+        } catch (error) {
+            console.error('[admin-feedback] Student spam action failed:', error);
+            showToast(error?.message || 'The student could not be marked as spam.', 'error');
         } finally {
             setActionBusy('');
         }
@@ -189,7 +238,6 @@ export default function AdminFeedbackInbox() {
                             {feedbackRows.map((item) => {
                                 const isExpanded = String(expandedFeedbackId) === String(item.feedbackId);
                                 const preview = getFeedbackPreview(item.description);
-                                const isBusy = actionBusy.startsWith(String(item.feedbackId) + ':');
 
                                 return (
                                     <motion.article
@@ -203,16 +251,13 @@ export default function AdminFeedbackInbox() {
                                         <div className="admin-feedback-card__top">
                                             <div className="admin-feedback-card__labels">
                                                 <span className="admin-feedback-type">{formatFeedbackType(item.type)}</span>
-                                                {item.isSeen && <span className="admin-feedback-state-tag">Seen</span>}
-                                                {item.isBookmark && <span className="admin-feedback-state-tag admin-feedback-state-tag--bookmark">Bookmarked</span>}
-                                                {item.isSpam && <span className="admin-feedback-state-tag admin-feedback-state-tag--spam">Spam</span>}
                                             </div>
 
                                             <div className="admin-feedback-menu">
                                                 <button
                                                     type="button"
                                                     className="admin-feedback-menu__trigger"
-                                                    aria-label="Feedback actions"
+                                                    aria-label="More student actions"
                                                     aria-controls={String(openFeedbackMenu) === String(item.feedbackId) ? 'feedback-actions-' + item.feedbackId : undefined}
                                                     aria-expanded={String(openFeedbackMenu) === String(item.feedbackId)}
                                                     onClick={() => setOpenFeedbackMenu((current) => (
@@ -228,23 +273,20 @@ export default function AdminFeedbackInbox() {
                                                             id={'feedback-actions-' + item.feedbackId}
                                                             className="admin-feedback-menu__panel"
                                                             role="group"
-                                                            aria-label="Feedback actions"
+                                                            aria-label="Student actions"
                                                             initial={{ opacity: 0, y: -4, scale: 0.98 }}
                                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                                             exit={{ opacity: 0, y: -3, scale: 0.98 }}
                                                             transition={{ duration: 0.14 }}
                                                         >
-                                                            <button type="button" disabled={item.isSeen || isBusy} onClick={() => handleFeedbackAction(item, 'seen')}>
-                                                                <Eye size={15} /> {item.isSeen ? 'Already marked as seen' : 'Mark as seen'}
-                                                            </button>
-                                                            <button type="button" disabled={item.isBookmark || isBusy} onClick={() => handleFeedbackAction(item, 'bookmark')}>
-                                                                <Bookmark size={15} /> {item.isBookmark ? 'Already bookmarked' : 'Bookmark feedback'}
-                                                            </button>
-                                                            <button type="button" className="is-danger" disabled={item.isSpam || isBusy} onClick={() => handleFeedbackAction(item, 'spam')}>
-                                                                <Flag size={15} /> {item.isSpam ? 'Already marked as spam' : 'Mark feedback as spam'}
-                                                            </button>
-                                                            <button type="button" className="is-danger" disabled={item.studentIsSpam || isBusy} onClick={() => handleFeedbackAction(item, 'student_spam')}>
-                                                                <UserX size={15} /> {item.studentIsSpam ? 'Student already marked as spam' : 'Mark student as spam'}
+                                                            <button
+                                                                type="button"
+                                                                className="is-danger"
+                                                                disabled={item.studentIsSpam || Boolean(actionBusy)}
+                                                                onClick={() => handleStudentSpam(item)}
+                                                            >
+                                                                <UserX size={15} />
+                                                                {item.studentIsSpam ? 'Student already marked as spam' : 'Mark student as spam'}
                                                             </button>
                                                         </motion.div>
                                                     )}
@@ -270,13 +312,40 @@ export default function AdminFeedbackInbox() {
                                                 {isExpanded ? 'Show less' : 'Review full feedback'}
                                             </button>
                                         )}
+
+                                        <div
+                                            className="admin-feedback-toggles"
+                                            role="group"
+                                            aria-label={'Moderation flags for feedback ' + item.feedbackId}
+                                        >
+                                            {FEEDBACK_FLAG_CONFIG.map(({ action, field, label, Icon }) => {
+                                                const active = Boolean(item[field]);
+                                                return (
+                                                    <button
+                                                        key={action}
+                                                        type="button"
+                                                        role="switch"
+                                                        aria-label={label}
+                                                        aria-checked={active}
+                                                        className={'admin-feedback-toggle admin-feedback-toggle--' + action + (active ? ' is-active' : '')}
+                                                        disabled={Boolean(actionBusy)}
+                                                        onClick={() => handleFeedbackToggle(item, action)}
+                                                    >
+                                                        <Icon size={16} aria-hidden="true" />
+                                                        <span className="admin-feedback-toggle__label">{label}</span>
+                                                        <span className="admin-feedback-toggle__state" aria-hidden="true">
+                                                            {active ? 'On' : 'Off'}
+                                                        </span>
+                                                        <span className="admin-feedback-toggle__track" aria-hidden="true" />
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
                                     </motion.article>
                                 );
                             })}
                         </div>
                     )}
-
-                    {notice && <div className="admin-feedback-inbox__notice" role="status">{notice}</div>}
                 </section>
 
                 <aside className="admin-feedback-inbox__spam" aria-labelledby="spam-students-heading">
@@ -304,6 +373,24 @@ export default function AdminFeedbackInbox() {
                     )}
                 </aside>
             </div>
+
+            <AnimatePresence>
+                {toast && (
+                    <motion.div
+                        key={toast.id}
+                        className="admin-feedback-toast"
+                        data-tone={toast.tone}
+                        role="status"
+                        aria-live="polite"
+                        initial={{ opacity: 0, y: 16, scale: 0.98 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.98 }}
+                        transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                        {toast.message}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
