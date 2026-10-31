@@ -871,7 +871,7 @@ export default async function handler(req, res) {
             const participantKey = keys(code, user.id).participant;
             const previous = await getParticipant(code, user.id);
             if (previous?.status === 'disconnected') return fail(res, 409, 'You have already disconnected from this room and cannot rejoin it.');
-            const person = { userId: user.id, displayName: displayName(user), role: 'participant', status: 'waiting', connected: true, joinedAt: new Date().toISOString(), lastHeartbeat: Date.now(), answers: Array(room.questionCount || 30).fill(null), answerRevision: 0, attemptId: null };
+            const person = { userId: user.id, displayName: displayName(user), role: 'participant', status: 'waiting', connected: true, joinedAt: new Date().toISOString(), lastHeartbeat: Date.now(), answers: Array(room.questionCount || 30).fill(-1), answerRevision: 0, attemptId: null };
             const joinScript = [
                 "local raw = redis.call('GET', KEYS[1])",
                 "if not raw then return 'ERR:ROOM_NOT_FOUND' end",
