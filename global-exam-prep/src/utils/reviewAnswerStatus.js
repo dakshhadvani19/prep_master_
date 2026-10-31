@@ -12,13 +12,20 @@ export function getReviewStatus(question, userAnswers, isObjective) {
     if (!isObjective) return 'attempted';
 
     const selectedIndex = Number(answer);
-    const correctIndex = Number(question?.answer);
+    const correctAnswer = question?.answer;
+    const correctIndex = Number(correctAnswer);
+    if (
+        correctAnswer === null
+        || correctAnswer === undefined
+        || correctAnswer === ''
+        || !Number.isInteger(correctIndex)
+        || correctIndex < 0
+        || correctIndex > 3
+    ) return 'attempted';
+
     return Number.isInteger(selectedIndex)
         && selectedIndex >= 0
         && selectedIndex <= 3
-        && Number.isInteger(correctIndex)
-        && correctIndex >= 0
-        && correctIndex <= 3
         && selectedIndex === correctIndex
         ? 'correct'
         : 'wrong';
@@ -42,7 +49,12 @@ export function getReviewOptionState(optionIndex, correctAnswer, userAnswer) {
     const index = Number(optionIndex);
     const correctIndex = Number(correctAnswer);
     const selectedIndex = Number(userAnswer);
-    const hasCorrectAnswer = Number.isInteger(correctIndex) && correctIndex >= 0 && correctIndex <= 3;
+    const hasCorrectAnswer = correctAnswer !== null
+        && correctAnswer !== undefined
+        && correctAnswer !== ''
+        && Number.isInteger(correctIndex)
+        && correctIndex >= 0
+        && correctIndex <= 3;
     const hasUserAttempt = !isUnansweredAnswer(userAnswer);
     const isCorrect = hasCorrectAnswer && index === correctIndex;
     const isUserChoice = hasUserAttempt && index === selectedIndex;
@@ -50,6 +62,6 @@ export function getReviewOptionState(optionIndex, correctAnswer, userAnswer) {
     return {
         isCorrect,
         isUserChoice,
-        isWrongChoice: isUserChoice && !isCorrect,
+        isWrongChoice: hasCorrectAnswer && isUserChoice && !isCorrect,
     };
 }
