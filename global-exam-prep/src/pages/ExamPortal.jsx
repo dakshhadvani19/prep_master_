@@ -517,7 +517,6 @@ export default function ExamPortal() {
 
             let score = null;
             let actualTotalMarks = examInfo.totalMarks;
-            let percentage = null;
 
             // Score calculation happens in the server API using the answer key saved before the exam began.
             if (!attemptId) {
@@ -532,10 +531,6 @@ export default function ExamPortal() {
             actualTotalMarks = Number.isFinite(Number(submitResult.totalMarks))
                 ? Number(submitResult.totalMarks)
                 : actualTotalMarks;
-            percentage = score !== null && actualTotalMarks > 0
-                ? Math.round((score / actualTotalMarks) * 100)
-                : null;
-
             setExamState('submitted');
             navigate('/dashboard', { state: { justSubmitted: true, score, totalMarks: actualTotalMarks } });
 

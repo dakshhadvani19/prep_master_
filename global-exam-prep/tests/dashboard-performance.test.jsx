@@ -52,7 +52,7 @@ describe('student attempt history',()=>{
         expect(mocks.reconcileTestRoomAttempts).toHaveBeenCalledTimes(1);
         expect(mocks.getMyAttempts).toHaveBeenCalledWith(100);
         expect(mocks.getMyTestRoomAttempts).toHaveBeenCalledWith(100);
-        expect(screen.getByText('2',{selector:'.sd-metric strong'})).toBeInTheDocument();
+        expect(screen.getByText('Completed attempts').parentElement.querySelector('strong')).toHaveTextContent('2');
         expect(screen.getByRole('link',{name:/review answers/i})).toHaveAttribute('href','/review/room-attempt-1?attemptType=test_room');
     });
     it('does not show local history when persisted attempt retrieval fails',async()=>{
