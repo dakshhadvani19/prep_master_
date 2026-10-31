@@ -213,7 +213,7 @@ export default function AdminFeedbackInbox() {
                                                     type="button"
                                                     className="admin-feedback-menu__trigger"
                                                     aria-label="Feedback actions"
-                                                    aria-controls={'feedback-actions-' + item.feedbackId}
+                                                    aria-controls={String(openFeedbackMenu) === String(item.feedbackId) ? 'feedback-actions-' + item.feedbackId : undefined}
                                                     aria-expanded={String(openFeedbackMenu) === String(item.feedbackId)}
                                                     onClick={() => setOpenFeedbackMenu((current) => (
                                                         String(current) === String(item.feedbackId) ? null : item.feedbackId

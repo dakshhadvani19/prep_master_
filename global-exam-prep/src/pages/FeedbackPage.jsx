@@ -17,7 +17,7 @@ const FEEDBACK_TYPES = [
 
 export default function FeedbackPage() {
     const navigate = useNavigate();
-    const { session, currentUser, isAdmin } = useAuth();
+    const { session, currentUser, isAdmin, authLoading } = useAuth();
     const [type, setType] = useState('general');
     const [description, setDescription] = useState('');
     const [status, setStatus] = useState('idle'); // idle | loading | success | error
@@ -77,6 +77,10 @@ export default function FeedbackPage() {
             setErrorMsg(error?.message || 'Something went wrong. Please try again.');
         }
     };
+
+    if (authLoading) {
+        return <div className="container" role="status" style={{ paddingTop: '3rem', color: 'var(--text-secondary)' }}>Loading account…</div>;
+    }
 
     if (isAdmin) return <AdminFeedbackInbox />;
 
