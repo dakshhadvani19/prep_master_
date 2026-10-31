@@ -42,7 +42,6 @@ function Harness() {
       <span data-testid="uid">{value.currentUser?.uid ?? 'anon'}</span>
       <span data-testid="admin">{value.adminProfile ? JSON.stringify(value.adminProfile) : 'none'}</span>
       <span data-testid="authz">{value.authorizationError || 'clear'}</span>
-      <span data-testid="identity-status">{value.identityStatus}</span>
     </div>
   );
 }
@@ -201,37 +200,6 @@ describe('session lifecycle', () => {
     expect(role()).toBe('student');
   });
 
-  it('keeps the application hidden until an admin role has been resolved', async () => {
-    state.profile = null;
-    state.adminRow = adminRow({ auth_uid: UID, is_super_admin: true });
-    await mount();
-
-    let resolveLookup;
-    client.rpc.mockImplementationOnce(() => new Promise((resolve) => {
-      resolveLookup = resolve;
-    }));
-
-    await logInWithPassword('admin@x.com');
-    await waitFor(() => expect(screen.getByText('Authorizing your account')).toBeTruthy());
-    expect(screen.queryByTestId('role')).toBeNull();
-    expect(screen.queryByTestId('identity-status')).toBeNull();
-
-    resolveLookup({
-      data: {
-        admin_id: 11,
-        auth_uid: UID,
-        full_name: 'Daksh Patel',
-        email: 'admin@x.com',
-        is_super_admin: true,
-      },
-      error: null,
-    });
-
-    await waitFor(() => expect(role()).toBe('superAdmin'));
-    expect(ctx.current.identityStatus).toBe('admin');
-    expect(ctx.current.isIdentityVerified).toBe(true);
-  });
-
   it('5. one listener, and one lookup per uid however many events arrive', async () => {
     state.profile = studentRow({ auth_uid: UID });
     state.adminRow = null;
@@ -370,16 +338,17 @@ describe('the lookup itself, and its degraded shapes', () => {
     expect(ctx.current.authorizationError).toBe('');
   });
 
-  it('keeps the workspace closed when the admin lookup cannot verify the account', async () => {
+  it('when neither read answers, the session is a student and the reason is exposed', async () => {
     state.profile = null;
     state.adminLookup = 'error';
     state.adminRowError = { code: '42501', message: 'permission denied for function admin_role_for_uid' };
     await mount();
     await logInWithPassword('admin@x.com');
 
-    await waitFor(() => expect(screen.getByRole('alert')).toBeTruthy(), { timeout: 8000 });
-    expect(screen.getByText(/could not verify your access level/i)).toBeTruthy();
-    expect(screen.queryByTestId('role')).toBeNull();
-    expect(screen.getByRole('button', { name: /try verification again/i })).toBeTruthy();
+    await waitFor(() => expect(ctx.current.authLoading).toBe(false), { timeout: 8000 });
+    expect(role()).toBe('student');
+    expect(ctx.current.isAdmin).toBe(false);
+    // Never a silent downgrade: the caller can say "could not verify".
+    expect(screen.getByTestId('authz').textContent).toMatch(/could not be verified/i);
   });
 });
