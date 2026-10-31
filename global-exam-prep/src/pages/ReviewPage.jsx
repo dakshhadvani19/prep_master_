@@ -26,6 +26,8 @@ export default function ReviewPage() {
     useEffect(() => {
         let cancelled = false;
         async function loadRecord() {
+            setCurrentQ(0);
+            setActiveFilter(null);
             if (!currentUser?.uid) {
                 setRecord(null);
                 setLoadingRecord(false);
@@ -274,7 +276,7 @@ export default function ReviewPage() {
                                     style={{
                                         aspectRatio: '1',
                                         borderRadius: 'var(--radius-sm)',
-                                        background: displayQuestionIndex === questionIndex ? c.bg : c.bg,
+                                        background: c.bg,
                                         color: c.text,
                                         fontWeight: 700,
                                         display: 'flex',
