@@ -7,7 +7,6 @@ import {
     filterReviewQuestionIndices,
     getReviewOptionState,
     getReviewStatus,
-    isUnansweredAnswer,
 } from '../utils/reviewAnswerStatus';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistoryRecord } from '../utils/examHistoryStorage';
