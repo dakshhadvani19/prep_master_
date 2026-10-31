@@ -261,7 +261,7 @@ export default function AdminFeedbackInbox() {
                                                 <button
                                                     type="button"
                                                     className="admin-feedback-menu__trigger"
-                                                    aria-label="More student actions"
+                                                    aria-label="Feedback actions"
                                                     aria-controls={String(openFeedbackMenu) === String(item.feedbackId) ? 'feedback-actions-' + item.feedbackId : undefined}
                                                     aria-expanded={String(openFeedbackMenu) === String(item.feedbackId)}
                                                     onClick={() => setOpenFeedbackMenu((current) => (
@@ -277,15 +277,38 @@ export default function AdminFeedbackInbox() {
                                                             id={'feedback-actions-' + item.feedbackId}
                                                             className="admin-feedback-menu__panel"
                                                             role="group"
-                                                            aria-label="Student actions"
+                                                            aria-label="Feedback and student actions"
                                                             initial={{ opacity: 0, y: -4, scale: 0.98 }}
                                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                                             exit={{ opacity: 0, y: -3, scale: 0.98 }}
                                                             transition={{ duration: 0.14 }}
                                                         >
+                                                            {FEEDBACK_FLAG_CONFIG.map(({ action, field, label, Icon }) => {
+                                                                const active = Boolean(item[field]);
+                                                                return (
+                                                                    <button
+                                                                        key={action}
+                                                                        type="button"
+                                                                        role="switch"
+                                                                        aria-label={label}
+                                                                        aria-checked={active}
+                                                                        className={'admin-feedback-toggle admin-feedback-toggle--' + action + (active ? ' is-active' : '')}
+                                                                        disabled={Boolean(actionBusy)}
+                                                                        onClick={() => handleFeedbackToggle(item, action)}
+                                                                    >
+                                                                        <Icon size={16} aria-hidden="true" />
+                                                                        <span className="admin-feedback-toggle__label">{label}</span>
+                                                                        <span className="admin-feedback-toggle__state" aria-hidden="true">
+                                                                            {active ? 'On' : 'Off'}
+                                                                        </span>
+                                                                        <span className="admin-feedback-toggle__track" aria-hidden="true" />
+                                                                    </button>
+                                                                );
+                                                            })}
+                                                            <div className="admin-feedback-menu__divider" aria-hidden="true" />
                                                             <button
                                                                 type="button"
-                                                                className="is-danger"
+                                                                className="is-danger admin-feedback-menu__student-action"
                                                                 disabled={item.studentIsSpam || Boolean(actionBusy)}
                                                                 onClick={() => handleStudentSpam(item)}
                                                             >
@@ -317,34 +340,6 @@ export default function AdminFeedbackInbox() {
                                             </button>
                                         )}
 
-                                        <div
-                                            className="admin-feedback-toggles"
-                                            role="group"
-                                            aria-label={'Moderation flags for feedback ' + item.feedbackId}
-                                        >
-                                            {FEEDBACK_FLAG_CONFIG.map(({ action, field, label, Icon }) => {
-                                                const active = Boolean(item[field]);
-                                                return (
-                                                    <button
-                                                        key={action}
-                                                        type="button"
-                                                        role="switch"
-                                                        aria-label={label}
-                                                        aria-checked={active}
-                                                        className={'admin-feedback-toggle admin-feedback-toggle--' + action + (active ? ' is-active' : '')}
-                                                        disabled={Boolean(actionBusy)}
-                                                        onClick={() => handleFeedbackToggle(item, action)}
-                                                    >
-                                                        <Icon size={16} aria-hidden="true" />
-                                                        <span className="admin-feedback-toggle__label">{label}</span>
-                                                        <span className="admin-feedback-toggle__state" aria-hidden="true">
-                                                            {active ? 'On' : 'Off'}
-                                                        </span>
-                                                        <span className="admin-feedback-toggle__track" aria-hidden="true" />
-                                                    </button>
-                                                );
-                                            })}
-                                        </div>
                                     </motion.article>
                                 );
                             })}
