@@ -2,14 +2,27 @@ import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, CheckCircle, XCircle, MinusCircle, BarChart2, BookOpen, Loader } from 'lucide-react';
 import { domains, examPrompts } from '../data/mockData';
+import { findSubjectContext } from '../utils/subjectResolver';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistoryRecord } from '../utils/examHistoryStorage';
 import { getTestRoomAttemptReview } from '../utils/supabaseExam';
+
+function isUnansweredAnswer(value) {
+    return value === undefined || value === null || value === '' || value === -1 || value === '-1';
+}
+
+function getReviewStatus(question, userAnswers, isObjective) {
+    const answer = userAnswers?.[question.id];
+    if (isUnansweredAnswer(answer)) return 'unattempted';
+    if (!isObjective) return 'attempted';
+    return Number(answer) === Number(question.answer) ? 'correct' : 'wrong';
+}
 
 export default function ReviewPage() {
     const { historyId } = useParams();
     const navigate = useNavigate();
     const [currentQ, setCurrentQ] = useState(0);
+    const [activeFilter, setActiveFilter] = useState(null);
     const [record, setRecord] = useState(null);
     const [loadingRecord, setLoadingRecord] = useState(true);
     const { currentUser } = useAuth();
@@ -43,28 +56,39 @@ export default function ReviewPage() {
 
     // Summary stats - MUST be above conditional returns to satisfy React Hook rules
     const stats = useMemo(() => {
-        if (!record || !record.questions) return { correct: 0, wrong: 0, unattempted: 0, attempted: 0 };
-        
-        let correct = 0, wrong = 0, unattempted = 0;
-        const questions = record.questions;
+        if (!record || !Array.isArray(record.questions)) {
+            return { correct: 0, wrong: 0, unattempted: 0, attempted: 0 };
+        }
+
         const userAnswers = record.userAnswers || {};
         const isObjective = record.type === 'objective';
+        const counts = { correct: 0, wrong: 0, unattempted: 0 };
 
-        const getStatusLocal = (q) => {
-            const ua = userAnswers[q.id];
-            if (ua === undefined || ua === '') return 'unattempted';
-            if (isObjective) return ua == q.answer ? 'correct' : 'wrong';
-            return 'attempted';
-        };
-
-        questions.forEach(q => {
-            const s = getStatusLocal(q);
-            if (s === 'correct') correct++;
-            else if (s === 'wrong') wrong++;
-            else unattempted++;
+        record.questions.forEach((question) => {
+            const status = getReviewStatus(question, userAnswers, isObjective);
+            if (status in counts) counts[status] += 1;
         });
-        return { correct, wrong, unattempted, attempted: correct + wrong };
+
+        return { ...counts, attempted: counts.correct + counts.wrong };
     }, [record]);
+
+    const visibleQuestionIndices = useMemo(() => {
+        if (!Array.isArray(record?.questions)) return [];
+        const questions = record.questions;
+        const userAnswers = record.userAnswers || {};
+        const objective = record.type === 'objective';
+
+        if (!activeFilter) return questions.map((_, index) => index);
+
+        return questions.reduce((indices, question, index) => {
+            const status = getReviewStatus(question, userAnswers, objective);
+            const matches = activeFilter === 'attempted'
+                ? status === 'correct' || status === 'wrong'
+                : status === activeFilter;
+            if (matches) indices.push(index);
+            return indices;
+        }, []);
+    }, [record, activeFilter]);
 
     if (loadingRecord) {
         return (
@@ -106,23 +130,37 @@ export default function ReviewPage() {
     const examInfo = examPrompts[record.examType];
 
     // Get subject name
-    const getSubjectName = (subjectId) => {
-        for (const d of domains) {
-            for (const c of d.courses) {
-                const sub = c.subjects.find(s => s.id === subjectId);
-                if (sub) return sub.title;
-            }
-        }
-        return 'Unknown Subject';
-    };
+    const getSubjectName = (subjectId) => (
+        findSubjectContext(domains, subjectId).subject?.title
+        || (subjectId && !/^unknown$/i.test(String(subjectId)) ? String(subjectId) : 'Unknown Subject')
+    );
 
     // Per-question status helpers
-    const getStatus = (q) => {
-        const ua = userAnswers[q.id];
-        if (ua === undefined || ua === '') return 'unattempted';
-        if (isObjective) return ua == q.answer ? 'correct' : 'wrong';
-        return 'attempted'; // subjective — just mark answered
-    };
+    const getStatus = (question) => getReviewStatus(question, userAnswers, isObjective);
+
+    const displayQuestionIndex = visibleQuestionIndices.includes(currentQ)
+        ? currentQ
+        : (visibleQuestionIndices[0] ?? -1);
+    const currentVisiblePosition = visibleQuestionIndices.indexOf(displayQuestionIndex);
+    const q = displayQuestionIndex >= 0 ? questions[displayQuestionIndex] : null;
+    const qStatus = q ? getStatus(q) : 'unattempted';
+    const userAnswer = q ? userAnswers[q.id] : undefined;
+
+    function applyQuestionFilter(filter) {
+        const nextFilter = filter === 'all' ? null : filter;
+        setActiveFilter(nextFilter);
+        const nextIndices = nextFilter
+            ? questions.reduce((indices, question, index) => {
+                const status = getStatus(question);
+                const matches = nextFilter === 'attempted'
+                    ? status === 'correct' || status === 'wrong'
+                    : status === nextFilter;
+                if (matches) indices.push(index);
+                return indices;
+            }, [])
+            : questions.map((_, index) => index);
+        setCurrentQ(nextIndices[0] ?? 0);
+    }
 
     // Color mapping
     const statusColors = {
@@ -132,9 +170,9 @@ export default function ReviewPage() {
         attempted: { bg: 'rgba(59,130,246,0.15)', border: 'var(--accent-primary)', text: 'var(--accent-primary)' },
     };
 
-    const q = questions[currentQ];
-    const qStatus = getStatus(q);
-    const userAnswer = userAnswers[q.id];
+    const resolvedSubjectName = record.subjectName && !/^unknown subject$/i.test(record.subjectName)
+        ? record.subjectName
+        : getSubjectName(record.subjectId);
 
     return (
         <div className="container animate-fade-in" style={{ maxWidth: '1100px' }}>
@@ -150,7 +188,7 @@ export default function ReviewPage() {
             <div className="glass-panel" style={{ padding: '1.5rem 2rem', marginBottom: '1.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
                     <div>
-                        <h1 style={{ fontSize: '1.6rem', marginBottom: '0.25rem' }}>{record.subjectName || getSubjectName(record.subjectId)}</h1>
+                        <h1 style={{ fontSize: '1.6rem', marginBottom: '0.25rem' }}>{resolvedSubjectName}</h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                             {record.examTitle || examInfo?.title || record.examType} &bull; <span style={{ textTransform: 'capitalize' }}>{record.difficulty}</span> &bull; {new Date(record.date).toLocaleDateString()}
                             {record.attemptType === 'test_room' && <> &bull; {String(record.status || '').replaceAll('_', ' ')}</>}
@@ -177,22 +215,45 @@ export default function ReviewPage() {
             {isObjective && (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
                     {[
-                        { label: 'Total Questions', value: questions.length, icon: BarChart2, color: 'var(--accent-primary)', bg: 'rgba(59,130,246,0.1)' },
-                        { label: 'Attempted', value: stats.attempted, icon: CheckCircle, color: '#a78bfa', bg: 'rgba(167,139,250,0.1)' },
-                        { label: 'Correct', value: stats.correct, icon: CheckCircle, color: 'var(--success)', bg: 'rgba(16,185,129,0.1)' },
-                        { label: 'Wrong', value: stats.wrong, icon: XCircle, color: 'var(--danger)', bg: 'rgba(239,68,68,0.1)' },
-                        { label: 'Unattempted', value: stats.unattempted, icon: MinusCircle, color: 'var(--text-tertiary)', bg: 'rgba(107,114,128,0.1)' },
-                    ].map(({ label, value, icon: Icon, color, bg }) => (
-                        <div key={label} className="glass-panel" style={{ padding: '1.25rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            <div style={{ width: 40, height: 40, borderRadius: 'var(--radius-md)', background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                <Icon size={20} color={color} />
-                            </div>
-                            <div>
-                                <div style={{ fontSize: '1.5rem', fontWeight: 800, color }}>{value}</div>
-                                <div style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>{label}</div>
-                            </div>
-                        </div>
-                    ))}
+                        { filter: 'all', label: 'Total Questions', value: questions.length, icon: BarChart2, color: 'var(--accent-primary)', bg: 'rgba(59,130,246,0.1)' },
+                        { filter: 'attempted', label: 'Attempted', value: stats.attempted, icon: CheckCircle, color: '#a78bfa', bg: 'rgba(167,139,250,0.1)' },
+                        { filter: 'correct', label: 'Correct', value: stats.correct, icon: CheckCircle, color: 'var(--success)', bg: 'rgba(16,185,129,0.1)' },
+                        { filter: 'wrong', label: 'Wrong', value: stats.wrong, icon: XCircle, color: 'var(--danger)', bg: 'rgba(239,68,68,0.1)' },
+                        { filter: 'unattempted', label: 'Unattempted', value: stats.unattempted, icon: MinusCircle, color: 'var(--text-tertiary)', bg: 'rgba(107,114,128,0.1)' },
+                    ].map(({ filter, label, value, icon: Icon, color, bg }) => {
+                        const selected = filter === 'all' ? activeFilter === null : activeFilter === filter;
+                        const disabled = filter === 'all' && activeFilter === null;
+                        return (
+                            <button
+                                key={label}
+                                type="button"
+                                className="glass-panel"
+                                aria-pressed={selected}
+                                disabled={disabled}
+                                onClick={() => applyQuestionFilter(filter)}
+                                style={{
+                                    padding: '1.25rem',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '1rem',
+                                    textAlign: 'left',
+                                    cursor: disabled ? 'default' : 'pointer',
+                                    border: selected ? `1px solid ${color}` : '1px solid var(--glass-border)',
+                                    background: selected ? bg : 'var(--bg-secondary)',
+                                    opacity: disabled ? 0.8 : 1,
+                                    transition: 'border-color 0.15s ease, background-color 0.15s ease',
+                                }}
+                            >
+                                <div style={{ width: 40, height: 40, borderRadius: 'var(--radius-md)', background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                                    <Icon size={20} color={color} />
+                                </div>
+                                <div>
+                                    <div style={{ fontSize: '1.5rem', fontWeight: 800, color, fontVariantNumeric: 'tabular-nums' }}>{value}</div>
+                                    <div style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>{label}</div>
+                                </div>
+                            </button>
+                        );
+                    })}
                 </div>
             )}
 
@@ -202,6 +263,11 @@ export default function ReviewPage() {
                 {/* Question Palette */}
                 <div className="glass-panel" style={{ width: '100%', maxWidth: '240px', minWidth: '200px', padding: '1.25rem', flex: '0 0 auto' }}>
                     <h3 style={{ fontSize: '0.95rem', marginBottom: '1rem', color: 'var(--text-secondary)' }}>Question Palette</h3>
+                    {activeFilter && (
+                        <p style={{ fontSize: '0.72rem', color: 'var(--text-tertiary)', marginBottom: '0.75rem', textTransform: 'capitalize' }}>
+                            {activeFilter} · {visibleQuestionIndices.length} questions
+                        </p>
+                    )}
                     {isObjective && (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '1rem' }}>
                             {[
@@ -214,13 +280,16 @@ export default function ReviewPage() {
                         </div>
                     )}
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.4rem' }}>
-                        {questions.map((question, idx) => {
+                        {visibleQuestionIndices.map((questionIndex) => {
+                            const question = questions[questionIndex];
                             const s = getStatus(question);
                             const c = statusColors[s];
                             return (
                                 <button
-                                    key={idx}
-                                    onClick={() => setCurrentQ(idx)}
+                                    key={question.id ?? questionIndex}
+                                    aria-label={`Question ${questionIndex + 1} - ${s}`}
+                                    aria-current={displayQuestionIndex === questionIndex ? 'true' : undefined}
+                                    onClick={() => setCurrentQ(questionIndex)}
                                     style={{
                                         aspectRatio: '1',
                                         borderRadius: 'var(--radius-sm)',
@@ -247,6 +316,11 @@ export default function ReviewPage() {
 
                 {/* Question Detail */}
                 <div className="glass-panel" style={{ flex: 1, padding: '2rem', minWidth: '280px', display: 'flex', flexDirection: 'column' }}>
+                    {!q ? (
+                        <div role="status" style={{ padding: '2rem 1rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                            No questions match this filter.
+                        </div>
+                    ) : (<>
                     {/* Q Number + Status */}
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.75rem' }}>
                         <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 500 }}>
@@ -285,9 +359,9 @@ export default function ReviewPage() {
                     {isObjective && q.options && (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
                             {q.options.map((opt, idx) => {
-                                const isCorrect = idx == q.answer;
-                                const isUserChoice = userAnswer == idx;
-                                const wasUnattempted = userAnswer === undefined;
+                                const hasUserAttempt = !isUnansweredAnswer(userAnswer);
+                                const isCorrect = Number(idx) === Number(q.answer);
+                                const isUserChoice = hasUserAttempt && Number(userAnswer) === idx;
 
                                 let bg = 'var(--bg-tertiary)';
                                 let border = 'var(--glass-border)';
@@ -353,15 +427,18 @@ export default function ReviewPage() {
                     {/* Navigation */}
                     <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '1.5rem', borderTop: '1px solid var(--glass-border)', marginTop: 'auto' }}>
                         <button
-                            onClick={() => setCurrentQ(prev => Math.max(0, prev - 1))}
-                            disabled={currentQ === 0}
+                            onClick={() => {
+                                const previousIndex = visibleQuestionIndices[currentVisiblePosition - 1];
+                                if (previousIndex !== undefined) setCurrentQ(previousIndex);
+                            }}
+                            disabled={currentVisiblePosition <= 0}
                             style={{
                                 display: 'flex', alignItems: 'center', gap: '0.5rem',
                                 padding: '0.75rem 1.5rem',
                                 background: 'var(--bg-tertiary)',
                                 borderRadius: 'var(--radius-full)',
-                                opacity: currentQ === 0 ? 0.4 : 1,
-                                cursor: currentQ === 0 ? 'not-allowed' : 'pointer',
+                                opacity: currentVisiblePosition <= 0 ? 0.4 : 1,
+                                cursor: currentVisiblePosition <= 0 ? 'not-allowed' : 'pointer',
                                 color: 'var(--text-primary)',
                                 fontWeight: 500,
                                 border: '1px solid var(--glass-border)',
@@ -370,22 +447,26 @@ export default function ReviewPage() {
                             <ArrowLeft size={16} /> Previous
                         </button>
                         <button
-                            onClick={() => setCurrentQ(prev => Math.min(questions.length - 1, prev + 1))}
-                            disabled={currentQ === questions.length - 1}
+                            onClick={() => {
+                                const nextIndex = visibleQuestionIndices[currentVisiblePosition + 1];
+                                if (nextIndex !== undefined) setCurrentQ(nextIndex);
+                            }}
+                            disabled={currentVisiblePosition < 0 || currentVisiblePosition >= visibleQuestionIndices.length - 1}
                             style={{
                                 display: 'flex', alignItems: 'center', gap: '0.5rem',
                                 padding: '0.75rem 1.5rem',
                                 background: 'var(--accent-primary)',
                                 color: 'white',
                                 borderRadius: 'var(--radius-full)',
-                                opacity: currentQ === questions.length - 1 ? 0.4 : 1,
-                                cursor: currentQ === questions.length - 1 ? 'not-allowed' : 'pointer',
+                                opacity: currentVisiblePosition < 0 || currentVisiblePosition >= visibleQuestionIndices.length - 1 ? 0.4 : 1,
+                                cursor: currentVisiblePosition < 0 || currentVisiblePosition >= visibleQuestionIndices.length - 1 ? 'not-allowed' : 'pointer',
                                 fontWeight: 500,
                             }}
                         >
                             Next <ArrowRight size={16} />
                         </button>
                     </div>
+                    </>)}
                 </div>
             </div>
         </div>
