@@ -13,6 +13,11 @@ import { findSubjectContext } from '../utils/subjectResolver';
 import AttemptSourceBadge from '../components/AttemptSourceBadge';
 import './Dashboard.css';
 
+function resolveSubjectName(subjectId) {
+    return findSubjectContext(domains, subjectId).subject?.title
+        || (subjectId && !/^unknown$/i.test(String(subjectId)) ? String(subjectId) : 'Unknown Subject');
+}
+
 export default function Dashboard() {
     const [history, setHistory] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -89,10 +94,7 @@ export default function Dashboard() {
         return ()=>{cancelled=true;clearInterval(poll);if(bannerTimer)clearTimeout(bannerTimer);};
     },[currentUser?.uid,location.state?.justSubmitted]);
 
-    const getSubjectName=subjectId=>(
-        findSubjectContext(domains,subjectId).subject?.title
-        ||(subjectId&&!/^unknown$/i.test(String(subjectId))?String(subjectId):'Unknown Subject')
-    );
+    const getSubjectName = resolveSubjectName;
     const getExamName=examType=>examPrompts[examType]?.title||examType;
     const performance=useMemo(()=>{
         const finalStatuses={exam:['submitted','auto_submitted'],test_room:['submitted','auto_submitted','disconnected','timed_out']};
@@ -107,7 +109,7 @@ export default function Dashboard() {
         completed.forEach(attempt=>{
             const subjectId=attempt.subjectId||attempt.subjectName||'unknown',key=String(subjectId);
             const current=subjects.get(key)||{
-                subjectId,subjectName:attempt.subjectName||getSubjectName(subjectId),
+                subjectId,subjectName:attempt.subjectName||resolveSubjectName(subjectId),
                 semester:findSubjectContext(domains,subjectId).subject?.semester||null,
                 attempts:0,totalScore:0,totalMaxMarks:0,
             };
@@ -315,7 +317,6 @@ export default function Dashboard() {
                                             <h3 style={{ fontSize: '1.25rem' }}>{record.subjectName && !/^unknown subject$/i.test(record.subjectName) ? record.subjectName : getSubjectName(record.subjectId)}</h3>
                                             <span style={{ background: 'var(--bg-tertiary)', padding: '0.25rem 0.75rem', borderRadius: 'var(--radius-full)', fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--text-secondary)', border: '1px solid var(--border-color)' }}>{record.difficulty}</span>
                                         </div>
-                                        <AttemptSourceBadge attemptType={record.attemptType} />
                                     </div>
 
                                     <div style={{ display: 'flex', gap: '1.5rem', color: 'var(--text-tertiary)', fontSize: '0.9rem' }}>
@@ -333,7 +334,8 @@ export default function Dashboard() {
                                     </div>
                                 </div>
 
-                                <div style={{ textAlign: 'right', minWidth: '150px' }}>
+                                <div style={{ textAlign: 'right', minWidth: '150px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
+                                    <AttemptSourceBadge attemptType={record.attemptType} />
                                     {isScored ? (
                                         <>
                                             <div style={{ fontSize: '1.8rem', fontWeight: 700, color: statusColor }}>
