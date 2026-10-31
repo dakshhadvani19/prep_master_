@@ -10,7 +10,7 @@ import {
 } from '../utils/reviewAnswerStatus';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistoryRecord } from '../utils/examHistoryStorage';
-import { getTestRoomAttemptReview } from '../utils/supabaseExam';
+import { getExamAttemptReview, getTestRoomAttemptReview } from '../utils/supabaseExam';
 
 export default function ReviewPage() {
     const { historyId } = useParams();
@@ -21,32 +21,55 @@ export default function ReviewPage() {
     const [loadingRecord, setLoadingRecord] = useState(true);
     const { currentUser } = useAuth();
 
-    // Normal exams retain the local-history path; Test Room attempts are loaded
-    // from the owner-checked backend review endpoint because they survive disconnects.
+    // Normal exams retrieve answer keys only after owner-verified submission.
+    // Test Room reviews use their separate owner-checked endpoint.
     useEffect(() => {
         let cancelled = false;
         async function loadRecord() {
             setCurrentQ(0);
             setActiveFilter(null);
+            setLoadingRecord(true);
+
             if (!currentUser?.uid) {
                 setRecord(null);
                 setLoadingRecord(false);
                 return;
             }
-            setLoadingRecord(true);
+
             const localRecord = getExamHistoryRecord(currentUser.uid, historyId);
-            if (localRecord) {
-                setRecord(localRecord);
+            if (localRecord?.attemptId) {
+                const { record: savedReview } = await getExamAttemptReview(localRecord.attemptId);
+                if (cancelled) return;
+                setRecord(savedReview
+                    ? { ...localRecord, ...savedReview, id: localRecord.id, attemptId: localRecord.attemptId }
+                    : localRecord);
                 setLoadingRecord(false);
                 return;
             }
+
+            if (localRecord) {
+                if (!cancelled) {
+                    setRecord(localRecord);
+                    setLoadingRecord(false);
+                }
+                return;
+            }
+
             const { record: roomRecord } = await getTestRoomAttemptReview(historyId);
             if (!cancelled) {
                 setRecord(roomRecord);
                 setLoadingRecord(false);
             }
         }
-        loadRecord();
+
+        loadRecord().catch((error) => {
+            console.error('[review] Failed to load answer review:', error);
+            if (!cancelled) {
+                setRecord(null);
+                setLoadingRecord(false);
+            }
+        });
+
         return () => { cancelled = true; };
     }, [currentUser?.uid, historyId]);
 
