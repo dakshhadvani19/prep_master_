@@ -47,6 +47,10 @@ const FEEDBACK_FLAG_CONFIG = Object.freeze([
     },
 ]);
 
+const FEEDBACK_FLAG_BY_ACTION = Object.freeze(
+    Object.fromEntries(FEEDBACK_FLAG_CONFIG.map((flag) => [flag.action, flag])),
+);
+
 export default function AdminFeedbackInbox() {
     const [feedbackRows, setFeedbackRows] = useState([]);
     const [spamStudents, setSpamStudents] = useState([]);
@@ -112,7 +116,7 @@ export default function AdminFeedbackInbox() {
     }
 
     async function handleFeedbackToggle(feedback, action) {
-        const flag = FEEDBACK_FLAG_CONFIG.find((item) => item.action === action);
+        const flag = FEEDBACK_FLAG_BY_ACTION[action];
         if (!flag || actionBusy) return;
 
         const feedbackId = String(feedback.feedbackId);
