@@ -1,0 +1,415 @@
+/* PrepMaster inbox page — traditional structure, restrained violet/gold detail. */
+.admin-feedback-inbox {
+    --gold: #ffb454;
+    --muted: var(--text-secondary);
+    --text: var(--text-primary);
+    --line: var(--glass-border);
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 3vw, 1.5rem) 4rem;
+}
+
+.admin-feedback-inbox__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-feedback-inbox__eyebrow {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--gold);
+    font-size: 0.68rem;
+    font-weight: 750;
+    letter-spacing: 0.15em;
+}
+
+.admin-feedback-inbox__header h1 {
+    margin: 0;
+    font-size: clamp(1.85rem, 4vw, 2.5rem);
+    letter-spacing: -0.035em;
+}
+
+.admin-feedback-inbox__header p,
+.admin-feedback-inbox__section-head p {
+    margin: 0.45rem 0 0;
+    color: var(--muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.admin-feedback-inbox__stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem;
+}
+
+.admin-feedback-inbox__stats span {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--muted);
+    font-size: 0.72rem;
+}
+
+.admin-feedback-inbox__stats strong {
+    color: var(--text);
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.admin-feedback-inbox__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(230px, 0.7fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.admin-feedback-inbox__main,
+.admin-feedback-inbox__spam {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--bg-secondary);
+}
+
+.admin-feedback-inbox__section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.admin-feedback-inbox__section-head h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    font-size: 0.98rem;
+    letter-spacing: -0.01em;
+}
+
+.admin-feedback-inbox__section-head > span {
+    flex: 0 0 auto;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.admin-feedback-inbox__notice {
+    margin-top: 0.8rem;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid rgba(141, 123, 255, 0.22);
+    border-radius: 9px;
+    background: rgba(141, 123, 255, 0.08);
+    color: #d0c8ff;
+    font-size: 0.78rem;
+}
+
+/* Live feedback review — compact cards with a single overflow action menu. */
+.admin-feedback-list {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0.9rem 0 0;
+}
+
+.admin-feedback-card {
+    position: relative;
+    display: grid;
+    gap: 0.7rem;
+    min-width: 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.025);
+    transition: border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.admin-feedback-card:hover {
+    border-color: rgba(141, 123, 255, 0.28);
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.admin-feedback-card__top,
+.admin-feedback-card__labels,
+.admin-feedback-card__student {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.admin-feedback-card__top {
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.admin-feedback-card__labels {
+    flex-wrap: wrap;
+    gap: 0.38rem;
+}
+
+.admin-feedback-type,
+.admin-feedback-state-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 23px;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 650;
+    line-height: 1.2;
+    background: rgba(141, 123, 255, 0.12);
+    color: #c8befd;
+    border: 1px solid rgba(141, 123, 255, 0.2);
+}
+
+.admin-feedback-state-tag {
+    background: rgba(255, 255, 255, 0.045);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: var(--muted);
+    font-weight: 550;
+}
+
+.admin-feedback-state-tag--bookmark {
+    color: var(--gold);
+    border-color: rgba(255, 180, 84, 0.22);
+    background: rgba(255, 180, 84, 0.08);
+}
+
+.admin-feedback-state-tag--spam {
+    color: #f0a0a0;
+    border-color: rgba(239, 68, 68, 0.22);
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.admin-feedback-menu {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.admin-feedback-menu__trigger {
+    width: 40px;
+    height: 40px;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.045);
+    color: var(--text);
+    cursor: pointer;
+    transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.admin-feedback-menu__trigger:hover,
+.admin-feedback-menu__trigger[aria-expanded="true"] {
+    background: rgba(141, 123, 255, 0.13);
+    border-color: rgba(141, 123, 255, 0.38);
+    color: #d4ccff;
+}
+
+.admin-feedback-menu__panel {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    right: 0;
+    z-index: 30;
+    display: grid;
+    gap: 0.15rem;
+    width: max-content;
+    min-width: 220px;
+    max-width: min(270px, calc(100vw - 2.5rem));
+    padding: 0.35rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: #20222a;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
+}
+
+.admin-feedback-menu__panel button {
+    min-height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.55rem 0.65rem;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #e4e5eb;
+    font: inherit;
+    font-size: 0.77rem;
+    font-weight: 550;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.14s ease, color 0.14s ease;
+}
+
+.admin-feedback-menu__panel button:hover:not(:disabled) {
+    background: rgba(141, 123, 255, 0.12);
+    color: #d8d1ff;
+}
+
+.admin-feedback-menu__panel button.is-danger {
+    color: #e7b0b0;
+}
+
+.admin-feedback-menu__panel button.is-danger:hover:not(:disabled) {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ffc1c1;
+}
+
+.admin-feedback-menu__panel button:disabled {
+    opacity: 0.48;
+    cursor: not-allowed;
+}
+
+.admin-feedback-card__student {
+    flex-wrap: wrap;
+    gap: 0.35rem 0.7rem;
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.admin-feedback-card__student strong {
+    color: var(--text);
+    font-size: 0.82rem;
+    font-weight: 650;
+}
+
+.admin-feedback-card__student span {
+    padding-left: 0.7rem;
+    border-left: 1px solid var(--line);
+    font-variant-numeric: tabular-nums;
+}
+
+.admin-feedback-card__description {
+    color: #d6d8df;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.admin-feedback-card__expand {
+    justify-self: start;
+    padding: 0.15rem 0;
+    color: #b9adff;
+    font-size: 0.74rem;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.admin-feedback-card__expand:hover {
+    color: #ded8ff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.admin-feedback-state {
+    margin-top: 0.7rem;
+    padding: 1.1rem;
+    border: 1px dashed var(--line);
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+.admin-feedback-state--error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    border-style: solid;
+    border-color: rgba(239, 68, 68, 0.22);
+    color: #e4b5b5;
+    text-align: left;
+}
+
+.admin-feedback-state--error button {
+    flex: 0 0 auto;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid rgba(141, 123, 255, 0.28);
+    border-radius: 8px;
+    background: rgba(141, 123, 255, 0.1);
+    color: #d6ceff;
+    font-size: 0.75rem;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.admin-spam-user-list {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.admin-spam-user {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 0;
+    padding: 0.65rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.admin-spam-user .admin-row__title,
+.admin-spam-user .admin-row__sub {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    .admin-feedback-card {
+        padding: 0.8rem;
+    }
+
+    .admin-feedback-state--error {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .admin-feedback-card,
+    .admin-feedback-menu__trigger,
+    .admin-feedback-menu__panel,
+    .admin-feedback-menu__panel button {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .admin-feedback-inbox__layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .admin-feedback-inbox__spam {
+        order: 2;
+    }
+}
+
+@media (max-width: 680px) {
+    .admin-feedback-inbox__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-feedback-inbox__stats {
+        justify-content: flex-start;
+    }
+
+    .admin-feedback-inbox__main,
+    .admin-feedback-inbox__spam {
+        padding: 0.75rem;
+    }
+}

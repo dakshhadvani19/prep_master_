@@ -4,6 +4,7 @@ import {
     MessageSquare, Send, ChevronLeft, CheckCircle, Loader, AlertCircle, LogIn,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import AdminFeedbackInbox from '../components/AdminFeedbackInbox';
 
 const MAX_DESCRIPTION_LENGTH = 1000;
 const FEEDBACK_TYPES = [
@@ -76,6 +77,8 @@ export default function FeedbackPage() {
             setErrorMsg(error?.message || 'Something went wrong. Please try again.');
         }
     };
+
+    if (isAdmin) return <AdminFeedbackInbox />;
 
     if (status === 'success') {
         return (
