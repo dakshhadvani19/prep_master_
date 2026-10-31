@@ -67,6 +67,18 @@ describe('Test Room question/option shuffling', () => {
         });
     });
 
+    it('serializes missing participant choices as the -1 unanswered sentinel', () => {
+        expect(toCanonicalAnswerArray({ 0: 2 }, fixture.length)).toEqual([2, -1, -1]);
+        expect(scoreRoomAnswers(fixture, [2, -1, -1])).toEqual({
+            correct: 1,
+            incorrect: 0,
+            attempted: 1,
+            unattempted: 2,
+            points: 1,
+            totalQuestions: 3,
+        });
+    });
+
     it('scores unanswered questions without changing question count', () => {
         expect(scoreRoomAnswers(fixture, [0, -1, 1])).toEqual({
             correct: 1,
