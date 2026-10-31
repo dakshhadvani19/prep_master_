@@ -68,7 +68,7 @@ describe('Test Room question/option shuffling', () => {
     });
 
     it('scores unanswered questions without changing question count', () => {
-        expect(scoreRoomAnswers(fixture, [0, null, 1])).toEqual({
+        expect(scoreRoomAnswers(fixture, [0, -1, 1])).toEqual({
             correct: 1,
             incorrect: 1,
             attempted: 2,
