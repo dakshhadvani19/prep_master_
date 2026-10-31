@@ -184,12 +184,12 @@ describe('Test Room server-side validation and scoring', () => {
     });
 
     it('normalizes malformed answers to unanswered rather than accepting invalid indexes', () => {
-        expect(normalizeAnswers([0, 4, -1, '2', null], 5)).toEqual([0, null, null, null, null]);
-        expect(normalizeAnswers([3], 3)).toEqual([3, null, null]);
+        expect(normalizeAnswers([0, 4, -1, '2', null], 5)).toEqual([0, -1, -1, -1, -1]);
+        expect(normalizeAnswers([3], 3)).toEqual([3, -1, -1]);
     });
 
     it('scores only on the server-side canonical answer indexes', () => {
-        expect(scoreAnswers([2, 1, 0], [2, null, 3])).toEqual({
+        expect(scoreAnswers([2, 1, 0], [2, -1, 3])).toEqual({
             correct: 1,
             incorrect: 1,
             attempted: 2,
