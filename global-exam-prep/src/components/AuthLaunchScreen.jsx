@@ -24,7 +24,7 @@ const STAGE_COPY = {
     'loading-profile': {
         eyebrow: 'PREPMASTER / PROFILE',
         title: 'Loading account context',
-        detail: 'Retrieving the student profile linked to this verified account.',
+        detail: 'Retrieving the profile linked to this verified account.',
     },
     'preparing-workspace': {
         eyebrow: 'PREPMASTER / FINALIZING',
