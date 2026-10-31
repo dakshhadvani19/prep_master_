@@ -200,6 +200,7 @@ export default function ReviewPage() {
                         { filter: 'wrong', label: 'Wrong', value: stats.wrong, icon: XCircle, color: 'var(--danger)', bg: 'rgba(239,68,68,0.1)' },
                         { filter: 'unattempted', label: 'Unattempted', value: stats.unattempted, icon: MinusCircle, color: 'var(--text-tertiary)', bg: 'rgba(107,114,128,0.1)' },
                     ].map(({ filter, label, value, icon: Icon, color, bg }) => {
+                        void Icon; // ESLint's no-unused-vars rule does not count JSX-only references.
                         const selected = filter === 'all' ? activeFilter === null : activeFilter === filter;
                         const disabled = filter === 'all' && activeFilter === null;
                         return (

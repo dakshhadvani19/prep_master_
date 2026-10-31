@@ -37,7 +37,9 @@ export default function Dashboard() {
         try {
             window.localStorage?.removeItem(`prepmaster_exam_history_v1:${currentUser.uid}`);
             window.localStorage?.removeItem('prepmaster_exam_history_v1:anonymous');
-        } catch {}
+        } catch {
+            // Browser storage may be blocked; persisted attempt APIs still work.
+        }
         let cancelled=false, firstLoad=true, hasUnfinishedRoomAttempts=false, bannerTimer=null;
         if(location.state?.justSubmitted){
             setJustSubmitted(true);
