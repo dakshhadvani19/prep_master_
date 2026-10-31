@@ -52,7 +52,8 @@ export function buildAttemptReviewRecord(attempt, answerKey) {
             : answerKey && typeof answerKey === 'object'
                 ? answerKey[String(question.id)]
                 : null;
-        const correctIndex = Number(expected);
+        const hasExpectedAnswer = expected !== null && expected !== undefined && expected !== '';
+        const correctIndex = hasExpectedAnswer ? Number(expected) : Number.NaN;
         return {
             ...question,
             answer: Number.isInteger(correctIndex) && correctIndex >= 0 && correctIndex <= 3
