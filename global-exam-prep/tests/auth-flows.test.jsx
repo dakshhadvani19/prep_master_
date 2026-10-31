@@ -289,7 +289,9 @@ describe('sign up — Nodemailer OTP first, Supabase account second', () => {
     await mount();
     await fire('SIGNED_IN', makeSession(authUser()));
 
-    await waitFor(() => expect(ctx.current.profileError).toMatch(/trigger/i));
+    await waitFor(() => expect(screen.getByRole('alert')).toBeTruthy());
+    expect(screen.getByText(/no student profile is linked to this account/i)).toBeTruthy();
+    expect(screen.queryByTestId('role')).toBeNull();
     expect(callsTo('insert:students')).toHaveLength(0);
   });
 
@@ -298,7 +300,8 @@ describe('sign up — Nodemailer OTP first, Supabase account second', () => {
     await mount();
     await fire('SIGNED_IN', makeSession(authUser()));
 
-    await waitFor(() => expect(ctx.current.profileError).toMatch(/security policies/i));
+    await waitFor(() => expect(screen.getByRole('alert')).toBeTruthy());
+    expect(screen.getByText(/database blocked the student-profile check/i)).toBeTruthy();
   });
 });
 
