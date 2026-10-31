@@ -556,6 +556,7 @@ export default function ExamPortal() {
 
             saveExamHistory(currentUser.uid, {
                 id: Date.now(),
+                attemptId,
                 date: new Date().toISOString(),
                 subjectId: sourceSubjectId || "unknown",
                 subjectName: subjectDetail?.title || null,
