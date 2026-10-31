@@ -312,6 +312,14 @@ export const client = {
       return { data: { ...student, isSpam: true }, error: null };
     }
 
+    if (fn === 'admin_get_feedback_summary') {
+      const mine = ownAdminRow();
+      if (!mine) return { data: null, error: { code: '42501', message: 'not_authorized' } };
+      const total = state.feedbackRows.length;
+      const seen = state.feedbackRows.filter((row) => row.isSeen).length;
+      return { data: { total, seen }, error: null };
+    }
+
     if (fn !== 'admin_role_for_uid' || state.adminLookup === 'missing') {
       return {
         data: null,

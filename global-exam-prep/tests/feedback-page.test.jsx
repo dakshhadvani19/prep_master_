@@ -6,6 +6,7 @@ const mocks = vi.hoisted(() => ({
     useAuth: vi.fn(),
 }));
 vi.mock('../src/context/AuthContext', () => ({ useAuth: mocks.useAuth }));
+vi.mock('../src/components/AdminFeedbackInbox', () => ({ default: () => <div>ADMIN FEEDBACK INBOX</div> }));
 
 import FeedbackPage from '../src/pages/FeedbackPage';
 
@@ -29,6 +30,20 @@ afterEach(() => {
 });
 
 describe('FeedbackPage', () => {
+    it('shows the admin feedback inbox instead of the student submission form', () => {
+        mocks.useAuth.mockReturnValue({
+            studentId: null,
+            currentUser: { uid: 'verified-admin-uid' },
+            isAdmin: true,
+            session: { access_token: 'verified-admin-token' },
+        });
+
+        render(<MemoryRouter><FeedbackPage /></MemoryRouter>);
+        expect(screen.getByText('ADMIN FEEDBACK INBOX')).toBeTruthy();
+        expect(screen.queryByText('Feedback Type')).toBeNull();
+        expect(globalThis.fetch).not.toHaveBeenCalled();
+    });
+
     it('shows only Feedback Type and Description, without rating or personal-detail fields', () => {
         renderPage();
         expect(screen.getByText('Feedback Type')).toBeTruthy();

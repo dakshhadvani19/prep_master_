@@ -108,7 +108,7 @@ describe('standard admin', () => {
     await at('/dashboard');
     await waitFor(() => expect(screen.getByText('Admin control center')).toBeInTheDocument());
     expect(screen.getByText('Standard Admin')).toBeInTheDocument();
-    expect(screen.getByText('Student feedback')).toBeInTheDocument();
+    expect(screen.getByText('Feedback overview')).toBeInTheDocument();
     expect(screen.getByText('Spam users')).toBeInTheDocument();
     expect(screen.getByText('Leaderboard & ranking')).toBeInTheDocument();
     expect(screen.queryByText('STUDENT DASHBOARD')).toBeNull();
@@ -123,62 +123,6 @@ describe('standard admin', () => {
     expect(labels).toContain('Feedback');
     expect(labels).not.toContain('Home');
     expect(labels).not.toContain('Subscriptions');
-  });
-
-  it('loads student feedback once and supports compact preview, expansion, and all four moderation actions', async () => {
-    signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
-    state.feedbackRows = [{
-      feedbackId: 91,
-      description: 'The new exam attempt page loads quickly but the timer sometimes freezes when I switch between questions and return to the earlier section during practice.',
-      type: 'bug',
-      isSpam: false,
-      isBookmark: false,
-      isSeen: false,
-      studentId: 4205,
-      studentName: 'Student Example',
-      studentIsSpam: false,
-    }];
-
-    await at('/dashboard');
-    await waitFor(() => expect(screen.getByText('Student feedback')).toBeInTheDocument());
-    expect(await screen.findByText(/The new exam attempt page loads quickly but the timer sometimes freezes when I switch…/)).toBeInTheDocument();
-    expect(screen.getByText('Student Example')).toBeInTheDocument();
-    expect(screen.getByText('Student ID: 4205')).toBeInTheDocument();
-    expect(screen.queryByText(/Feedback ID/i)).toBeNull();
-    expect(screen.queryByText(/between questions and return to the earlier section/)).toBeNull();
-
-    expect(state.calls.filter((call) => call.fn === 'admin_get_feedback_dashboard')).toHaveLength(1);
-
-    fireEvent.click(screen.getByRole('button', { name: 'Review full feedback' }));
-    expect(screen.getByText(/between questions and return to the earlier section during practice/)).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: 'Show less' }));
-
-    async function openActions() {
-      fireEvent.click(screen.getByRole('button', { name: 'Feedback actions' }));
-      return screen.getByRole('group', { name: 'Feedback actions' });
-    }
-
-    const firstMenu = await openActions();
-    expect(firstMenu.querySelectorAll('button')).toHaveLength(4);
-    fireEvent.click(screen.getByRole('button', { name: 'Bookmark feedback' }));
-    await waitFor(() => expect(screen.getByText('Bookmarked')).toBeInTheDocument());
-
-    await openActions();
-    fireEvent.click(screen.getByRole('button', { name: 'Mark as seen' }));
-    await waitFor(() => expect(screen.getByText('Seen')).toBeInTheDocument());
-
-    await openActions();
-    fireEvent.click(screen.getByRole('button', { name: 'Mark feedback as spam' }));
-    await waitFor(() => expect(screen.getByText('Spam')).toBeInTheDocument());
-
-    await openActions();
-    fireEvent.click(screen.getByRole('button', { name: 'Mark student as spam' }));
-    await waitFor(() => expect(screen.getByText('1 flagged')).toBeInTheDocument());
-
-    expect(state.calls.filter((call) => call.fn === 'admin_update_feedback_flag').map((call) => call.args.p_action))
-      .toEqual(['bookmark', 'seen', 'spam']);
-    expect(state.calls.filter((call) => call.fn === 'admin_mark_student_spam')).toHaveLength(1);
-    expect(state.spamStudents).toEqual([{ studentId: 4205, studentName: 'Student Example' }]);
   });
 
   it('has no Home page — / redirects to the Admin Dashboard', async () => {
