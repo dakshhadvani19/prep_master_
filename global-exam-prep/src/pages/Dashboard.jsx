@@ -124,7 +124,7 @@ export default function Dashboard() {
                     setHistory(mergedHistory);
                     setHistoryError('');
                 }
-                const nextPending=examHistory.find(attempt=>attempt.type==='theory'&&attempt.reviewStatus==='pending');
+                const nextPending=examHistory.find(attempt=>attempt.type==='theory'&&['pending','evaluating'].includes(attempt.reviewStatus));
                 if(!cancelled&&nextPending&&!automaticEvaluationRunning.current&&activeEvaluations.current.size===0){
                     runEvaluation(nextPending.id,true).then(result=>{
                         if(!cancelled&&(result?.status==='completed'||result?.status==='failed')) refreshHistory();
