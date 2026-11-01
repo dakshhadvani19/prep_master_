@@ -625,6 +625,68 @@ export default function ReviewPage() {
                         </div>
                     )}
 
+                    {!isObjective && questionEvaluation && (
+                        <section aria-label='Question marking rubric' style={{ marginBottom: '2rem' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                                <div>
+                                    <h3 style={{ fontSize: '1.15rem', marginBottom: '0.25rem' }}>Marking rubric</h3>
+                                    <p style={{ color: 'var(--text-tertiary)', fontSize: '0.9rem' }}>How the marks for this answer were awarded</p>
+                                </div>
+                                <div style={{ padding: '0.55rem 0.9rem', borderRadius: 'var(--radius-md)', background: 'var(--bg-tertiary)', border: '1px solid var(--glass-border)', fontSize: '1rem', fontWeight: 800, color: 'var(--text-primary)', fontVariantNumeric: 'tabular-nums' }}>
+                                    {questionEvaluation.awardedMarks} / {questionEvaluation.maxMarks}M
+                                </div>
+                            </div>
+                            {questionEvaluation.feedback && (
+                                <p style={{ color: 'var(--text-secondary)', fontSize: '0.98rem', lineHeight: 1.65, marginBottom: '1rem' }}>{questionEvaluation.feedback}</p>
+                            )}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                                {questionEvaluation.criteria?.map((criterion, criterionIndex) => (
+                                    <article key={criterion.criterionIndex ?? criterionIndex} style={{ padding: '1.15rem 1.2rem', border: '1px solid var(--glass-border)', background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)' }}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.65rem' }}>
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                                                <h4 style={{ fontSize: '1rem', lineHeight: 1.45 }}>{criterion.criterion || `Rubric criterion ${criterionIndex + 1}`}</h4>
+                                                <RubricStatus status={criterion.status} />
+                                            </div>
+                                            <strong style={{ color: criterion.awardedMarks >= criterion.maxMarks ? 'var(--success)' : criterion.awardedMarks > 0 ? 'var(--warning)' : 'var(--danger)', fontSize: '0.95rem', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>
+                                                {criterion.awardedMarks} / {criterion.maxMarks}M
+                                            </strong>
+                                        </div>
+                                        {criterion.feedback && <p style={{ color: 'var(--text-secondary)', fontSize: '0.94rem', lineHeight: 1.6, marginBottom: '0.8rem' }}>{criterion.feedback}</p>}
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                                            {criterion.keyPoints?.map((point, pointIndex) => {
+                                                const pointColor = point.status === 'met' ? 'var(--success)' : point.status === 'partial' ? 'var(--warning)' : 'var(--danger)';
+                                                const PointIcon = point.status === 'met' ? CheckCircle : point.status === 'partial' ? AlertCircle : XCircle;
+                                                return (
+                                                    <div key={point.keyPointIndex ?? pointIndex} style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', padding: '0.75rem 0.85rem', borderRadius: 'var(--radius-sm)', background: 'var(--bg-tertiary)' }}>
+                                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem' }}>
+                                                            <PointIcon size={17} color={pointColor} style={{ flexShrink: 0, marginTop: '0.15rem' }} />
+                                                            <div style={{ flex: 1, minWidth: 0 }}>
+                                                                <p style={{ color: 'var(--text-primary)', fontSize: '0.94rem', lineHeight: 1.55 }}>{point.text}</p>
+                                                                <p style={{ color: pointColor, fontSize: '0.82rem', fontWeight: 700, marginTop: '0.2rem', textTransform: 'capitalize' }}>{point.status === 'met' ? 'Credit awarded' : point.status === 'partial' ? 'Partial credit' : 'Credit not awarded'}</p>
+                                                            </div>
+                                                        </div>
+                                                        {point.evidenceQuote && (
+                                                            <blockquote style={{ margin: '0.2rem 0 0 1.55rem', paddingLeft: '0.75rem', borderLeft: '2px solid var(--accent-primary)', color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.55 }}>
+                                                                Your answer: “{point.evidenceQuote}”
+                                                            </blockquote>
+                                                        )}
+                                                        {point.feedback && <p style={{ marginLeft: '1.55rem', color: 'var(--text-tertiary)', fontSize: '0.9rem', lineHeight: 1.5 }}>{point.feedback}</p>}
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </article>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+                    {!isObjective && q.answer && (
+                        <section aria-label='Model answer' style={{ marginBottom: '2rem', padding: '1.3rem 1.4rem', background: 'var(--bg-tertiary)', border: '1px solid var(--glass-border)', borderRadius: 'var(--radius-md)' }}>
+                            <h3 style={{ fontSize: '1.08rem', marginBottom: '0.8rem' }}>Model answer</h3>
+                            <ModelAnswerContent answer={q.answer} format={q.answerFormat} />
+                        </section>
+                    )}
+
                     {/* Navigation */}
                     <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '1.5rem', borderTop: '1px solid var(--glass-border)', marginTop: 'auto' }}>
                         <button
