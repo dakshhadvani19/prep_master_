@@ -1,7 +1,8 @@
 import { randomUUID } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import { createClient } from '@supabase/supabase-js';
-import { getExamTypesForSubject } from '../src/utils/subjectExamPolicy.js';
+import { getExamTypesForSubject, getSubjectExamInfo } from '../src/utils/subjectExamPolicy.js';
+import { parseQuestionBankForReview } from './_lib/question-bank-parser.js';
 import {
     MAX_UPLOAD_BYTES,
     UploadValidationError,
@@ -296,6 +297,15 @@ export default async function handler(req, res) {
             const subjectId = positiveInteger(url.searchParams.get('subjectId'), 'Subject ID');
             await getSubject(client, subjectId);
             const uploads = await listUploads(client, user.id, subjectId);
+            const uploadId = url.searchParams.get('uploadId');
+            if (uploadId) {
+                if (!uploads.some(item => item.id === uploadId)) throw new UploadValidationError('Upload not found for this subject.');
+                const { data, error } = await client.rpc('pm_admin_course_bank_get', {
+                    p_admin_auth_uid: user.id, p_upload_id: uploadId,
+                });
+                if (error) throw new Error('Could not load question-bank review.');
+                return res.status(200).json({ review: data });
+            }
             return res.status(200).json({ uploads });
         }
 
@@ -315,6 +325,62 @@ export default async function handler(req, res) {
         if (body.action === 'confirm_syllabus') {
             const result = await handleConfirmSyllabus(client, user.id, body);
             return res.status(200).json(result);
+        }
+        if (body.action === 'parse_question_bank') {
+            const subjectId = positiveInteger(body.subjectId, 'Subject ID');
+            const uploadId = String(body.uploadId || '');
+            if (!/^[0-9a-f-]{36}$/i.test(uploadId)) throw new UploadValidationError('Upload record is invalid.');
+            const uploads = await listUploads(client, user.id, subjectId);
+            const record = uploads.find(item => item.id === uploadId);
+            if (!record || record.kind !== 'question_bank' || !['validated_waiting_phase3','needs_review'].includes(record.status)) {
+                throw new UploadValidationError('This question bank is not ready for parsing.');
+            }
+            if (record.status === 'needs_review') {
+                const { data, error } = await client.rpc('pm_admin_course_bank_get', { p_admin_auth_uid: user.id, p_upload_id: uploadId });
+                if (error || !data) throw new Error('Could not load existing review.');
+                return res.status(200).json({ review: data });
+            }
+            const { data: fileData, error: downloadError } = await client.storage.from(BUCKET).download(record.object_path);
+            if (downloadError || !fileData) throw new Error('Original file is not available in private storage.');
+            const questions = await parseQuestionBankForReview(record, Buffer.from(await fileData.arrayBuffer()));
+            const { data, error } = await client.rpc('pm_admin_course_bank_save_review', {
+                p_admin_auth_uid: user.id, p_upload_id: uploadId, p_questions: questions,
+            });
+            if (error || !data) throw new Error('Could not save parsed question review.');
+            return res.status(200).json({ review: data });
+        }
+        if (body.action === 'save_review') {
+            const uploadId = String(body.uploadId || '');
+            if (!/^[0-9a-f-]{36}$/i.test(uploadId) || !Array.isArray(body.questions)) throw new UploadValidationError('Review payload is invalid.');
+            const { data, error } = await client.rpc('pm_admin_course_bank_save_review', {
+                p_admin_auth_uid: user.id, p_upload_id: uploadId, p_questions: body.questions,
+            });
+            if (error || !data) throw new Error('Could not save question-bank corrections.');
+            return res.status(200).json({ review: data });
+        }
+        if (body.action === 'publish_question_bank') {
+            const uploadId = String(body.uploadId || '');
+            if (!/^[0-9a-f-]{36}$/i.test(uploadId)) throw new UploadValidationError('Upload record is invalid.');
+            const { data: bankData, error: bankError } = await client.rpc('pm_admin_course_bank_get', {
+                p_admin_auth_uid: user.id, p_upload_id: uploadId,
+            });
+            if (bankError || !bankData?.bank) throw new UploadValidationError('Question bank was not found for publication.');
+            const subject = await getSubject(client, Number(bankData.bank.subject_id));
+            const examInfo = getSubjectExamInfo(bankData.bank.exam_type, subject.isDepartmentalSubject);
+            const expectedTotalMarks = Number(examInfo?.totalMarks) || null;
+            const { data, error } = await client.rpc('pm_admin_course_bank_publish', {
+                p_admin_auth_uid: user.id,
+                p_upload_id: uploadId,
+                p_expected_total_marks: expectedTotalMarks,
+                p_acknowledge_mark_mismatch: body.acknowledgeMarkMismatch === true,
+            });
+            if (error) throw new UploadValidationError(
+                error.message?.includes('generated_rubrics') ? 'Review all generated theory rubrics before publishing.'
+                    : error.message?.includes('included_questions') ? 'Fix or exclude all rejected questions before publishing.'
+                        : error.message?.includes('mark_total_mismatch') ? 'A full 30-question MCQ set has a mark total that differs from the selected exam format. Review and acknowledge the mismatch.'
+                            : 'Question bank could not be published. Review its validation status and try again.'
+            );
+            return res.status(200).json({ published: data });
         }
         return fail(res, 400, 'Unknown course-file action.');
     } catch (error) {

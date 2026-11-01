@@ -339,3 +339,7 @@ The current active repository task is tracked in [docs/DIPLOMA_EXAM_BANK_HANDOFF
 The /admin/courses locator supports PDF/DOCX syllabus uploads and PDF/DOCX/CSV question-bank uploads. Uploads use the private admin-course-files Storage bucket, authenticated resumable TUS transfer, an admin-verified API, and private.admin_course_uploads for durable state. Existing syllabus versions remain active until an administrator confirms a validated replacement. Validated question-bank files stay in validated_waiting_phase3; no Phase 2 code writes parsed questions to TestsData.
 
 The CSV template and limits are documented in docs/ADMIN_COURSES_PHASE2_PROGRESS.md. The live database migration is 20261101090011_admin_course_file_intake.
+
+## Admin Courses Phase 3 — question-bank ingestion
+
+PDF/DOCX/CSV sources are parsed with page/paragraph/row provenance into editable MCQ/theory review items. Ambiguous/incomplete questions remain visible as rejected rather than being guessed or silently dropped. Generated theory rubrics require review. Admin publication writes to private canonical bank/question/MCQ-set tables with SubjectId, CourseId, Semester and exam metadata. MCQ sets are groups of 30; incomplete remainders remain stored and reported. public.TestsData is unchanged. Student exam-generation picker integration remains separate.

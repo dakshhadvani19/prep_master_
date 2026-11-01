@@ -217,3 +217,95 @@
     .ac-uploads__phase-note { margin-left: 0; }
 }
 
+
+.ac-question-review {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(141,123,255,.25);
+    border-radius: 12px;
+    background: rgba(141,123,255,.045);
+}
+.ac-question-review__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: .75rem;
+}
+.ac-question-review__header h4 { margin: .28rem 0; font-size: .96rem; overflow-wrap: anywhere; }
+.ac-question-review__header p { margin: 0; color: var(--text-secondary); font-size: .76rem; }
+.ac-question-review__summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin: .85rem 0;
+}
+.ac-question-review__summary span {
+    padding: .38rem .55rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+    color: var(--text-secondary);
+    font-size: .72rem;
+}
+.ac-question-review__summary strong { color: var(--text-primary); }
+.ac-question-review__item {
+    display: grid;
+    gap: .6rem;
+    margin-top: .65rem;
+    padding: .8rem;
+    border: 1px solid var(--glass-border);
+    border-left: 3px solid rgba(255,180,84,.65);
+    border-radius: 9px;
+    background: rgba(12,14,18,.45);
+}
+.ac-question-review__item--valid { border-left-color: #22c58b; }
+.ac-question-review__item--rejected { border-left-color: #ef6262; }
+.ac-question-review__item--warning { border-left-color: #ffb454; }
+.ac-question-review__item-head { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.ac-question-review__item-head strong { font-size: .79rem; }
+.ac-question-review__item-head span { color: var(--text-secondary); font-size: .66rem; font-weight: 750; }
+.ac-question-review__source { margin: -.35rem 0 0; color: var(--text-tertiary); font-size: .69rem; }
+.ac-question-review label { display: grid; gap: .3rem; color: var(--text-secondary); font-size: .73rem; font-weight: 650; }
+.ac-question-review textarea,
+.ac-question-review input:not([type=checkbox]),
+.ac-question-review select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    min-height: 36px;
+    padding: .48rem .58rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+    color: var(--text-primary);
+    background: var(--bg-tertiary, #181b22);
+    font: inherit;
+    font-size: .76rem;
+}
+.ac-question-review textarea { resize: vertical; line-height: 1.45; }
+.ac-question-review__options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .55rem; }
+.ac-question-review__metadata { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .55rem; max-width: 360px; }
+.ac-question-review .ac-question-review__check { display: flex; align-items: center; gap: .45rem; font-size: .75rem; font-weight: 550; }
+.ac-question-review__check input { accent-color: var(--gold, #ffb454); }
+.ac-question-review__errors { margin: 0; padding: .55rem .7rem .55rem 1.8rem; border-radius: 7px; color: #ffb8b8; background: rgba(239,68,68,.07); font-size: .72rem; line-height: 1.5; }
+.ac-question-review__actions { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem; margin-top: .9rem; }
+.ac-question-review__actions .ac-btn { min-height: 40px; }
+.ac-question-review__actions > span { flex-basis: 100%; color: var(--text-tertiary); font-size: .72rem; }
+.ac-question-review__actions .ac-btn:disabled { opacity: .45; cursor: not-allowed; }
+@media (max-width: 600px) {
+    .ac-question-review { padding: .75rem; }
+    .ac-question-review__header { flex-direction: column; }
+    .ac-question-review__options,
+    .ac-question-review__metadata { grid-template-columns: 1fr; max-width: none; }
+    .ac-question-review__actions .ac-btn { width: 100%; }
+}
+.ac-question-review__mark-check {
+    display: grid;
+    gap: .38rem;
+    margin: .55rem 0 .8rem;
+    padding: .7rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    background: rgba(255,255,255,.02);
+}
+.ac-question-review__mark-check > strong { color: var(--text-primary); font-size: .77rem; }
+.ac-question-review__mark-check > span { color: var(--text-secondary); font-size: .72rem; }
+.ac-question-review__mark-check > span.is-warning { color: #ffb8b8; }

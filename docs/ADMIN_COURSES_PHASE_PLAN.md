@@ -69,17 +69,25 @@ Status: **Implemented; live Supabase migration applied and verified**
 
 ## Phase 3 — Parsing, normalization, validation and ingestion
 
-Status: **Planned; not implemented**
+Status: **Implemented; live Supabase migrations applied and verified**
 
-- Extract text and preserve page/paragraph/table/row context needed to trace a parsed question back to its source.
-- Identify question boundaries and separate question, options, answer key, model answer, marks and rubric.
-- Normalize MCQ labels/options and map the answer to one canonical option index. Reject ambiguous or incomplete questions rather than guessing.
-- Normalize theory model answers and rubrics. Generate a rubric only when the source has no rubric, and mark generated rubric content for admin review before publishing.
-- Validate duplicate questions, missing answers, invalid option counts, missing/invalid rubric allocations, mark totals and subject linkage.
-- Split approved MCQ questions into 30-question sets; do not discard the remainder silently. Store unused valid questions for later sets or show an explicit short-bank report.
-- Provide an admin review screen with valid, rejected and warning counts, source location, and per-question correction.
-- Write to the canonical question-bank index and supported storage contract. Keep subject/course/semester/exam/difficulty metadata explicit; never infer it from an opaque TestId.
-- Publish only after validation and admin confirmation. Keep ingestion idempotent so retries cannot duplicate a bank.
+- PDF parsing extracts page text and groups text spans into lines; DOCX parsing preserves paragraph locations; CSV parsing preserves source row numbers from the Phase 2 template.
+- Numbered question sections are split into question text, options, answer key, theory model answer, marks, difficulty and rubric.
+- MCQ answers are normalized to a zero-based option index. Ambiguous answers, missing answers, invalid option counts and duplicates remain visible as rejected items for admin correction or exclusion.
+- Theory items receive a generated draft rubric only when the source has none. Generated rubrics require explicit administrator review before publication.
+- Validation checks question completeness, positive marks, difficulty, MCQ options/answers and duplicates. Complete 30-question MCQ sets are compared against the selected subject's exam mark total; server-side publication requires explicit acknowledgement for mismatches.
+- Selected MCQs are stored deterministically in groups of 30. A short final remainder is retained as an incomplete set and reported, not discarded. Theory questions remain individually indexed.
+- Admin review shows extracted/valid/rejected/warning/selected counts, source location, editable question text/options/answers/marks/difficulty/rubric, inclusion controls and generated-rubric approval.
+- Canonical ingestion uses private.question_banks, private.question_bank_questions and private.question_bank_sets. Each bank copies verified SubjectId/CourseId/Semester/exam metadata from the source upload; no identity is inferred from TestId.
+- Publishing is separate, administrator-confirmed, server-revalidated and idempotent by source upload.
+- public.TestsData remains unchanged. Wiring this private index into the student exam-generation picker is a separate downstream integration.
+
+### Phase 3 implementation files
+
+- Parser: global-exam-prep/api/_lib/question-bank-parser.js.
+- Admin API actions: parse_question_bank, save_review, publish_question_bank; review retrieval uses the same authenticated admin endpoint.
+- UI: AdminCourseUploads.jsx and AdminCourseUploads.css.
+- Migrations: 20261101093432_admin_question_bank_ingestion.sql and 20261101094500_update_question_bank_publish_mark_totals.sql.
 
 ## Acceptance checks
 

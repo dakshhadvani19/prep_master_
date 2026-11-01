@@ -221,3 +221,7 @@ A separate title-based audit identified **58 activity-/workplace-based occurrenc
 Migration 20261101090011_admin_course_file_intake was applied on 2026-11-01. It creates private table private.admin_course_uploads, private Storage bucket admin-course-files, an authenticated admin-only Storage insert policy, and four RPCs executable only by service_role. The private table has RLS enabled and no anon/authenticated table grants. No columns or rows were added to public Courses, Subjects, or TestsData.
 
 See docs/ADMIN_COURSES_PHASE2_PROGRESS.md for verified permissions and the upload data contract.
+
+## Admin question-bank ingestion
+
+Migrations 20261101093432_admin_question_bank_ingestion and 20261101094500_update_question_bank_publish_mark_totals were applied on 2026-11-01. They create private.question_banks, private.question_bank_questions and private.question_bank_sets; all have RLS enabled and no direct anon/authenticated grants. The bank save/get RPCs and mark-total-aware publish RPC are executable only by service_role. The publish RPC derives expected exam marks server-side and requires explicit acknowledgement for complete-set mismatches. public.TestsData was not modified.

@@ -27,7 +27,9 @@ function statusLabel(upload) {
         uploading: 'Upload incomplete',
         validating: 'Validating',
         needs_confirmation: 'Ready to activate',
-        validated_waiting_phase3: 'Validated · Phase 3 pending',
+        validated_waiting_phase3: 'Validated · Ready to parse',
+        needs_review: 'Admin review required',
+        published: 'Published question bank',
         active: 'Active syllabus',
         superseded: 'Previous version',
         failed: 'Validation failed',
@@ -54,6 +56,11 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
     const [confirmingId, setConfirmingId] = useState(null);
     const [expandedId, setExpandedId] = useState(null);
     const [progress, setProgress] = useState({ uploaded: 0, total: 0 });
+    const [review, setReview] = useState(null);
+    const [reviewBusy, setReviewBusy] = useState(false);
+    const [reviewError, setReviewError] = useState('');
+    const [publishReport, setPublishReport] = useState(null);
+    const [markTotalsAcknowledged, setMarkTotalsAcknowledged] = useState(false);
     const fileInputRef = useRef(null);
 
     const activeSyllabus = useMemo(
@@ -76,10 +83,10 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
         return session;
     }, []);
 
-    const apiRequest = useCallback(async (method, payload = null) => {
+    const apiRequest = useCallback(async (method, payload = null, extraQuery = '') => {
         const session = await getSession();
         const url = method === 'GET'
-            ? '/api/admin-course-uploads?subjectId=' + encodeURIComponent(subject.subjectId)
+            ? '/api/admin-course-uploads?subjectId=' + encodeURIComponent(subject.subjectId) + (extraQuery ? '&' + extraQuery : '')
             : '/api/admin-course-uploads';
         const response = await fetch(url, {
             method,
@@ -286,15 +293,129 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
         }
     }
 
+
+    function validateReviewedQuestion(question) {
+        const errors = [];
+        if (!String(question.question_text || '').trim()) errors.push('Question text is required.');
+        const marks = Number(question.marks);
+        if (!Number.isFinite(marks) || marks <= 0) errors.push('Marks must be greater than zero.');
+        if (!['easy', 'medium', 'hard'].includes(question.difficulty)) errors.push('Choose a difficulty.');
+        if (question.question_type === 'mcq') {
+            if (!Array.isArray(question.options) || question.options.length !== 4 || question.options.some(value => !String(value || '').trim())) {
+                errors.push('MCQ needs four options.');
+            }
+            if (question.correct_option_index === null || question.correct_option_index === undefined || question.correct_option_index === '' || !Number.isInteger(Number(question.correct_option_index)) || Number(question.correct_option_index) < 0 || Number(question.correct_option_index) > 3) {
+                errors.push('Select the correct option.');
+            }
+        } else if (!String(question.model_answer || '').trim()) {
+            errors.push('Theory model answer is required.');
+        }
+        return {
+            ...question,
+            validation_errors: errors,
+            validation_status: errors.length ? 'rejected'
+                : question.rubric_generated && !question.rubric_reviewed ? 'warning' : 'valid',
+        };
+    }
+
+    async function openQuestionReview(upload) {
+        setReviewBusy(true);
+        setReviewError('');
+        setActionError('');
+        setPublishReport(null);
+        setMarkTotalsAcknowledged(false);
+        try {
+            const result = upload.status === 'validated_waiting_phase3'
+                ? await apiRequest('POST', { action: 'parse_question_bank', subjectId: subject.subjectId, uploadId: upload.id })
+                : await apiRequest('GET', null, 'uploadId=' + encodeURIComponent(upload.id));
+            if (!result.review?.bank) throw new Error('Question-bank review was not returned.');
+            setReview(result.review);
+            setNotice('Extracted questions are ready. Correct rejected items, review generated rubrics, save, and publish explicitly.');
+            await loadUploads();
+        } catch (error) {
+            setReviewError(error.message || 'Could not parse this question bank.');
+        } finally {
+            setReviewBusy(false);
+        }
+    }
+
+    function updateReviewQuestion(index, patch) {
+        setReview(current => {
+            if (!current) return current;
+            const questions = current.questions.map((question, i) => i === index
+                ? validateReviewedQuestion({ ...question, ...patch })
+                : question);
+            return { ...current, questions };
+        });
+    }
+
+    async function saveQuestionReview() {
+        if (!review?.bank?.source_upload_id) return null;
+        const questions = review.questions.map(validateReviewedQuestion);
+        setReview(current => ({ ...current, questions }));
+        const result = await apiRequest('POST', {
+            action: 'save_review',
+            uploadId: review.bank.source_upload_id,
+            questions,
+        });
+        setReview(result.review);
+        return result.review;
+    }
+
+    async function publishQuestionBank() {
+        setReviewBusy(true);
+        setReviewError('');
+        setPublishReport(null);
+        try {
+            await saveQuestionReview();
+            const result = await apiRequest('POST', {
+                action: 'publish_question_bank',
+                uploadId: review.bank.source_upload_id,
+                acknowledgeMarkMismatch: markTotalsAcknowledged,
+            });
+            setPublishReport(result.published);
+            setReview(current => ({
+                ...current,
+                bank: { ...current.bank, status: 'published', published_questions: result.published.published_questions },
+            }));
+            setNotice('Question bank published. Every included question is stored with canonical subject, course, semester and exam metadata.');
+            await loadUploads();
+        } catch (error) {
+            setReviewError(error.message || 'Could not publish this question bank.');
+        } finally {
+            setReviewBusy(false);
+        }
+    }
+
+    const includedQuestions = review?.questions?.filter(question => question.include_in_publish) || [];
+    const blockingQuestions = includedQuestions.filter(question => question.validation_status !== 'valid'
+        || (question.rubric_generated && !question.rubric_reviewed));
+    const examInfo = review ? getSubjectExamInfo(review.bank.exam_type, subject.isDepartmentalSubject) : null;
+    const expectedExamMarks = Number(examInfo?.totalMarks) || null;
+    const mcqQuestions = includedQuestions.filter(question => question.question_type === 'mcq')
+        .sort((a, b) => a.sort_order - b.sort_order);
+    const mcqMarkSets = Array.from({ length: Math.ceil(mcqQuestions.length / 30) }, (_, index) => {
+        const questions = mcqQuestions.slice(index * 30, (index + 1) * 30);
+        return {
+            set: index + 1,
+            count: questions.length,
+            marks: questions.reduce((total, question) => total + (Number(question.marks) || 0), 0),
+            complete: questions.length === 30,
+        };
+    });
+    const markTotalWarnings = expectedExamMarks
+        ? mcqMarkSets.filter(item => item.complete && item.marks !== expectedExamMarks)
+        : [];
+    const needsMarkAcknowledgement = markTotalWarnings.length > 0;
     const questionBankAllowed = examTypes.length > 0;
 
     return (
         <section className="ac-uploads" aria-labelledby="ac-uploads-title">
             <div className="ac-uploads__heading">
                 <div>
-                    <span className="ac-eyebrow">PHASE 2 · PRIVATE FILE INTAKE</span>
+                    <span className="ac-eyebrow">PHASE 2 + 3 · PRIVATE INTAKE & QUESTION BANK REVIEW</span>
                     <h3 id="ac-uploads-title">Syllabus &amp; question-bank files</h3>
-                    <p>Files are staged and checked before any syllabus replacement. Question-bank rows are not published in this phase.</p>
+                    <p>Validate source files, correct extracted questions, then publish an approved subject-linked question bank.</p>
                 </div>
                 <span className="ac-uploads__security"><ShieldCheck size={16} /> Admin-only</span>
             </div>
@@ -455,8 +576,15 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
                                         </div>
                                     )}
 
-                                    {upload.status === 'validated_waiting_phase3' && (
-                                        <p className="ac-uploads__phase-note">The original file and validation preview are saved. Question extraction, answer normalization and publishing are handled in Phase 3.</p>
+                                    {upload.kind === 'question_bank' && ['validated_waiting_phase3', 'needs_review'].includes(upload.status) && (
+                                        <div className="ac-uploads__item-actions">
+                                            <button type="button" className="ac-btn ac-btn--primary" disabled={reviewBusy || Boolean(busy)} onClick={() => openQuestionReview(upload)}>
+                                                {upload.status === 'needs_review' ? 'Continue question review' : 'Parse questions for review'}
+                                            </button>
+                                        </div>
+                                    )}
+                                    {upload.status === 'published' && upload.kind === 'question_bank' && (
+                                        <p className="ac-uploads__phase-note">This canonical question bank has been published with its subject, course, semester and exam type metadata.</p>
                                     )}
 
                                     {upload.status === 'failed' && (
@@ -465,6 +593,122 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
                                 </article>
                             ))}
                         </div>}
+
+
+            {review && (
+                <section className="ac-question-review" aria-labelledby="ac-question-review-title">
+                    <div className="ac-question-review__header">
+                        <div>
+                            <span className="ac-eyebrow">PHASE 3 · PARSE / NORMALIZE / QA</span>
+                            <h4 id="ac-question-review-title">{review.bank.source_file_name}</h4>
+                            <p>Subject {review.bank.subject_id} · Course {review.bank.course_id} · Semester {review.bank.semester} · {String(review.bank.exam_type).replace(/-/g, ' ').toUpperCase()}</p>
+                        </div>
+                        <span className={'ac-uploads__status ' + (review.bank.status === 'published' ? 'ac-uploads__status--active' : 'ac-uploads__status--needs_confirmation')}>
+                            {review.bank.status === 'published' ? 'Published' : 'Awaiting approval'}
+                        </span>
+                    </div>
+                    <div className="ac-question-review__summary">
+                        <span><strong>{review.bank.total_questions}</strong> extracted</span>
+                        <span><strong>{review.bank.valid_questions}</strong> valid</span>
+                        <span><strong>{review.bank.rejected_questions}</strong> rejected</span>
+                        <span><strong>{review.bank.warning_questions}</strong> warnings</span>
+                        <span><strong>{includedQuestions.length}</strong> selected to publish</span>
+                    </div>
+                    {mcqMarkSets.length > 0 && (
+                        <div className="ac-question-review__mark-check">
+                            <strong>MCQ mark totals</strong>
+                            {mcqMarkSets.map(item => (
+                                <span key={item.set} className={item.complete && expectedExamMarks && item.marks !== expectedExamMarks ? 'is-warning' : ''}>
+                                    Set {item.set}: {item.count} questions · {item.marks} marks
+                                    {item.complete && expectedExamMarks ? ' / ' + expectedExamMarks + ' expected' : item.complete ? ' · 30-question set' : ' · short remainder retained'}
+                                </span>
+                            ))}
+                            {needsMarkAcknowledgement && (
+                                <label className="ac-question-review__check">
+                                    <input type="checkbox" checked={markTotalsAcknowledged} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => setMarkTotalsAcknowledged(event.target.checked)} />
+                                    I checked the MCQ set mark totals against this exam format and approve the mismatch
+                                </label>
+                            )}
+                        </div>
+                    )}
+                    {review.questions.map((question, index) => (
+                        <article className={'ac-question-review__item ac-question-review__item--' + question.validation_status} key={question.id || question.sort_order}>
+                            <div className="ac-question-review__item-head">
+                                <strong>Question {question.sort_order} · {question.question_type.toUpperCase()}</strong>
+                                <span>{question.validation_status.toUpperCase()}</span>
+                            </div>
+                            <p className="ac-question-review__source">Source: {question.source_location?.page ? 'PDF page ' + question.source_location.page : question.source_location?.paragraph ? 'DOCX paragraph ' + question.source_location.paragraph : question.source_location?.row ? 'CSV row ' + question.source_location.row : 'Unspecified location'}</p>
+                            <label>Question text
+                                <textarea value={question.question_text} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => updateReviewQuestion(index, { question_text: event.target.value })} rows={2} />
+                            </label>
+                            {question.question_type === 'mcq' ? (
+                                <div className="ac-question-review__options">
+                                    {question.options.map((option, optionIndex) => (
+                                        <label key={optionIndex}>Option {String.fromCharCode(65 + optionIndex)}
+                                            <input value={option} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => {
+                                                const options = [...question.options];
+                                                options[optionIndex] = event.target.value;
+                                                updateReviewQuestion(index, { options });
+                                            }} />
+                                        </label>
+                                    ))}
+                                    <label>Correct option
+                                        <select value={question.correct_option_index ?? ''} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => updateReviewQuestion(index, { correct_option_index: event.target.value === '' ? null : Number(event.target.value) })}>
+                                            <option value="">Select answer</option>
+                                            {[0,1,2,3].map(i => <option value={i} key={i}>{String.fromCharCode(65 + i)}</option>)}
+                                        </select>
+                                    </label>
+                                </div>
+                            ) : (
+                                <label>Model answer
+                                    <textarea value={question.model_answer || ''} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => updateReviewQuestion(index, { model_answer: event.target.value })} rows={3} />
+                                </label>
+                            )}
+                            <div className="ac-question-review__metadata">
+                                <label>Marks<input type="number" min="0.5" step="0.5" value={question.marks ?? ''} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => updateReviewQuestion(index, { marks: event.target.value === '' ? null : Number(event.target.value) })} /></label>
+                                <label>Difficulty<select value={question.difficulty || ''} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => updateReviewQuestion(index, { difficulty: event.target.value })}><option value="">Choose</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select></label>
+                            </div>
+                            {question.question_type === 'theory' && (
+                                <label>Marking rubric
+                                    <textarea value={question.rubric || ''} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => updateReviewQuestion(index, { rubric: event.target.value, rubric_reviewed: false })} rows={3} />
+                                </label>
+                            )}
+                            {question.rubric_generated && (
+                                <label className="ac-question-review__check">
+                                    <input type="checkbox" checked={Boolean(question.rubric_reviewed)} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => updateReviewQuestion(index, { rubric_reviewed: event.target.checked })} />
+                                    I reviewed and approve this generated rubric
+                                </label>
+                            )}
+                            {question.validation_errors?.length > 0 && <ul className="ac-question-review__errors">{question.validation_errors.map((error, i) => <li key={i}>{error}</li>)}</ul>}
+                            <label className="ac-question-review__check">
+                                <input type="checkbox" checked={Boolean(question.include_in_publish)} disabled={reviewBusy || review.bank.status === 'published'} onChange={event => updateReviewQuestion(index, { include_in_publish: event.target.checked })} />
+                                Include this question in the published bank
+                            </label>
+                        </article>
+                    ))}
+                    {reviewError && <div className="ac-uploads__error" role="alert"><AlertCircle size={17} /><span>{reviewError}</span></div>}
+                    {publishReport && (
+                        <div className="ac-uploads__notice" role="status">
+                            <CheckCircle2 size={17} />
+                            <span>Published {publishReport.published_questions} questions. {publishReport.sets?.filter(item => !item.is_complete).length || 0} incomplete MCQ short set(s) retained rather than discarded.</span>
+                        </div>
+                    )}
+                    {review.bank.status !== 'published' && (
+                        <div className="ac-question-review__actions">
+                            <button type="button" className="ac-btn ac-btn--secondary" disabled={reviewBusy} onClick={async () => {
+                                setReviewBusy(true); setReviewError('');
+                                try { await saveQuestionReview(); setNotice('Question corrections saved.'); }
+                                catch (error) { setReviewError(error.message || 'Could not save review.'); }
+                                finally { setReviewBusy(false); }
+                            }}>Save review</button>
+                            <button type="button" className="ac-btn ac-btn--primary" disabled={reviewBusy || includedQuestions.length === 0 || blockingQuestions.length > 0 || (needsMarkAcknowledgement && !markTotalsAcknowledged)} onClick={publishQuestionBank}>
+                                Publish {includedQuestions.length} approved questions
+                            </button>
+                            <span>{blockingQuestions.length ? blockingQuestions.length + ' selected question(s) still need correction or rubric approval.' : needsMarkAcknowledgement && !markTotalsAcknowledged ? 'Acknowledge the exam mark-total mismatch before publishing.' : 'Only selected, validated questions can be published.'}</span>
+                        </div>
+                    )}
+                </section>
+            )}
 
             {activeSyllabus && <p className="ac-uploads__active-summary"><CheckCircle2 size={15} /> Active syllabus: <strong>{activeSyllabus.file_name}</strong></p>}
 

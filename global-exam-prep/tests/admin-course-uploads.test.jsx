@@ -113,7 +113,7 @@ describe('AdminCourseUploads', () => {
         await user.click(screen.getByRole('button', { name: /upload and validate/i }));
 
         expect(await screen.findByText(/Question-bank file validated and saved/i)).toBeTruthy();
-        expect(screen.getByText('Validated · Phase 3 pending')).toBeTruthy();
+        expect(screen.getByText('Validated · Ready to parse')).toBeTruthy();
         expect(screen.queryByRole('button', { name: /publish/i })).toBeNull();
         const startCall = globalThis.fetch.mock.calls.find(call => call[1]?.body?.includes('"action":"start"'));
         expect(JSON.parse(startCall[1].body)).toMatchObject({
@@ -177,6 +177,85 @@ describe('AdminCourseUploads', () => {
             action: 'confirm_syllabus',
             uploadId: 'pending-syllabus-id',
         });
+    });
+
+
+    it('reviews parsed questions and publishes only after generated rubrics are approved', async () => {
+        const user = userEvent.setup();
+        const upload = uploadRecord({
+            status: 'needs_review',
+            kind: 'question_bank',
+            file_name: 'review-me.csv',
+        });
+        const review = {
+            bank: {
+                id: 'bank-review-id',
+                source_upload_id: upload.id,
+                source_file_name: 'review-me.csv',
+                subject_id: 411,
+                course_id: 90,
+                semester: 2,
+                exam_type: 'mid-1',
+                status: 'review',
+                total_questions: 2,
+                valid_questions: 1,
+                rejected_questions: 0,
+                warning_questions: 1,
+                mcq_questions: 1,
+                theory_questions: 1,
+            },
+            questions: [
+                {
+                    id: 'question-mcq', sort_order: 1, question_type: 'mcq',
+                    question_text: 'Which structure follows FIFO?',
+                    options: ['Stack', 'Queue', 'Tree', 'Graph'], correct_option_index: 1,
+                    model_answer: '', marks: 1, difficulty: 'easy', rubric: '',
+                    rubric_generated: false, rubric_reviewed: false, source_location: { row: 2 },
+                    validation_status: 'valid', validation_errors: [], include_in_publish: true,
+                },
+                {
+                    id: 'question-theory', sort_order: 2, question_type: 'theory',
+                    question_text: 'Explain FIFO and LIFO.', options: [], correct_option_index: null,
+                    model_answer: 'FIFO is first in first out.', marks: 4, difficulty: 'medium',
+                    rubric: 'Generated draft rubric.', rubric_generated: true, rubric_reviewed: false,
+                    source_location: { row: 3 }, validation_status: 'warning', validation_errors: [],
+                    include_in_publish: true,
+                },
+            ],
+        };
+        const savedReview = {
+            ...review,
+            bank: { ...review.bank, valid_questions: 2, warning_questions: 0 },
+            questions: review.questions.map(q => q.id === 'question-theory'
+                ? { ...q, rubric_reviewed: true, validation_status: 'valid' } : q),
+        };
+        globalThis.fetch
+            .mockResolvedValueOnce(response({ uploads: [upload] }))
+            .mockResolvedValueOnce(response({ review }))
+            .mockResolvedValueOnce(response({ uploads: [upload] }))
+            .mockResolvedValueOnce(response({ review: savedReview }))
+            .mockResolvedValueOnce(response({ published: {
+                bank_id: review.bank.id, published_questions: 2,
+                sets: [{ set_number: 1, question_count: 1, is_complete: false }],
+            } }))
+            .mockResolvedValueOnce(response({ uploads: [{ ...upload, status: 'published' }] }));
+
+        render(<AdminCourseUploads subject={subject} examTypes={examTypes} />);
+        await user.click(await screen.findByRole('button', { name: /continue question review/i }));
+        expect(await screen.findByText(/Subject 411 · Course 90 · Semester 2/i)).toBeTruthy();
+        const publishButton = screen.getByRole('button', { name: /publish 2 approved questions/i });
+        expect(publishButton.disabled).toBe(true);
+        await user.click(screen.getByRole('checkbox', { name: /i reviewed and approve this generated rubric/i }));
+        expect(publishButton.disabled).toBe(false);
+        await user.click(publishButton);
+
+        expect(await screen.findByText(/Published 2 questions/i)).toBeTruthy();
+        expect(screen.getByText(/1 incomplete MCQ short set/i)).toBeTruthy();
+        const saveCall = globalThis.fetch.mock.calls.find(call => call[1]?.body?.includes('"action":"save_review"'));
+        const publishCall = globalThis.fetch.mock.calls.find(call => call[1]?.body?.includes('"action":"publish_question_bank"'));
+        expect(saveCall).toBeTruthy();
+        expect(publishCall).toBeTruthy();
+        expect(screen.getByText('Published question bank')).toBeTruthy();
     });
 
     it('keeps interrupted uploads visible and offers resume with the original file', async () => {

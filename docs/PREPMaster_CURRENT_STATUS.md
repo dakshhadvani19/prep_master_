@@ -273,3 +273,11 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - The API checks Supabase Auth and public.Admins; the service-role key is server-only.
 - Syllabus replacement is previewed and separately confirmed. Question-bank files remain staged for Phase 3 and are not published into TestsData.
 - See docs/ADMIN_COURSES_PHASE2_PROGRESS.md for limits, the CSV template contract, migration details and verification.
+
+## Admin Courses Phase 3 — question-bank ingestion
+
+- Admin uploads can parse PDF/DOCX/CSV question banks, retain rejected items with source location, review/correct each question, and publish an approved bank.
+- Private canonical tables store banks, normalized questions and deterministic 30-question MCQ sets; short remainders are retained.
+- Generated theory rubrics require review. Complete MCQ sets with exam mark-total mismatches require acknowledgement.
+- The student exam-generation picker integration is a separate downstream task.
+- See docs/ADMIN_COURSES_PHASE3_PROGRESS.md for parser constraints, migrations and verification.

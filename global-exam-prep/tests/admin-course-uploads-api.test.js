@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import process from 'node:process';
 import handler from '../api/admin-course-uploads.js';
 import { createClient } from '@supabase/supabase-js';
+import { getSubjectExamInfo } from '../src/utils/subjectExamPolicy.js';
 
 vi.mock('@supabase/supabase-js', () => ({ createClient: vi.fn() }));
 
@@ -168,6 +169,39 @@ describe('admin course upload API security and metadata', () => {
 
         expect(res.statusCode).toBe(400);
         expect(rpc).not.toHaveBeenCalled();
+    });
+
+
+    it('derives exam mark totals from the verified subject before calling the publish RPC', async () => {
+        const { client, rpc } = clientMock();
+        rpc.mockImplementation(async (name) => {
+            if (name === 'pm_admin_course_bank_get') {
+                return { data: { bank: { subject_id: 411, exam_type: 'mid-1' } }, error: null };
+            }
+            if (name === 'pm_admin_course_bank_publish') {
+                return { data: { bank_id: 'bank-id', published_questions: 30, sets: [] }, error: null };
+            }
+            return { data: [], error: null };
+        });
+        createClient.mockReturnValue(client);
+        const res = createResponse();
+        await handler({
+            method: 'POST',
+            url: '/api/admin-course-uploads',
+            headers: { authorization: 'Bearer verified-admin-token' },
+            body: {
+                action: 'publish_question_bank',
+                uploadId: 'a5d1f0b6-647b-4652-a97b-3e3d4f8c6b12',
+                acknowledgeMarkMismatch: true,
+            },
+        }, res);
+        const expected = getSubjectExamInfo('mid-1', false).totalMarks;
+        expect(res.statusCode).toBe(200);
+        expect(rpc).toHaveBeenCalledWith('pm_admin_course_bank_publish', expect.objectContaining({
+            p_admin_auth_uid: 'admin-auth-uid',
+            p_expected_total_marks: expected,
+            p_acknowledge_mark_mismatch: true,
+        }));
     });
 
     it('rejects unsupported request methods', async () => {

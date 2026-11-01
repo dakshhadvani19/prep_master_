@@ -361,6 +361,7 @@ export default function AdminCourses() {
                                                             subjectId: selectedSubject.subjectId,
                                                             courseId: selectedSubject.courseId,
                                                             semester: selectedSubject.sem,
+                                                            isDepartmentalSubject: selectedSubject.isDepartmentalSubject,
                                                         }}
                                                         examTypes={getExamTypesForSubject(selectedSubject.isDepartmentalSubject)}
                                                     />
