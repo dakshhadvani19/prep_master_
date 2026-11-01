@@ -101,7 +101,11 @@ export function validateTheoryAnswerPayload(question) {
 
         if (typeof question?.answer === 'string') {
             const lines = question.answer.split(/\r?\n/);
-            const separatorIndex = lines.findIndex(line => /^\s*\|[\s:|\-]+\|\s*$/.test(line));
+            const separatorIndex = lines.findIndex((line) => {
+                if (!/^\s*\|.*\|\s*$/.test(line)) return false;
+                const cells = line.split('|').slice(1, -1).map(cell => cell.trim());
+                return cells.length === 3 && cells.every(cell => /^:?-{3,}:?$/.test(cell));
+            });
             const comparisonRows = separatorIndex >= 0
                 ? lines.slice(separatorIndex + 1).filter(line => /^\s*\|.*\|\s*$/.test(line))
                 : [];
