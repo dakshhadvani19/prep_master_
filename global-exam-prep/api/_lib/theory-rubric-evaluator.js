@@ -249,7 +249,7 @@ export async function evaluateTheoryAttempt(attempt, apiKey) {
         'Provide clear, concise feedback that explains what was correct and what was missing. Be constructive and do not penalize grammar unless it makes the technical meaning unclear.',
         'Return one valid JSON object with keys overallFeedback, strengths, improvementAreas, and questions. Each question must contain questionId, feedback, and criteria. Each criterion must contain criterionIndex, awardedMarks, feedback, and keyPoints. Each key point must contain keyPointIndex, status, evidenceQuote, and feedback.',
         'Include every supplied question, every rubric criterion, and every rubric key point exactly once and in the same order. Never omit a required field: use an empty string or empty array when necessary. Do not wrap JSON in markdown.',
-    ].join('\\n');
+    ].join('\n');
 
     let body = {};
     let rawContent = '';
@@ -293,7 +293,7 @@ export async function evaluateTheoryAttempt(attempt, apiKey) {
         if (!isTemporary || providerAttempt === maxProviderAttempts) throw lastError;
 
         const retryAfterHeader = Number(response.headers?.get?.('retry-after'));
-        const retryText = message.match(/try again in\\s+([\\d.]+)\\s*(ms|milliseconds|s|sec|seconds)/i);
+        const retryText = message.match(/try again in\s+([\d.]+)\s*(ms|milliseconds|s|sec|seconds)/i);
         const providerDelay = retryAfterHeader > 0
             ? retryAfterHeader * 1000
             : retryText
