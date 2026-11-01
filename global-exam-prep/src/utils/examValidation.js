@@ -274,8 +274,9 @@ export function validateExam(questions, config, coveragePlan) {
 export function stripReviewMetadata(questions) {
     return questions.map((q) => {
         if (q.type === 'mcq') {
-            const { review, ...rest } = q;
-            return rest;
+            const studentQuestion = { ...q };
+            delete studentQuestion.review;
+            return studentQuestion;
         }
         return q;
     });
