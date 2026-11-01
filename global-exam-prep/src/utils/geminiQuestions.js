@@ -171,7 +171,9 @@ function validateCommonQuestions(questions, count, isObjective = false, expected
                 throw new Error(`AI response format error: MCQ ${index + 1} must have an answer index from 0 to 3.`);
             }
         } else {
-            const theoryValidation = validateTheoryAnswerPayload(question);
+            const expectedMark = Array.isArray(expectedMarks) ? expectedMarks[index] : undefined;
+            const theoryQuestion = expectedMark === undefined ? question : { ...question, marks: expectedMark };
+            const theoryValidation = validateTheoryAnswerPayload(theoryQuestion);
             if (!theoryValidation.valid) {
                 throw new Error(`AI response format error: theory question ${index + 1}: ${theoryValidation.errors.join(', ')}`);
             }
