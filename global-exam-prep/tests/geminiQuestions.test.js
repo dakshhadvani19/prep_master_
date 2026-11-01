@@ -113,11 +113,26 @@ function buildMcqBody(count, stemOffset = 0) {
     return { choices: [{ message: { content: JSON.stringify({ questions }) } }] };
 }
 
-function buildTheoryBody(count, marksSequence, stemOffset = 0) {
-    const questions = Array.from({ length: count }, (_, i) => ({
-        text: THEORY_STEMS[(stemOffset + i) % THEORY_STEMS.length],
-        marks: marksSequence?.[i] ?? 4,
+function buildTheoryQuestion(text, marks) {
+    const isComparison = marks >= 2 && /compare|differentiat|difference/i.test(text);
+    const criterionCount = isComparison ? marks : (marks === 1 ? 1 : marks === 2 ? 2 : marks === 4 ? 4 : 8);
+    const rubric = Array.from({ length: criterionCount }, (_, index) => ({
+        criterion: isComparison ? `Comparison row ${index + 1}` : `Expected point ${index + 1}`,
+        marks: 1,
+        keyPoints: isComparison ? ['Correct fact for side A', 'Corresponding fact for side B'] : [`Required concept ${index + 1}`],
+        acceptedAlternatives: [],
     }));
+    const answer = isComparison
+        ? `| Basis | Side A | Side B |\\n|---|---|---|\\n${rubric.map((_, index) => `| Basis ${index + 1} | Side A point ${index + 1} | Side B point ${index + 1} |`).join('\\n')}`
+        : rubric.map((_, index) => `${index + 1}. Expected answer point ${index + 1}.`).join('\\n');
+    return { text, marks, answer, answerFormat: isComparison ? 'comparison' : 'points', rubric };
+}
+
+function buildTheoryBody(count, marksSequence, stemOffset = 0) {
+    const questions = Array.from({ length: count }, (_, i) => buildTheoryQuestion(
+        THEORY_STEMS[(stemOffset + i) % THEORY_STEMS.length],
+        marksSequence?.[i] ?? 4,
+    ));
     return { choices: [{ message: { content: JSON.stringify({ questions }) } }] };
 }
 
@@ -172,8 +187,64 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
             result.forEach((q, i) => {
                 expect(q.type).toBe('subjective');
                 expect(q.marks).toBe([4, 8, 4][i]);
+                expect(q.answer).toBeTruthy();
+                expect(q.answerFormat).toBe('points');
+                expect(Array.isArray(q.rubric)).toBe(true);
+                expect(q.rubric.reduce((sum, item) => sum + item.marks, 0)).toBe(q.marks);
+                expect(q.rubric.length).toBeLessThanOrEqual(12);
             });
         });
+    });
+
+    it('asks Groq for concise model answers and mark-weighted rubrics', async () => {
+        const { generateQuestionsFromText } = await importModule();
+        fetchMock.mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(1, [8])));
+        await generateQuestionsFromText({
+            text: 'Syllabus content about operating systems. ' + 'x'.repeat(200),
+            difficulty: 'medium',
+            count: 1,
+            isObjective: false,
+            marksForQuestions: [8],
+        });
+        const request = JSON.parse(fetchMock.mock.calls[0][1].body);
+        expect(request.messages[0].content).toContain('machine-readable marking rubric');
+        expect(request.messages[1].content).toContain('absolute maximum 12 rubric criteria');
+        expect(request.messages[1].content).toContain('exactly 8 points on each side');
+        expect(request.messages[1].content).toContain('"acceptedAlternatives"');
+    });
+
+    it('accepts exactly eight paired rows for an 8-mark differentiation answer', async () => {
+        const { generateQuestionsFromText } = await importModule();
+        fetchMock.mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(1, [8], 18)));
+        const result = await generateQuestionsFromText({
+            text: 'Syllabus content comparing HTTP and HTTPS. ' + 'x'.repeat(200),
+            difficulty: 'medium',
+            count: 1,
+            isObjective: false,
+            marksForQuestions: [8],
+        });
+        expect(result[0].answerFormat).toBe('comparison');
+        expect(result[0].rubric).toHaveLength(8);
+        expect(result[0].rubric.every(item => item.marks === 1 && item.keyPoints.length === 2)).toBe(true);
+        expect(fetchMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('retries theory output when rubric marks do not add up to the question marks', async () => {
+        const { generateQuestionsFromText } = await importModule();
+        const invalidBody = buildTheoryBody(1, [4]);
+        const parsed = JSON.parse(invalidBody.choices[0].message.content);
+        parsed.questions[0].rubric[0].marks = 2;
+        invalidBody.choices[0].message.content = JSON.stringify(parsed);
+        fetchMock.mockResolvedValue(mockJsonResponse(200, invalidBody));
+
+        await expect(generateQuestionsFromText({
+            text: 'Syllabus content about databases. ' + 'x'.repeat(200),
+            difficulty: 'medium',
+            count: 1,
+            isObjective: false,
+            marksForQuestions: [4],
+        })).rejects.toThrow(/rubric_total/);
+        expect(fetchMock).toHaveBeenCalledTimes(3);
     });
 
     describe('3a. Full MCQ paper is requested once', () => {
