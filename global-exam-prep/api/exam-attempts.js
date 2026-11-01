@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import { randomUUID } from 'node:crypto';
-import { evaluateTheoryAttempt, prepareTheoryEvaluation } from './_lib/theory-rubric-evaluator.js';
+import { evaluateTheoryAttempt } from './_lib/theory-rubric-evaluator.js';
 
 export const config = { maxDuration: 60 };
 
@@ -75,12 +75,16 @@ function dashboardSafeAttempt(attempt, evaluation) {
     const rubricReady = theory && hasCompleteTheoryRubric(attempt);
     const reviewStatus = !theory ? 'ready' : !rubricReady ? 'unavailable' : (evaluation?.status || 'pending');
     const evaluationResult = reviewStatus === 'completed' ? evaluation?.result : null;
+    const awardedMarks = evaluationResult?.totalAwardedMarks ?? evaluation?.total_awarded_marks;
+    const possibleMarks = evaluationResult?.totalPossibleMarks ?? evaluation?.total_possible_marks;
     return {
         ...attempt,
         questions: Array.isArray(attempt.questions) ? attempt.questions.map(dashboardSafeQuestion) : [],
         answers: attempt.answers && typeof attempt.answers === 'object' ? attempt.answers : {},
-        score: evaluationResult ? Number(evaluationResult.totalAwardedMarks) : attempt.score ?? null,
-        total_marks: evaluationResult ? Number(evaluationResult.totalPossibleMarks) : attempt.total_marks,
+        score: reviewStatus === 'completed' && awardedMarks !== null && awardedMarks !== undefined
+            ? Number(awardedMarks) : attempt.score ?? null,
+        total_marks: reviewStatus === 'completed' && possibleMarks !== null && possibleMarks !== undefined
+            ? Number(possibleMarks) : attempt.total_marks,
         review_status: reviewStatus,
         review_error: reviewStatus === 'failed' ? evaluation?.error || 'Evaluation failed. Please retry.' : null,
         evaluation_attempts: evaluation?.attempts ?? 0,
@@ -380,7 +384,7 @@ export default async function handler(req, res) {
                 });
             }
             try {
-                const apiKey = envFirst('GROQ_API_KEY');
+                const apiKey = envFirst('GROQ_API_KEY', 'VITE_GROQ_API_KEY');
                 const result = await evaluateTheoryAttempt(attempt, apiKey);
                 const completed = await finishPrivateEvaluation(admin, {
                     attemptId, userId: user.id, answerRevision: Number(attempt.answer_revision) || 0,
