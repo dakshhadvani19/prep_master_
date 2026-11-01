@@ -23,6 +23,21 @@ async function callExamAttemptApi(payload) {
     return result || {};
 }
 
+export async function createExamFromPublishedBank(payload) {
+    try {
+        const result = await callExamAttemptApi({ action: 'create_from_question_bank', ...payload });
+        return {
+            found: result.found === true,
+            id: result.id || null,
+            questions: Array.isArray(result.questions) ? result.questions : [],
+            sourceFileName: result.sourceFileName || null,
+            error: null,
+        };
+    } catch (error) {
+        return { found: false, id: null, questions: [], error: error.message || 'Could not load a published question bank.' };
+    }
+}
+
 export async function saveExamAttempt(payload) {
     try {
         const result = await callExamAttemptApi({ action: 'create', ...payload });
