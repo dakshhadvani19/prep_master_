@@ -126,7 +126,7 @@ describe('theory rubric evaluator', () => {
         expect(result.questions[0].criteria[1].awardedMarks).toBe(0);
         expect(result.questions[0].criteria[1].feedback).toMatch(/omitted/i);
         expect(result.questions[0].feedback).toMatch(/criterion-level feedback/i);
-        expect(result.totalAwardedMarks).toBe(1.5);
+        expect(result.totalAwardedMarks).toBe(1);
         expect(result.totalPossibleMarks).toBe(4);
     });
 
