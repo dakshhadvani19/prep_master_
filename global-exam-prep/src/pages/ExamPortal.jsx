@@ -39,6 +39,18 @@ function allocateBatchCounts(batches, totalCount) {
     return counts;
 }
 
+function stripAnswerKeyForStudent(question) {
+    if (question?.type === 'mcq') {
+        const { answer, ...studentQuestion } = question;
+        return studentQuestion;
+    }
+    if (question?.type === 'subjective') {
+        const { answer, answerFormat, rubric, ...studentQuestion } = question;
+        return studentQuestion;
+    }
+    return question;
+}
+
 export default function ExamPortal() {
     const { subjectId, examType, difficulty } = useParams();
     const navigate = useNavigate();
@@ -324,13 +336,7 @@ export default function ExamPortal() {
 
                 // Keep the answer key separate from the active exam UI and saved question snapshot.
                 const generatedQuestions = stripReviewMetadata(allQuestions);
-                const studentSafeQuestions = generatedQuestions.map((question) => {
-                    if (question?.type === 'mcq') {
-                        const { answer, ...safeQuestion } = question;
-                        return safeQuestion;
-                    }
-                    return question;
-                });
+                const studentSafeQuestions = generatedQuestions.map(stripAnswerKeyForStudent);
                 setAiQuestions(studentSafeQuestions);
 
                 // Keep a room paper only in the host's temporary router state/Realtime session.
@@ -493,7 +499,31 @@ export default function ExamPortal() {
                 return;
             }
 
-            setAiQuestions(blueprintQuestions);
+            // Keep model answers and rubrics in the private attempt key. Only the
+            // question/marks payload is sent to the active student exam interface.
+            const generatedQuestions = stripReviewMetadata(blueprintQuestions);
+            try {
+                const attemptPayload = {
+                    catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
+                    subjectCode: sourceSubjectId,
+                    subjectName: subjectDetail.title,
+                    examType,
+                    difficulty,
+                    questions: generatedQuestions,
+                    totalMarks: uploadExamConfig.totalMarks,
+                    timeMinutes: uploadExamConfig.timeMinutes,
+                };
+                const result = await saveExamAttempt(attemptPayload);
+                if (result.error || !result.id) {
+                    throw new Error(result.error || 'Attempt could not be persisted.');
+                }
+                setAttemptId(result.id);
+            } catch (saveError) {
+                setSupabaseError(saveError.message || 'Supabase unavailable');
+                throw new Error('The uploaded exam cannot start until its answer key and marking rubric are saved securely.');
+            }
+
+            setAiQuestions(generatedQuestions.map(stripAnswerKeyForStudent));
             setExamState('active');
         } catch (err) {
             if (err.retryAfter) {
