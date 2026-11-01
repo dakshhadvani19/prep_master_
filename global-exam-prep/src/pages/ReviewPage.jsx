@@ -254,6 +254,40 @@ export default function ReviewPage() {
         );
     }
 
+    if (record.type === 'theory' && record.evaluationStatus !== 'completed') {
+        const failed = record.evaluationStatus === 'failed';
+        const unavailable = record.evaluationStatus === 'unavailable';
+        return (
+            <div className='container animate-fade-in' style={{ maxWidth: '760px', marginTop: '4rem' }}>
+                <div className='glass-panel' style={{ padding: '2.5rem', textAlign: 'center' }}>
+                    {failed || unavailable ? <AlertCircle size={42} color={failed ? 'var(--danger)' : 'var(--text-secondary)'} style={{ margin: '0 auto 1rem' }} /> : <Loader size={42} color='var(--accent-primary)' style={{ margin: '0 auto 1rem', animation: 'spin 1s linear infinite' }} />}
+                    <h2 style={{ fontSize: '1.45rem', marginBottom: '0.7rem' }}>
+                        {unavailable ? 'Marking rubric unavailable' : failed ? 'Evaluation could not be completed' : 'Evaluating your answers'}
+                    </h2>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.65, maxWidth: '580px', margin: '0 auto 1.5rem' }}>
+                        {unavailable
+                            ? 'This attempt does not contain a complete saved marking rubric, so a reliable rubric-based review cannot be produced.'
+                            : failed
+                                ? evaluationError || record.evaluationError || 'The automated marker could not complete this attempt. You can retry the evaluation.'
+                                : 'Your submitted answers are being checked against the saved marking criteria. The review will open when the marks and explanations are ready.'}
+                    </p>
+                    {failed && (
+                        <button type='button' onClick={retryEvaluation} disabled={evaluationLoading} style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '0.55rem', padding: '0.75rem 1.35rem',
+                            borderRadius: 'var(--radius-full)', background: 'var(--accent-primary)', color: 'white',
+                            fontSize: '0.95rem', fontWeight: 700, opacity: evaluationLoading ? 0.65 : 1,
+                            cursor: evaluationLoading ? 'wait' : 'pointer',
+                        }}>
+                            {evaluationLoading ? <Loader size={17} /> : <RefreshCw size={17} />}
+                            {evaluationLoading ? 'Retrying evaluation...' : 'Retry evaluation'}
+                        </button>
+                    )}
+                    {!failed && !unavailable && <div role='status' aria-live='polite' style={{ color: 'var(--text-tertiary)', fontSize: '0.88rem' }}>Evaluation status: {record.evaluationStatus || 'pending'}</div>}
+                    <button type='button' onClick={() => navigate('/dashboard')} style={{ display: 'block', margin: '1.5rem auto 0', color: 'var(--text-secondary)', fontSize: '0.9rem', textDecoration: 'underline' }}>Back to Performance History</button>
+                </div>
+            </div>
+        );
+    }
     const questions = record.questions;
     const userAnswers = record.userAnswers || {};
     const isObjective = record.type === 'objective';
@@ -326,7 +360,15 @@ export default function ReviewPage() {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
                         <AttemptSourceBadge attemptType={record.attemptType} />
-                        {!isObjective && examInfo?.totalMarks > 0 && (
+                        {!isObjective && record.evaluationResult && (
+                            <div style={{ background: 'var(--bg-tertiary)', padding: '0.75rem 1.25rem', borderRadius: 'var(--radius-lg)', border: '1px solid var(--glass-border)', textAlign: 'right' }}>
+                                <div style={{ fontSize: '1.7rem', fontWeight: 800, color: 'var(--accent-primary)', fontVariantNumeric: 'tabular-nums' }}>
+                                    {record.evaluationResult.totalAwardedMarks}<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}> / {record.evaluationResult.totalPossibleMarks}M</span>
+                                </div>
+                                <div style={{ fontSize: '0.78rem', color: 'var(--text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>AI-assisted score</div>
+                            </div>
+                        )}
+                        {!isObjective && !record.evaluationResult && examInfo?.totalMarks > 0 && (
                             <span style={{ color: 'var(--text-secondary)', fontWeight: 600, fontSize: '0.85rem' }}>
                                 {examInfo.totalMarks}M Total
                             </span>
@@ -338,6 +380,33 @@ export default function ReviewPage() {
                     </div>
                 </div>
             </div>
+
+            {!isObjective && evaluationResult && (
+                <section className='glass-panel' aria-label='Overall theory evaluation' style={{ padding: '1.5rem 1.8rem', marginBottom: '1.5rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+                        <div>
+                            <h2 style={{ fontSize: '1.18rem', marginBottom: '0.3rem' }}>AI-assisted rubric evaluation</h2>
+                            <p style={{ color: 'var(--text-tertiary)', fontSize: '0.9rem' }}>Marks are awarded against the saved criteria for each question.</p>
+                        </div>
+                        <span style={{ color: 'var(--success)', fontWeight: 700, fontSize: '0.9rem' }}>Evaluation complete</span>
+                    </div>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.7, marginBottom: '1rem' }}>{evaluationResult.overallFeedback}</p>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+                        {evaluationResult.strengths?.length > 0 && (
+                            <div style={{ padding: '1rem', background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: 'var(--radius-md)' }}>
+                                <h3 style={{ fontSize: '0.92rem', color: 'var(--success)', marginBottom: '0.55rem' }}>What you did well</h3>
+                                <ul style={{ margin: 0, paddingLeft: '1.2rem', color: 'var(--text-secondary)', fontSize: '0.94rem', lineHeight: 1.6 }}>{evaluationResult.strengths.map((item, index) => <li key={index} style={{ marginBottom: '0.25rem' }}>{item}</li>)}</ul>
+                            </div>
+                        )}
+                        {evaluationResult.improvementAreas?.length > 0 && (
+                            <div style={{ padding: '1rem', background: 'rgba(245,158,11,0.07)', border: '1px solid rgba(245,158,11,0.2)', borderRadius: 'var(--radius-md)' }}>
+                                <h3 style={{ fontSize: '0.92rem', color: 'var(--warning)', marginBottom: '0.55rem' }}>What to improve</h3>
+                                <ul style={{ margin: 0, paddingLeft: '1.2rem', color: 'var(--text-secondary)', fontSize: '0.94rem', lineHeight: 1.6 }}>{evaluationResult.improvementAreas.map((item, index) => <li key={index} style={{ marginBottom: '0.25rem' }}>{item}</li>)}</ul>
+                            </div>
+                        )}
+                    </div>
+                </section>
+            )}
 
             {/* Stats Bar */}
             {isObjective && (
