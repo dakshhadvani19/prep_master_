@@ -452,7 +452,7 @@ export default function Dashboard() {
                                     )}
                                     {record.type === 'theory' && record.reviewStatus === 'unavailable' && (
                                         <span style={{ color: 'var(--text-tertiary)', fontSize: '0.84rem' }}>Marking rubric unavailable</span>
-                                    )}}
+                                    )}
                                 </div>
                             </div>
                         );
