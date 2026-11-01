@@ -37,6 +37,11 @@
 - Provide a model answer or marking points for every question. The points must sum to the item's marks.
 - 1 mark: one precise fact/result/step, answerable in one word or one concise sentence. 2 marks: two compact creditable elements. 4 marks: a bounded explanation, comparison, method, or application. 8 marks: a fuller structured explanation or multi-step application with appropriate evidence/examples.
 - Accept equivalent correct wording. Do not require one memorized sentence where multiple technically correct explanations exist.
+- Every generated theory question must include a concise model answer in `answer`, an `answerFormat` (`points`, `comparison`, `worked_solution`, `code`, or `diagram`), and a structured `rubric`.
+- Each rubric item contains `criterion`, `marks`, `keyPoints` (1–4 strings), and optionally `acceptedAlternatives`. Rubric marks must add exactly to the question's marks, using whole or half marks only.
+- Limit rubric criteria to 1 for 1M, 2 for 2M, 6 for 4M, and 12 for 8M. An ordinary 8M model answer should normally have 8–10 concise points and never exceed 12.
+- For DIFFERENTIATE/COMPARE, return one paired table row per mark. An 8M comparison must have exactly eight rows (eight points on each side); each rubric row is worth 1M and contains two key points, one for each side.
+- Do not generate long essays, repeat the same fact, or include unsupported/filler answer points.
 
 ## 4. Suitable theory question types
 Select types based on the subject and syllabus; do not force every type into every exam.
@@ -85,5 +90,5 @@ Select types based on the subject and syllabus; do not force every type into eve
 
 ## 8. Output contract
 - MCQ: 30 questions, four options each, 30 zero-based answer indexes.
-- Theory: labelled mark values, one model answer per question, exact approved total, and an empty options array in the current TestsData schema.
+- Theory: labelled mark values, one concise model answer (`answer`) and mark-weighted rubric per question (`answerFormat`, `rubric`), exact approved total, and an empty options array in the current TestsData schema.
 - Preserve syllabus/source attribution, scope, exam type, difficulty, and reuse metadata. Never overwrite or repurpose a TestId.
