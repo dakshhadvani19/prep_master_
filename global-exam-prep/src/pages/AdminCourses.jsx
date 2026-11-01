@@ -1,778 +1,373 @@
-/**
- * Phase 3 — admin catalog UI (Course → Semester → Subject → Question).
- * In-memory preview only. No remote persistence or API; this is an in-memory preview.
- *
- * Question fields follow TestsData + the existing generator:
- *   objective → text, options[], answer index
- *   subjective → text, marks
- * Semesters are selected from the course Sems list (no semester CRUD).
- */
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
 import {
-    ArrowLeft, BookOpen, Plus, Layers, GraduationCap,
-    ListChecks, FileText, Pencil, Trash2,
+    AlertCircle, ArrowLeft, BookOpen, Check, ChevronRight, Cpu, GraduationCap,
+    Layers3, LayoutGrid, BriefcaseBusiness, FlaskConical, Scale, Search, RefreshCw, X,
 } from 'lucide-react';
+import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain } from '../utils/catalogApi';
+import { getExamTypesForSubject, getSubjectExamInfo } from '../utils/subjectExamPolicy';
 import './AdminCourses.css';
 
-const PREVIEW = 'Preview only — no data was changed.';
-
-const SEED = [
-    {
-        id: 'btech-ce',
-        title: 'B.Tech - Computer Engineering',
-        semesters: [1, 2],
-        subjects: [
-            {
-                id: '01ma0106',
-                title: 'Calculus',
-                sem: 1,
-                questions: [
-                    {
-                        id: 'q-ce-1',
-                        type: 'objective',
-                        text: 'The derivative of sin(x) is',
-                        options: ['cos(x)', '−cos(x)', 'tan(x)', 'sec(x)'],
-                        answer: 0,
-                    },
-                    {
-                        id: 'q-ce-2',
-                        type: 'subjective',
-                        text: 'State the fundamental theorem of calculus and give one application.',
-                        marks: 7,
-                    },
-                ],
-            },
-            {
-                id: '01ce1101',
-                title: 'Computer Programming',
-                sem: 1,
-                questions: [
-                    {
-                        id: 'q-ce-3',
-                        type: 'objective',
-                        text: 'Which symbol starts a preprocessor directive in C?',
-                        options: ['#', '@', '$', '%'],
-                        answer: 0,
-                    },
-                ],
-            },
-            {
-                id: '01ce0104',
-                title: 'Object Oriented Programming',
-                sem: 2,
-                questions: [],
-            },
-        ],
-    },
-    {
-        id: 'btech-it',
-        title: 'B.Tech - IT',
-        semesters: [1, 2],
-        subjects: [
-            {
-                id: '02it1101',
-                title: 'Digital Logic',
-                sem: 1,
-                questions: [
-                    {
-                        id: 'q-it-1',
-                        type: 'objective',
-                        text: 'A full adder has how many inputs?',
-                        options: ['2', '3', '4', '1'],
-                        answer: 1,
-                    },
-                ],
-            },
-        ],
-    },
+const DOMAIN_ICONS = {
+    engineering: Cpu,
+    'computer-apps': LayoutGrid,
+    management: BriefcaseBusiness,
+    'science-pharmacy': FlaskConical,
+    'law-arts': Scale,
+    diploma: GraduationCap,
+};
+const STEPS = [
+    { id: 'department', label: 'Department' },
+    { id: 'course', label: 'Course' },
+    { id: 'semester', label: 'Semester' },
+    { id: 'subject', label: 'Subject' },
 ];
 
-const blankObjective = () => ({
-    type: 'objective',
-    text: '',
-    options: ['', '', '', ''],
-    answer: 0,
-    marks: 7,
-});
-
-function nid(prefix) {
-    return `${prefix}-${Math.random().toString(36).slice(2, 8)}`;
+function normalizeSemesterList(values) {
+    if (!Array.isArray(values)) return [];
+    return [...new Set(values.map(Number).filter(Number.isInteger).filter(value => value >= 0 && value <= 20))]
+        .sort((a, b) => a - b);
 }
 
-function HierarchyMark() {
+function StageHeading({ eyebrow, title, description, count }) {
     return (
-        <svg className="ac-mark" viewBox="0 0 220 56" role="img" aria-hidden="true" focusable="false">
-            <path className="ac-mark__wire" d="M18 28 H70 M70 28 H118 M118 28 H170 M170 28 H202" fill="none" />
-            <circle cx="18" cy="28" r="7" className="ac-mark__node ac-mark__node--c" />
-            <circle cx="70" cy="28" r="6" className="ac-mark__node ac-mark__node--s" />
-            <circle cx="118" cy="28" r="6" className="ac-mark__node ac-mark__node--u" />
-            <rect x="158" y="16" width="24" height="24" rx="5" className="ac-mark__q" />
-            <text x="18" y="50" textAnchor="middle">C</text>
-            <text x="70" y="50" textAnchor="middle">Se</text>
-            <text x="118" y="50" textAnchor="middle">Su</text>
-            <text x="170" y="50" textAnchor="middle">Q</text>
-        </svg>
+        <div className="ac-stage-heading">
+            <div>
+                <span className="ac-eyebrow">{eyebrow}</span>
+                <h2>{title}</h2>
+                <p>{description}</p>
+            </div>
+            {count !== undefined && <span className="ac-count">{count} {count === 1 ? 'result' : 'results'}</span>}
+        </div>
+    );
+}
+
+function ErrorState({ message, onRetry }) {
+    return (
+        <div className="ac-state ac-state--error" role="alert">
+            <AlertCircle size={20} aria-hidden="true" />
+            <div>
+                <strong>Could not load catalog data</strong>
+                <p>{message || 'Please check your connection and try again.'}</p>
+            </div>
+            <button type="button" className="ac-btn ac-btn--secondary" onClick={onRetry}>
+                <RefreshCw size={15} /> Retry
+            </button>
+        </div>
     );
 }
 
 export default function AdminCourses() {
-    const [courses, setCourses] = useState(SEED);
-    const [courseId, setCourseId] = useState(SEED[0].id);
-    const [sem, setSem] = useState(1);
-    const [subjectId, setSubjectId] = useState(SEED[0].subjects[0].id);
-    const [focusId, setFocusId] = useState(SEED[0].subjects[0].questions[0]?.id ?? null);
-    const [modal, setModal] = useState(null);
-    const [form, setForm] = useState({});
-    const [pending, setPending] = useState(null);
-    const [toast, setToast] = useState('');
-    const [error, setError] = useState('');
-    const [dirty, setDirty] = useState(false);
+    const [step, setStep] = useState('department');
+    const [domainId, setDomainId] = useState(null);
+    const [courses, setCourses] = useState([]);
+    const [courseId, setCourseId] = useState(null);
+    const [course, setCourse] = useState(null);
+    const [subjects, setSubjects] = useState([]);
+    const [semester, setSemester] = useState(null);
+    const [subjectId, setSubjectId] = useState(null);
+    const [courseSearch, setCourseSearch] = useState('');
+    const [subjectSearch, setSubjectSearch] = useState('');
+    const [coursesLoading, setCoursesLoading] = useState(false);
+    const [subjectsLoading, setSubjectsLoading] = useState(false);
+    const [coursesError, setCoursesError] = useState('');
+    const [subjectsError, setSubjectsError] = useState('');
+    const [retryKey, setRetryKey] = useState(0);
 
-    const course = courses.find((c) => c.id === courseId) || null;
-    const subjects = useMemo(
-        () => (course && sem != null ? course.subjects.filter((s) => s.sem === sem) : []),
-        [course, sem],
-    );
-    const subject = subjects.find((s) => s.id === subjectId) || null;
-    const questions = subject?.questions ?? [];
-    const focused = questions.find((q) => q.id === focusId) || questions[0] || null;
+    const domain = CATALOG_DOMAINS.find(item => item.id === domainId) || null;
+    const selectedSubject = subjects.find(item => String(item.subjectId) === String(subjectId)) || null;
+    const semesters = useMemo(() => normalizeSemesterList(course?.sems), [course?.sems]);
 
-    function flash(msg) {
-        setToast(msg);
-        window.setTimeout(() => setToast(''), 2800);
+    const filteredCourses = useMemo(() => {
+        const query = courseSearch.trim().toLowerCase();
+        return courses.filter(item => !query || item.courseName.toLowerCase().includes(query));
+    }, [courses, courseSearch]);
+
+    const semesterSubjects = useMemo(() => (
+        semester === null ? [] : subjects.filter(item => Number(item.sem) === Number(semester))
+    ), [subjects, semester]);
+
+    const filteredSubjects = useMemo(() => {
+        const query = subjectSearch.trim().toLowerCase();
+        return semesterSubjects
+            .filter(item => !query
+                || item.subjectName.toLowerCase().includes(query)
+                || String(item.subjectId).includes(query))
+            .sort((a, b) => a.subjectName.localeCompare(b.subjectName));
+    }, [semesterSubjects, subjectSearch]);
+
+    useEffect(() => {
+        if (!domainId) return undefined;
+        let cancelled = false;
+        fetchCoursesForDomain(domainId)
+            .then(result => {
+                if (cancelled) return;
+                if (result.error) throw result.error;
+                setCourses(result.courses || []);
+            })
+            .catch(error => {
+                if (!cancelled) setCoursesError(error?.message || 'The department courses could not be loaded.');
+            })
+            .finally(() => { if (!cancelled) setCoursesLoading(false); });
+        return () => { cancelled = true; };
+    }, [domainId, retryKey]);
+
+    useEffect(() => {
+        if (courseId === null) return undefined;
+        let cancelled = false;
+        fetchCourseAndSubjects(courseId)
+            .then(result => {
+                if (cancelled) return;
+                if (result.error) throw result.error;
+                if (!result.course) throw new Error('The selected course is no longer available in the catalog.');
+                setCourse(result.course);
+                setSubjects(result.subjects || []);
+            })
+            .catch(error => {
+                if (!cancelled) setSubjectsError(error?.message || 'The selected course subjects could not be loaded.');
+            })
+            .finally(() => { if (!cancelled) setSubjectsLoading(false); });
+        return () => { cancelled = true; };
+    }, [courseId, retryKey]);
+
+    function chooseDepartment(nextDomain) {
+        setDomainId(nextDomain.id);
+        setCourseId(null);
+        setCourse(null);
+        setCourses([]);
+        setSemester(null);
+        setSubjects([]);
+        setSubjectId(null);
+        setCourseSearch('');
+        setSubjectSearch('');
+        setCoursesError('');
+        setCoursesLoading(true);
+        setStep('course');
     }
 
-    function closeModal() {
-        setModal(null);
-        setForm({});
-        setError('');
-        setDirty(false);
+    function chooseCourse(nextCourse) {
+        setCourseId(nextCourse.courseId);
+        setCourse(nextCourse);
+        setSemester(null);
+        setSubjects([]);
+        setSubjectsError('');
+        setSubjectsLoading(true);
+        setSubjectId(null);
+        setSubjectSearch('');
+        setStep('semester');
     }
 
-    function setField(patch) {
-        setForm((f) => ({ ...f, ...patch }));
-        setDirty(true);
+    function chooseSemester(value) {
+        setSemester(Number(value));
+        setSubjectId(null);
+        setSubjectSearch('');
+        setStep('subject');
     }
 
-    function pickCourse(id) {
-        const next = courses.find((c) => c.id === id);
-        setCourseId(id);
-        const firstSem = next?.semesters[0] ?? null;
-        setSem(firstSem);
-        const firstSub = next?.subjects.find((s) => s.sem === firstSem) ?? null;
-        setSubjectId(firstSub?.id ?? null);
-        setFocusId(firstSub?.questions[0]?.id ?? null);
-        setPending(null);
-    }
-
-    function pickSem(n) {
-        setSem(n);
-        const firstSub = course?.subjects.find((s) => s.sem === n) ?? null;
-        setSubjectId(firstSub?.id ?? null);
-        setFocusId(firstSub?.questions[0]?.id ?? null);
-        setPending(null);
-    }
-
-    function pickSubject(id) {
-        setSubjectId(id);
-        const sub = course?.subjects.find((s) => s.id === id);
-        setFocusId(sub?.questions[0]?.id ?? null);
-        setPending(null);
-    }
-
-    function patchCourse(id, updater) {
-        setCourses((list) => list.map((c) => (c.id === id ? updater(c) : c)));
-    }
-
-    function openAddCourse() {
-        setPending(null);
-        setForm({ title: '', semesters: '1, 2' });
-        setDirty(false);
-        setModal('course-add');
-    }
-    function openEditCourse(c) {
-        if (!c) return;
-        setPending(null);
-        setForm({ id: c.id, title: c.title, semesters: c.semesters.join(', ') });
-        setDirty(false);
-        setModal('course-edit');
-    }
-    function parseSems(raw) {
-        const nums = String(raw)
-            .split(/[, ]+/)
-            .map((n) => parseInt(n, 10))
-            .filter((n) => Number.isInteger(n) && n >= 1 && n <= 12);
-        return [...new Set(nums)].sort((a, b) => a - b);
-    }
-    function saveCourse(e) {
-        e.preventDefault();
-        const title = String(form.title || '').trim();
-        const semesters = parseSems(form.semesters);
-        if (!title || semesters.length === 0) {
-            setError('Course name and at least one semester (1–12) are required.');
-            return;
+    function retryCurrentStage() {
+        if (step === 'course') {
+            setCoursesError('');
+            setCoursesLoading(true);
+        } else {
+            setSubjectsError('');
+            setSubjectsLoading(true);
         }
-        if (modal === 'course-add') {
-            const id = nid('course');
-            setCourses((list) => [...list, { id, title, semesters, subjects: [] }]);
-            setCourseId(id);
-            setSem(semesters[0]);
-            setSubjectId(null);
-            setFocusId(null);
-        } else if (form.id) {
-            patchCourse(form.id, (c) => ({ ...c, title, semesters }));
-            setCourseId(form.id);
-            if (!semesters.includes(sem)) {
-                setSem(semesters[0]);
-                setSubjectId(null);
-                setFocusId(null);
-            }
-        }
-        closeModal();
-        flash(PREVIEW);
-    }
-    function confirmRemoveCourse() {
-        const id = pending?.id;
-        if (!id) return;
-        const rest = courses.filter((c) => c.id !== id);
-        setCourses(rest);
-        if (courseId === id) {
-            if (rest[0]) pickCourse(rest[0].id);
-            else {
-                setCourseId(null);
-                setSem(null);
-                setSubjectId(null);
-                setFocusId(null);
-            }
-        }
-        setPending(null);
-        flash(PREVIEW);
+        setRetryKey(value => value + 1);
     }
 
-    function openAddSubject() {
-        setPending(null);
-        setForm({ title: '', code: '', courseId, sem: sem ?? course?.semesters[0] ?? 1 });
-        setDirty(false);
-        setModal('subject-add');
-    }
-    function openEditSubject(sub) {
-        setPending(null);
-        setForm({
-            id: sub.id,
-            title: sub.title,
-            code: sub.id,
-            courseId,
-            sem: sub.sem,
-        });
-        setDirty(false);
-        setModal('subject-edit');
-    }
-    function saveSubject(e) {
-        e.preventDefault();
-        const title = String(form.title || '').trim();
-        const code = String(form.code || '').trim() || nid('sub');
-        const destCourse = form.courseId;
-        const destSem = Number(form.sem);
-        if (!title || !destCourse || !destSem) {
-            setError('Course, semester and subject name are required.');
-            return;
-        }
-        setCourses((list) => list.map((c) => {
-            let nextSubjects = c.subjects;
-            if (modal === 'subject-edit') {
-                nextSubjects = nextSubjects.filter((s) => s.id !== form.id);
-            }
-            if (c.id !== destCourse) return { ...c, subjects: nextSubjects };
-            const existing = modal === 'subject-edit'
-                ? (course?.subjects.find((s) => s.id === form.id) || { questions: [] })
-                : { questions: [] };
-            const next = { id: code, title, sem: destSem, questions: existing.questions || [] };
-            return { ...c, subjects: [...nextSubjects.filter((s) => s.id !== code), next] };
-        }));
-        setCourseId(destCourse);
-        setSem(destSem);
-        setSubjectId(code);
-        closeModal();
-        flash(PREVIEW);
-    }
-    function confirmRemoveSubject() {
-        const id = pending?.id;
-        if (!id || !courseId) return;
-        patchCourse(courseId, (c) => ({ ...c, subjects: c.subjects.filter((s) => s.id !== id) }));
-        if (subjectId === id) {
-            setSubjectId(null);
-            setFocusId(null);
-        }
-        setPending(null);
-        flash(PREVIEW);
+    function resetLocator() {
+        setStep('department');
+        setDomainId(null);
+        setCourses([]);
+        setCourseId(null);
+        setCourse(null);
+        setSubjects([]);
+        setSemester(null);
+        setSubjectId(null);
+        setCourseSearch('');
+        setSubjectSearch('');
+        setCoursesError('');
+        setSubjectsError('');
     }
 
-    function openAddQuestion() {
-        setPending(null);
-        setForm({ ...blankObjective(), courseId, subjectId });
-        setDirty(false);
-        setModal('question-add');
-    }
-    function openEditQuestion(q) {
-        setPending(null);
-        setFocusId(q.id);
-        setForm({
-            ...blankObjective(),
-            ...q,
-            options: q.options ? [...q.options] : ['', '', '', ''],
-            courseId,
-            subjectId,
-        });
-        setDirty(false);
-        setModal('question-edit');
-    }
-    function saveQuestion(e) {
-        e.preventDefault();
-        const text = String(form.text || '').trim();
-        const destCourse = form.courseId;
-        const destSubject = form.subjectId;
-        if (!text || !destCourse || !destSubject) {
-            setError('Course, subject and question text are required.');
-            return;
-        }
-        const payload = form.type === 'subjective'
-            ? { id: form.id || nid('q'), type: 'subjective', text, marks: Number(form.marks) || 7 }
-            : {
-                id: form.id || nid('q'),
-                type: 'objective',
-                text,
-                options: (form.options || ['', '', '', '']).map((o) => String(o)),
-                answer: Number(form.answer) || 0,
-            };
-        setCourses((list) => list.map((c) => {
-            const nextSubjects = c.subjects.map((s) => {
-                let qs = s.questions;
-                if (modal === 'question-edit' && form.id) qs = qs.filter((q) => q.id !== form.id);
-                if (c.id === destCourse && s.id === destSubject) {
-                    return { ...s, questions: [...qs.filter((q) => q.id !== payload.id), payload] };
-                }
-                return { ...s, questions: qs };
-            });
-            return { ...c, subjects: nextSubjects };
-        }));
-        setCourseId(destCourse);
-        const dest = courses.flatMap((c) => c.subjects).find((s) => s.id === destSubject);
-        if (dest) setSem(dest.sem);
-        setSubjectId(destSubject);
-        setFocusId(payload.id);
-        closeModal();
-        flash(PREVIEW);
-    }
-    function confirmRemoveQuestion() {
-        const id = pending?.id;
-        if (!id || !courseId || !subjectId) return;
-        patchCourse(courseId, (c) => ({
-            ...c,
-            subjects: c.subjects.map((s) =>
-                s.id === subjectId ? { ...s, questions: s.questions.filter((q) => q.id !== id) } : s),
-        }));
-        if (focusId === id) setFocusId(null);
-        setPending(null);
-        flash(PREVIEW);
-    }
-
-    const subjectsForFormCourse = courses.find((c) => c.id === form.courseId)?.subjects || [];
-    const editing = modal === 'course-add' || modal === 'course-edit'
-        || modal === 'subject-add' || modal === 'subject-edit'
-        || modal === 'question-add' || modal === 'question-edit';
+    const stepIndex = Math.max(0, STEPS.findIndex(item => item.id === step));
+    const stepValues = [
+        domain?.title,
+        course?.courseName,
+        semester === null ? null : (semester === 0 ? 'Semester 0' : 'Semester ' + semester),
+        selectedSubject?.subjectName,
+    ];
 
     return (
-        <div className="ac">
-            <header className="ac__hero">
-                <div>
-                    <div className="ac__kicker">Admin · Courses</div>
-                    <h1 className="ac__title">Catalog</h1>
-                    <div className="ac__crumb" data-testid="catalog-crumb">
-                        <strong>{course?.title || 'No course'}</strong>
-                        <span>→</span>
-                        {sem != null ? <strong>Sem {sem}</strong> : 'Semester'}
-                        <span>→</span>
-                        <strong>{subject?.title || 'Subject'}</strong>
-                        <span>→</span>
-                        Questions
-                    </div>
+        <main className="ac">
+            <header className="ac-hero">
+                <div className="ac-hero__copy">
+                    <div className="ac-kicker">ADMIN · COURSE CATALOG</div>
+                    <h1>Subject &amp; Question Locator</h1>
+                    <p>Browse the full academic catalog by department, course, semester and subject.</p>
                 </div>
-                <div className="ac__hero-side">
-                    <HierarchyMark />
-                    <Link to="/dashboard" className="ac-btn ac-btn--ghost" style={{ textDecoration: 'none' }}>
-                        <ArrowLeft size={12} style={{ marginRight: 4 }} /> Dashboard
-                    </Link>
+                <div className="ac-hero__actions">
+                    <Link to="/dashboard" className="ac-btn ac-btn--secondary"><ArrowLeft size={16} /> Dashboard</Link>
+                    <button type="button" className="ac-btn ac-btn--secondary" onClick={resetLocator}><RefreshCw size={15} /> Start over</button>
                 </div>
             </header>
 
-            <motion.section
-                className="ac-rail"
-                aria-labelledby="course-heading"
-                key={courseId || 'none'}
-                initial={{ opacity: 0.65 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.28 }}
-            >
-                <div className="ac-rail__head">
-                    <h2 id="course-heading">
-                        <GraduationCap size={16} style={{ marginRight: 8, verticalAlign: -3 }} />
-                        {course?.title || 'Course'}
-                    </h2>
-                    <button type="button" className="ac-btn ac-btn--gold" onClick={openAddCourse}>
-                        <Plus size={12} style={{ marginRight: 4 }} /> Add Course
-                    </button>
-                </div>
-                {courses.length === 0 ? (
-                    <div className="ac-empty">No courses yet.</div>
-                ) : (
-                    <div className="ac-courses">
-                        {courses.map((c, i) => (
-                            <div key={c.id} className={`ac-course ${c.id === courseId ? 'is-on' : ''} ${pending?.type === 'course' && pending.id === c.id ? 'is-warn' : ''}`}>
-                                <button
-                                    type="button"
-                                    className="ac-course__hit"
-                                    aria-label={c.title}
-                                    aria-pressed={c.id === courseId}
-                                    onClick={() => pickCourse(c.id)}
-                                >
-                                    <span className="ac-course__glyph" aria-hidden>{String(i + 1).padStart(2, '0')}</span>
-                                    <span className="ac-course__name">{c.title}</span>
-                                    <span className="ac-course__meta">{c.semesters.length} sem · {c.subjects.length} subjects</span>
-                                </button>
-                                {pending?.type === 'course' && pending.id === c.id ? (
-                                    <div className="ac-warn">
-                                        <button type="button" className="ac-btn ac-btn--ghost" onClick={() => setPending(null)}>Cancel</button>
-                                        <button type="button" className="ac-btn ac-btn--danger" onClick={confirmRemoveCourse}>Confirm remove</button>
-                                    </div>
-                                ) : (
-                                    <div className="ac-course__ops">
-                                        <button type="button" className="ac-btn ac-btn--ghost" onClick={() => { pickCourse(c.id); openEditCourse(c); }}>
-                                            <Pencil size={11} /> Edit
-                                        </button>
-                                        <button
-                                            type="button"
-                                            className="ac-btn ac-btn--danger"
-                                            onClick={() => { pickCourse(c.id); setPending({ type: 'course', id: c.id, title: c.title }); }}
-                                        >
-                                            <Trash2 size={11} /> Remove
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </motion.section>
-
-            <section className="ac-path" aria-label="Semesters">
-                <div className="ac-path__label"><Layers size={14} /> Semester</div>
-                {!course ? (
-                    <div className="ac-empty">Select a course.</div>
-                ) : (
-                    <div className="ac-sems">
-                        {course.semesters.map((n, i) => (
-                            <span key={n} className="ac-sem-wrap">
-                                {i > 0 && <span className={`ac-sem-wire ${sem === n || course.semesters.indexOf(sem) > i - 1 ? 'is-on' : ''}`} aria-hidden />}
-                                <button
-                                    type="button"
-                                    className={`ac-sem ${sem === n ? 'is-on' : ''}`}
-                                    onClick={() => pickSem(n)}
-                                >
-                                    <i />
-                                    Sem {n}
-                                </button>
-                            </span>
-                        ))}
-                    </div>
-                )}
-            </section>
-
-            <section className="ac-mods" aria-labelledby="subjects-heading">
-                <div className="ac-panel__head">
-                    <h2 id="subjects-heading">
-                        <BookOpen size={14} style={{ marginRight: 6, verticalAlign: -2 }} />
-                        Subjects {sem != null ? `· Sem ${sem}` : ''}
-                    </h2>
-                    <button type="button" className="ac-btn ac-btn--gold" disabled={!course} onClick={openAddSubject}>
-                        Add Subject
-                    </button>
-                </div>
-                {!course || sem == null ? (
-                    <div className="ac-empty">Select a course and semester.</div>
-                ) : subjects.length === 0 ? (
-                    <div className="ac-empty">No subjects in this semester.</div>
-                ) : (
-                    <div className="ac-mods__grid">
-                        {subjects.map((s) => (
-                            <div
-                                key={s.id}
-                                className={`ac-row ${s.id === subjectId ? 'is-on' : ''} ${pending?.type === 'subject' && pending.id === s.id ? 'is-warn' : ''}`}
-                                onClick={() => pickSubject(s.id)}
-                                onKeyDown={(e) => { if (e.key === 'Enter') pickSubject(s.id); }}
-                                role="button"
-                                tabIndex={0}
-                                aria-label={s.title}
+            <nav className="ac-stepper" aria-label="Catalog location">
+                {STEPS.map((item, index) => {
+                    const complete = index < stepIndex || (index === stepIndex && Boolean(stepValues[index]));
+                    return (
+                        <div className="ac-stepper__item" key={item.id}>
+                            <button
+                                type="button"
+                                className={'ac-step' + (step === item.id ? ' is-active' : '') + (complete ? ' is-complete' : '')}
+                                onClick={() => setStep(item.id)}
+                                disabled={index > stepIndex}
+                                aria-current={step === item.id ? 'step' : undefined}
                             >
-                                <div className="ac-row__orb" aria-hidden />
-                                <div>
-                                    <div className="ac-row__title">{s.title}</div>
-                                    <div className="ac-row__sub">{s.id} · {s.questions.length} questions</div>
-                                </div>
-                                {pending?.type === 'subject' && pending.id === s.id ? (
-                                    <div className="ac-warn" onClick={(e) => e.stopPropagation()}>
-                                        <button type="button" className="ac-btn ac-btn--ghost" onClick={() => setPending(null)}>Cancel</button>
-                                        <button type="button" className="ac-btn ac-btn--danger" onClick={confirmRemoveSubject}>Confirm remove</button>
-                                    </div>
-                                ) : (
-                                    <div className="ac-ops" onClick={(e) => e.stopPropagation()}>
-                                        <button type="button" className="ac-btn" onClick={() => openEditSubject(s)}>Edit</button>
-                                        <button
-                                            type="button"
-                                            className="ac-btn ac-btn--danger"
-                                            onClick={() => setPending({ type: 'subject', id: s.id, title: s.title })}
-                                        >
-                                            Remove
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </section>
-
-            <section className="ac-bench" aria-labelledby="questions-heading">
-                <div className="ac-nav">
-                    <div className="ac-panel__head">
-                        <h2 id="questions-heading">
-                            <ListChecks size={14} style={{ marginRight: 6, verticalAlign: -2 }} />
-                            Questions
-                        </h2>
-                        <button type="button" className="ac-btn ac-btn--gold" disabled={!subject} onClick={openAddQuestion}>
-                            Add Question
-                        </button>
-                    </div>
-                    {!subject ? (
-                        <div className="ac-empty">Select a subject.</div>
-                    ) : questions.length === 0 ? (
-                        <div className="ac-empty">No questions for this subject.</div>
-                    ) : (
-                        <div className="ac-stack">
-                            {questions.map((q, i) => (
-                                <div
-                                    key={q.id}
-                                    className={`ac-q ${focused?.id === q.id ? 'is-on' : ''} ${pending?.type === 'question' && pending.id === q.id ? 'is-warn' : ''}`}
-                                >
-                                    <button type="button" className="ac-q__hit" onClick={() => setFocusId(q.id)}>
-                                        <span className="ac-chip">{String(i + 1).padStart(2, '0')} · {q.type}</span>
-                                        <div className="ac-q__text">{q.text}</div>
-                                    </button>
-                                    {pending?.type === 'question' && pending.id === q.id ? (
-                                        <div className="ac-warn">
-                                            <button type="button" className="ac-btn ac-btn--ghost" onClick={() => setPending(null)}>Cancel</button>
-                                            <button type="button" className="ac-btn ac-btn--danger" onClick={confirmRemoveQuestion}>Confirm remove</button>
-                                        </div>
-                                    ) : (
-                                        <div className="ac-ops">
-                                            <button type="button" className="ac-btn" onClick={() => openEditQuestion(q)}>Edit</button>
-                                            <button
-                                                type="button"
-                                                className="ac-btn ac-btn--danger"
-                                                onClick={() => setPending({ type: 'question', id: q.id })}
-                                            >
-                                                Remove
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                </div>
-
-                <div className="ac-focus">
-                    <div className="ac-focus__kicker"><FileText size={14} /> Focus</div>
-                    {!focused ? (
-                        <div className="ac-empty">Choose a question to inspect it.</div>
-                    ) : (
-                        <div className="ac-focus__body">
-                            {focused.type === 'objective' ? (
-                                <ol className="ac-focus__opts">
-                                    {(focused.options || []).map((opt, i) => (
-                                        <li key={i} className={i === focused.answer ? 'is-answer' : ''}>{opt || '—'}</li>
-                                    ))}
-                                </ol>
-                            ) : (
-                                <p className="ac-focus__marks">{focused.marks || 0} marks</p>
-                            )}
-                            <button type="button" className="ac-btn ac-btn--gold" onClick={() => openEditQuestion(focused)}>
-                                Edit in workspace
+                                <span className="ac-step__number">{complete ? <Check size={16} /> : index + 1}</span>
+                                <span className="ac-step__copy">
+                                    <span className="ac-step__label">{item.label}</span>
+                                    {stepValues[index] && <span className="ac-step__value">{stepValues[index]}</span>}
+                                </span>
                             </button>
+                            {index < STEPS.length - 1 && <ChevronRight className="ac-stepper__arrow" size={16} />}
+                        </div>
+                    );
+                })}
+            </nav>
+
+            <section className="ac-workspace" aria-live="polite">
+                        {step === 'department' && (
+                        <div className="ac-stage animate-fade-in">
+                            <StageHeading eyebrow="STEP 1 · ACADEMIC AREA" title="Choose a department" description="All six catalog departments are available to administrators." />
+                            <div className="ac-department-grid">
+                                {CATALOG_DOMAINS.map(item => {
+                                    const Icon = DOMAIN_ICONS[item.id] || GraduationCap;
+                                    return (
+                                        <button type="button" key={item.id} className="ac-department-card" onClick={() => chooseDepartment(item)}>
+                                            <span className="ac-department-card__icon"><Icon size={21} /></span>
+                                            <span className="ac-department-card__title">{item.title}</span>
+                                            <span className="ac-department-card__description">{item.description}</span>
+                                            <span className="ac-department-card__action">Browse courses <ChevronRight size={15} /></span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
                         </div>
                     )}
-                </div>
 
-                <aside className="ac-meta">
-                    <div className="ac-meta__row"><span>Course</span><b>{course?.title || '—'}</b></div>
-                    <div className="ac-meta__row"><span>Semester</span><b>{sem != null ? `Sem ${sem}` : '—'}</b></div>
-                    <div className="ac-meta__row"><span>Subject</span><b>{subject?.title || '—'}</b></div>
-                    <div className="ac-meta__row"><span>Type</span><b>{focused?.type || '—'}</b></div>
-                    <div className="ac-meta__row"><span>Status</span><b>Preview</b></div>
-                </aside>
-            </section>
-
-            <AnimatePresence>
-                {toast && (
-                    <motion.div
-                        className="ac-toast"
-                        role="status"
-                        initial={{ opacity: 0, y: 16, scale: 0.96 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 8 }}
-                    >
-                        {toast}
-                    </motion.div>
-                )}
-            </AnimatePresence>
-
-            <AnimatePresence>
-                {editing && (
-                    <motion.aside
-                        className="ac-drawer"
-                        role="dialog"
-                        aria-modal="true"
-                        initial={{ x: 28, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        exit={{ x: 16, opacity: 0 }}
-                    >
-                        {(modal === 'course-add' || modal === 'course-edit') && (
-                            <form onSubmit={saveCourse}>
-                                <h3>{modal === 'course-add' ? 'Add Course' : 'Edit Course'}</h3>
-                                {dirty && <span className="ac-unsaved">Unsaved</span>}
-                                <div className="ac-field">
-                                    <label htmlFor="c-title">Course name</label>
-                                    <input id="c-title" value={form.title || ''} onChange={(e) => setField({ title: e.target.value })} />
-                                </div>
-                                <div className="ac-field">
-                                    <label htmlFor="c-sems">Semesters (1–12, comma separated)</label>
-                                    <input id="c-sems" value={form.semesters || ''} onChange={(e) => setField({ semesters: e.target.value })} />
-                                </div>
-                                {error && <p className="hint" style={{ color: '#fca5a5' }}>{error}</p>}
-                                <div className="ac-modal__row">
-                                    <button type="button" className="ac-btn" onClick={closeModal}>Cancel</button>
-                                    <button type="submit" className="ac-btn ac-btn--gold">Update</button>
-                                </div>
-                            </form>
-                        )}
-
-                        {(modal === 'subject-add' || modal === 'subject-edit') && (
-                            <form onSubmit={saveSubject}>
-                                <h3>{modal === 'subject-add' ? 'Add Subject' : 'Edit Subject'}</h3>
-                                {dirty && <span className="ac-unsaved">Unsaved</span>}
-                                <div className="ac-field">
-                                    <label htmlFor="s-course">Course</label>
-                                    <select id="s-course" value={form.courseId || ''} onChange={(e) => setField({ courseId: e.target.value })}>
-                                        {courses.map((c) => <option key={c.id} value={c.id}>{c.title}</option>)}
-                                    </select>
-                                </div>
-                                <div className="ac-field">
-                                    <label htmlFor="s-sem">Semester</label>
-                                    <select id="s-sem" value={form.sem || ''} onChange={(e) => setField({ sem: e.target.value })}>
-                                        {(courses.find((c) => c.id === form.courseId)?.semesters || []).map((n) => (
-                                            <option key={n} value={n}>Sem {n}</option>
-                                        ))}
-                                    </select>
-                                </div>
-                                <div className="ac-field">
-                                    <label htmlFor="s-code">Subject id</label>
-                                    <input id="s-code" value={form.code || ''} onChange={(e) => setField({ code: e.target.value })} />
-                                </div>
-                                <div className="ac-field">
-                                    <label htmlFor="s-title">Subject name</label>
-                                    <input id="s-title" value={form.title || ''} onChange={(e) => setField({ title: e.target.value })} />
-                                </div>
-                                {error && <p className="hint" style={{ color: '#fca5a5' }}>{error}</p>}
-                                <div className="ac-modal__row">
-                                    <button type="button" className="ac-btn" onClick={closeModal}>Cancel</button>
-                                    <button type="submit" className="ac-btn ac-btn--gold">Update</button>
-                                </div>
-                            </form>
-                        )}
-
-                        {(modal === 'question-add' || modal === 'question-edit') && (
-                            <form onSubmit={saveQuestion}>
-                                <h3>{modal === 'question-add' ? 'Add Question' : 'Edit Question'}</h3>
-                                {dirty && <span className="ac-unsaved">Unsaved</span>}
-                                <div className="ac-field">
-                                    <label htmlFor="q-course">Course</label>
-                                    <select id="q-course" value={form.courseId || ''} onChange={(e) => setField({ courseId: e.target.value, subjectId: '' })}>
-                                        {courses.map((c) => <option key={c.id} value={c.id}>{c.title}</option>)}
-                                    </select>
-                                </div>
-                                <div className="ac-field">
-                                    <label htmlFor="q-subject">Subject</label>
-                                    <select id="q-subject" value={form.subjectId || ''} onChange={(e) => setField({ subjectId: e.target.value })}>
-                                        <option value="">Choose…</option>
-                                        {subjectsForFormCourse.map((s) => (
-                                            <option key={s.id} value={s.id}>{s.title} (Sem {s.sem})</option>
-                                        ))}
-                                    </select>
-                                </div>
-                                <div className="ac-field">
-                                    <label htmlFor="q-type">Type</label>
-                                    <select id="q-type" value={form.type || 'objective'} onChange={(e) => setField({ type: e.target.value })}>
-                                        <option value="objective">Objective</option>
-                                        <option value="subjective">Subjective</option>
-                                    </select>
-                                </div>
-                                <div className="ac-field">
-                                    <label htmlFor="q-text">Question</label>
-                                    <textarea id="q-text" value={form.text || ''} onChange={(e) => setField({ text: e.target.value })} />
-                                </div>
-                                {form.type === 'subjective' ? (
-                                    <div className="ac-field">
-                                        <label htmlFor="q-marks">Marks</label>
-                                        <input id="q-marks" type="number" min="1" value={form.marks ?? 7} onChange={(e) => setField({ marks: e.target.value })} />
-                                    </div>
-                                ) : (
-                                    <div className="ac-field">
-                                        <label>Options (select the answer)</label>
-                                        <div className="ac-options">
-                                            {(form.options || ['', '', '', '']).map((opt, i) => (
-                                                <div className="ac-option" key={i}>
-                                                    <input
-                                                        type="radio"
-                                                        name="q-answer"
-                                                        aria-label={`Answer ${i + 1}`}
-                                                        checked={Number(form.answer) === i}
-                                                        onChange={() => setField({ answer: i })}
-                                                    />
-                                                    <input
-                                                        aria-label={`Option ${i + 1}`}
-                                                        value={opt}
-                                                        onChange={(e) => {
-                                                            const options = [...(form.options || ['', '', '', ''])];
-                                                            options[i] = e.target.value;
-                                                            setField({ options });
-                                                        }}
-                                                    />
-                                                </div>
+                    {step === 'course' && (
+                        <div className="ac-stage animate-fade-in">
+                            <StageHeading eyebrow="STEP 2 · COURSE" title={domain?.title || 'Select a course'} description="Courses are loaded from the live catalog. Select a course to see its semesters." count={filteredCourses.length} />
+                            <div className="ac-toolbar">
+                                <label className="ac-search"><Search size={17} /><input value={courseSearch} onChange={event => setCourseSearch(event.target.value)} placeholder="Search courses…" aria-label="Search courses" />
+                                    {courseSearch && <button type="button" aria-label="Clear course search" onClick={() => setCourseSearch('')}><X size={15} /></button>}
+                                </label>
+                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => setStep('department')}>Change department</button>
+                            </div>
+                            {coursesLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading courses from the catalog…</div>
+                                : coursesError ? <ErrorState message={coursesError} onRetry={retryCurrentStage} />
+                                    : filteredCourses.length === 0 ? <div className="ac-empty-state"><BookOpen size={26} /><strong>No courses found</strong><span>{courses.length ? 'Try another search term.' : 'No live courses are linked to this department.'}</span></div>
+                                        : <div className="ac-course-grid">
+                                            {filteredCourses.map(item => (
+                                                <button type="button" key={item.courseId} className="ac-course-card" onClick={() => chooseCourse(item)}>
+                                                    <span className="ac-course-card__top"><GraduationCap size={20} /><span>{item.sems?.length || 0} semesters</span></span>
+                                                    <strong>{item.courseName}</strong>
+                                                    <span className="ac-course-card__action">Select course <ChevronRight size={15} /></span>
+                                                </button>
                                             ))}
+                                        </div>}
+                        </div>
+                    )}
+
+                    {step === 'semester' && (
+                        <div className="ac-stage animate-fade-in">
+                            <StageHeading eyebrow="STEP 3 · SEMESTER" title={course?.courseName || 'Select a semester'} description="Semester options come directly from the selected course record." />
+                            <div className="ac-toolbar"><button type="button" className="ac-btn ac-btn--secondary" onClick={() => setStep('course')}><ArrowLeft size={15} /> Courses</button></div>
+                            {subjectsLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading course and semester data…</div>
+                                : subjectsError ? <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
+                                    : semesters.length === 0 ? <div className="ac-empty-state"><Layers3 size={26} /><strong>No semesters listed</strong><span>This course has no semester values in the live catalog.</span></div>
+                                        : <div className="ac-semester-grid">
+                                            {semesters.map(value => (
+                                                <button type="button" key={value} data-testid={"semester-option-" + value} className="ac-semester-card" onClick={() => chooseSemester(value)}>
+                                                    <span className="ac-semester-card__number">{String(value).padStart(2, '0')}</span>
+                                                    <strong>{value === 0 ? 'Semester 0' : 'Semester ' + value}</strong>
+                                                    <span>Browse subjects <ChevronRight size={15} /></span>
+                                                </button>
+                                            ))}
+                                        </div>}
+                        </div>
+                    )}
+
+                    {step === 'subject' && (
+                        <div className="ac-stage animate-fade-in">
+                            <StageHeading eyebrow="STEP 4 · SUBJECT" title={semester === 0 ? 'Semester 0 subjects' : 'Semester ' + semester + ' subjects'} description={(course?.courseName || 'Selected course') + ' · Search by subject name or numeric Subject ID.'} count={filteredSubjects.length} />
+                            <div className="ac-toolbar">
+                                <label className="ac-search"><Search size={17} /><input value={subjectSearch} onChange={event => setSubjectSearch(event.target.value)} placeholder="Search subjects or Subject ID…" aria-label="Search subjects" />
+                                    {subjectSearch && <button type="button" aria-label="Clear subject search" onClick={() => setSubjectSearch('')}><X size={15} /></button>}
+                                </label>
+                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => setStep('semester')}><ArrowLeft size={15} /> Semesters</button>
+                            </div>
+                            {subjectsLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading subjects…</div>
+                                : subjectsError ? <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
+                                    : <div className={'ac-subject-layout' + (selectedSubject ? ' has-selection' : '')}>
+                                        <div className="ac-subject-list">
+                                            {filteredSubjects.length === 0
+                                                ? <div className="ac-empty-state"><BookOpen size={26} /><strong>No subjects found</strong><span>{semesterSubjects.length ? 'Try a different search.' : 'No subjects are linked to this semester in the live catalog.'}</span></div>
+                                                : filteredSubjects.map(item => (
+                                                    <button type="button" key={item.subjectId} className={'ac-subject-row' + (String(subjectId) === String(item.subjectId) ? ' is-selected' : '')} onClick={() => setSubjectId(item.subjectId)} aria-pressed={String(subjectId) === String(item.subjectId)}>
+                                                        <span className="ac-subject-row__mark"><BookOpen size={17} /></span>
+                                                        <span className="ac-subject-row__copy"><strong>{item.subjectName}</strong><small>Subject ID · {item.subjectId}</small></span>
+                                                        <span className={'ac-subject-row__type' + (item.isDepartmentalSubject ? ' is-departmental' : '')}>{item.isDepartmentalSubject ? 'Departmental' : 'Non-departmental'}</span>
+                                                        <ChevronRight size={17} className="ac-subject-row__arrow" />
+                                                    </button>
+                                                ))}
                                         </div>
-                                    </div>
-                                )}
-                                {error && <p className="hint" style={{ color: '#fca5a5' }}>{error}</p>}
-                                <div className="ac-modal__row">
-                                    <button type="button" className="ac-btn" onClick={closeModal}>Cancel</button>
-                                    <button type="submit" className="ac-btn ac-btn--gold">Update</button>
-                                </div>
-                            </form>
-                        )}
-                    </motion.aside>
-                )}
-            </AnimatePresence>
-        </div>
+                                        <aside className="ac-subject-detail" aria-label="Selected subject details">
+                                            {selectedSubject ? (
+                                                <>
+                                                    <div className="ac-detail-heading"><span className="ac-detail-icon"><BookOpen size={21} /></span><div><span className="ac-eyebrow">SELECTED SUBJECT</span><h3>{selectedSubject.subjectName}</h3></div></div>
+                                                    <dl className="ac-detail-meta">
+                                                        <div><dt>Subject ID</dt><dd>{selectedSubject.subjectId}</dd></div>
+                                                        <div><dt>Course ID</dt><dd>{selectedSubject.courseId}</dd></div>
+                                                        <div><dt>Semester</dt><dd>{selectedSubject.sem}</dd></div>
+                                                        <div><dt>Subject type</dt><dd>{selectedSubject.isDepartmentalSubject ? 'Departmental' : 'Non-departmental'}</dd></div>
+                                                    </dl>
+                                                    <section className="ac-exam-types">
+                                                        <h4>Applicable exam types</h4>
+                                                        <div className="ac-exam-type-list">
+                                                            {getExamTypesForSubject(selectedSubject.isDepartmentalSubject).map(type => {
+                                                                const info = getSubjectExamInfo(type, selectedSubject.isDepartmentalSubject);
+                                                                if (!info) return null;
+                                                                return (
+                                                                    <div className="ac-exam-type" key={type}>
+                                                                        <span><strong>{info.title}</strong><small>{info.type === 'objective' ? 'MCQ' : 'Theory'} · {info.totalMarks}M · {info.timeMinutes} min</small></span>
+                                                                        <Check size={16} />
+                                                                    </div>
+                                                                );
+                                                            })}
+                                                        </div>
+                                                    </section>
+                                                    <section className="ac-question-locator">
+                                                        <div className="ac-question-locator__heading"><Layers3 size={18} /><h4>Question locator</h4><span>Phase 3</span></div>
+                                                        <p>The subject is identified. Current TestsData rows do not carry Course ID, Subject ID or Semester, so this screen will not attach unrelated question papers to this subject.</p>
+                                                        <div className="ac-question-locator__target"><span>INGESTION TARGET</span><strong>{selectedSubject.subjectId} · Sem {selectedSubject.sem}</strong><small>{selectedSubject.subjectName}</small></div>
+                                                        <p className="ac-question-locator__next">Phase 3 will create the canonical question-bank index during validated file ingestion.</p>
+                                                    </section>
+                                                </>
+                                            ) : (
+                                                <div className="ac-detail-empty"><BookOpen size={28} /><strong>Select a subject</strong><span>Its catalog identity, exam eligibility and question-bank target will appear here.</span></div>
+                                            )}
+                                        </aside>
+                                    </div>}
+                        </div>
+                    )}
+                </section>
+
+            <footer className="ac-footer">
+                <span><span className="ac-footer__dot" /> Live catalog · Read-only Phase 1 locator</span>
+                <span>Departments → Courses → Semesters → Subjects</span>
+            </footer>
+        </main>
     );
 }
