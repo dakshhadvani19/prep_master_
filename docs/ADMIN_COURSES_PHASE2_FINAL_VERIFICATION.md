@@ -31,8 +31,8 @@ Phase 2 is implemented in the admin course workspace. This pass verified the exi
 - Upload UI: 5/5 tests passed.
 - Upload API: 6/6 tests passed.
 - Question-bank parser regression suite: 4/4 passed.
-- Admin locator suite: 9/9 passed.
-- Combined verification: 36/36 passed.
+- Phase 2 upload-specific suites: 23/23 passed.
+- Including the parser regression suite: 27/27 passed.
 - Targeted ESLint across upload UI, API, validation/parser modules and related tests: passed.
 - Vite production build: passed in 6.32 seconds. Existing circular vendor chunk and large-chunk-size warnings remain; there are no build errors.
 
