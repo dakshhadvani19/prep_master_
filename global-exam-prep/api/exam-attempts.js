@@ -1,4 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
+import { randomUUID } from 'node:crypto';
+import { evaluateTheoryAttempt, prepareTheoryEvaluation } from './_lib/theory-rubric-evaluator.js';
+
+export const config = { maxDuration: 60 };
 
 const process = globalThis.process;
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -28,6 +32,64 @@ async function privateExamData(admin, action, payload = {}) {
     if (error) throw new Error(error.message);
     return data;
 }
+async function privateEvaluationData(admin, action, payload = {}) {
+    const { data, error } = await admin.rpc('pm_private_exam_evaluation_data', { p_action: action, p_payload: payload });
+    if (error) throw new Error(error.message);
+    return data;
+}
+async function claimPrivateEvaluation(admin, { attemptId, userId, answerRevision, claimToken }) {
+    const { data, error } = await admin.rpc('pm_private_exam_evaluation_claim', {
+        p_attempt_id: attemptId, p_user_id: userId, p_answer_revision: answerRevision, p_claim_token: claimToken,
+    });
+    if (error) throw new Error(error.message);
+    return data;
+}
+async function finishPrivateEvaluation(admin, { attemptId, userId, answerRevision, claimToken, status, result = null, errorMessage = null }) {
+    const { data, error } = await admin.rpc('pm_private_exam_evaluation_finish', {
+        p_attempt_id: attemptId, p_user_id: userId, p_answer_revision: answerRevision,
+        p_claim_token: claimToken, p_status: status, p_result: result, p_error: errorMessage,
+    });
+    if (error) throw new Error(error.message);
+    return data;
+}
+function hasTheoryQuestions(attempt) {
+    return Array.isArray(attempt?.questions) && attempt.questions.some(question => question?.type === 'subjective');
+}
+function hasCompleteTheoryRubric(attempt) {
+    if (!hasTheoryQuestions(attempt)) return false;
+    return attempt.questions.filter(question => question?.type === 'subjective').every(question => (
+        Array.isArray(question.rubric) && question.rubric.length > 0
+    ));
+}
+function dashboardSafeQuestion(question) {
+    if (!question || typeof question !== 'object') return null;
+    const safe = { ...question };
+    delete safe.answer;
+    delete safe.answerFormat;
+    delete safe.rubric;
+    delete safe.review;
+    return safe;
+}
+function dashboardSafeAttempt(attempt, evaluation) {
+    const theory = hasTheoryQuestions(attempt);
+    const rubricReady = theory && hasCompleteTheoryRubric(attempt);
+    const reviewStatus = !theory ? 'ready' : !rubricReady ? 'unavailable' : (evaluation?.status || 'pending');
+    const evaluationResult = reviewStatus === 'completed' ? evaluation?.result : null;
+    return {
+        ...attempt,
+        questions: Array.isArray(attempt.questions) ? attempt.questions.map(dashboardSafeQuestion) : [],
+        answers: attempt.answers && typeof attempt.answers === 'object' ? attempt.answers : {},
+        score: evaluationResult ? Number(evaluationResult.totalAwardedMarks) : attempt.score ?? null,
+        total_marks: evaluationResult ? Number(evaluationResult.totalPossibleMarks) : attempt.total_marks,
+        review_status: reviewStatus,
+        review_error: reviewStatus === 'failed' ? evaluation?.error || 'Evaluation failed. Please retry.' : null,
+        evaluation_attempts: evaluation?.attempts ?? 0,
+    };
+}
+async function upsertTheoryEvaluation(admin, attempt, userId) {
+    if (!hasTheoryQuestions(attempt) || !hasCompleteTheoryRubric(attempt)) return null;
+    return privateEvaluationData(admin, 'upsert_pending', { attempt_id: attempt.id, user_id: userId });
+}
 async function tagAttemptSubject(admin, attemptId, userId, subjectId) {
     const { data, error } = await admin.rpc('pm_private_exam_tag_subject', {
         p_attempt_id: attemptId,
@@ -40,10 +102,14 @@ async function tagAttemptSubject(admin, attemptId, userId, subjectId) {
 }
 function studentSafeQuestion(question) {
     if (!question || typeof question !== 'object') return null;
-    const { answer, review, ...safe } = question;
+    const safe = { ...question };
+    delete safe.review;
+    // MCQ keys live in private.exam_attempt_keys. Theory model answers remain
+    // with the private attempt snapshot for the server-side rubric grader.
+    if (question.type === 'mcq') delete safe.answer;
     return safe;
 }
-export function buildAttemptReviewRecord(attempt, answerKey) {
+export function buildAttemptReviewRecord(attempt, answerKey, evaluation = null) {
     const savedQuestions = Array.isArray(attempt?.questions) ? attempt.questions : [];
     const questions = savedQuestions.map((question, index) => {
         if (question?.type !== 'mcq') return question;
@@ -62,6 +128,10 @@ export function buildAttemptReviewRecord(attempt, answerKey) {
         };
     });
 
+    const isObjective = questions.some(question => question?.type === 'mcq');
+    const isTheory = !isObjective && questions.some(question => question?.type === 'subjective');
+    const evaluationStatus = isTheory ? (evaluation?.status || 'pending') : 'ready';
+    const evaluationResult = evaluationStatus === 'completed' ? evaluation?.result || null : null;
     return {
         id: attempt.id,
         attemptId: attempt.id,
@@ -70,9 +140,12 @@ export function buildAttemptReviewRecord(attempt, answerKey) {
         subjectName: attempt.subject_name || null,
         examType: attempt.exam_type,
         difficulty: attempt.difficulty,
-        type: questions.some((question) => question?.type === 'mcq') ? 'objective' : 'theory',
-        score: attempt.score ?? null,
-        totalMarks: attempt.total_marks ?? null,
+        type: isObjective ? 'objective' : 'theory',
+        score: evaluationResult ? Number(evaluationResult.totalAwardedMarks) : attempt.score ?? null,
+        totalMarks: evaluationResult ? Number(evaluationResult.totalPossibleMarks) : attempt.total_marks ?? null,
+        evaluationStatus,
+        evaluationResult,
+        evaluationError: evaluationStatus === 'failed' ? evaluation?.error || 'Evaluation failed. Please retry.' : null,
         questions,
         userAnswers: attempt.answers && typeof attempt.answers === 'object' ? attempt.answers : {},
     };
@@ -212,10 +285,12 @@ export default async function handler(req, res) {
             });
             if (!attempt) return fail(res, 404, 'Attempt not found.');
             if (['submitted', 'auto_submitted'].includes(attempt.status)) {
+                const evaluation = await upsertTheoryEvaluation(admin, attempt, user.id);
                 return res.status(200).json({
-                    ok: true, alreadySubmitted: true, score: attempt.score,
-                    totalMarks: attempt.total_marks, percentage: attempt.score == null || !attempt.total_marks
+                    ok: true, alreadySubmitted: true, score: attempt.score, totalMarks: attempt.total_marks,
+                    percentage: attempt.score == null || !attempt.total_marks
                         ? null : Math.round((Number(attempt.score) / Number(attempt.total_marks)) * 100),
+                    evaluationStatus: evaluation?.status || (hasTheoryQuestions(attempt) ? 'unavailable' : 'ready'),
                 });
             }
             if (attempt.status !== 'in_progress') return fail(res, 409, 'This attempt is not accepting submissions.');
@@ -266,29 +341,81 @@ export default async function handler(req, res) {
                 }
                 return fail(res, 409, 'The attempt could not be finalized.');
             }
+            const finalizedAttempt = { ...attempt, answers, status: 'submitted' };
+            const evaluation = await upsertTheoryEvaluation(admin, finalizedAttempt, user.id);
             return res.status(200).json({
                 ok: true, alreadySubmitted: false, score,
                 totalMarks: totalMarks || null,
                 percentage: score == null || totalMarks <= 0 ? null : Math.round((score / totalMarks) * 100),
+                evaluationStatus: evaluation?.status || (hasTheoryQuestions(finalizedAttempt) ? 'unavailable' : 'ready'),
             });
         }
 
+        if (action === 'evaluate') {
+            const attemptId = String(body.attemptId || '');
+            if (!UUID_RE.test(attemptId)) return fail(res, 400, 'Invalid attempt identifier.');
+            const attempt = await privateExamData(admin, 'get_attempt', { id: attemptId, user_id: user.id, attempt_type: 'exam' });
+            if (!attempt) return fail(res, 404, 'Attempt not found.');
+            if (!['submitted', 'auto_submitted'].includes(attempt.status)) {
+                return fail(res, 409, 'Evaluation is available after the exam has been submitted.');
+            }
+            if (!hasCompleteTheoryRubric(attempt)) {
+                return res.status(200).json({ status: hasTheoryQuestions(attempt) ? 'unavailable' : 'ready' });
+            }
+            const evaluation = await upsertTheoryEvaluation(admin, attempt, user.id);
+            if (!evaluation) return fail(res, 409, 'The evaluation record could not be initialized.');
+            if (evaluation.status === 'completed') {
+                return res.status(200).json({ status: 'completed', result: evaluation.result });
+            }
+            const claimToken = randomUUID();
+            const claim = await claimPrivateEvaluation(admin, {
+                attemptId, userId: user.id, answerRevision: Number(attempt.answer_revision) || 0, claimToken,
+            });
+            const claimRow = claim?.evaluation || null;
+            if (!claim?.claimed) {
+                return res.status(200).json({
+                    status: claimRow?.status || 'pending',
+                    result: claimRow?.status === 'completed' ? claimRow.result : null,
+                    error: claimRow?.status === 'failed' ? claimRow.error : null,
+                });
+            }
+            try {
+                const apiKey = envFirst('GROQ_API_KEY');
+                const result = await evaluateTheoryAttempt(attempt, apiKey);
+                const completed = await finishPrivateEvaluation(admin, {
+                    attemptId, userId: user.id, answerRevision: Number(attempt.answer_revision) || 0,
+                    claimToken, status: 'completed', result,
+                });
+                if (!completed) return fail(res, 409, 'The saved answers changed during evaluation. Refresh and retry.');
+                return res.status(200).json({ status: 'completed', result: completed.result });
+            } catch (evaluationError) {
+                console.error('[theory-evaluation] Failed:', evaluationError?.message || evaluationError);
+                await finishPrivateEvaluation(admin, {
+                    attemptId, userId: user.id, answerRevision: Number(attempt.answer_revision) || 0,
+                    claimToken, status: 'failed',
+                    errorMessage: 'The automated marker could not complete this attempt. Please retry.',
+                }).catch(finishError => console.error('[theory-evaluation] Could not persist failure:', finishError.message));
+                return res.status(200).json({
+                    status: 'failed',
+                    error: 'The automated marker could not complete this attempt. Please retry.',
+                });
+            }
+        }
         if (action === 'review') {
             const attemptId = String(body.attemptId || '');
             if (!UUID_RE.test(attemptId)) return fail(res, 400, 'Invalid attempt identifier.');
-
-            const attempt = await privateExamData(admin, 'get_attempt', {
-                id: attemptId, user_id: user.id, attempt_type: 'exam',
-            });
+            const attempt = await privateExamData(admin, 'get_attempt', { id: attemptId, user_id: user.id, attempt_type: 'exam' });
             if (!attempt) return fail(res, 404, 'Attempt not found.');
             if (!['submitted', 'auto_submitted'].includes(attempt.status)) {
                 return fail(res, 409, 'Answer review is available after the exam has been submitted.');
             }
-
             const answerRow = await privateExamData(admin, 'get_answer_key', { attempt_id: attemptId });
-            return res.status(200).json({
-                record: buildAttemptReviewRecord(attempt, answerRow?.answer_key),
-            });
+            let evaluation = null;
+            if (hasCompleteTheoryRubric(attempt)) {
+                evaluation = await privateEvaluationData(admin, 'get', { attempt_id: attemptId, user_id: user.id });
+                if (!evaluation) evaluation = await upsertTheoryEvaluation(admin, attempt, user.id);
+            }
+            return res.status(200).json({ record: buildAttemptReviewRecord(attempt, answerRow?.answer_key, evaluation) });
         }
 
         if (action === 'list') {
@@ -296,16 +423,23 @@ export default async function handler(req, res) {
             const attempts = await privateExamData(admin, 'list_attempts', {
                 user_id: user.id, attempt_type: 'exam', limit, order: 'started_at_desc',
             });
-            return res.status(200).json({ attempts: Array.isArray(attempts) ? attempts : [] });
+            const rows = Array.isArray(attempts) ? attempts : [];
+            const evaluationRows = rows.length ? await privateEvaluationData(admin, 'list', {
+                user_id: user.id, attempt_ids: rows.map(attempt => attempt.id),
+            }) : [];
+            const evaluationByAttempt = new Map(
+                (Array.isArray(evaluationRows) ? evaluationRows : []).map(item => [item.attempt_id, item])
+            );
+            return res.status(200).json({
+                attempts: rows.map(attempt => dashboardSafeAttempt(attempt, evaluationByAttempt.get(attempt.id))),
+            });
         }
 
         if (action === 'get') {
             const attemptId = String(body.attemptId || '');
             if (!UUID_RE.test(attemptId)) return fail(res, 400, 'Invalid attempt identifier.');
-            const attempt = await privateExamData(admin, 'get_attempt', {
-                id: attemptId, user_id: user.id, attempt_type: 'exam',
-            });
-            return res.status(200).json({ attempt: attempt || null });
+            const attempt = await privateExamData(admin, 'get_attempt', { id: attemptId, user_id: user.id, attempt_type: 'exam' });
+            return res.status(200).json({ attempt: attempt ? dashboardSafeAttempt(attempt, null) : null });
         }
 
         return fail(res, 400, 'Unknown exam-attempt action.');
