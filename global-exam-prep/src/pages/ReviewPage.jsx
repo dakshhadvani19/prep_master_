@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, CheckCircle, XCircle, MinusCircle, BarChart2, BookOpen, Loader } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle, XCircle, MinusCircle, BarChart2, BookOpen, Loader, AlertCircle, RefreshCw } from 'lucide-react';
 import { domains } from '../data/mockData';
 import { examPrompts } from '../data/examPrompts';
 import { findSubjectContext } from '../utils/subjectResolver';
@@ -10,9 +10,67 @@ import {
     getReviewStatus,
 } from '../utils/reviewAnswerStatus';
 import { useAuth } from '../context/AuthContext';
-import { getExamAttemptReview, getTestRoomAttemptReview } from '../utils/supabaseExam';
+import { getExamAttemptReview, getTestRoomAttemptReview, evaluateExamAttempt } from '../utils/supabaseExam';
 import AttemptSourceBadge from '../components/AttemptSourceBadge';
 
+function withEvaluationResult(record, result) {
+    if (!record || !result) return record;
+    if (result.status === 'completed' && result.result) {
+        return {
+            ...record, evaluationStatus: 'completed', evaluationError: '', evaluationResult: result.result,
+            score: Number(result.result.totalAwardedMarks), totalMarks: Number(result.result.totalPossibleMarks),
+        };
+    }
+    if (result.status === 'failed') {
+        return { ...record, evaluationStatus: 'failed', evaluationError: result.error || 'The automated marker could not complete this attempt.' };
+    }
+    return { ...record, evaluationStatus: result.status || 'evaluating' };
+}
+async function waitForTheoryEvaluation(attemptId, initialRecord, isCancelled) {
+    let current = initialRecord;
+    for (let index = 0; index < 30; index += 1) {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        if (isCancelled()) return current;
+        const latest = await getExamAttemptReview(attemptId);
+        if (latest.record) current = latest.record;
+        if (['completed', 'failed', 'unavailable'].includes(current?.evaluationStatus)) return current;
+    }
+    return current;
+}
+
+function ModelAnswerContent({ answer, format }) {
+    const lines = String(answer || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+    if (format === 'comparison') {
+        const rows = lines.filter(line => line.startsWith('|')).map(line => line.split('|').slice(1, -1).map(cell => cell.trim()));
+        const dataRows = rows.filter(row => !row.every(cell => /^:?-{3,}:?$/.test(cell)));
+        if (dataRows.length >= 2) {
+            const [header, ...body] = dataRows;
+            return (
+                <div style={{ overflowX: 'auto' }}>
+                    <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.96rem', lineHeight: 1.55 }}>
+                        <thead><tr>{header.map((cell, index) => <th key={index} style={{ padding: '0.8rem', textAlign: 'left', color: 'var(--text-primary)', background: 'var(--bg-tertiary)', borderBottom: '1px solid var(--glass-border)' }}>{cell}</th>)}</tr></thead>
+                        <tbody>{body.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, index) => <td key={index} style={{ padding: '0.8rem', verticalAlign: 'top', borderBottom: '1px solid var(--glass-border)', color: 'var(--text-secondary)' }}>{cell}</td>)}</tr>)}</tbody>
+                    </table>
+                </div>
+            );
+        }
+    }
+    const points = lines.map(line => line.replace(/^(?:\d+[.)]|[-*•])\s*/, '').trim()).filter(Boolean);
+    const isPointList = points.length > 1 && lines.every(line => /^(?:\d+[.)]|[-*•])\s+/.test(line));
+    if (isPointList) {
+        return <ol style={{ margin: 0, paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.55rem', color: 'var(--text-secondary)', fontSize: '0.98rem', lineHeight: 1.65 }}>{points.map((point, index) => <li key={index} style={{ paddingLeft: '0.3rem' }}>{point}</li>)}</ol>;
+    }
+    return <div style={{ whiteSpace: 'pre-wrap', color: 'var(--text-secondary)', fontSize: '0.98rem', lineHeight: 1.7 }}>{answer}</div>;
+}
+
+function RubricStatus({ status }) {
+    const config = status === 'met'
+        ? { label: 'Met', color: 'var(--success)', background: 'rgba(16,185,129,0.12)' }
+        : status === 'partial'
+            ? { label: 'Partial', color: 'var(--warning)', background: 'rgba(245,158,11,0.12)' }
+            : { label: 'Not met', color: 'var(--danger)', background: 'rgba(239,68,68,0.10)' };
+    return <span style={{ display: 'inline-flex', alignItems: 'center', padding: '0.25rem 0.65rem', borderRadius: 'var(--radius-full)', background: config.background, color: config.color, fontSize: '0.82rem', fontWeight: 700 }}>{config.label}</span>;
+}
 export default function ReviewPage() {
     const { historyId } = useParams();
     const navigate = useNavigate();
@@ -22,13 +80,15 @@ export default function ReviewPage() {
     const [activeFilter, setActiveFilter] = useState(null);
     const [record, setRecord] = useState(null);
     const [loadingRecord, setLoadingRecord] = useState(true);
+    const [evaluationLoading, setEvaluationLoading] = useState(false);
+    const [evaluationError, setEvaluationError] = useState('');
     const { currentUser } = useAuth();
 
     // Reviews load only from owner-authenticated durable attempt APIs.
     useEffect(() => {
         let cancelled=false;
         async function loadRecord(){
-            setCurrentQ(0);setActiveFilter(null);setLoadingRecord(true);
+            setCurrentQ(0);setActiveFilter(null);setLoadingRecord(true);setEvaluationLoading(false);setEvaluationError('');
             if(!currentUser?.uid){setRecord(null);setLoadingRecord(false);return;}
             try{
                 let savedReview=null;
@@ -38,8 +98,23 @@ export default function ReviewPage() {
                     const [examResult,roomResult]=await Promise.all([getExamAttemptReview(historyId),getTestRoomAttemptReview(historyId)]);
                     savedReview=examResult.record||roomResult.record;
                 }
-                if(!cancelled)setRecord(savedReview||null);
-            }finally{if(!cancelled)setLoadingRecord(false);}
+                if(!savedReview){if(!cancelled)setRecord(null);return;}
+                let current=savedReview;
+                if(savedReview.type==='theory' && ['pending','evaluating'].includes(savedReview.evaluationStatus)){
+                    if(!cancelled)setEvaluationLoading(true);
+                    if(savedReview.evaluationStatus==='pending'){
+                        const result=await evaluateExamAttempt(historyId);
+                        current=withEvaluationResult(current,result);
+                    }
+                    if(current.evaluationStatus==='evaluating' || current.evaluationStatus==='pending'){
+                        current=await waitForTheoryEvaluation(historyId,current,()=>cancelled);
+                    }
+                }
+                if(!cancelled){
+                    setRecord(current);
+                    setEvaluationError(current.evaluationStatus==='failed' ? current.evaluationError || 'The automated marker could not complete this attempt.' : '');
+                }
+            }finally{if(!cancelled){setLoadingRecord(false);setEvaluationLoading(false);}}
         }
         loadRecord().catch(error=>{
             console.error('[review] Failed to load persisted answer review:',error);
