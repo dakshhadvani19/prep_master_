@@ -2,7 +2,7 @@
 
 Last updated: 2026-11-01
 
-Status: **Implemented; live Supabase migrations applied and verified**
+Status: **Implemented, including student-side published-bank selection; real-bank smoke test awaits first published bank**
 
 ## Delivered
 
@@ -15,6 +15,11 @@ Status: **Implemented; live Supabase migrations applied and verified**
 - Adds a separate explicit publish action. Server and database checks block included invalid questions and unreviewed generated rubrics.
 - Adds idempotent private canonical bank/question/set storage. MCQ questions are grouped into sets of 30; short remainders are stored rather than discarded.
 - Canonical metadata comes from the verified upload record: SubjectId, CourseId, Semester and exam type.
+- Student auto-exam generation checks a published bank matching numeric SubjectId, exam type, question type and difficulty before calling Groq.
+- Mid-2 and departmental Mid-1 require a complete 30-question MCQ set. Theory Mid-1/ESE requires the exact configured mark sequence.
+- The server creates the attempt from private bank content; MCQ answer keys are stored privately and theory answers/rubrics stay in the private attempt snapshot. The browser receives answer-free questions only.
+- A service-role-only RPC returns at most 300 matching question records per bank. anon/authenticated cannot execute it.
+- If no complete eligible bank exists, ExamPortal keeps the existing AI/syllabus fallback.
 - public.TestsData remains unchanged.
 
 ## Live database
@@ -22,8 +27,10 @@ Status: **Implemented; live Supabase migrations applied and verified**
 Migrations:
 - 20261101093432_admin_question_bank_ingestion
 - 20261101094500_update_question_bank_publish_mark_totals
+- 20261101112056_add_student_published_question_bank_candidates
+- 20261101112612_filter_student_question_bank_candidates
 
-Both were applied on 2026-11-01.
+All four migrations were applied on 2026-11-01.
 
 Verified:
 - private.question_banks, private.question_bank_questions and private.question_bank_sets exist.
@@ -34,12 +41,16 @@ Verified:
 ## Verification
 
 - tests/question-bank-parser.test.js: 4 passing.
+- tests/published-question-bank.test.js: 4 passing.
+- tests/student-published-question-bank-api.test.js: 2 passing; verifies private MCQ keys and no key in browser response.
 - tests/admin-course-uploads.test.jsx: 5 passing, including generated rubric approval and short-set publishing.
 - tests/admin-course-uploads-api.test.js: 6 passing, including server-derived mark-total checks.
-- Combined Phase 1/2/3 focused suites: 34/34 passing.
+- Combined question-bank and upload integration suites: 21/21 passing.
 - Targeted ESLint: passing.
-- Vite production build: passing. Existing circular vendor chunk and large-chunk warnings remain.
+- Vite production build: passing in 6.66 seconds. Existing circular vendor chunk and large-chunk warnings remain.
+- Targeted ESLint on changed server/helper/test/upload files: passing.
+- Full repository suite: 557/561 passed; four remaining failures are in Gemini correction-prompt expectations, admin staff-modal assertion, dashboard test-room history, and MCQ answer normalization.
  
 ## Boundary
 
-Phase 3 ingestion and admin publication are implemented into the private canonical question-bank index. The student exam-generation picker does not yet consume that index; that downstream integration is not part of this phase. The PDF/DOCX parser expects numbered sections and explicit labels; unrecognized layouts remain rejected for manual correction rather than guessed.
+Phase 3 ingestion, admin publication and student-side published-bank selection are implemented. Live database currently has zero published banks/sets, so a real-bank smoke test awaits the first admin publication. Until then, existing AI/syllabus generation remains the fallback. The PDF/DOCX parser expects numbered sections and explicit labels; unrecognized layouts remain rejected for manual correction rather than guessed.
