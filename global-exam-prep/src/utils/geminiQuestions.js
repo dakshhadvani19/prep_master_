@@ -468,7 +468,7 @@ ${source}
                 }
                 const combined = [...normalizedQuestions, ...missingQuestions]
                     .map((question, index) => ({ ...question, id: `ai_q${index}` }));
-                validateCommonQuestions(combined, count, isObjective);
+                validateCommonQuestions(combined, count, isObjective, marksForQuestions);
                 return combined;
             }
 
