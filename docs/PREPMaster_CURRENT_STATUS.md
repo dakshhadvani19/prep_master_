@@ -279,5 +279,5 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Admin uploads can parse PDF/DOCX/CSV question banks, retain rejected items with source location, review/correct each question, and publish an approved bank.
 - Private canonical tables store banks, normalized questions and deterministic 30-question MCQ sets; short remainders are retained.
 - Generated theory rubrics require review. Complete MCQ sets with exam mark-total mismatches require acknowledgement.
-- The student exam-generation picker integration is a separate downstream task.
+- ExamPortal now checks private published banks by subject/exam/question type/difficulty before Groq. The server creates the attempt and keeps MCQ answer keys/theory rubric data private; AI/syllabus generation remains the fallback. A real-bank smoke test awaits the first published bank.
 - See docs/ADMIN_COURSES_PHASE3_PROGRESS.md for parser constraints, migrations and verification.
