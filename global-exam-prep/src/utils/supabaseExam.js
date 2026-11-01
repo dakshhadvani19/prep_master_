@@ -110,6 +110,24 @@ export async function getExamAttemptReview(attemptId) {
     }
 }
 
+/** Starts or resumes server-side theory grading for a finalized attempt. */
+export async function evaluateExamAttempt(attemptId) {
+    try {
+        const result = await callExamAttemptApi({ action: 'evaluate', attemptId });
+        return {
+            status: result?.status || 'pending',
+            result: result?.result || null,
+            error: result?.error || null,
+        };
+    } catch (error) {
+        return {
+            status: 'failed',
+            result: null,
+            error: error.message || 'Could not evaluate this exam attempt.',
+        };
+    }
+}
+
 export async function getMyAttempts(limit = 50) {
     try {
         const result = await callExamAttemptApi({ action: 'list', limit });
