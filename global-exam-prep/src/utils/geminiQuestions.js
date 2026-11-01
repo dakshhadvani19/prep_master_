@@ -175,10 +175,6 @@ function validateCommonQuestions(questions, count, isObjective = false, expected
             if (!theoryValidation.valid) {
                 throw new Error(`AI response format error: theory question ${index + 1}: ${theoryValidation.errors.join(', ')}`);
             }
-            const expected = Array.isArray(expectedMarks) ? expectedMarks[index] : undefined;
-            if (expected !== undefined && question.marks !== expected) {
-                throw new Error(`AI response format error: theory question ${index + 1} must be ${expected} marks, received ${question.marks}.`);
-            }
         }
     });
 }
