@@ -32,7 +32,7 @@ Each question object must contain:
 - "type": "mcq" | "subjective" — set by the exam mode
 - "difficulty": "easy" | "medium" | "hard" — as requested
 - For MCQ: "options" (exactly 4 distinct non-empty strings), "answer" (integer 0-3), "review" (internal QC metadata — see below)
-- For subjective: "marks" (positive integer), no "options" or "answer"
+- For subjective: "marks" (positive integer), "answer" (concise model-answer string), "answerFormat" ("points" | "comparison" | "worked_solution" | "code" | "diagram"), and "rubric" (mark-weighted scoring criteria); no MCQ options
 
 Internal review metadata (MCQ only, stripped before reaching the student):
 {
@@ -55,10 +55,14 @@ Quality rules:
 10. Before responding, silently audit the full set for correctness, ambiguity, distractor plausibility, answer-position variety, duplicates, and difficulty fit. Revise failed items.
 
 For subjective (theory) questions:
-- No answers, rubrics, or hints in the question text.
-- Each question must be unique and specific enough to mark fairly.
-- Marks must sum exactly to the exam's configured total for the section.
-- Match answer depth to marks: a 1-mark question asks for one fact/brief point (normally one sentence or 1–2 lines), never a page-long explanation. A 4-mark question targets roughly four creditable points/steps. An 8-mark question allows a fuller multi-step explanation or solution, but must remain bounded and syllabus-relevant.
+- Every question must include a concise model answer in "answer", an "answerFormat", and a structured "rubric". These are answer-key data and must not appear in the active student's question payload.
+- Each rubric item must contain "criterion", numeric "marks", and "keyPoints" (one to four specific expected concepts/evidence). Include "acceptedAlternatives" only when useful.
+- Rubric marks must add exactly to the question's marks. Use whole or half marks only. Every criterion must correspond to evidence present in the model answer; do not create unscored filler.
+- Maximum rubric criteria: 1M = exactly 1; 2M = at most 2; 4M = at most 6; 8M = at most 12.
+- Ordinary 8M answers should normally contain 8–10 concise points and must never exceed 12 distinct creditable points. Keep explanations bounded; no essays.
+- For DIFFERENTIATE/COMPARE, use "answerFormat":"comparison" and a Markdown table with one paired row per mark. An 8M comparison must contain exactly 8 rows (8 points for each side, 16 side-specific facts total); each rubric row is worth 1 mark and has exactly two keyPoints, one for each side.
+- 1M answers remain one word or one concise sentence. 2M answers contain at most two compact elements. 4M answers target roughly four clear points/steps.
+- Keep answers strictly syllabus-grounded. For code, numerical, worked-solution and diagram questions, include only the short solution/evidence needed to earn the marks.
 - Easy: concise definition, distinction, or one-step use. Medium: apply, calculate, compare, interpret. Hard: multi-step analysis, design, diagnosis, evaluation, or justified decision.
 ```
 
@@ -72,7 +76,8 @@ The backend owns the ordered mark sequence and must pass it to every generation 
 - **ESE theory:** exactly 13 questions, mark sequence `[1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]`: the first two are 1-mark, the third is 2-mark, followed by six 4-mark and four 8-mark questions; exactly 60 marks.
 - Alternate 4-mark and 8-mark questions as far as the required distribution permits.
 - A 1-mark question asks for one fact and must be answerable in one word or one concise sentence. Never ask for a page-long answer, full architecture or several subparts for 1 mark.
-- A 4-mark question expects around four creditable points/steps. An 8-mark question may require a fuller, bounded multi-step explanation or solution.
+- A 4-mark question should normally have around four creditable points/steps and no more than six rubric criteria. An ordinary 8-mark answer should normally have 8–10 points and no more than 12 rubric criteria.
+- A DIFFERENTIATE/COMPARE 8-mark question must contain exactly eight paired comparison rows: eight points on each side. Each paired row is worth one mark.
 - Difficulty changes reasoning demand, not question count, syllabus scope, marking scheme or suitable answer length.
 
 ## 3. User Message (per-request template)
@@ -143,7 +148,15 @@ Where:
       "text": "Explain {concept} with reference to {chapter}.",
       "type": "subjective",
       "difficulty": "easy",
-      "marks": 4
+      "marks": 4,
+      "answer": "1. ...\\n2. ...\\n3. ...\\n4. ...",
+      "answerFormat": "points",
+      "rubric": [
+        { "criterion": "Explains the first required concept", "marks": 1, "keyPoints": ["..."], "acceptedAlternatives": [] },
+        { "criterion": "Explains the second required concept", "marks": 1, "keyPoints": ["..."] },
+        { "criterion": "Explains the third required concept", "marks": 1, "keyPoints": ["..."] },
+        { "criterion": "Explains the fourth required concept", "marks": 1, "keyPoints": ["..."] }
+      ]
     }
   ]
 }
@@ -155,7 +168,7 @@ Where:
 
 | Setting | Value | Rationale |
 |---------|-------|-----------|
-| Model | `llama-3.1-8b-instant` | Configured in `/api/ai.js`; deterministic for exam consistency |
+| Model | `openai/gpt-oss-20b` | Current model configured by `geminiQuestions.js` through `/api/ai.js` |
 | Temperature | 0.1 | Low temperature for reliable, repeatable item generation |
 | Response format | `json_object` | Forces valid JSON output |
 | Max source chars per batch | 6,000 | Leaves room for system instructions, output schema, and generated tokens |
@@ -179,7 +192,7 @@ The generated output is validated before persistence (see `src/utils/examValidat
 
 1. Question count matches the configured count exactly.
 2. MCQ: exactly 4 distinct options, answer index 0-3, internal review present and well-formed.
-3. Theory: exact question count, allowed mark values, required mark-value counts, 4/8-mark subtotal and total marks all match the configured blueprint (Mid-1: 7 questions/30 marks; ESE: 13 questions/60 marks).
+3. Theory: exact question count and mark sequence; every question has a non-empty model answer, supported answerFormat, 1–12 rubric criteria within the mark-specific cap, and rubric allocations summing exactly to its marks; paper totals match the configured blueprint (Mid-1: 7 questions/30 marks; ESE: 13 questions/60 marks).
 4. No duplicate or near-duplicate question stems.
 5. Syllabus coverage: questions span the allocated chapters/topics per the coverage plan.
 6. If any check fails, the batch is rejected and regenerated (up to 3 retries). On persistent failure, a meaningful error is returned to the student — never fabricated coverage.
