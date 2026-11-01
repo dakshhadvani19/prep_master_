@@ -156,11 +156,30 @@ export default function ReviewPage() {
         )
     ), [record, activeFilter]);
 
+    const retryEvaluation = async () => {
+        setEvaluationLoading(true);
+        setEvaluationError('');
+        try {
+            let updated = record;
+            const result = await evaluateExamAttempt(historyId);
+            updated = withEvaluationResult(updated, result);
+            if (updated?.evaluationStatus === 'evaluating' || updated?.evaluationStatus === 'pending') {
+                updated = await waitForTheoryEvaluation(historyId, updated, () => false);
+            }
+            setRecord(updated);
+            setEvaluationError(updated?.evaluationStatus === 'failed' ? updated.evaluationError || 'The automated marker could not complete this attempt.' : '');
+        } catch (error) {
+            setEvaluationError(error.message || 'The evaluation could not be retried.');
+        } finally {
+            setEvaluationLoading(false);
+        }
+    };
+
     if (loadingRecord) {
         return (
             <div className="container animate-fade-in" style={{ maxWidth: '700px', textAlign: 'center', marginTop: '5rem' }}>
                 <Loader size={36} color="var(--accent-primary)" style={{ margin: '0 auto 1rem auto', display: 'block', animation: 'spin 1s linear infinite' }} />
-                <p style={{ color: 'var(--text-secondary)' }}>Loading review...</p>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>{evaluationLoading ? 'Evaluating your answers against the marking rubric...' : 'Loading review...'}</p>
             </div>
         );
     }
@@ -189,6 +208,51 @@ export default function ReviewPage() {
             </div>
         );
     }
+    if (record.type === 'theory' && record.evaluationStatus !== 'completed') {
+        const isFailed = record.evaluationStatus === 'failed';
+        const unavailable = record.evaluationStatus === 'unavailable';
+        return (
+            <div className='container animate-fade-in' style={{ maxWidth: '760px', marginTop: '4rem' }}>
+                <div className='glass-panel' style={{ padding: '2.5rem', textAlign: 'center' }}>
+                    {isFailed || unavailable ? (
+                        <AlertCircle size={42} color={isFailed ? 'var(--danger)' : 'var(--text-secondary)'} style={{ margin: '0 auto 1rem auto' }} />
+                    ) : (
+                        <Loader size={42} color='var(--accent-primary)' style={{ margin: '0 auto 1rem auto', animation: 'spin 1s linear infinite' }} />
+                    )}
+                    <h2 style={{ fontSize: '1.45rem', marginBottom: '0.7rem' }}>
+                        {unavailable ? 'Marking rubric unavailable' : isFailed ? 'Evaluation could not be completed' : 'Evaluating your answers'}
+                    </h2>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.65, maxWidth: '580px', margin: '0 auto 1.5rem' }}>
+                        {unavailable
+                            ? 'This attempt does not contain a complete saved marking rubric, so an accurate rubric-based review cannot be produced.'
+                            : isFailed
+                                ? evaluationError || record.evaluationError || 'The automated marker could not complete this attempt. You can retry the evaluation.'
+                                : 'Your submitted answers are being checked against each question’s saved marking criteria. The review will open when all rubric marks have been verified.'}
+                    </p>
+                    {isFailed && (
+                        <button type='button' onClick={retryEvaluation} disabled={evaluationLoading} style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '0.55rem',
+                            padding: '0.75rem 1.35rem', borderRadius: 'var(--radius-full)',
+                            background: 'var(--accent-primary)', color: 'white', fontSize: '0.95rem', fontWeight: 700,
+                            opacity: evaluationLoading ? 0.65 : 1, cursor: evaluationLoading ? 'wait' : 'pointer',
+                        }}>
+                            {evaluationLoading ? <Loader size={17} /> : <RefreshCw size={17} />}
+                            {evaluationLoading ? 'Retrying evaluation...' : 'Retry evaluation'}
+                        </button>
+                    )}
+                    {!isFailed && !unavailable && (
+                        <div role='status' aria-live='polite' style={{ color: 'var(--text-tertiary)', fontSize: '0.88rem' }}>
+                            {record.evaluationStatus === 'evaluating' ? 'Evaluation is in progress.' : 'Preparing the evaluation request.'}
+                        </div>
+                    )}
+                    <button type='button' onClick={() => navigate('/dashboard')} style={{
+                        display: 'block', margin: '1.5rem auto 0', color: 'var(--text-secondary)',
+                        fontSize: '0.9rem', textDecoration: 'underline',
+                    }}>Back to Performance History</button>
+                </div>
+            </div>
+        );
+    }
 
     const questions = record.questions;
     const userAnswers = record.userAnswers || {};
@@ -211,6 +275,10 @@ export default function ReviewPage() {
     const q = displayQuestionIndex >= 0 ? questions[displayQuestionIndex] : null;
     const qStatus = q ? getStatus(q) : 'unattempted';
     const userAnswer = q ? userAnswers[q.id] : undefined;
+    const evaluationResult = record.evaluationResult || null;
+    const questionEvaluation = !isObjective && q
+        ? evaluationResult?.questions?.find(item => item.questionId === q.id)
+        : null;
 
     function applyQuestionFilter(filter) {
         const nextFilter = filter === 'all' ? null : filter;
