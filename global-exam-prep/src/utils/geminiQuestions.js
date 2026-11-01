@@ -89,7 +89,12 @@ export function parseModelQuestions(cleaned) {
     }
 
     if (Array.isArray(parsed)) return parsed;
-    if (parsed && typeof parsed === 'object' && Array.isArray(parsed.questions)) return parsed.questions;
+    if (parsed && typeof parsed === 'object' && parsed.questions && typeof parsed.questions === 'object') {
+        if (Array.isArray(parsed.questions)) return parsed.questions;
+        // Some JSON-object responses number questions as object properties.
+        // Preserve their insertion order when converting that equivalent shape.
+        return Object.values(parsed.questions);
+    }
     throw new Error('AI response must be a JSON object containing a questions array.');
 }
 
@@ -107,10 +112,33 @@ function optionText(value) {
     return '';
 }
 
+// Groq can wrap a generated item inside a "question", "item", or "data" object.
+// Unwrap only recognizable objects; primitive entries remain invalid and are
+// recovered by their original slot rather than being silently coerced.
+function normalizeQuestionShape(question) {
+    if (!question || typeof question !== 'object' || Array.isArray(question)) return question;
+
+    let normalized = { ...question };
+    for (let depth = 0; depth < 2; depth += 1) {
+        const nested = [normalized.question, normalized.item, normalized.data, normalized.mcq, normalized.theoryQuestion]
+            .find((value) => value && typeof value === 'object' && !Array.isArray(value));
+        if (!nested) break;
+        normalized = { ...normalized, ...nested };
+    }
+
+    if (typeof normalized.text !== 'string') {
+        const text = [normalized.question, normalized.prompt, normalized.stem]
+            .find((value) => typeof value === 'string' && value.trim());
+        if (text) normalized.text = text;
+    }
+    return normalized;
+}
+
 // Models sometimes encode the same four options as objects or as A/B/C/D keys
 // even when JSON-object mode is used. Canonicalize equivalent shapes, but never
 // invent missing distractors: incomplete questions must still be retried.
 function normalizeObjectiveQuestion(question) {
+    question = normalizeQuestionShape(question);
     if (!question || typeof question !== 'object' || Array.isArray(question)) return question;
 
     let rawOptions = question.options ?? question.choices ?? question.answers;
@@ -188,7 +216,7 @@ function validateCommonQuestions(questions, count, isObjective = false, expected
 function buildCorrectionPrompt(basePrompt, validationError, attempt) {
     // Avoid echoing an entire invalid payload into the next request. That can add
     // thousands of tokens and trigger the provider's TPM limit during recovery.
-    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\nRegenerate the complete requested output from the original material. Return corrected JSON only. Ensure the requested count, exactly four non-empty string MCQ options and a valid answer index. Every theory question must include a concise model answer, answerFormat, and a structured rubric whose mark allocations sum exactly to that question's marks. Keep ordinary answers within the mark-based point limits (maximum 12 rubric criteria); comparison questions need one paired comparison row per mark (eight rows for 8M). Do not reuse invalid option values.`;
+    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\nRegenerate the complete requested output from the original material. Return corrected JSON only. The questions value must be an array and EVERY array entry MUST be a JSON object with the required fields; never put strings, numbers, null, arrays, or explanatory text in the questions array. Ensure the requested count, exactly four non-empty string MCQ options and a valid answer index. Every theory question must include a concise model answer, answerFormat, and a structured rubric whose mark allocations sum exactly to that question's marks. Keep ordinary answers within the mark-based point limits (maximum 12 rubric criteria); comparison questions need one paired comparison row per mark (eight rows for 8M). Do not reuse invalid option values.`;
 }
 
 export async function generateQuestionsFromText({
@@ -266,8 +294,8 @@ export async function generateQuestionsFromText({
     const responseFormat = { type: 'json_object' };
 
     const systemMessage = isObjective
-        ? `Create accurate, syllabus-grounded MCQs. Return only valid JSON matching the required schema: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations, review fields, or IDs.` 
-        : `Create accurate, syllabus-grounded theory questions with a concise model answer and a machine-readable marking rubric for every question. Return only valid JSON matching this schema: {"questions":[{"text":"...","marks":4,"answer":"...","answerFormat":"points","rubric":[{"criterion":"...","marks":1,"keyPoints":["..."],"acceptedAlternatives":[]}]}]}. answerFormat must be points, comparison, worked_solution, code, or diagram. Rubric allocations must sum exactly to marks.`
+        ? `Create accurate, syllabus-grounded MCQs. Return only valid JSON matching the required schema: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. The questions value must be an array of question OBJECTS only: no strings, numbers, nulls, nested arrays, or prose entries. Four distinct options; answer index 0-3. No explanations, review fields, or IDs.` 
+        : `Create accurate, syllabus-grounded theory questions with a concise model answer and a machine-readable marking rubric for every question. Return only valid JSON matching this schema: {"questions":[{"text":"...","marks":4,"answer":"...","answerFormat":"points","rubric":[{"criterion":"...","marks":1,"keyPoints":["..."],"acceptedAlternatives":[]}]}]}. Every element of questions must be an object with text, marks, answer, answerFormat and rubric. Never put a string, number, null, array, or prose in the questions array. answerFormat must be points, comparison, worked_solution, code, or diagram. Rubric allocations must sum exactly to marks.`
 
     const exclusionText = excludedQuestionTexts.length
         ? `ALREADY GENERATED — do not repeat these question stems: ${JSON.stringify(excludedQuestionTexts.map(stem => String(stem).slice(0, 180)))}\n`
@@ -388,63 +416,83 @@ ${source}
                 throw new Error('AI returned no questions. Please retry generation.');
             }
 
-            // Trust the generated content. If the provider over-returns, use the requested
-            // count; if it under-returns, make a bounded request for only the missing items.
-            const slicedQuestions = parsedQuestions.slice(0, count);
-            const questions = isObjective
-                ? slicedQuestions.map(normalizeObjectiveQuestion)
-                : slicedQuestions;
-            const isPartialResponse = questions.length < count;
-            validateCommonQuestions(questions, questions.length, isObjective, Array.isArray(marksForQuestions) ? marksForQuestions.slice(0, questions.length) : null);
+            // Keep each valid response in its original position. A malformed
+            // item must not shift the following question or its configured marks.
+            const questionSlots = Array(count).fill(null);
+            const slotErrors = [];
+            const receivedCount = Math.min(parsedQuestions.length, count);
 
-            const normalizedQuestions = questions.map((q, index) => {
-                const text = String(q?.text || q?.question || '').trim();
-                if (isObjective) {
-                    let answer = typeof q.answer === 'string' && /^[A-D]$/i.test(q.answer)
-                        ? q.answer.toUpperCase().charCodeAt(0) - 65
-                        : Number(q.answer);
-                    const opts = q.options.map(option => String(option ?? ''));
-                    const randomized = shuffleWithAnswer(opts, answer);
-                    return {
-                        id: `ai_q${index}`,
-                        text,
-                        options: randomized.options,
-                        answer: randomized.answer,
-                        type: 'mcq',
-                        difficulty: requestedDifficulty,
-                    };
-                }
+            for (let index = 0; index < receivedCount; index += 1) {
+                let candidate = normalizeQuestionShape(parsedQuestions[index]);
+                if (isObjective) candidate = normalizeObjectiveQuestion(candidate);
 
-                return {
-                    id: `ai_q${index}`,
-                    text,
-                    marks: Array.isArray(marksForQuestions) ? marksForQuestions[index] : Number(q.marks),
-                    answer: q.answer.trim(),
-                    answerFormat: q.answerFormat,
-                    rubric: q.rubric.map(item => ({
-                        criterion: item.criterion.trim(),
-                        marks: item.marks,
-                        keyPoints: item.keyPoints.map(point => point.trim()),
-                        acceptedAlternatives: Array.isArray(item.acceptedAlternatives)
-                            ? item.acceptedAlternatives.map(value => value.trim())
-                            : [],
-                    })),
-                    type: 'subjective',
-                    difficulty: requestedDifficulty,
-                };
-            });
-
-            if (isPartialResponse) {
-                if (recoveryDepth >= 2) {
-                    throw new Error(`AI returned only ${normalizedQuestions.length} of ${count} requested questions after recovery attempts.`);
-                }
-                const missingCount = count - normalizedQuestions.length;
-                const missingMarks = Array.isArray(marksForQuestions)
-                    ? marksForQuestions.slice(normalizedQuestions.length)
-                    : null;
-                let missingQuestions;
                 try {
-                    missingQuestions = await generateQuestionsFromText({
+                    const expectedSlotMarks = Array.isArray(marksForQuestions)
+                        ? [marksForQuestions[index]]
+                        : null;
+                    validateCommonQuestions([candidate], 1, isObjective, expectedSlotMarks);
+
+                    const questionText = String(candidate.text ?? candidate.question).trim();
+                    if (isObjective) {
+                        const answer = typeof candidate.answer === 'string' && /^[A-D]$/i.test(candidate.answer)
+                            ? candidate.answer.toUpperCase().charCodeAt(0) - 65
+                            : Number(candidate.answer);
+                        const randomized = shuffleWithAnswer(candidate.options.map(option => String(option)), answer);
+                        questionSlots[index] = {
+                            id: `ai_q${index}`,
+                            text: questionText,
+                            options: randomized.options,
+                            answer: randomized.answer,
+                            type: 'mcq',
+                            difficulty: requestedDifficulty,
+                        };
+                    } else {
+                        questionSlots[index] = {
+                            id: `ai_q${index}`,
+                            text: questionText,
+                            marks: Array.isArray(marksForQuestions) ? marksForQuestions[index] : Number(candidate.marks),
+                            answer: candidate.answer.trim(),
+                            answerFormat: candidate.answerFormat,
+                            rubric: candidate.rubric.map(item => ({
+                                criterion: item.criterion.trim(),
+                                marks: item.marks,
+                                keyPoints: item.keyPoints.map(point => point.trim()),
+                                acceptedAlternatives: Array.isArray(item.acceptedAlternatives)
+                                    ? item.acceptedAlternatives.map(value => value.trim())
+                                    : [],
+                            })),
+                            type: 'subjective',
+                            difficulty: requestedDifficulty,
+                        };
+                    }
+                } catch (validationError) {
+                    slotErrors.push(`question ${index + 1}: ${validationError.message}`);
+                }
+            }
+
+            const missingIndexes = questionSlots
+                .map((question, index) => question ? -1 : index)
+                .filter(index => index >= 0);
+
+            if (missingIndexes.length > 0) {
+                const missingCount = missingIndexes.length;
+                if (recoveryDepth >= 2) {
+                    const terminalError = new Error(
+                        `AI response format error: unable to recover question slot(s) ${missingIndexes.map(index => index + 1).join(', ')}. ${slotErrors.join('; ')}`
+                    );
+                    terminalError.partialRecoveryFailed = true;
+                    throw terminalError;
+                }
+
+                const missingMarks = Array.isArray(marksForQuestions)
+                    ? missingIndexes.map(index => marksForQuestions[index])
+                    : null;
+                const preservedTexts = questionSlots
+                    .filter(Boolean)
+                    .map(question => question.text);
+                let replacementQuestions;
+                try {
+                    replacementQuestions = await generateQuestionsFromText({
                         text,
                         difficulty: requestedDifficulty,
                         count: missingCount,
@@ -454,23 +502,39 @@ ${source}
                         maxSourceChars: sourceLimit,
                         excludedQuestionTexts: [
                             ...excludedQuestionTexts,
-                            ...normalizedQuestions.map(question => question.text),
+                            ...preservedTexts,
                         ],
                     });
                 } catch (recoveryError) {
                     const wrappedError = new Error(
-                        `Could not recover the missing ${missingCount} question(s): ${recoveryError.message}`
+                        `Could not recover ${missingCount} malformed or missing question(s): ${recoveryError.message}`
                     );
                     wrappedError.partialRecoveryFailed = true;
                     throw wrappedError;
                 }
-                const combined = [...normalizedQuestions, ...missingQuestions]
-                    .map((question, index) => ({ ...question, id: `ai_q${index}` }));
-                validateCommonQuestions(combined, count, isObjective, marksForQuestions);
-                return combined;
+
+                if (!Array.isArray(replacementQuestions) || replacementQuestions.length !== missingCount) {
+                    const wrappedError = new Error(
+                        `AI response format error: expected ${missingCount} replacement question(s), received ${Array.isArray(replacementQuestions) ? replacementQuestions.length : 0}.`
+                    );
+                    wrappedError.partialRecoveryFailed = true;
+                    throw wrappedError;
+                }
+
+                missingIndexes.forEach((originalIndex, replacementIndex) => {
+                    questionSlots[originalIndex] = {
+                        ...replacementQuestions[replacementIndex],
+                        id: `ai_q${originalIndex}`,
+                    };
+                });
             }
 
-            return normalizedQuestions;
+            const completeQuestions = questionSlots.map((question, index) => ({
+                ...question,
+                id: `ai_q${index}`,
+            }));
+            validateCommonQuestions(completeQuestions, count, isObjective, marksForQuestions);
+            return completeQuestions;
         } catch (error) {
             lastError = error;
             console.error(`AI Generation / Validation Error (attempt ${attempt} of ${MAX_RETRIES}):`, error.message);
