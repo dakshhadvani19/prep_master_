@@ -276,13 +276,14 @@ export async function evaluateTheoryAttempt(attempt, apiKey) {
                 },
                 body: JSON.stringify({
                     model: GROQ_MODEL,
-                    messages: [
-                        { role: 'system', content: system },
-                        { role: 'user', content: JSON.stringify(payload) },
-                    ],
+                    messages: [{
+                        role: 'user',
+                        content: `${system}\n\nGRADE THE FOLLOWING SAVED ATTEMPT DATA:\n${JSON.stringify(payload)}`,
+                    }],
                     // JSON-object mode lets the application repair harmless missing
                     // feedback/key-point fields instead of Groq rejecting the entire grade.
                     response_format: { type: 'json_object' },
+                    reasoning_format: 'hidden',
                     temperature: 0.1,
                     reasoning_effort: 'low',
                     max_completion_tokens: 4096,
