@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { domains } from '../data/mockData';
 import { examPrompts } from '../data/examPrompts';
@@ -8,11 +8,13 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import {
-    getMyAttempts, getMyTestRoomAttempts, reconcileTestRoomAttempts,
+    getMyAttempts, getMyTestRoomAttempts, reconcileTestRoomAttempts, evaluateExamAttempt,
 } from '../utils/supabaseExam';
 import { findSubjectContext } from '../utils/subjectResolver';
 import AttemptSourceBadge from '../components/AttemptSourceBadge';
 import './Dashboard.css';
+
+const evaluationSpinnerStyle = `@keyframes pm-evaluation-spin { to { transform: rotate(360deg); } }`;
 
 function resolveSubjectName(subjectId) {
     return findSubjectContext(domains, subjectId).subject?.title
@@ -24,10 +26,46 @@ export default function Dashboard() {
     const [loading, setLoading] = useState(false);
     const [justSubmitted, setJustSubmitted] = useState(false);
     const [historyError, setHistoryError] = useState('');
+    const activeEvaluations = useRef(new Set());
+    const automaticEvaluationRunning = useRef(false);
     const navigate = useNavigate();
     const location = useLocation();
     const { currentUser } = useAuth();
 
+    const runEvaluation = async (attemptId, automatic = false) => {
+        if (activeEvaluations.current.has(attemptId)) return { status: 'evaluating' };
+        activeEvaluations.current.add(attemptId);
+        if (automatic) automaticEvaluationRunning.current = true;
+        setHistory(current => current.map(record => record.id === attemptId
+            ? { ...record, reviewStatus: 'evaluating', reviewError: '' } : record));
+        let result;
+        try {
+            result = await evaluateExamAttempt(attemptId);
+            setHistory(current => current.map(record => {
+                if (record.id !== attemptId) return record;
+                if (result.status === 'completed' && result.result) {
+                    return {
+                        ...record, reviewStatus: 'completed', reviewError: '',
+                        score: Number(result.result.totalAwardedMarks),
+                        totalMarks: Number(result.result.totalPossibleMarks),
+                    };
+                }
+                if (result.status === 'failed') {
+                    return { ...record, reviewStatus: 'failed', reviewError: result.error || 'Evaluation failed. Please retry.' };
+                }
+                return { ...record, reviewStatus: result.status || 'evaluating' };
+            }));
+            return result;
+        } catch (error) {
+            result = { status: 'failed', error: error.message || 'Evaluation failed. Please retry.' };
+            setHistory(current => current.map(record => record.id === attemptId
+                ? { ...record, reviewStatus: 'failed', reviewError: result.error } : record));
+            return result;
+        } finally {
+            activeEvaluations.current.delete(attemptId);
+            if (automatic) automaticEvaluationRunning.current = false;
+        }
+    };
     useEffect(() => {
         if (!currentUser?.uid) {
             setHistory([]);
@@ -41,7 +79,7 @@ export default function Dashboard() {
         } catch {
             // Browser storage may be blocked; persisted attempt APIs still work.
         }
-        let cancelled=false, firstLoad=true, hasUnfinishedRoomAttempts=false, bannerTimer=null;
+        let cancelled=false, firstLoad=true, hasUnfinishedRoomAttempts=false, hasPendingEvaluations=false, bannerTimer=null;
         if(location.state?.justSubmitted){
             setJustSubmitted(true);
             bannerTimer=setTimeout(()=>setJustSubmitted(false),5000);
@@ -65,6 +103,7 @@ export default function Dashboard() {
                         totalMarks:Number(attempt.total_marks||0),questions:Array.isArray(attempt.questions)?attempt.questions:[],
                         userAnswers:attempt.answers&&typeof attempt.answers==='object'?attempt.answers:{},
                         attemptType:'exam',status:attempt.status,
+                        reviewStatus:attempt.review_status||'pending',reviewError:attempt.review_error||'',
                     }));
                 const roomHistory=(roomResult.attempts||[])
                     .filter(attempt=>attempt.attempt_type==='test_room'&&!['waiting','cancelled'].includes(attempt.status))
@@ -81,9 +120,17 @@ export default function Dashboard() {
                         attemptedCount:attempt.attempted_count,unattemptedCount:attempt.unattempted_count,
                     }));
                 hasUnfinishedRoomAttempts=roomHistory.some(attempt=>attempt.status==='in_progress');
+                hasPendingEvaluations=examHistory.some(attempt=>attempt.type==='theory'&&['pending','evaluating'].includes(attempt.reviewStatus));
+                const mergedHistory=[...examHistory,...roomHistory].sort((a,b)=>new Date(b.date||0).getTime()-new Date(a.date||0).getTime());
                 if(!cancelled){
-                    setHistory([...examHistory,...roomHistory].sort((a,b)=>new Date(b.date||0).getTime()-new Date(a.date||0).getTime()));
+                    setHistory(mergedHistory);
                     setHistoryError('');
+                }
+                const nextPending=examHistory.find(attempt=>attempt.type==='theory'&&attempt.reviewStatus==='pending');
+                if(!cancelled&&nextPending&&!automaticEvaluationRunning.current&&activeEvaluations.current.size===0){
+                    runEvaluation(nextPending.id,true).then(result=>{
+                        if(!cancelled&&(result?.status==='completed'||result?.status==='failed')) refreshHistory();
+                    });
                 }
             }catch(error){
                 console.warn('Could not load persisted exam attempts:',error.message);
@@ -93,10 +140,12 @@ export default function Dashboard() {
             }
         };
         refreshHistory();
-        const poll=setInterval(()=>{if(hasUnfinishedRoomAttempts)refreshHistory();},15000);
-        return ()=>{cancelled=true;clearInterval(poll);if(bannerTimer)clearTimeout(bannerTimer);};
+        const poll=setInterval(()=>{if(hasUnfinishedRoomAttempts||hasPendingEvaluations)refreshHistory();},15000);
+        return (
+        <style>{evaluationSpinnerStyle}</style>)=>{cancelled=true;clearInterval(poll);if(bannerTimer)clearTimeout(bannerTimer);};
     },[currentUser?.uid,location.state?.justSubmitted]);
 
+    const retryEvaluation = (attemptId) => runEvaluation(attemptId, false);
     const getSubjectName = resolveSubjectName;
     const getExamName=examType=>examPrompts[examType]?.title||examType;
     const performance=useMemo(()=>{
@@ -294,10 +343,15 @@ export default function Dashboard() {
 
                         const isScored = record.score !== null && record.score !== undefined && record.totalMarks > 0;
                         const percentage = isScored ? (record.score / record.totalMarks) * 100 : null;
+                        const isFinalized = record.attemptType === 'test_room'
+                            ? ['submitted', 'auto_submitted', 'disconnected', 'timed_out'].includes(record.status)
+                            : ['submitted', 'auto_submitted'].includes(record.status);
+                        const theoryEvaluating = record.attemptType === 'exam' && record.type === 'theory'
+                            && ['pending', 'evaluating'].includes(record.reviewStatus);
+                        const theoryFailed = record.attemptType === 'exam' && record.type === 'theory'
+                            && record.reviewStatus === 'failed';
                         const canReview = Array.isArray(record.questions) && record.questions.length > 0
-                            && (record.attemptType === 'test_room'
-                                ? ['submitted', 'auto_submitted', 'disconnected', 'timed_out'].includes(record.status)
-                                : ['submitted', 'auto_submitted'].includes(record.status));
+                            && isFinalized && (record.type !== 'theory' || record.reviewStatus === 'completed');
 
                         let statusColor = 'var(--text-secondary)';
                         if (isScored) {
@@ -355,32 +409,53 @@ export default function Dashboard() {
                                             {record.status === 'in_progress' ? 'Awaiting finalization' : 'Score unavailable'}
                                         </div>
                                     ) : (
-                                        <div style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '0.75rem' }}>
-                                            Subjective
+                                        <div style={{ fontSize: '1.05rem', fontWeight: 600, color: record.reviewStatus === 'completed' ? 'var(--success)' : 'var(--accent-primary)', marginBottom: '0.75rem' }}>
+                                            {record.reviewStatus === 'completed' ? 'AI evaluated' : record.reviewStatus === 'unavailable' ? 'Rubric unavailable' : 'Theory answers'}
                                         </div>
                                     )}
                                     {canReview && (
                                         <Link
                                             to={`/review/${record.id}?attemptType=${record.attemptType}`}
                                             style={{
-                                                display: 'inline-flex',
-                                                alignItems: 'center',
-                                                gap: '0.4rem',
-                                                padding: '0.45rem 1rem',
-                                                borderRadius: 'var(--radius-full)',
-                                                fontSize: '0.8rem',
-                                                fontWeight: 600,
-                                                background: 'var(--accent-light)',
-                                                color: 'var(--accent-primary)',
-                                                border: '1px solid rgba(59,130,246,0.25)',
-                                                transition: 'all 0.2s',
+                                                display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
+                                                padding: '0.5rem 1rem', borderRadius: 'var(--radius-full)',
+                                                fontSize: '0.86rem', fontWeight: 600,
+                                                background: 'var(--accent-light)', color: 'var(--accent-primary)',
+                                                border: '1px solid rgba(59,130,246,0.25)', transition: 'all 0.2s',
                                             }}
-                                            onMouseOver={e => { e.currentTarget.style.background = 'var(--accent-primary)'; e.currentTarget.style.color = 'white'; }}
-                                            onMouseOut={e => { e.currentTarget.style.background = 'var(--accent-light)'; e.currentTarget.style.color = 'var(--accent-primary)'; }}
                                         >
-                                            <Search size={13} /> Review Answers
+                                            <Search size={15} /> Review Answers
                                         </Link>
                                     )}
+                                    {theoryEvaluating && (
+                                        <div role='status' aria-live='polite' style={{
+                                            display: 'inline-flex', alignItems: 'center', gap: '0.55rem',
+                                            padding: '0.55rem 0.9rem', borderRadius: 'var(--radius-full)',
+                                            background: 'var(--bg-tertiary)', border: '1px solid var(--glass-border)',
+                                            color: 'var(--text-secondary)', fontSize: '0.86rem', fontWeight: 600,
+                                        }}>
+                                            <Loader size={16} style={{ animation: 'pm-evaluation-spin 1s linear infinite' }} />
+                                            Evaluating answers
+                                        </div>
+                                    )}
+                                    {theoryFailed && (
+                                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.35rem' }}>
+                                            <button type='button' onClick={() => retryEvaluation(record.id)} disabled={activeEvaluations.current.has(record.id)} style={{
+                                                display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
+                                                padding: '0.5rem 1rem', borderRadius: 'var(--radius-full)',
+                                                background: 'var(--bg-tertiary)', color: 'var(--text-primary)',
+                                                border: '1px solid var(--glass-border)', fontSize: '0.86rem', fontWeight: 600,
+                                            }}>
+                                                <Loader size={15} /> Retry evaluation
+                                            </button>
+                                            <span style={{ maxWidth: '240px', color: 'var(--text-tertiary)', fontSize: '0.78rem', textAlign: 'right' }}>
+                                                {record.reviewError || 'The evaluation could not be completed.'}
+                                            </span>
+                                        </div>
+                                    )}
+                                    {record.type === 'theory' && record.reviewStatus === 'unavailable' && (
+                                        <span style={{ color: 'var(--text-tertiary)', fontSize: '0.84rem' }}>Marking rubric unavailable</span>
+                                    )}}
                                 </div>
                             </div>
                         );
