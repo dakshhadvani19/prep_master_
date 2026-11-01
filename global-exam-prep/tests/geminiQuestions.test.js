@@ -817,6 +817,86 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
         });
     });
 
+    describe('10. Slot-level recovery for malformed entries', () => {
+        it('regenerates only a malformed theory question and preserves its original mark position', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            const firstBody = buildTheoryBody(3, [1, 1, 4], 0);
+            const firstPayload = JSON.parse(firstBody.choices[0].message.content);
+            firstPayload.questions[1] = 'This entry is malformed and must be replaced.';
+            firstBody.choices[0].message.content = JSON.stringify(firstPayload);
+
+            fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(200, firstBody))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(1, [1], 10)));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content covering the first three theory topics. ' + 'x'.repeat(300),
+                difficulty: 'medium',
+                count: 3,
+                isObjective: false,
+                marksForQuestions: [1, 1, 4],
+            });
+
+            expect(result).toHaveLength(3);
+            expect(result.map(question => question.marks)).toEqual([1, 1, 4]);
+            expect(result[0].text).toBe(THEORY_STEMS[0]);
+            expect(result[1].text).toBe(THEORY_STEMS[10]);
+            expect(result[2].text).toBe(THEORY_STEMS[2]);
+            expect(fetchMock).toHaveBeenCalledTimes(2);
+
+            const recoveryRequest = JSON.parse(fetchMock.mock.calls[1][1].body);
+            expect(recoveryRequest.messages[1].content).toContain('MARKS IN QUESTION ORDER: [1]');
+            expect(recoveryRequest.messages[1].content).toContain(THEORY_STEMS[0]);
+            expect(recoveryRequest.messages[1].content).toContain(THEORY_STEMS[2]);
+        });
+
+        it('regenerates a malformed MCQ slot without shifting valid questions', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            const firstBody = buildMcqBody(3);
+            const firstPayload = JSON.parse(firstBody.choices[0].message.content);
+            firstPayload.questions[1] = null;
+            firstBody.choices[0].message.content = JSON.stringify(firstPayload);
+
+            fetchMock
+                .mockResolvedValueOnce(mockJsonResponse(200, firstBody))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildMcqBody(1, 10)));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content covering several MCQ topics. ' + 'x'.repeat(300),
+                difficulty: 'medium',
+                count: 3,
+                isObjective: true,
+            });
+
+            expect(result).toHaveLength(3);
+            expect(result[0].text).toBe(MCQ_STEMS[0]);
+            expect(result[1].text).toBe(MCQ_STEMS[10]);
+            expect(result[2].text).toBe(MCQ_STEMS[2]);
+            expect(result.every(question => question.options.length === 4)).toBe(true);
+            expect(fetchMock).toHaveBeenCalledTimes(2);
+        });
+
+        it('unwraps a valid question object nested under the question field', async () => {
+            const { generateQuestionsFromText } = await importModule();
+            const firstBody = buildMcqBody(1);
+            const firstPayload = JSON.parse(firstBody.choices[0].message.content);
+            firstPayload.questions[0] = { question: firstPayload.questions[0] };
+            firstBody.choices[0].message.content = JSON.stringify(firstPayload);
+            fetchMock.mockResolvedValueOnce(mockJsonResponse(200, firstBody));
+
+            const result = await generateQuestionsFromText({
+                text: 'Syllabus content covering several MCQ topics. ' + 'x'.repeat(300),
+                difficulty: 'medium',
+                count: 1,
+                isObjective: true,
+            });
+
+            expect(result).toHaveLength(1);
+            expect(result[0].text).toBe(MCQ_STEMS[0]);
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+        });
+    });
+
     describe('10. Bounded recovery + terminal messages', () => {
         it('stops after MAX_RETRIES on repeated validation failures', async () => {
             const { generateQuestionsFromText } = await importModule();
