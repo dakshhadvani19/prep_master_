@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { domains } from '../data/mockData';
 import { examPrompts } from '../data/examPrompts';
@@ -13,8 +13,6 @@ import {
 import { findSubjectContext } from '../utils/subjectResolver';
 import AttemptSourceBadge from '../components/AttemptSourceBadge';
 import './Dashboard.css';
-
-const evaluationSpinnerStyle = `@keyframes pm-evaluation-spin { to { transform: rotate(360deg); } }`;
 
 function resolveSubjectName(subjectId) {
     return findSubjectContext(domains, subjectId).subject?.title
@@ -32,7 +30,7 @@ export default function Dashboard() {
     const location = useLocation();
     const { currentUser } = useAuth();
 
-    const runEvaluation = async (attemptId, automatic = false) => {
+    const runEvaluation = useCallback(async (attemptId, automatic = false) => {
         if (activeEvaluations.current.has(attemptId)) return { status: 'evaluating' };
         activeEvaluations.current.add(attemptId);
         if (automatic) automaticEvaluationRunning.current = true;
@@ -65,7 +63,7 @@ export default function Dashboard() {
             activeEvaluations.current.delete(attemptId);
             if (automatic) automaticEvaluationRunning.current = false;
         }
-    };
+    }, []);
     useEffect(() => {
         if (!currentUser?.uid) {
             setHistory([]);
@@ -141,9 +139,8 @@ export default function Dashboard() {
         };
         refreshHistory();
         const poll=setInterval(()=>{if(hasUnfinishedRoomAttempts||hasPendingEvaluations)refreshHistory();},15000);
-        return (
-        <style>{evaluationSpinnerStyle}</style>)=>{cancelled=true;clearInterval(poll);if(bannerTimer)clearTimeout(bannerTimer);};
-    },[currentUser?.uid,location.state?.justSubmitted]);
+        return ()=>{cancelled=true;clearInterval(poll);if(bannerTimer)clearTimeout(bannerTimer);};
+    },[currentUser?.uid,location.state?.justSubmitted,runEvaluation]);
 
     const retryEvaluation = (attemptId) => runEvaluation(attemptId, false);
     const getSubjectName = resolveSubjectName;
