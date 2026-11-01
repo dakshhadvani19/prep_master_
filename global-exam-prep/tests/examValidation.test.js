@@ -2,8 +2,29 @@
  * Tests for examValidation.js — validation of AI-generated exams.
  */
 import { describe, it, expect } from 'vitest';
+
+function withTheoryPayload(questions) {
+    return questions.map((question) => {
+        if (question?.type !== 'subjective') return question;
+        const marks = question.marks;
+        const isComparison = marks >= 2 && /compare|differentiat|difference/i.test(question.text || '');
+        const itemCount = isComparison ? marks : (marks === 1 ? 1 : marks === 2 ? 2 : marks === 4 ? 4 : 8);
+        const rubric = Array.from({ length: itemCount }, (_, index) => ({
+            criterion: isComparison ? `Comparison row ${index + 1}` : `Expected point ${index + 1}`,
+            marks: 1,
+            keyPoints: isComparison ? ['Correct point for side A', 'Corresponding point for side B'] : [`Required concept ${index + 1}`],
+            acceptedAlternatives: [],
+        }));
+        const answer = isComparison
+            ? `| Basis | Side A | Side B |\\n|---|---|---|\\n${rubric.map((_, index) => `| Basis ${index + 1} | A point ${index + 1} | B point ${index + 1} |`).join('\\n')}`
+            : rubric.map((_, index) => `${index + 1}. Expected answer point ${index + 1}.`).join('\\n');
+        return { ...question, answer, answerFormat: isComparison ? 'comparison' : 'points', rubric };
+    });
+}
+
 import {
     validateExam,
+    validateTheoryAnswerPayload,
     stripReviewMetadata,
     validateBatch,
 } from '../src/utils/examValidation';
@@ -160,7 +181,7 @@ describe('examValidation', () => {
                 { id: 'q6', text: 'Describe one practical application of concept D.', type: 'subjective', difficulty: 'medium', marks: 4 },
             ];
 
-            const result = validateExam(questions, EXAM_CONFIG.mid1, null);
+            const result = validateExam(withTheoryPayload(questions), EXAM_CONFIG.mid1, null);
             expect(result.valid).toBe(true);
             expect(result.errors).toEqual([]);
             expect(result.stats.totalMarks).toBe(30);
@@ -176,7 +197,7 @@ describe('examValidation', () => {
                 marks,
             }));
 
-            const result = validateExam(questions, EXAM_CONFIG.mid1, null);
+            const result = validateExam(withTheoryPayload(questions), EXAM_CONFIG.mid1, null);
             expect(result.valid).toBe(false);
             expect(result.errors).toContain('question_2:expected_1_marks_got_4');
         });
@@ -190,7 +211,7 @@ describe('examValidation', () => {
                 { id: 'q4', text: 'Analyze D?', type: 'subjective', difficulty: 'hard', marks: 8 },
             ];
 
-            const result = validateExam(questions, EXAM_CONFIG.mid1, null);
+            const result = validateExam(withTheoryPayload(questions), EXAM_CONFIG.mid1, null);
             expect(result.valid).toBe(false);
             expect(result.errors.some((e) => e.includes('one_mark'))).toBe(true);
         });
@@ -205,7 +226,7 @@ describe('examValidation', () => {
                 { id: 'q5', text: 'Analyze D?', type: 'subjective', difficulty: 'medium', marks: 4 },
             ]; // total = 18, not 30
 
-            const result = validateExam(questions, EXAM_CONFIG.mid1, null);
+            const result = validateExam(withTheoryPayload(questions), EXAM_CONFIG.mid1, null);
             expect(result.valid).toBe(false);
             expect(result.errors.some((e) => e.includes('total_marks'))).toBe(true);
         });
@@ -229,12 +250,47 @@ describe('examValidation', () => {
                 { id: 'q12', text: 'Describe the main stages of process L.', type: 'subjective', difficulty: 'medium', marks: 4 },
             ]; // 2x1 + 1x2 + 6x4 + 4x8 = 60
 
-            const result = validateExam(questions, EXAM_CONFIG.ese, null);
+            const result = validateExam(withTheoryPayload(questions), EXAM_CONFIG.ese, null);
             expect(result.valid).toBe(true);
             expect(result.errors).toEqual([]);
             expect(result.stats.totalMarks).toBe(60);
             expect(result.stats.oneMarkCount).toBe(2);
             expect(result.stats.twoMarkCount).toBe(1);
+        });
+    });
+
+    describe('theory answer and rubric validation', () => {
+        it('rejects a rubric whose allocated marks do not equal the question marks', () => {
+            const question = withTheoryPayload([{ id: 'q8', text: 'Explain a concept?', type: 'subjective', difficulty: 'medium', marks: 8 }])[0];
+            question.rubric[0].marks = 2;
+            const result = validateExam(withTheoryPayload([
+                { id: 'q0', text: 'One fact?', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q1', text: 'One fact?', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q2', text: 'Explain?', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q3', text: 'Analyze?', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q4', text: 'Compare?', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q5', text: 'Evaluate?', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q6', text: 'Apply?', type: 'subjective', difficulty: 'medium', marks: 4 },
+            ]).map((item) => item.id === 'q3' ? question : item), EXAM_CONFIG.mid1, null);
+            expect(result.valid).toBe(false);
+            expect(result.errors.some((error) => error.includes('rubric_total_'))).toBe(true);
+        });
+
+        it('accepts an 8-mark comparison as eight paired one-mark rows', () => {
+            const question = withTheoryPayload([{ id: 'q8', text: 'Differentiate A and B.', type: 'subjective', difficulty: 'medium', marks: 8 }])[0];
+            expect(question.rubric).toHaveLength(8);
+            expect(question.rubric.every((item) => item.marks === 1 && item.keyPoints.length === 2)).toBe(true);
+            expect(validateTheoryAnswerPayload(question).valid).toBe(true);
+        });
+
+        it('rejects more than twelve rubric criteria on an ordinary 8-mark answer', () => {
+            const question = withTheoryPayload([{ id: 'q8', text: 'Explain a concept.', type: 'subjective', difficulty: 'hard', marks: 8 }])[0];
+            question.rubric = Array.from({ length: 13 }, (_, index) => ({
+                criterion: `Criterion ${index + 1}`, marks: 0.5, keyPoints: ['Expected idea'], acceptedAlternatives: [],
+            }));
+            const result = validateTheoryAnswerPayload(question);
+            expect(result.valid).toBe(false);
+            expect(result.errors).toContain('subjective_q8:rubric_exceeds_12_criteria');
         });
     });
 
