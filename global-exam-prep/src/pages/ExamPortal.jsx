@@ -21,6 +21,7 @@ import {
     saveExamAttempt,
     updateAttemptAnswers,
     submitExamAttempt,
+    createExamFromPublishedBank,
 } from '../utils/supabaseExam';
 
 
@@ -200,6 +201,24 @@ export default function ExamPortal() {
             setSupabaseError('');
             try {
                 // \u2500\u2500 Syllabus dataset integration \u2500\u2500
+                // Prefer an admin-published question bank for numeric catalog subjects.
+                // The server creates the attempt and retains the answer key privately;
+                // this browser receives only student-safe question content.
+                if (!testRoomMode && subjectContext.kind === 'numeric' && subjectContext.numericSubjectId) {
+                    const curated = await createExamFromPublishedBank({
+                        catalogSubjectId: subjectContext.numericSubjectId,
+                        examType,
+                        difficulty,
+                    });
+                    if (curated.error) throw new Error(curated.error);
+                    if (curated.found) {
+                        setAiQuestions(curated.questions);
+                        setAttemptId(curated.id);
+                        setExamState('active');
+                        return;
+                    }
+                }
+
                 // Resolve the syllabus record from the static dataset by subject code.
                 let syllabusRecord = null;
                 let syllabusSource = 'none';
