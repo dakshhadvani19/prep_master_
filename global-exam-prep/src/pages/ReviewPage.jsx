@@ -102,7 +102,7 @@ export default function ReviewPage() {
                 let current=savedReview;
                 if(savedReview.type==='theory' && ['pending','evaluating'].includes(savedReview.evaluationStatus)){
                     if(!cancelled)setEvaluationLoading(true);
-                    if(savedReview.evaluationStatus==='pending'){
+                    if(['pending','evaluating'].includes(savedReview.evaluationStatus)){
                         const result=await evaluateExamAttempt(historyId);
                         current=withEvaluationResult(current,result);
                     }
