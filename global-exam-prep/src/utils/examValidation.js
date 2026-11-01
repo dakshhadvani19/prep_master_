@@ -100,10 +100,10 @@ export function validateTheoryAnswerPayload(question) {
         });
 
         if (typeof question?.answer === 'string') {
-            const lines = question.answer.split(/\\r?\\n/);
-            const separatorIndex = lines.findIndex(line => /^\\s*\\|[\\s:|\\-]+\\|\\s*$/.test(line));
+            const lines = question.answer.split(/\r?\n/);
+            const separatorIndex = lines.findIndex(line => /^\s*\|[\s:|\-]+\|\s*$/.test(line));
             const comparisonRows = separatorIndex >= 0
-                ? lines.slice(separatorIndex + 1).filter(line => /^\\s*\\|.*\\|\\s*$/.test(line))
+                ? lines.slice(separatorIndex + 1).filter(line => /^\s*\|.*\|\s*$/.test(line))
                 : [];
             if (separatorIndex < 1 || comparisonRows.length !== marks) {
                 errors.push(`subjective_${id}:comparison_answer_must_have_exactly_${marks}_paired_table_rows`);
@@ -116,8 +116,8 @@ export function validateTheoryAnswerPayload(question) {
             });
         }
     } else if (question?.answerFormat === 'points' && typeof question?.answer === 'string' && marks > 1) {
-        const listedPoints = question.answer.split(/\\r?\\n/)
-            .filter(line => /^\\s*(?:\\d+[.)]|[-*•])\\s+/.test(line));
+        const listedPoints = question.answer.split(/\r?\n/)
+            .filter(line => /^\s*(?:\d+[.)]|[-*•])\s+/.test(line));
         const maxPoints = MAX_RUBRIC_ITEMS_BY_MARKS[marks] ?? 12;
         if (listedPoints.length > maxPoints) {
             errors.push(`subjective_${id}:model_answer_exceeds_${maxPoints}_points`);
