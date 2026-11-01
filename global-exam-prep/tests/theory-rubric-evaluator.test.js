@@ -174,6 +174,23 @@ describe('theory rubric evaluator', () => {
         expect(fetchMock).toHaveBeenCalledTimes(2);
     });
 
+    it('retries a transient network failure before grading', async () => {
+        const successBody = {
+            choices: [{ message: { content: JSON.stringify(validModelResult()) } }],
+        };
+        const fetchMock = vi.fn()
+            .mockRejectedValueOnce(new Error('fetch failed'))
+            .mockResolvedValueOnce(new Response(JSON.stringify(successBody), {
+                status: 200,
+                headers: { 'Content-Type': 'application/json' },
+            }));
+        vi.stubGlobal('fetch', fetchMock);
+
+        const result = await evaluateTheoryAttempt(buildAttempt(), 'test-groq-key');
+        expect(result.totalAwardedMarks).toBe(1.5);
+        expect(fetchMock).toHaveBeenCalledTimes(2);
+    });
+
     it('uses JSON-object output and the configured Groq model for answered papers', async () => {
         const responseBody = {
             choices: [{ message: { content: JSON.stringify(validModelResult()) } }],
