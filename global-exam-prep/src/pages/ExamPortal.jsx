@@ -40,12 +40,13 @@ function allocateBatchCounts(batches, totalCount) {
 }
 
 function stripAnswerKeyForStudent(question) {
-    if (question?.type === 'mcq') {
-        const { answer, ...studentQuestion } = question;
-        return studentQuestion;
-    }
-    if (question?.type === 'subjective') {
-        const { answer, answerFormat, rubric, ...studentQuestion } = question;
+    if (question?.type === 'mcq' || question?.type === 'subjective') {
+        const studentQuestion = { ...question };
+        delete studentQuestion.answer;
+        if (question.type === 'subjective') {
+            delete studentQuestion.answerFormat;
+            delete studentQuestion.rubric;
+        }
         return studentQuestion;
     }
     return question;
