@@ -1,3 +1,5 @@
+import { validateTheoryAnswerPayload } from './examValidation';
+
 const MAX_SOURCE_CHARS = 6000;
 const MAX_RETRIES = 3;
 const MAX_RATE_LIMIT_RETRIES = 4;
@@ -144,7 +146,7 @@ function normalizeObjectiveQuestion(question) {
  * applied after generation. Groq receives these requirements in its prompt;
  * this layer only protects the exam UI's required data shape.
  */
-function validateCommonQuestions(questions, count, isObjective = false) {
+function validateCommonQuestions(questions, count, isObjective = false, expectedMarks = null) {
     if (!Array.isArray(questions) || questions.length !== count) {
         throw new Error(`AI response format error: expected ${count} question(s), received ${Array.isArray(questions) ? questions.length : 0}.`);
     }
@@ -168,6 +170,15 @@ function validateCommonQuestions(questions, count, isObjective = false) {
             if (!Number.isInteger(answer) || answer < 0 || answer > 3) {
                 throw new Error(`AI response format error: MCQ ${index + 1} must have an answer index from 0 to 3.`);
             }
+        } else {
+            const theoryValidation = validateTheoryAnswerPayload(question);
+            if (!theoryValidation.valid) {
+                throw new Error(`AI response format error: theory question ${index + 1}: ${theoryValidation.errors.join(', ')}`);
+            }
+            const expected = Array.isArray(expectedMarks) ? expectedMarks[index] : undefined;
+            if (expected !== undefined && question.marks !== expected) {
+                throw new Error(`AI response format error: theory question ${index + 1} must be ${expected} marks, received ${question.marks}.`);
+            }
         }
     });
 }
@@ -179,7 +190,7 @@ function validateCommonQuestions(questions, count, isObjective = false) {
 function buildCorrectionPrompt(basePrompt, validationError, attempt) {
     // Avoid echoing an entire invalid payload into the next request. That can add
     // thousands of tokens and trigger the provider's TPM limit during recovery.
-    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\nRegenerate the complete requested output from the original material. Return corrected JSON only. Ensure the requested count, exactly four non-empty string MCQ options, a valid answer index, and requested theory marks. Do not reuse invalid option values.`;
+    return basePrompt + `\n\nPREVIOUS ATTEMPT HAD A RESPONSE-FORMAT ISSUE (attempt ${attempt} of ${MAX_RETRIES}):\n${validationError}\nRegenerate the complete requested output from the original material. Return corrected JSON only. Ensure the requested count, exactly four non-empty string MCQ options and a valid answer index. Every theory question must include a concise model answer, answerFormat, and a structured rubric whose mark allocations sum exactly to that question's marks. Keep ordinary answers within the mark-based point limits (maximum 12 rubric criteria); comparison questions need one paired comparison row per mark (eight rows for 8M). Do not reuse invalid option values.`;
 }
 
 export async function generateQuestionsFromText({
@@ -237,7 +248,7 @@ export async function generateQuestionsFromText({
             batchIndex += 1;
         }
         // Cross-batch validation is necessary because each response is validated alone.
-        validateCommonQuestions(combined, count, isObjective);
+        validateCommonQuestions(combined, count, isObjective, marksForQuestions);
         return combined;
     }
 
@@ -258,7 +269,7 @@ export async function generateQuestionsFromText({
 
     const systemMessage = isObjective
         ? `Create accurate, syllabus-grounded MCQs. Return only valid JSON matching the required schema: {"questions":[{"text":"...","options":["...","...","...","..."],"answer":0}]}. Four distinct options; answer index 0-3. No explanations, review fields, or IDs.` 
-        : `Create accurate, syllabus-grounded theory questions. Return only valid JSON matching the required schema: {"questions":[{"text":"...","marks":4}]}. No answers, hints, marking schemes, or IDs.`
+        : `Create accurate, syllabus-grounded theory questions with a concise model answer and a machine-readable marking rubric for every question. Return only valid JSON matching this schema: {"questions":[{"text":"...","marks":4,"answer":"...","answerFormat":"points","rubric":[{"criterion":"...","marks":1,"keyPoints":["..."],"acceptedAlternatives":[]}]}]}. answerFormat must be points, comparison, worked_solution, code, or diagram. Rubric allocations must sum exactly to marks.`
 
     const exclusionText = excludedQuestionTexts.length
         ? `ALREADY GENERATED — do not repeat these question stems: ${JSON.stringify(excludedQuestionTexts.map(stem => String(stem).slice(0, 180)))}\n`
@@ -286,11 +297,26 @@ ${source}
 ---`;
     } else {
         userPrompt = `Create exactly ${count} unique open-ended theory questions using only the study material.
-MARKS IN QUESTION ORDER: ${Array.isArray(marksForQuestions) ? JSON.stringify(marksForQuestions) : 'Use the caller-provided exam blueprint'}. Follow these marks exactly.
-Mark depth: 1 mark = one precise fact/result answered in one word or one concise sentence only; no subparts, lists, or explanations. 2 marks = a compact response with two creditable elements or a short result plus its reason; 4 marks = about four creditable points/steps; 8 marks = a bounded, fuller multi-step response.
+MARKS IN QUESTION ORDER: ${Array.isArray(marksForQuestions) ? JSON.stringify(marksForQuestions) : 'Use the caller-provided exam blueprint'}. Follow these marks exactly and return the same marks number on each question.
+
+REQUIRED OUTPUT FOR EVERY THEORY QUESTION:
+- Include "text", "marks", "answer", "answerFormat", and "rubric". The answer and rubric are internal marking data, not hints for the student.
+- "answer" is a concise, technically correct model answer in clear numbered points, a comparison table, worked steps, short code, or a labelled-diagram description as appropriate. Do not write an essay.
+- "answerFormat" must be exactly one of: "points", "comparison", "worked_solution", "code", "diagram".
+- "rubric" is an array of scoring criteria. Each item must contain "criterion", numeric "marks", and "keyPoints" (one to four short required concepts/evidence). Add "acceptedAlternatives" only when useful; it must be an array of valid equivalent terms or approaches.
+- The rubric must have at least one item, no more than the mark-based point limit below, and its marks must add exactly to the question's marks. Use only whole or half marks. The model answer must cover the same criteria; do not add unscored filler points.
+
+ANSWER-LENGTH LIMITS:
+- 1 mark: one fact/result; answer in one word or one concise sentence. Exactly one rubric criterion worth 1 mark; no list or subparts.
+- 2 marks: two compact creditable elements at most (maximum 2 rubric criteria).
+- 4 marks: normally about four clear points/steps; absolute maximum 6 rubric criteria.
+- 8 marks: a bounded, complete answer with normally 8 to 10 points; absolute maximum 12 rubric criteria. Keep each point concise and relevant. Do not expand into an essay.
+- DIFFERENTIATE / COMPARE EXCEPTION: use answerFormat "comparison" and a Markdown table with exactly one paired row per mark: 2 rows for 2M, 4 rows for 4M, and 8 rows for 8M. For an 8M comparison, provide exactly 8 points on each side (8 paired rows, 16 side-specific facts total). Each corresponding rubric item is worth exactly 1 mark and its keyPoints array contains exactly two strings: one correct point for each side. Do not create extra rows or separate unpaired facts.
+
+Mark depth: 1 mark = one precise fact/result; 2 marks = two compact elements; 4 marks = a bounded explanation, comparison, small diagram, worked solution, short code task, or application; 8 marks = fuller but controlled multi-step work.
 DIFFICULTY: ${blueprint.label} (${requestedDifficulty}); target: ${blueprint.reasoning}.
 Easy: foundational definition or one-step use. Medium: short application, calculation, comparison, or interpretation. Hard: multi-step analysis, diagnosis, design, or a justified decision.
-Keep every question clear, distinct, fair, and syllabus-specific. Every 1-mark question must be answerable in one word or one concise sentence; never make it multi-part or require a list or explanation. Do not include answers, hints, or marking schemes. If the source is truncated, rely only on visible content.
+Keep every question clear, distinct, fair, and syllabus-specific. Every 1-mark question must be answerable in one word or one concise sentence. Keep question and answer content strictly within the visible source; if the source is truncated, rely only on visible content. Return JSON only.
 
 ${exclusionText}
 Study material:
@@ -371,7 +397,7 @@ ${source}
                 ? slicedQuestions.map(normalizeObjectiveQuestion)
                 : slicedQuestions;
             const isPartialResponse = questions.length < count;
-            validateCommonQuestions(questions, questions.length, isObjective);
+            validateCommonQuestions(questions, questions.length, isObjective, Array.isArray(marksForQuestions) ? marksForQuestions.slice(0, questions.length) : null);
 
             const normalizedQuestions = questions.map((q, index) => {
                 const text = String(q?.text || q?.question || '').trim();
@@ -394,9 +420,17 @@ ${source}
                 return {
                     id: `ai_q${index}`,
                     text,
-                    marks: Array.isArray(marksForQuestions)
-                        ? marksForQuestions[index]
-                        : (Number.isInteger(Number(q.marks)) && Number(q.marks) > 0 ? Number(q.marks) : (count > 5 ? 14 : 7)),
+                    marks: Array.isArray(marksForQuestions) ? marksForQuestions[index] : Number(q.marks),
+                    answer: q.answer.trim(),
+                    answerFormat: q.answerFormat,
+                    rubric: q.rubric.map(item => ({
+                        criterion: item.criterion.trim(),
+                        marks: item.marks,
+                        keyPoints: item.keyPoints.map(point => point.trim()),
+                        acceptedAlternatives: Array.isArray(item.acceptedAlternatives)
+                            ? item.acceptedAlternatives.map(value => value.trim())
+                            : [],
+                    })),
                     type: 'subjective',
                     difficulty: requestedDifficulty,
                 };
