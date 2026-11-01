@@ -140,6 +140,15 @@ function buildTheoryBody(count, marksSequence, stemOffset = 0) {
     return { choices: [{ message: { content: JSON.stringify({ questions }) } }] };
 }
 
+function buildTheoryBodyWithDifferentQuestionMarks(count, rubricMarks, returnedMarks, stemOffset = 0) {
+    const body = buildTheoryBody(count, rubricMarks, stemOffset);
+    const parsed = JSON.parse(body.choices[0].message.content);
+    parsed.questions.forEach((question, index) => {
+        question.marks = Array.isArray(returnedMarks) ? returnedMarks[index] : returnedMarks;
+    });
+    return { choices: [{ message: { content: JSON.stringify(parsed) } }] };
+}
+
 describe('geminiQuestions — prompt-led generation with minimal format checks', () => {
     beforeEach(() => {
         fetchMock.mockReset();
@@ -640,8 +649,8 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
         it('uses the caller mark sequence even when generated mark fields differ', async () => {
             const { generateQuestionsFromText } = await importModule();
             fetchMock
-                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(3, [4, 4, 4], 0)))
-                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBody(1, [4], 3)));
+                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBodyWithDifferentQuestionMarks(3, [1, 4, 8], 4, 0)))
+                .mockResolvedValueOnce(mockJsonResponse(200, buildTheoryBodyWithDifferentQuestionMarks(1, [4], 8, 3)));
 
             const result = await generateQuestionsFromText({
                 text: 'Syllabus content here. ' + 'x'.repeat(200),
@@ -954,16 +963,16 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
             const { generateQuestionsFromText } = await importModule();
             const wrongMarks = Array(13).fill(4);
             const batches = [
-                { count: 3, marks: wrongMarks.slice(0, 3), offset: 0 },
-                { count: 3, marks: wrongMarks.slice(3, 6), offset: 3 },
-                { count: 3, marks: wrongMarks.slice(6, 9), offset: 6 },
-                { count: 3, marks: wrongMarks.slice(9, 12), offset: 9 },
-                { count: 1, marks: wrongMarks.slice(12, 13), offset: 12 },
+                { count: 3, marks: EXAM_CONFIG.ese.markSequence.slice(0, 3), offset: 0 },
+                { count: 3, marks: EXAM_CONFIG.ese.markSequence.slice(3, 6), offset: 3 },
+                { count: 3, marks: EXAM_CONFIG.ese.markSequence.slice(6, 9), offset: 6 },
+                { count: 3, marks: EXAM_CONFIG.ese.markSequence.slice(9, 12), offset: 9 },
+                { count: 1, marks: EXAM_CONFIG.ese.markSequence.slice(12, 13), offset: 12 },
             ];
             batches.forEach(batch => {
                 fetchMock.mockResolvedValueOnce(mockJsonResponse(
                     200,
-                    buildTheoryBody(batch.count, batch.marks, batch.offset),
+                    buildTheoryBodyWithDifferentQuestionMarks(batch.count, batch.marks, wrongMarks.slice(batch.offset, batch.offset + batch.count), batch.offset),
                 ));
             });
 
