@@ -22,9 +22,9 @@ The 6,000-character source cap is a per-request context limit, not permission to
 
 | Exam Type | Scope | Marks | Question Rules |
 |-----------|-------|-------|----------------|
-| **Mid-1 (Theory)** | First 50% of ordered chapters (verified unit/contact-hour weights where available; otherwise closest defensible chapter boundary) | 30 | Exactly 7 questions: two 1-mark, three 4-mark, two 8-mark (30 marks total); interleave types |
+| **Mid-1 (Theory)** | First 50% of ordered chapters (verified unit/contact-hour weights where available; otherwise closest defensible chapter boundary) | 30M | Exactly 7 questions in order [1, 1, 4, 8, 4, 8, 4]; the first two are one-word/one-sentence 1-mark questions |
 | **Mid-2 (MCQ / Objective)** | Verified and configured Mid-2 scope — do not silently assume second half or full syllabus | 30 | Exactly 30 questions, four distinct options, exactly one correct answer |
-| **ESE / Final (Theory)** | Full relevant syllabus unless an authoritative blueprint narrows it | 60 | Exactly 13 questions: two 1-mark, one 2-mark, six 4-mark, four 8-mark (60 marks total); interleave types |
+| **ESE / Final (Theory)** | Full relevant syllabus unless an authoritative blueprint narrows it | 60M | Exactly 13 questions in order [1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]; the first two are one-word/one-sentence 1-mark questions |
 | **Practicals** | Only the matching subject's practical content, only where appropriate | — | Practical-specific questions only |
 
 Difficulty changes cognitive demand only — never exam eligibility, scope, counts, or marks.
@@ -91,8 +91,8 @@ For every request, state the exact count and output format in the prompt. The ac
    - Local checks enforce required object/count/options/answer shape and the configured marks only. Semantic quality, difficulty heuristics, duplicate stems, option distinctness/plausibility and answer-choice style are prompt-led and are not hard rejection gates.
    - Coverage spans all in-scope chapters.
    - For MCQ: exactly 30 questions, 4 options each, one correct answer.
-   - For Mid-1 theory: exactly 7 questions with marks `[1, 4, 1, 8, 4, 8, 4]` (30 total). A 1-mark prompt must request one brief fact/point, not a page-length response.
-   - For ESE theory: exactly 13 questions with marks `[1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]` (60 total). A 1-mark prompt must request one brief fact/point, not a page-length response.
+   - For Mid-1 theory: exactly 7 questions with marks `[1, 1, 4, 8, 4, 8, 4]` (30M total). The first two prompts must request one word or one concise sentence only.
+   - For ESE theory: exactly 13 questions with marks `[1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]` (60M total). The first two prompts must request one word or one concise sentence only.
 3. Strip internal review metadata from MCQ questions before the student-facing payload.
 
 ### Step 7 — Failure Handling

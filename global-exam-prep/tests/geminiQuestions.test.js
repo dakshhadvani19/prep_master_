@@ -792,9 +792,9 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
 
     describe('12. Mid-1 / Mid-2 / ESE complete paper validation', () => {
         const EXAM_CONFIG = {
-            mid1: { type: 'subjective', totalMarks: 30, questionCount: 7, markSequence: [1, 4, 1, 8, 4, 8, 4] },
+            mid1: { type: 'subjective', totalMarks: 30, questionCount: 7, markSequence: [1, 1, 4, 8, 4, 8, 4] },
             mid2: { type: 'objective', totalMarks: 30, questionCount: 30 },
-            ese: { type: 'subjective', totalMarks: 60, questionCount: 13, markSequence: [1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4] },
+            ese: { type: 'subjective', totalMarks: 60, questionCount: 13, markSequence: [1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4] },
         };
 
         it('validates Mid-1 complete paper (7 questions, 30 marks)', async () => {
@@ -803,7 +803,7 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
             // 3 mocks per attempt × 3 attempts = 9 mocks
             const bodies = [];
             const batches = [
-                { count: 3, marks: [1, 4, 1], offset: 0 },
+                { count: 3, marks: [1, 1, 4], offset: 0 },
                 { count: 3, marks: [8, 4, 8], offset: 3 },
                 { count: 1, marks: [4], offset: 6 },
             ];
@@ -849,8 +849,8 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
             // 3 mocks per attempt × 3 attempts = 15 mocks
             const bodies = [];
             const batches = [
-                { count: 3, marks: [1, 4, 1], offset: 0 },
-                { count: 3, marks: [8, 4, 2], offset: 3 },
+                { count: 3, marks: [1, 1, 2], offset: 0 },
+                { count: 3, marks: [4, 8, 4], offset: 3 },
                 { count: 3, marks: [8, 4, 8], offset: 6 },
                 { count: 3, marks: [4, 8, 4], offset: 9 },
                 { count: 1, marks: [4], offset: 12 },

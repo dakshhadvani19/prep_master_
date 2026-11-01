@@ -34,27 +34,23 @@ Theory tests contain short-answer and extended-answer questions. Questions must 
 
 ### Mid 1 — 30 marks total
 
-- Include exactly **two 1-mark questions** (2 marks total).
-- Use 4-mark and 8-mark questions for the remaining 28 marks.
-- Allowed combinations for the remaining questions include:
-  - seven 4-mark questions; or
-  - five 4-mark questions and one 8-mark question; or
-  - three 4-mark questions and two 8-mark questions; or
-  - one 4-mark question and three 8-mark questions.
-- In each case, the two 1-mark questions plus the selected 4-/8-mark questions must total exactly **30 marks**.
+- Generate exactly 7 theory questions in this order: two 1-mark questions first, then three 4-mark and two 8-mark questions.
+- Canonical sequence: `[1, 1, 4, 8, 4, 8, 4]` (2 + 12 + 16 = **30 marks**).
+- The first two questions must be very short and answerable in one word or one concise sentence.
 - Cover only the first 50% of the ordered syllabus, using the verified Mid 1 scope for that subject.
 
 ### ESE — 60 marks total, when ESE exists
 
-- Include exactly **two 1-mark questions** (2 marks total).
-- Important arithmetic constraint: after two 1-mark questions, the remaining 58 marks cannot be made using only 4- and 8-mark questions, because both are multiples of 4.
-- To reach exactly 60 marks while keeping two 1-mark questions, this specification therefore requires **one 2-mark question**, plus 4-/8-mark questions totalling 56 marks. The 56 marks may be any valid combination of 4- and 8-mark questions (for example, seven 8-mark questions; or nine 4-mark questions plus two 8-mark questions).
-- If the university's official ESE blueprint forbids 2-mark questions, treat that as a configuration conflict and ask for an approved alternative before generating; do not silently emit an exam with the wrong total.
+- Questions 1 and 2 must each be 1 mark and must appear first.
+- Question 3 is one 2-mark question; this is required because 58 cannot be composed using only 4-mark and 8-mark questions.
+- The remaining 56 marks must be six 4-mark and four 8-mark questions.
+- Canonical sequence: `[1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]` (2 + 2 + 24 + 32 = **60 marks**).
+- The first two questions must be very short and answerable in one word or one concise sentence; the 2-mark question should require two compact creditable elements.
 - ESE may cover the full relevant syllabus unless an authoritative blueprint specifies a narrower scope.
 
 ### Theory question construction and model answers
 
-- A 1-mark question should assess one precise fact, term, result, or a single small step. Supply a concise expected answer.
+- A 1-mark question should assess one precise fact, term, result, or a single small step. The expected answer must be one word or one concise sentence, without subparts or extended explanation.
 - A 4-mark question should have a bounded explanation, method, comparison, worked step, or small application. Its marking guide should identify distinct creditable points/steps adding to four marks.
 - An 8-mark question should require a fuller explanation, a multi-step solution, a worked example, or a reasoned application. Its marking guide should identify creditable points/steps adding to eight marks.
 - Model answers are guidance, not a requirement for one exact wording. Accept equivalent technically correct responses where appropriate.

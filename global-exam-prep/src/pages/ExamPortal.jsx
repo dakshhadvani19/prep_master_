@@ -15,7 +15,7 @@ import { Clock, AlertCircle, CheckCircle, ChevronLeft, ArrowRight, ArrowLeft, Up
 import { useAuth } from '../context/AuthContext';
 
 import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
-import { fitContext, contentToString, buildBalancedObjectiveSource } from '../utils/contextFitter';
+import { EXAM_CONFIG, normalizeExamType, fitContext, contentToString, buildBalancedObjectiveSource } from '../utils/contextFitter';
 import { stripReviewMetadata, validateExam } from '../utils/examValidation';
 import {
     saveExamAttempt,
@@ -94,7 +94,7 @@ export default function ExamPortal() {
 
     // Exam question counts come from the current fixed paper blueprint (30 MCQs; 7 Mid-1 or 13 ESE theory).
     // Not shown to the user in pre-exam UI, per request.
-    const examCount = examInfo?.type === 'objective' ? 30 : (examType === 'final' ? 13 : 7);
+    const examCount = examInfo?.type === 'objective' ? 30 : (EXAM_CONFIG[normalizeExamType(examType)]?.questionCount ?? 0);
 
     useEffect(() => {
         if (examInfo) {
@@ -223,7 +223,7 @@ export default function ExamPortal() {
 
                 // Build academic context prefix for the model
                 const contextPrefixText = domainDetail && courseDetail
-                    ? 'Academic Context:\n- Domain: ' + domainDetail.title + '\n- Course: ' + courseDetail.title + '\n- Subject: ' + subjectDetail.title + ' (' + sourceSubjectId + ')\n- Syllabus: ' + syllabusSource + '\n- Exam: ' + examInfo.title + ' (' + config.type + ', ' + config.totalMarks + ' marks, ' + config.timeMinutes + ' min)\n\n'
+                    ? 'Academic Context:\n- Domain: ' + domainDetail.title + '\n- Course: ' + courseDetail.title + '\n- Subject: ' + subjectDetail.title + ' (' + sourceSubjectId + ')\n- Syllabus: ' + syllabusSource + '\n- Exam: ' + examInfo.title + ' (' + config.type + ', ' + config.totalMarks + 'M, ' + config.timeMinutes + ' min)\n\n'
                     : '';
 
                 // \u2500\u2500 Generate per batch, combine, validate \u2500\u2500
@@ -439,22 +439,29 @@ export default function ExamPortal() {
             setUploadProgress(uploadContext.truncated
                 ? 'Asking AI to generate questions from balanced excerpts... (may take up to 60s if rate-limited, please wait)'
                 : 'Asking AI to generate questions... (may take up to 60s if rate-limited, please wait)');
-            const examCount = isObj ? 30 : (examType === 'final' ? 13 : 7);
-            const theoryMarks = examType === 'final'
-                ? [1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]
-                : [1, 4, 1, 8, 4, 8, 4];
+            const uploadExamConfig = EXAM_CONFIG[normalizeExamType(examType)];
+            if (!uploadExamConfig) throw new Error('No exam blueprint is configured for this exam type.');
+            const examCount = isObj ? 30 : uploadExamConfig.questionCount;
+            const theoryMarks = isObj ? null : uploadExamConfig.markSequence;
 
             const questions = await generateQuestionsFromText({
                 text: uploadContext.text,
                 difficulty,
                 count: examCount,
                 isObjective: isObj,
-                marksForQuestions: isObj ? null : theoryMarks,
+                marksForQuestions: theoryMarks,
                 maxSourceChars: uploadContextBudget,
             });
             const blueprintQuestions = isObj
                 ? questions
                 : questions.map((question, index) => ({ ...question, marks: theoryMarks[index] }));
+
+            if (!isObj) {
+                const uploadValidation = validateExam(blueprintQuestions, uploadExamConfig, null);
+                if (!uploadValidation.valid) {
+                    throw new Error('Uploaded theory exam failed blueprint validation: ' + uploadValidation.errors.join(', '));
+                }
+            }
 
             if (testRoomMode === 'create') {
                 if (!isObj) {
@@ -796,7 +803,7 @@ export default function ExamPortal() {
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                             <CheckCircle size={32} color="var(--success)" />
                             <div style={{ fontSize: '1.2rem', fontWeight: 600 }}>
-                                {examInfo.type === 'objective' ? `Dynamic Set` : `${examInfo.totalMarks} Marks`}
+                                {examInfo.type === 'objective' ? `Dynamic Set` : `${examInfo.totalMarks}M`}
                             </div>
                             <div style={{ color: 'var(--text-tertiary)', fontSize: '0.9rem' }}>
                                 {examInfo.type === 'objective' ? 'Total Questions' : 'Total Score'}
@@ -904,7 +911,7 @@ export default function ExamPortal() {
                             marginBottom: '3rem'
                         }}>
                             <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--accent-primary)' }}>
-                                Auto-Grade Score: {examState.score !== undefined ? examState.score : '--'} / {examCount}
+                                Auto-Grade Score: {examState.score !== undefined ? examState.score : '--'} / {examCount}M
                             </div>
                         </div>
                     )}
@@ -984,7 +991,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                 gap: '0.75rem',
                 flexWrap: 'wrap',
             }}>
-                <div style={{ fontWeight: 600 }}>{examInfo.title}</div>
+                <div style={{ fontWeight: 600 }}>{examInfo.title} <span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{examInfo.totalMarks}M</span></div>
                 <div style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -1072,7 +1079,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                 <div className="glass-panel" style={{ flex: 1, padding: '2.5rem', minHeight: '500px', display: 'flex', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem' }}>
                         <h2 style={{ fontSize: '1.5rem' }}>Question {currentQ + 1} of {questions.length}</h2>
-                        {!isObjective && <span style={{ color: 'var(--text-secondary)', fontWeight: 600 }}>[{q.marks} Marks]</span>}
+                        {!isObjective && <span style={{ color: 'var(--text-secondary)', fontWeight: 600 }}>[{q.marks}M]</span>}
                     </div>
 
                     <div style={{ fontSize: '1.1rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>

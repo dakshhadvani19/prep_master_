@@ -152,8 +152,8 @@ describe('examValidation', () => {
         it('accepts valid Mid-1 theory exam with two 1-mark questions', () => {
             const questions = [
                 { id: 'q0', text: 'State the primary purpose of concept X.', type: 'subjective', difficulty: 'easy', marks: 1 },
-                { id: 'q1', text: 'Explain how method Y works in a basic case.', type: 'subjective', difficulty: 'medium', marks: 4 },
-                { id: 'q2', text: 'Name one limitation of concept Z.', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q1', text: 'Name one property of concept Y.', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q2', text: 'Explain how method Z works in a basic case.', type: 'subjective', difficulty: 'medium', marks: 4 },
                 { id: 'q3', text: 'Analyze the multi-step process used by approach A.', type: 'subjective', difficulty: 'hard', marks: 8 },
                 { id: 'q4', text: 'Compare the two specified properties of method B.', type: 'subjective', difficulty: 'medium', marks: 4 },
                 { id: 'q5', text: 'Evaluate approach C under the given constraints.', type: 'subjective', difficulty: 'hard', marks: 8 },
@@ -165,6 +165,20 @@ describe('examValidation', () => {
             expect(result.errors).toEqual([]);
             expect(result.stats.totalMarks).toBe(30);
             expect(result.stats.oneMarkCount).toBe(2);
+        });
+
+        it('rejects a Mid-1 paper when a 1-mark question is not in the first two positions', () => {
+            const questions = [1, 4, 1, 8, 4, 8, 4].map((marks, index) => ({
+                id: `q${index}`,
+                text: `Question ${index + 1}?`,
+                type: 'subjective',
+                difficulty: 'medium',
+                marks,
+            }));
+
+            const result = validateExam(questions, EXAM_CONFIG.mid1, null);
+            expect(result.valid).toBe(false);
+            expect(result.errors).toContain('question_2:expected_1_marks_got_4');
         });
 
         it('rejects Mid-1 without exactly two 1-mark questions', () => {
@@ -201,11 +215,11 @@ describe('examValidation', () => {
         it('accepts valid ESE theory exam with two 1-mark + one 2-mark', () => {
             const questions = [
                 { id: 'q0', text: 'State the purpose of concept X.', type: 'subjective', difficulty: 'easy', marks: 1 },
-                { id: 'q1', text: 'Explain method A and its main steps.', type: 'subjective', difficulty: 'medium', marks: 4 },
-                { id: 'q2', text: 'Name one property of concept Y.', type: 'subjective', difficulty: 'easy', marks: 1 },
-                { id: 'q3', text: 'Analyze concept B using a multi-step example.', type: 'subjective', difficulty: 'hard', marks: 8 },
-                { id: 'q4', text: 'Compare methods C and D against two criteria.', type: 'subjective', difficulty: 'medium', marks: 4 },
-                { id: 'q5', text: 'List two types of concept E.', type: 'subjective', difficulty: 'easy', marks: 2 },
+                { id: 'q1', text: 'Name one property of concept Y.', type: 'subjective', difficulty: 'easy', marks: 1 },
+                { id: 'q2', text: 'List two types of concept E.', type: 'subjective', difficulty: 'easy', marks: 2 },
+                { id: 'q3', text: 'Explain method A and its main steps.', type: 'subjective', difficulty: 'medium', marks: 4 },
+                { id: 'q4', text: 'Analyze concept B using a multi-step example.', type: 'subjective', difficulty: 'hard', marks: 8 },
+                { id: 'q5', text: 'Compare methods C and D against two criteria.', type: 'subjective', difficulty: 'medium', marks: 4 },
                 { id: 'q6', text: 'Design approach F subject to explicit constraints.', type: 'subjective', difficulty: 'hard', marks: 8 },
                 { id: 'q7', text: 'Describe four key features of system G.', type: 'subjective', difficulty: 'medium', marks: 4 },
                 { id: 'q8', text: 'Evaluate method H and justify its use.', type: 'subjective', difficulty: 'hard', marks: 8 },

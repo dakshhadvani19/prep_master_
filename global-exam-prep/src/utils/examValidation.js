@@ -3,9 +3,9 @@
  * the student. Strips internal review metadata from MCQ questions.
  *
  * Rules (from FINAL_PROMPT_TEMPLATE.md / examPrompts.js):
- * - Mid-1 theory: exactly two 1-mark questions; remaining 28 marks in 4/8-mark questions; total 30 marks.
+ * - Mid-1 theory: mark sequence [1, 1, 4, 8, 4, 8, 4], total 30M.
  * - Mid-2 MCQ: exactly 30 questions; four distinct options; exactly one correct answer (index 0-3).
- * - ESE theory: exactly two 1-mark questions, one 2-mark question; remaining 56 marks in 4/8-mark questions; total 60 marks.
+ * - ESE theory: mark sequence [1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4], total 60M.
  * - Coverage spans in-scope chapters. Semantic quality and duplication are instructed in the generation prompt,
  *   not used as hard rejection gates.
  */
@@ -92,6 +92,23 @@ export function validateExam(questions, config, coveragePlan) {
             }
         }
 
+    }
+
+    // Enforce the exact question-by-question mark sequence for theory papers.
+    // This prevents a paper from having the right total while placing short questions later.
+    if (Array.isArray(config.markSequence)) {
+        if (config.markSequence.length !== questions.length) {
+            errors.push(`expected_mark_sequence_length_${config.markSequence.length}_got_${questions.length}`);
+        }
+        config.markSequence.forEach((expectedMarks, index) => {
+            const question = questions[index];
+            if (!question) return;
+            if (question.type !== 'subjective') {
+                errors.push(`question_${index + 1}:expected_subjective_question`);
+            } else if (question.marks !== expectedMarks) {
+                errors.push(`question_${index + 1}:expected_${expectedMarks}_marks_got_${question.marks}`);
+            }
+        });
     }
 
     // --- Marks blueprint checks ---

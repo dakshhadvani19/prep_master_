@@ -1,25 +1,27 @@
-/** Exam-type metadata used by the student subject picker. Kept tiny so catalog pages do not import mockData.js. */
+import { EXAM_BLUEPRINTS } from './examBlueprints';
+
+/** Exam-type metadata used by the student subject picker and exam screens. */
 export const examPrompts = {
   'mid-1': {
     title: 'Mid-Term 1 (Theory)',
-    timeMinutes: 60,
-    totalMarks: 30,
-    type: 'subjective',
-    description: "30-mark theory Mid-1 covering the first 50% of the ordered syllabus: two 1-mark, three 4-mark, and two 8-mark questions.",
+    timeMinutes: EXAM_BLUEPRINTS.mid1.timeMinutes,
+    totalMarks: EXAM_BLUEPRINTS.mid1.totalMarks,
+    type: EXAM_BLUEPRINTS.mid1.type,
+    description: '30M theory Mid-1: questions 1 and 2 are 1M each; the remaining questions alternate 4M and 8M (three 4M, two 8M), covering the first 50% of the ordered syllabus.',
   },
   'mid-2': {
     title: 'Mid-Term 2 (MCQ / Objective)',
-    timeMinutes: 45,
-    totalMarks: 30,
-    type: 'objective',
-    description: 'High-accuracy objective examination format conforming to university grading patterns.',
+    timeMinutes: EXAM_BLUEPRINTS.mid2.timeMinutes,
+    totalMarks: EXAM_BLUEPRINTS.mid2.totalMarks,
+    type: EXAM_BLUEPRINTS.mid2.type,
+    description: '30M objective examination with exactly 30 single-mark MCQs.',
   },
   'final': {
-    title: 'Final Examination (ESE — 60 marks)',
-    timeMinutes: 180,
-    totalMarks: 60,
-    type: 'subjective',
-    description: '60-mark End Semester Examination: two 1-mark, one 2-mark, four 8-mark and six 4-mark questions, covering the full eligible syllabus.',
+    title: 'Final Examination (ESE)',
+    timeMinutes: EXAM_BLUEPRINTS.ese.timeMinutes,
+    totalMarks: EXAM_BLUEPRINTS.ese.totalMarks,
+    type: EXAM_BLUEPRINTS.ese.type,
+    description: '60M End Semester Examination: two opening 1M questions, one 2M question, six 4M questions and four 8M questions. The first two answers must each be one word or one concise sentence.',
   },
 };
 

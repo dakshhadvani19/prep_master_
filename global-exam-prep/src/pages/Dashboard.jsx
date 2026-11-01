@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { domains, examPrompts } from '../data/mockData';
+import { domains } from '../data/mockData';
+import { examPrompts } from '../data/examPrompts';
 import {
     Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle,
     BarChart3, BookMarked, Loader,
@@ -224,7 +225,7 @@ export default function Dashboard() {
                     <>
                         <div className="sd-performance__metrics">
                             <article className="sd-metric"><span className="sd-metric__label">Completed attempts</span><strong>{Number(performance.summary?.totalAttempts||0).toLocaleString()}</strong><span className="sd-metric__detail">Saved exam and Test Room results</span></article>
-                            <article className="sd-metric sd-metric--gold"><span className="sd-metric__label">Total score</span><strong>{Number(performance.summary?.totalScore||0).toLocaleString(undefined,{maximumFractionDigits:2})}<small> / {Number(performance.summary?.totalMaxMarks||0).toLocaleString(undefined,{maximumFractionDigits:2})}</small></strong><span className="sd-metric__detail">Across finalized attempts</span></article>
+                            <article className="sd-metric sd-metric--gold"><span className="sd-metric__label">Total score</span><strong>{Number(performance.summary?.totalScore||0).toLocaleString(undefined,{maximumFractionDigits:2})}<small> / {Number(performance.summary?.totalMaxMarks||0).toLocaleString(undefined,{maximumFractionDigits:2})}M</small></strong><span className="sd-metric__detail">Across finalized attempts</span></article>
                             <article className="sd-metric sd-metric--violet"><span className="sd-metric__label">Overall percentage</span><strong>{Number(performance.summary?.overallPercentage||0).toFixed(2)}<small>%</small></strong><span className="sd-metric__detail">Weighted by maximum marks</span></article>
                             <article className="sd-metric"><span className="sd-metric__label">Subjects attempted</span><strong>{Number(performance.summary?.subjectsAttempted||0).toLocaleString()}</strong><span className="sd-metric__detail">Distinct subjects with results</span></article>
                         </div>
@@ -237,7 +238,7 @@ export default function Dashboard() {
                                         return <div className="sd-subject" key={subject.subjectId}>
                                             <div className="sd-subject__top">
                                                 <div className="sd-subject__name"><strong>{subject.subjectName&&!/^unknown subject$/i.test(subject.subjectName)?subject.subjectName:getSubjectName(subject.subjectId)}</strong><span>{subject.semester?`Semester ${subject.semester} · `:''}{subject.attempts} {Number(subject.attempts)===1?'attempt':'attempts'}</span></div>
-                                                <div className="sd-subject__score"><strong>{percentage.toFixed(2)}%</strong><span>{Number(subject.totalScore).toLocaleString(undefined,{maximumFractionDigits:2})}{' / '}{Number(subject.totalMaxMarks).toLocaleString(undefined,{maximumFractionDigits:2})}</span></div>
+                                                <div className="sd-subject__score"><strong>{percentage.toFixed(2)}%</strong><span>{Number(subject.totalScore).toLocaleString(undefined,{maximumFractionDigits:2})}{' / '}{Number(subject.totalMaxMarks).toLocaleString(undefined,{maximumFractionDigits:2})}M</span></div>
                                             </div>
                                             <div className="sd-subject__track" role="progressbar" aria-label={`${subject.subjectName||getSubjectName(subject.subjectId)} overall percentage`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={percentage}><span style={{width:`${percentage}%`}} /></div>
                                         </div>;
@@ -341,7 +342,7 @@ export default function Dashboard() {
                                     {isScored ? (
                                         <>
                                             <div style={{ fontSize: '1.8rem', fontWeight: 700, color: statusColor }}>
-                                                {record.score} <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/ {record.totalMarks}</span>
+                                                {record.score} <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/ {record.totalMarks}M</span>
                                             </div>
                                             <div style={{ color: statusColor, fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.75rem' }}>
                                                 {record.attemptType === 'test_room' && record.status !== 'submitted'

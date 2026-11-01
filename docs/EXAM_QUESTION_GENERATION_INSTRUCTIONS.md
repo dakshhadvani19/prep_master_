@@ -22,20 +22,20 @@
 ## 3. Theory exam marks
 
 ### Mid 1 theory — exactly 30 marks
-- Include exactly **two 1-mark questions** (2 marks total).
-- The remaining 28 marks use only 4-mark and 8-mark questions.
-- Valid combinations for the remaining marks: 7×4; 5×4 + 1×8; 3×4 + 2×8; or 1×4 + 3×8.
-- This gives 9, 8, 7, or 6 questions respectively. Select a sensible mix based on syllabus breadth and exam time. The total must equal 30 exactly.
+- Generate exactly 7 questions in this order: `[1, 1, 4, 8, 4, 8, 4]`.
+- Questions 1 and 2 are 1 mark each and must be answerable in one word or one concise sentence.
+- The remaining questions are three 4-mark and two 8-mark questions (2 + 12 + 16 = 30).
 
-### ESE theory — exactly 60 marks: arithmetic conflict
-- Two 1-mark questions plus only 4- and 8-mark questions **cannot total 60**, because the remaining 58 is not divisible by 4.
-- Do not silently produce 58 marks or change the requested mark pattern.
-- Recommended exception, only after explicit approval: two 1-mark questions + one 2-mark question + 4-/8-mark questions totalling 56. Any other solution also requires an approved blueprint exception. Record the approved exception before generating ESE.
+### ESE theory — exactly 60 marks
+- Generate exactly 13 questions in this order: `[1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]`.
+- Questions 1 and 2 are 1 mark each and must be answerable in one word or one concise sentence.
+- Question 3 is 2 marks. It is necessary because the remaining 58 marks cannot be formed from only 4-mark and 8-mark questions.
+- The remaining 56 marks are six 4-mark and four 8-mark questions (2 + 2 + 24 + 32 = 60).
 
 ### Model answers and marking
 - Every theory prompt must display its mark value, such as `[1 mark]`, `[4 marks]`, or `[8 marks]`.
 - Provide a model answer or marking points for every question. The points must sum to the item's marks.
-- 1 mark: one precise fact/result/step. 4 marks: a bounded explanation, comparison, method, or application. 8 marks: a fuller structured explanation or multi-step application with appropriate evidence/examples.
+- 1 mark: one precise fact/result/step, answerable in one word or one concise sentence. 2 marks: two compact creditable elements. 4 marks: a bounded explanation, comparison, method, or application. 8 marks: a fuller structured explanation or multi-step application with appropriate evidence/examples.
 - Accept equivalent correct wording. Do not require one memorized sentence where multiple technically correct explanations exist.
 
 ## 4. Suitable theory question types

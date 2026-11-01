@@ -287,10 +287,10 @@ ${source}
     } else {
         userPrompt = `Create exactly ${count} unique open-ended theory questions using only the study material.
 MARKS IN QUESTION ORDER: ${Array.isArray(marksForQuestions) ? JSON.stringify(marksForQuestions) : 'Use the caller-provided exam blueprint'}. Follow these marks exactly.
-Mark depth: 1 mark = one concise fact/point (normally one sentence or 1–2 lines; no multi-part explanation); 2 marks = a compact answerable task; 4 marks = about four creditable points/steps; 8 marks = a bounded, fuller multi-step response.
+Mark depth: 1 mark = one precise fact/result answered in one word or one concise sentence only; no subparts, lists, or explanations. 2 marks = a compact response with two creditable elements or a short result plus its reason; 4 marks = about four creditable points/steps; 8 marks = a bounded, fuller multi-step response.
 DIFFICULTY: ${blueprint.label} (${requestedDifficulty}); target: ${blueprint.reasoning}.
 Easy: foundational definition or one-step use. Medium: short application, calculation, comparison, or interpretation. Hard: multi-step analysis, diagnosis, design, or a justified decision.
-Keep every question clear, distinct, fair, and syllabus-specific. Do not include answers, hints, or marking schemes. If the source is truncated, rely only on visible content.
+Keep every question clear, distinct, fair, and syllabus-specific. Every 1-mark question must be answerable in one word or one concise sentence; never make it multi-part or require a list or explanation. Do not include answers, hints, or marking schemes. If the source is truncated, rely only on visible content.
 
 ${exclusionText}
 Study material:

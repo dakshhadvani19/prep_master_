@@ -7,8 +7,8 @@ Generate a credible, syllabus-grounded university-level internal theory paper. A
 
 ## Blueprint
 - Total: exactly 30 marks.
-- Include exactly two 1-mark questions (2 marks total).
-- Use this balanced 7-question distribution by default: **two 1-mark questions, three 4-mark questions, and two 8-mark questions** (2 + 12 + 16 = 30 marks). Interleave them in the paper rather than grouping all short or long questions together.
+- Questions 1 and 2 must each be 1 mark and must appear first.
+- Use this exact 7-question sequence: **[1, 1, 4, 8, 4, 8, 4]** (two 1-mark, three 4-mark, and two 8-mark questions; 2 + 12 + 16 = 30 marks).
 - Do not generate a 30-mark Mid-1 as only 1-mark and 4-mark questions. The default distribution above is mandatory unless a verified official blueprint explicitly overrides it.
 - Every question must state its mark value.
 - Supply a model answer and a mark-by-mark rubric for every question. Rubric points must sum exactly to the question's marks and allow equivalent correct wording where appropriate.
@@ -16,7 +16,7 @@ Generate a credible, syllabus-grounded university-level internal theory paper. A
 - Use short practical, code, calculation or scenario questions only where supported by the subject syllabus and appropriate to the marks.
 
 ## Question construction
-- 1 mark: one precise fact, term, result, or small step. Ask for a single item or one brief point only; the expected answer should usually be one sentence or 1–2 lines. Never ask to explain an entire concept, architecture, process, or list for 1 mark.
+- 1 mark: one precise fact, term, or result. The expected answer must be one word or one concise sentence only. Never ask to explain an entire concept, architecture, process, or list for 1 mark.
 - 4 marks: a bounded explanation, comparison, method, worked step or small application with roughly four distinct creditable points/steps. Keep the expected response proportional to 4 marks.
 - 8 marks: a fuller explanation, multi-step solution, worked example or reasoned application with enough depth for eight marks. Include architecture/diagram, steps, code or examples only when the syllabus and question require them.
 - Avoid filler questions, duplicate questions, hidden assumptions and tasks that cannot be answered from the permitted syllabus/context.

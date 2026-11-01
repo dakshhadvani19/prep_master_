@@ -29,7 +29,10 @@ describe('contextFitter', () => {
         expect(EXAM_CONFIG.mid1.type).toBe('subjective');
         expect(EXAM_CONFIG.mid1.totalMarks).toBe(30);
         expect(EXAM_CONFIG.mid1.questionCount).toBe(7);
-        expect(EXAM_CONFIG.mid1.markSequence).toEqual([1, 4, 1, 8, 4, 8, 4]);
+        expect(EXAM_CONFIG.mid1.markSequence).toEqual([1, 1, 4, 8, 4, 8, 4]);
+        expect(EXAM_CONFIG.mid1.markSequence.slice(0, 2)).toEqual([1, 1]);
+        expect(EXAM_CONFIG.mid1.markSequence.filter((marks) => marks === 4)).toHaveLength(3);
+        expect(EXAM_CONFIG.mid1.markSequence.filter((marks) => marks === 8)).toHaveLength(2);
         expect(EXAM_CONFIG.mid1.markSequence.reduce((a, b) => a + b, 0)).toBe(30);
         expect(EXAM_CONFIG.mid2.type).toBe('objective');
         expect(EXAM_CONFIG.mid2.totalMarks).toBe(30);
@@ -37,7 +40,11 @@ describe('contextFitter', () => {
         expect(EXAM_CONFIG.ese.type).toBe('subjective');
         expect(EXAM_CONFIG.ese.totalMarks).toBe(60);
         expect(EXAM_CONFIG.ese.questionCount).toBe(13);
-        expect(EXAM_CONFIG.ese.markSequence).toEqual([1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]);
+        expect(EXAM_CONFIG.ese.markSequence).toEqual([1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]);
+        expect(EXAM_CONFIG.ese.markSequence.slice(0, 2)).toEqual([1, 1]);
+        expect(EXAM_CONFIG.ese.markSequence[2]).toBe(2);
+        expect(EXAM_CONFIG.ese.markSequence.filter((marks) => marks === 4)).toHaveLength(6);
+        expect(EXAM_CONFIG.ese.markSequence.filter((marks) => marks === 8)).toHaveLength(4);
         expect(EXAM_CONFIG.ese.markSequence.reduce((a, b) => a + b, 0)).toBe(60);
     });
 

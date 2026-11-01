@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, CheckCircle, XCircle, MinusCircle, BarChart2, BookOpen, Loader } from 'lucide-react';
-import { domains, examPrompts } from '../data/mockData';
+import { domains } from '../data/mockData';
+import { examPrompts } from '../data/examPrompts';
 import { findSubjectContext } from '../utils/subjectResolver';
 import {
     filterReviewQuestionIndices,
@@ -182,8 +183,13 @@ export default function ReviewPage() {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
                         <AttemptSourceBadge attemptType={record.attemptType} />
+                        {!isObjective && examInfo?.totalMarks > 0 && (
+                            <span style={{ color: 'var(--text-secondary)', fontWeight: 600, fontSize: '0.85rem' }}>
+                                {examInfo.totalMarks}M Total
+                            </span>
+                        )}
                         {isObjective && record.score !== null && <div style={{ background: 'var(--bg-tertiary)', padding: '0.75rem 1.5rem', borderRadius: 'var(--radius-lg)', border: '1px solid var(--glass-border)', textAlign: 'center' }}>
-                            <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--accent-primary)' }}>{record.score}<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}> / {record.totalMarks}</span></div>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--accent-primary)' }}>{record.score}<span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}> / {record.totalMarks}M</span></div>
                             <div style={{ fontSize: '0.78rem', color: 'var(--text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Final Score</div>
                         </div>}
                     </div>
@@ -306,6 +312,11 @@ export default function ReviewPage() {
                         <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 500 }}>
                             Question {displayQuestionIndex + 1} of {questions.length}
                         </h2>
+                        {!isObjective && q?.marks != null && (
+                            <span style={{ color: 'var(--text-secondary)', fontWeight: 600, fontSize: '0.85rem' }}>
+                                {q.marks}M
+                            </span>
+                        )}
                         {isObjective && (
                             <span style={{
                                 display: 'inline-flex', alignItems: 'center', gap: '0.4rem',

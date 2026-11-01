@@ -1,3 +1,5 @@
+import { EXAM_BLUEPRINTS } from '../data/examBlueprints';
+
 /**
  * contextFitter.js — Syllabus scope selection, context batching, and coverage
  * planning under a 6,000-character model input cap.
@@ -7,9 +9,9 @@
  * Key rules:
  * - Split at chapter boundaries only — never mid-chapter.
  * - Never silently discard content; truncation is always explicit.
- * - Mid-1 theory: first 50% of chapters, 30 marks, two 1-mark + 4/8-mark rest.
+ * - Mid-1 theory: first 50% of chapters, 30M, two opening 1-mark questions followed by alternating 4/8-mark questions.
  * - Mid-2 MCQ: verified Mid-2 scope, 30 questions, 4 options, 1 correct.
- * - ESE theory: full syllabus (or blueprint-narrowed), 60 marks, two 1-mark + one 2-mark + 4/8-mark rest.
+ * - ESE theory: full syllabus (or blueprint-narrowed), 60M, two opening 1-mark questions, one 2-mark question, then 4/8-mark questions.
  */
 
 export const MAX_SOURCE_CHARS = 6000;
@@ -36,37 +38,8 @@ export function normalizeExamType(examType) {
 /**
  * Exam type configuration — marking blueprints and scope rules.
  */
-export const EXAM_CONFIG = {
-    mid1: {
-        type: 'subjective',
-        totalMarks: 30,
-        timeMinutes: 60,
-        scopeRule: 'first_50_percent_chapters',
-        questionCount: 7,
-        markSequence: [1, 4, 1, 8, 4, 8, 4],
-        markDistribution: { oneMarkCount: 2, fourOrEightMarkTotal: 28 },
-        questionTypes: ['subjective'],
-    },
-    mid2: {
-        type: 'objective',
-        totalMarks: 30,
-        timeMinutes: 45,
-        scopeRule: 'verified_mid2_scope',
-        questionCount: 30,
-        markDistribution: { mcqCount: 30 },
-        questionTypes: ['mcq'],
-    },
-    ese: {
-        type: 'subjective',
-        totalMarks: 60,
-        timeMinutes: 180,
-        scopeRule: 'full_syllabus',
-        questionCount: 13,
-        markSequence: [1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4],
-        markDistribution: { oneMarkCount: 2, twoMarkCount: 1, fourOrEightMarkTotal: 56 },
-        questionTypes: ['subjective'],
-    },
-};
+// Keep the historical export name for existing callers; the canonical data lives in one shared module.
+export const EXAM_CONFIG = EXAM_BLUEPRINTS;
 
 /**
  * Select in-scope chapters based on exam type and syllabus record.

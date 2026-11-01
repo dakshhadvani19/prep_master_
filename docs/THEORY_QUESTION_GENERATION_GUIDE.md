@@ -21,18 +21,20 @@ If a required source is missing, mappings conflict, the subject is non-examinabl
 - Canonical export: 30 question strings, 120 flattened option strings in A–D order, and 30 zero-based answer indexes (0=A, 1=B, 2=C, 3=D).
 
 ### Theory Mid 1 — 30 marks
-- Exactly two 1-mark questions (2 marks).
-- The remaining 28 marks must be composed of 4-mark and 8-mark questions.
-- Valid structures include: 7 × 4-mark questions; 5 × 4-mark + 1 × 8-mark; 3 × 4-mark + 2 × 8-mark; or 1 × 4-mark + 3 × 8-mark.
+- Generate exactly 7 questions in this order: **two 1-mark questions first**, followed by three 4-mark and two 8-mark questions.
+- Canonical sequence: `[1, 1, 4, 8, 4, 8, 4]` (2 + 12 + 16 = 30 marks).
+- The first two questions must be very short, each answerable in one word or one concise sentence.
 - Use only the first 50% of the ordered syllabus, applying verified unit/contact-hour weighting when available.
 - Total must equal exactly 30 marks. Do not add unmarked subparts or silently change a question's marks.
 
 ### Theory ESE — 60 marks
-- Exactly two 1-mark questions (2 marks).
-- Include one 2-mark question to resolve the arithmetic constraint, unless an official approved blueprint explicitly specifies another valid structure.
-- The remaining 56 marks must use 4-mark and 8-mark questions. Examples: 7 × 8-mark; or 9 × 4-mark + 2 × 8-mark.
+- Generate exactly 13 questions. Questions 1 and 2 must each be 1 mark and must appear first.
+- Question 3 is one 2-mark question, required because 58 marks cannot be composed solely of 4-mark and 8-mark questions.
+- The remaining 56 marks are six 4-mark and four 8-mark questions.
+- Canonical sequence: `[1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]` (2 + 2 + 24 + 32 = 60 marks).
+- The first two questions must be very short, each answerable in one word or one concise sentence. The 2-mark question should require two compact creditable elements.
 - Cover the full relevant syllabus unless an authoritative blueprint narrows it.
-- If the official blueprint forbids a 2-mark question, flag the conflict and ask for an approved alternative; do not output a paper with the wrong total.
+- If an official blueprint conflicts with this structure, flag the conflict rather than outputting an exam with an incorrect total.
 
 ## 3. What good college theory questions should test
 
@@ -78,7 +80,7 @@ Coding-question requirements:
 
 Every theory question must show its mark value in the question string, for example `[4 marks]` or `[8 marks]`. Model answers belong in the corresponding `Answers` entry.
 
-- **1 mark:** one precise fact, term, purpose or small result. Answer in one concise point.
+- **1 mark:** one precise fact, term, purpose or small result. Ask for a one-word answer or one concise sentence only; no subparts or explanation.
 - **2 marks:** two distinct creditable points, or a short correct result plus its essential reason.
 - **4 marks:** a bounded explanation, comparison, small diagram, worked step, short code task or application. Rubric points must add to exactly four.
 - **8 marks:** a fuller explanation, labelled diagram plus explanation, multi-step numerical/algorithm, short implementation, or reasoned scenario. Rubric points must add to exactly eight.

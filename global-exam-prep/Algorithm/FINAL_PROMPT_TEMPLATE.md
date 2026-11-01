@@ -68,10 +68,10 @@ For subjective (theory) questions:
 
 The backend owns the ordered mark sequence and must pass it to every generation call. Follow it exactly.
 
-- **Mid-1 theory:** exactly 7 questions, mark sequence `[1, 4, 1, 8, 4, 8, 4]`: two 1-mark, three 4-mark and two 8-mark questions; exactly 30 marks.
-- **ESE theory:** exactly 13 questions, mark sequence `[1, 4, 1, 8, 4, 2, 8, 4, 8, 4, 8, 4, 4]`: two 1-mark, one 2-mark, six 4-mark and four 8-mark questions; exactly 60 marks.
-- Interleave question types rather than grouping all same-mark questions together.
-- A 1-mark question asks for one fact or brief point and normally expects one sentence or 1–2 lines. Never ask for a page-long answer, full architecture or several subparts for 1 mark.
+- **Mid-1 theory:** exactly 7 questions, mark sequence `[1, 1, 4, 8, 4, 8, 4]`: the first two are 1-mark, followed by three 4-mark and two 8-mark questions; exactly 30 marks.
+- **ESE theory:** exactly 13 questions, mark sequence `[1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]`: the first two are 1-mark, the third is 2-mark, followed by six 4-mark and four 8-mark questions; exactly 60 marks.
+- Alternate 4-mark and 8-mark questions as far as the required distribution permits.
+- A 1-mark question asks for one fact and must be answerable in one word or one concise sentence. Never ask for a page-long answer, full architecture or several subparts for 1 mark.
 - A 4-mark question expects around four creditable points/steps. An 8-mark question may require a fuller, bounded multi-step explanation or solution.
 - Difficulty changes reasoning demand, not question count, syllabus scope, marking scheme or suitable answer length.
 
@@ -115,7 +115,7 @@ Where:
 - `syllabusScopeDescription` — human-readable description of which syllabus portion is in scope (e.g. "Chapters 1–4 of 8 (first 50%)", "Full syllabus, all 8 chapters").
 - `coveragePlan` — table mapping chapter ranges to question/mark allocations, so the model knows how to distribute coverage.
 - `objectiveInstructions` — for MCQ exams: exactly 30 questions, four options each, one correct answer, answer index 0-3 pointing to the correct option before shuffling.
-- `theoryInstructions` — Mid-1: exactly 7 questions, two 1-mark, three 4-mark and two 8-mark (30 marks total). ESE: exactly 13 questions, two 1-mark, one 2-mark, six 4-mark and four 8-mark (60 marks total). Interleave the mark values instead of grouping all long questions together.
+- `theoryInstructions` — Mid-1: exactly 7 questions in order [1, 1, 4, 8, 4, 8, 4] (30 marks total). ESE: exactly 13 questions in order [1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4] (60 marks total). The first two questions must be one-word or one-concise-sentence 1-mark questions.
 
 ---
 

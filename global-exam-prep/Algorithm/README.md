@@ -34,8 +34,8 @@ These remain human-readable reference/specification files. If they conflict with
 - Departmental subject: Mid-1 MCQ and Mid-2 MCQ; no ESE unless authoritative course policy explicitly permits it.
 - Non-departmental subject: Mid-1 theory, Mid-2 MCQ, and ESE theory when eligible.
 - MCQ: exactly 30 questions at every difficulty, four options each, one zero-based answer index per question. Use small generation calls (up to 5 questions each), then combine and validate all 30. The existing database mapping flattens the options in question order (120 option entries).
-- Mid-1 theory: exactly 7 questions, two 1-mark, three 4-mark and two 8-mark; 30 marks total. Interleave mark values.
-- ESE theory: exactly 13 questions, two 1-mark, one 2-mark, six 4-mark and four 8-mark; 60 marks total. Interleave mark values. One-mark questions ask for one brief fact/point, not a page-length answer. Stop if an official blueprint conflicts.
+- Mid-1 theory: exactly 7 questions in order [1, 1, 4, 8, 4, 8, 4]; the first two are one-word or one-sentence 1-mark questions, followed by three 4-mark and two 8-mark questions; 30M total.
+- ESE theory: exactly 13 questions in order [1, 1, 2, 4, 8, 4, 8, 4, 8, 4, 8, 4, 4]; the first two are one-word or one-sentence 1-mark questions, the third is 2 marks, followed by six 4-mark and four 8-mark questions; 60M total. Stop if an official blueprint conflicts.
 - Mid-1 scope: first 50% of ordered syllabus, accounting for verified unit/contact-hour weighting where available. ESE covers the full relevant syllabus unless official policy narrows it.
 - Difficulty changes cognitive demand, not syllabus boundaries, exam format, counts, eligibility or marks.
 
