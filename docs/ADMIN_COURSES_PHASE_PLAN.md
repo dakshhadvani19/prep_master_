@@ -80,7 +80,9 @@ Status: **Implemented; live Supabase migrations applied and verified**
 - Admin review shows extracted/valid/rejected/warning/selected counts, source location, editable question text/options/answers/marks/difficulty/rubric, inclusion controls and generated-rubric approval.
 - Canonical ingestion uses private.question_banks, private.question_bank_questions and private.question_bank_sets. Each bank copies verified SubjectId/CourseId/Semester/exam metadata from the source upload; no identity is inferred from TestId.
 - Publishing is separate, administrator-confirmed, server-revalidated and idempotent by source upload.
-- public.TestsData remains unchanged. Wiring this private index into the student exam-generation picker is a separate downstream integration.
+- Student auto-exam generation checks a service-role-only private-bank RPC by numeric SubjectId, exam type, question type and difficulty. Complete MCQ sets or exact theory mark sequences are selected; the server creates the attempt and retains the answer key privately, while the browser receives answer-free questions.
+- If there is no complete matching published bank, the existing AI/syllabus generation fallback is retained.
+- public.TestsData remains unchanged. Student exam-generation integration is now implemented: ExamPortal checks for published banks by subject/exam/difficulty before using Groq.
 
 ### Phase 3 implementation files
 
@@ -88,6 +90,8 @@ Status: **Implemented; live Supabase migrations applied and verified**
 - Admin API actions: parse_question_bank, save_review, publish_question_bank; review retrieval uses the same authenticated admin endpoint.
 - UI: AdminCourseUploads.jsx and AdminCourseUploads.css.
 - Migrations: 20261101093432_admin_question_bank_ingestion.sql and 20261101094500_update_question_bank_publish_mark_totals.sql.
+
+Real-bank smoke testing remains pending: production currently has zero published banks and zero sets. An administrator must publish a bank before the curated exam path can be smoke-tested with actual data.
 
 ## Acceptance checks
 
