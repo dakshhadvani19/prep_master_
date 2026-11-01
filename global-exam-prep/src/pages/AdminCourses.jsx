@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain } from '../utils/catalogApi';
 import { getExamTypesForSubject, getSubjectExamInfo } from '../utils/subjectExamPolicy';
+import AdminCourseUploads from '../components/AdminCourseUploads.jsx';
 import './AdminCourses.css';
 
 const DOMAIN_ICONS = {
@@ -354,6 +355,15 @@ export default function AdminCourses() {
                                                         <div className="ac-question-locator__target"><span>INGESTION TARGET</span><strong>{selectedSubject.subjectId} · Sem {selectedSubject.sem}</strong><small>{selectedSubject.subjectName}</small></div>
                                                         <p className="ac-question-locator__next">Phase 3 will create the canonical question-bank index during validated file ingestion.</p>
                                                     </section>
+                                                    <AdminCourseUploads
+                                                        key={selectedSubject.subjectId}
+                                                        subject={{
+                                                            subjectId: selectedSubject.subjectId,
+                                                            courseId: selectedSubject.courseId,
+                                                            semester: selectedSubject.sem,
+                                                        }}
+                                                        examTypes={getExamTypesForSubject(selectedSubject.isDepartmentalSubject)}
+                                                    />
                                                 </>
                                             ) : (
                                                 <div className="ac-detail-empty"><BookOpen size={28} /><strong>Select a subject</strong><span>Its catalog identity, exam eligibility and question-bank target will appear here.</span></div>

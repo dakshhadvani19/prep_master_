@@ -215,3 +215,9 @@ A separate title-based audit identified **58 activity-/workplace-based occurrenc
 - The active form has only Feedback Type and Description; Description is required and limited to 1,000 characters.
 - `POST /api/feedback` verifies the caller's Supabase bearer token, resolves `StudentId` from `Students.auth_uid`, and inserts only `Description`, `Type`, and `StudentId`. PostgreSQL generates `FeedbackId` and applies the existing moderation defaults.
 - The service-role credential remains server-only and direct browser table access remains closed by RLS and grants.
+
+## Admin course upload intake
+
+Migration 20261101090011_admin_course_file_intake was applied on 2026-11-01. It creates private table private.admin_course_uploads, private Storage bucket admin-course-files, an authenticated admin-only Storage insert policy, and four RPCs executable only by service_role. The private table has RLS enabled and no anon/authenticated table grants. No columns or rows were added to public Courses, Subjects, or TestsData.
+
+See docs/ADMIN_COURSES_PHASE2_PROGRESS.md for verified permissions and the upload data contract.

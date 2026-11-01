@@ -333,3 +333,9 @@ The live Supabase catalog now uses the normalized course names `BCA` (CourseId 1
 ## Active work handoff — Diploma test-bank restructuring
 
 The current active repository task is tracked in [docs/DIPLOMA_EXAM_BANK_HANDOFF.md](DIPLOMA_EXAM_BANK_HANDOFF.md). It covers the requested exam-specific JSON layout for Diploma Computer Engineering and Chemical Engineering, Semesters 1–6, including exact exam-type rules, current documented v2-bank counts, open verification gaps, file validation, and the next-chat prompt. The user explicitly scoped this current task to GitHub repository files only; do not access or change Supabase for it.
+
+## Admin Courses Phase 2 — file intake
+
+The /admin/courses locator supports PDF/DOCX syllabus uploads and PDF/DOCX/CSV question-bank uploads. Uploads use the private admin-course-files Storage bucket, authenticated resumable TUS transfer, an admin-verified API, and private.admin_course_uploads for durable state. Existing syllabus versions remain active until an administrator confirms a validated replacement. Validated question-bank files stay in validated_waiting_phase3; no Phase 2 code writes parsed questions to TestsData.
+
+The CSV template and limits are documented in docs/ADMIN_COURSES_PHASE2_PROGRESS.md. The live database migration is 20261101090011_admin_course_file_intake.

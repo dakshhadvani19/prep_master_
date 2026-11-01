@@ -1,6 +1,6 @@
 # PrepMaster — Current Status
 
-_Last updated: 2026-10-31_
+_Last updated: 2026-11-01_
 
 ## 1. Repository and deployment
 
@@ -265,3 +265,11 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Browser-local exam history writing and reading have been removed. The dashboard and logout flow remove legacy per-user/anonymous history keys; no local history fallback remains.
 - The Performance overview is calculated from finalized scored records in the same two attempt lists, not from a third leaderboard-performance request.
 - No public ERD table or Supabase schema was changed. `public.TestAttempts` remains the per-student mirror, and `public.TestRooms` remains the room-level aggregate documented in `TEST_ROOMS_SCHEMA_AND_IMPLEMENTATION.md`.
+
+## Admin course upload intake — Phase 2
+
+- The existing /admin/courses subject locator now includes syllabus and question-bank file intake.
+- Originals live in the private admin-course-files Supabase bucket; private.admin_course_uploads keeps durable metadata and processing state.
+- The API checks Supabase Auth and public.Admins; the service-role key is server-only.
+- Syllabus replacement is previewed and separately confirmed. Question-bank files remain staged for Phase 3 and are not published into TestsData.
+- See docs/ADMIN_COURSES_PHASE2_PROGRESS.md for limits, the CSV template contract, migration details and verification.
