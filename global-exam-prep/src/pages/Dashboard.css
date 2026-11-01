@@ -341,3 +341,8 @@
     .sd-performance { animation: none; }
     .sd-subject__track > span { transition: none; }
 }
+
+
+@keyframes pm-evaluation-spin {
+    to { transform: rotate(360deg); }
+}
