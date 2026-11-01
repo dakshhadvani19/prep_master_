@@ -19,6 +19,90 @@
  * @property {object} stats { questionCount, totalMarks, mcqCount, theoryCount }
  */
 
+const THEORY_ANSWER_FORMATS = new Set(['points', 'comparison', 'worked_solution', 'code', 'diagram']);
+const MAX_RUBRIC_ITEMS_BY_MARKS = { 1: 1, 2: 2, 4: 6, 8: 12 };
+
+/**
+ * Validate the model answer and its mark-by-mark rubric for one theory question.
+ * This shared contract is used both immediately after Groq generation and again
+ * when the complete exam is validated before it is saved.
+ */
+export function validateTheoryAnswerPayload(question) {
+    const errors = [];
+    const id = question?.id || 'unknown';
+    const marks = question?.marks;
+
+    if (!Number.isInteger(marks) || ![1, 2, 4, 8].includes(marks)) {
+        errors.push(`subjective_${id}:invalid_theory_marks_for_rubric`);
+    }
+    if (typeof question?.answer !== 'string' || !question.answer.trim()) {
+        errors.push(`subjective_${id}:missing_model_answer`);
+    } else if (question.answer.length > 6000) {
+        errors.push(`subjective_${id}:model_answer_too_long`);
+    }
+    if (!THEORY_ANSWER_FORMATS.has(question?.answerFormat)) {
+        errors.push(`subjective_${id}:invalid_answer_format`);
+    }
+
+    const rubric = question?.rubric;
+    if (!Array.isArray(rubric) || rubric.length < 1) {
+        errors.push(`subjective_${id}:missing_marking_rubric`);
+        return { valid: false, errors };
+    }
+
+    const maxItems = MAX_RUBRIC_ITEMS_BY_MARKS[marks] ?? 12;
+    if (rubric.length > maxItems) {
+        errors.push(`subjective_${id}:rubric_exceeds_${maxItems}_criteria`);
+    }
+
+    let rubricTotal = 0;
+    rubric.forEach((item, index) => {
+        if (!item || typeof item !== 'object' || Array.isArray(item)) {
+            errors.push(`subjective_${id}:rubric_item_${index + 1}_invalid`);
+            return;
+        }
+        if (typeof item.criterion !== 'string' || !item.criterion.trim()) {
+            errors.push(`subjective_${id}:rubric_item_${index + 1}_missing_criterion`);
+        }
+        if (typeof item.marks !== 'number' || !Number.isFinite(item.marks) || item.marks <= 0
+            || Math.abs(item.marks * 2 - Math.round(item.marks * 2)) > 1e-9) {
+            errors.push(`subjective_${id}:rubric_item_${index + 1}_invalid_mark_allocation`);
+        } else {
+            rubricTotal += item.marks;
+        }
+        if (!Array.isArray(item.keyPoints) || item.keyPoints.length < 1 || item.keyPoints.length > 4
+            || item.keyPoints.some(point => typeof point !== 'string' || !point.trim())) {
+            errors.push(`subjective_${id}:rubric_item_${index + 1}_invalid_key_points`);
+        }
+        if (item.acceptedAlternatives !== undefined && (
+            !Array.isArray(item.acceptedAlternatives)
+            || item.acceptedAlternatives.length > 4
+            || item.acceptedAlternatives.some(value => typeof value !== 'string' || !value.trim())
+        )) {
+            errors.push(`subjective_${id}:rubric_item_${index + 1}_invalid_accepted_alternatives`);
+        }
+    });
+
+    if (Number.isInteger(marks) && Math.abs(rubricTotal - marks) > 1e-9) {
+        errors.push(`subjective_${id}:rubric_total_${rubricTotal}_does_not_equal_${marks}`);
+    }
+
+    // A comparison row earns one mark only when both sides express a valid,
+    // corresponding difference. An 8M comparison therefore has eight paired rows.
+    if (question?.answerFormat === 'comparison') {
+        if (![2, 4, 8].includes(marks) || rubric.length !== marks) {
+            errors.push(`subjective_${id}:comparison_requires_one_row_per_mark`);
+        }
+        rubric.forEach((item, index) => {
+            if (item?.marks !== 1 || !Array.isArray(item?.keyPoints) || item.keyPoints.length !== 2) {
+                errors.push(`subjective_${id}:comparison_row_${index + 1}_must_score_one_mark_for_two_sides`);
+            }
+        });
+    }
+
+    return { valid: errors.length === 0, errors };
+}
+
 /**
  * Validate a complete generated exam (all batches combined).
  *
@@ -82,6 +166,8 @@ export function validateExam(questions, config, coveragePlan) {
             if (typeof q.marks !== 'number' || q.marks <= 0) {
                 errors.push(`subjective_${q.id}: invalid_marks`);
             } else {
+                const answerValidation = validateTheoryAnswerPayload(q);
+                errors.push(...answerValidation.errors);
                 stats.totalMarks += q.marks;
                 if (q.marks === 1) stats.oneMarkCount++;
                 if (q.marks === 2) stats.twoMarkCount++;
@@ -200,6 +286,8 @@ export function validateBatch(questions, expectedCount) {
             if (typeof q.marks !== 'number' || q.marks <= 0) {
                 errors.push(`subjective_${q.id}: invalid_marks`);
             }
+            const answerValidation = validateTheoryAnswerPayload(q);
+            errors.push(...answerValidation.errors);
         }
     }
     return { valid: errors.length === 0, errors, warnings: [], stats: { questionCount: questions.length } };
