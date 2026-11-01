@@ -210,7 +210,10 @@ describe('theory rubric evaluator', () => {
         const payload = JSON.parse(request.body);
         expect(payload.model).toBe('openai/gpt-oss-20b');
         expect(payload.response_format).toEqual({ type: 'json_object' });
+        expect(payload.reasoning_format).toBe('hidden');
         expect(payload.max_completion_tokens).toBe(4096);
+        expect(payload.messages).toHaveLength(1);
+        expect(payload.messages[0].role).toBe('user');
         expect(payload.messages[0].content).toContain('Never omit a required field');
     });
 });
