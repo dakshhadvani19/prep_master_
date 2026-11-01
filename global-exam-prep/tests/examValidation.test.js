@@ -16,8 +16,12 @@ function withTheoryPayload(questions) {
             acceptedAlternatives: [],
         }));
         const answer = isComparison
-            ? `| Basis | Side A | Side B |\\n|---|---|---|\\n${rubric.map((_, index) => `| Basis ${index + 1} | A point ${index + 1} | B point ${index + 1} |`).join('\\n')}`
-            : rubric.map((_, index) => `${index + 1}. Expected answer point ${index + 1}.`).join('\\n');
+            ? [
+                '| Basis | Side A | Side B |',
+                '|---|---|---|',
+                ...rubric.map((_, index) => `| Basis ${index + 1} | A point ${index + 1} | B point ${index + 1} |`),
+            ].join('\n')
+            : rubric.map((_, index) => `${index + 1}. Expected answer point ${index + 1}.`).join('\n');
         return { ...question, answer, answerFormat: isComparison ? 'comparison' : 'points', rubric };
     });
 }
