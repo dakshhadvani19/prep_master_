@@ -266,27 +266,35 @@ export async function evaluateTheoryAttempt(attempt, apiKey) {
     const maxProviderAttempts = 3;
 
     for (let providerAttempt = 1; providerAttempt <= maxProviderAttempts; providerAttempt += 1) {
-        const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${apiKey}`,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                model: GROQ_MODEL,
-                messages: [
-                    { role: 'system', content: system },
-                    { role: 'user', content: JSON.stringify(payload) },
-                ],
-                // JSON-object mode lets the application repair harmless missing
-                // feedback/key-point fields instead of Groq rejecting the entire grade.
-                response_format: { type: 'json_object' },
-                temperature: 0.1,
-                reasoning_effort: 'low',
-                max_completion_tokens: 4096,
-            }),
-            signal: AbortSignal.timeout(15000),
-        });
+        let response;
+        try {
+            response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    Authorization: `Bearer ${apiKey}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    model: GROQ_MODEL,
+                    messages: [
+                        { role: 'system', content: system },
+                        { role: 'user', content: JSON.stringify(payload) },
+                    ],
+                    // JSON-object mode lets the application repair harmless missing
+                    // feedback/key-point fields instead of Groq rejecting the entire grade.
+                    response_format: { type: 'json_object' },
+                    temperature: 0.1,
+                    reasoning_effort: 'low',
+                    max_completion_tokens: 4096,
+                }),
+                signal: AbortSignal.timeout(15000),
+            });
+        } catch (requestError) {
+            lastError = new Error(String(requestError?.message || 'Groq evaluation request failed.').slice(0, 450));
+            if (providerAttempt === maxProviderAttempts) throw lastError;
+            await new Promise(resolve => setTimeout(resolve, Math.min(2000, 300 * providerAttempt)));
+            continue;
+        }
 
         body = await response.json().catch(() => ({}));
         if (response.ok) {
