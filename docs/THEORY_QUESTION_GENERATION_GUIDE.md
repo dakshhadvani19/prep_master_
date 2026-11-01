@@ -85,6 +85,15 @@ Every theory question must show its mark value in the question string, for examp
 - **4 marks:** a bounded explanation, comparison, small diagram, worked step, short code task or application. Rubric points must add to exactly four.
 - **8 marks:** a fuller explanation, labelled diagram plus explanation, multi-step numerical/algorithm, short implementation, or reasoned scenario. Rubric points must add to exactly eight.
 
+Answer-length limits:
+- 1M: one fact/result and exactly one 1-mark rubric criterion.
+- 2M: at most two compact answer points and two rubric criteria.
+- 4M: normally four answer points and at most six rubric criteria.
+- Ordinary 8M: normally 8–10 concise answer points; absolute maximum 12 rubric criteria. No essays or unnecessary sub-points.
+- DIFFERENTIATE/COMPARE exception: one paired row per mark. An 8M comparison has exactly eight rows, with eight points on each side (16 side-specific facts total); each row is worth 1M and has one expected point for each side.
+
+The runtime theory JSON contract requires `answer` (model answer text), `answerFormat` (`points`, `comparison`, `worked_solution`, `code`, or `diagram`), and `rubric`. Each rubric item contains `criterion`, `marks`, `keyPoints`, and optional `acceptedAlternatives`. Every item's allocations must sum exactly to the question marks.
+
 For each answer/rubric:
 - State the expected key points, steps, labels, formula/substitution/result, code behavior or other evidence that earns credit.
 - Allocate marks explicitly; the subtotals must equal the question's stated marks.
