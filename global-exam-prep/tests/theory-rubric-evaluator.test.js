@@ -102,24 +102,42 @@ describe('theory rubric evaluator', () => {
         expect(result.questions[0].criteria[1].keyPoints[0].evidenceQuote).toBe('');
     });
 
-    it('rejects marks above a criterion allocation', () => {
+    it('caps criterion marks at the saved allocation instead of failing the whole attempt', () => {
         const raw = validModelResult();
         raw.questions[0].criteria[0].awardedMarks = 2.5;
-        expect(() => validateAndNormalizeModelResult(
-            raw,
-            prepareTheoryEvaluation(buildAttempt()),
-            prepareTheoryEvaluation(buildAttempt()),
-        )).toThrow(/invalid marks/i);
+        const prepared = prepareTheoryEvaluation(buildAttempt());
+        const result = validateAndNormalizeModelResult(raw, prepared, prepared);
+        expect(result.questions[0].criteria[0].awardedMarks).toBe(2);
+        expect(result.totalAwardedMarks).toBe(2);
     });
 
-    it('rejects incomplete rubric criteria returned by the model', () => {
+    it('fills an omitted criterion and missing key-point assessment conservatively', () => {
         const raw = validModelResult();
+        raw.questions[0].criteria[0].keyPoints.pop();
+        delete raw.questions[0].criteria[0].feedback;
+        delete raw.questions[0].feedback;
         raw.questions[0].criteria.pop();
-        expect(() => validateAndNormalizeModelResult(
-            raw,
-            prepareTheoryEvaluation(buildAttempt()),
-            prepareTheoryEvaluation(buildAttempt()),
-        )).toThrow(/incomplete rubric/i);
+        const prepared = prepareTheoryEvaluation(buildAttempt());
+
+        const result = validateAndNormalizeModelResult(raw, prepared, prepared);
+        expect(result.questions[0].criteria).toHaveLength(2);
+        expect(result.questions[0].criteria[0].keyPoints).toHaveLength(2);
+        expect(result.questions[0].criteria[0].keyPoints[1].status).toBe('missing');
+        expect(result.questions[0].criteria[1].awardedMarks).toBe(0);
+        expect(result.questions[0].criteria[1].feedback).toMatch(/omitted/i);
+        expect(result.questions[0].feedback).toMatch(/criterion-level feedback/i);
+        expect(result.totalAwardedMarks).toBe(1.5);
+        expect(result.totalPossibleMarks).toBe(4);
+    });
+
+    it('returns a completed conservative result when the model omits an answered question', () => {
+        const raw = validModelResult();
+        raw.questions = [];
+        const prepared = prepareTheoryEvaluation(buildAttempt());
+        const result = validateAndNormalizeModelResult(raw, prepared, prepared);
+        expect(result.totalAwardedMarks).toBe(0);
+        expect(result.questions[0].awardedMarks).toBe(0);
+        expect(result.questions[0].feedback).toMatch(/zero marks conservatively/i);
     });
 
     it('does not call Groq when every theory answer is blank and assigns zero', async () => {
@@ -132,7 +150,31 @@ describe('theory rubric evaluator', () => {
         expect(result.questions[0].criteria.every(criterion => criterion.awardedMarks === 0)).toBe(true);
     });
 
-    it('uses strict JSON-schema output and the configured Groq model for answered papers', async () => {
+    it('retries a transient Groq TPM rate limit and then completes evaluation', async () => {
+        const successBody = {
+            choices: [{ message: { content: JSON.stringify(validModelResult()) } }],
+        };
+        const rateLimitResponse = new Response(JSON.stringify({
+            error: { message: 'Rate limit reached. Please try again in 1ms.' },
+        }), {
+            status: 429,
+            headers: { 'Content-Type': 'application/json' },
+        });
+        const successResponse = new Response(JSON.stringify(successBody), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+        });
+        const fetchMock = vi.fn()
+            .mockResolvedValueOnce(rateLimitResponse)
+            .mockResolvedValueOnce(successResponse);
+        vi.stubGlobal('fetch', fetchMock);
+
+        const result = await evaluateTheoryAttempt(buildAttempt(), 'test-groq-key');
+        expect(result.totalAwardedMarks).toBe(1.5);
+        expect(fetchMock).toHaveBeenCalledTimes(2);
+    });
+
+    it('uses JSON-object output and the configured Groq model for answered papers', async () => {
         const responseBody = {
             choices: [{ message: { content: JSON.stringify(validModelResult()) } }],
         };
@@ -150,7 +192,8 @@ describe('theory rubric evaluator', () => {
         expect(request.headers.Authorization).toBe('Bearer test-groq-key');
         const payload = JSON.parse(request.body);
         expect(payload.model).toBe('openai/gpt-oss-20b');
-        expect(payload.response_format.type).toBe('json_schema');
-        expect(payload.response_format.json_schema.strict).toBe(true);
+        expect(payload.response_format).toEqual({ type: 'json_object' });
+        expect(payload.max_completion_tokens).toBe(4096);
+        expect(payload.messages[0].content).toContain('Never omit a required field');
     });
 });
