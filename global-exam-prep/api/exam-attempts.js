@@ -1,6 +1,9 @@
 import { createClient } from '@supabase/supabase-js';
 import { randomUUID } from 'node:crypto';
 import { evaluateTheoryAttempt } from './_lib/theory-rubric-evaluator.js';
+import { buildPublishedExamQuestions, toStudentBankQuestions } from './_lib/published-question-bank.js';
+import { getSubjectExamInfo } from '../src/utils/subjectExamPolicy.js';
+import { EXAM_BLUEPRINTS } from '../src/data/examBlueprints.js';
 
 export const config = { maxDuration: 60 };
 
@@ -206,6 +209,98 @@ export default async function handler(req, res) {
         const admin = adminClient();
         const user = await authenticate(req, admin);
         if (!user) return fail(res, 401, 'Sign in to continue.');
+
+        if (action === 'create_from_question_bank') {
+            const catalogSubjectId = Number(body.catalogSubjectId);
+            const examType = String(body.examType || '');
+            const difficulty = String(body.difficulty || 'medium');
+            if (!Number.isSafeInteger(catalogSubjectId) || catalogSubjectId <= 0) return fail(res, 400, 'Invalid catalog subject identifier.');
+            if (!['easy', 'medium', 'hard'].includes(difficulty)) return fail(res, 400, 'Invalid difficulty.');
+            const { data: subject, error: subjectError } = await admin.from('Subjects')
+                .select('SubjectId,SubjectName,CourseId,Semester,isDepartmentalSubject')
+                .eq('SubjectId', catalogSubjectId).maybeSingle();
+            if (subjectError) throw new Error('The selected subject could not be verified.');
+            if (!subject) return fail(res, 404, 'The selected catalog subject no longer exists.');
+            const examInfo = getSubjectExamInfo(examType, subject.isDepartmentalSubject);
+            if (!examInfo) return fail(res, 400, 'This exam type is not available for the selected subject.');
+
+            const bankQuery = await admin.rpc('pm_student_question_bank_candidates', {
+                p_subject_id: catalogSubjectId,
+                p_exam_type: examType,
+                p_question_type: examInfo.type === 'objective' ? 'mcq' : 'theory',
+                p_difficulty: difficulty,
+            });
+            if (bankQuery.error) throw new Error('Published question banks could not be checked.');
+            const banks = Array.isArray(bankQuery.data?.banks) ? bankQuery.data.banks : [];
+            let selected = null;
+            let selectedBank = null;
+
+            for (const bank of banks) {
+                const bankQuestions = Array.isArray(bank.questions) ? bank.questions : [];
+                if (examInfo.type === 'objective') {
+                    const completeSets = (Array.isArray(bank.sets) ? bank.sets : [])
+                        .filter(set => set.is_complete === true && Number(set.question_count) === 30);
+                    for (const set of completeSets) {
+                        const rows = bankQuestions.filter(question =>
+                            String(question.set_id) === String(set.id)
+                            && question.question_type === 'mcq'
+                            && question.difficulty === difficulty
+                            && question.validation_status === 'valid'
+                        );
+                        const built = buildPublishedExamQuestions({ rows, examInfo, difficulty });
+                        if (built) { selected = built; selectedBank = bank; break; }
+                    }
+                } else {
+                    const rows = bankQuestions.filter(question =>
+                        question.question_type === 'theory'
+                        && question.difficulty === difficulty
+                        && question.validation_status === 'valid'
+                    );
+                    const built = buildPublishedExamQuestions({
+                        rows, examInfo, difficulty,
+                        markSequence: EXAM_BLUEPRINTS[String(examType).replace('-', '')]?.markSequence,
+                    });
+                    if (built) { selected = built; selectedBank = bank; }
+                }
+                if (selected) break;
+            }
+
+            if (!selected || !selectedBank) return res.status(200).json({ found: false });
+            const internalQuestions = selected.questions.map(question => studentSafeQuestion(question));
+            const payload = {
+                user_id: user.id,
+                subject_code: String(catalogSubjectId),
+                subject_name: String(subject.SubjectName || 'Unknown subject').slice(0, 200),
+                exam_type: examType,
+                difficulty,
+                questions: internalQuestions,
+                total_marks: selected.totalMarks,
+                time_minutes: selected.timeMinutes,
+                answers: Object.fromEntries(internalQuestions.map(question => [String(question.id), -1])),
+                score: null,
+                status: 'in_progress',
+                attempt_type: 'exam',
+                started_at: new Date().toISOString(),
+                updated_at: new Date().toISOString(),
+                answer_key: selected.answerKey,
+            };
+            const attempt = await privateExamData(admin, 'create_attempt', payload);
+            if (!attempt?.id) throw new Error('The curated question-bank attempt was not saved.');
+            try {
+                await tagAttemptSubject(admin, attempt.id, user.id, catalogSubjectId);
+            } catch (error) {
+                await privateExamData(admin, 'update_attempt', {
+                    id: attempt.id, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
+                    patch: { status: 'cancelled', end_reason: 'catalog_subject_link_failed', updated_at: new Date().toISOString() },
+                }).catch(() => {});
+                throw error;
+            }
+            return res.status(201).json({
+                found: true, id: attempt.id,
+                questions: toStudentBankQuestions(selected.questions),
+                sourceFileName: selectedBank.source_file_name,
+            });
+        }
 
         if (action === 'create') {
             if (!Array.isArray(body.questions) || body.questions.length < 1 || body.questions.length > 50) {
