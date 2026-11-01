@@ -235,7 +235,7 @@ describe('geminiQuestions — prompt-led generation with minimal format checks',
         const parsed = JSON.parse(invalidBody.choices[0].message.content);
         parsed.questions[0].rubric[0].marks = 2;
         invalidBody.choices[0].message.content = JSON.stringify(parsed);
-        fetchMock.mockResolvedValue(mockJsonResponse(200, invalidBody));
+        fetchMock.mockImplementation(() => Promise.resolve(mockJsonResponse(200, invalidBody)));
 
         await expect(generateQuestionsFromText({
             text: 'Syllabus content about databases. ' + 'x'.repeat(200),
