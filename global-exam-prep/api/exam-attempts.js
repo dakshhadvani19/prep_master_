@@ -52,6 +52,26 @@ async function finishPrivateEvaluation(admin, { attemptId, userId, answerRevisio
     if (error) throw new Error(error.message);
     return data;
 }
+function evaluationFailureMessage(error) {
+    const message = String(error?.message || '').toLowerCase();
+    if (/rate limit|tokens per minute|too many requests/.test(message)) {
+        return 'The AI marking service is temporarily busy. Your submission is saved; please retry the evaluation in a moment.';
+    }
+    if (/marking rubric|saved theory rubrics|rubric.*invalid|rubric.*missing/.test(message)) {
+        return 'The saved marking rubric is incomplete or invalid. This attempt needs its rubric corrected before it can be graded.';
+    }
+    if (/timeout|timed out|aborted|fetch failed|network/.test(message)) {
+        return 'The AI marking service did not respond in time. Your submission is saved; please retry the evaluation.';
+    }
+    if (/json|payload|incomplete|schema|empty evaluation/.test(message)) {
+        return 'The AI marker returned an incomplete assessment. Your submission is saved; please retry the evaluation.';
+    }
+    if (/api key|credentials are not configured/.test(message)) {
+        return 'The AI marking service is not configured correctly. Please contact the administrator.';
+    }
+    return 'The automated marker could not complete this attempt. Your submission is saved; please retry the evaluation.';
+}
+
 function hasTheoryQuestions(attempt) {
     return Array.isArray(attempt?.questions) && attempt.questions.some(question => question?.type === 'subjective');
 }
@@ -393,15 +413,16 @@ export default async function handler(req, res) {
                 if (!completed) return fail(res, 409, 'The saved answers changed during evaluation. Refresh and retry.');
                 return res.status(200).json({ status: 'completed', result: completed.result });
             } catch (evaluationError) {
+                const userMessage = evaluationFailureMessage(evaluationError);
                 console.error('[theory-evaluation] Failed:', evaluationError?.message || evaluationError);
                 await finishPrivateEvaluation(admin, {
                     attemptId, userId: user.id, answerRevision: Number(attempt.answer_revision) || 0,
                     claimToken, status: 'failed',
-                    errorMessage: 'The automated marker could not complete this attempt. Please retry.',
+                    errorMessage: userMessage,
                 }).catch(finishError => console.error('[theory-evaluation] Could not persist failure:', finishError.message));
                 return res.status(200).json({
                     status: 'failed',
-                    error: 'The automated marker could not complete this attempt. Please retry.',
+                    error: userMessage,
                 });
             }
         }
