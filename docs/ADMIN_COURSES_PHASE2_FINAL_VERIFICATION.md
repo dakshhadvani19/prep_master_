@@ -38,4 +38,4 @@ Phase 2 is implemented in the admin course workspace. This pass verified the exi
 
 ## Remaining work outside Phase 2
 
-Student-side selection of published question-bank sets in ExamPortal is a separate Phase 3 integration task. It must preserve subject/exam/difficulty metadata and must not expose correct answers before submission.
+Student-side selection of published question-bank sets is integrated into ExamPortal through a service-role-only RPC. It filters by subject/exam/type/difficulty, uses complete MCQ sets or exact theory mark sequences, and keeps answer keys server-side. Real-bank smoke testing awaits the first published bank.
