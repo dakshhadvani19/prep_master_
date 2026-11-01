@@ -82,7 +82,7 @@ function validateAndNormalizeModelResult(raw, questions, answeredQuestions) {
             const rawAwarded = Number(graded?.awardedMarks);
             // Never let an incomplete, non-numeric, or over-allocation response
             // invalidate the whole script or exceed the teacher's saved rubric.
-            const awarded = Number.isFinite(rawAwarded)
+            const requestedAwarded = Number.isFinite(rawAwarded)
                 ? roundHalf(Math.min(maxMarks, Math.max(0, rawAwarded)))
                 : 0;
             const gradedPoints = Array.isArray(graded?.keyPoints) ? graded.keyPoints : [];
@@ -96,21 +96,30 @@ function validateAndNormalizeModelResult(raw, questions, answeredQuestions) {
                 }
             });
 
+            let assessedPointCount = 0;
             const keyPoints = rubricItem.keyPoints.map((point, keyPointIndex) => {
                 const evaluation = pointsByIndex.get(keyPointIndex) || null;
-                const status = ['met', 'partial', 'missing'].includes(evaluation?.status)
-                    ? evaluation.status
-                    : 'missing';
+                const hasValidStatus = ['met', 'partial', 'missing'].includes(evaluation?.status);
+                if (hasValidStatus) assessedPointCount += 1;
+                const status = hasValidStatus ? evaluation.status : 'missing';
                 return {
                     keyPointIndex,
                     text: point,
-                    status: awarded === 0 && status === 'met' ? 'partial' : status,
+                    status: status,
                     evidenceQuote: normalizeEvidence(evaluation?.evidenceQuote, question.studentAnswer),
                     feedback: safeText(evaluation?.feedback, 300)
                         || (evaluation
                             ? 'Review this concept against the marking criterion.'
                             : 'The evaluator did not return an assessment for this point; it received no separate credit.'),
                 };
+            });
+            // If the model omits any point assessment, cap the criterion score
+            // to the fraction of the rubric it actually assessed. This prevents
+            // full marks being shown beside key points the model never evaluated.
+            const assessedFraction = assessedPointCount / rubricItem.keyPoints.length;
+            const awarded = roundHalf(Math.min(requestedAwarded, maxMarks * assessedFraction));
+            keyPoints.forEach(point => {
+                if (awarded === 0 && point.status === 'met') point.status = 'partial';
             });
 
             const criterionFeedback = safeText(graded?.feedback, 500)
