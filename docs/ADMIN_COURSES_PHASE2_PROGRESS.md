@@ -91,3 +91,10 @@ Verification in a clean Vercel sandbox checkout:
 The full repository suite was attempted but the sandbox session ended before the suite completed; no full-suite pass is claimed. The recording's failing API path is covered directly by the passing finalization regression test.
 
 Post-deploy smoke test still required: after production deployment is READY, use the existing history entry's Check completed upload action first. That retries finalization against the already uploaded private Storage object and avoids transferring the PDF again. Confirm the status becomes needs_confirmation and the extracted preview is visible; then explicitly confirm the syllabus replacement. A full real authenticated finalize against the user's production session cannot be performed from this sandbox.
+
+
+## Production deployment confirmation — 2026-11-02
+
+Fix commit 5a34581fc8d1b2df371c12df149cb59005b28cea is deployed to the production alias prepmaster-tau.vercel.app. Vercel reports the deployment state READY. The post-deploy grouped runtime-error scan for /api/admin-course-uploads returned no matching errors during the first 10-minute window.
+
+The authenticated storage-to-finalize smoke test remains a required admin-session check. Use the saved upload history's Check completed upload action to retry server-side finalization for the existing private Storage object; do not upload the same PDF again unless the object is missing.

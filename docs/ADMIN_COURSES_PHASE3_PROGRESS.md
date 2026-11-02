@@ -61,3 +61,10 @@ Phase 3 ingestion, admin publication and student-side published-bank selection a
 The PDF question-bank parser shared the same PDF.js Node initialization risk found in Phase 2 syllabus validation. Both flows now use api/_lib/pdfjs-runtime.js to initialize DOMMatrix, ImageData and Path2D from the direct @napi-rs/canvas 0.1.96 dependency before importing PDF.js.
 
 Regression coverage now includes PDF question-bank parsing with DOMMatrix absent at startup and the syllabus finalization API path with a stored PDF. Combined Phase 2/3 focused suites passed 26/26, targeted ESLint passed, production build passed, and the lockfile passed a clean npm ci. Existing Vite chunk warnings remain. The full repository test command did not finish within the sandbox session and is not marked passed.
+
+
+## Production deployment confirmation — 2026-11-02
+
+Fix commit 5a34581fc8d1b2df371c12df149cb59005b28cea is deployed to the production alias prepmaster-tau.vercel.app. Vercel reports the deployment state READY. The post-deploy grouped runtime-error scan for /api/admin-course-uploads returned no matching errors during the first 10-minute window.
+
+The authenticated storage-to-finalize smoke test remains a required admin-session check. Use the saved syllabus history's Check completed upload action when retrying a PDF finalization; question-bank PDF parsing uses the same Node runtime bootstrap.
