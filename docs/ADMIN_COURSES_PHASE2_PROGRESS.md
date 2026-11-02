@@ -168,3 +168,11 @@ Live example verified: Diploma Computer Engineering, CourseId 44, Computer Funda
 - Live Supabase verification: the new create RPC accepts the 15-argument signature, only `service_role` can execute it, and the old classification column is absent. A create-and-rollback smoke test passed without leaving a subject or upload row behind.
 - GitHub Actions focused suite passed: 9 files / 64 tests. Changed-file ESLint, Test Room regression tests, and Vite production build passed.
 - Repository-wide ESLint still fails on unrelated existing errors; the full Vitest suite has four unrelated failing test files (Admin Dashboard, Dashboard Performance, answer normalization, and Gemini correction prompts).
+
+## PDF extraction reliability fix — 2026-11-02
+
+- Fixed the Admin Subject PDF extraction path so a PDF.js/serverless worker failure is no longer mislabeled as a damaged or encrypted file. The original parser error is preserved in server logs.
+- The Vercel `api/admin-subjects.js` function now explicitly includes the PDF.js worker, PDF.js support assets, and `@napi-rs` canvas runtime files.
+- PDF.js extraction now enables XFA handling, continues through recoverable parser warnings, accepts a PDF header within the first 1,024 bytes without rewriting the original bytes, and includes available AcroForm values alongside page text. Failure to read optional form values does not discard successfully extracted page text.
+- Focused upload/catalog regression checks (9 files) and the Vite production build passed for the preceding code commit. The latest tiny guard around optional AcroForm extraction is queued for the same CI checks.
+- **Deployment blocker:** Vercel rejected the production deployment because the team hit its free deployment/API quota (`api-deployments-free-per-day`, retry reported in 24 hours). The fix is committed to `main` but is not live on the production domain yet.
