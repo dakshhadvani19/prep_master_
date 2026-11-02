@@ -151,3 +151,12 @@ The former selected-subject file-history panel is no longer part of the Admin Co
 The canonical SubjectId scheme requires the official subject code; it is therefore a required field in Add subject even though the prior read-only subject browser only displayed the numeric ID. Scanned/image-only PDFs are not OCR-processed and must be supplied as a text-readable PDF or DOCX.
 
 The live migration `20261102053000_admin_subject_management` has been applied and the private metadata table plus all three RPCs have been verified. Automated UI/API regression coverage is added to the existing Test Room regression workflow; check the linked run before treating test/build verification as complete.
+
+
+## Immutable subject identity and soft removal — 2026-11-02
+
+A catalog subject is no longer physically deleted. Migration `20261102055000_admin_subject_identity_restore` created private.subject_catalog_status and backfilled the 1,855 existing public Subjects rows as active. Admin Remove now archives the row by setting its status inactive; the public SubjectId and references in attempt/leaderboard/question-bank records remain untouched. Re-adding the same course, official code, occurrence and semester resolves the existing encoded SubjectId and restores that row; it does not allocate a new occurrence just because the row is archived.
+
+The active student course list now uses `pm_catalog_subjects_for_course`, which filters archived rows without exposing the private state table. The archive/restore RPCs remain service-role-only. Verification on the live project confirmed 1,855 tracked active rows, no anon/authenticated access to the status table, and no direct browser execute permission for the archive RPC.
+
+Live example verified: Diploma Computer Engineering, CourseId 44, Computer Fundamental Skill, official code `09CE2101`, Semester 1 → SubjectId `44000935210101`. A live transaction test archived this row, restored it through the add RPC, asserted the same SubjectId and active catalog visibility, and rolled the transaction back. No real catalog record was changed by that smoke test.
