@@ -96,6 +96,31 @@ export default function ExamPortal() {
         [subjectId],
     );
     const [liveCatalogSubject, setLiveCatalogSubject] = useState(null);
+    const [catalogStatus, setCatalogStatus] = useState({ subjectId: null, status: 'checking' });
+    useEffect(() => {
+        let cancelled = false;
+        const numericSubjectId = /^\d+$/.test(String(subjectId || ''));
+        if (!numericSubjectId || !supabase) {
+            setCatalogStatus({ subjectId: String(subjectId || ''), status: 'active' });
+            return () => { cancelled = true; };
+        }
+
+        const requestedSubjectId = String(subjectId);
+        setCatalogStatus({ subjectId: requestedSubjectId, status: 'checking' });
+        supabase.rpc('pm_catalog_subject_is_active', {
+            p_subject_id: Number(requestedSubjectId),
+        }).then(({ data, error }) => {
+            if (cancelled) return;
+            setCatalogStatus({
+                subjectId: requestedSubjectId,
+                status: error ? 'error' : data === true ? 'active' : 'inactive',
+            });
+        }).catch(() => {
+            if (!cancelled) setCatalogStatus({ subjectId: requestedSubjectId, status: 'error' });
+        });
+        return () => { cancelled = true; };
+    }, [subjectId]);
+
     const [liveCatalogLookupDone, setLiveCatalogLookupDone] = useState(false);
     useEffect(() => {
         let cancelled = false;
@@ -162,9 +187,13 @@ export default function ExamPortal() {
     const subjectContext = liveCatalogSubject?.routeSubjectId === String(subjectId)
         ? liveCatalogSubject.value
         : initialSubjectContext;
-    const subjectContextLoading = initialSubjectContext.kind === 'unknown'
-        && /^\d+$/.test(String(subjectId || ''))
-        && !liveCatalogLookupDone;
+    const isNumericCatalogSubject = /^\d+$/.test(String(subjectId || ''));
+    const currentCatalogStatus = catalogStatus.subjectId === String(subjectId)
+        ? catalogStatus.status
+        : isNumericCatalogSubject ? 'checking' : 'active';
+    const subjectContextLoading = (initialSubjectContext.kind === 'unknown'
+        && isNumericCatalogSubject
+        && !liveCatalogLookupDone) || currentCatalogStatus === 'checking';
     const subjectDetail = subjectContext.subject;
     const courseDetail = subjectContext.course;
     const domainDetail = subjectContext.domain;
@@ -695,7 +724,21 @@ export default function ExamPortal() {
     };
 
     if (subjectContextLoading) {
-        return <div className="container" role="status" style={{ textAlign: 'center', marginTop: '4rem' }}>Loading subject details…</div>;
+        return <div className="container" role="status" style={{ textAlign: 'center', marginTop: '4rem' }}>Checking subject availability…</div>;
+    }
+
+    if (currentCatalogStatus === 'inactive') {
+        return <div className="container" role="alert" style={{ textAlign: 'center', marginTop: '4rem' }}>
+            <h2>This subject is currently removed from the active catalog.</h2>
+            <p>Its previous exam and result records are retained. Ask an administrator to restore this subject before starting a new exam.</p>
+        </div>;
+    }
+
+    if (currentCatalogStatus === 'error') {
+        return <div className="container" role="alert" style={{ textAlign: 'center', marginTop: '4rem' }}>
+            <h2>Subject availability could not be verified.</h2>
+            <p>Please refresh and try again.</p>
+        </div>;
     }
 
     if (!examInfo || !subjectDetail) {
