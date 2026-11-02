@@ -148,15 +148,10 @@ async function addSubject(client, user, body) {
     const semester = positiveInteger(body.semester, 'Semester', true);
     const subjectName = String(body.subjectName || '').trim();
     const subjectCode = String(body.subjectCode || '').trim().toUpperCase();
-    const subjectType = String(body.subjectType || '').trim().toLowerCase();
     const isDepartmental = body.isDepartmentalSubject === true;
     if (subjectName.length < 2 || subjectName.length > 180) {
         throw new UploadValidationError('Subject name must contain 2–180 characters.');
     }
-    if (!['theory', 'practical', 'both'].includes(subjectType)) {
-        throw new UploadValidationError('Choose Theory, Practical, or Theory + Practical as the subject type.');
-    }
-
     const { data: course, error: courseError } = await client
         .from('Courses').select('CourseId,Sems').eq('CourseId', courseId).maybeSingle();
     if (courseError || !course || !(course.Sems || []).map(Number).includes(semester)) {
@@ -206,7 +201,6 @@ async function addSubject(client, user, body) {
             p_course_id: courseId,
             p_semester: semester,
             p_is_departmental: isDepartmental,
-            p_subject_type: subjectType,
             p_syllabus_text: extracted.text,
             p_file_name: file.fileName,
             p_file_extension: file.extension,
