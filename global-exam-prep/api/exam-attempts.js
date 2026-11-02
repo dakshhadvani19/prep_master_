@@ -117,6 +117,13 @@ async function upsertTheoryEvaluation(admin, attempt, userId) {
     if (!hasTheoryQuestions(attempt) || !hasCompleteTheoryRubric(attempt)) return null;
     return privateEvaluationData(admin, 'upsert_pending', { attempt_id: attempt.id, user_id: userId });
 }
+async function isActiveCatalogSubject(admin, subjectId) {
+    const { data, error } = await admin.rpc('pm_catalog_subject_is_active', {
+        p_subject_id: subjectId,
+    });
+    if (error) throw new Error('The selected subject availability could not be verified.');
+    return data === true;
+}
 async function tagAttemptSubject(admin, attemptId, userId, subjectId) {
     const { data, error } = await admin.rpc('pm_private_exam_tag_subject', {
         p_attempt_id: attemptId,
@@ -221,6 +228,7 @@ export default async function handler(req, res) {
                 .eq('SubjectId', catalogSubjectId).maybeSingle();
             if (subjectError) throw new Error('The selected subject could not be verified.');
             if (!subject) return fail(res, 404, 'The selected catalog subject no longer exists.');
+            if (!(await isActiveCatalogSubject(admin, catalogSubjectId))) return fail(res, 409, 'This subject has been removed from the active catalog. Ask an administrator to restore it.');
             const examInfo = getSubjectExamInfo(examType, subject.isDepartmentalSubject);
             if (!examInfo) return fail(res, 400, 'This exam type is not available for the selected subject.');
 
@@ -337,6 +345,7 @@ export default async function handler(req, res) {
                     .maybeSingle();
                 if (catalogError) throw new Error(catalogError.message);
                 if (!catalogSubject) return fail(res, 400, 'The selected catalog subject no longer exists.');
+                if (!(await isActiveCatalogSubject(admin, catalogSubjectId))) return fail(res, 409, 'This subject has been removed from the active catalog. Ask an administrator to restore it.');
             }
 
             const payload = {
