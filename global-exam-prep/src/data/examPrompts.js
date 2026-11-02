@@ -1,4 +1,4 @@
-import { EXAM_BLUEPRINTS } from './examBlueprints';
+import { EXAM_BLUEPRINTS } from './examBlueprints.js';
 
 /** Exam-type metadata used by the student subject picker and exam screens. */
 export const examPrompts = {
