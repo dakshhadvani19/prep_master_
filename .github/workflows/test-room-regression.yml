@@ -56,7 +56,7 @@ jobs:
           cache: npm
           cache-dependency-path: global-exam-prep/package-lock.json
       - run: npm ci
-      - name: Run upload queue and file validation suites
+      - name: Run upload queue, subject management and file validation suites
         run: >-
           npm test --
           tests/admin-course-upload-validation.test.js
@@ -66,23 +66,22 @@ jobs:
           tests/admin-course-uploads.test.jsx
           tests/admin-subjects-api.test.js
           tests/admin-courses.test.jsx
-          api/admin-subjects.js
-          src/components/AdminSubjectEditor.jsx
-          src/pages/AdminCourses.jsx
-          src/pages/ExamPortal.jsx
-          tests/admin-subjects-api.test.js
-          tests/admin-courses.test.jsx
-      - name: Lint changed upload processing files
+      - name: Lint changed upload processing and subject management files
         run: >-
           npx eslint
           api/admin-course-uploads.js
           api/admin-course-upload-worker.js
+          api/admin-subjects.js
           api/_lib/admin-course-upload-validation.js
           api/_lib/question-bank-parser.js
           src/components/AdminCourseUploads.jsx
+          src/components/AdminSubjectEditor.jsx
+          src/pages/AdminCourses.jsx
+          src/pages/ExamPortal.jsx
           tests/admin-course-uploads-api.test.js
           tests/admin-course-upload-worker.test.js
-
+          tests/admin-subjects-api.test.js
+          tests/admin-courses.test.jsx
 
   full-test-suite:
     name: Full Vitest suite
