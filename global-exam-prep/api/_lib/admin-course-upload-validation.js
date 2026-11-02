@@ -112,15 +112,20 @@ async function extractPdf(buffer) {
         // so the saved syllabus text is not empty for form-based PDFs.
         let formText = [];
         if (typeof pdf.getFieldObjects === 'function') {
-            const fields = await pdf.getFieldObjects();
-            formText = Object.values(fields || {}).flatMap(items =>
-                (Array.isArray(items) ? items : [items])
-                    .map(field => field?.value)
-                    .flatMap(value => Array.isArray(value) ? value : [value])
-                    .filter(value => typeof value === 'string' || typeof value === 'number')
-                    .map(value => String(value).trim())
-                    .filter(Boolean),
-            );
+            try {
+                const fields = await pdf.getFieldObjects();
+                formText = Object.values(fields || {}).flatMap(items =>
+                    (Array.isArray(items) ? items : [items])
+                        .map(field => field?.value)
+                        .flatMap(value => Array.isArray(value) ? value : [value])
+                        .filter(value => typeof value === 'string' || typeof value === 'number')
+                        .map(value => String(value).trim())
+                        .filter(Boolean),
+                );
+            } catch (fieldError) {
+                // An unreadable optional AcroForm must not discard page text.
+                console.warn('[pdf-extraction] Could not read optional PDF form values:', fieldError?.message || String(fieldError));
+            }
         }
 
         const uniqueFormText = [...new Set(formText)];
