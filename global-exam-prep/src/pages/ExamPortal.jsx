@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { domains } from '../data/mockData';
 import { examPrompts } from '../data/examPrompts';
@@ -746,7 +747,7 @@ export default function ExamPortal() {
     }
 
     return (
-        <div className="container animate-fade-in" style={{ maxWidth: '1000px' }}>
+        <div className="container animate-fade-in pm-exam-portal" style={{ maxWidth: '1000px' }}>
 
             {/* ── Tab-Switch Warning Modal ── */}
             {showWarning && (
@@ -879,7 +880,7 @@ export default function ExamPortal() {
 
             {/* ── STEP 2: File Upload UI ── */}
             {examState === 'intro' && examMode === 'upload' && (
-                <div className="glass-panel" style={{ padding: '2.5rem', marginTop: '2rem', maxWidth: '680px', margin: '2rem auto 0' }}>
+                <div className="glass-panel pm-exam-upload-card" style={{ padding: '2.5rem', marginTop: '2rem', maxWidth: '680px', margin: '2rem auto 0' }}>
                     <button onClick={() => navigate(-1)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}>
                         <ChevronLeft size={16} /> Back to Subject
                     </button>
@@ -894,13 +895,13 @@ export default function ExamPortal() {
 
                     {/* Drag & Drop Zone */}
                     <div
+                        className="pm-exam-dropzone"
                         onClick={() => fileInputRef.current?.click()}
                         onDragOver={e => { e.preventDefault(); e.currentTarget.style.borderColor = '#8b5cf6'; e.currentTarget.style.background = 'rgba(139,92,246,0.08)'; }}
                         onDragLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.background = 'var(--bg-tertiary)'; }}
                         onDrop={e => { e.preventDefault(); e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.background = 'var(--bg-tertiary)'; handleFiles(e.dataTransfer.files); }}
                         style={{
-                            border: '2px dashed rgba(255,255,255,0.1)', borderRadius: 'var(--radius-lg)',
-                            background: 'var(--bg-tertiary)', padding: '2.5rem',
+                            padding: '2.5rem',
                             textAlign: 'center', cursor: 'pointer', transition: 'all 0.2s',
                             marginBottom: '1.25rem',
                         }}
@@ -922,7 +923,7 @@ export default function ExamPortal() {
                     {uploadedFiles.length > 0 && (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.25rem' }}>
                             {uploadedFiles.map((file, idx) => (
-                                <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.2)', borderRadius: 'var(--radius-md)' }}>
+                                <div key={idx} className="pm-exam-uploaded-file" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.2)', borderRadius: 'var(--radius-md)' }}>
                                     <FileText size={18} color="#8b5cf6" style={{ flexShrink: 0 }} />
                                     <span style={{ flex: 1, fontSize: '0.9rem', color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{file.name}</span>
                                     <span style={{ fontSize: '0.78rem', color: 'var(--text-tertiary)', flexShrink: 0 }}>{(file.size / 1024).toFixed(0)} KB</span>
@@ -956,6 +957,7 @@ export default function ExamPortal() {
 
 
                     <button
+                        className="pm-exam-generate-action"
                         onClick={processFilesAndStartExam}
                         disabled={uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0}
                         style={{
@@ -980,7 +982,7 @@ export default function ExamPortal() {
 
             {/* ── STEP 3: Exam Intro (Auto mode) ── */}
             {examState === 'intro' && examMode === 'auto' && (
-                <div className="glass-panel" style={{ padding: '3rem', textAlign: 'center', marginTop: '2rem' }}>
+                <div className="glass-panel pm-exam-intro-card" style={{ padding: '3rem', textAlign: 'center', marginTop: '2rem' }}>
                     <button
                         onClick={() => navigate(-1)}
                         style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}
@@ -1008,7 +1010,7 @@ export default function ExamPortal() {
                         </div>
                     </div>
 
-                    <div style={{ background: 'var(--bg-tertiary)', padding: '1.5rem', borderRadius: 'var(--radius-md)', textAlign: 'left', marginBottom: '3rem' }}>
+                    <div className="pm-exam-instructions" style={{ background: 'var(--bg-tertiary)', padding: '1.5rem', borderRadius: 'var(--radius-md)', textAlign: 'left', marginBottom: '3rem' }}>
                         <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                             <AlertCircle size={20} color="var(--warning)" /> Instructions
                         </h3>
@@ -1035,6 +1037,7 @@ export default function ExamPortal() {
 
 
                     <button
+                        className="pm-exam-generate-action"
                         onClick={startExam}
                         disabled={autoProcessing || retryCountdown > 0}
                         style={{
@@ -1174,10 +1177,10 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
     const q = questions[currentQ];
 
     return (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', marginTop: '1rem' }}>
+        <div className="pm-active-exam" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', marginTop: '1rem' }}>
 
             {/* Top Bar */}
-            <div className="glass-panel" style={{
+            <div className="glass-panel pm-exam-topbar" style={{
                 padding: '0.875rem 1.25rem',
                 display: 'flex',
                 justifyContent: 'space-between',
@@ -1201,6 +1204,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                     {formatTime(timeLeft)}
                 </div>
                 <button
+                    className="pm-exam-submit"
                     onClick={() => onSubmit(answers, questions)}
                     disabled={isSubmitting}
                     style={{
@@ -1246,34 +1250,45 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
             <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
 
                 {/* Navigation Sidebar */}
-                <div className="glass-panel" style={{ width: '100%', maxWidth: '250px', minWidth: '200px', padding: '1.25rem', maxHeight: 'calc(100vh - 150px)', overflowY: 'auto', flex: '0 0 auto' }}>
+                <div className="glass-panel pm-exam-question-nav" style={{ width: '100%', maxWidth: '250px', minWidth: '200px', padding: '1.25rem', maxHeight: 'calc(100vh - 150px)', overflowY: 'auto', flex: '0 0 auto' }}>
                     <h3 style={{ fontSize: '1rem', marginBottom: '1rem', color: 'var(--text-secondary)' }}>Questions Palette</h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem' }}>
-                        {questions.map((_, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => setCurrentQ(idx)}
-                                style={{
-                                    aspectRatio: '1',
-                                    borderRadius: 'var(--radius-sm)',
-                                    background: currentQ === idx ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
-                                    color: currentQ === idx ? 'white' : 'var(--text-primary)',
-                                    fontWeight: 600,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    border: currentQ === idx ? 'none' : '1px solid var(--border-color)',
-                                    fontSize: '0.85rem'
-                                }}
-                            >
-                                {idx + 1}
-                            </button>
-                        ))}
+                    <div className="pm-exam-question-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem' }}>
+                        {questions.map((question, idx) => {
+                            const isAnswered = answers[question.id] !== undefined && answers[question.id] !== '';
+                            const isCurrent = currentQ === idx;
+                            return (
+                                <button
+                                    key={question.id || idx}
+                                    type="button"
+                                    className="pm-exam-question-pill"
+                                    data-answered={isAnswered}
+                                    aria-current={isCurrent ? 'step' : undefined}
+                                    aria-label={'Question ' + (idx + 1) + (isAnswered ? ', answered' : ', unanswered')}
+                                    onClick={() => setCurrentQ(idx)}
+                                >
+                                    {isCurrent && (
+                                        <motion.span
+                                            layoutId="pm-exam-question-active-pill"
+                                            className="pm-exam-question-active-pill"
+                                            transition={{ type: 'spring', bounce: 0.16, duration: 0.5 }}
+                                        />
+                                    )}
+                                    <span className="pm-exam-question-pill-label">{idx + 1}</span>
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
 
                 {/* Question Area */}
-                <div className="glass-panel" style={{ flex: 1, padding: '2.5rem', minHeight: '500px', display: 'flex', flexDirection: 'column' }}>
+                <motion.div
+                    key={currentQ}
+                    initial={{ opacity: 0, x: 12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                    className="glass-panel pm-exam-question-card"
+                    style={{ flex: 1, padding: '2.5rem', minHeight: '500px', display: 'flex', flexDirection: 'column' }}
+                >
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem' }}>
                         <h2 style={{ fontSize: '1.5rem' }}>Question {currentQ + 1} of {questions.length}</h2>
                         {!isObjective && <span style={{ color: 'var(--text-secondary)', fontWeight: 600 }}>[{q.marks}M]</span>}
@@ -1288,7 +1303,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                         {isObjective ? (
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 {q.options.map((opt, i) => (
-                                    <label key={i} style={{
+                                    <label key={i} className="pm-exam-option" data-selected={answers[q.id] === i} style={{
                                         display: 'flex',
                                         alignItems: 'center',
                                         gap: '1rem',
@@ -1313,6 +1328,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                             </div>
                         ) : (
                             <textarea
+                                className="pm-exam-response"
                                 value={answers[q.id] || ''}
                                 onChange={(e) => setAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
                                 placeholder="Type your comprehensive answer here..."
@@ -1336,6 +1352,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                     {/* Bottom Actions */}
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)' }}>
                         <button
+                            className="pm-exam-question-step"
                             onClick={() => setCurrentQ(prev => Math.max(0, prev - 1))}
                             disabled={currentQ === 0}
                             style={{
@@ -1351,6 +1368,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                             <ArrowLeft size={18} /> Previous
                         </button>
                         <button
+                            className="pm-exam-question-step pm-exam-question-step--next"
                             onClick={() => setCurrentQ(prev => Math.min(questions.length - 1, prev + 1))}
                             disabled={currentQ === questions.length - 1}
                             style={{
@@ -1366,7 +1384,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                             Next <ArrowRight size={18} />
                         </button>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </div>

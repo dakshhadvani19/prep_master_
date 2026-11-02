@@ -251,7 +251,7 @@ export default function SubjectDetails() {
                                     {isOpen && (
                                         <div
                                             id={'pm-subject-config-' + subject.id}
-                                            className="pm-subject-config"
+                                            className="pm-subject-config pm-exam-config-panel"
                                             style={{
                                                 border: '1px solid var(--accent-primary)',
                                                 borderTop: 'none',
@@ -261,9 +261,7 @@ export default function SubjectDetails() {
                                                 animation: 'fadeIn 0.25s ease',
                                             }}
                                         >
-                                            <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
-                                                Choose Exam Type
-                                            </p>
+                                            <p className="pm-exam-step-label">Choose Exam Type</p>
                                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                                                 {getExamTypesForSubject(subject.isDepartmentalSubject).map(examType => {
                                                     const info = getSubjectExamInfo(examType, subject.isDepartmentalSubject);
@@ -271,6 +269,9 @@ export default function SubjectDetails() {
                                                     return (
                                                         <button
                                                             key={examType}
+                                                            className="pm-exam-choice"
+                                                            type="button"
+                                                            aria-pressed={isSel}
                                                             onClick={() => { setSelectedExamType(examType); setSelectedMode(null); }}
                                                             style={{
                                                                 padding: '0.6rem 1.2rem',
@@ -299,9 +300,7 @@ export default function SubjectDetails() {
 
                                             {selectedExamType && (
                                                 <div style={{ animation: 'fadeIn 0.2s ease' }}>
-                                                    <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
-                                                        Choose Mode
-                                                    </p>
+                                                    <p className="pm-exam-step-label">Choose Mode</p>
                                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
                                                         {[
                                                             { id: 'auto', label: 'Auto AI Exam', desc: 'AI generates questions from syllabus', icon: Cpu, color: 'var(--accent-primary)' },
@@ -312,6 +311,9 @@ export default function SubjectDetails() {
                                                             return (
                                                                 <button
                                                                     key={mode.id}
+                                                                    className="pm-exam-mode-choice"
+                                                                    type="button"
+                                                                    aria-pressed={isSel}
                                                                     onClick={() => setSelectedMode(mode.id)}
                                                                     style={{
                                                                         flex: '1',
@@ -341,9 +343,7 @@ export default function SubjectDetails() {
 
                                                     {selectedMode && (
                                                         <div style={{ animation: 'fadeIn 0.2s ease' }}>
-                                                            <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
-                                                                Choose Difficulty
-                                                            </p>
+                                                            <p className="pm-exam-step-label">Choose Difficulty</p>
                                                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                                                                 {DIFFICULTY_LEVELS.map(level => {
                                                                     const Icon = level.icon;
@@ -351,6 +351,9 @@ export default function SubjectDetails() {
                                                                     return (
                                                                         <button
                                                                             key={level.id}
+                                                                            className="pm-exam-difficulty-choice"
+                                                                            type="button"
+                                                                            aria-pressed={isSel}
                                                                             onClick={() => setSelectedDifficulty(level.id)}
                                                                             style={{
                                                                                 flex: '1',
@@ -380,6 +383,7 @@ export default function SubjectDetails() {
 
                                                             <div style={{ display: 'grid', gridTemplateColumns: canUseTestRoom ? 'repeat(auto-fit,minmax(210px,1fr))' : '1fr', gap: '0.75rem' }}>
                                                                 <button
+                                                                    className="pm-exam-start-action"
                                                                     onClick={handleStartExam}
                                                                     disabled={!canStart}
                                                                     style={{
@@ -403,6 +407,7 @@ export default function SubjectDetails() {
                                                                 </button>
                                                                 {canUseTestRoom && (
                                                                     <button
+                                                                        className="pm-exam-room-action"
                                                                         onClick={() => setShowTestRoomModal(true)}
                                                                         style={{
                                                                             width: '100%',

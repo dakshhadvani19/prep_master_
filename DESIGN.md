@@ -23,6 +23,14 @@ PrepMaster is a student examination-preparation product. The student-facing jour
 - Semester/subject selection: clear two-step hierarchy with larger tap areas and explicit selected state.
 - Contact: retain existing developer identities and links; soften the surfaces without adding new sections or social claims.
 
+## Exam and Test Room experience
+
+- The exam-generation selection flow and Test Room use the existing navbar's dark glass language: dense charcoal/blue-tinted translucency, strong readable fills, crisp white edges and restrained blue reflections. Avoid washed-out opacity.
+- Exam type, generation mode and difficulty are tactile selection controls. Selected states use a clear blue surface and edge with aria-pressed semantics.
+- In active exams, the timer/header and question navigator are functional glass layers. Question numbers are rounded bubbles; one Framer Motion layout pill moves between them with a spring transition. Current, answered and unanswered states remain distinct.
+- Question and answer content uses a more opaque dark surface beneath the glass controls. The content remains readable while selection and navigation carry the fluid motion.
+- Test Room uses the same material for room overview, join-code tile, participant roster, duration control and waiting panel. Blue is the primary interactive color inside exam and Test Room flows; host, warning and result states retain their semantic meaning.
+
 ## Motion language
 
 Use the existing Framer Motion dependency. Motion is deliberate, brief and tied to an event:
@@ -38,4 +46,4 @@ Use Apple-informed clarity, hierarchy and craft rather than copying Liquid Glass
 
 ## Scope boundaries
 
-This design contract applies to the student homepage, academic domain cards, course explorer, and semester/subject selection. Exam type/mode/difficulty configuration, the Test Room dialog/page, exam-taking UI, dashboards and admin surfaces are outside this change.
+This design contract applies to the student homepage, academic domain cards, course explorer, semester/subject selection, exam generation and difficulty selection, Test Room lobby, and active exam/Test Room question navigation. Dashboards and admin surfaces remain outside this change.

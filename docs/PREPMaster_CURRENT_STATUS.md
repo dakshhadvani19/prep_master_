@@ -328,3 +328,14 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Restored the previous department-card hover lift/press response. Removed the inline blue semester-count text override so the selected-state label follows the white/gold card styling.
 - Contact cards, exam-type/mode/difficulty configuration, Test Room, exam-taking and admin screens remain unchanged. No global color tokens, routes, Supabase calls, or data flow were changed.
 - Verification: source-level selectors, contrast states, route attributes and responsive rules were checked. Local tests/build and browser screenshot inspection are not available in the connected repository session; runtime appearance remains unverified.
+
+
+## Exam generation and Test Room liquid-glass refinement — 2026-11-02
+
+- Matched exam-generation and Test Room surfaces to the navbar material: substantial dark translucent shells, readable fills, backdrop blur/saturation, crisp white edges, inner highlights and restrained blue reflections. Low-opacity washed-out fills are avoided.
+- Updated exam-type, Auto AI / Upload mode and difficulty selectors with blue glass selected states and aria-pressed feedback. Exam intro, upload area, instructions and generation actions follow the same hierarchy.
+- Updated the active normal-exam header, question palette, question card, MCQ options, theory response and navigation controls. Question numbers are rounded glass bubbles; a Framer Motion spring pill moves between the current question and the question card transitions smoothly. Answered and unanswered states remain distinguishable.
+- Updated Test Room join/setup/share/lobby/active-test panels, duration selector, room-code surfaces, participant roster, answer controls and actions. Test Room question navigation uses the same animated blue glass pill. Primary actions inside test flows are blue.
+- Exam blueprints, question counts, answer state, canonical Test Room answer mapping, attempt persistence, API calls, room lifecycle, routes and host/join permissions remain unchanged. No database/schema or admin UI changes.
+- Added reduced-transparency and increased-contrast fallbacks while preserving visible keyboard focus and reduced-motion styles.
+- Verification: source selectors, selected-state semantics, navigation layout IDs, canonical answer mapping and existing route/API handlers were inspected. Local tests/build and browser screenshot inspection are not available through this repository connection; automated deployment checks will be reported separately.

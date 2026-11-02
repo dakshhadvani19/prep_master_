@@ -16,6 +16,7 @@ import {
 } from '../utils/testRoomShuffle';
 
 const MotionDiv = motion.div;
+const MotionButton = motion.button;
 
 const MAX_PARTICIPANTS = 50;
 const TIMER_OPTIONS = [5, 10, 15, 20, 30, 45, 60, 90, 120, 180];
@@ -136,31 +137,34 @@ function roomButtonStyle(variant = 'primary', disabled = false) {
         fontWeight: 700,
         fontSize: '0.93rem',
         transition: 'transform 0.16s ease, opacity 0.16s ease, border-color 0.16s ease',
-        opacity: disabled ? 0.55 : 1,
+        opacity: 1,
         cursor: disabled ? 'not-allowed' : 'pointer',
         width: '100%',
+        minHeight: 48,
+        border: '1px solid rgba(255,255,255,.2)',
+        background: 'rgba(26,36,53,.94)',
+        color: '#f4f8ff',
+        backdropFilter: 'blur(20px) saturate(155%)',
+        WebkitBackdropFilter: 'blur(20px) saturate(155%)',
+        boxShadow: 'inset 0 1px 0 rgba(255,255,255,.18), 0 8px 22px rgba(0,0,0,.3)',
     };
     if (variant === 'secondary') {
         return {
             ...common,
-            border: '1px solid var(--border-color)',
-            background: 'var(--bg-tertiary)',
-            color: 'var(--text-primary)',
-        };
-    }
-    if (variant === 'success') {
-        return {
-            ...common,
-            background: 'linear-gradient(135deg,#059669,#10b981)',
-            color: 'white',
-            boxShadow: '0 7px 22px rgba(16,185,129,0.2)',
+            border: '1px solid rgba(255,255,255,.24)',
+            background: 'rgba(34,46,65,.94)',
+            color: '#f4f8ff',
+            boxShadow: 'inset 0 1px 0 rgba(255,255,255,.2), 0 8px 20px rgba(0,0,0,.24)',
         };
     }
     return {
         ...common,
-        background: 'var(--accent-gradient)',
-        color: 'white',
-        boxShadow: 'var(--shadow-glow)',
+        border: '1px solid rgba(147,197,253,.68)',
+        background: disabled ? 'linear-gradient(135deg,#263956,#304967)' : 'linear-gradient(135deg,#1d4ed8,#3b82f6)',
+        color: disabled ? '#d5e2f4' : 'white',
+        boxShadow: disabled
+            ? 'inset 0 1px 0 rgba(255,255,255,.12)'
+            : 'inset 0 1px 0 rgba(255,255,255,.28), 0 9px 26px rgba(37,99,235,.34)',
     };
 }
 
@@ -1114,7 +1118,7 @@ export default function TestRoomPage() {
 
     if (!userId && !routeCode && view !== 'join') {
         return (
-            <div className="container" style={{ maxWidth: 680, marginTop: '3rem' }}>
+            <div className="container pm-test-room-page" style={{ maxWidth: 680, marginTop: '3rem' }}>
                 <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
                     <LockKeyhole size={32} style={{ margin: '0 auto 1rem', color: 'var(--accent-primary)' }} />
                     <h2 style={{ marginBottom: '0.75rem' }}>Sign in to use Test Rooms</h2>
@@ -1129,7 +1133,7 @@ export default function TestRoomPage() {
         const normalized = normalizedCode(joinCodeInput);
         const hasCode = normalized.length > 0;
         return (
-            <div className="container animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
                 <button onClick={() => navigate(-1)} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
                     <ArrowLeft size={17} /> Back
                 </button>
@@ -1144,6 +1148,7 @@ export default function TestRoomPage() {
                     <label htmlFor="test-room-code" style={{ display: 'block', fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.55rem' }}>Room code</label>
                     <input
                         id="test-room-code"
+                        className="pm-room-code-input"
                         autoComplete="off"
                         spellCheck={false}
                         value={joinCodeInput}
@@ -1168,7 +1173,7 @@ export default function TestRoomPage() {
 
     if (!isHostFlow && !routeCode) {
         return (
-            <div className="container" style={{ maxWidth: 680, marginTop: '3rem' }}>
+            <div className="container pm-test-room-page" style={{ maxWidth: 680, marginTop: '3rem' }}>
                 <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
                     <AlertCircle size={32} style={{ margin: '0 auto 1rem', color: 'var(--warning)' }} />
                     <h2 style={{ marginBottom: '0.75rem' }}>Room setup expired</h2>
@@ -1181,7 +1186,7 @@ export default function TestRoomPage() {
 
     if (!userId && routeCode && view === 'auth-required') {
         return (
-            <div className="container animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
                 <div className="glass-panel" style={{ padding: 'clamp(1.5rem,4vw,2.5rem)', textAlign: 'center' }}>
                     <div style={{ width: 62, height: 62, borderRadius: 19, background: 'rgba(16,185,129,0.12)', color: 'var(--success)', display: 'grid', placeItems: 'center', margin: '0 auto 1rem' }}>
                         <CheckCircle2 size={30} />
@@ -1190,7 +1195,7 @@ export default function TestRoomPage() {
                     <p style={{ color: 'var(--text-secondary)', lineHeight: 1.65, marginBottom: '1.25rem' }}>
                         {roomMeta?.subjectName || 'This Test Room'} is still waiting for the host to start. Sign in to join and save your answers and result.
                     </p>
-                    <div style={{ border: '1px solid var(--border-color)', borderRadius: 'var(--radius-lg)', background: 'var(--bg-tertiary)', padding: '1rem', margin: '0 auto 1.25rem', maxWidth: 360 }}>
+                    <div className="pm-room-code-card" style={{ border: '1px solid var(--border-color)', borderRadius: 'var(--radius-lg)', background: 'var(--bg-tertiary)', padding: '1rem', margin: '0 auto 1.25rem', maxWidth: 360 }}>
                         <div style={{ color: 'var(--text-tertiary)', fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Room code</div>
                         <div style={{ fontWeight: 800, fontSize: '1.45rem', letterSpacing: '0.12em', marginTop: '0.35rem' }}>{formattedCode(roomCode || routeCode)}</div>
                     </div>
@@ -1207,7 +1212,7 @@ export default function TestRoomPage() {
 
     if (view === 'connecting') {
         return (
-            <div className="container" style={{ maxWidth: 680, marginTop: '4rem' }}>
+            <div className="container pm-test-room-page" style={{ maxWidth: 680, marginTop: '4rem' }}>
                 <div className="glass-panel" style={{ padding: '2.5rem', textAlign: 'center' }}>
                     <LoaderCircle size={34} className="spin" style={{ margin: '0 auto 1rem', color: 'var(--accent-primary)' }} />
                     <h2 style={{ marginBottom: '0.75rem' }}>Checking room code</h2>
@@ -1219,7 +1224,7 @@ export default function TestRoomPage() {
 
     if (view === 'error') {
         return (
-            <div className="container" style={{ maxWidth: 720, marginTop: '3rem' }}>
+            <div className="container pm-test-room-page" style={{ maxWidth: 720, marginTop: '3rem' }}>
                 <div className="glass-panel" style={{ padding: '2rem', borderColor: 'rgba(239,68,68,0.25)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', color: '#fca5a5' }}>
                         <AlertCircle size={25} />
@@ -1244,7 +1249,7 @@ export default function TestRoomPage() {
 
     if (view === 'setup') {
         return (
-            <div className="container animate-fade-in" style={{ maxWidth: 780, marginTop: '2rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 780, marginTop: '2rem', marginBottom: '4rem' }}>
                 <button onClick={() => navigate(-1)} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
                     <ArrowLeft size={17} /> Back
                 </button>
@@ -1260,12 +1265,12 @@ export default function TestRoomPage() {
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(190px,1fr))', gap: '0.85rem', marginBottom: '1.5rem' }}>
-                        <div style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'var(--bg-tertiary)' }}>
+                        <div className="pm-room-summary-tile" style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'var(--bg-tertiary)' }}>
                             <GraduationCap size={20} color="var(--accent-primary)" />
                             <div style={{ fontWeight: 700, marginTop: '0.5rem' }}>{createPayload?.subjectName || 'MCQ exam'}</div>
                             <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{createPayload?.examTitle || 'MCQ exam'} · {canonicalQuestions.length} questions</div>
                         </div>
-                        <div style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'var(--bg-tertiary)' }}>
+                        <div className="pm-room-summary-tile" style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'var(--bg-tertiary)' }}>
                             <ShieldCheck size={20} color="var(--success)" />
                             <div style={{ fontWeight: 700, marginTop: '0.5rem' }}>Maximum 50 participants</div>
                             <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>You are counted as one participant.</div>
@@ -1274,7 +1279,7 @@ export default function TestRoomPage() {
 
                     <label htmlFor="room-duration" style={{ display: 'block', fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.55rem' }}>Test duration</label>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.25rem', flexWrap: 'wrap' }}>
-                        <select id="room-duration" value={durationMinutes} onChange={(event) => setDurationMinutes(Number(event.target.value))} style={{ padding: '0.8rem 1rem', minWidth: 190, borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', background: 'var(--bg-tertiary)', color: 'var(--text-primary)', font: 'inherit' }}>
+                        <select id="room-duration" className="pm-room-duration-select" value={durationMinutes} onChange={(event) => setDurationMinutes(Number(event.target.value))} style={{ padding: '0.8rem 1rem', minWidth: 190, borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', background: 'var(--bg-tertiary)', color: 'var(--text-primary)', font: 'inherit' }}>
                             {TIMER_OPTIONS.map((minutes) => <option key={minutes} value={minutes}>{minutes} minutes</option>)}
                         </select>
                         <span style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>The timer starts once when you press Start Test Room.</span>
@@ -1295,7 +1300,7 @@ export default function TestRoomPage() {
 
     if (view === 'share') {
         return (
-            <div className="container animate-fade-in" style={{ maxWidth: 760, marginTop: '2.5rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 760, marginTop: '2.5rem', marginBottom: '4rem' }}>
                 <div className="glass-panel" style={{ padding: 'clamp(1.4rem,4vw,2.8rem)', textAlign: 'center' }}>
                     <MotionDiv initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} style={{ width: 70, height: 70, borderRadius: 22, margin: '0 auto 1.1rem', display: 'grid', placeItems: 'center', background: 'rgba(16,185,129,0.12)', color: 'var(--success)' }}>
                         <CheckCircle2 size={36} />
@@ -1303,7 +1308,7 @@ export default function TestRoomPage() {
                     <h1 style={{ fontSize: '1.9rem', marginBottom: '0.65rem' }}>Your room is ready</h1>
                     <p style={{ color: 'var(--text-secondary)', maxWidth: 500, margin: '0 auto 1.6rem' }}>Share this code with the participants. Enter the lobby when you are ready to wait for everyone.</p>
 
-                    <div style={{ border: '1px solid var(--border-color)', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-xl)', padding: '1.5rem', maxWidth: 500, margin: '0 auto 1.5rem' }}>
+                    <div className="pm-room-code-card" style={{ border: '1px solid var(--border-color)', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-xl)', padding: '1.5rem', maxWidth: 500, margin: '0 auto 1.5rem' }}>
                         <div style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '0.55rem' }}>Room join code</div>
                         <div style={{ fontSize: 'clamp(1.7rem,6vw,2.5rem)', fontWeight: 800, letterSpacing: '0.13em', fontVariantNumeric: 'tabular-nums' }}>{formattedCode(roomCode)}</div>
                         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '0.65rem', marginTop: '1.1rem' }}>
@@ -1332,7 +1337,7 @@ export default function TestRoomPage() {
 
     if (view === 'lobby') {
         return (
-            <div className="container animate-fade-in" style={{ maxWidth: 1000, marginTop: '2rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 1000, marginTop: '2rem', marginBottom: '4rem' }}>
                 <div className="glass-panel" style={{ padding: 'clamp(1.2rem,3vw,2rem)', marginBottom: '1.2rem' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
                         <div>
@@ -1340,7 +1345,7 @@ export default function TestRoomPage() {
                             <h1 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>{roomMeta?.subjectName || 'Test Room'}</h1>
                             <p style={{ color: 'var(--text-secondary)' }}>{roomMeta?.examTitle || 'MCQ exam'} · <span style={{ textTransform: 'capitalize' }}>{roomMeta?.difficulty || 'medium'}</span> · {roomMeta?.questionCount || canonicalQuestions.length || 30} questions</p>
                         </div>
-                        <div style={{ padding: '0.9rem 1rem', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-lg)', background: 'var(--bg-tertiary)', minWidth: 180 }}>
+                        <div className="pm-room-code-card pm-room-code-card--compact" style={{ padding: '0.9rem 1rem', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-lg)', background: 'var(--bg-tertiary)', minWidth: 180 }}>
                             <div style={{ color: 'var(--text-tertiary)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Join code</div>
                             <div style={{ fontWeight: 800, fontSize: '1.3rem', letterSpacing: '0.1em', margin: '0.35rem 0' }}>{formattedCode(roomCode)}</div>
                             <button onClick={copyRoomCode} style={{ color: 'var(--accent-primary)', display: 'inline-flex', gap: '0.35rem', alignItems: 'center', fontSize: '0.82rem', fontWeight: 700 }}>{copied ? <Check size={14} /> : <Clipboard size={14} />}{copied ? 'Copied' : 'Copy code'}</button>
@@ -1348,7 +1353,7 @@ export default function TestRoomPage() {
                     </div>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.25fr) minmax(260px,0.75fr)', gap: '1.2rem', alignItems: 'start' }}>
+                <div className="pm-room-lobby-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.25fr) minmax(260px,0.75fr)', gap: '1.2rem', alignItems: 'start' }}>
                     <div className="glass-panel" style={{ padding: '1.35rem' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', alignItems: 'center', marginBottom: '1rem' }}>
                             <h2 style={{ fontSize: '1.15rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Users size={20} color="var(--accent-primary)" /> Participants</h2>
@@ -1357,8 +1362,8 @@ export default function TestRoomPage() {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
                             <AnimatePresence initial={false}>
                                 {participants.map((person) => (
-                                    <MotionDiv key={person.userId} layout initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.18 }} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.8rem 0.9rem' }}>
-                                        <div style={{ width: 38, height: 38, borderRadius: 13, display: 'grid', placeItems: 'center', flexShrink: 0, background: person.role === 'host' ? 'rgba(245,158,11,0.15)' : 'var(--accent-light)', color: person.role === 'host' ? '#fbbf24' : 'var(--accent-primary)', fontWeight: 800 }}>{String(person.displayName || person.hostName || 'S').trim().charAt(0).toUpperCase()}</div>
+                                    <MotionDiv key={person.userId} className="pm-room-participant" layout initial={{ opacity: 1, y: 0 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -4 }} transition={{ duration: 0.18 }} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.8rem 0.9rem' }}>
+                                        <div className="pm-room-participant-avatar" data-host={person.role === 'host'} style={{ width: 38, height: 38, borderRadius: 13, display: 'grid', placeItems: 'center', flexShrink: 0, background: person.role === 'host' ? 'rgba(245,158,11,0.15)' : 'var(--accent-light)', color: person.role === 'host' ? '#fbbf24' : 'var(--accent-primary)', fontWeight: 800 }}>{String(person.displayName || person.hostName || 'S').trim().charAt(0).toUpperCase()}</div>
                                         <div style={{ flex: 1, minWidth: 0 }}>
                                             <div style={{ fontWeight: 700, overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{person.displayName || person.hostName || 'Student'}{person.userId === userId ? ' (You)' : ''}</div>
                                             <div style={{ color: 'var(--text-tertiary)', fontSize: '0.76rem' }}>{person.role === 'host' ? 'Created this room' : 'Joined the lobby'}</div>
@@ -1391,7 +1396,7 @@ export default function TestRoomPage() {
     if (view === 'attempt') {
         if (!displayQuestions.length || !currentQuestion) {
             return (
-                <div className="container" style={{ maxWidth: 650, marginTop: '4rem' }}>
+                <div className="container pm-test-room-page" style={{ maxWidth: 650, marginTop: '4rem' }}>
                     <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
                         <LoaderCircle className="spin" size={30} style={{ color: 'var(--accent-primary)', margin: '0 auto 1rem' }} />
                         <h2 style={{ marginBottom: '0.5rem' }}>Loading the shared exam</h2>
@@ -1402,27 +1407,49 @@ export default function TestRoomPage() {
         }
 
         return (
-            <div className="container animate-fade-in" style={{ maxWidth: 1100, marginTop: '1rem', marginBottom: '3rem' }}>
-                <div className="glass-panel" style={{ position: 'sticky', top: 64, zIndex: 50, padding: '0.85rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 1100, marginTop: '1rem', marginBottom: '3rem' }}>
+                <div className="glass-panel pm-room-exam-topbar" style={{ position: 'sticky', top: 64, zIndex: 50, padding: '0.85rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
                     <div style={{ fontWeight: 700 }}>{roomMeta?.examTitle || 'Test Room'} <span style={{ display: 'block', color: 'var(--text-tertiary)', fontSize: '0.77rem', fontWeight: 500 }}>{roomMeta?.subjectName || 'MCQ exam'}</span></div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: timeLeft < 300 ? 'var(--danger)' : 'var(--accent-primary)', fontWeight: 800, fontSize: '1.2rem', fontVariantNumeric: 'tabular-nums' }}><Clock3 size={20} /> {timeLabel}</div>
                     {persistenceError && <span role="status" style={{ color: 'var(--warning)', fontSize: '0.78rem', maxWidth: 200 }}>{persistenceError}</span>}
                     <button disabled={submissionPending || submittedRef.current} onClick={() => submitHandlerRef.current?.()} style={{ ...roomButtonStyle('success', submissionPending || submittedRef.current), width: 'auto', minWidth: 130 }}><CheckCircle2 size={17} /> Submit</button>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'minmax(150px,0.34fr) minmax(0,1fr)', gap: '1rem', alignItems: 'start' }}>
-                    <aside className="glass-panel" style={{ padding: '1rem', position: 'sticky', top: 145 }}>
+                <div className="pm-room-attempt-layout" style={{ display: 'grid', gridTemplateColumns: 'minmax(150px,0.34fr) minmax(0,1fr)', gap: '1rem', alignItems: 'start' }}>
+                    <aside className="glass-panel pm-room-question-nav" style={{ padding: '1rem', position: 'sticky', top: 145 }}>
                         <h2 style={{ fontSize: '0.95rem', marginBottom: '0.85rem', color: 'var(--text-secondary)' }}>Questions</h2>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,minmax(0,1fr))', gap: '0.4rem' }}>
+                        <div className="pm-room-question-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,minmax(0,1fr))', gap: '0.4rem' }}>
                             {displayQuestions.map((question, index) => {
                                 const isAnswered = answers[question.canonicalIndex] !== undefined;
-                                return <button key={question.id + '-' + question.canonicalIndex} onClick={() => setCurrentQuestionIndex(index)} style={{ aspectRatio: '1', borderRadius: 9, border: currentQuestionIndex === index ? '1px solid var(--accent-primary)' : '1px solid var(--border-color)', background: currentQuestionIndex === index ? 'var(--accent-primary)' : isAnswered ? 'rgba(16,185,129,0.14)' : 'var(--bg-tertiary)', color: currentQuestionIndex === index ? 'white' : isAnswered ? 'var(--success)' : 'var(--text-primary)', fontWeight: 800 }}>{index + 1}</button>;
+                                const isCurrent = currentQuestionIndex === index;
+                                return (
+                                    <MotionButton
+                                        key={question.id + '-' + question.canonicalIndex}
+                                        type="button"
+                                        className="pm-room-question-pill"
+                                        data-answered={isAnswered}
+                                        aria-current={isCurrent ? 'step' : undefined}
+                                        aria-label={'Question ' + (index + 1) + (isAnswered ? ', answered' : ', unanswered')}
+                                        onClick={() => setCurrentQuestionIndex(index)}
+                                        whileTap={{ scale: 0.94 }}
+                                    >
+                                        {isCurrent && (
+                                            <motion.span
+                                                layoutId="pm-room-question-active-pill"
+                                                className="pm-room-question-active-pill"
+                                                transition={{ type: 'spring', bounce: 0.16, duration: 0.5 }}
+                                            />
+                                        )}
+                                        <span className="pm-room-question-pill-label">{index + 1}</span>
+                                    </MotionButton>
+                                );
                             })}
                         </div>
                         <div style={{ marginTop: '1rem', color: 'var(--text-tertiary)', fontSize: '0.78rem', lineHeight: 1.6 }}>Answered: {Object.keys(answers).length} / {displayQuestions.length}</div>
                     </aside>
 
-                    <section className="glass-panel" style={{ padding: 'clamp(1.25rem,3vw,2.2rem)', minHeight: 490 }}>
+                    <section className="glass-panel pm-room-question-card" style={{ padding: 'clamp(1.25rem,3vw,2.2rem)', minHeight: 490 }}>
+                        <MotionDiv key={currentQuestionIndex} initial={{ opacity: 0, x: 12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', marginBottom: '1.5rem' }}>
                             <span style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', fontWeight: 700 }}>Question {currentQuestionIndex + 1} of {displayQuestions.length}</span>
                             <span style={{ padding: '0.25rem 0.55rem', borderRadius: 'var(--radius-full)', background: 'var(--accent-light)', color: 'var(--accent-primary)', fontSize: '0.75rem', fontWeight: 800 }}>1 mark</span>
@@ -1432,20 +1459,21 @@ export default function TestRoomPage() {
                             {currentQuestion.options.map((option, displayIndex) => {
                                 const selected = answers[currentQuestion.canonicalIndex] === option.originalOptionIndex;
                                 return (
-                                    <button key={option.originalOptionIndex} onClick={() => selectOption(currentQuestion.canonicalIndex, option.originalOptionIndex)} style={{ padding: '1rem', display: 'flex', gap: '0.85rem', alignItems: 'center', textAlign: 'left', borderRadius: 'var(--radius-md)', border: selected ? '1px solid var(--accent-primary)' : '1px solid var(--border-color)', background: selected ? 'var(--accent-light)' : 'var(--bg-tertiary)', color: 'var(--text-primary)', transition: 'all 0.14s ease' }}>
-                                        <span style={{ flexShrink: 0, width: 32, height: 32, display: 'grid', placeItems: 'center', borderRadius: 10, background: selected ? 'var(--accent-primary)' : 'var(--bg-secondary)', color: selected ? 'white' : 'var(--text-secondary)', fontWeight: 800 }}>{String.fromCharCode(65 + displayIndex)}</span>
+                                    <button key={option.originalOptionIndex} className="pm-room-answer-option" data-selected={selected} aria-pressed={selected} onClick={() => selectOption(currentQuestion.canonicalIndex, option.originalOptionIndex)} style={{ padding: '1rem', display: 'flex', gap: '0.85rem', alignItems: 'center', textAlign: 'left', borderRadius: 'var(--radius-md)', border: selected ? '1px solid var(--accent-primary)' : '1px solid var(--border-color)', background: selected ? 'var(--accent-light)' : 'var(--bg-tertiary)', color: 'var(--text-primary)', transition: 'all 0.14s ease' }}>
+                                        <span className="pm-room-answer-letter" style={{ flexShrink: 0, width: 32, height: 32, display: 'grid', placeItems: 'center', borderRadius: 10, background: selected ? 'var(--accent-primary)' : 'var(--bg-secondary)', color: selected ? 'white' : 'var(--text-secondary)', fontWeight: 800 }}>{String.fromCharCode(65 + displayIndex)}</span>
                                         <span style={{ flex: 1, lineHeight: 1.5 }}>{option.text}</span>
                                         {selected && <Check size={18} color="var(--accent-primary)" />}
                                     </button>
                                 );
                             })}
                         </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.8rem', marginTop: '2rem' }}>
-                            <button disabled={currentQuestionIndex === 0} onClick={() => setCurrentQuestionIndex((previous) => Math.max(0, previous - 1))} style={roomButtonStyle('secondary', currentQuestionIndex === 0)}><ArrowLeft size={17} /> Previous</button>
+                        </MotionDiv>
+                        <div className="pm-room-question-actions" style={{ display: 'flex', justifyContent: 'space-between', gap: '0.8rem', marginTop: '2rem' }}>
+                            <button className="pm-room-action pm-room-question-step" disabled={currentQuestionIndex === 0} onClick={() => setCurrentQuestionIndex((previous) => Math.max(0, previous - 1))} style={roomButtonStyle('secondary', currentQuestionIndex === 0)}><ArrowLeft size={17} /> Previous</button>
                             {currentQuestionIndex < displayQuestions.length - 1 ? (
-                                <button onClick={() => setCurrentQuestionIndex((previous) => Math.min(displayQuestions.length - 1, previous + 1))} style={roomButtonStyle()}>Next <ArrowRight size={17} /></button>
+                                <button className="pm-room-action pm-room-question-step pm-room-question-step--next" onClick={() => setCurrentQuestionIndex((previous) => Math.min(displayQuestions.length - 1, previous + 1))} style={roomButtonStyle()}>Next <ArrowRight size={17} /></button>
                             ) : (
-                                <button onClick={() => submitHandlerRef.current?.()} style={roomButtonStyle('success')}><CheckCircle2 size={17} /> Submit test</button>
+                                <button className="pm-room-action" onClick={() => submitHandlerRef.current?.()} style={roomButtonStyle('success')}><CheckCircle2 size={17} /> Submit test</button>
                             )}
                         </div>
                     </section>
@@ -1456,7 +1484,7 @@ export default function TestRoomPage() {
 
     if (view === 'submitting') {
         return (
-            <div className="container" style={{ maxWidth: 680, marginTop: '4rem' }}>
+            <div className="container pm-test-room-page" style={{ maxWidth: 680, marginTop: '4rem' }}>
                 <div className="glass-panel" style={{ padding: '2.5rem', textAlign: 'center' }}>
                     <LoaderCircle className="spin" size={34} style={{ color: 'var(--accent-primary)', margin: '0 auto 1rem' }} />
                     <h2 style={{ marginBottom: '0.6rem' }}>Answers submitted</h2>
@@ -1468,7 +1496,7 @@ export default function TestRoomPage() {
 
     if (view === 'result' || view === 'finished') {
         return (
-            <div className="container animate-fade-in" style={{ maxWidth: 850, marginTop: '3rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 850, marginTop: '3rem', marginBottom: '4rem' }}>
                 <div className="glass-panel" style={{ padding: 'clamp(1.5rem,4vw,3rem)', textAlign: 'center', marginBottom: '1.2rem' }}>
                     <div style={{ width: 68, height: 68, margin: '0 auto 1rem', borderRadius: 22, background: 'rgba(16,185,129,0.12)', color: 'var(--success)', display: 'grid', placeItems: 'center' }}><CheckCircle2 size={35} /></div>
                     <h1 style={{ fontSize: '1.9rem', marginBottom: '0.55rem' }}>Test submitted</h1>
@@ -1505,7 +1533,7 @@ export default function TestRoomPage() {
     }
 
     return (
-        <div className="container" style={{ maxWidth: 720, marginTop: '3rem' }}>
+        <div className="container pm-test-room-page" style={{ maxWidth: 720, marginTop: '3rem' }}>
             <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
                 <XCircle size={30} style={{ color: 'var(--warning)', margin: '0 auto 1rem' }} />
                 <h2 style={{ marginBottom: '0.6rem' }}>Room session ended</h2>
