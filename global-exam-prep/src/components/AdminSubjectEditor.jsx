@@ -42,7 +42,6 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
     const [subjectName, setSubjectName] = useState('');
     const [subjectCode, setSubjectCode] = useState('');
     const [isDepartmental, setIsDepartmental] = useState('false');
-    const [subjectType, setSubjectType] = useState('theory');
     const [syllabusFile, setSyllabusFile] = useState(null);
     const [removeId, setRemoveId] = useState('');
     const [confirmRemove, setConfirmRemove] = useState(false);
@@ -104,7 +103,6 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
                 subjectName: subjectName.trim(),
                 subjectCode: subjectCode.trim(),
                 isDepartmentalSubject: isDepartmental === 'true',
-                subjectType,
                 fileName: syllabusFile.name,
                 mimeType,
                 sizeBytes: syllabusFile.size,
@@ -114,7 +112,6 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
             setSubjectName('');
             setSubjectCode('');
             setIsDepartmental('false');
-            setSubjectType('theory');
             setSyllabusFile(null);
             if (fileInputRef.current) fileInputRef.current.value = '';
             setNotice(result.restored
@@ -195,14 +192,6 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
                             <select value={isDepartmental} onChange={event => setIsDepartmental(event.target.value)}>
                                 <option value="false">No — non-departmental</option>
                                 <option value="true">Yes — departmental</option>
-                            </select>
-                        </label>
-                        <label className="ac-editor__field">
-                            <span>Subject type <b>*</b></span>
-                            <select value={subjectType} onChange={event => setSubjectType(event.target.value)}>
-                                <option value="theory">Theory</option>
-                                <option value="practical">Practical</option>
-                                <option value="both">Theory + Practical</option>
                             </select>
                         </label>
                     </div>
