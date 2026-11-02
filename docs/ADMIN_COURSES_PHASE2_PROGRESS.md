@@ -112,4 +112,15 @@ The upload flow now uses the private Storage bucket plus a durable PGMQ Basic qu
 
 Correction to the earlier PDF validation note: the PDF runtime helper existed, but both document-processing modules imported PDF.js directly while calling getPdfJsDocument(). That import mismatch is now corrected. The earlier verification missed the committed import mismatch and must not be treated as proof that the old import path was valid.
 
-The worker's Supabase Cron trigger and its Vault secret are separate deployment configuration. Real authenticated upload-to-worker smoke testing remains required; no production processing success is claimed until that is observed.
+## Deployment and scheduler verification — 2026-11-02
+
+- Vercel production deployment for commit `469c00eac80741b6458150dd853b4ab11ef454a2` is READY on the existing production alias `prepmaster-tau.vercel.app`.
+- `ADMIN_COURSE_UPLOAD_WORKER_SECRET` is configured as a sensitive production environment variable. The same token and the worker URL are stored in Supabase Vault; neither value is committed to source.
+- Supabase Cron job `admin-course-upload-worker-every-minute` is active on `* * * * *`; its first recorded run succeeded.
+- A direct authenticated pg_net health check reached `/api/admin-course-upload-worker` and received HTTP 200 with `No queued uploads.`. The worker route is live and authenticated correctly; no real upload job was in the queue during this check.
+- The live runtime-error aggregation currently contains only the earlier DOMMatrix incidents from deployments before the import correction/async queue. No worker-route error group was returned.
+- Production Vite build completed successfully. Vitest and ESLint were not run for this queue commit because the available Vercel sandbox creation API rejected the test sandbox request. A real admin-session Storage → queue → worker → validation smoke test is still required.
+
+There are five pre-existing upload records still in `uploading` from previous attempts. Use each record's **Check completed upload** action to verify whether its Storage object is complete and enqueue it. Do not re-upload a file unless the object is missing or the stored byte count is wrong.
+
+The source migration filename is aligned with the applied Supabase migration version `20261102045212`.
