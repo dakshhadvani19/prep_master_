@@ -219,6 +219,9 @@
     font-size: .95rem !important;
     font-weight: 750 !important;
 }
+.pm-room-question-nav > div:last-child {
+    color: #d2e2f7 !important;
+}
 .pm-exam-question-grid,
 .pm-room-question-grid {
     display: grid;
@@ -269,7 +272,7 @@
 .pm-room-question-active-pill {
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 0;
     border: 1px solid rgba(191, 219, 254, .8);
     border-radius: 13px;
     background: linear-gradient(135deg, #1d4ed8, #3b82f6);
@@ -279,6 +282,7 @@
 .pm-room-question-pill-label {
     position: relative;
     z-index: 1;
+    pointer-events: none;
 }
 .pm-exam-question-card,
 .pm-room-question-card {

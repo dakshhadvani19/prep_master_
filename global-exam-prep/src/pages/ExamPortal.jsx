@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { domains } from '../data/mockData';
 import { examPrompts } from '../data/examPrompts';
@@ -817,7 +817,7 @@ export default function ExamPortal() {
                             onClick={() => setShowWarning(false)}
                             style={{
                                 marginTop: '1.75rem',
-                                background: 'linear-gradient(135deg,#3b82f6,#8b5cf6)',
+                                background: 'linear-gradient(135deg,#3b82f6,#60a5fa)',
                                 color: 'white',
                                 padding: '0.875rem 3rem',
                                 borderRadius: 'var(--radius-full)',
@@ -886,8 +886,8 @@ export default function ExamPortal() {
                     </button>
 
                     <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                        <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'rgba(139,92,246,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
-                            <Upload size={30} color="#8b5cf6" />
+                        <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'rgba(59,130,246,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
+                            <Upload size={30} color="#60a5fa" />
                         </div>
                         <h2 style={{ fontSize: '1.6rem', marginBottom: '0.5rem' }}>Upload Study Material</h2>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>AI will read your files and generate a <strong style={{ color: 'var(--text-primary)' }}>Dynamic Set</strong> of questions at <strong style={{ color: 'var(--text-primary)', textTransform: 'capitalize' }}>{difficulty}</strong> difficulty.</p>
@@ -897,9 +897,9 @@ export default function ExamPortal() {
                     <div
                         className="pm-exam-dropzone"
                         onClick={() => fileInputRef.current?.click()}
-                        onDragOver={e => { e.preventDefault(); e.currentTarget.style.borderColor = '#8b5cf6'; e.currentTarget.style.background = 'rgba(139,92,246,0.08)'; }}
-                        onDragLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.background = 'var(--bg-tertiary)'; }}
-                        onDrop={e => { e.preventDefault(); e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.background = 'var(--bg-tertiary)'; handleFiles(e.dataTransfer.files); }}
+                        onDragOver={e => { e.preventDefault(); e.currentTarget.style.borderColor = '#60a5fa'; e.currentTarget.style.background = 'rgba(59,130,246,0.08)'; }}
+                        onDragLeave={e => { e.currentTarget.style.borderColor = 'rgba(96,165,250,0.62)'; e.currentTarget.style.background = 'rgba(24,38,58,.96)'; }}
+                        onDrop={e => { e.preventDefault(); e.currentTarget.style.borderColor = 'rgba(96,165,250,0.62)'; e.currentTarget.style.background = 'rgba(24,38,58,.96)'; handleFiles(e.dataTransfer.files); }}
                         style={{
                             padding: '2.5rem',
                             textAlign: 'center', cursor: 'pointer', transition: 'all 0.2s',
@@ -923,8 +923,8 @@ export default function ExamPortal() {
                     {uploadedFiles.length > 0 && (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.25rem' }}>
                             {uploadedFiles.map((file, idx) => (
-                                <div key={idx} className="pm-exam-uploaded-file" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.2)', borderRadius: 'var(--radius-md)' }}>
-                                    <FileText size={18} color="#8b5cf6" style={{ flexShrink: 0 }} />
+                                <div key={idx} className="pm-exam-uploaded-file" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.2)', borderRadius: 'var(--radius-md)' }}>
+                                    <FileText size={18} color="#60a5fa" style={{ flexShrink: 0 }} />
                                     <span style={{ flex: 1, fontSize: '0.9rem', color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{file.name}</span>
                                     <span style={{ fontSize: '0.78rem', color: 'var(--text-tertiary)', flexShrink: 0 }}>{(file.size / 1024).toFixed(0)} KB</span>
                                     <button onClick={() => removeFile(idx)} style={{ color: 'var(--danger)', cursor: 'pointer', display: 'flex', flexShrink: 0 }}><X size={16} /></button>
@@ -942,7 +942,7 @@ export default function ExamPortal() {
 
                     {/* Processing State */}
                     {uploadProcessing && (
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#8b5cf6', padding: '0.875rem 1rem', background: 'rgba(139,92,246,0.08)', borderRadius: 'var(--radius-md)', marginBottom: '1.25rem', fontSize: '0.9rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#60a5fa', padding: '0.875rem 1rem', background: 'rgba(59,130,246,0.08)', borderRadius: 'var(--radius-md)', marginBottom: '1.25rem', fontSize: '0.9rem' }}>
                             <Loader size={18} style={{ animation: 'spin 1s linear infinite', flexShrink: 0 }} /> {uploadProgress || 'Processing...'}
                         </div>
                     )}
@@ -962,7 +962,7 @@ export default function ExamPortal() {
                         disabled={uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0}
                         style={{
                             width: '100%', padding: '1rem', borderRadius: 'var(--radius-full)',
-                            background: (uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0) ? 'var(--bg-tertiary)' : 'linear-gradient(135deg,#8b5cf6,#3b82f6)',
+                            background: (uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0) ? 'var(--bg-tertiary)' : 'linear-gradient(135deg,#60a5fa,#3b82f6)',
                             color: (uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0) ? 'var(--text-tertiary)' : 'white',
                             fontWeight: 700, fontSize: '1rem', cursor: (uploadProcessing || uploadedFiles.length === 0 || retryCountdown > 0) ? 'not-allowed' : 'pointer',
                             transition: 'all 0.2s',
@@ -1139,6 +1139,7 @@ export default function ExamPortal() {
 function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLeft, formatTime, onSubmit, aiQuestions, isSubmitting, submitError, forceSubmit, attemptId }) {
     // Determine objective vs subjective purely based on the original examType mode.
     const isObjective = examInfo.type === 'objective';
+    const reduceMotion = useReducedMotion();
     const [currentQ, setCurrentQ] = useState(0);
     const [answers, setAnswers] = useState({});
 
@@ -1268,9 +1269,9 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                                 >
                                     {isCurrent && (
                                         <motion.span
-                                            layoutId="pm-exam-question-active-pill"
+                                            layoutId={reduceMotion ? undefined : "pm-exam-question-active-pill"}
                                             className="pm-exam-question-active-pill"
-                                            transition={{ type: 'spring', bounce: 0.16, duration: 0.5 }}
+                                            transition={reduceMotion ? { duration: 0 } : { type: 'spring', bounce: 0.16, duration: 0.5 }}
                                         />
                                     )}
                                     <span className="pm-exam-question-pill-label">{idx + 1}</span>
@@ -1283,9 +1284,9 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                 {/* Question Area */}
                 <motion.div
                     key={currentQ}
-                    initial={{ opacity: 0, x: 12 }}
+                    initial={reduceMotion ? false : { opacity: 0, x: 12 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                    transition={reduceMotion ? { duration: 0 } : { duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
                     className="glass-panel pm-exam-question-card"
                     style={{ flex: 1, padding: '2.5rem', minHeight: '500px', display: 'flex', flexDirection: 'column' }}
                 >

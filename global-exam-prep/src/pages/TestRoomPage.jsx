@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import {
     AlertCircle, ArrowLeft, ArrowRight, Check, CheckCircle2, Clipboard,
     Clock3, DoorOpen, GraduationCap, LoaderCircle, LockKeyhole, Play,
@@ -174,6 +174,7 @@ export default function TestRoomPage() {
     const location = useLocation();
     const routeCode = routeCodeParam || location.state?.temporaryRoomCode || '';
     const { currentUser } = useAuth();
+    const reduceMotion = useReducedMotion();
 
     const createPayload = location.state?.testRoomMode === 'create' && Array.isArray(location.state?.questions)
         ? location.state
@@ -1431,13 +1432,13 @@ export default function TestRoomPage() {
                                         aria-current={isCurrent ? 'step' : undefined}
                                         aria-label={'Question ' + (index + 1) + (isAnswered ? ', answered' : ', unanswered')}
                                         onClick={() => setCurrentQuestionIndex(index)}
-                                        whileTap={{ scale: 0.94 }}
+                                        whileTap={reduceMotion ? undefined : { scale: 0.94 }}
                                     >
                                         {isCurrent && (
                                             <motion.span
-                                                layoutId="pm-room-question-active-pill"
+                                                layoutId={reduceMotion ? undefined : "pm-room-question-active-pill"}
                                                 className="pm-room-question-active-pill"
-                                                transition={{ type: 'spring', bounce: 0.16, duration: 0.5 }}
+                                                transition={reduceMotion ? { duration: 0 } : { type: 'spring', bounce: 0.16, duration: 0.5 }}
                                             />
                                         )}
                                         <span className="pm-room-question-pill-label">{index + 1}</span>
@@ -1449,7 +1450,12 @@ export default function TestRoomPage() {
                     </aside>
 
                     <section className="glass-panel pm-room-question-card" style={{ padding: 'clamp(1.25rem,3vw,2.2rem)', minHeight: 490 }}>
-                        <MotionDiv key={currentQuestionIndex} initial={{ opacity: 0, x: 12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}>
+                        <MotionDiv
+                            key={currentQuestionIndex}
+                            initial={reduceMotion ? false : { opacity: 0, x: 12 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={reduceMotion ? { duration: 0 } : { duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                        >
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', marginBottom: '1.5rem' }}>
                             <span style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', fontWeight: 700 }}>Question {currentQuestionIndex + 1} of {displayQuestions.length}</span>
                             <span style={{ padding: '0.25rem 0.55rem', borderRadius: 'var(--radius-full)', background: 'var(--accent-light)', color: 'var(--accent-primary)', fontSize: '0.75rem', fontWeight: 800 }}>1 mark</span>
