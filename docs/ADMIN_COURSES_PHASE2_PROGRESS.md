@@ -143,7 +143,7 @@ The former selected-subject file-history panel is no longer part of the Admin Co
 
 - Add subject collects subject name, official subject code, departmental flag, and one PDF/DOCX syllabus.
 - The browser uploads that file directly to the existing private `admin-course-files` bucket. The authenticated API verifies the admin, course/semester, object ownership/path and exact byte count, then extracts readable text with the existing PDF.js/Mammoth utilities.
-- The full extracted syllabus text (up to the existing 30,000-character limit) and the additional subject code/type metadata are stored in `private.subject_catalog_metadata`. The canonical public `Subjects` row and an active syllabus upload-history record are inserted in one database transaction.
+- The full extracted syllabus text (up to the existing 30,000-character limit) and official subject code are stored in `private.subject_catalog_metadata`. The canonical public `Subjects` row stores the departmental flag, and an active syllabus upload-history record is inserted in one database transaction.
 - Existing public `Courses`, `Subjects`, and `TestsData` column definitions remain unchanged. The prior upload history/queue backend is retained for historical records, but its old multi-stage uploader is removed from the Admin Courses screen.
 - A newly added numeric subject can be resolved from the live catalog in ExamPortal. Exam generation now prefers its saved extracted syllabus and falls back to the pre-existing static dataset for older subjects.
 - Removal is blocked when exam attempts, leaderboard entries or published question-bank references exist. If allowed, the database record cleanup is transactional and old private Storage objects are removed after the transaction.
