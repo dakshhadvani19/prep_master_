@@ -307,3 +307,12 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Restyled the department → course → semester → subject browsing surfaces. Course/subject fetching, catalog IDs, route paths, selection state and exam configuration behavior are preserved.
 - Test Room UI and exam generation/configuration UI remain outside this visual change.
 - Verification: source and relevant design references were inspected. Local tests/build and browser visual inspection were not available in the connected environment at commit time; do not treat this entry as a runtime verification claim.
+
+
+## Homepage white-and-gold visual refinement — 2026-11-02
+
+- Kept the homepage's graphite canvas and overall structure. The study-desk paper, answer sheet and pencil now read as white/cool-neutral objects; the six discipline illustrations use white linework with one or two restrained gold details per subject.
+- Changed the homepage primary action and heading emphasis to white. Gold is reserved for small illustration details, fine borders, focus highlights and subtle warm glow/shadows.
+- Refined homepage typography using the existing Inter family: clearer weight hierarchy, more measured tracking and comfortable body contrast. No new font or dependency was added.
+- The course explorer, semester/subject catalog, exam setup, Test Room and admin UI were not changed.
+- Verification: reviewed the exact source changes and documented scope. Local test/build and browser screenshot review were not available in the connected environment; runtime appearance remains unverified.

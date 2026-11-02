@@ -64,46 +64,46 @@ function StudyDeskArtwork() {
             <circle cx="470" cy="104" r="78" fill="none" stroke="#ffb454" strokeOpacity=".22" />
             <circle cx="470" cy="104" r="58" fill="none" stroke="#ffb454" strokeOpacity=".6" strokeWidth="5" strokeDasharray="250 115" transform="rotate(-92 470 104)" />
             <g filter="url(#pm-paper-shadow)" transform="rotate(-5 280 250)">
-                <rect x="116" y="74" width="322" height="390" rx="12" fill="#20242b" stroke="#666b72" />
-                <rect x="133" y="92" width="288" height="354" rx="5" fill="#f0ede5" />
-                <path d="M133 92h288v62H133z" fill="#e5dfd2" />
-                <text x="156" y="119" fill="#57534c" fontSize="10" fontFamily="Arial" letterSpacing="1.4">PREPMASTER / PRACTICE PAPER</text>
+                <rect x="116" y="74" width="322" height="390" rx="12" fill="#20242b" stroke="#aeb5bf" />
+                <rect x="133" y="92" width="288" height="354" rx="5" fill="#ffffff" />
+                <path d="M133 92h288v62H133z" fill="#f1f3f6" />
+                <text x="156" y="119" fill="#555d68" fontSize="10" fontFamily="Arial" letterSpacing="1.4">PREPMASTER / PRACTICE PAPER</text>
                 <text x="156" y="140" fill="#17191d" fontSize="16" fontWeight="700" fontFamily="Arial">Examination practice</text>
-                <rect x="156" y="174" width="175" height="5" rx="2.5" fill="#a9a39a" />
-                <rect x="156" y="188" width="228" height="4" rx="2" fill="#d0cbc2" />
-                <rect x="156" y="201" width="204" height="4" rx="2" fill="#d0cbc2" />
-                <text x="156" y="239" fill="#393a3a" fontSize="10" fontWeight="700" fontFamily="Arial">01 / Explain the core concept.</text>
-                <rect x="156" y="250" width="225" height="3" rx="1.5" fill="#c9c4bb" />
-                <rect x="156" y="260" width="195" height="3" rx="1.5" fill="#c9c4bb" />
-                <text x="156" y="296" fill="#393a3a" fontSize="10" fontWeight="700" fontFamily="Arial">02 / Apply your understanding.</text>
-                <rect x="156" y="307" width="224" height="3" rx="1.5" fill="#c9c4bb" />
-                <rect x="156" y="317" width="190" height="3" rx="1.5" fill="#c9c4bb" />
-                <rect x="156" y="350" width="110" height="50" rx="4" fill="#e8e1d4" stroke="#c8bdab" />
+                <rect x="156" y="174" width="175" height="5" rx="2.5" fill="#b9c0c9" />
+                <rect x="156" y="188" width="228" height="4" rx="2" fill="#cbd1d9" />
+                <rect x="156" y="201" width="204" height="4" rx="2" fill="#cbd1d9" />
+                <text x="156" y="239" fill="#333a44" fontSize="10" fontWeight="700" fontFamily="Arial">01 / Explain the core concept.</text>
+                <rect x="156" y="250" width="225" height="3" rx="1.5" fill="#c8ced7" />
+                <rect x="156" y="260" width="195" height="3" rx="1.5" fill="#c8ced7" />
+                <text x="156" y="296" fill="#333a44" fontSize="10" fontWeight="700" fontFamily="Arial">02 / Apply your understanding.</text>
+                <rect x="156" y="307" width="224" height="3" rx="1.5" fill="#c8ced7" />
+                <rect x="156" y="317" width="190" height="3" rx="1.5" fill="#c8ced7" />
+                <rect x="156" y="350" width="110" height="50" rx="4" fill="#f6f7f9" stroke="#d0d5dc" />
                 <path d="M170 382l15-17 12 9 17-20 31 29" fill="none" stroke="#b17b39" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                <rect x="284" y="355" width="96" height="4" rx="2" fill="#c1baae" />
-                <rect x="284" y="367" width="76" height="4" rx="2" fill="#c1baae" />
-                <rect x="284" y="379" width="86" height="4" rx="2" fill="#c1baae" />
+                <rect x="284" y="355" width="96" height="4" rx="2" fill="#c5ccd5" />
+                <rect x="284" y="367" width="76" height="4" rx="2" fill="#c5ccd5" />
+                <rect x="284" y="379" width="86" height="4" rx="2" fill="#c5ccd5" />
             </g>
             <g filter="url(#pm-paper-shadow)" transform="rotate(8 475 306)">
-                <rect x="407" y="201" width="165" height="220" rx="10" fill="#292e35" stroke="#72767a" />
-                <rect x="419" y="214" width="141" height="194" rx="5" fill="#f7f4ec" />
-                <text x="433" y="239" fill="#5c564d" fontSize="9" fontFamily="Arial" fontWeight="700">ANSWER SHEET</text>
-                <path d="M433 255h110" stroke="#d5cec2" />
-                <g fill="none" stroke="#b4aa99" strokeWidth="1.5">
+                <rect x="407" y="201" width="165" height="220" rx="10" fill="#292e35" stroke="#aeb5bf" />
+                <rect x="419" y="214" width="141" height="194" rx="5" fill="#ffffff" />
+                <text x="433" y="239" fill="#555d68" fontSize="9" fontFamily="Arial" fontWeight="700">ANSWER SHEET</text>
+                <path d="M433 255h110" stroke="#d1d7df" />
+                <g fill="none" stroke="#bfc6d0" strokeWidth="1.5">
                     <circle cx="440" cy="277" r="5" /><circle cx="457" cy="277" r="5" /><circle cx="474" cy="277" r="5" />
                     <circle cx="440" cy="295" r="5" /><circle cx="457" cy="295" r="5" /><circle cx="474" cy="295" r="5" />
                     <circle cx="440" cy="313" r="5" /><circle cx="457" cy="313" r="5" /><circle cx="474" cy="313" r="5" />
                 </g>
-                <g stroke="#bd873f" strokeWidth="2.3" strokeLinecap="round"><path d="M436 277l3 3 6-7M453 295l3 3 6-7M470 313l3 3 6-7" /></g>
-                <rect x="433" y="340" width="111" height="4" rx="2" fill="#d2cbbf" />
-                <rect x="433" y="352" width="91" height="4" rx="2" fill="#d2cbbf" />
-                <rect x="433" y="364" width="101" height="4" rx="2" fill="#d2cbbf" />
-                <path d="M433 384l8 8 16-18" fill="none" stroke="#a9793a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <g stroke="#d99c4a" strokeWidth="2.3" strokeLinecap="round"><path d="M436 277l3 3 6-7M453 295l3 3 6-7M470 313l3 3 6-7" /></g>
+                <rect x="433" y="340" width="111" height="4" rx="2" fill="#c8ced7" />
+                <rect x="433" y="352" width="91" height="4" rx="2" fill="#c8ced7" />
+                <rect x="433" y="364" width="101" height="4" rx="2" fill="#c8ced7" />
+                <path d="M433 384l8 8 16-18" fill="none" stroke="#d99c4a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             </g>
             <g transform="rotate(35 523 430)" filter="url(#pm-paper-shadow)">
-                <rect x="511" y="342" width="17" height="126" rx="5" fill="#c18a46" />
-                <path d="M511 351h17M511 454h17" stroke="#f3c987" strokeWidth="2" />
-                <path d="M511 468l8.5 18 8.5-18Z" fill="#d8c1a0" />
+                <rect x="511" y="342" width="17" height="126" rx="5" fill="#f7f8fa" stroke="#d99c4a" strokeWidth="1.4" />
+                <path d="M511 351h17M511 454h17" stroke="#d99c4a" strokeWidth="2" />
+                <path d="M511 468l8.5 18 8.5-18Z" fill="#f0f2f5" />
                 <path d="M517 480l2.5 6 2.5-6Z" fill="#35302a" />
             </g>
             <g fill="#ffb454"><circle cx="100" cy="367" r="4" /><circle cx="555" cy="162" r="3" /></g>
@@ -116,12 +116,12 @@ function DomainArtwork({ id }) {
     const common = { fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' };
     return (
         <svg className="pm-domain-art" viewBox="0 0 180 120" aria-hidden="true">
-            {id === 'engineering' && <g {...common}><path d="M12 60h36l15-15h31l13 13h61M48 60v31h22M94 45V18h24M120 58v35h42" /><rect x="60" y="34" width="33" height="29" rx="4" /><rect x="106" y="8" width="36" height="22" rx="3" /><rect x="116" y="82" width="30" height="23" rx="3" /><circle cx="48" cy="60" r="4" /><circle cx="120" cy="58" r="4" /><path d="M70 43v10m-5-5h10M125 19h18M125 24h11" /></g>}
-            {id === 'computer-apps' && <g {...common}><rect x="15" y="12" width="110" height="72" rx="5" /><path d="M15 25h110M52 84v11m37-11v11M42 95h57M46 42l-9 9 9 9m21-18 9 9-9 9m18-1 7-16M137 37h28m-28 10h28m-28 10h28M142 29v39" /><circle cx="22" cy="19" r="2" /><circle cx="30" cy="19" r="2" /></g>}
-            {id === 'management' && <g {...common}><path d="M15 99h151M25 99V19h128v80M43 78V57h17v21M75 78V40h17v38M107 78V28h17v50M35 43l27-13 24 7 36-20 20 8M131 25l11 0-2-10M45 88h83" /></g>}
-            {id === 'science-pharmacy' && <g {...common}><path d="M69 13h39m-30 0v28L49 91q-4 8 7 8h66q11 0 7-9l-29-49V13M59 78h77M69 69q20-12 40 0 10 6 20 0" /><circle cx="44" cy="29" r="8" /><circle cx="24" cy="57" r="5" /><circle cx="49" cy="79" r="5" /><path d="M44 37l-17 16m23 4 2 17" /></g>}
-            {id === 'law-arts' && <g {...common}><path d="M90 22v75M33 37h114M90 22l-10 10h20Z M47 37 29 73h36L47 37Zm86 0-18 36h36l-18-36Z M29 73q18 17 36 0m50 0q18 17 36 0M69 99h42M52 16q38-13 76 0v10q-38-13-76 0Z" /></g>}
-            {id === 'diploma' && <g {...common}><path d="M19 89h143M35 89V28h110v61M47 40h86M47 52h59M47 64h72M31 19h118M41 14v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6" /><circle cx="128" cy="65" r="18" /><path d="M128 50v30m-15-15h30M118 83l-5 17 15-7 15 7-5-17" /></g>}
+            {id === 'engineering' && <g {...common}><path d="M12 60h36l15-15h31l13 13h61M48 60v31h22M94 45V18h24M120 58v35h42" /><rect x="60" y="34" width="33" height="29" rx="4" /><rect x="106" y="8" width="36" height="22" rx="3" /><rect x="116" y="82" width="30" height="23" rx="3" /><circle cx="48" cy="60" r="4" /><circle cx="120" cy="58" r="4" /><path className="pm-domain-art__accent" d="M70 43v10m-5-5h10" /><path d="M125 19h18M125 24h11" /></g>}
+            {id === 'computer-apps' && <g {...common}><rect x="15" y="12" width="110" height="72" rx="5" /><path d="M15 25h110M52 84v11m37-11v11M42 95h57" /><path className="pm-domain-art__accent" d="M46 42l-9 9 9 9m21-18 9 9-9 9" /><path d="M91 50l7-16M137 37h28m-28 10h28m-28 10h28M142 29v39" /><circle cx="22" cy="19" r="2" /><circle cx="30" cy="19" r="2" /></g>}
+            {id === 'management' && <g {...common}><path d="M15 99h151M25 99V19h128v80M43 78V57h17v21M75 78V40h17v38M107 78V28h17v50M131 25l11 0-2-10M45 88h83" /><path className="pm-domain-art__accent" d="M35 43l27-13 24 7 36-20 20 8" /></g>}
+            {id === 'science-pharmacy' && <g {...common}><path d="M69 13h39m-30 0v28L49 91q-4 8 7 8h66q11 0 7-9l-29-49V13M59 78h77" /><path className="pm-domain-art__accent" d="M69 69q20-12 40 0 10 6 20 0" /><circle cx="44" cy="29" r="8" /><circle cx="24" cy="57" r="5" /><circle cx="49" cy="79" r="5" /><path d="M44 37l-17 16m23 4 2 17" /></g>}
+            {id === 'law-arts' && <g {...common}><path d="M90 22v75M33 37h114M47 37 29 73h36L47 37Zm86 0-18 36h36l-18-36Z M29 73q18 17 36 0m50 0q18 17 36 0M69 99h42M52 16q38-13 76 0v10q-38-13-76 0Z" /><path className="pm-domain-art__accent" d="M90 22l-10 10h20Z" /></g>}
+            {id === 'diploma' && <g {...common}><path d="M19 89h143M35 89V28h110v61M47 40h86M47 52h59M47 64h72M31 19h118M41 14v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6" /><circle cx="128" cy="65" r="18" /><path className="pm-domain-art__accent" d="M128 50v30m-15-15h30" /><path d="M118 83l-5 17 15-7 15 7-5-17" /></g>}
         </svg>
     );
 }

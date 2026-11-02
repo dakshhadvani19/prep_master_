@@ -8,9 +8,10 @@ PrepMaster is a student examination-preparation product. The student-facing jour
 
 - Canvas: retain the existing near-black --bg-primary (#0f1115) and charcoal surface tokens.
 - Surfaces: use layered charcoal, semi-translucent fills, restrained backdrop blur, a fine upper light edge and soft depth. Keep text-bearing surfaces opaque enough to preserve contrast.
-- Brand emphasis: retain warm amber --gold (#ffb454) and --gold-bright (#ffd08a) for the study-desk motif, selected states and primary action. White is the main heading/action text; existing muted greys carry supporting text.
-- Existing global blue and violet tokens are not redefined. This student catalog direction uses the established warm gold locally; unrelated exam generation and Test Room screens keep their current visual treatment.
-- Type: keep the existing Inter interface family. Use weight, scale, line length and leading to create hierarchy rather than adding display fonts.
+- Brand emphasis: the student homepage now uses a white-first object palette over the unchanged graphite canvas. The exam paper, answer sheet, pencil, department line illustrations, headings and primary action are white or cool-neutral. Keep warm amber --gold (#ffb454) and --gold-bright (#ffd08a) for small illustration details, fine edge highlights, focus accents and reflected glow/shadows; do not turn large objects or text into gold surfaces.
+- Scope: this white-dominant treatment applies only to the homepage hero, department illustrations/cards and homepage contact section. The course explorer, semester/subject catalog, exam configuration, Test Room and admin screens retain their established colors.
+- Existing global blue and violet tokens are not redefined. The homepage's gold is a local light/shadow accent, not a new global action color.
+- Type: keep the existing Inter interface family. Use an Apple-informed hierarchy through readable 600–700 weights, measured tracking, compact display leading and clear body contrast; do not add a new font or imitate Apple's platform UI.
 - Radius: soft but differentiated. Larger rounded surfaces for cards, fully rounded compact actions, and smaller radii for nested controls.
 - Illustrations: preserve the custom exam-paper hero and six subject-specific line illustrations. They are PrepMaster-specific assets, not stock icons or generic AI-generated blobs.
 
