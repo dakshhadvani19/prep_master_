@@ -281,3 +281,12 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Generated theory rubrics require review. Complete MCQ sets with exam mark-total mismatches require acknowledgement.
 - ExamPortal now checks private published banks by subject/exam/question type/difficulty before Groq. The server creates the attempt and keeps MCQ answer keys/theory rubric data private; AI/syllabus generation remains the fallback. A real-bank smoke test awaits the first published bank.
 - See docs/ADMIN_COURSES_PHASE3_PROGRESS.md for parser constraints, migrations and verification.
+
+
+## Subject identity preservation and archive/restore — 2026-11-02
+
+- SubjectIds follow the documented CourseId + encoded official subject code + occurrence rule. Existing IDs are immutable once referenced.
+- Admin removal is implemented as a soft archive in private.subject_catalog_status. The public Subjects row is retained, so prior exam attempts, leaderboard references, question-bank links and TestId-prefix associations are not broken.
+- Re-adding the same course/code/occurrence/semester restores the original SubjectId. Active student catalog queries use the archive-aware RPC; ExamPortal, normal exam-attempt creation, published-bank attempt creation and Test Room creation reject archived subjects.
+- Live example: Diploma Computer Engineering / CourseId 44 / Computer Fundamental Skill / 09CE2101 / Semester 1 keeps SubjectId 44000935210101.
+- The live archive→restore transaction smoke test passed and was rolled back. The SubjectId remained exactly 44000935210101; no actual subject was removed during verification.
