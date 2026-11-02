@@ -20,7 +20,7 @@ function envFirst(...names) {
 }
 
 function serviceClient() {
-    const url = envFirst('SUPABASE_URL', 'VITE_SUPABASE_URL').replace(/\\/+$/, '');
+    const url = envFirst('SUPABASE_URL', 'VITE_SUPABASE_URL').replace(/\/+$/, '');
     let key = envFirst('SUPABASE_SERVICE_ROLE_KEY', 'SUPABASE_SECRET_KEY');
     if (!key) {
         try { key = JSON.parse(process.env.SUPABASE_SECRET_KEYS || '{}').default || ''; } catch { key = ''; }
@@ -48,7 +48,7 @@ function positiveInteger(value, label, allowZero = false) {
 }
 
 async function authenticateAdmin(req, client) {
-    const token = String(req.headers.authorization || '').match(/^Bearer\\s+(.+)$/i)?.[1];
+    const token = String(req.headers.authorization || '').match(/^Bearer\s+(.+)$/i)?.[1];
     if (!token) return { error: { status: 401, message: 'Sign in to edit subjects.' } };
     const { data, error } = await client.auth.getUser(token);
     const user = error ? null : data?.user;
@@ -129,7 +129,7 @@ async function addSubject(client, user, body) {
     const relativeObjectName = objectPath.startsWith(expectedPrefix)
         ? objectPath.slice(expectedPrefix.length)
         : '';
-    if (!/^[0-9a-f-]{36}\\.(pdf|docx)$/i.test(relativeObjectName) || extension !== file.extension) {
+    if (!/^[0-9a-f-]{36}\.(pdf|docx)$/i.test(relativeObjectName) || extension !== file.extension) {
         throw new UploadValidationError('The uploaded syllabus object path is invalid. Please select the file again.');
     }
 
