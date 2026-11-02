@@ -150,7 +150,6 @@ describe('admin subject management API', () => {
             p_course_id: 44,
             p_semester: 1,
             p_is_departmental: true,
-            p_subject_type: 'theory',
             p_syllabus_text: expect.stringContaining('Fundamentals of computing'),
             p_file_name: 'applied-computing.pdf',
             p_object_path: objectPath,
