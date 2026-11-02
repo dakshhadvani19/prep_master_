@@ -433,8 +433,7 @@
 }
 @media (prefers-reduced-motion: reduce) {
     .pm-home-refresh *,
-    .pm-catalog-page *,
-    .pm-domain-card::after {
+    .pm-catalog-page * {
         scroll-behavior: auto !important;
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
