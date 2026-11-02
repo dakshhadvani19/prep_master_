@@ -141,7 +141,7 @@ Applied queue-related Supabase migrations:
 
 The former selected-subject file-history panel is no longer part of the Admin Courses interface. Admins now follow Department → Course → Semester and then choose one of two actions: Add subject or Remove subject.
 
-- Add subject collects subject name, official subject code, departmental flag, subject type (Theory / Practical / Theory + Practical), and one PDF/DOCX syllabus.
+- Add subject collects subject name, official subject code, departmental flag, and one PDF/DOCX syllabus.
 - The browser uploads that file directly to the existing private `admin-course-files` bucket. The authenticated API verifies the admin, course/semester, object ownership/path and exact byte count, then extracts readable text with the existing PDF.js/Mammoth utilities.
 - The full extracted syllabus text (up to the existing 30,000-character limit) and the additional subject code/type metadata are stored in `private.subject_catalog_metadata`. The canonical public `Subjects` row and an active syllabus upload-history record are inserted in one database transaction.
 - Existing public `Courses`, `Subjects`, and `TestsData` column definitions remain unchanged. The prior upload history/queue backend is retained for historical records, but its old multi-stage uploader is removed from the Admin Courses screen.
