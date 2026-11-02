@@ -1,6 +1,6 @@
 /**
  * Student catalog: Department → Courses → Subjects → Semester.
- * Catalog pages read public."Courses" / public."Subjects" (never the full mockData.js tree).
+ * Catalog pages read public."Courses" and active subjects through the catalog RPC (never the full mockData.js tree).
  */
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
@@ -128,10 +128,9 @@ describe('course → subjects', () => {
     ];
     renderSubjects(1);
     await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
-    const subjectSelects = callsTo('select:Subjects');
-    expect(subjectSelects.length).toBe(1);
-    expect(subjectSelects[0].cols).toBe('SubjectId,SubjectName,CourseId,Semester,isDepartmentalSubject');
-    expect(subjectSelects[0].filters.CourseId).toBe(1);
+    const subjectLists = callsTo('rpc:pm_catalog_subjects_for_course');
+    expect(subjectLists.length).toBe(1);
+    expect(subjectLists[0].args.p_course_id).toBe(1);
     fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
     expect(screen.getByText('Mathematics-I')).toBeTruthy();
     expect(screen.queryByText('Should not appear')).toBeNull();
@@ -228,7 +227,7 @@ describe('department course order + source CourseId', () => {
     ];
     renderSubjects('btech-ce');
     await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
-    expect(callsTo('select:Subjects')[0].filters.CourseId).toBe(1);
+    expect(callsTo('rpc:pm_catalog_subjects_for_course')[0].args.p_course_id).toBe(1);
   });
 });
 
