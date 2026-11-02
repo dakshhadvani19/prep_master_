@@ -54,3 +54,16 @@ The API was hardened to:
 Code was committed to the main branch in commits `40993a5`, `8f0c968`, `2f9a22f`, `ff96206` and `c22daa9`. The final code revision is `c22daa96315468e8062524af572cb9d863df240b`.
 
 **Verification status:** the final revision's Vercel production deployment was still building at the time of this update. A real authenticated syllabus upload has not yet been rerun, so end-to-end success must be confirmed by retrying the same upload after the final deployment is ready.
+
+## 2026-11-02 production 500 follow-up
+
+The admin upload screen continued to show HTTP 500 responses for both upload-history GET and upload-start POST after the previous ESM-extension hardening. Vercel confirmed that the current production alias was serving commit `7fae4bd` and the deployment was READY; the available Hobby runtime-error/log views did not return matching request records, so the failing request's stack trace was not available.
+
+A focused API startup-isolation change was committed in `c1f8045`:
+- Removed the eager static import of `src/utils/subjectExamPolicy.js` from the upload API entrypoint.
+- Load the existing canonical exam-policy module only within question-bank upload validation and question-bank publication actions.
+- Syllabus upload start and upload-history reads no longer need to initialize the exam-blueprint import chain.
+
+This change preserves the shared exam-policy implementation and does not change API contracts, database schema, storage permissions, or question-bank rules.
+
+**Verification status:** code committed to `main`. Automated tests and a fresh production upload/history smoke test have not yet been run after this change. Do not treat the 500 as resolved until the new Vercel deployment is READY and the same subject's history GET plus syllabus upload-start request are confirmed successful.
