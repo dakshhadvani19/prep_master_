@@ -136,6 +136,21 @@ describe('course → subjects', () => {
     expect(screen.queryByText('Should not appear')).toBeNull();
   });
 
+  it('hides archived subjects from the active student catalog without deleting their rows', async () => {
+    seedEngineering();
+    state.catalogSubjects = [
+      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
+      { SubjectId: MATH_ID + 1, SubjectName: 'Archived subject', CourseId: 1, Semester: 1, is_active: false },
+    ];
+    renderSubjects(1);
+    await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
+    fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
+
+    expect(screen.getByText('Mathematics-I')).toBeTruthy();
+    expect(screen.queryByText('Archived subject')).toBeNull();
+    expect(callsTo('rpc:pm_catalog_subjects_for_course')[0].args.p_course_id).toBe(1);
+  });
+
   it('uses Course.Sems and Subjects.Semester returned by Supabase', async () => {
     seedEngineering();
     state.catalogCourses = [
