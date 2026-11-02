@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react';
-import { AlertCircle, BookOpen, CheckCircle2, FilePlus2, FileText, Trash2, UploadCloud } from 'lucide-react';
+import { AlertCircle, BookOpen, CheckCircle2, FilePlus2, Trash2, UploadCloud } from 'lucide-react';
 import { supabase } from '../supabase.js';
 
 const BUCKET = 'admin-course-files';
