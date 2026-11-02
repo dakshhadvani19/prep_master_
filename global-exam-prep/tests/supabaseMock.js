@@ -337,7 +337,7 @@ export const client = {
       if (studentRows.length === 0) {
         return { data: null, error: { code: 'P0002', message: 'student_not_found' } };
       }
-      const isSpam = !Boolean(studentRows[0].studentIsSpam);
+      const isSpam = !studentRows[0].studentIsSpam;
       studentRows.forEach((row) => { row.studentIsSpam = isSpam; });
       const existingStudent = state.spamStudents.find((item) => String(item.studentId) === String(studentId));
       const student = {
