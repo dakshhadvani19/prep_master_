@@ -59,3 +59,11 @@ The Supabase security advisor lists the private upload table under “RLS enable
 - Show parsing issues and source-to-question reconciliation for admin review.
 - Batch/publish question-bank content only after explicit QA approval, with canonical SubjectId, CourseId, Semester and exam metadata.
 - Do not infer subject mappings from TestId, question text, or other legacy TestsData fields.
+
+## Production API follow-up — 2026-11-02
+
+After the existing deployment-hardening changes, the admin page still showed HTTP 500 responses for upload history and upload start. The current production alias was confirmed on a READY deployment, but Vercel Hobby log retention did not provide the request stack trace.
+
+Commit `c1f8045` removes the upload API's eager exam-policy import. The canonical exam policy is now dynamically loaded only for question-bank validation and publication; standard syllabus intake and file-history requests no longer initialize that module chain. This is a startup-isolation change only and leaves the API payloads, private storage flow, permissions, and database schema unchanged.
+
+Pending verification after deployment: targeted API/UI tests and a live authenticated upload-history GET plus syllabus start request. Phase 2 remains implemented; the new production 500 is not marked resolved until those checks pass.
