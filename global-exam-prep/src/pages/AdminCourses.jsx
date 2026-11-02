@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
     AlertCircle, ArrowLeft, BookOpen, Check, ChevronRight, Cpu, GraduationCap,
-    Layers3, LayoutGrid, BriefcaseBusiness, FlaskConical, Scale, Search, RefreshCw,
+    Layers3, LayoutGrid, BriefcaseBusiness, FlaskConical, Scale, Search, RefreshCw, X,
 } from 'lucide-react';
 import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain, resetCatalogCache } from '../utils/catalogApi';
 import AdminSubjectEditor from '../components/AdminSubjectEditor.jsx';
