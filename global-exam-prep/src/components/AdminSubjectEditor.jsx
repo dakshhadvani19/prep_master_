@@ -80,6 +80,7 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
 
         setBusy(true);
         let objectPath = '';
+        let apiSubmitted = false;
         try {
             const session = await getSession();
             const objectId = crypto.randomUUID();
@@ -95,6 +96,7 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
             if (storageError) throw new Error(storageError.message || 'The syllabus could not be uploaded.');
 
             setNotice('Syllabus uploaded. Extracting its text and saving the new subject…');
+            apiSubmitted = true;
             const result = await callAdminApi(session, {
                 action: 'add',
                 courseId: course.courseId,
@@ -118,8 +120,8 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
             setNotice('Subject added successfully. Its syllabus text was extracted and saved. Subject ID: ' + result.subjectId);
             await onChanged?.();
         } catch (requestError) {
-            if (objectPath) {
-                try { await supabase.storage.from(BUCKET).remove([objectPath]); } catch { /* API also cleans failed uploads. */ }
+            if (objectPath && !apiSubmitted) {
+                try { await supabase.storage.from(BUCKET).remove([objectPath]); } catch { /* Retry cleanup is safe if Storage is unavailable. */ }
             }
             setError(requestError.message || 'The subject could not be added.');
             setNotice('');
