@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { domains } from '../data/mockData';
 import { examPrompts } from '../data/examPrompts';
@@ -13,6 +13,8 @@ import { fetchSyllabus } from '../utils/syllabusStorage';
 import predictedSyllabus from '../data/predicted_ai_syllabus.json';
 import { Clock, AlertCircle, CheckCircle, ChevronLeft, ArrowRight, ArrowLeft, Upload, Cpu, BookOpen, FileText, X, Loader } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { supabase } from '../supabase.js';
+import { CATALOG_DOMAINS, mappingForCourseId } from '../utils/catalogApi.js';
 
 import { resolveSyllabus, validateSyllabusRecord } from '../utils/syllabusLoader';
 import { EXAM_CONFIG, normalizeExamType, fitContext, contentToString, buildBalancedObjectiveSource } from '../utils/contextFitter';
@@ -87,8 +89,75 @@ export default function ExamPortal() {
     const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
     const [networkWarning, setNetworkWarning] = useState(false);
 
-    // Numeric catalog SubjectIds resolve through the bridge; legacy source IDs still match mockData.
-    const subjectContext = findSubjectContext(domains, subjectId);
+    // Existing subjects resolve through the static bridge. Newly added numeric catalog
+    // subjects are resolved from the live Subjects/Courses tables instead.
+    const initialSubjectContext = useMemo(
+        () => findSubjectContext(domains, subjectId),
+        [subjectId],
+    );
+    const [liveCatalogSubject, setLiveCatalogSubject] = useState(null);
+    useEffect(() => {
+        let cancelled = false;
+        setLiveCatalogSubject(null);
+        if (initialSubjectContext.kind !== 'unknown'
+            || !/^\\d+$/.test(String(subjectId || ''))
+            || !supabase) return () => { cancelled = true; };
+
+        (async () => {
+            const { data: subject, error: subjectError } = await supabase
+                .from('Subjects')
+                .select('SubjectId,SubjectName,CourseId,Semester,isDepartmentalSubject')
+                .eq('SubjectId', subjectId)
+                .maybeSingle();
+            if (cancelled || subjectError || !subject) return;
+
+            const { data: courseRow } = await supabase
+                .from('Courses')
+                .select('CourseId,CourseName')
+                .eq('CourseId', subject.CourseId)
+                .maybeSingle();
+            if (cancelled) return;
+
+            const mapping = mappingForCourseId(subject.CourseId);
+            const domain = CATALOG_DOMAINS.find(item => item.id === mapping?.domainId) || null;
+            setLiveCatalogSubject({
+                routeSubjectId: String(subjectId),
+                value: {
+                    kind: 'numeric',
+                    numericSubjectId: Number(subject.SubjectId),
+                    sourceSubjectId: String(subject.SubjectId),
+                    courseId: Number(subject.CourseId),
+                    courseSourceId: mapping?.courseSourceId || null,
+                    sem: Number(subject.Semester),
+                    isDepartmentalSubject: subject.isDepartmentalSubject === true,
+                    subject: {
+                        id: String(subject.SubjectId),
+                        title: subject.SubjectName,
+                        sem: Number(subject.Semester),
+                        isDepartmentalSubject: subject.isDepartmentalSubject === true,
+                        exams: subject.isDepartmentalSubject ? ['mid-1', 'mid-2'] : ['mid-1', 'mid-2', 'final'],
+                    },
+                    course: {
+                        id: mapping?.courseSourceId || String(subject.CourseId),
+                        title: courseRow?.CourseName || 'Academic Course',
+                        subjects: [],
+                    },
+                    domain,
+                    liveCatalogOverride: true,
+                },
+            });
+        })().catch(error => {
+            console.warn('Could not resolve newly added subject from the live catalog:', error?.message || error);
+        });
+        return () => { cancelled = true; };
+    }, [initialSubjectContext, subjectId]);
+
+    const subjectContext = liveCatalogSubject?.routeSubjectId === String(subjectId)
+        ? liveCatalogSubject.value
+        : initialSubjectContext;
+    const subjectContextLoading = initialSubjectContext.kind === 'unknown'
+        && /^\\d+$/.test(String(subjectId || ''))
+        && liveCatalogSubject?.routeSubjectId !== String(subjectId);
     const subjectDetail = subjectContext.subject;
     const courseDetail = subjectContext.course;
     const domainDetail = subjectContext.domain;
@@ -219,10 +288,33 @@ export default function ExamPortal() {
                     }
                 }
 
-                // Resolve the syllabus record from the static dataset by subject code.
+                // Prefer the full text extracted and saved when an administrator adds a
+                // subject. Older catalog subjects continue to use the existing static dataset.
                 let syllabusRecord = null;
                 let syllabusSource = 'none';
+                if (subjectContext.kind === 'numeric' && subjectContext.numericSubjectId && supabase) {
+                    try {
+                        const { data: uploadedSyllabus, error: syllabusError } = await supabase.rpc(
+                            'pm_get_subject_syllabus',
+                            { p_subject_id: subjectContext.numericSubjectId },
+                        );
+                        if (!syllabusError && uploadedSyllabus?.syllabus_text?.trim()) {
+                            syllabusRecord = {
+                                chapters: [{
+                                    chapter_name: 'Administrator-provided syllabus',
+                                    content: uploadedSyllabus.syllabus_text,
+                                }],
+                            };
+                            syllabusSource = 'Admin-uploaded syllabus · ' + (uploadedSyllabus.source_file_name || 'saved text');
+                        }
+                    } catch (error) {
+                        console.warn('Could not load administrator-provided syllabus:', error?.message || error);
+                    }
+                }
+
+                // Resolve the syllabus record from the static dataset when no admin syllabus exists.
                 try {
+                    if (syllabusRecord) throw new Error('Administrator syllabus is already available.');
                     const branchName = courseDetail?.title?.replace(/^(B\.Tech|Diploma|BCA|MCA)\s*[-–:]\s*/i, '');
                     const resolved = await resolveSyllabus(sourceSubjectId, {
                         courseOrBranch: branchName,
