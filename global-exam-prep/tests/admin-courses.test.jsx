@@ -126,7 +126,7 @@ describe('admin subject and question locator — Phase 1', () => {
         expect(screen.getByRole('textbox', { name: /Subject name/ })).toBeInTheDocument();
         expect(screen.getByRole('textbox', { name: /Official subject code/ })).toBeInTheDocument();
         expect(screen.getByLabelText(/Departmental subject/)).toBeInTheDocument();
-        expect(screen.getByLabelText(/Subject type/)).toBeInTheDocument();
+        expect(screen.queryByLabelText(/Subject type/)).not.toBeInTheDocument();
         expect(screen.getByText(/Syllabus file/)).toBeInTheDocument();
         expect(screen.queryByText(/Question locator|Phase 3/i)).not.toBeInTheDocument();
     });
