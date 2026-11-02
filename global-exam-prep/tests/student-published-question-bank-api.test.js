@@ -10,7 +10,7 @@ function response() {
         json(value) { this.body = value; return this; }, end() { return this; }, setHeader() {} };
 }
 
-function clientMock() {
+function clientMock({ isActive = true } = {}) {
     const subject = { SubjectId: 411, SubjectName: 'Data Structures', CourseId: 90, Semester: 2, isDepartmentalSubject: false };
     const setId = 'set-30';
     const bank = {
@@ -23,6 +23,7 @@ function clientMock() {
         })),
     };
     const rpc = vi.fn(async (name, args) => {
+        if (name === 'pm_catalog_subject_is_active') return { data: isActive, error: null };
         if (name === 'pm_student_question_bank_candidates') return { data: { banks: [bank] }, error: null };
         if (name === 'pm_private_exam_data') return { data: { id: 'attempt-uuid', saved: args.p_payload }, error: null };
         if (name === 'pm_private_exam_tag_subject') return { data: { ok: true }, error: null };
@@ -58,10 +59,30 @@ describe('student published question-bank API', () => {
         expect(rpc).toHaveBeenCalledWith('pm_private_exam_tag_subject', { p_attempt_id: 'attempt-uuid', p_user_id: 'student-uid', p_subject_id: 411 });
     });
 
+    it('rejects a new attempt for an archived subject before checking its published banks', async () => {
+        const { client, rpc } = clientMock({ isActive: false });
+        createClient.mockReturnValue(client);
+        const res = response();
+
+        await handler({
+            method: 'POST',
+            url: '/api/exam-attempts',
+            headers: { authorization: 'Bearer student-token' },
+            body: { action: 'create_from_question_bank', catalogSubjectId: 411, examType: 'mid-2', difficulty: 'medium' },
+        }, res);
+
+        expect(res.statusCode).toBe(409);
+        expect(res.body.error).toMatch(/removed from the active catalog/i);
+        expect(rpc).not.toHaveBeenCalledWith('pm_student_question_bank_candidates', expect.anything());
+        expect(rpc).not.toHaveBeenCalledWith('pm_private_exam_data', expect.anything());
+    });
+
     it('returns not-found and does not create an attempt when no complete set exists', async () => {
         const { client, rpc } = clientMock();
-        rpc.mockImplementation(async name => name === 'pm_student_question_bank_candidates'
-            ? { data: { banks: [] }, error: null } : { data: null, error: null });
+        rpc.mockImplementation(async name => name === 'pm_catalog_subject_is_active'
+            ? { data: true, error: null }
+            : name === 'pm_student_question_bank_candidates'
+                ? { data: { banks: [] }, error: null } : { data: null, error: null });
         createClient.mockReturnValue(client);
         const res = response();
         await handler({ method: 'POST', url: '/api/exam-attempts', headers: { authorization: 'Bearer student-token' },
