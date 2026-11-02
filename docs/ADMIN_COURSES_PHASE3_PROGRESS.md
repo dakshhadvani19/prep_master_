@@ -78,7 +78,7 @@ The asynchronous worker handles Phase 2 source-file validation and text extracti
 
 ## Syllabus source for newly added subjects — 2026-11-02
 
-Admin subject creation now stores the full extracted syllabus text and the declared Theory / Practical / Theory + Practical type in the private subject metadata record. ExamPortal resolves newly created numeric subject IDs from the live catalog and calls `pm_get_subject_syllabus` before trying the static syllabus dataset. Existing published question-bank selection and answer-key handling are unchanged. The removed Admin Courses upload panel no longer exposes the Phase 3 parse/review/publish flow; its database/API artifacts are retained as legacy functionality so prior records are not dropped. The direct add flow does not auto-create or publish question banks.
+Admin subject creation stores the official subject code and full extracted syllabus text in the private subject metadata record. Departmental status remains on the canonical public `Subjects` row and is the only subject classification used by the exam rules. ExamPortal resolves newly created numeric subject IDs from the live catalog and calls `pm_get_subject_syllabus` before trying the static syllabus dataset. Existing published question-bank selection and answer-key handling are unchanged. The removed Admin Courses upload panel no longer exposes the Phase 3 parse/review/publish flow; its database/API artifacts are retained as legacy functionality so prior records are not dropped. The direct add flow does not auto-create or publish question banks.
 
 
 ## Archived subject handling — 2026-11-02
