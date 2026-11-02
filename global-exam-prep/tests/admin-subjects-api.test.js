@@ -38,7 +38,7 @@ function query(data) {
     return builder;
 }
 
-function adminClient({ rpcData = null } = {}) {
+function adminClient({ rpcData = null, subjectRows = [{ SubjectId: 44000000000001, Semester: 3 }] } = {}) {
     const fileBuffer = Buffer.from('valid syllabus text bytes');
     const rpc = vi.fn().mockResolvedValue({
         data: rpcData || {
@@ -55,7 +55,7 @@ function adminClient({ rpcData = null } = {}) {
     const from = vi.fn(table => {
         if (table === 'Admins') return query({ AdminId: 7 });
         if (table === 'Courses') return query({ CourseId: 44, Sems: [1, 2, 3] });
-        if (table === 'Subjects') return query([{ SubjectId: 44000000000001 }]);
+        if (table === 'Subjects') return query(subjectRows);
         throw new Error('Unexpected table: ' + table);
     });
     const download = vi.fn().mockResolvedValue({
@@ -158,6 +158,64 @@ describe('admin subject management API', () => {
         }));
     });
 
+    it('restores Computer Fundamental Skill with its original SubjectId after archival', async () => {
+        const originalId = '44000935210101';
+        const { client, rpc, fileBuffer } = adminClient({
+            subjectRows: [{ SubjectId: Number(originalId), Semester: 1 }],
+            rpcData: {
+                restored: true,
+                subject: {
+                    SubjectId: Number(originalId),
+                    SubjectName: 'Computer Fundamental Skill',
+                    CourseId: 44,
+                    Semester: 1,
+                    isDepartmentalSubject: true,
+                },
+            },
+        });
+        createClient.mockReturnValue(client);
+        validateUploadMetadata.mockReturnValue({
+            fileName: 'computer-fundamental-skill.pdf',
+            extension: 'pdf',
+            mimeType: 'application/pdf',
+            sizeBytes: fileBuffer.length,
+        });
+        const objectPath = 'subjects/new/admin-auth-uid/123e4567-e89b-12d3-a456-426614174001.pdf';
+        const res = response();
+
+        await handler({
+            method: 'POST',
+            headers: { authorization: 'Bearer verified-admin-token' },
+            body: {
+                action: 'add',
+                courseId: 44,
+                semester: 1,
+                subjectName: 'Computer Fundamental Skill',
+                subjectCode: '09CE2101',
+                isDepartmentalSubject: true,
+                subjectType: 'theory',
+                fileName: 'computer-fundamental-skill.pdf',
+                mimeType: 'application/pdf',
+                sizeBytes: fileBuffer.length,
+                objectPath,
+            },
+        }, res);
+
+        expect(res.statusCode).toBe(201);
+        expect(res.body).toMatchObject({
+            ok: true,
+            restored: true,
+            subjectId: originalId,
+            subjectName: 'Computer Fundamental Skill',
+        });
+        expect(rpc).toHaveBeenCalledWith('pm_admin_subject_create', expect.objectContaining({
+            p_subject_id: originalId,
+            p_subject_code: '09CE2101',
+            p_course_id: 44,
+            p_semester: 1,
+        }));
+    });
+
     it('rejects a course-semester mismatch before downloading or writing', async () => {
         const { client, rpc, download } = adminClient();
         client.from.mockImplementation(table => (
@@ -189,12 +247,13 @@ describe('admin subject management API', () => {
         expect(rpc).not.toHaveBeenCalled();
     });
 
-    it('removes an eligible subject and its stored file objects', async () => {
+    it('archives a subject without deleting its stored syllabus history', async () => {
         const { client, rpc, remove } = adminClient();
         rpc.mockResolvedValue({
             data: {
                 subject_id: 44000935310201,
-                object_paths: ['subjects/44000935310201/syllabus.pdf'],
+                archived: true,
+                object_paths: [],
             },
             error: null,
         });
@@ -213,13 +272,13 @@ describe('admin subject management API', () => {
         }, res);
 
         expect(res.statusCode).toBe(200);
-        expect(res.body).toMatchObject({ ok: true, subjectId: '44000935310201', storageCleanupWarning: false });
+        expect(res.body).toMatchObject({ ok: true, subjectId: '44000935310201', archived: true, storageCleanupWarning: false });
         expect(rpc).toHaveBeenCalledWith('pm_admin_subject_remove', {
             p_admin_auth_uid: 'admin-auth-uid',
             p_subject_id: 44000935310201,
             p_course_id: 44,
             p_semester: 1,
         });
-        expect(remove).toHaveBeenCalledWith(['subjects/44000935310201/syllabus.pdf']);
+        expect(remove).not.toHaveBeenCalled();
     });
 });
