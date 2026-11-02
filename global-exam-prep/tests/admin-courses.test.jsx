@@ -8,6 +8,20 @@ const catalogMocks = vi.hoisted(() => ({
     fetchCourseAndSubjects: vi.fn(),
 }));
 
+const supabaseMocks = vi.hoisted(() => ({
+    getSession: vi.fn(),
+    from: vi.fn(),
+    upload: vi.fn(),
+    remove: vi.fn(),
+}));
+
+vi.mock('../src/supabase.js', () => ({
+    supabase: {
+        auth: { getSession: supabaseMocks.getSession },
+        storage: { from: supabaseMocks.from },
+    },
+}));
+
 vi.mock('../src/utils/catalogApi', async importOriginal => {
     const actual = await importOriginal();
     return {
@@ -38,6 +52,16 @@ function renderAdmin() {
 
 beforeEach(() => {
     vi.clearAllMocks();
+    supabaseMocks.getSession.mockResolvedValue({
+        data: { session: { access_token: 'admin-token', user: { id: 'admin-user' } } },
+        error: null,
+    });
+    supabaseMocks.from.mockReturnValue({
+        upload: supabaseMocks.upload,
+        remove: supabaseMocks.remove,
+    });
+    supabaseMocks.upload.mockResolvedValue({ error: null });
+    supabaseMocks.remove.mockResolvedValue({ error: null });
     catalogMocks.fetchCoursesForDomain.mockImplementation(async domainId => ({
         domain: { id: domainId, title: 'Engineering & Technology' },
         courses: domainId === 'engineering' ? [course] : [],
