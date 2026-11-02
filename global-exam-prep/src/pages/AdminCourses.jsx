@@ -2,11 +2,10 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
     AlertCircle, ArrowLeft, BookOpen, Check, ChevronRight, Cpu, GraduationCap,
-    Layers3, LayoutGrid, BriefcaseBusiness, FlaskConical, Scale, Search, RefreshCw, X,
+    Layers3, LayoutGrid, BriefcaseBusiness, FlaskConical, Scale, Search, RefreshCw,
 } from 'lucide-react';
-import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain } from '../utils/catalogApi';
-import { getExamTypesForSubject, getSubjectExamInfo } from '../utils/subjectExamPolicy';
-import AdminCourseUploads from '../components/AdminCourseUploads.jsx';
+import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain, resetCatalogCache } from '../utils/catalogApi';
+import AdminSubjectEditor from '../components/AdminSubjectEditor.jsx';
 import './AdminCourses.css';
 
 const DOMAIN_ICONS = {
@@ -21,7 +20,7 @@ const STEPS = [
     { id: 'department', label: 'Department' },
     { id: 'course', label: 'Course' },
     { id: 'semester', label: 'Semester' },
-    { id: 'subject', label: 'Subject' },
+    { id: 'subject', label: 'Edit subjects' },
 ];
 
 function normalizeSemesterList(values) {
@@ -66,9 +65,7 @@ export default function AdminCourses() {
     const [course, setCourse] = useState(null);
     const [subjects, setSubjects] = useState([]);
     const [semester, setSemester] = useState(null);
-    const [subjectId, setSubjectId] = useState(null);
     const [courseSearch, setCourseSearch] = useState('');
-    const [subjectSearch, setSubjectSearch] = useState('');
     const [coursesLoading, setCoursesLoading] = useState(false);
     const [subjectsLoading, setSubjectsLoading] = useState(false);
     const [coursesError, setCoursesError] = useState('');
@@ -76,7 +73,6 @@ export default function AdminCourses() {
     const [retryKey, setRetryKey] = useState(0);
 
     const domain = CATALOG_DOMAINS.find(item => item.id === domainId) || null;
-    const selectedSubject = subjects.find(item => String(item.subjectId) === String(subjectId)) || null;
     const semesters = useMemo(() => normalizeSemesterList(course?.sems), [course?.sems]);
 
     const filteredCourses = useMemo(() => {
@@ -87,15 +83,6 @@ export default function AdminCourses() {
     const semesterSubjects = useMemo(() => (
         semester === null ? [] : subjects.filter(item => Number(item.sem) === Number(semester))
     ), [subjects, semester]);
-
-    const filteredSubjects = useMemo(() => {
-        const query = subjectSearch.trim().toLowerCase();
-        return semesterSubjects
-            .filter(item => !query
-                || item.subjectName.toLowerCase().includes(query)
-                || String(item.subjectId).includes(query))
-            .sort((a, b) => a.subjectName.localeCompare(b.subjectName));
-    }, [semesterSubjects, subjectSearch]);
 
     useEffect(() => {
         if (!domainId) return undefined;
@@ -138,9 +125,7 @@ export default function AdminCourses() {
         setCourses([]);
         setSemester(null);
         setSubjects([]);
-        setSubjectId(null);
         setCourseSearch('');
-        setSubjectSearch('');
         setCoursesError('');
         setCoursesLoading(true);
         setStep('course');
@@ -176,6 +161,22 @@ export default function AdminCourses() {
         setRetryKey(value => value + 1);
     }
 
+    async function refreshSubjectData() {
+        resetCatalogCache();
+        setSubjectsLoading(true);
+        setSubjectsError('');
+        try {
+            const result = await fetchCourseAndSubjects(courseId);
+            if (result.error) throw result.error;
+            setCourse(result.course);
+            setSubjects(result.subjects || []);
+        } catch (error) {
+            setSubjectsError(error?.message || 'The updated subject catalog could not be loaded.');
+        } finally {
+            setSubjectsLoading(false);
+        }
+    }
+
     function resetLocator() {
         setStep('department');
         setDomainId(null);
@@ -196,7 +197,7 @@ export default function AdminCourses() {
         domain?.title,
         course?.courseName,
         semester === null ? null : (semester === 0 ? 'Semester 0' : 'Semester ' + semester),
-        selectedSubject?.subjectName,
+        step === 'subject' ? 'Edit subjects' : null,
     ];
 
     return (
@@ -204,8 +205,8 @@ export default function AdminCourses() {
             <header className="ac-hero">
                 <div className="ac-hero__copy">
                     <div className="ac-kicker">ADMIN · COURSE CATALOG</div>
-                    <h1>Subject &amp; Question Locator</h1>
-                    <p>Browse the full academic catalog by department, course, semester and subject.</p>
+                    <h1>Edit subjects</h1>
+                    <p>Add a subject with its syllabus or remove a subject from the selected semester.</p>
                 </div>
                 <div className="ac-hero__actions">
                     <Link to="/dashboard" className="ac-btn ac-btn--secondary"><ArrowLeft size={16} /> Dashboard</Link>
@@ -302,82 +303,31 @@ export default function AdminCourses() {
 
                     {step === 'subject' && (
                         <div className="ac-stage animate-fade-in">
-                            <StageHeading eyebrow="STEP 4 · SUBJECT" title={semester === 0 ? 'Semester 0 subjects' : 'Semester ' + semester + ' subjects'} description={(course?.courseName || 'Selected course') + ' · Search by subject name or numeric Subject ID.'} count={filteredSubjects.length} />
+                            <StageHeading
+                                eyebrow="STEP 4 · SUBJECT MANAGEMENT"
+                                title={semester === 0 ? 'Edit semester 0 subjects' : 'Edit semester ' + semester + ' subjects'}
+                                description={(course?.courseName || 'Selected course') + ' · Add a new subject with its syllabus or remove an eligible subject.'}
+                                count={semesterSubjects.length}
+                            />
                             <div className="ac-toolbar">
-                                <label className="ac-search"><Search size={17} /><input value={subjectSearch} onChange={event => setSubjectSearch(event.target.value)} placeholder="Search subjects or Subject ID…" aria-label="Search subjects" />
-                                    {subjectSearch && <button type="button" aria-label="Clear subject search" onClick={() => setSubjectSearch('')}><X size={15} /></button>}
-                                </label>
-                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => setStep('semester')}><ArrowLeft size={15} /> Semesters</button>
+                                <span className="ac-context-label">{domain?.title} · {course?.courseName} · Semester {semester}</span>
+                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => setStep('semester')}><ArrowLeft size={15} /> Change semester</button>
                             </div>
                             {subjectsLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading subjects…</div>
                                 : subjectsError ? <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
-                                    : <div className={'ac-subject-layout' + (selectedSubject ? ' has-selection' : '')}>
-                                        <div className="ac-subject-list">
-                                            {filteredSubjects.length === 0
-                                                ? <div className="ac-empty-state"><BookOpen size={26} /><strong>No subjects found</strong><span>{semesterSubjects.length ? 'Try a different search.' : 'No subjects are linked to this semester in the live catalog.'}</span></div>
-                                                : filteredSubjects.map(item => (
-                                                    <button type="button" key={item.subjectId} className={'ac-subject-row' + (String(subjectId) === String(item.subjectId) ? ' is-selected' : '')} onClick={() => setSubjectId(item.subjectId)} aria-pressed={String(subjectId) === String(item.subjectId)}>
-                                                        <span className="ac-subject-row__mark"><BookOpen size={17} /></span>
-                                                        <span className="ac-subject-row__copy"><strong>{item.subjectName}</strong><small>Subject ID · {item.subjectId}</small></span>
-                                                        <span className={'ac-subject-row__type' + (item.isDepartmentalSubject ? ' is-departmental' : '')}>{item.isDepartmentalSubject ? 'Departmental' : 'Non-departmental'}</span>
-                                                        <ChevronRight size={17} className="ac-subject-row__arrow" />
-                                                    </button>
-                                                ))}
-                                        </div>
-                                        <aside className="ac-subject-detail" aria-label="Selected subject details">
-                                            {selectedSubject ? (
-                                                <>
-                                                    <div className="ac-detail-heading"><span className="ac-detail-icon"><BookOpen size={21} /></span><div><span className="ac-eyebrow">SELECTED SUBJECT</span><h3>{selectedSubject.subjectName}</h3></div></div>
-                                                    <dl className="ac-detail-meta">
-                                                        <div><dt>Subject ID</dt><dd>{selectedSubject.subjectId}</dd></div>
-                                                        <div><dt>Course ID</dt><dd>{selectedSubject.courseId}</dd></div>
-                                                        <div><dt>Semester</dt><dd>{selectedSubject.sem}</dd></div>
-                                                        <div><dt>Subject type</dt><dd>{selectedSubject.isDepartmentalSubject ? 'Departmental' : 'Non-departmental'}</dd></div>
-                                                    </dl>
-                                                    <section className="ac-exam-types">
-                                                        <h4>Applicable exam types</h4>
-                                                        <div className="ac-exam-type-list">
-                                                            {getExamTypesForSubject(selectedSubject.isDepartmentalSubject).map(type => {
-                                                                const info = getSubjectExamInfo(type, selectedSubject.isDepartmentalSubject);
-                                                                if (!info) return null;
-                                                                return (
-                                                                    <div className="ac-exam-type" key={type}>
-                                                                        <span><strong>{info.title}</strong><small>{info.type === 'objective' ? 'MCQ' : 'Theory'} · {info.totalMarks}M · {info.timeMinutes} min</small></span>
-                                                                        <Check size={16} />
-                                                                    </div>
-                                                                );
-                                                            })}
-                                                        </div>
-                                                    </section>
-                                                    <section className="ac-question-locator">
-                                                        <div className="ac-question-locator__heading"><Layers3 size={18} /><h4>Question locator</h4><span>Phase 3</span></div>
-                                                        <p>The subject is identified. Current TestsData rows do not carry Course ID, Subject ID or Semester, so this screen will not attach unrelated question papers to this subject.</p>
-                                                        <div className="ac-question-locator__target"><span>INGESTION TARGET</span><strong>{selectedSubject.subjectId} · Sem {selectedSubject.sem}</strong><small>{selectedSubject.subjectName}</small></div>
-                                                        <p className="ac-question-locator__next">Phase 3 will create the canonical question-bank index during validated file ingestion.</p>
-                                                    </section>
-                                                    <AdminCourseUploads
-                                                        key={selectedSubject.subjectId}
-                                                        subject={{
-                                                            subjectId: selectedSubject.subjectId,
-                                                            courseId: selectedSubject.courseId,
-                                                            semester: selectedSubject.sem,
-                                                            isDepartmentalSubject: selectedSubject.isDepartmentalSubject,
-                                                        }}
-                                                        examTypes={getExamTypesForSubject(selectedSubject.isDepartmentalSubject)}
-                                                    />
-                                                </>
-                                            ) : (
-                                                <div className="ac-detail-empty"><BookOpen size={28} /><strong>Select a subject</strong><span>Its catalog identity, exam eligibility and question-bank target will appear here.</span></div>
-                                            )}
-                                        </aside>
-                                    </div>}
+                                    : course && <AdminSubjectEditor
+                                        course={course}
+                                        semester={semester}
+                                        subjects={semesterSubjects}
+                                        onChanged={refreshSubjectData}
+                                    />}
                         </div>
                     )}
                 </section>
 
             <footer className="ac-footer">
-                <span><span className="ac-footer__dot" /> Live catalog · Read-only Phase 1 locator</span>
-                <span>Departments → Courses → Semesters → Subjects</span>
+                <span><span className="ac-footer__dot" /> Live catalog · Subject management</span>
+                <span>Department → Course → Semester → Add / Remove Subject</span>
             </footer>
         </main>
     );
