@@ -152,7 +152,7 @@ describe('admin subject and question locator — Phase 1', () => {
         await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
         const request = JSON.parse(fetchMock.mock.calls[0][1].body);
         expect(request).toMatchObject({ action: 'remove', subjectId: 103, courseId: 1, semester: 1 });
-        expect(await screen.findByText('Subject removed from the live catalog.')).toBeInTheDocument();
+        expect(await screen.findByText('Subject archived from the active catalog. Its Subject ID, exam attempts, results and question-bank history are preserved.')).toBeInTheDocument();
     });
 
     it('exposes a retry state when catalog reads fail', async () => {
