@@ -117,7 +117,9 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
             setSubjectType('theory');
             setSyllabusFile(null);
             if (fileInputRef.current) fileInputRef.current.value = '';
-            setNotice('Subject added successfully. Its syllabus text was extracted and saved. Subject ID: ' + result.subjectId);
+            setNotice(result.restored
+                ? 'Subject restored. Its original Subject ID and historical records are preserved: ' + result.subjectId
+                : 'Subject added successfully. Its syllabus text was extracted and saved. Subject ID: ' + result.subjectId);
             await onChanged?.();
         } catch (requestError) {
             if (objectPath && !apiSubmitted) {
@@ -145,9 +147,7 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
             });
             setRemoveId('');
             setConfirmRemove(false);
-            setNotice(result.storageCleanupWarning
-                ? 'Subject removed. Some old file objects need storage cleanup.'
-                : 'Subject removed from the live catalog.');
+            setNotice('Subject archived from the active catalog. Its Subject ID, exam attempts, results and question-bank history are preserved.');
             await onChanged?.();
         } catch (requestError) {
             setError(requestError.message || 'The subject could not be removed.');
