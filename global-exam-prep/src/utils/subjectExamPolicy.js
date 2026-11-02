@@ -1,4 +1,4 @@
-import { DEFAULT_EXAM_TYPES, examPrompts } from '../data/examPrompts';
+import { DEFAULT_EXAM_TYPES, examPrompts } from '../data/examPrompts.js';
 
 const DEPARTMENTAL_EXAM_TYPES = ['mid-1', 'mid-2'];
 
