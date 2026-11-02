@@ -96,12 +96,17 @@ export default function ExamPortal() {
         [subjectId],
     );
     const [liveCatalogSubject, setLiveCatalogSubject] = useState(null);
+    const [liveCatalogLookupDone, setLiveCatalogLookupDone] = useState(false);
     useEffect(() => {
         let cancelled = false;
         setLiveCatalogSubject(null);
+        setLiveCatalogLookupDone(false);
         if (initialSubjectContext.kind !== 'unknown'
-            || !/^\\d+$/.test(String(subjectId || ''))
-            || !supabase) return () => { cancelled = true; };
+            || !/^\d+$/.test(String(subjectId || ''))
+            || !supabase) {
+            setLiveCatalogLookupDone(true);
+            return () => { cancelled = true; };
+        }
 
         (async () => {
             const { data: subject, error: subjectError } = await supabase
@@ -148,6 +153,8 @@ export default function ExamPortal() {
             });
         })().catch(error => {
             console.warn('Could not resolve newly added subject from the live catalog:', error?.message || error);
+        }).finally(() => {
+            if (!cancelled) setLiveCatalogLookupDone(true);
         });
         return () => { cancelled = true; };
     }, [initialSubjectContext, subjectId]);
@@ -156,8 +163,8 @@ export default function ExamPortal() {
         ? liveCatalogSubject.value
         : initialSubjectContext;
     const subjectContextLoading = initialSubjectContext.kind === 'unknown'
-        && /^\\d+$/.test(String(subjectId || ''))
-        && liveCatalogSubject?.routeSubjectId !== String(subjectId);
+        && /^\d+$/.test(String(subjectId || ''))
+        && !liveCatalogLookupDone;
     const subjectDetail = subjectContext.subject;
     const courseDetail = subjectContext.course;
     const domainDetail = subjectContext.domain;
@@ -251,6 +258,10 @@ export default function ExamPortal() {
         // Intentionally minimal: sync handled in ActiveExamInterface.
     }, [examState, attemptId, isOnline]);
 
+    if (subjectContextLoading) {
+        return <div className="container" role="status" style={{ textAlign: 'center', marginTop: '4rem' }}>Loading subject details…</div>;
+    }
+
     if (!examInfo || !subjectDetail) {
         return <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }}><h2>Exam details not found</h2></div>;
     }
@@ -313,8 +324,8 @@ export default function ExamPortal() {
                 }
 
                 // Resolve the syllabus record from the static dataset when no admin syllabus exists.
-                try {
-                    if (syllabusRecord) throw new Error('Administrator syllabus is already available.');
+                if (!syllabusRecord) {
+                    try {
                     const branchName = courseDetail?.title?.replace(/^(B\.Tech|Diploma|BCA|MCA)\s*[-–:]\s*/i, '');
                     const resolved = await resolveSyllabus(sourceSubjectId, {
                         courseOrBranch: branchName,
@@ -333,6 +344,7 @@ export default function ExamPortal() {
                     }
                 } catch (err) {
                     console.warn('Could not load syllabus from dataset:', err.message);
+                }
                 }
 
                 if (!syllabusRecord) {
