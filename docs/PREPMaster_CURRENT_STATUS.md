@@ -302,7 +302,7 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 
 - Refined the student homepage and catalog using the shared student design direction in DESIGN.md.
 - Retained the study-desk hero and all six discipline illustrations; the department grid now uses equal-sized cards at each responsive breakpoint.
-- Applied a softer, Liquid-Glass-inspired finish to student-facing interactive surfaces, with dark translucent fills, edge highlights, restrained blur and soft elevation. The content itself remains readable and the design falls back to opaque surfaces when backdrop filtering is unavailable.
+- Applied a clear, solid charcoal card treatment to the student-facing catalog: defined white edges, controlled depth, restrained gold selected states and no washed-out blur or reflection overlays.
 - Added a restrained Framer Motion language: clipped hero text reveal, staggered card entry, slight hover lift and press feedback. Reduced-motion preferences disable nonessential motion.
 - Restyled the department → course → semester → subject browsing surfaces. Course/subject fetching, catalog IDs, route paths, selection state and exam configuration behavior are preserved.
 - Test Room UI and exam generation/configuration UI remain outside this visual change.
@@ -318,11 +318,13 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Verification: reviewed the exact source changes and documented scope. Local test/build and browser screenshot review were not available in the connected environment; runtime appearance remains unverified.
 
 
-## Homepage liquid-glass card refinement — 2026-11-02
 
-- Reworked the six academic-domain navigation cards from a harder charcoal slab into the homepage's primary glass control layer: softer 26px corners, more translucent layered charcoal, stronger backdrop blur/saturation, a broad soft elevation and subtle white/champagne reflections.
-- Added a slow, hover-only specular sweep and a gentle shift in the reflected light. The card itself now lifts less and compresses less on press; there is no perpetual animation or layout/route change.
-- Kept the contact cards as quieter standard content surfaces without stacked backdrop blur. The art frame remains a visual content layer rather than another glass panel.
-- Added opaque fallbacks for browsers without backdrop-filter, a reduced-transparency treatment, and stronger borders/surfaces for increased-contrast preferences.
-- Preserved the white-first / restrained-gold palette, six-card equal grid, illustrations, card copy, navigation routes, contact links, and like controls. No global palette tokens or course/exam/Test Room/admin screens changed.
-- Verification: source-level edits and selector/fallback presence were checked. Local test/build and browser screenshot inspection were not available through the connected repository session; visual rendering remains unverified.
+
+## Student catalog card clarity refinement — 2026-11-02
+
+- Reversed the homepage department-card Liquid-Glass experiment: removed the translucent layered fills, backdrop blur, radial reflections and moving specular sweep. The original card geometry and responsive grid are retained.
+- Applied the clearer surface treatment consistently to department cards, course cards, semester choices and subject rows: solid charcoal fills, stronger white edge definition, readable supporting text and controlled elevation.
+- Preserved the established squarish rounded-corner geometry for each card type. Hover states use a clearer surface and a restrained gold edge; selected semesters and expanded subjects use a solid warm-charcoal fill with a gold outline and the existing semantic aria state.
+- Restored the previous department-card hover lift/press response. Removed the inline blue semester-count text override so the selected-state label follows the white/gold card styling.
+- Contact cards, exam-type/mode/difficulty configuration, Test Room, exam-taking and admin screens remain unchanged. No global color tokens, routes, Supabase calls, or data flow were changed.
+- Verification: source-level selectors, contrast states, route attributes and responsive rules were checked. Local tests/build and browser screenshot inspection are not available in the connected repository session; runtime appearance remains unverified.

@@ -209,7 +209,7 @@ export default function SubjectDetails() {
                                 onClick={() => handleSemClick(sem)}
                                 >
                                 <span>Sem {sem}</span>
-                                <span style={{ fontSize: '0.72rem', color: isSelected ? 'var(--accent-primary)' : 'var(--text-tertiary)', fontWeight: 400 }}>
+                                <span style={{ fontSize: '0.72rem', fontWeight: 500 }}>
                                     {count} subject{count !== 1 ? 's' : ''}
                                 </span>
                             </button>
