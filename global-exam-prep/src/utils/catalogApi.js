@@ -13,7 +13,6 @@ import courseMapping from '../data/courseMapping.json';
 export { CATALOG_DOMAINS, getCatalogDomain };
 
 const COURSE_COLS = 'CourseId,CourseName,Sems';
-const SUBJECT_COLS = 'SubjectId,SubjectName,CourseId,Semester,isDepartmentalSubject';
 
 const coursesByDomain = new Map();
 const coursePages = new Map();
