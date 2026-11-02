@@ -1,11 +1,25 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ChevronLeft, GraduationCap, Clock, Loader, AlertCircle } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ChevronLeft, GraduationCap, Clock, Loader, AlertCircle, ArrowUpRight } from 'lucide-react';
 import { fetchCoursesForDomain, getCatalogDomain } from '../utils/catalogApi';
+
+const MotionLink = motion(Link);
+const smoothEase = [0.22, 1, 0.36, 1];
+
+const gridVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.065 } },
+};
+const cardVariants = {
+    hidden: { opacity: 0, y: 14, filter: 'blur(4px)' },
+    visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.58, ease: smoothEase } },
+};
 
 export default function CourseExplorer() {
     const { domainId } = useParams();
     const navigate = useNavigate();
+    const reduceMotion = useReducedMotion();
     const domainMeta = getCatalogDomain(domainId);
 
     const [courses, setCourses] = useState([]);
@@ -32,137 +46,77 @@ export default function CourseExplorer() {
     }, [domainId]);
 
     if (!domainMeta) {
-        return <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }}><h2>Domain not found</h2></div>;
+        return <div className="container pm-catalog-page pm-course-page" style={{ textAlign: 'center', marginTop: '4rem' }}><h2>Domain not found</h2></div>;
     }
 
     return (
-        <div className="container animate-fade-in">
-            <button
-                onClick={() => navigate(-1)}
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    color: 'var(--text-secondary)',
-                    marginBottom: '2rem',
-                    fontSize: '0.9rem'
-                }}
-            >
-                <ChevronLeft size={16} /> Back to Domains
+        <div className="container animate-fade-in pm-catalog-page pm-course-page">
+            <button className="pm-catalog-back" onClick={() => navigate(-1)}>
+                <ChevronLeft size={17} /> Back to Domains
             </button>
 
-            <header style={{ marginBottom: '3rem' }}>
-                <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>
-                    {domain?.title || domainMeta.title} <span className="text-gradient">Programs</span>
-                </h1>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px' }}>
+            <motion.header
+                className="pm-course-header"
+                initial={reduceMotion ? false : { opacity: 0, y: 16, filter: 'blur(5px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                transition={{ duration: 0.72, ease: smoothEase }}
+            >
+                <p className="pm-catalog-kicker">Your academic path</p>
+                <h1>{domain?.title || domainMeta.title} <span>Programs</span></h1>
+                <p className="pm-catalog-description">
                     Select your specific degree program to view subjects and prepare for your upcoming examinations.
                 </p>
-            </header>
+            </motion.header>
 
             {loading && (
-                <div data-testid="catalog-loading" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)' }}>
-                    <Loader size={22} className="spinner" style={{ color: 'var(--accent-primary)' }} />
-                    Loading courses…
+                <div data-testid="catalog-loading" className="pm-catalog-state">
+                    <Loader size={21} className="spinner" /> Loading courses…
                 </div>
             )}
 
             {!loading && error && (
-                <div data-testid="catalog-error" className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <AlertCircle size={22} style={{ color: '#ef4444', flexShrink: 0 }} />
+                <div data-testid="catalog-error" className="pm-catalog-message">
+                    <AlertCircle size={22} />
                     <div>
-                        <h3 style={{ marginBottom: '0.35rem' }}>Could not load courses</h3>
-                        <p style={{ color: 'var(--text-secondary)' }}>{error}</p>
+                        <h3>Could not load courses</h3>
+                        <p>{error}</p>
                     </div>
                 </div>
             )}
 
             {!loading && !error && courses.length === 0 && (
-                <div data-testid="catalog-empty" className="glass-panel" style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                <div data-testid="catalog-empty" className="pm-catalog-message pm-catalog-message--empty">
                     No courses are listed for this department yet.
                 </div>
             )}
 
             {!loading && !error && courses.length > 0 && (
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
-                    gap: '2rem'
-                }}>
-                    {courses.map(course => (
-                        <Link
-                            key={course.courseId}
-                            to={`/courses/${course.courseId}/subjects`}
-                            className="glass-panel"
-                            style={{
-                                padding: '2rem',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                transition: 'transform var(--transition-normal), box-shadow var(--transition-normal)',
-                                textDecoration: 'none'
-                            }}
-                            onMouseOver={e => {
-                                e.currentTarget.style.transform = 'translateY(-4px)';
-                                e.currentTarget.style.boxShadow = 'var(--shadow-lg)';
-                                e.currentTarget.style.borderColor = 'var(--accent-primary)';
-                            }}
-                            onMouseOut={e => {
-                                e.currentTarget.style.transform = 'translateY(0)';
-                                e.currentTarget.style.boxShadow = 'none';
-                                e.currentTarget.style.borderColor = 'var(--glass-border)';
-                            }}
+                <motion.div
+                    className="pm-course-grid"
+                    variants={gridVariants}
+                    initial={reduceMotion ? false : 'hidden'}
+                    animate="visible"
+                >
+                    {courses.map((courseItem) => (
+                        <MotionLink
+                            key={courseItem.courseId}
+                            to={'/courses/' + courseItem.courseId + '/subjects'}
+                            className="pm-course-card"
+                            variants={cardVariants}
+                            whileHover={reduceMotion ? undefined : { y: -5, scale: 1.008 }}
+                            whileTap={reduceMotion ? undefined : { scale: 0.99 }}
+                            transition={{ duration: 0.3, ease: smoothEase }}
                         >
-                            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
-                                <div style={{
-                                    background: 'rgba(59, 130, 246, 0.1)',
-                                    padding: '0.75rem',
-                                    borderRadius: 'var(--radius-md)',
-                                    color: 'var(--accent-primary)'
-                                }}>
-                                    <GraduationCap size={24} />
-                                </div>
-                                <span style={{
-                                    background: 'var(--bg-tertiary)',
-                                    padding: '0.25rem 0.75rem',
-                                    borderRadius: 'var(--radius-full)',
-                                    fontSize: '0.8rem',
-                                    color: 'var(--text-secondary)'
-                                }}>
-                                    {course.sems?.length || 0} Semesters
-                                </span>
+                            <div className="pm-course-card__top">
+                                <div className="pm-course-mark"><GraduationCap size={23} /></div>
+                                <span className="pm-course-count">{courseItem.sems?.length || 0} Semesters</span>
                             </div>
-
-                            <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{course.courseName}</h3>
-
-                            <div style={{
-                                display: 'flex',
-                                gap: '1rem',
-                                marginTop: 'auto',
-                                paddingTop: '1.5rem',
-                                color: 'var(--text-tertiary)',
-                                fontSize: '0.9rem'
-                            }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                                    <Clock size={16} /> 3 Exams / Subject
-                                </div>
-                            </div>
-
-                            <div style={{
-                                marginTop: '1.5rem',
-                                width: '100%',
-                                textAlign: 'center',
-                                padding: '0.75rem',
-                                background: 'var(--bg-tertiary)',
-                                borderRadius: 'var(--radius-md)',
-                                color: 'var(--accent-primary)',
-                                fontWeight: 500,
-                                transition: 'background var(--transition-fast)'
-                            }}>
-                                View Syllabus
-                            </div>
-                        </Link>
+                            <h2 className="pm-course-name">{courseItem.courseName}</h2>
+                            <div className="pm-course-card__meta"><Clock size={15} /> 3 Exams / Subject</div>
+                            <span className="pm-course-action">View syllabus <ArrowUpRight size={15} /></span>
+                        </MotionLink>
                     ))}
-                </div>
+                </motion.div>
             )}
         </div>
     );

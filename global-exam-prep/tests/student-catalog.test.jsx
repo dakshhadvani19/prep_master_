@@ -76,6 +76,9 @@ describe('homepage departments', () => {
       expect(document.body.textContent).toContain(d.title);
     }
     expect(CATALOG_DOMAINS).toHaveLength(6);
+    const departmentCards = document.querySelectorAll('.pm-domain-card');
+    expect(departmentCards).toHaveLength(6);
+    expect([...departmentCards].every((card) => card.classList.contains('pm-domain-card'))).toBe(true);
     const catalogReads = state.calls.filter((c) => c.table === 'Courses' || c.table === 'Subjects');
     expect(catalogReads).toEqual([]);
   }, 20000);
@@ -92,7 +95,9 @@ describe('department → courses', () => {
     expect(courseSelects[0].filters.CourseId).toEqual(ENG_IDS);
     expect(courseSelects[0].filters.CourseId).not.toContain(18);
     expect(screen.queryByText(/BCA/)).toBeNull();
-    expect(screen.getByRole('link', { name: /B.Tech - Computer Engineering/i }).getAttribute('href')).toBe('/courses/1/subjects');
+    const computerEngineeringLink = screen.getByRole('link', { name: /B.Tech - Computer Engineering/i });
+    expect(computerEngineeringLink.getAttribute('href')).toBe('/courses/1/subjects');
+    expect(computerEngineeringLink.classList.contains('pm-course-card')).toBe(true);
   });
 
   it('shows a loading state while courses are in flight', async () => {
@@ -166,8 +171,10 @@ describe('course → subjects', () => {
     expect(screen.getByRole('button', { name: /Sem 1/i })).toBeTruthy();
     expect(screen.getByRole('button', { name: /Sem 2/i })).toBeTruthy();
     expect(screen.getByRole('button', { name: /Sem 3/i })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Sem 1/i }).getAttribute('aria-pressed')).toBe('false');
 
     fireEvent.click(screen.getByRole('button', { name: /Sem 3/i }));
+    expect(screen.getByRole('button', { name: /Sem 3/i }).getAttribute('aria-pressed')).toBe('true');
     expect(screen.getByText('Database Systems')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
     expect(screen.getByText('Mathematics-I')).toBeTruthy();

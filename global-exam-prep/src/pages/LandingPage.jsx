@@ -1,11 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion, useReducedMotion } from 'framer-motion';
 import {
-    ArrowDown, ArrowUpRight, BookOpen, Check, Github, Heart, Instagram,
-    Linkedin, Mail, GraduationCap, FileText, PencilLine,
+    ArrowDown, ArrowUpRight, Check, Github, Heart, Instagram,
+    Linkedin, Mail,
 } from 'lucide-react';
 import { CATALOG_DOMAINS as domains } from '../data/catalogDomains';
 import './LandingPage.css';
+
+const MotionLink = motion(Link);
+const smoothEase = [0.22, 1, 0.36, 1];
+
+const heroSequence = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.12, delayChildren: 0.06 } },
+};
+const heroReveal = {
+    hidden: { opacity: 0, y: 18, filter: 'blur(8px)' },
+    visible: {
+        opacity: 1, y: 0, filter: 'blur(0px)',
+        transition: { duration: 0.82, ease: smoothEase },
+    },
+};
+const titleLine = {
+    hidden: { y: '112%', opacity: 0, filter: 'blur(9px)' },
+    visible: {
+        y: '0%', opacity: 1, filter: 'blur(0px)',
+        transition: { duration: 0.95, ease: smoothEase },
+    },
+};
+const cardSequence = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.075, delayChildren: 0.04 } },
+};
+const cardReveal = {
+    hidden: { opacity: 0, y: 16, filter: 'blur(4px)' },
+    visible: {
+        opacity: 1, y: 0, filter: 'blur(0px)',
+        transition: { duration: 0.65, ease: smoothEase },
+    },
+};
 
 function readSavedLike(key) {
     try {
@@ -69,7 +103,8 @@ function StudyDeskArtwork() {
             <g transform="rotate(35 523 430)" filter="url(#pm-paper-shadow)">
                 <rect x="511" y="342" width="17" height="126" rx="5" fill="#c18a46" />
                 <path d="M511 351h17M511 454h17" stroke="#f3c987" strokeWidth="2" />
-                <path d="M511 468l8.5 18 8.5-18Z" fill="#d8c1a0" /><path d="M517 480l2.5 6 2.5-6Z" fill="#35302a" />
+                <path d="M511 468l8.5 18 8.5-18Z" fill="#d8c1a0" />
+                <path d="M517 480l2.5 6 2.5-6Z" fill="#35302a" />
             </g>
             <g fill="#ffb454"><circle cx="100" cy="367" r="4" /><circle cx="555" cy="162" r="3" /></g>
             <path d="M85 390l16-16M85 374l16 16" stroke="#ffb454" strokeOpacity=".65" strokeWidth="1.5" strokeLinecap="round" />
@@ -83,7 +118,7 @@ function DomainArtwork({ id }) {
         <svg className="pm-domain-art" viewBox="0 0 180 120" aria-hidden="true">
             {id === 'engineering' && <g {...common}><path d="M12 60h36l15-15h31l13 13h61M48 60v31h22M94 45V18h24M120 58v35h42" /><rect x="60" y="34" width="33" height="29" rx="4" /><rect x="106" y="8" width="36" height="22" rx="3" /><rect x="116" y="82" width="30" height="23" rx="3" /><circle cx="48" cy="60" r="4" /><circle cx="120" cy="58" r="4" /><path d="M70 43v10m-5-5h10M125 19h18M125 24h11" /></g>}
             {id === 'computer-apps' && <g {...common}><rect x="15" y="12" width="110" height="72" rx="5" /><path d="M15 25h110M52 84v11m37-11v11M42 95h57M46 42l-9 9 9 9m21-18 9 9-9 9m18-1 7-16M137 37h28m-28 10h28m-28 10h28M142 29v39" /><circle cx="22" cy="19" r="2" /><circle cx="30" cy="19" r="2" /></g>}
-            {id === 'management' && <g {...common}><path d="M15 99h151M25 99V19h128v80M43 78V57h17v21M75 78V40h17v38M107 78V28h17v50M35 43l27-13 24 7 36-20 20 8M131 25l11 0-2-10M45 88h83" strokeDasharray="none" /></g>}
+            {id === 'management' && <g {...common}><path d="M15 99h151M25 99V19h128v80M43 78V57h17v21M75 78V40h17v38M107 78V28h17v50M35 43l27-13 24 7 36-20 20 8M131 25l11 0-2-10M45 88h83" /></g>}
             {id === 'science-pharmacy' && <g {...common}><path d="M69 13h39m-30 0v28L49 91q-4 8 7 8h66q11 0 7-9l-29-49V13M59 78h77M69 69q20-12 40 0 10 6 20 0" /><circle cx="44" cy="29" r="8" /><circle cx="24" cy="57" r="5" /><circle cx="49" cy="79" r="5" /><path d="M44 37l-17 16m23 4 2 17" /></g>}
             {id === 'law-arts' && <g {...common}><path d="M90 22v75M33 37h114M90 22l-10 10h20Z M47 37 29 73h36L47 37Zm86 0-18 36h36l-18-36Z M29 73q18 17 36 0m50 0q18 17 36 0M69 99h42M52 16q38-13 76 0v10q-38-13-76 0Z" /></g>}
             {id === 'diploma' && <g {...common}><path d="M19 89h143M35 89V28h110v61M47 40h86M47 52h59M47 64h72M31 19h118M41 14v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6" /><circle cx="128" cy="65" r="18" /><path d="M128 50v30m-15-15h30M118 83l-5 17 15-7 15 7-5-17" /></g>}
@@ -101,9 +136,17 @@ function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagr
                     <h3>{name}</h3>
                     <p className="pm-people-study">Diploma in Computer Engineering</p>
                 </div>
-                <button className="pm-people-like" type="button" aria-label={liked ? 'Remove appreciation' : 'Appreciate developer'} aria-pressed={liked} onClick={onLike}>
+                <motion.button
+                    className="pm-people-like"
+                    type="button"
+                    aria-label={liked ? 'Remove appreciation' : 'Appreciate developer'}
+                    aria-pressed={liked}
+                    onClick={onLike}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.18, ease: smoothEase }}
+                >
                     <Heart size={19} fill={liked ? 'currentColor' : 'none'} />
-                </button>
+                </motion.button>
             </div>
             <p className="pm-people-passion">{passion}</p>
             <div className="pm-people-links">
@@ -118,6 +161,7 @@ function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagr
 
 export default function LandingPage() {
     const location = useLocation();
+    const reduceMotion = useReducedMotion();
     const [liked, setLiked] = useState(() => readSavedLike('dev_liked'));
     const [liked2, setLiked2] = useState(() => readSavedLike('dev_liked_2'));
 
@@ -147,72 +191,140 @@ export default function LandingPage() {
     return (
         <main className="pm-home-refresh">
             <div className="pm-home-shell">
-                <section className="pm-home-hero" aria-labelledby="pm-home-title">
-                    <div className="pm-home-copy">
-                        <p className="pm-home-kicker">A clearer way to prepare</p>
-                        <h1 id="pm-home-title" className="pm-home-title">Make every study session <em>count.</em></h1>
-                        <p className="pm-home-description">
+                <motion.section
+                    className="pm-home-hero"
+                    aria-labelledby="pm-home-title"
+                    variants={heroSequence}
+                    initial={reduceMotion ? false : 'hidden'}
+                    animate="visible"
+                >
+                    <motion.div className="pm-home-copy" variants={heroSequence}>
+                        <motion.p className="pm-home-kicker" variants={heroReveal}>A clearer way to prepare</motion.p>
+                        <h1 id="pm-home-title" className="pm-home-title" aria-label="Make every study session count.">
+                            <span className="pm-title-line"><motion.span variants={titleLine} aria-hidden="true">Make every study session</motion.span></span>
+                            <span className="pm-title-line pm-title-line--accent"><motion.span variants={titleLine} aria-hidden="true">count.</motion.span></span>
+                        </h1>
+                        <motion.p className="pm-home-description" variants={heroReveal}>
                             Find your academic program, move through your semester and practise with exams shaped around your subject syllabus. Your next focused session starts here.
-                        </p>
-                        <div className="pm-home-actions">
-                            <a className="pm-home-primary" href="#programs">Explore academic programs <ArrowDown size={17} /></a>
-                            <Link className="pm-home-secondary" to="/test-rooms">Join a test room <ArrowUpRight size={16} /></Link>
-                        </div>
-                        <div className="pm-home-proof" aria-label="How PrepMaster is organised">
+                        </motion.p>
+                        <motion.div className="pm-home-actions" variants={heroReveal}>
+                            <motion.a
+                                className="pm-home-primary"
+                                href="#programs"
+                                whileHover={reduceMotion ? undefined : { y: -2, scale: 1.015 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
+                                transition={{ duration: 0.24, ease: smoothEase }}
+                            >
+                                Explore academic programs <ArrowDown size={17} />
+                            </motion.a>
+                            <MotionLink
+                                className="pm-home-secondary"
+                                to="/test-rooms"
+                                whileHover={reduceMotion ? undefined : { y: -2 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
+                                transition={{ duration: 0.24, ease: smoothEase }}
+                            >
+                                Join a test room <ArrowUpRight size={16} />
+                            </MotionLink>
+                        </motion.div>
+                        <motion.div className="pm-home-proof" aria-label="How PrepMaster is organised" variants={heroReveal}>
                             <span><Check size={15} /> 6 academic domains</span>
                             <span><Check size={15} /> Course-led catalog</span>
                             <span><Check size={15} /> Syllabus-based practice</span>
-                        </div>
-                    </div>
-                    <div className="pm-home-art-wrap"><StudyDeskArtwork /></div>
-                </section>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div
+                        className="pm-home-art-wrap"
+                        initial={reduceMotion ? false : { opacity: 0, scale: 0.97, filter: 'blur(5px)' }}
+                        animate={reduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1, filter: 'blur(0px)', y: [0, -7, 0] }}
+                        transition={reduceMotion ? { duration: 0 } : { opacity: { duration: 0.9, ease: smoothEase }, scale: { duration: 1, ease: smoothEase }, filter: { duration: 0.9 }, y: { duration: 9, repeat: Infinity, ease: 'easeInOut' } }}
+                    >
+                        <StudyDeskArtwork />
+                    </motion.div>
+                </motion.section>
             </div>
             <div className="pm-home-rule" />
             <section id="programs" className="pm-programs">
                 <div className="pm-home-shell">
-                    <div className="pm-section-head">
+                    <motion.div
+                        className="pm-section-head"
+                        initial={reduceMotion ? false : { opacity: 0, y: 14, filter: 'blur(5px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        viewport={{ once: true, amount: 0.6 }}
+                        transition={{ duration: 0.75, ease: smoothEase }}
+                    >
                         <h2>Select Your Academic <span>Domain</span></h2>
                         <p>Start with your field of study. We’ll take you from program to semester and then to the subject you want to practise.</p>
-                    </div>
-                    <div className="pm-domain-grid">
+                    </motion.div>
+                    <motion.div
+                        className="pm-domain-grid"
+                        variants={cardSequence}
+                        initial={reduceMotion ? false : 'hidden'}
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.12 }}
+                    >
                         {domains.map((domain) => (
-                            <Link key={domain.id} to={'/domains/' + domain.id + '/courses'} className="pm-domain-card">
-                                <div className="pm-domain-top"><DomainArtwork id={domain.id} /></div>
+                            <MotionLink
+                                key={domain.id}
+                                to={'/domains/' + domain.id + '/courses'}
+                                className="pm-domain-card"
+                                variants={cardReveal}
+                                whileHover={reduceMotion ? undefined : { y: -5, scale: 1.008 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.99 }}
+                                transition={{ duration: 0.32, ease: smoothEase }}
+                            >
+                                <div className="pm-domain-art-wrap"><DomainArtwork id={domain.id} /></div>
                                 <div className="pm-domain-content">
                                     <h3>{domain.title}</h3>
                                     <p>{domain.description}</p>
                                     <span className="pm-domain-open">Explore programs <ArrowUpRight size={15} /></span>
                                 </div>
-                            </Link>
+                            </MotionLink>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             <section id="contact" className="pm-people-section">
                 <div className="pm-home-shell">
-                    <div className="pm-people-head">
+                    <motion.div
+                        className="pm-people-head"
+                        initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.6 }}
+                        transition={{ duration: 0.7, ease: smoothEase }}
+                    >
                         <div><h2>Meet the people behind PrepMaster</h2><p>A small team building tools to make exam preparation more focused.</p></div>
-                    </div>
-                    <div className="pm-people-grid">
-                        <DeveloperCard
-                            name="Daksh Hadvani" avatar="/avatar.png"
-                            passion="Problem solving, and building software that can make a positive impact on people’s lives."
-                            email="https://mail.google.com/mail/?view=cm&fs=1&to=daksh.hadvani132235@marwadiuniversity.ac.in"
-                            github="https://github.com/dakshhadvani19"
-                            linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                            instagram="https://instagram.com/dakshhh.__.19"
-                            liked={liked} onLike={() => updateLike('dev_liked', setLiked, !liked)}
-                        />
-                        <DeveloperCard
-                            name="Dev Kalola" avatar="/avatar2.jpg"
-                            passion="Building innovative solutions and turning ideas into impactful digital experiences."
-                            email="https://mail.google.com/mail/?view=cm&fs=1&to=dev.kalola132220@marwadiuniversity.ac.in"
-                            github="https://github.com/devkalola"
-                            linkedin="https://www.linkedin.com/in/dev-kalola-646442380/"
-                            instagram="https://www.instagram.com/kalola_dev_14/"
-                            liked={liked2} onLike={() => updateLike('dev_liked_2', setLiked2, !liked2)}
-                        />
-                    </div>
+                    </motion.div>
+                    <motion.div
+                        className="pm-people-grid"
+                        initial={reduceMotion ? false : 'hidden'}
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.12 }}
+                        variants={cardSequence}
+                    >
+                        <motion.div variants={cardReveal}>
+                            <DeveloperCard
+                                name="Daksh Hadvani" avatar="/avatar.png"
+                                passion="Problem solving, and building software that can make a positive impact on people’s lives."
+                                email="https://mail.google.com/mail/?view=cm&fs=1&to=daksh.hadvani132235@marwadiuniversity.ac.in"
+                                github="https://github.com/dakshhadvani19"
+                                linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                                instagram="https://instagram.com/dakshhh.__.19"
+                                liked={liked} onLike={() => updateLike('dev_liked', setLiked, !liked)}
+                            />
+                        </motion.div>
+                        <motion.div variants={cardReveal}>
+                            <DeveloperCard
+                                name="Dev Kalola" avatar="/avatar2.jpg"
+                                passion="Building innovative solutions and turning ideas into impactful digital experiences."
+                                email="https://mail.google.com/mail/?view=cm&fs=1&to=dev.kalola132220@marwadiuniversity.ac.in"
+                                github="https://github.com/devkalola"
+                                linkedin="https://www.linkedin.com/in/dev-kalola-646442380/"
+                                instagram="https://www.instagram.com/kalola_dev_14/"
+                                liked={liked2} onLike={() => updateLike('dev_liked_2', setLiked2, !liked2)}
+                            />
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
         </main>

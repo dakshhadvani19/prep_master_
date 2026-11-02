@@ -296,3 +296,14 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Admin subject creation now uses only subject name, official subject code, and the departmental flag as subject metadata; the PDF/DOCX syllabus upload remains required for text extraction.
 - The Theory / Practical / Theory + Practical selector, API validation and payload field, database RPC argument, private metadata column, and syllabus RPC response field have been removed.
 - The departmental flag continues to drive the existing exam pattern. Canonical SubjectIds, archive/restore behavior, uploaded syllabus text, and subject-code identity mapping are unchanged.
+
+
+## Student UI refinement — 2026-11-02
+
+- Refined the student homepage and catalog using the shared student design direction in DESIGN.md.
+- Retained the study-desk hero and all six discipline illustrations; the department grid now uses equal-sized cards at each responsive breakpoint.
+- Applied a softer, Liquid-Glass-inspired finish to student-facing interactive surfaces, with dark translucent fills, edge highlights, restrained blur and soft elevation. The content itself remains readable and the design falls back to opaque surfaces when backdrop filtering is unavailable.
+- Added a restrained Framer Motion language: clipped hero text reveal, staggered card entry, slight hover lift and press feedback. Reduced-motion preferences disable nonessential motion.
+- Restyled the department → course → semester → subject browsing surfaces. Course/subject fetching, catalog IDs, route paths, selection state and exam configuration behavior are preserved.
+- Test Room UI and exam generation/configuration UI remain outside this visual change.
+- Verification: source and relevant design references were inspected. Local tests/build and browser visual inspection were not available in the connected environment at commit time; do not treat this entry as a runtime verification claim.

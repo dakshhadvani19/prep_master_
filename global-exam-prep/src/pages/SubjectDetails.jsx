@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getExamTypesForSubject, getSubjectExamInfo, normalizeDepartmentalFlag } from '../utils/subjectExamPolicy';
 import { fetchCourseAndSubjects } from '../utils/catalogApi';
+import { motion, useReducedMotion } from 'framer-motion';
 import {
     ChevronLeft, Book, Target, Activity, Flame, Shield,
     Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader, Users, X, DoorOpen
@@ -17,6 +18,7 @@ export default function SubjectDetails() {
     const { courseId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
+    const reduceMotion = useReducedMotion();
 
     const [selectedSem, setSelectedSem] = useState(null);
     const [selectedSubject, setSelectedSubject] = useState(null);
@@ -166,25 +168,21 @@ export default function SubjectDetails() {
     };
 
     return (
-        <div className="container animate-fade-in" style={{ maxWidth: '960px' }}>
-            <button
+        <div className="container animate-fade-in pm-catalog-page pm-subject-page">
+            <button className="pm-catalog-back"
                 onClick={() => navigate(-1)}
-                style={{
-                    display: 'flex', alignItems: 'center', gap: '0.5rem',
-                    color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem'
-                }}
-            >
+                >
                 <ChevronLeft size={16} /> Back to Programs
             </button>
 
-            <header style={{ marginBottom: '2.5rem', paddingBottom: '2rem', borderBottom: '1px solid var(--glass-border)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-                    <div style={{ background: 'var(--accent-light)', color: 'var(--accent-primary)', padding: '0.6rem', borderRadius: 'var(--radius-md)' }}>
+            <header className="pm-subject-header">
+                <div className="pm-subject-header__title">
+                    <div className="pm-subject-header__mark">
                         <GraduationCap size={24} />
                     </div>
-                    <h1 style={{ fontSize: '2rem' }}>{currentCourse.courseName}</h1>
+                    <h1>{currentCourse.courseName}</h1>
                 </div>
-                <p style={{ color: 'var(--text-secondary)', marginLeft: '0.25rem' }}>
+                <p>
                     {semesters.length} Semesters · {subjects.length} Subjects
                 </p>
             </header>
@@ -196,35 +194,20 @@ export default function SubjectDetails() {
             )}
 
             {subjects.length > 0 && (
-            <section style={{ marginBottom: '2.5rem' }}>
-                <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '1rem' }}>
-                    Step 1 — Select Semester
-                </h2>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+            <motion.section className="pm-selection-section pm-semester-selection" initial={reduceMotion ? false : { opacity: 0, y: 10, filter: 'blur(3px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}>
+                <h2>Step 1 — Select Semester</h2>
+                <div className="pm-semester-grid">
                     {semesters.map(sem => {
                         const isSelected = selectedSem === sem;
                         const count = subjects.filter(s => s.sem === sem).length;
                         return (
                             <button
                                 key={sem}
+                                className="pm-semester-button"
+                                type="button"
+                                aria-pressed={isSelected}
                                 onClick={() => handleSemClick(sem)}
-                                style={{
-                                    padding: '0.75rem 1.5rem',
-                                    borderRadius: 'var(--radius-md)',
-                                    border: `1px solid ${isSelected ? 'var(--accent-primary)' : 'var(--glass-border)'}`,
-                                    background: isSelected ? 'var(--accent-light)' : 'var(--bg-tertiary)',
-                                    color: isSelected ? 'var(--accent-primary)' : 'var(--text-primary)',
-                                    fontWeight: 600,
-                                    fontSize: '0.95rem',
-                                    cursor: 'pointer',
-                                    transition: 'all var(--transition-fast)',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    gap: '0.25rem',
-                                    minWidth: '100px',
-                                }}
-                            >
+                                >
                                 <span>Sem {sem}</span>
                                 <span style={{ fontSize: '0.72rem', color: isSelected ? 'var(--accent-primary)' : 'var(--text-tertiary)', fontWeight: 400 }}>
                                     {count} subject{count !== 1 ? 's' : ''}
@@ -233,39 +216,24 @@ export default function SubjectDetails() {
                         );
                     })}
                 </div>
-            </section>
+            </motion.section>
             )}
 
             {selectedSem != null && (
-                <section style={{ marginBottom: '2.5rem', animation: 'fadeIn 0.3s ease' }}>
-                    <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '1rem' }}>
-                        Step 2 — Select Subject
-                    </h2>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <motion.section className="pm-selection-section pm-subject-selection" initial={reduceMotion ? false : { opacity: 0, y: 12, filter: 'blur(3px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}>
+                    <h2>Step 2 — Select Subject</h2>
+                    <div className="pm-subject-list">
                         {subjectsInSem.map((subject, idx) => {
                             const isOpen = selectedSubject?.id === subject.id;
                             return (
                                 <div key={`${subject.id}-${idx}`} id={String(subject.id)}>
                                     <button
+                                        className="pm-subject-trigger"
+                                        type="button"
+                                        aria-expanded={isOpen}
+                                        aria-controls={'pm-subject-config-' + subject.id}
                                         onClick={() => handleSubjectClick(subject)}
-                                        style={{
-                                            width: '100%',
-                                            padding: '1.1rem 1.5rem',
-                                            background: isOpen ? 'var(--accent-light)' : 'var(--bg-secondary)',
-                                            border: `1px solid ${isOpen ? 'var(--accent-primary)' : 'var(--glass-border)'}`,
-                                            borderRadius: isOpen ? 'var(--radius-md) var(--radius-md) 0 0' : 'var(--radius-md)',
-                                            color: isOpen ? 'var(--accent-primary)' : 'var(--text-primary)',
-                                            fontWeight: 600,
-                                            fontSize: '1rem',
-                                            textAlign: 'left',
-                                            cursor: 'pointer',
-                                            transition: 'all var(--transition-fast)',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'space-between',
-                                            gap: '1rem',
-                                        }}
-                                    >
+                                        >
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                                             <Book size={18} style={{ flexShrink: 0 }} />
                                             {subject.title}
@@ -282,6 +250,8 @@ export default function SubjectDetails() {
 
                                     {isOpen && (
                                         <div
+                                            id={'pm-subject-config-' + subject.id}
+                                            className="pm-subject-config"
                                             style={{
                                                 border: '1px solid var(--accent-primary)',
                                                 borderTop: 'none',
@@ -464,7 +434,7 @@ export default function SubjectDetails() {
                             );
                         })}
                     </div>
-                </section>
+                </motion.section>
             )}
 
 
