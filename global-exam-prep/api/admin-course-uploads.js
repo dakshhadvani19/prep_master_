@@ -1,7 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import { createClient } from '@supabase/supabase-js';
-import { getExamTypesForSubject, getSubjectExamInfo } from '../src/utils/subjectExamPolicy.js';
 import {
     MAX_UPLOAD_BYTES,
     UploadValidationError,
@@ -139,6 +138,7 @@ async function handleStart(client, user, body) {
 
     let examType = null;
     if (kind === 'question_bank') {
+        const { getExamTypesForSubject } = await import('../src/utils/subjectExamPolicy.js');
         examType = String(body.examType || '').trim();
         if (!getExamTypesForSubject(subject.isDepartmentalSubject).includes(examType)) {
             throw new UploadValidationError('Choose an exam type that is available for this subject.');
@@ -369,6 +369,7 @@ export default async function handler(req, res) {
             });
             if (bankError || !bankData?.bank) throw new UploadValidationError('Question bank was not found for publication.');
             const subject = await getSubject(client, Number(bankData.bank.subject_id));
+            const { getSubjectExamInfo } = await import('../src/utils/subjectExamPolicy.js');
             const examInfo = getSubjectExamInfo(bankData.bank.exam_type, subject.isDepartmentalSubject);
             const expectedTotalMarks = Number(examInfo?.totalMarks) || null;
             const { data, error } = await client.rpc('pm_admin_course_bank_publish', {
