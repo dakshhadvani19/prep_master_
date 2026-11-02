@@ -112,15 +112,24 @@ The upload flow now uses the private Storage bucket plus a durable PGMQ Basic qu
 
 Correction to the earlier PDF validation note: the PDF runtime helper existed, but both document-processing modules imported PDF.js directly while calling getPdfJsDocument(). That import mismatch is now corrected. The earlier verification missed the committed import mismatch and must not be treated as proof that the old import path was valid.
 
-## Deployment and scheduler verification — 2026-11-02
+## Deployment, security and CI verification — 2026-11-02
 
-- Vercel production deployment for commit `469c00eac80741b6458150dd853b4ab11ef454a2` is READY on the existing production alias `prepmaster-tau.vercel.app`.
-- `ADMIN_COURSE_UPLOAD_WORKER_SECRET` is configured as a sensitive production environment variable. The same token and the worker URL are stored in Supabase Vault; neither value is committed to source.
-- Supabase Cron job `admin-course-upload-worker-every-minute` is active on `* * * * *`; its first recorded run succeeded.
-- A direct authenticated pg_net health check reached `/api/admin-course-upload-worker` and received HTTP 200 with `No queued uploads.`. The worker route is live and authenticated correctly; no real upload job was in the queue during this check.
-- The live runtime-error aggregation currently contains only the earlier DOMMatrix incidents from deployments before the import correction/async queue. No worker-route error group was returned.
-- Production Vite build completed successfully. GitHub Actions ran the existing full regression workflow: the Test Room regression job and production build passed; 562/567 tests passed, with five failures (the upload-review UI test before the missing exam-policy import was fixed, an AdminDashboard staff-modal assertion, an exam-answer normalization expectation, and a Gemini prompt expectation). The queue worker (2/2), upload API (8/8), document validation (13/13), and question-bank parser (5/5) suites passed. Full ESLint reported repository-wide pre-existing errors plus queue-patch lint issues; the queue-patch issues and upload-review import are being corrected and isolated in a focused CI job. A real admin-session Storage → queue → worker → validation smoke test is still required.
+- Production code commit `67d4d5a663054706771896da5e84434eb9bd516d` deployed READY; the subsequent docs/workflow commit `289c1ac72851f6bb79f3b0d09ec6cadf5e2a360d` is also READY on `prepmaster-tau.vercel.app`.
+- `ADMIN_COURSE_UPLOAD_WORKER_SECRET` is a sensitive production Vercel environment variable. The token and worker URL are stored in Supabase Vault and are not present in source control.
+- Supabase Cron job `admin-course-upload-worker-every-minute` is active on `* * * * *`. Consecutive recorded Cron runs succeeded.
+- A direct call to the production worker with the Vault token returned HTTP 200 and `No queued uploads.`; a call without the token returned HTTP 401. After PGMQ permissions were tightened, an authenticated worker health call still returned HTTP 200 with no queued jobs.
+- Queue access is restricted at both layers: browser roles have no usage on schema `pgmq`, no direct execute on PGMQ functions and no access to queue tables. The five application queue RPCs are executable by `service_role` only; the PGMQ operations inside them execute under their `postgres` SECURITY DEFINER owner.
+- GitHub Actions focused course-upload job passed all five suites: upload document validation, question-bank parser, upload API, background worker and admin upload UI. Targeted ESLint for all changed upload-processing files passed. Vite production build passed.
+- The full repository Vitest suite finished at **563/567 passed**. The remaining four failures are in existing unrelated areas: AdminDashboard staff-modal test, dashboard performance history, exam-answer normalization, and Gemini correction-prompt expectations. The upload UI test that initially failed because of the missing `getSubjectExamInfo` import passes in the focused upload job after the import was fixed.
+- Repository-wide ESLint still fails on unrelated existing files; focused ESLint for every changed upload-processing file passes.
+- Runtime error aggregation contains only the earlier `DOMMatrix is not defined` incidents from deployments before the PDF import correction and background worker. No worker-route runtime-error group was returned.
 
-There are five pre-existing upload records still in `uploading` from previous attempts. Use each record's **Check completed upload** action to verify whether its Storage object is complete and enqueue it. Do not re-upload a file unless the object is missing or the stored byte count is wrong.
+The database currently has **five legacy upload rows** still in `uploading`. In the admin upload history, use **Check completed upload** on each row. The API will compare the stored object size and enqueue it when the object is complete. Re-upload only when the file is absent or its byte count does not match.
 
-The source migration filename is aligned with the applied Supabase migration version `20261102045212`.
+A real authenticated browser upload that goes through Storage → queue → background PDF/DOCX/CSV validation still requires an admin-session smoke test. No full real-file processing success is claimed yet.
+
+Applied queue-related Supabase migrations:
+- `20261102044400_enable_admin_course_upload_queue_extensions`
+- `20261102044806_admin_course_upload_async_queue`
+- `20261102045212_schedule_admin_course_upload_worker`
+- `20261102050129_lock_down_pgmq_browser_access`
