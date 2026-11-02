@@ -102,7 +102,7 @@ async function extractPdf(buffer) {
                 .filter(item => typeof item.str === 'string')
                 .map(item => item.str)
                 .join(' ')
-                .replace(/\\s+/g, ' ')
+                .replace(/\s+/g, ' ')
                 .trim());
             page.cleanup?.();
         }
@@ -125,7 +125,7 @@ async function extractPdf(buffer) {
 
         const uniqueFormText = [...new Set(formText)];
         return {
-            text: [pageTexts.join('\\n\\n').trim(), uniqueFormText.join('\\n')].filter(Boolean).join('\\n\\n'),
+            text: [pageTexts.join('\n\n').trim(), uniqueFormText.join('\n')].filter(Boolean).join('\n\n'),
             pageCount: pdf.numPages,
         };
     } catch (error) {
