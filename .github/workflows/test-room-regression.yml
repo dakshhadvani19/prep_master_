@@ -43,7 +43,7 @@ jobs:
 
 
   course-upload-queue-regression:
-    name: Course upload queue and file validation tests
+    name: Course upload queue, subject identity and file validation tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -56,7 +56,7 @@ jobs:
           cache: npm
           cache-dependency-path: global-exam-prep/package-lock.json
       - run: npm ci
-      - name: Run upload queue, subject management and file validation suites
+      - name: Run upload queue, subject identity and catalog suites
         run: >-
           npm test --
           tests/admin-course-upload-validation.test.js
@@ -68,10 +68,7 @@ jobs:
           tests/admin-courses.test.jsx
           tests/student-catalog.test.jsx
           tests/student-published-question-bank-api.test.js
-          tests/supabaseMock.js
-          tests/student-catalog.test.jsx
-          tests/student-published-question-bank-api.test.js
-      - name: Lint changed upload processing and subject management files
+      - name: Lint changed upload processing and subject identity files
         run: >-
           npx eslint
           api/admin-course-uploads.js
@@ -89,6 +86,9 @@ jobs:
           tests/admin-course-upload-worker.test.js
           tests/admin-subjects-api.test.js
           tests/admin-courses.test.jsx
+          tests/student-catalog.test.jsx
+          tests/student-published-question-bank-api.test.js
+          tests/supabaseMock.js
 
   full-test-suite:
     name: Full Vitest suite
