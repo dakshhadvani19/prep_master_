@@ -60,7 +60,7 @@ begin
        or length(p_syllabus_text) > 30000
        or p_file_extension not in ('pdf', 'docx')
        or p_size_bytes < 1 or p_size_bytes > 20971520
-       or p_page_count is null or p_page_count < 1
+       or (p_page_count is not null and p_page_count < 1)
        or p_word_count is null or p_word_count < 1
        or p_object_path not like 'subjects/new/%'
        or (p_file_extension = 'pdf' and p_mime_type <> 'application/pdf')
