@@ -54,7 +54,7 @@ beforeEach(() => {
 describe('admin subject and question locator — Phase 1', () => {
     it('starts with all six departments and does not lock any department', () => {
         renderAdmin();
-        expect(screen.getByRole('heading', { name: 'Subject & Question Locator' })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Edit subjects' })).toBeInTheDocument();
         expect(screen.getByRole('button', { name: /Engineering & Technology/ })).toBeEnabled();
         expect(screen.getByRole('button', { name: /Computer Applications/ })).toBeEnabled();
         expect(screen.getByRole('button', { name: /Management Studies/ })).toBeEnabled();
@@ -86,39 +86,49 @@ describe('admin subject and question locator — Phase 1', () => {
         expect(await screen.findByTestId('semester-option-0')).toBeInTheDocument();
         fireEvent.click(screen.getByTestId('semester-option-0'));
 
-        expect(await screen.findByRole('button', { name: /Computer Workshop/ })).toBeInTheDocument();
-        expect(screen.queryByRole('button', { name: /Calculus/ })).not.toBeInTheDocument();
+        expect(await screen.findByRole('tab', { name: 'Add subject' })).toBeInTheDocument();
+        fireEvent.click(screen.getByRole('tab', { name: 'Remove subject' }));
+        expect(screen.getByRole('option', { name: /Computer Workshop · 101/ })).toBeInTheDocument();
+        expect(screen.queryByRole('option', { name: /Calculus · 102/ })).not.toBeInTheDocument();
     });
 
-    it('locates a subject by name or Subject ID and shows its actual catalog identity and exam policy', async () => {
+    it('shows the add-subject form after Department → Course → Semester selection', async () => {
         renderAdmin();
         fireEvent.click(screen.getByRole('button', { name: /Engineering & Technology/ }));
         fireEvent.click(await screen.findByRole('button', { name: /B.Tech - Computer Engineering/ }));
         fireEvent.click(await screen.findByTestId('semester-option-1'));
 
-        fireEvent.change(await screen.findByRole('textbox', { name: 'Search subjects' }), { target: { value: '103' } });
-        const subjectButton = await screen.findByRole('button', { name: /Computer Programming/ });
-        fireEvent.click(subjectButton);
-
-        expect(screen.getByRole('heading', { name: 'Computer Programming' })).toBeInTheDocument();
-        expect(screen.getByText('103')).toBeInTheDocument();
-        expect(screen.getAllByText('1', { selector: 'dd' })).toHaveLength(2);
-        expect(screen.getAllByText('Non-departmental')).toHaveLength(2);
-        expect(screen.getByText('Final Examination (ESE)')).toBeInTheDocument();
-        expect(screen.getByText('Mid-Term 1 (Theory)')).toBeInTheDocument();
-        expect(screen.getByText('Mid-Term 2 (MCQ / Objective)')).toBeInTheDocument();
+        expect(await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ })).toBeInTheDocument();
+        expect(screen.getByRole('textbox', { name: /Subject name/ })).toBeInTheDocument();
+        expect(screen.getByRole('textbox', { name: /Official subject code/ })).toBeInTheDocument();
+        expect(screen.getByLabelText(/Departmental subject/)).toBeInTheDocument();
+        expect(screen.getByLabelText(/Subject type/)).toBeInTheDocument();
+        expect(screen.getByText(/Syllabus file/)).toBeInTheDocument();
+        expect(screen.queryByText(/Question locator|Phase 3/i)).not.toBeInTheDocument();
     });
 
-    it('shows the question-bank linkage limitation instead of attributing unlinked TestsData rows to a subject', async () => {
+    it('removes a selected subject through the backend operation and refreshes the live catalog', async () => {
+        const fetchMock = vi.fn().mockResolvedValue({
+            ok: true,
+            status: 200,
+            json: async () => ({ ok: true, subjectId: '103', storageCleanupWarning: false }),
+        });
+        vi.stubGlobal('fetch', fetchMock);
         renderAdmin();
         fireEvent.click(screen.getByRole('button', { name: /Engineering & Technology/ }));
         fireEvent.click(await screen.findByRole('button', { name: /B.Tech - Computer Engineering/ }));
         fireEvent.click(await screen.findByTestId('semester-option-1'));
-        fireEvent.click(await screen.findByRole('button', { name: /Calculus/ }));
+        fireEvent.click(await screen.findByRole('tab', { name: 'Remove subject' }));
 
-        expect(screen.getByRole('heading', { name: 'Question locator' })).toBeInTheDocument();
-        expect(screen.getByText(/do not carry Course ID, Subject ID or Semester/i)).toBeInTheDocument();
-        expect(screen.getByText(/canonical question-bank index/i)).toBeInTheDocument();
+        fireEvent.change(screen.getByRole('combobox', { name: /Choose subject to remove/ }), { target: { value: '103' } });
+        fireEvent.click(screen.getByRole('button', { name: 'Remove subject' }));
+        expect(screen.getByText(/cannot be undone/i)).toBeInTheDocument();
+        fireEvent.click(screen.getByRole('button', { name: 'Confirm removal' }));
+
+        await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
+        const request = JSON.parse(fetchMock.mock.calls[0][1].body);
+        expect(request).toMatchObject({ action: 'remove', subjectId: 103, courseId: 1, semester: 1 });
+        expect(await screen.findByText('Subject removed from the live catalog.')).toBeInTheDocument();
     });
 
     it('exposes a retry state when catalog reads fail', async () => {
