@@ -120,7 +120,6 @@ describe('admin subject management API', () => {
                 subjectName: 'Applied Computing',
                 subjectCode: '09CE3102',
                 isDepartmentalSubject: true,
-                subjectType: 'theory',
                 fileName: 'applied-computing.pdf',
                 mimeType: 'application/pdf',
                 sizeBytes: fileBuffer.length,
@@ -156,6 +155,7 @@ describe('admin subject management API', () => {
             p_file_name: 'applied-computing.pdf',
             p_object_path: objectPath,
         }));
+        expect(rpc.mock.calls[0][1]).not.toHaveProperty('p_subject_type');
     });
 
     it('restores Computer Fundamental Skill with its original SubjectId after archival', async () => {
@@ -193,7 +193,6 @@ describe('admin subject management API', () => {
                 subjectName: 'Computer Fundamental Skill',
                 subjectCode: '09CE2101',
                 isDepartmentalSubject: true,
-                subjectType: 'theory',
                 fileName: 'computer-fundamental-skill.pdf',
                 mimeType: 'application/pdf',
                 sizeBytes: fileBuffer.length,
@@ -233,7 +232,6 @@ describe('admin subject management API', () => {
                 semester: 1,
                 subjectName: 'Applied Computing',
                 subjectCode: '09CE3102',
-                subjectType: 'theory',
                 fileName: 'applied-computing.pdf',
                 mimeType: 'application/pdf',
                 sizeBytes: 300,
