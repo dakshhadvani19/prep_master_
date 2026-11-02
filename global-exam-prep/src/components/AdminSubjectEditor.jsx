@@ -139,7 +139,7 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
         setNotice('');
         try {
             const session = await getSession();
-            const result = await callAdminApi(session, {
+            await callAdminApi(session, {
                 action: 'remove',
                 subjectId: selectedForRemoval.subjectId,
                 courseId: course.courseId,
