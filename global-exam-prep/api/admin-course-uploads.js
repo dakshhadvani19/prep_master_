@@ -391,8 +391,19 @@ export default async function handler(req, res) {
         if (error instanceof UploadValidationError) {
             return fail(res, 400, error.message, error.details || {});
         }
-        console.error('[admin-course-uploads] request failed:', error?.message || error);
-        return fail(res, 503, 'The course-file service could not complete the request. Please retry.');
+        const errorUrl = req.method === 'GET' ? new URL(req.url, 'http://localhost') : null;
+        const errorBody = req.method === 'POST' ? requestBody(req) : null;
+        console.error('[admin-course-uploads] request failed:', {
+            requestId: String(req.headers['x-vercel-id'] || '').slice(0, 128),
+            method: req.method,
+            action: errorBody?.action || (req.method === 'GET' ? 'list' : 'unknown'),
+            subjectId: errorBody?.subjectId ?? errorUrl?.searchParams.get('subjectId') ?? null,
+            uploadId: errorBody?.uploadId ?? errorUrl?.searchParams.get('uploadId') ?? null,
+            error: error?.stack || error?.message || String(error),
+        });
+        return fail(res, 503, 'The course-file service could not complete the request. Please retry.', {
+            code: 'COURSE_FILE_SERVICE_ERROR',
+        });
     }
 }
 

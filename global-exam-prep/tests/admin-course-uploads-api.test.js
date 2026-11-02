@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import process from 'node:process';
 import handler from '../api/admin-course-uploads.js';
@@ -16,6 +17,30 @@ function createResponse() {
         end() { return this; },
         setHeader(name, value) { this.headers[name] = value; },
     };
+}
+
+function makeMinimalPdf(text) {
+    const stream = 'BT /F1 12 Tf 20 100 Td (' + text + ') Tj ET';
+    const objects = [
+        '<< /Type /Catalog /Pages 2 0 R >>',
+        '<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
+        '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 300 144] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>',
+        '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',
+        '<< /Length ' + Buffer.byteLength(stream, 'binary') + ' >>\nstream\n' + stream + '\nendstream',
+    ];
+    let body = '%PDF-1.4\n';
+    const offsets = [0];
+    for (let index = 0; index < objects.length; index += 1) {
+        offsets.push(Buffer.byteLength(body, 'binary'));
+        body += (index + 1) + ' 0 obj\n' + objects[index] + '\nendobj\n';
+    }
+    const xrefOffset = Buffer.byteLength(body, 'binary');
+    body += 'xref\n0 6\n0000000000 65535 f \n';
+    for (let index = 1; index < offsets.length; index += 1) {
+        body += String(offsets[index]).padStart(10, '0') + ' 00000 n \n';
+    }
+    body += 'trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n' + xrefOffset + '\n%%EOF';
+    return Buffer.from(body, 'binary');
 }
 
 function clientMock({ adminRow = { AdminId: 1, isSuperAdmin: true }, subjectRow = {
@@ -223,6 +248,83 @@ describe('admin course upload API security and metadata', () => {
             p_expected_total_marks: expected,
             p_acknowledge_mark_mismatch: true,
         }));
+    });
+
+    it('finalizes a stored PDF in Node when DOMMatrix is not globally available', async () => {
+        const { client, rpc } = clientMock();
+        const uploadId = 'a5d1f0b6-647b-4652-a97b-3e3d4f8c6b12';
+        const pdfBuffer = makeMinimalPdf('The upload API extracts this syllabus text.');
+        const record = {
+            id: uploadId,
+            object_path: 'subjects/411/test-syllabus.pdf',
+            file_name: 'test-syllabus.pdf',
+            file_extension: 'pdf',
+            mime_type: 'application/pdf',
+            size_bytes: pdfBuffer.length,
+            kind: 'syllabus',
+            status: 'uploading',
+        };
+        rpc.mockImplementation(async (name, args) => {
+            if (name === 'pm_admin_course_upload_list') {
+                return { data: [record], error: null };
+            }
+            if (name === 'pm_admin_course_upload_set_validation') {
+                return {
+                    data: {
+                        ...record,
+                        status: args.p_status,
+                        page_count: args.p_page_count,
+                        word_count: args.p_word_count,
+                        preview_text: args.p_preview_text,
+                    },
+                    error: null,
+                };
+            }
+            return { data: null, error: null };
+        });
+        client.storage = {
+            from: vi.fn(() => ({
+                download: vi.fn().mockResolvedValue({
+                    data: new Blob([pdfBuffer], { type: 'application/pdf' }),
+                    error: null,
+                }),
+                remove: vi.fn(),
+            })),
+        };
+        createClient.mockReturnValue(client);
+
+        const previous = {
+            DOMMatrix: globalThis.DOMMatrix,
+            ImageData: globalThis.ImageData,
+            Path2D: globalThis.Path2D,
+        };
+        delete globalThis.DOMMatrix;
+        delete globalThis.ImageData;
+        delete globalThis.Path2D;
+
+        try {
+            const res = createResponse();
+            await handler({
+                method: 'POST',
+                url: '/api/admin-course-uploads',
+                headers: { authorization: 'Bearer verified-admin-token' },
+                body: { action: 'finalize', subjectId: 411, uploadId },
+            }, res);
+
+            expect(res.statusCode).toBe(200);
+            expect(res.body.upload.status).toBe('needs_confirmation');
+            expect(res.body.upload.preview_text).toContain('The upload API extracts this syllabus text.');
+            expect(rpc).toHaveBeenCalledWith('pm_admin_course_upload_set_validation', expect.objectContaining({
+                p_upload_id: uploadId,
+                p_status: 'needs_confirmation',
+                p_page_count: 1,
+            }));
+            expect(typeof globalThis.DOMMatrix).toBe('function');
+        } finally {
+            if (previous.DOMMatrix) globalThis.DOMMatrix = previous.DOMMatrix;
+            if (previous.ImageData) globalThis.ImageData = previous.ImageData;
+            if (previous.Path2D) globalThis.Path2D = previous.Path2D;
+        }
     });
 
     it('rejects unsupported request methods', async () => {

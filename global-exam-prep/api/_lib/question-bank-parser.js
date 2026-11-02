@@ -158,6 +158,7 @@ export async function parseQuestionBankForReview(record, buffer) {
             }, { row: i + 2 }, i + 1, seen);
         });
     } else if (record.file_extension === 'pdf') {
+        const getDocument = await getPdfJsDocument();
         const pdf = await getDocument({ data: new Uint8Array(buffer), useSystemFonts: true, isEvalSupported: false }).promise;
         if (pdf.numPages > 50) { await pdf.destroy(); throw new Error('PDF exceeds 50 pages.'); }
         const pages = [];

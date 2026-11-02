@@ -501,7 +501,14 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
                 </div>
             )}
 
-            {notice && <div className="ac-uploads__notice" role="status"><CheckCircle2 size={17} /><span>{notice}</span></div>}
+            {notice && (
+                <div className={'ac-uploads__notice' + (busy ? ' ac-uploads__notice--pending' : '')} role="status">
+                    {busy
+                        ? <span className="ac-spinner" aria-hidden="true" />
+                        : <CheckCircle2 size={17} />}
+                    <span>{notice}</span>
+                </div>
+            )}
             {actionError && <div className="ac-uploads__error" role="alert"><AlertCircle size={17} /><span>{actionError}</span></div>}
 
             <div className="ac-uploads__history-heading">

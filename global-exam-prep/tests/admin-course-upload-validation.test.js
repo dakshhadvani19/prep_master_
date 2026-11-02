@@ -179,6 +179,34 @@ describe('document validation guards', () => {
         expect(docx.word_count).toBe(4);
     });
 
+    it('initializes PDF.js geometry globals when Node has no DOMMatrix', async () => {
+        const previous = {
+            DOMMatrix: globalThis.DOMMatrix,
+            ImageData: globalThis.ImageData,
+            Path2D: globalThis.Path2D,
+        };
+        delete globalThis.DOMMatrix;
+        delete globalThis.ImageData;
+        delete globalThis.Path2D;
+
+        try {
+            const pdf = await validateCourseUpload({
+                kind: 'syllabus',
+                file_extension: 'pdf',
+                mime_type: MIME_BY_EXTENSION.pdf,
+            }, makeMinimalPdf('DOMMatrix bootstrap allows PDF extraction'));
+
+            expect(pdf.preview_text).toContain('DOMMatrix bootstrap allows PDF extraction');
+            expect(typeof globalThis.DOMMatrix).toBe('function');
+            expect(typeof globalThis.ImageData).toBe('function');
+            expect(typeof globalThis.Path2D).toBe('function');
+        } finally {
+            if (previous.DOMMatrix) globalThis.DOMMatrix = previous.DOMMatrix;
+            if (previous.ImageData) globalThis.ImageData = previous.ImageData;
+            if (previous.Path2D) globalThis.Path2D = previous.Path2D;
+        }
+    });
+
     it('rejects a PDF with an invalid signature and a corrupt DOCX', async () => {
         await expect(validateCourseUpload({
             kind: 'syllabus',

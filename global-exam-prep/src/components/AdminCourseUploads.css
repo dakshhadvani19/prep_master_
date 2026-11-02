@@ -153,6 +153,7 @@
 .ac-uploads__progress { height: 5px; overflow: hidden; margin-top: .38rem; border-radius: 999px; background: rgba(255,255,255,.12); }
 .ac-uploads__progress span { display: block; height: 100%; border-radius: inherit; background: var(--accent-primary, #3b82f6); transition: width .12s linear; }
 .ac-uploads__notice { margin-top: .7rem; border: 1px solid rgba(16,185,129,.25); color: #a7e7ca; background: rgba(16,185,129,.07); }
+.ac-uploads__notice--pending { border-color: var(--glass-border); color: var(--text-secondary); background: rgba(59,130,246,.055); }
 .ac-uploads__error { margin-top: .7rem; border: 1px solid rgba(239,68,68,.26); color: #ffb4b4; background: rgba(239,68,68,.07); }
 .ac-uploads__history-heading { margin-top: .65rem; padding: .85rem 0 .55rem; border-top: 1px solid var(--glass-border); }
 .ac-uploads__history-heading h4 { margin: 0 0 .2rem; font-size: .9rem; }

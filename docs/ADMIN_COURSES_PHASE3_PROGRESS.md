@@ -54,3 +54,10 @@ Verified:
 ## Boundary
 
 Phase 3 ingestion, admin publication and student-side published-bank selection are implemented. Live database currently has zero published banks/sets, so a real-bank smoke test awaits the first admin publication. Until then, existing AI/syllabus generation remains the fallback. The PDF/DOCX parser expects numbered sections and explicit labels; unrecognized layouts remain rejected for manual correction rather than guessed.
+
+
+## Production PDF parser runtime correction — 2026-11-02
+
+The PDF question-bank parser shared the same PDF.js Node initialization risk found in Phase 2 syllabus validation. Both flows now use api/_lib/pdfjs-runtime.js to initialize DOMMatrix, ImageData and Path2D from the direct @napi-rs/canvas 0.1.96 dependency before importing PDF.js.
+
+Regression coverage now includes PDF question-bank parsing with DOMMatrix absent at startup and the syllabus finalization API path with a stored PDF. Combined Phase 2/3 focused suites passed 26/26, targeted ESLint passed, production build passed, and the lockfile passed a clean npm ci. Existing Vite chunk warnings remain. The full repository test command did not finish within the sandbox session and is not marked passed.

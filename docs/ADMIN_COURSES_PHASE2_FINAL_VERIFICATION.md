@@ -81,3 +81,26 @@ The follow-up revision (commit `dfdb165`) is deployed to production with state *
 - Vercel grouped runtime-error scan for the route over the latest hour: no matching runtime errors.
 
 **Still pending:** authenticated upload-history GET and a real syllabus upload-start/finalize using the administrator's browser session. The available checks establish successful deployment and route startup, but cannot prove the authenticated Supabase/database/storage path without that session. Retry the same subject in the browser to complete the end-to-end smoke test.
+
+
+## Production PDF validation failure — 2026-11-02
+
+A real upload recording and Vercel runtime error aggregation identified the failure after the TUS transfer completed: the upload record and Storage object were created successfully, but the finalization API returned HTTP 503 while PDF.js initialized in the Node serverless runtime. The production error was DOMMatrix is not defined (three requests from one admin session, route /api/admin-course-uploads). This was a server PDF-runtime initialization defect, not a corrupt PDF or a TUS transfer failure.
+
+Implemented:
+- Added api/_lib/pdfjs-runtime.js, which explicitly loads @napi-rs/canvas and initializes DOMMatrix, ImageData and Path2D before dynamically importing PDF.js. Failed native-module imports can be retried instead of poisoning a warm function.
+- Reused the same bootstrap in Phase 2 syllabus/document validation and Phase 3 PDF question-bank parsing.
+- Promoted @napi-rs/canvas 0.1.96 to a direct production dependency and updated the lockfile.
+- Changed the upload UI so storage completion is shown as a neutral pending-validation state; green success is no longer shown before server validation has passed.
+- Added structured server diagnostics with request ID, method, action, subject/upload IDs and stack trace, without logging credentials, request bodies or file contents.
+
+Verification in a clean Vercel sandbox checkout:
+- npm ci: passed.
+- Focused suites admin-course-upload-validation, question-bank-parser and admin-course-uploads-api: 26/26 passed. The API suite includes a real finalize-handler test using a stored PDF while all DOM geometry globals are initially absent.
+- Targeted ESLint on all modified JS/JSX files: passed.
+- npm run build: passed. Existing circular vendor-chunk and large-chunk-size warnings remain.
+- git diff --check: passed.
+
+The full repository suite was attempted but the sandbox session ended before the suite completed; no full-suite pass is claimed. The recording's failing API path is covered directly by the passing finalization regression test.
+
+Post-deploy smoke test still required: after production deployment is READY, use the existing history entry's Check completed upload action first. That retries finalization against the already uploaded private Storage object and avoids transferring the PDF again. Confirm the status becomes needs_confirmation and the extracted preview is visible; then explicitly confirm the syllabus replacement. A full real authenticated finalize against the user's production session cannot be performed from this sandbox.

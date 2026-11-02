@@ -60,6 +60,8 @@ async function extractPdf(buffer) {
         throw new UploadValidationError('This file does not contain a valid PDF header.');
     }
 
+    // Initialize Node geometry globals before PDF.js evaluates its legacy bundle.
+    const getDocument = await getPdfJsDocument();
     let pdf;
     try {
         const task = getDocument({
