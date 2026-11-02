@@ -250,6 +250,17 @@ export const client = {
   // from the session uid exactly as the SQL body does it server-side.
   rpc: vi.fn(async (fn, args) => {
     state.calls.push({ name: `rpc:${fn}`, op: 'rpc', fn, args: args ?? null });
+    if (fn === 'pm_catalog_subjects_for_course') {
+      if (state.catalogDelayMs) await new Promise((resolve) => setTimeout(resolve, state.catalogDelayMs));
+      if (state.catalogError) return { data: null, error: state.catalogError };
+      const rows = catalogRows('Subjects', { CourseId: args?.p_course_id })
+        .filter((row) => row.is_active !== false);
+      return { data: rows, error: null };
+    }
+    if (fn === 'pm_catalog_subject_is_active') {
+      const row = state.catalogSubjects.find((item) => String(item.SubjectId) === String(args?.p_subject_id));
+      return { data: row ? row.is_active !== false : true, error: null };
+    }
     if (fn === 'manage_admin_staff') {
       const mine = ownAdminRow();
       if (!mine || mine.is_super_admin !== true) {
