@@ -290,3 +290,9 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Re-adding the same course/code/occurrence/semester restores the original SubjectId. Active student catalog queries use the archive-aware RPC; ExamPortal, normal exam-attempt creation, published-bank attempt creation and Test Room creation reject archived subjects.
 - Live example: Diploma Computer Engineering / CourseId 44 / Computer Fundamental Skill / 09CE2101 / Semester 1 keeps SubjectId 44000935210101.
 - The live archive→restore transaction smoke test passed and was rolled back. The SubjectId remained exactly 44000935210101; no actual subject was removed during verification.
+
+## Subject classification simplification — 2026-11-02
+
+- Admin subject creation now uses only subject name, official subject code, and the departmental flag as subject metadata; the PDF/DOCX syllabus upload remains required for text extraction.
+- The Theory / Practical / Theory + Practical selector, API validation and payload field, database RPC argument, private metadata column, and syllabus RPC response field have been removed.
+- The departmental flag continues to drive the existing exam pattern. Canonical SubjectIds, archive/restore behavior, uploaded syllabus text, and subject-code identity mapping are unchanged.
