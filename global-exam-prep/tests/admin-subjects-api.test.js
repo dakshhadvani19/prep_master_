@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import process from 'node:process';
+import { Buffer } from 'node:buffer';
 import handler from '../api/admin-subjects.js';
 import { createClient } from '@supabase/supabase-js';
 import { extractSyllabusText, validateUploadMetadata } from '../api/_lib/admin-course-upload-validation.js';
