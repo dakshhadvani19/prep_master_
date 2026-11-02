@@ -249,10 +249,13 @@ async function handleFinalize(client, adminUid, body) {
         const updated = await setValidation(client, adminUid, record.id, status, validation);
         return { upload: updated };
     } catch (error) {
-        const message = error instanceof UploadValidationError
-            ? error.message
-            : 'The file could not be validated. Save a fresh copy and try again.';
-        const details = error instanceof UploadValidationError ? error.details : {};
+        // Unexpected runtime/import failures are service errors, not invalid user files.
+        // Keep the uploaded object and its "uploading" state so an admin can retry.
+        if (!(error instanceof UploadValidationError) && error?.name !== 'UploadValidationError') {
+            throw error;
+        }
+        const message = error.message || 'The file could not be validated. Save a fresh copy and try again.';
+        const details = error.details || {};
         const updated = await setValidation(client, adminUid, record.id, 'failed', {
             error_message: message,
             validation_details: details,
