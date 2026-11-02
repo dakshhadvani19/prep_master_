@@ -66,4 +66,18 @@ A focused API startup-isolation change was committed in `c1f8045`:
 
 This change preserves the shared exam-policy implementation and does not change API contracts, database schema, storage permissions, or question-bank rules.
 
-**Verification status:** code committed to `main`. Automated tests and a fresh production upload/history smoke test have not yet been run after this change. Do not treat the 500 as resolved until the new Vercel deployment is READY and the same subject's history GET plus syllabus upload-start request are confirmed successful.
+**Initial status:** code had been committed; automated and runtime verification were pending.
+
+
+## 2026-11-02 verification result
+
+The follow-up revision (commit `dfdb165`) is deployed to production with state **READY** and the `prepmaster-tau.vercel.app` alias.
+
+- Clean Vercel sandbox install: `npm ci` succeeded.
+- Focused API suite: `npx vitest run tests/admin-course-uploads-api.test.js` — **7/7 passed**.
+- Targeted ESLint for `api/admin-course-uploads.js` and `tests/admin-course-uploads-api.test.js` — passed.
+- Production Vite build: `npm run build` — passed. Existing circular vendor chunk and large-chunk-size warnings remain.
+- Live production request without Authorization: **HTTP 401** with the expected `Sign in to manage course files.` JSON response. This confirms the function initializes and the handler executes on the production alias.
+- Vercel grouped runtime-error scan for the route over the latest hour: no matching runtime errors.
+
+**Still pending:** authenticated upload-history GET and a real syllabus upload-start/finalize using the administrator's browser session. The available checks establish successful deployment and route startup, but cannot prove the authenticated Supabase/database/storage path without that session. Retry the same subject in the browser to complete the end-to-end smoke test.
