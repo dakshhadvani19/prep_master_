@@ -56,18 +56,32 @@ function assertCharacterLimit(text) {
 }
 
 async function extractPdf(buffer) {
-    if (buffer.length < 5 || buffer.subarray(0, 5).toString('ascii') !== '%PDF-') {
+    // Some valid PDF producers prepend a short binary/comment header. The PDF
+    // specification permits the %PDF marker within the first 1024 bytes.
+    const headerOffset = buffer.subarray(0, 1024).indexOf('%PDF-');
+    if (headerOffset < 0) {
         throw new UploadValidationError('This file does not contain a valid PDF header.');
     }
+    const pdfBytes = headerOffset === 0 ? buffer : buffer.subarray(headerOffset);
 
     // Initialize Node geometry globals before PDF.js evaluates its legacy bundle.
     const getDocument = await getPdfJsDocument();
     let pdf;
     try {
         const task = getDocument({
-            data: new Uint8Array(buffer),
+            data: new Uint8Array(pdfBytes),
             useSystemFonts: true,
             isEvalSupported: false,
+            // Recover from non-fatal structure/xref issues instead of stopping
+            // on the first parser warning. XFA is enabled for university forms.
+            stopAtErrors: false,
+            enableXfa: true,
+            // The complete file is already in memory; do not request ranges or
+            // continue fetching bytes from a serverless function.
+            disableRange: true,
+            disableStream: true,
+            disableAutoFetch: true,
+            verbosity: 0,
         });
         pdf = await task.promise;
         if (!Number.isInteger(pdf.numPages) || pdf.numPages < 1) {
@@ -88,19 +102,48 @@ async function extractPdf(buffer) {
                 .filter(item => typeof item.str === 'string')
                 .map(item => item.str)
                 .join(' ')
-                .replace(/\s+/g, ' ')
+                .replace(/\\s+/g, ' ')
                 .trim());
             page.cleanup?.();
         }
-        return { text: pageTexts.join('\n\n').trim(), pageCount: pdf.numPages };
+
+        // University templates sometimes keep entered values in AcroForm
+        // fields rather than in the page's text operators. Include those values
+        // so the saved syllabus text is not empty for form-based PDFs.
+        let formText = [];
+        if (typeof pdf.getFieldObjects === 'function') {
+            const fields = await pdf.getFieldObjects();
+            formText = Object.values(fields || {}).flatMap(items =>
+                (Array.isArray(items) ? items : [items])
+                    .map(field => field?.value)
+                    .flatMap(value => Array.isArray(value) ? value : [value])
+                    .filter(value => typeof value === 'string' || typeof value === 'number')
+                    .map(value => String(value).trim())
+                    .filter(Boolean),
+            );
+        }
+
+        const uniqueFormText = [...new Set(formText)];
+        return {
+            text: [pageTexts.join('\\n\\n').trim(), uniqueFormText.join('\\n')].filter(Boolean).join('\\n\\n'),
+            pageCount: pdf.numPages,
+        };
     } catch (error) {
         if (error instanceof UploadValidationError) throw error;
-        throw new UploadValidationError('The PDF is damaged, encrypted, or could not be read. Export a fresh, text-readable PDF and try again.');
+        // Preserve the real parser detail in server logs. The old code swallowed
+        // it and incorrectly told admins that every PDF.js runtime error meant
+        // the uploaded PDF itself was damaged or encrypted.
+        console.error('[pdf-extraction] PDF.js could not extract text:', {
+            name: error?.name || 'Error',
+            message: error?.message || String(error),
+        });
+        throw new UploadValidationError(
+            'Text could not be extracted from this PDF. The file itself may still be valid; try exporting it as a standard PDF or upload the DOCX version.',
+        );
     } finally {
         if (pdf?.destroy) await pdf.destroy().catch(() => {});
     }
 }
-
 async function extractDocx(buffer) {
     if (buffer.length < 4 || buffer.subarray(0, 2).toString('hex') !== '504b') {
         throw new UploadValidationError('This file is not a valid DOCX document.');
