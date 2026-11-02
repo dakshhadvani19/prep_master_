@@ -138,15 +138,11 @@ export default function AdminCourses() {
         setSubjects([]);
         setSubjectsError('');
         setSubjectsLoading(true);
-        setSubjectId(null);
-        setSubjectSearch('');
         setStep('semester');
     }
 
     function chooseSemester(value) {
         setSemester(Number(value));
-        setSubjectId(null);
-        setSubjectSearch('');
         setStep('subject');
     }
 
@@ -185,9 +181,7 @@ export default function AdminCourses() {
         setCourse(null);
         setSubjects([]);
         setSemester(null);
-        setSubjectId(null);
         setCourseSearch('');
-        setSubjectSearch('');
         setCoursesError('');
         setSubjectsError('');
     }
