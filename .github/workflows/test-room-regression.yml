@@ -66,17 +66,25 @@ jobs:
           tests/admin-course-uploads.test.jsx
           tests/admin-subjects-api.test.js
           tests/admin-courses.test.jsx
+          tests/student-catalog.test.jsx
+          tests/student-published-question-bank-api.test.js
+          tests/supabaseMock.js
+          tests/student-catalog.test.jsx
+          tests/student-published-question-bank-api.test.js
       - name: Lint changed upload processing and subject management files
         run: >-
           npx eslint
           api/admin-course-uploads.js
           api/admin-course-upload-worker.js
           api/admin-subjects.js
+          api/exam-attempts.js
+          api/test-room-session.js
           api/_lib/admin-course-upload-validation.js
           api/_lib/question-bank-parser.js
           src/components/AdminCourseUploads.jsx
           src/components/AdminSubjectEditor.jsx
           src/pages/AdminCourses.jsx
+          src/utils/catalogApi.js
           tests/admin-course-uploads-api.test.js
           tests/admin-course-upload-worker.test.js
           tests/admin-subjects-api.test.js
