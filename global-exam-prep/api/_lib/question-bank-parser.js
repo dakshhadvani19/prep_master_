@@ -1,7 +1,7 @@
 import { Buffer } from 'node:buffer';
 import { parse } from 'csv-parse/sync';
 import mammoth from 'mammoth';
-import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
+import { getPdfJsDocument } from './pdfjs-runtime.js';
 import { QUESTION_BANK_CSV_HEADERS } from './admin-course-upload-validation.js';
 
 const clean = value => String(value || '').replace(/\s+/g, ' ').trim();

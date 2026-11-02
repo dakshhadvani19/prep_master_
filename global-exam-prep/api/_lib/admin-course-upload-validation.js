@@ -1,7 +1,7 @@
 import { Buffer } from 'node:buffer';
 import { parse } from 'csv-parse/sync';
 import mammoth from 'mammoth';
-import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
+import { getPdfJsDocument } from './pdfjs-runtime.js';
 
 export const MAX_UPLOAD_BYTES = 20 * 1024 * 1024;
 export const MAX_PDF_PAGES = 50;

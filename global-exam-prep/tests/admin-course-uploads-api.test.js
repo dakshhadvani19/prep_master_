@@ -250,81 +250,51 @@ describe('admin course upload API security and metadata', () => {
         }));
     });
 
-    it('finalizes a stored PDF in Node when DOMMatrix is not globally available', async () => {
+    it('queues a fully uploaded private Storage object without parsing it in the request', async () => {
         const { client, rpc } = clientMock();
         const uploadId = 'a5d1f0b6-647b-4652-a97b-3e3d4f8c6b12';
-        const pdfBuffer = makeMinimalPdf('The upload API extracts this syllabus text.');
         const record = {
             id: uploadId,
             object_path: 'subjects/411/test-syllabus.pdf',
             file_name: 'test-syllabus.pdf',
             file_extension: 'pdf',
             mime_type: 'application/pdf',
-            size_bytes: pdfBuffer.length,
+            size_bytes: 4096,
             kind: 'syllabus',
             status: 'uploading',
         };
-        rpc.mockImplementation(async (name, args) => {
-            if (name === 'pm_admin_course_upload_list') {
-                return { data: [record], error: null };
-            }
-            if (name === 'pm_admin_course_upload_set_validation') {
-                return {
-                    data: {
-                        ...record,
-                        status: args.p_status,
-                        page_count: args.p_page_count,
-                        word_count: args.p_word_count,
-                        preview_text: args.p_preview_text,
-                    },
-                    error: null,
-                };
+        rpc.mockImplementation(async name => {
+            if (name === 'pm_admin_course_upload_list') return { data: [record], error: null };
+            if (name === 'pm_admin_course_upload_accept') {
+                return { data: { ...record, status: 'queued' }, error: null };
             }
             return { data: null, error: null };
         });
-        client.storage = {
-            from: vi.fn(() => ({
-                download: vi.fn().mockResolvedValue({
-                    data: new Blob([pdfBuffer], { type: 'application/pdf' }),
-                    error: null,
-                }),
-                remove: vi.fn(),
-            })),
-        };
+        const list = vi.fn().mockResolvedValue({
+            data: [{ name: 'test-syllabus.pdf', metadata: { size: 4096 } }],
+            error: null,
+        });
+        const download = vi.fn();
+        client.storage = { from: vi.fn(() => ({ list, download })) };
         createClient.mockReturnValue(client);
 
-        const previous = {
-            DOMMatrix: globalThis.DOMMatrix,
-            ImageData: globalThis.ImageData,
-            Path2D: globalThis.Path2D,
-        };
-        delete globalThis.DOMMatrix;
-        delete globalThis.ImageData;
-        delete globalThis.Path2D;
+        const res = createResponse();
+        await handler({
+            method: 'POST',
+            url: '/api/admin-course-uploads',
+            headers: { authorization: 'Bearer verified-admin-token' },
+            body: { action: 'finalize', subjectId: 411, uploadId },
+        }, res);
 
-        try {
-            const res = createResponse();
-            await handler({
-                method: 'POST',
-                url: '/api/admin-course-uploads',
-                headers: { authorization: 'Bearer verified-admin-token' },
-                body: { action: 'finalize', subjectId: 411, uploadId },
-            }, res);
-
-            expect(res.statusCode).toBe(200);
-            expect(res.body.upload.status).toBe('needs_confirmation');
-            expect(res.body.upload.preview_text).toContain('The upload API extracts this syllabus text.');
-            expect(rpc).toHaveBeenCalledWith('pm_admin_course_upload_set_validation', expect.objectContaining({
-                p_upload_id: uploadId,
-                p_status: 'needs_confirmation',
-                p_page_count: 1,
-            }));
-            expect(typeof globalThis.DOMMatrix).toBe('function');
-        } finally {
-            if (previous.DOMMatrix) globalThis.DOMMatrix = previous.DOMMatrix;
-            if (previous.ImageData) globalThis.ImageData = previous.ImageData;
-            if (previous.Path2D) globalThis.Path2D = previous.Path2D;
-        }
+        expect(res.statusCode).toBe(202);
+        expect(res.body.accepted).toBe(true);
+        expect(res.body.safe_to_close).toBe(true);
+        expect(res.body.upload.status).toBe('queued');
+        expect(rpc).toHaveBeenCalledWith('pm_admin_course_upload_accept', {
+            p_admin_auth_uid: 'admin-auth-uid',
+            p_upload_id: uploadId,
+        });
+        expect(download).not.toHaveBeenCalled();
     });
 
     it('rejects unsupported request methods', async () => {

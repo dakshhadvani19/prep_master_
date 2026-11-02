@@ -98,3 +98,18 @@ Post-deploy smoke test still required: after production deployment is READY, use
 Fix commit 5a34581fc8d1b2df371c12df149cb59005b28cea is deployed to the production alias prepmaster-tau.vercel.app. Vercel reports the deployment state READY. The post-deploy grouped runtime-error scan for /api/admin-course-uploads returned no matching errors during the first 10-minute window.
 
 The authenticated storage-to-finalize smoke test remains a required admin-session check. Use the saved upload history's Check completed upload action to retry server-side finalization for the existing private Storage object; do not upload the same PDF again unless the object is missing.
+
+
+## Asynchronous upload processing — 2026-11-02
+
+The upload flow now uses the private Storage bucket plus a durable PGMQ Basic queue. The existing private.admin_course_uploads row remains the lifecycle record; queue messages contain only the upload UUID.
+
+- The browser still uploads directly with resumable TUS. The API checks that the exact object exists and that its byte count matches the recorded upload before accepting it.
+- A service-role-only database RPC changes the row to queued and sends the PGMQ message in the same transaction. The API returns HTTP 202 only after the transaction commits; after that response, the admin can safely close the page.
+- The Node worker downloads and validates the stored file. A validated syllabus stops at needs_confirmation and still requires the existing explicit confirm RPC to replace the active syllabus. Question banks stop at validated_waiting_phase3.
+- Infrastructure failures retry with increasing queue visibility delays. After five attempts they move to retry_waiting and a private dead-letter queue; an administrator can request another retry from upload history.
+- Queue access is never granted to anon/authenticated browser roles.
+
+Correction to the earlier PDF validation note: the PDF runtime helper existed, but both document-processing modules imported PDF.js directly while calling getPdfJsDocument(). That import mismatch is now corrected. The earlier verification missed the committed import mismatch and must not be treated as proof that the old import path was valid.
+
+The worker's Supabase Cron trigger and its Vault secret are separate deployment configuration. Real authenticated upload-to-worker smoke testing remains required; no production processing success is claimed until that is observed.

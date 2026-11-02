@@ -68,3 +68,8 @@ Regression coverage now includes PDF question-bank parsing with DOMMatrix absent
 Fix commit 5a34581fc8d1b2df371c12df149cb59005b28cea is deployed to the production alias prepmaster-tau.vercel.app. Vercel reports the deployment state READY. The post-deploy grouped runtime-error scan for /api/admin-course-uploads returned no matching errors during the first 10-minute window.
 
 The authenticated storage-to-finalize smoke test remains a required admin-session check. Use the saved syllabus history's Check completed upload action when retrying a PDF finalization; question-bank PDF parsing uses the same Node runtime bootstrap.
+
+
+## Background intake boundary — 2026-11-02
+
+The asynchronous worker handles Phase 2 source-file validation and text extraction after a file is durably accepted. Phase 3 question-bank normalization, review, rubric approval and publication remain behind the existing explicit admin actions and are not automatically published by the worker.

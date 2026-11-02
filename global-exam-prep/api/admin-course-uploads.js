@@ -207,65 +207,83 @@ async function handleResume(client, adminUid, body) {
     };
 }
 
+async function getStoredObjectSize(client, record) {
+    const parts = String(record.object_path || '').split('/');
+    const objectName = parts.pop();
+    const folder = parts.join('/');
+    if (!objectName || !folder) throw new Error('The stored file path is invalid.');
+    const { data, error } = await client.storage.from(BUCKET).list(folder, { limit: 10, search: objectName });
+    if (error) throw new Error('Could not verify the uploaded file in private storage.');
+    const object = (data || []).find(item => item.name === objectName);
+    if (!object) return null;
+    const metadataSize = Number(object.metadata?.size ?? object.metadata?.contentLength);
+    if (Number.isSafeInteger(metadataSize) && metadataSize >= 0) return metadataSize;
+    const { data: fileData, error: downloadError } = await client.storage.from(BUCKET).download(record.object_path);
+    if (downloadError || !fileData) throw new Error('The uploaded file is present but its size could not be verified.');
+    return Number(fileData.size ?? (await fileData.arrayBuffer()).byteLength);
+}
+
 async function handleFinalize(client, adminUid, body) {
     const subjectId = positiveInteger(body.subjectId, 'Subject ID');
     const uploadId = String(body.uploadId || '');
-    if (!/^[0-9a-f-]{36}$/i.test(uploadId)) throw new UploadValidationError('The upload record is invalid.');
+    if (!/^[0-9a-f-]{36}$/i.test(uploadId)) throw new UploadValidationError('Invalid upload ID.');
     const uploads = await listUploads(client, adminUid, subjectId);
-    const record = uploads.find(item => item.id === uploadId);
-    if (!record) throw new UploadValidationError('The upload record was not found for this subject.');
+    const record = uploads.find(upload => upload.id === uploadId);
+    if (!record) throw new UploadValidationError('This upload does not belong to the selected subject.');
+
     if (record.status !== 'uploading') {
-        return { upload: record };
+        const accepted = ['queued', 'processing', 'retry_waiting', 'needs_confirmation',
+            'validated_waiting_phase3', 'needs_review', 'published', 'active', 'superseded'].includes(record.status);
+        return {
+            upload: record,
+            accepted,
+            safe_to_close: accepted,
+            message: accepted ? 'The uploaded file is safely stored. Background processing continues independently.' : undefined,
+        };
     }
 
-    const { data: fileData, error: downloadError } = await client.storage
-        .from(BUCKET)
-        .download(record.object_path);
-    if (downloadError || !fileData) {
+    const storedSize = await getStoredObjectSize(client, record);
+    if (storedSize === null) {
         return {
             upload: record,
             incomplete: true,
-            message: 'The file is not fully stored yet. Resume the upload or try checking it again.',
+            message: 'The file has not finished reaching private storage yet. Retry once the transfer completes.',
         };
     }
-
-    const buffer = Buffer.from(await fileData.arrayBuffer());
-    if (buffer.length !== Number(record.size_bytes)) {
-        await setValidation(client, adminUid, record.id, 'failed', {
-            error_message: 'The uploaded file size did not match the selected file.',
-            validation_details: { expected_bytes: Number(record.size_bytes), received_bytes: buffer.length },
-        });
-        await removeStoredObject(client, record.object_path);
-        return {
-            upload: { ...record, status: 'failed', error_message: 'The uploaded file size did not match the selected file.' },
-            failed: true,
-        };
-    }
-
-    try {
-        const { validateCourseUpload } = await import('./_lib/admin-course-upload-validation.js');
-        const validation = await validateCourseUpload(record, buffer);
-        const status = record.kind === 'syllabus' ? 'needs_confirmation' : 'validated_waiting_phase3';
-        const updated = await setValidation(client, adminUid, record.id, status, validation);
-        return { upload: updated };
-    } catch (error) {
-        // Unexpected runtime/import failures are service errors, not invalid user files.
-        // Keep the uploaded object and its "uploading" state so an admin can retry.
-        if (!(error instanceof UploadValidationError) && error?.name !== 'UploadValidationError') {
-            throw error;
-        }
-        const message = error.message || 'The file could not be validated. Save a fresh copy and try again.';
-        const details = error.details || {};
-        const updated = await setValidation(client, adminUid, record.id, 'failed', {
+    if (storedSize !== Number(record.size_bytes)) {
+        const message = 'The stored file size does not match the uploaded file. Please upload the file again.';
+        const failed = await setValidation(client, adminUid, record.id, 'failed', {
+            validation_details: { expected_bytes: Number(record.size_bytes), stored_bytes: storedSize },
             error_message: message,
-            validation_details: details,
-            page_count: Number.isInteger(details.page_count) ? details.page_count : null,
-            word_count: Number.isInteger(details.word_count) ? details.word_count : null,
-            row_count: Number.isInteger(details.row_count) ? details.row_count : null,
         });
-        await removeStoredObject(client, record.object_path);
-        return { upload: updated, failed: true };
+        await client.storage.from(BUCKET).remove([record.object_path]);
+        return { upload: failed, failed: true };
     }
+
+    const { data, error } = await client.rpc('pm_admin_course_upload_accept', {
+        p_admin_auth_uid: adminUid,
+        p_upload_id: uploadId,
+    });
+    if (error || !data) {
+        throw new Error(error?.message || 'The file is stored, but its background job could not be queued. Retry from upload history.');
+    }
+    return {
+        upload: data,
+        accepted: true,
+        safe_to_close: true,
+        message: 'File stored and queued successfully. You can safely close this page; validation continues in the background.',
+    };
+}
+
+async function handleRetryProcessing(client, adminUid, body) {
+    const uploadId = String(body.uploadId || '');
+    if (!/^[0-9a-f-]{36}$/i.test(uploadId)) throw new UploadValidationError('Invalid upload ID.');
+    const { data, error } = await client.rpc('pm_admin_course_upload_retry_processing', {
+        p_admin_auth_uid: adminUid,
+        p_upload_id: uploadId,
+    });
+    if (error || !data) throw new UploadValidationError(error?.message || 'This upload is not waiting for a processing retry.');
+    return { upload: data, accepted: true, safe_to_close: true };
 }
 
 async function handleConfirmSyllabus(client, adminUid, body) {
@@ -322,7 +340,11 @@ export default async function handler(req, res) {
         }
         if (body.action === 'finalize') {
             const result = await handleFinalize(client, user.id, body);
-            return res.status(result.incomplete ? 409 : 200).json(result);
+            return res.status(result.incomplete ? 409 : result.accepted ? 202 : 200).json(result);
+        }
+        if (body.action === 'retry_processing') {
+            const result = await handleRetryProcessing(client, user.id, body);
+            return res.status(202).json(result);
         }
         if (body.action === 'confirm_syllabus') {
             const result = await handleConfirmSyllabus(client, user.id, body);

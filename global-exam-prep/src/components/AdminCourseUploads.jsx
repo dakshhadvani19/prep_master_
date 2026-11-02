@@ -25,6 +25,9 @@ function statusLabel(upload) {
     if (upload.status === 'active' && upload.is_active) return 'Active syllabus';
     const labels = {
         uploading: 'Upload incomplete',
+        queued: 'Queued for validation',
+        processing: 'Processing in background',
+        retry_waiting: 'Retry required',
         validating: 'Validating',
         needs_confirmation: 'Ready to activate',
         validated_waiting_phase3: 'Validated · Ready to parse',
@@ -123,6 +126,20 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
         loadUploads();
     }, [loadUploads]);
 
+    const hasPendingJobs = uploads.some(upload => ['queued', 'processing'].includes(upload.status));
+    useEffect(() => {
+        if (!hasPendingJobs) return undefined;
+        const timer = setInterval(async () => {
+            try {
+                const result = await apiRequest('GET');
+                setUploads(Array.isArray(result.uploads) ? result.uploads : []);
+            } catch {
+                // Keep the last known state; a later poll can recover.
+            }
+        }, 7000);
+        return () => clearInterval(timer);
+    }, [hasPendingJobs, apiRequest]);
+
     function validateSelectedFile(file, uploadKind) {
         if (!file) throw new Error('Choose a file first.');
         const extension = file.name.split('.').pop()?.toLowerCase() || '';
@@ -188,8 +205,8 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
     }
 
     async function finalizeUpload(uploadId) {
-        setBusy({ id: uploadId, phase: 'validating' });
-        setNotice('Upload complete. Checking the file and extracting its text preview.');
+        setBusy({ id: uploadId, phase: 'queueing' });
+        setNotice('Upload complete. Verifying private storage and queuing background validation.');
         const result = await apiRequest('POST', {
             action: 'finalize',
             subjectId: subject.subjectId,
@@ -202,6 +219,9 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
         } else if (result.failed) {
             setNotice('');
             setActionError(result.upload?.error_message || 'The file did not pass validation.');
+        } else if (result.accepted && ['queued', 'processing'].includes(result.upload?.status)) {
+            setActionError('');
+            setNotice(result.message || 'File accepted. You can safely close this page; processing continues in the background.');
         } else if (result.upload?.status === 'needs_confirmation') {
             setActionError('');
             setNotice('Syllabus validated. Review the preview, then explicitly confirm it to replace the active version.');
@@ -250,7 +270,7 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
             }
 
             setBusy({ id: record.id, phase: 'uploading' });
-            setNotice('Uploading the original file to private storage. Keep this page open until validation finishes.');
+            setNotice('Uploading the original file to private storage. Keep this page open until the transfer completes and the background job is accepted.');
             await transferFile(file, record, session);
             await finalizeUpload(record.id);
             setSelectedFile(null);
@@ -592,6 +612,24 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
                                     )}
                                     {upload.status === 'published' && upload.kind === 'question_bank' && (
                                         <p className="ac-uploads__phase-note">This canonical question bank has been published with its subject, course, semester and exam type metadata.</p>
+                                    )}
+
+                                    {upload.status === 'retry_waiting' && (
+                                        <div className="ac-uploads__item-actions">
+                                            <button type="button" className="ac-btn ac-btn--secondary" disabled={Boolean(busy)} onClick={async () => {
+                                                setBusy({ id: upload.id, phase: 'retrying' });
+                                                setActionError('');
+                                                try {
+                                                    await apiRequest('POST', { action: 'retry_processing', uploadId: upload.id });
+                                                    setNotice('The processing job has been queued again.');
+                                                    await loadUploads();
+                                                } catch (error) {
+                                                    setActionError(error.message || 'Could not retry background processing.');
+                                                } finally {
+                                                    setBusy(null);
+                                                }
+                                            }}>Retry processing</button>
+                                        </div>
                                     )}
 
                                     {upload.status === 'failed' && (
