@@ -135,7 +135,7 @@ describe('standard admin', () => {
   it('opens Courses for an admin without writing to public.admins', async () => {
     signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     await at('/admin/courses');
-    await waitFor(() => expect(screen.getByRole('heading', { name: 'Subject & Question Locator' })).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByRole('heading', { name: 'Edit subjects' })).toBeInTheDocument());
     expect(screen.getByRole('button', { name: /Engineering & Technology/ })).toBeEnabled();
     expect(screen.queryByRole('button', { name: /Add Course/i })).toBeNull();
     expect(state.calls.filter((c) => c.table === 'admins' && c.op !== 'select')).toHaveLength(0);
