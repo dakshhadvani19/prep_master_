@@ -5,6 +5,7 @@ import {
     ShieldCheck, UploadCloud, X,
 } from 'lucide-react';
 import { supabase } from '../supabase.js';
+import { getSubjectExamInfo } from '../utils/subjectExamPolicy.js';
 import './AdminCourseUploads.css';
 
 const BUCKET = 'admin-course-files';

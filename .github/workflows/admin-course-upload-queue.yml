@@ -1,0 +1,65 @@
+name: Admin course upload queue checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "global-exam-prep/api/admin-course-upload*"
+      - "global-exam-prep/api/_lib/admin-course-upload-*"
+      - "global-exam-prep/api/_lib/question-bank-parser.js"
+      - "global-exam-prep/src/components/AdminCourseUploads.jsx"
+      - "global-exam-prep/tests/admin-course-upload-*"
+      - "global-exam-prep/tests/admin-course-uploads*"
+      - "global-exam-prep/tests/question-bank-parser.test.js"
+      - ".github/workflows/admin-course-upload-queue.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "global-exam-prep/api/admin-course-upload*"
+      - "global-exam-prep/api/_lib/admin-course-upload-*"
+      - "global-exam-prep/api/_lib/question-bank-parser.js"
+      - "global-exam-prep/src/components/AdminCourseUploads.jsx"
+      - "global-exam-prep/tests/admin-course-upload-*"
+      - "global-exam-prep/tests/admin-course-uploads*"
+      - "global-exam-prep/tests/question-bank-parser.test.js"
+      - ".github/workflows/admin-course-upload-queue.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  course-upload-validation:
+    name: Course upload queue / validation regression
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: global-exam-prep
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: global-exam-prep/package-lock.json
+      - run: npm ci
+      - name: Run upload queue and file validation suites
+        run: >-
+          npm test --
+          tests/admin-course-upload-validation.test.js
+          tests/question-bank-parser.test.js
+          tests/admin-course-uploads-api.test.js
+          tests/admin-course-upload-worker.test.js
+          tests/admin-course-uploads.test.jsx
+      - name: Lint changed upload processing files
+        run: >-
+          npx eslint
+          api/admin-course-uploads.js
+          api/admin-course-upload-worker.js
+          api/_lib/admin-course-upload-validation.js
+          api/_lib/question-bank-parser.js
+          src/components/AdminCourseUploads.jsx
+          tests/admin-course-uploads-api.test.js
+          tests/admin-course-upload-worker.test.js
+      - name: Build production app
+        run: npm run build

@@ -4,6 +4,7 @@ import { createClient } from '@supabase/supabase-js';
 import { UploadValidationError, validateCourseUpload } from './_lib/admin-course-upload-validation.js';
 
 const BUCKET = 'admin-course-files';
+const process = globalThis.process;
 export const config = { maxDuration: 60 };
 
 function serviceClient() {

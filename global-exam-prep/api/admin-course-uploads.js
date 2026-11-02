@@ -256,7 +256,7 @@ async function handleFinalize(client, adminUid, body) {
             validation_details: { expected_bytes: Number(record.size_bytes), stored_bytes: storedSize },
             error_message: message,
         });
-        await client.storage.from(BUCKET).remove([record.object_path]);
+        await removeStoredObject(client, record.object_path);
         return { upload: failed, failed: true };
     }
 

@@ -21,9 +21,9 @@ function response() {
 describe('admin course upload background worker', () => {
     beforeEach(() => {
         vi.clearAllMocks();
-        process.env.SUPABASE_URL = 'https://project.supabase.co';
-        process.env.SUPABASE_SERVICE_ROLE_KEY = 'service-role-test-secret';
-        process.env.ADMIN_COURSE_UPLOAD_WORKER_SECRET = 'worker-secret-for-tests';
+        globalThis.process.env.SUPABASE_URL = 'https://project.supabase.co';
+        globalThis.process.env.SUPABASE_SERVICE_ROLE_KEY = 'service-role-test-secret';
+        globalThis.process.env.ADMIN_COURSE_UPLOAD_WORKER_SECRET = 'worker-secret-for-tests';
     });
 
     it('rejects calls without the private worker token', async () => {

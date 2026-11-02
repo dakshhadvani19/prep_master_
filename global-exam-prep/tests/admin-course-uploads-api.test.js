@@ -1,4 +1,3 @@
-import { Buffer } from 'node:buffer';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import process from 'node:process';
 import handler from '../api/admin-course-uploads.js';
@@ -17,30 +16,6 @@ function createResponse() {
         end() { return this; },
         setHeader(name, value) { this.headers[name] = value; },
     };
-}
-
-function makeMinimalPdf(text) {
-    const stream = 'BT /F1 12 Tf 20 100 Td (' + text + ') Tj ET';
-    const objects = [
-        '<< /Type /Catalog /Pages 2 0 R >>',
-        '<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
-        '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 300 144] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>',
-        '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',
-        '<< /Length ' + Buffer.byteLength(stream, 'binary') + ' >>\nstream\n' + stream + '\nendstream',
-    ];
-    let body = '%PDF-1.4\n';
-    const offsets = [0];
-    for (let index = 0; index < objects.length; index += 1) {
-        offsets.push(Buffer.byteLength(body, 'binary'));
-        body += (index + 1) + ' 0 obj\n' + objects[index] + '\nendobj\n';
-    }
-    const xrefOffset = Buffer.byteLength(body, 'binary');
-    body += 'xref\n0 6\n0000000000 65535 f \n';
-    for (let index = 1; index < offsets.length; index += 1) {
-        body += String(offsets[index]).padStart(10, '0') + ' 00000 n \n';
-    }
-    body += 'trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n' + xrefOffset + '\n%%EOF';
-    return Buffer.from(body, 'binary');
 }
 
 function clientMock({ adminRow = { AdminId: 1, isSuperAdmin: true }, subjectRow = {
