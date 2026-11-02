@@ -76,20 +76,66 @@ function encodeOfficialCode(value) {
     return digits;
 }
 
-async function allocateSubjectId(client, courseId, subjectCode) {
+async function allocateSubjectId(client, courseId, subjectCode, semester, courseSemesters = []) {
     const encodedCode = encodeOfficialCode(subjectCode);
-    const { data, error } = await client.from('Subjects').select('SubjectId').eq('CourseId', courseId);
+    const { data, error } = await client
+        .from('Subjects')
+        .select('SubjectId,Semester')
+        .eq('CourseId', courseId);
     if (error) throw new Error('Existing subject IDs could not be checked.');
-    const used = new Set((data || []).map(row => String(row.SubjectId)));
+
+    const existingById = new Map((data || []).map(row => [String(row.SubjectId), row]));
+    const matchingOccurrences = [];
     for (let occurrence = 1; occurrence <= 99; occurrence += 1) {
         const suffix = encodedCode + String(occurrence).padStart(2, '0');
         if (suffix.length > 12) break;
         const candidate = BigInt(String(courseId) + suffix.padStart(12, '0'));
         if (candidate <= 0n || candidate > MAX_BIGINT) break;
         const subjectId = candidate.toString();
-        if (!used.has(subjectId)) return subjectId;
+        const existing = existingById.get(subjectId);
+        if (!existing) continue;
+        if (Number(existing.Semester) === Number(semester)) return subjectId;
+        matchingOccurrences.push({
+            subjectId,
+            occurrence,
+            semester: Number(existing.Semester),
+        });
     }
-    throw new UploadValidationError('A free canonical Subject ID could not be allocated for this subject code. Check the official code and existing course mapping.');
+
+    if (matchingOccurrences.length) {
+        const semesterOrder = (courseSemesters || []).map(Number);
+        const requestedOrder = semesterOrder.indexOf(Number(semester));
+        const existingOrders = matchingOccurrences.map(item => semesterOrder.indexOf(item.semester));
+        if (requestedOrder < 0 || existingOrders.some(index => index < 0)) {
+            throw new UploadValidationError('The official subject-code occurrence order could not be verified for this course.');
+        }
+        const latestExistingOrder = Math.max(...existingOrders);
+        if (requestedOrder <= latestExistingOrder) {
+            throw new UploadValidationError(
+                'This official code already identifies a subject in another semester. The new occurrence must be mapped in the course semester order before it can be added safely.',
+            );
+        }
+    }
+
+    const occurrence = matchingOccurrences.length
+        ? Math.max(...matchingOccurrences.map(item => item.occurrence)) + 1
+        : 1;
+    if (occurrence > 99) {
+        throw new UploadValidationError('No canonical occurrence number remains for this subject code.');
+    }
+    const suffix = encodedCode + String(occurrence).padStart(2, '0');
+    if (suffix.length > 12) {
+        throw new UploadValidationError('This subject code is too long for the canonical Subject ID format.');
+    }
+    const candidate = BigInt(String(courseId) + suffix.padStart(12, '0'));
+    if (candidate <= 0n || candidate > MAX_BIGINT) {
+        throw new UploadValidationError('The canonical Subject ID exceeds the BIGINT range.');
+    }
+    const subjectId = candidate.toString();
+    if (existingById.has(subjectId)) {
+        throw new UploadValidationError('The next canonical Subject ID is already allocated. Check the verified subject mapping before adding this subject.');
+    }
+    return subjectId;
 }
 
 async function removeStoredFile(client, objectPath) {
@@ -151,7 +197,7 @@ async function addSubject(client, user, body) {
             throw new UploadValidationError('The syllabus contains too little readable text. Upload a complete text-readable PDF or DOCX.');
         }
 
-        const subjectId = await allocateSubjectId(client, courseId, subjectCode);
+        const subjectId = await allocateSubjectId(client, courseId, subjectCode, semester, course.Sems);
         const { data, error } = await client.rpc('pm_admin_subject_create', {
             p_admin_auth_uid: user.id,
             p_subject_id: subjectId,
@@ -171,13 +217,23 @@ async function addSubject(client, user, body) {
             p_word_count: extracted.word_count,
         });
         if (error || !data?.subject) {
-            if (error?.code === '23505') throw new UploadValidationError('This Subject ID is already in use. Retry the add operation to allocate the next available occurrence.');
+            const message = String(error?.message || '');
+            if (message.includes('subject_already_active')) {
+                throw Object.assign(new Error('This subject is already active in the selected course and semester.'), { status: 409 });
+            }
+            if (message.includes('subject_identity_conflict')) {
+                throw Object.assign(new Error('The canonical Subject ID is already linked to a different course or semester. The subject mapping must be reviewed.'), { status: 409 });
+            }
+            if (error?.code === '23505') {
+                throw Object.assign(new Error('This Subject ID conflicts with an existing catalog row. No existing subject record was overwritten.'), { status: 409 });
+            }
             throw new Error(error?.message || 'The subject and extracted syllabus could not be saved.');
         }
         saved = true;
         return {
             subjectId: String(data.subject.SubjectId),
             subjectName: data.subject.SubjectName,
+            restored: data.restored === true,
             courseId,
             semester,
             extractedWords: extracted.word_count,
