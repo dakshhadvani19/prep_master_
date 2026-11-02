@@ -258,14 +258,6 @@ export default function ExamPortal() {
         // Intentionally minimal: sync handled in ActiveExamInterface.
     }, [examState, attemptId, isOnline]);
 
-    if (subjectContextLoading) {
-        return <div className="container" role="status" style={{ textAlign: 'center', marginTop: '4rem' }}>Loading subject details…</div>;
-    }
-
-    if (!examInfo || !subjectDetail) {
-        return <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }}><h2>Exam details not found</h2></div>;
-    }
-
     const formatTime = (seconds) => {
         const h = Math.floor(seconds / 3600);
         const m = Math.floor((seconds % 3600) / 60);
@@ -701,6 +693,14 @@ export default function ExamPortal() {
             setIsSubmitting(false);
         }
     };
+
+    if (subjectContextLoading) {
+        return <div className="container" role="status" style={{ textAlign: 'center', marginTop: '4rem' }}>Loading subject details…</div>;
+    }
+
+    if (!examInfo || !subjectDetail) {
+        return <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }}><h2>Exam details not found</h2></div>;
+    }
 
     return (
         <div className="container animate-fade-in" style={{ maxWidth: '1000px' }}>
