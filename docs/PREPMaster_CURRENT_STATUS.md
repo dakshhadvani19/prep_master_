@@ -316,3 +316,13 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Refined homepage typography using the existing Inter family: clearer weight hierarchy, more measured tracking and comfortable body contrast. No new font or dependency was added.
 - The course explorer, semester/subject catalog, exam setup, Test Room and admin UI were not changed.
 - Verification: reviewed the exact source changes and documented scope. Local test/build and browser screenshot review were not available in the connected environment; runtime appearance remains unverified.
+
+
+## Homepage liquid-glass card refinement — 2026-11-02
+
+- Reworked the six academic-domain navigation cards from a harder charcoal slab into the homepage's primary glass control layer: softer 26px corners, more translucent layered charcoal, stronger backdrop blur/saturation, a broad soft elevation and subtle white/champagne reflections.
+- Added a slow, hover-only specular sweep and a gentle shift in the reflected light. The card itself now lifts less and compresses less on press; there is no perpetual animation or layout/route change.
+- Kept the contact cards as quieter standard content surfaces without stacked backdrop blur. The art frame remains a visual content layer rather than another glass panel.
+- Added opaque fallbacks for browsers without backdrop-filter, a reduced-transparency treatment, and stronger borders/surfaces for increased-contrast preferences.
+- Preserved the white-first / restrained-gold palette, six-card equal grid, illustrations, card copy, navigation routes, contact links, and like controls. No global palette tokens or course/exam/Test Room/admin screens changed.
+- Verification: source-level edits and selector/fallback presence were checked. Local test/build and browser screenshot inspection were not available through the connected repository session; visual rendering remains unverified.

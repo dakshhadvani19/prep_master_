@@ -269,9 +269,9 @@ export default function LandingPage() {
                                 to={'/domains/' + domain.id + '/courses'}
                                 className="pm-domain-card"
                                 variants={cardReveal}
-                                whileHover={reduceMotion ? undefined : { y: -5, scale: 1.008 }}
-                                whileTap={reduceMotion ? undefined : { scale: 0.99 }}
-                                transition={{ duration: 0.32, ease: smoothEase }}
+                                whileHover={reduceMotion ? undefined : { y: -3, scale: 1.004 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.995 }}
+                                transition={{ duration: 0.48, ease: smoothEase }}
                             >
                                 <div className="pm-domain-art-wrap"><DomainArtwork id={domain.id} /></div>
                                 <div className="pm-domain-content">

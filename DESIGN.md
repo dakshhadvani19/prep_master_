@@ -7,7 +7,7 @@ PrepMaster is a student examination-preparation product. The student-facing jour
 ## Visual language
 
 - Canvas: retain the existing near-black --bg-primary (#0f1115) and charcoal surface tokens.
-- Surfaces: use layered charcoal, semi-translucent fills, restrained backdrop blur, a fine upper light edge and soft depth. Keep text-bearing surfaces opaque enough to preserve contrast.
+- Surfaces: keep the graphite canvas. The six academic-domain navigation cards are the homepage's single Liquid-Glass-inspired functional layer: translucent charcoal, a 24–30px backdrop blur, restrained saturation, soft white specular reflections, a faint champagne-gold reflected edge and broad low-contrast elevation. The contact cards remain quieter standard surfaces without stacked blur. Keep text-bearing surfaces sufficiently opaque for contrast.
 - Brand emphasis: the student homepage now uses a white-first object palette over the unchanged graphite canvas. The exam paper, answer sheet, pencil, department line illustrations, headings and primary action are white or cool-neutral. Keep warm amber --gold (#ffb454) and --gold-bright (#ffd08a) for small illustration details, fine edge highlights, focus accents and reflected glow/shadows; do not turn large objects or text into gold surfaces.
 - Scope: this white-dominant treatment applies only to the homepage hero, department illustrations/cards and homepage contact section. The course explorer, semester/subject catalog, exam configuration, Test Room and admin screens retain their established colors.
 - Existing global blue and violet tokens are not redefined. The homepage's gold is a local light/shadow accent, not a new global action color.
@@ -34,7 +34,7 @@ Use the existing Framer Motion dependency. Motion is deliberate, brief and tied 
 
 ## Material and accessibility rules
 
-The visual treatment is Liquid-Glass-inspired, not a literal native Apple implementation. Use translucency and blur selectively on interactive surfaces and top-level functional layers. Keep content-bearing panels and exam text readable; do not stack multiple blurred surfaces. Provide a sufficiently opaque fallback when backdrop filtering is unavailable. Keep visible focus, keyboard operation, 44px-class tap targets where practical and non-color selected-state semantics.
+The visual treatment is a web-native interpretation of Apple's material principles, not a literal native implementation. Reserve the fluid glass effect for the six primary academic-domain navigation cards; use soft standard surfaces for the contact content cards. The liquid feel comes from layered light/reflection gradients, a diffused edge, restrained backdrop blur and a slow hover-only specular sweep—not perpetual animation or a costly distortion shader. Preserve legible text, visible focus, reduced-transparency/high-contrast fallbacks, and avoid stacking blur on nested content. Keep visible focus, keyboard operation, 44px-class tap targets where practical and non-color selected-state semantics.
 
 ## Scope boundaries
 

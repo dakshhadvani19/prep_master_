@@ -128,41 +128,63 @@
 .pm-section-head p { max-width: 405px; margin: 0; color: var(--pm-muted); font-size: 15px; line-height: 1.65; }
 .pm-domain-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 17px; align-items: stretch; grid-auto-rows: 1fr; }
 .pm-domain-card {
-    min-width: 0; min-height: 286px; height: 100%; position: relative; overflow: hidden;
+    min-width: 0; min-height: 286px; height: 100%; position: relative; isolation: isolate; overflow: hidden;
     display: flex; flex-direction: column; padding: 18px;
     color: #fff; text-decoration: none;
-    border: 1px solid rgba(255,255,255,.19); border-radius: 19px;
-    background: linear-gradient(145deg,rgba(61,65,74,.7) 0%,rgba(31,34,41,.74) 38%,rgba(20,23,29,.9) 100%);
-    backdrop-filter: blur(18px) saturate(128%);
-    -webkit-backdrop-filter: blur(18px) saturate(128%);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.18), inset 0 -1px 0 rgba(0,0,0,.24),
-        0 16px 36px rgba(0,0,0,.23), 0 3px 8px rgba(0,0,0,.13);
-    transition: border-color .34s ease, background .34s ease, box-shadow .34s ease;
+    border: 1px solid rgba(255,255,255,.22); border-radius: 26px;
+    background:
+        radial-gradient(118% 92% at 8% -4%,rgba(255,255,255,.19),transparent 49%),
+        radial-gradient(76% 64% at 100% 100%,rgba(255,180,84,.085),transparent 58%),
+        linear-gradient(148deg,rgba(255,255,255,.115) 0%,rgba(255,255,255,.055) 32%,rgba(29,33,41,.56) 72%,rgba(17,20,26,.76) 100%);
+    backdrop-filter: blur(28px) saturate(158%);
+    -webkit-backdrop-filter: blur(28px) saturate(158%);
+    box-shadow:
+        inset 0 1.5px 0 rgba(255,255,255,.32),
+        inset 1px 0 0 rgba(255,255,255,.075),
+        inset -1px 0 0 rgba(255,255,255,.035),
+        inset 0 -1px 0 rgba(255,180,84,.09),
+        0 24px 58px rgba(0,0,0,.24),
+        0 5px 16px rgba(0,0,0,.12);
+    transition: border-color .42s ease, background .42s ease, box-shadow .48s ease;
 }
 .pm-domain-card::before {
-    content: ""; position: absolute; inset: 1px 1px auto; height: 54%;
-    pointer-events: none; border-radius: 18px 18px 42% 42%;
-    background: radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.12),transparent 72%);
-    opacity: .72; transition: opacity .35s ease;
+    content: ""; position: absolute; z-index: 0; inset: 0;
+    pointer-events: none; border-radius: inherit;
+    background:
+        radial-gradient(66% 52% at 17% 0%,rgba(255,255,255,.24),transparent 100%),
+        radial-gradient(58% 62% at 94% 100%,rgba(255,180,84,.12),transparent 72%),
+        linear-gradient(124deg,rgba(255,255,255,.105),transparent 35%,transparent 72%,rgba(255,255,255,.045));
+    opacity: .78; transform: translate3d(-1.2%,-1.4%,0) scale(1.035);
+    transition: opacity .55s ease,transform .9s cubic-bezier(.22,1,.36,1);
 }
 .pm-domain-card::after {
-    content: ""; position: absolute; top: -80%; left: -55%; width: 48%; height: 260%;
-    pointer-events: none; opacity: 0; transform: rotate(23deg) translateX(-150%);
-    background: linear-gradient(90deg,transparent,rgba(255,255,255,.09),transparent);
-    transition: transform .85s cubic-bezier(.22,1,.36,1),opacity .35s ease;
+    content: ""; position: absolute; z-index: 0; top: -86%; left: -72%; width: 62%; height: 270%;
+    pointer-events: none; opacity: 0; filter: blur(13px);
+    transform: rotate(24deg) translate3d(-35%,0,0);
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,.17),rgba(255,208,138,.085),transparent);
+    transition: transform 1.05s cubic-bezier(.22,1,.36,1),opacity .42s ease;
 }
 .pm-domain-card:hover {
-    color: #fff; border-color: rgba(255,208,138,.48);
-    background: linear-gradient(145deg,rgba(62,65,72,.78),rgba(29,32,38,.84));
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.24), inset 0 -1px 0 rgba(0,0,0,.22),
-        0 22px 48px rgba(0,0,0,.32), 0 7px 22px rgba(255,180,84,.09);
+    color: #fff; border-color: rgba(255,208,138,.5);
+    background:
+        radial-gradient(118% 92% at 8% -4%,rgba(255,255,255,.23),transparent 49%),
+        radial-gradient(76% 64% at 100% 100%,rgba(255,180,84,.12),transparent 58%),
+        linear-gradient(148deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.065) 32%,rgba(29,33,41,.52) 72%,rgba(17,20,26,.72) 100%);
+    box-shadow:
+        inset 0 1.5px 0 rgba(255,255,255,.38),
+        inset 1px 0 0 rgba(255,255,255,.09),
+        inset 0 -1px 0 rgba(255,180,84,.12),
+        0 28px 66px rgba(0,0,0,.3),
+        0 8px 26px rgba(255,180,84,.095);
 }
-.pm-domain-card:hover::before { opacity: 1; }
-.pm-domain-card:hover::after { opacity: 1; transform: rotate(23deg) translateX(470%); }
+.pm-domain-card:hover::before { opacity: 1; transform: translate3d(1.2%,.8%,0) scale(1.055); }
+.pm-domain-card:hover::after { opacity: .66; transform: rotate(24deg) translate3d(215%,0,0); }
 .pm-domain-art-wrap {
     height: 132px; flex: 0 0 132px; display: grid; place-items: center;
-    position: relative; overflow: hidden; border-radius: 13px;
-    background: radial-gradient(ellipse at 50% 45%,rgba(255,255,255,.075),rgba(255,180,84,.055) 48%,transparent 76%);
+    position: relative; z-index: 1; overflow: hidden; border-radius: 17px;
+    background:
+        radial-gradient(ellipse at 50% 42%,rgba(255,255,255,.115),rgba(255,180,84,.065) 46%,transparent 76%),
+        linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008));
 }
 .pm-domain-art-wrap::after {
     content: ""; position: absolute; width: 160px; height: 1px; bottom: 10px;
@@ -183,6 +205,7 @@
 }
 .pm-domain-open svg { color: var(--pm-gold-bright); transition: transform .25s ease; }
 .pm-domain-card:hover .pm-domain-open svg { transform: translate(3px,-2px); }
+.pm-domain-card:focus-visible { outline: 2px solid var(--pm-gold-bright); outline-offset: 4px; }
 
 /* Developer contact cards keep their content; only material, spacing and control finish are softened. */
 .pm-people-section {
@@ -195,11 +218,15 @@
 .pm-people-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
 .pm-people-grid > div { min-width: 0; }
 .pm-people-card {
-    min-width: 0; height: 100%; padding: 23px;
-    background: linear-gradient(145deg,rgba(49,52,60,.64),rgba(22,25,31,.8));
-    border: 1px solid rgba(255,255,255,.14); border-radius: 17px;
-    backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 14px 32px rgba(0,0,0,.2);
+    min-width: 0; height: 100%; padding: 23px; position: relative;
+    background:
+        radial-gradient(100% 90% at 5% -5%,rgba(255,255,255,.075),transparent 58%),
+        linear-gradient(145deg,rgba(49,52,60,.72),rgba(22,25,31,.9));
+    border: 1px solid rgba(255,255,255,.12); border-radius: 22px;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.16),
+        inset 0 -1px 0 rgba(255,180,84,.035),
+        0 18px 42px rgba(0,0,0,.22);
 }
 .pm-people-identity { position: relative; display: flex; align-items: center; gap: 15px; padding-right: 42px; }
 .pm-people-avatar { width: 64px; height: 64px; flex: 0 0 64px; object-fit: cover; border-radius: 13px; border: 1px solid rgba(255,255,255,.2); box-shadow: 0 7px 18px rgba(0,0,0,.22); }
@@ -374,11 +401,35 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,.12),0 12px 26px rgba(0,0,0,.17);
 }
 
-/* Keep translucent surfaces readable in browsers without backdrop-filter. */
+/* Keep the functional glass layer readable when blur or transparency is unavailable. */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-    .pm-domain-card,.pm-course-card,.pm-semester-button,.pm-subject-trigger,.pm-people-card {
+    .pm-domain-card {
+        background: linear-gradient(145deg,#343943 0%,#242932 58%,#1b2028 100%);
+    }
+    .pm-course-card,.pm-semester-button,.pm-subject-trigger,.pm-people-card {
         background: #1c2027;
     }
+}
+
+/* Respect system accessibility settings that reduce transparency or request stronger contrast. */
+@media (prefers-reduced-transparency: reduce) {
+    .pm-domain-card {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: linear-gradient(145deg,rgba(48,53,62,.98),rgba(26,30,37,.98));
+        border-color: rgba(255,255,255,.28);
+    }
+    .pm-domain-card::before,.pm-domain-card::after { opacity: 0 !important; }
+}
+@media (prefers-contrast: more) {
+    .pm-domain-card,.pm-people-card {
+        border-color: rgba(255,255,255,.38);
+    }
+    .pm-domain-card {
+        background: rgba(27,31,38,.97);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.28),0 16px 36px rgba(0,0,0,.28);
+    }
+    .pm-domain-card::before,.pm-domain-card::after { display: none; }
 }
 @media (max-width: 1000px) {
     .pm-home-hero { grid-template-columns: minmax(0,1fr) minmax(300px,.9fr); min-height: 520px; }
