@@ -7,6 +7,10 @@
             "source": "/((?!api/).*)",
             "destination": "/index.html"
         }
-    ]
+    ],
+    "functions": {
+        "api/admin-subjects.js": {
+            "includeFiles": "node_modules/{pdfjs-dist,@napi-rs}/**/*"
+        }
+    }
 }
-
