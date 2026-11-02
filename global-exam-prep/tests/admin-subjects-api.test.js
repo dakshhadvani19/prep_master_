@@ -55,7 +55,7 @@ function adminClient({ rpcData = null } = {}) {
     const from = vi.fn(table => {
         if (table === 'Admins') return query({ AdminId: 7 });
         if (table === 'Courses') return query({ CourseId: 44, Sems: [1, 2, 3] });
-        if (table === 'Subjects') return query({ SubjectId: 44000000000001 });
+        if (table === 'Subjects') return query([{ SubjectId: 44000000000001 }]);
         throw new Error('Unexpected table: ' + table);
     });
     const download = vi.fn().mockResolvedValue({
