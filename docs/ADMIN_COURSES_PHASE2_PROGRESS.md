@@ -134,3 +134,20 @@ Applied queue-related Supabase migrations:
 - `20261102045212_schedule_admin_course_upload_worker`
 - `20261102050129_lock_down_pgmq_browser_access`
 - `20261102050304_increase_admin_course_upload_worker_http_timeout`
+
+
+
+## Simplified subject management — 2026-11-02
+
+The former selected-subject file-history panel is no longer part of the Admin Courses interface. Admins now follow Department → Course → Semester and then choose one of two actions: Add subject or Remove subject.
+
+- Add subject collects subject name, official subject code, departmental flag, subject type (Theory / Practical / Theory + Practical), and one PDF/DOCX syllabus.
+- The browser uploads that file directly to the existing private `admin-course-files` bucket. The authenticated API verifies the admin, course/semester, object ownership/path and exact byte count, then extracts readable text with the existing PDF.js/Mammoth utilities.
+- The full extracted syllabus text (up to the existing 30,000-character limit) and the additional subject code/type metadata are stored in `private.subject_catalog_metadata`. The canonical public `Subjects` row and an active syllabus upload-history record are inserted in one database transaction.
+- Existing public `Courses`, `Subjects`, and `TestsData` column definitions remain unchanged. The prior upload history/queue backend is retained for historical records, but its old multi-stage uploader is removed from the Admin Courses screen.
+- A newly added numeric subject can be resolved from the live catalog in ExamPortal. Exam generation now prefers its saved extracted syllabus and falls back to the pre-existing static dataset for older subjects.
+- Removal is blocked when exam attempts, leaderboard entries or published question-bank references exist. If allowed, the database record cleanup is transactional and old private Storage objects are removed after the transaction.
+
+The canonical SubjectId scheme requires the official subject code; it is therefore a required field in Add subject even though the prior read-only subject browser only displayed the numeric ID. Scanned/image-only PDFs are not OCR-processed and must be supplied as a text-readable PDF or DOCX.
+
+The live migration `20261102053000_admin_subject_management` has been applied and the private metadata table plus all three RPCs have been verified. Automated UI/API regression coverage is added to the existing Test Room regression workflow; check the linked run before treating test/build verification as complete.
