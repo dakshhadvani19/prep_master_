@@ -2,13 +2,11 @@ import { randomUUID } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import { createClient } from '@supabase/supabase-js';
 import { getExamTypesForSubject, getSubjectExamInfo } from '../src/utils/subjectExamPolicy.js';
-import { parseQuestionBankForReview } from './_lib/question-bank-parser.js';
 import {
     MAX_UPLOAD_BYTES,
     UploadValidationError,
-    validateCourseUpload,
     validateUploadMetadata,
-} from './_lib/admin-course-upload-validation.js';
+} from './_lib/admin-course-upload-metadata.js';
 
 export const config = { maxDuration: 60 };
 
@@ -245,6 +243,7 @@ async function handleFinalize(client, adminUid, body) {
     }
 
     try {
+        const { validateCourseUpload } = await import('./_lib/admin-course-upload-validation.js');
         const validation = await validateCourseUpload(record, buffer);
         const status = record.kind === 'syllabus' ? 'needs_confirmation' : 'validated_waiting_phase3';
         const updated = await setValidation(client, adminUid, record.id, status, validation);
@@ -342,6 +341,7 @@ export default async function handler(req, res) {
             }
             const { data: fileData, error: downloadError } = await client.storage.from(BUCKET).download(record.object_path);
             if (downloadError || !fileData) throw new Error('Original file is not available in private storage.');
+            const { parseQuestionBankForReview } = await import('./_lib/question-bank-parser.js');
             const questions = await parseQuestionBankForReview(record, Buffer.from(await fileData.arrayBuffer()));
             const { data, error } = await client.rpc('pm_admin_course_bank_save_review', {
                 p_admin_auth_uid: user.id, p_upload_id: uploadId, p_questions: questions,
