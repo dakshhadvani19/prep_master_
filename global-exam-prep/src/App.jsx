@@ -5,6 +5,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import { Loader } from 'lucide-react';
 import './index.css';
+import './pages/LandingPage.css';
 
 // Lazy loading route components for FAANG-level performance splitting
 const LandingPage = lazy(() => import('./pages/LandingPage'));
