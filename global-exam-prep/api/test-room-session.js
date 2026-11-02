@@ -612,6 +612,11 @@ export default async function handler(req, res) {
                     .maybeSingle();
                 if (catalogError) throw new Error(catalogError.message);
                 if (!catalogSubject) return fail(res, 400, 'The selected catalog subject no longer exists.');
+                const { data: subjectIsActive, error: activeError } = await admin.rpc('pm_catalog_subject_is_active', {
+                    p_subject_id: catalogSubjectId,
+                });
+                if (activeError) throw new Error(activeError.message || 'Subject availability could not be verified.');
+                if (subjectIsActive !== true) return fail(res, 409, 'This subject has been removed from the active catalog. Ask an administrator to restore it.');
                 catalogSubjectId = Number(catalogSubject.SubjectId);
             }
             const createdAtMs = Date.now();
