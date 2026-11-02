@@ -137,7 +137,7 @@ export async function fetchCourseAndSubjects(courseIdParam) {
 
         const [courseRes, subjectRes] = await Promise.all([
             supabase.from('Courses').select(COURSE_COLS).eq('CourseId', courseId).maybeSingle(),
-            supabase.from('Subjects').select(SUBJECT_COLS).eq('CourseId', courseId),
+            supabase.rpc('pm_catalog_subjects_for_course', { p_course_id: courseId }),
         ]);
 
         if (courseRes.error) {
