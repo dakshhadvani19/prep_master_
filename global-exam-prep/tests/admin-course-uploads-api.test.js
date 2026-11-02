@@ -99,6 +99,27 @@ describe('admin course upload API security and metadata', () => {
         expect(rpc).not.toHaveBeenCalled();
     });
 
+    it('loads upload history through the authenticated lightweight GET path', async () => {
+        const { client, rpc } = clientMock();
+        const savedUploads = [{ id: 'upload-1', file_name: 'syllabus.pdf', status: 'active' }];
+        rpc.mockResolvedValue({ data: savedUploads, error: null });
+        createClient.mockReturnValue(client);
+
+        const res = createResponse();
+        await handler({
+            method: 'GET',
+            url: '/api/admin-course-uploads?subjectId=411',
+            headers: { authorization: 'Bearer verified-admin-token' },
+        }, res);
+
+        expect(res.statusCode).toBe(200);
+        expect(res.body.uploads).toEqual(savedUploads);
+        expect(rpc).toHaveBeenCalledWith('pm_admin_course_upload_list', {
+            p_admin_auth_uid: 'admin-auth-uid',
+            p_subject_id: 411,
+        });
+    });
+
     it('creates a unique staged upload path only after verifying the catalog subject', async () => {
         const { client, rpc } = clientMock();
         createClient.mockReturnValue(client);
