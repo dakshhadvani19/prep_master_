@@ -159,7 +159,6 @@ export default function AdminCourses() {
 
     async function refreshSubjectData() {
         resetCatalogCache();
-        setSubjectsLoading(true);
         setSubjectsError('');
         try {
             const result = await fetchCourseAndSubjects(courseId);
