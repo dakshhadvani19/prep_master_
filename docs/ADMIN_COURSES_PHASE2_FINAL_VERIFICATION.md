@@ -39,3 +39,18 @@ Phase 2 is implemented in the admin course workspace. This pass verified the exi
 ## Remaining work outside Phase 2
 
 Student-side selection of published question-bank sets is integrated into ExamPortal through a service-role-only RPC. It filters by subject/exam/type/difficulty, uses complete MCQ sets or exact theory mark sequences, and keeps answer keys server-side. Real-bank smoke testing awaits the first published bank.
+
+
+## Production upload API hardening — 2026-11-02
+
+A production smoke attempt showed HTTP 500 responses from both the admin upload-history and upload-start requests, before any corresponding upload RPC or Storage request appeared in Supabase logs. The live private bucket and authenticated-admin insert policy were present.
+
+The API was hardened to:
+- Keep PDF/DOCX/CSV parser dependencies out of the API module's startup path; load validation and question parsing only when those actions are requested.
+- Move upload metadata checks and the upload error type into a lightweight module used by upload-history and upload-start.
+- Preserve an uploaded source object when validation fails because of a transient server/runtime error; only file-validation failures mark the upload failed and clean up the object.
+- Add explicit `.js` extensions to the server-side exam-policy import chain for Node ESM compatibility.
+
+Code was committed to the main branch in commits `40993a5`, `8f0c968`, `2f9a22f`, `ff96206` and `c22daa9`. The final code revision is `c22daa96315468e8062524af572cb9d863df240b`.
+
+**Verification status:** the final revision's Vercel production deployment was still building at the time of this update. A real authenticated syllabus upload has not yet been rerun, so end-to-end success must be confirmed by retrying the same upload after the final deployment is ready.
