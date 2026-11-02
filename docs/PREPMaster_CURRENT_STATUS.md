@@ -339,3 +339,12 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Exam blueprints, question counts, answer state, canonical Test Room answer mapping, attempt persistence, API calls, room lifecycle, routes and host/join permissions remain unchanged. No database/schema or admin UI changes.
 - Added reduced-transparency and increased-contrast fallbacks while preserving visible keyboard focus and reduced-motion styles. The active question pill is layered above its bubble surface, question transitions stop when reduced motion is requested, and upload accents use blue rather than violet.
 - Verification: source selectors, selected-state semantics, navigation layout IDs, canonical answer mapping and existing route/API handlers were inspected. Local tests/build and browser screenshot inspection are not available through this repository connection; automated deployment checks will be reported separately.
+
+
+## Exam setup white-and-amber correction — 2026-11-02
+
+- Corrected the exam type, Auto AI / Upload mode, difficulty, Start Exam, and generation controls to use the same white premium-button surface and amber liquid-fill palette as the login/sign-up form: #ffb454 and #ffd08a.
+- Selected setup choices use an amber/gold glass fill with dark legible text; resting choices use a bright white surface with a warm-gold edge and sheen. Setup panels retain their substantial dark Liquid Glass shell.
+- Extended the white-and-amber setup treatment to Test Room entry, duration setup, share and waiting lobby. Blue styling is kept for active exam/Test Room answer and question navigation, including the left-side current-question bubble and its spring transition.
+- Preserved all exam/Test Room behavior and data flows. The CSS is scoped to setup/lobby classes; active Test Room attempt surfaces are deliberately excluded.
+- Verification: checked the exact auth source colors and CSS selectors, confirmed the active attempt root does not receive the pre-test room classes, and verified the active test blue question/answer selectors are untouched. Local build and visual browser testing were not run through the connected repository session.

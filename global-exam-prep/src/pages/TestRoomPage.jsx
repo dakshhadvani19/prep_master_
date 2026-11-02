@@ -1134,7 +1134,7 @@ export default function TestRoomPage() {
         const normalized = normalizedCode(joinCodeInput);
         const hasCode = normalized.length > 0;
         return (
-            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page pm-room-entry animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
                 <button onClick={() => navigate(-1)} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
                     <ArrowLeft size={17} /> Back
                 </button>
@@ -1161,7 +1161,7 @@ export default function TestRoomPage() {
                     />
                     <p id="room-code-hint" style={{ color: 'var(--text-tertiary)', fontSize: '0.8rem', marginBottom: '1.3rem' }}>Letters I/O and digits 0/1 are excluded to make codes easier to read.</p>
                     {error && <p role="alert" style={{ color: '#fca5a5', fontSize: '0.88rem', marginBottom: '1rem' }}>{error}</p>}
-                    <button disabled={!hasCode} onClick={() => navigate('/test-rooms/' + normalizedCode(joinCodeInput))} style={roomButtonStyle('primary', !hasCode)}>
+                    <button className="pm-room-gold-action" disabled={!hasCode} onClick={() => navigate('/test-rooms/' + normalizedCode(joinCodeInput))} style={roomButtonStyle('primary', !hasCode)}>
                         <DoorOpen size={18} /> Check Code &amp; Join
                     </button>
                     <p style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', lineHeight: 1.55, marginTop: '1rem' }}>
@@ -1250,7 +1250,7 @@ export default function TestRoomPage() {
 
     if (view === 'setup') {
         return (
-            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 780, marginTop: '2rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page pm-room-setup animate-fade-in" style={{ maxWidth: 780, marginTop: '2rem', marginBottom: '4rem' }}>
                 <button onClick={() => navigate(-1)} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
                     <ArrowLeft size={17} /> Back
                 </button>
@@ -1286,12 +1286,12 @@ export default function TestRoomPage() {
                         <span style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>The timer starts once when you press Start Test Room.</span>
                     </div>
 
-                    <div style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.18)', marginBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.6 }}>
+                    <div style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'rgba(255,180,84,0.09)', border: '1px solid rgba(255,180,84,0.26)', marginBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.6 }}>
                         The join code and room state are temporary. Keep this page open while the room is live. If the host page reloads while the room is still waiting, the host can restore it from this browser session; disconnecting after the test starts finalizes the attempt.
                     </div>
 
                     {error && <p style={{ color: '#fca5a5', marginBottom: '1rem', fontSize: '0.9rem' }}>{error}</p>}
-                    <button disabled={working || !canonicalQuestions.length} onClick={createRoom} style={roomButtonStyle('primary', working || !canonicalQuestions.length)}>
+                    <button className="pm-room-gold-action" disabled={working || !canonicalQuestions.length} onClick={createRoom} style={roomButtonStyle('primary', working || !canonicalQuestions.length)}>
                         {working ? <><LoaderCircle size={18} className="spin" /> Creating room…</> : <><Sparkles size={18} /> Generate Join Code &amp; Create Room</>}
                     </button>
                 </div>
@@ -1301,7 +1301,7 @@ export default function TestRoomPage() {
 
     if (view === 'share') {
         return (
-            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 760, marginTop: '2.5rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page pm-room-share animate-fade-in" style={{ maxWidth: 760, marginTop: '2.5rem', marginBottom: '4rem' }}>
                 <div className="glass-panel" style={{ padding: 'clamp(1.4rem,4vw,2.8rem)', textAlign: 'center' }}>
                     <MotionDiv initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} style={{ width: 70, height: 70, borderRadius: 22, margin: '0 auto 1.1rem', display: 'grid', placeItems: 'center', background: 'rgba(16,185,129,0.12)', color: 'var(--success)' }}>
                         <CheckCircle2 size={36} />
@@ -1313,10 +1313,10 @@ export default function TestRoomPage() {
                         <div style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '0.55rem' }}>Room join code</div>
                         <div style={{ fontSize: 'clamp(1.7rem,6vw,2.5rem)', fontWeight: 800, letterSpacing: '0.13em', fontVariantNumeric: 'tabular-nums' }}>{formattedCode(roomCode)}</div>
                         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '0.65rem', marginTop: '1.1rem' }}>
-                            <button onClick={copyRoomCode} style={{ ...roomButtonStyle('secondary'), maxWidth: 220, marginInline: 'auto' }}>
+                            <button className="pm-room-glass-utility" onClick={copyRoomCode} style={{ ...roomButtonStyle('secondary'), maxWidth: 220, marginInline: 'auto' }}>
                                 {copied ? <><Check size={17} /> Copied</> : <><Clipboard size={17} /> Copy code</>}
                             </button>
-                            <button onClick={copyRoomLink} style={{ ...roomButtonStyle('secondary'), maxWidth: 240, marginInline: 'auto' }}>
+                            <button className="pm-room-glass-utility" onClick={copyRoomLink} style={{ ...roomButtonStyle('secondary'), maxWidth: 240, marginInline: 'auto' }}>
                                 {linkCopied ? <><Check size={17} /> Link copied</> : <><LinkIcon size={17} /> Copy invite link</>}
                             </button>
                         </div>
@@ -1330,7 +1330,7 @@ export default function TestRoomPage() {
 
                     {!connected && <p style={{ color: 'var(--warning)', marginBottom: '1rem', fontSize: '0.9rem' }}><LoaderCircle size={15} className="spin" style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />Connecting to the live room…</p>}
                     {error && <p style={{ color: '#fca5a5', marginBottom: '1rem' }}>{error}</p>}
-                    <button disabled={!connected} onClick={enterLobby} style={roomButtonStyle('success', !connected)}><DoorOpen size={18} /> Enter Test Room</button>
+                    <button className="pm-room-gold-action" disabled={!connected} onClick={enterLobby} style={roomButtonStyle('success', !connected)}><DoorOpen size={18} /> Enter Test Room</button>
                 </div>
             </div>
         );
@@ -1338,7 +1338,7 @@ export default function TestRoomPage() {
 
     if (view === 'lobby') {
         return (
-            <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 1000, marginTop: '2rem', marginBottom: '4rem' }}>
+            <div className="container pm-test-room-page pm-room-lobby animate-fade-in" style={{ maxWidth: 1000, marginTop: '2rem', marginBottom: '4rem' }}>
                 <div className="glass-panel" style={{ padding: 'clamp(1.2rem,3vw,2rem)', marginBottom: '1.2rem' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
                         <div>
@@ -1349,7 +1349,7 @@ export default function TestRoomPage() {
                         <div className="pm-room-code-card pm-room-code-card--compact" style={{ padding: '0.9rem 1rem', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-lg)', background: 'var(--bg-tertiary)', minWidth: 180 }}>
                             <div style={{ color: 'var(--text-tertiary)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Join code</div>
                             <div style={{ fontWeight: 800, fontSize: '1.3rem', letterSpacing: '0.1em', margin: '0.35rem 0' }}>{formattedCode(roomCode)}</div>
-                            <button onClick={copyRoomCode} style={{ color: 'var(--accent-primary)', display: 'inline-flex', gap: '0.35rem', alignItems: 'center', fontSize: '0.82rem', fontWeight: 700 }}>{copied ? <Check size={14} /> : <Clipboard size={14} />}{copied ? 'Copied' : 'Copy code'}</button>
+                            <button className="pm-room-glass-utility" onClick={copyRoomCode} style={{ color: 'var(--accent-primary)', display: 'inline-flex', gap: '0.35rem', alignItems: 'center', fontSize: '0.82rem', fontWeight: 700 }}>{copied ? <Check size={14} /> : <Clipboard size={14} />}{copied ? 'Copied' : 'Copy code'}</button>
                         </div>
                     </div>
                 </div>
@@ -1383,7 +1383,7 @@ export default function TestRoomPage() {
                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '1rem' }}>Everyone stays here until the host starts the test. The shared {roomMeta?.durationMinutes || durationMinutes}-minute timer will begin at the same moment for every participant.</p>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.7rem 0.8rem', background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.18)', borderRadius: 'var(--radius-md)', color: '#fbbf24', fontSize: '0.82rem', marginBottom: '1.2rem' }}><Clock3 size={16} /> {roomMeta?.durationMinutes || durationMinutes} minutes · {roomMeta?.questionCount || canonicalQuestions.length || 30} questions</div>
                         {isHostFlow ? (
-                            <button disabled={!connected || working || participantCount > MAX_PARTICIPANTS} onClick={startRoom} style={roomButtonStyle('success', !connected || working || participantCount > MAX_PARTICIPANTS)}>{working ? <><LoaderCircle size={18} className="spin" /> Starting…</> : <><Play size={18} /> Start Test Room</>}</button>
+                            <button className="pm-room-gold-action" disabled={!connected || working || participantCount > MAX_PARTICIPANTS} onClick={startRoom} style={roomButtonStyle('success', !connected || working || participantCount > MAX_PARTICIPANTS)}>{working ? <><LoaderCircle size={18} className="spin" /> Starting…</> : <><Play size={18} /> Start Test Room</>}</button>
                         ) : (
                             <div style={{ ...roomButtonStyle('secondary', true), cursor: 'default', lineHeight: 1.4 }}><LoaderCircle size={17} className="spin" /> Waiting for host to start…</div>
                         )}

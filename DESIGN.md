@@ -26,10 +26,10 @@ PrepMaster is a student examination-preparation product. The student-facing jour
 ## Exam and Test Room experience
 
 - The exam-generation selection flow and Test Room use the existing navbar's dark glass language: dense charcoal/blue-tinted translucency, strong readable fills, crisp white edges and restrained blue reflections. Avoid washed-out opacity.
-- Exam type, generation mode and difficulty are tactile selection controls. Selected states use a clear blue surface and edge with aria-pressed semantics.
+- Exam type, generation mode and difficulty are tactile white Liquid Glass controls, with the auth experience's amber (#ffb454) and light-gold (#ffd08a) selected state. Primary setup actions use a white surface with an amber liquid-fill hover. These are never blue.
 - In active exams, the timer/header and question navigator are functional glass layers. Question numbers are rounded bubbles; one Framer Motion layout pill moves between them with a spring transition. Current, answered and unanswered states remain distinct.
 - Question and answer content uses a more opaque dark surface beneath the glass controls. The content remains readable while selection and navigation carry the fluid motion.
-- Test Room uses the same material for room overview, join-code tile, participant roster, duration control and waiting panel. Blue is the primary interactive color inside exam and Test Room flows; host, warning and result states retain their semantic meaning.
+- Test Room setup, join, share and waiting lobby use the same white-and-amber treatment. Blue is reserved for the active-test question rail, current-question motion pill, and answer selection inside normal exams and Test Rooms. Host, warning and result states retain their semantic meaning.
 
 ## Motion language
 

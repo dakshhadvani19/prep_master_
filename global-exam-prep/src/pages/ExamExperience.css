@@ -60,17 +60,24 @@
     color: #f8fbff;
 }
 
-/* Exam selection and difficulty controls. */
+/* Exam configuration: white glass controls, with the auth screen's amber focus-fill.
+   Source of truth: Auth.css --accent (#ffb454), #ffd08a, and the white premium-btn surface. */
 .pm-exam-config-panel {
     padding: clamp(1.15rem, 3vw, 1.7rem) !important;
+    border: 1px solid rgba(255, 180, 84, .42) !important;
+    border-top-color: rgba(255, 180, 84, .24) !important;
     border-radius: 0 0 22px 22px !important;
     background:
-        radial-gradient(120% 100% at 0% 0%, rgba(59, 130, 246, .12), transparent 48%),
-        rgba(15, 23, 36, .96) !important;
+        radial-gradient(115% 85% at 0% 0%, rgba(255, 180, 84, .13), transparent 54%),
+        rgba(15, 17, 21, .97) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .17),
+        0 18px 38px rgba(0, 0, 0, .34),
+        0 0 24px rgba(255, 180, 84, .07) !important;
 }
 .pm-exam-step-label {
     margin: 0 0 .8rem;
-    color: #eef5ff;
+    color: #fffaf1;
     font-size: .83rem;
     font-weight: 750;
     letter-spacing: .015em;
@@ -80,13 +87,17 @@
 .pm-exam-difficulty-choice {
     position: relative;
     isolation: isolate;
-    color: #edf4ff !important;
-    border: 1px solid rgba(191, 215, 250, .24) !important;
-    background: rgba(29, 42, 62, .96) !important;
-    backdrop-filter: blur(18px) saturate(150%);
-    -webkit-backdrop-filter: blur(18px) saturate(150%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .16), 0 7px 18px rgba(0, 0, 0, .24);
-    transition: background .24s ease, border-color .24s ease, box-shadow .28s ease, transform .22s ease !important;
+    overflow: hidden;
+    color: #211a11 !important;
+    border: 1px solid rgba(255, 180, 84, .35) !important;
+    background: linear-gradient(145deg, #ffffff 0%, #f1f1f1 100%) !important;
+    backdrop-filter: blur(22px) saturate(165%);
+    -webkit-backdrop-filter: blur(22px) saturate(165%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .98),
+        inset 0 -1px 0 rgba(255, 180, 84, .12),
+        0 7px 18px rgba(0, 0, 0, .22);
+    transition: background .28s ease, border-color .25s ease, box-shadow .28s ease, transform .22s ease, color .22s ease !important;
 }
 .pm-exam-choice {
     min-height: 46px;
@@ -101,100 +112,170 @@
 .pm-exam-choice:hover,
 .pm-exam-mode-choice:hover,
 .pm-exam-difficulty-choice:hover {
-    border-color: rgba(147, 197, 253, .68) !important;
-    background: rgba(39, 59, 88, .98) !important;
+    color: #1a0e00 !important;
+    border-color: rgba(255, 180, 84, .92) !important;
+    background: linear-gradient(135deg, #ffb454 0%, #ffd08a 58%, #ffb454 100%) !important;
     transform: translateY(-2px);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 12px 24px rgba(0, 0, 0, .3), 0 0 18px rgba(59, 130, 246, .12);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .5),
+        0 10px 25px rgba(255, 180, 84, .27),
+        0 8px 20px rgba(0, 0, 0, .24);
 }
 .pm-exam-choice[aria-pressed="true"],
 .pm-exam-mode-choice[aria-pressed="true"],
 .pm-exam-difficulty-choice[aria-pressed="true"] {
-    color: #ffffff !important;
-    border-color: rgba(147, 197, 253, .86) !important;
-    background: linear-gradient(135deg, rgba(29, 78, 216, .98), rgba(59, 130, 246, .96)) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .32), 0 10px 26px rgba(37, 99, 235, .32), 0 0 0 1px rgba(147, 197, 253, .14);
+    color: #1a0e00 !important;
+    border-color: rgba(255, 208, 138, .98) !important;
+    background: linear-gradient(135deg, #ffb454 0%, #ffd08a 54%, #ffb454 100%) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .52),
+        0 9px 24px rgba(255, 180, 84, .32),
+        0 0 0 1px rgba(255, 180, 84, .24);
 }
 .pm-exam-choice[aria-pressed="true"] span,
 .pm-exam-mode-choice[aria-pressed="true"] span,
-.pm-exam-difficulty-choice[aria-pressed="true"] span {
-    color: #ffffff !important;
+.pm-exam-difficulty-choice[aria-pressed="true"] span,
+.pm-exam-mode-choice[aria-pressed="true"] svg,
+.pm-exam-difficulty-choice[aria-pressed="true"] svg {
+    color: #1a0e00 !important;
 }
-.pm-exam-start-action,
-.pm-exam-generate-action,
-.pm-exam-submit {
-    min-height: 48px;
-    border: 1px solid rgba(147, 197, 253, .7) !important;
-    border-radius: 999px !important;
-    background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
-    color: #ffffff !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 10px 26px rgba(37, 99, 235, .3) !important;
-    transition: transform .22s ease, box-shadow .24s ease, border-color .24s ease !important;
-}
-.pm-exam-start-action:hover:not(:disabled),
-.pm-exam-generate-action:hover:not(:disabled),
-.pm-exam-submit:hover:not(:disabled) {
-    transform: translateY(-2px);
-    border-color: rgba(191, 219, 254, .92) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .36), 0 14px 30px rgba(37, 99, 235, .38) !important;
-}
-.pm-exam-start-action:disabled,
-.pm-exam-generate-action:disabled,
-.pm-exam-submit:disabled {
-    background: linear-gradient(135deg, #273b59, #304b70) !important;
-    color: #d4e1f3 !important;
-    border-color: rgba(191, 215, 250, .28) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12) !important;
-    cursor: not-allowed;
-}
-.pm-exam-room-action {
-    min-height: 48px;
-    border: 1px solid rgba(96, 165, 250, .56) !important;
-    border-radius: 999px !important;
-    background: rgba(27, 49, 82, .96) !important;
-    color: #dceaff !important;
-    backdrop-filter: blur(20px) saturate(155%);
-    -webkit-backdrop-filter: blur(20px) saturate(155%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .18), 0 8px 22px rgba(0, 0, 0, .24);
-}
-.pm-exam-room-action:hover {
-    background: rgba(37, 99, 235, .32) !important;
-    border-color: rgba(147, 197, 253, .84) !important;
+.pm-exam-choice:focus-visible,
+.pm-exam-mode-choice:focus-visible,
+.pm-exam-difficulty-choice:focus-visible,
+.pm-exam-start-action:focus-visible,
+.pm-exam-room-action:focus-visible {
+    outline: 2px solid #ffd08a;
+    outline-offset: 3px;
 }
 
-/* Exam preparation and upload surfaces. */
+/* Auth-style white primary surface; amber liquid fill rises on hover. */
+.pm-exam-start-action,
+.pm-exam-generate-action {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 48px;
+    border: 1px solid rgba(255, 180, 84, .46) !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, #ffffff, #f1f1f1) !important;
+    color: #0d0b08 !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .98),
+        0 7px 20px rgba(255, 180, 84, .12) !important;
+    transition: color .35s ease, transform .24s ease, border-color .3s ease, box-shadow .35s ease !important;
+}
+.pm-exam-start-action::before,
+.pm-exam-generate-action::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #ffb454 0%, #ffd08a 55%, #ffb454 100%);
+    transform: translateY(102%);
+    transition: transform .45s cubic-bezier(.22, 1, .36, 1);
+}
+.pm-exam-start-action:hover:not(:disabled),
+.pm-exam-generate-action:hover:not(:disabled) {
+    color: #1a0e00 !important;
+    transform: translateY(-2px);
+    border-color: rgba(255, 208, 138, .98) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .48),
+        0 9px 25px rgba(255, 180, 84, .36),
+        0 3px 10px rgba(0, 0, 0, .24) !important;
+}
+.pm-exam-start-action:hover:not(:disabled)::before,
+.pm-exam-generate-action:hover:not(:disabled)::before {
+    transform: translateY(0);
+}
+.pm-exam-start-action:disabled,
+.pm-exam-generate-action:disabled {
+    background: linear-gradient(135deg, #f4f1eb, #e6e0d7) !important;
+    color: #756858 !important;
+    border-color: rgba(255, 180, 84, .3) !important;
+    box-shadow: inset 0 1px 0 #fff !important;
+    cursor: not-allowed;
+}
+.pm-exam-start-action:disabled::before,
+.pm-exam-generate-action:disabled::before {
+    display: none;
+}
+
+/* Test Room entry is still a selection/setup step: white glass and amber, not blue. */
+.pm-exam-room-action {
+    min-height: 48px;
+    border: 1px solid rgba(255, 180, 84, .48) !important;
+    border-radius: 999px !important;
+    background: linear-gradient(145deg, #ffffff, #f1f1f1) !important;
+    color: #211a11 !important;
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .98), 0 8px 20px rgba(0, 0, 0, .2);
+}
+.pm-exam-room-action:hover {
+    background: linear-gradient(135deg, #ffb454, #ffd08a 55%, #ffb454) !important;
+    border-color: rgba(255, 208, 138, .98) !important;
+    color: #1a0e00 !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .48), 0 9px 24px rgba(255, 180, 84, .3);
+}
+
+/* Exam preparation and upload surfaces use a subtle amber reflection. */
 .pm-exam-intro-card,
 .pm-exam-upload-card {
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(115% 85% at 0% 0%, rgba(59, 130, 246, .12), transparent 54%),
-        rgba(15, 23, 36, .95) !important;
-    border-color: rgba(210, 229, 255, .22) !important;
+        radial-gradient(115% 85% at 0% 0%, rgba(255, 180, 84, .11), transparent 54%),
+        rgba(15, 17, 21, .97) !important;
+    border-color: rgba(255, 180, 84, .28) !important;
     border-radius: 26px !important;
 }
+.pm-exam-intro-card h2,
+.pm-exam-upload-card h2 {
+    color: #fffaf1 !important;
+}
 .pm-exam-instructions {
-    background: rgba(31, 46, 67, .96) !important;
-    border: 1px solid rgba(147, 197, 253, .24);
+    background: rgba(255, 255, 255, .96) !important;
+    color: #211a11 !important;
+    border: 1px solid rgba(255, 180, 84, .48);
     border-radius: 18px !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .98), 0 8px 20px rgba(0, 0, 0, .18);
+}
+.pm-exam-instructions h3,
+.pm-exam-instructions li {
+    color: #211a11 !important;
 }
 .pm-exam-dropzone {
-    background: rgba(24, 38, 58, .96);
-    border: 2px dashed rgba(96, 165, 250, .62);
+    background: linear-gradient(145deg, rgba(255, 255, 255, .98), rgba(241, 241, 241, .96));
+    border: 2px dashed rgba(255, 180, 84, .82);
     border-radius: 20px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 10px 24px rgba(0, 0, 0, .2);
-    transition: background .22s ease, border-color .22s ease, box-shadow .22s ease;
+    color: #211a11;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .98), 0 10px 24px rgba(0, 0, 0, .2);
+    transition: background .28s ease, border-color .22s ease, box-shadow .28s ease;
 }
-.pm-exam-dropzone:hover {
-    background: rgba(31, 53, 83, .98);
-    border-color: rgba(147, 197, 253, .88);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .18), 0 0 22px rgba(59, 130, 246, .13);
+.pm-exam-dropzone p {
+    color: #393027 !important;
+}
+.pm-exam-dropzone svg {
+    color: #d88d34 !important;
+}
+.pm-exam-dropzone:hover,
+.pm-exam-dropzone:focus-within {
+    background: linear-gradient(135deg, #ffb454, #ffd08a 58%, #ffb454);
+    border-color: #ffe0ad;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .58), 0 0 24px rgba(255, 180, 84, .24);
 }
 .pm-exam-uploaded-file {
-    background: rgba(29, 43, 63, .96) !important;
-    border: 1px solid rgba(147, 197, 253, .28) !important;
+    background: rgba(255, 255, 255, .97) !important;
+    color: #211a11 !important;
+    border: 1px solid rgba(255, 180, 84, .42) !important;
     border-radius: 16px !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .98), 0 5px 14px rgba(0, 0, 0, .16);
 }
-
+.pm-exam-uploaded-file span {
+    color: #2c241b !important;
+}
 /* Normal exam header, palette, question card and answers. */
 .pm-exam-topbar {
     background: rgba(13, 21, 34, .94) !important;
@@ -527,4 +608,134 @@
     .pm-room-question-actions {
         gap: .6rem !important;
     }
+}
+
+/* Test Room setup, share and lobby use the same auth-inspired white/amber palette.
+   The active attempt is deliberately excluded: its left question rail stays blue. */
+.pm-test-room-page.pm-room-entry,
+.pm-test-room-page.pm-room-setup,
+.pm-test-room-page.pm-room-share,
+.pm-test-room-page.pm-room-lobby {
+    --pm-room-gold: #ffb454;
+    --pm-room-gold-bright: #ffd08a;
+}
+.pm-test-room-page.pm-room-entry::before,
+.pm-test-room-page.pm-room-setup::before,
+.pm-test-room-page.pm-room-share::before,
+.pm-test-room-page.pm-room-lobby::before {
+    background: radial-gradient(ellipse, rgba(255, 180, 84, .13), transparent 70%);
+}
+.pm-test-room-page.pm-room-entry .glass-panel,
+.pm-test-room-page.pm-room-setup .glass-panel,
+.pm-test-room-page.pm-room-share .glass-panel,
+.pm-test-room-page.pm-room-lobby .glass-panel {
+    border-color: rgba(255, 180, 84, .3) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .19),
+        0 18px 42px rgba(0, 0, 0, .34),
+        0 2px 18px rgba(255, 180, 84, .05);
+}
+.pm-room-summary-tile {
+    background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(241,241,241,.96)) !important;
+    border-color: rgba(255,180,84,.46) !important;
+    color: #211a11 !important;
+}
+.pm-room-summary-tile > svg {
+    color: #c47b25 !important;
+}
+.pm-room-summary-tile > div {
+    color: #211a11 !important;
+}
+.pm-room-code-card {
+    background:
+        radial-gradient(115% 100% at 0% 0%, rgba(255,180,84,.16), transparent 60%),
+        rgba(22, 20, 18, .98) !important;
+    border-color: rgba(255,180,84,.46) !important;
+}
+.pm-room-code-card > div:first-child {
+    color: #e9d4b8 !important;
+}
+.pm-room-setup .pm-room-code-card,
+.pm-room-share .pm-room-code-card,
+.pm-room-lobby .pm-room-code-card {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 12px 28px rgba(0,0,0,.26), 0 0 18px rgba(255,180,84,.08);
+}
+.pm-test-room-page .pm-room-duration-select {
+    background: linear-gradient(145deg, #fff, #f1f1f1) !important;
+    color: #211a11 !important;
+    border: 1px solid rgba(255,180,84,.65) !important;
+    box-shadow: inset 0 1px 0 #fff, 0 6px 16px rgba(0,0,0,.16);
+}
+.pm-test-room-page .pm-room-duration-select:focus {
+    outline: 2px solid #ffd08a;
+    outline-offset: 3px;
+}
+.pm-test-room-page .pm-room-participant {
+    background: rgba(255,255,255,.96) !important;
+    border-color: rgba(255,180,84,.32) !important;
+    color: #211a11;
+}
+.pm-test-room-page .pm-room-participant > div:nth-child(2) > div:first-child {
+    color: #211a11 !important;
+}
+.pm-test-room-page .pm-room-participant > div:nth-child(2) > div:last-child {
+    color: #66594b !important;
+}
+.pm-room-participant-avatar[data-host="false"] {
+    background: rgba(255,180,84,.2) !important;
+    color: #8b5418 !important;
+    border: 1px solid rgba(255,180,84,.46);
+}
+.pm-room-lobby .pm-room-participant > span {
+    background: rgba(255,180,84,.2) !important;
+    color: #75450f !important;
+    border-color: rgba(255,180,84,.42) !important;
+}
+.pm-room-lobby button.pm-room-glass-utility,
+.pm-room-share button.pm-room-glass-utility {
+    color: #ffd08a !important;
+    background: rgba(255,180,84,.08) !important;
+    border: 1px solid rgba(255,180,84,.34) !important;
+    border-radius: 999px;
+    padding: .52rem .8rem !important;
+}
+.pm-room-lobby button.pm-room-glass-utility:hover,
+.pm-room-share button.pm-room-glass-utility:hover {
+    background: rgba(255,180,84,.18) !important;
+    border-color: rgba(255,208,138,.75) !important;
+}
+.pm-room-lobby .pm-room-gold-action,
+.pm-room-setup .pm-room-gold-action,
+.pm-room-share .pm-room-gold-action,
+.pm-room-entry .pm-room-gold-action {
+    min-height: 48px;
+    border: 1px solid rgba(255,208,138,.92) !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, #ffb454 0%, #ffd08a 55%, #ffb454 100%) !important;
+    color: #1a0e00 !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.52), 0 9px 24px rgba(255,180,84,.28) !important;
+    transition: transform .24s ease, box-shadow .3s ease, border-color .25s ease !important;
+}
+.pm-room-lobby .pm-room-gold-action:hover:not(:disabled),
+.pm-room-setup .pm-room-gold-action:hover:not(:disabled),
+.pm-room-share .pm-room-gold-action:hover:not(:disabled),
+.pm-room-entry .pm-room-gold-action:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 12px 28px rgba(255,180,84,.38) !important;
+}
+.pm-room-lobby .pm-room-gold-action:disabled,
+.pm-room-setup .pm-room-gold-action:disabled,
+.pm-room-share .pm-room-gold-action:disabled,
+.pm-room-entry .pm-room-gold-action:disabled {
+    background: linear-gradient(135deg, #f4f1eb, #e6e0d7) !important;
+    border-color: rgba(255,180,84,.35) !important;
+    color: #756858 !important;
+    box-shadow: inset 0 1px 0 #fff !important;
+}
+.pm-room-lobby .pm-room-gold-action:focus-visible,
+.pm-room-setup .pm-room-gold-action:focus-visible,
+.pm-room-share .pm-room-gold-action:focus-visible,
+.pm-room-entry .pm-room-gold-action:focus-visible {
+    outline: 2px solid #ffd08a;
+    outline-offset: 3px;
 }
