@@ -116,7 +116,7 @@ Correction to the earlier PDF validation note: the PDF runtime helper existed, b
 
 - Production code commit `67d4d5a663054706771896da5e84434eb9bd516d` deployed READY; the subsequent docs/workflow commit `289c1ac72851f6bb79f3b0d09ec6cadf5e2a360d` is also READY on `prepmaster-tau.vercel.app`.
 - `ADMIN_COURSE_UPLOAD_WORKER_SECRET` is a sensitive production Vercel environment variable. The token and worker URL are stored in Supabase Vault and are not present in source control.
-- Supabase Cron job `admin-course-upload-worker-every-minute` is active on `* * * * *`. Consecutive recorded Cron runs succeeded.
+- Supabase Cron job `admin-course-upload-worker-every-minute` is active on `* * * * *`. The pg_net HTTP timeout is 65 seconds, longer than the worker's 60-second Vercel execution limit. Consecutive recorded Cron runs succeeded.
 - A direct call to the production worker with the Vault token returned HTTP 200 and `No queued uploads.`; a call without the token returned HTTP 401. After PGMQ permissions were tightened, an authenticated worker health call still returned HTTP 200 with no queued jobs.
 - Queue access is restricted at both layers: browser roles have no usage on schema `pgmq`, no direct execute on PGMQ functions and no access to queue tables. The five application queue RPCs are executable by `service_role` only; the PGMQ operations inside them execute under their `postgres` SECURITY DEFINER owner.
 - GitHub Actions focused course-upload job passed all five suites: upload document validation, question-bank parser, upload API, background worker and admin upload UI. Targeted ESLint for all changed upload-processing files passed. Vite production build passed.
@@ -133,3 +133,4 @@ Applied queue-related Supabase migrations:
 - `20261102044806_admin_course_upload_async_queue`
 - `20261102045212_schedule_admin_course_upload_worker`
 - `20261102050129_lock_down_pgmq_browser_access`
+- `20261102050304_increase_admin_course_upload_worker_http_timeout`
