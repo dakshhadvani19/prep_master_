@@ -160,3 +160,11 @@ A catalog subject is no longer physically deleted. Migration `20261102055000_adm
 The active student course list now uses `pm_catalog_subjects_for_course`, which filters archived rows without exposing the private state table. The archive/restore RPCs remain service-role-only. Verification on the live project confirmed 1,855 tracked active rows, no anon/authenticated access to the status table, and no direct browser execute permission for the archive RPC.
 
 Live example verified: Diploma Computer Engineering, CourseId 44, Computer Fundamental Skill, official code `09CE2101`, Semester 1 → SubjectId `44000935210101`. A live transaction test archived this row, restored it through the add RPC, asserted the same SubjectId and active catalog visibility, and rolled the transaction back. No real catalog record was changed by that smoke test.
+
+## Subject classification removal verification — 2026-11-02
+
+- The Add Subject form now has exactly three subject metadata fields: subject name, official subject code, and departmental status. The required syllabus PDF/DOCX upload remains separate.
+- API and database creation contracts no longer accept or store a subject type. The private metadata column was dropped and the syllabus RPC no longer returns it.
+- Live Supabase verification: the new create RPC accepts the 15-argument signature, only `service_role` can execute it, and the old classification column is absent. A create-and-rollback smoke test passed without leaving a subject or upload row behind.
+- GitHub Actions focused suite passed: 9 files / 64 tests. Changed-file ESLint, Test Room regression tests, and Vite production build passed.
+- Repository-wide ESLint still fails on unrelated existing errors; the full Vitest suite has four unrelated failing test files (Admin Dashboard, Dashboard Performance, answer normalization, and Gemini correction prompts).
