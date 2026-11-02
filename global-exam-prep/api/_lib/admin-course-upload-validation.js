@@ -246,6 +246,27 @@ function parseQuestionBankCsv(buffer) {
     };
 }
 
+export async function extractSyllabusText(record, buffer) {
+    assertSize(buffer);
+    const extension = String(record.file_extension || '').toLowerCase();
+    if (!['pdf', 'docx'].includes(extension)) {
+        throw new UploadValidationError('Syllabus files must be PDF or DOCX.');
+    }
+    if (record.mime_type !== MIME_BY_EXTENSION[extension]) {
+        throw new UploadValidationError('The file type does not match its recorded extension.');
+    }
+    const extracted = extension === 'pdf'
+        ? await extractPdf(buffer)
+        : await extractDocx(buffer);
+    const content = String(extracted.text || '').trim();
+    const words = assertCharacterLimit(content);
+    return {
+        text: content,
+        page_count: extracted.pageCount ?? null,
+        word_count: words,
+    };
+}
+
 export async function validateCourseUpload(record, buffer) {
     assertSize(buffer);
     const extension = String(record.file_extension || '').toLowerCase();
