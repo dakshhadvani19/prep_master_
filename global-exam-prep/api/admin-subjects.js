@@ -268,7 +268,7 @@ async function removeSubject(client, user, body) {
         const { error: storageError } = await client.storage.from(BUCKET).remove(paths);
         storageCleanupWarning = Boolean(storageError);
     }
-    return { subjectId: String(subjectId), storageCleanupWarning };
+    return { subjectId: String(subjectId), archived: data?.archived === true, storageCleanupWarning };
 }
 
 export default async function handler(req, res) {
