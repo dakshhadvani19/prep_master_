@@ -40,7 +40,7 @@ describe('admin course upload background worker', () => {
             file_name: 'questions.csv',
             file_extension: 'csv',
             mime_type: 'text/csv',
-            size_bytes: 14,
+            size_bytes: 15,
             kind: 'question_bank',
             status: 'processing',
             queue_message_id: 77,
