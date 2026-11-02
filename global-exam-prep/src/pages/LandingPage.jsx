@@ -1,371 +1,220 @@
-import React, { useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import {
+    ArrowDown, ArrowUpRight, BookOpen, Check, Github, Heart, Instagram,
+    Linkedin, Mail, GraduationCap, FileText, PencilLine,
+} from 'lucide-react';
 import { CATALOG_DOMAINS as domains } from '../data/catalogDomains';
-import * as Icons from 'lucide-react';
 import './LandingPage.css';
 
+function readSavedLike(key) {
+    try {
+        return JSON.parse(window.localStorage.getItem(key) || 'false') === true;
+    } catch {
+        return false;
+    }
+}
+
+function StudyDeskArtwork() {
+    return (
+        <svg className="pm-home-artwork" viewBox="0 0 650 500" role="img" aria-label="Exam paper, answer sheet and pencil arranged on a study desk">
+            <defs>
+                <pattern id="pm-paper-grid" width="18" height="18" patternUnits="userSpaceOnUse">
+                    <path d="M18 0H0V18" fill="none" stroke="#ffffff" strokeOpacity=".045" />
+                </pattern>
+                <filter id="pm-paper-shadow" x="-30%" y="-30%" width="160%" height="170%">
+                    <feDropShadow dx="0" dy="20" stdDeviation="18" floodColor="#000000" floodOpacity=".42" />
+                </filter>
+            </defs>
+            <path d="M70 100C145 22 291 15 401 65s190 119 179 229-105 164-228 164S78 394 47 289 1 175 70 100Z" fill="url(#pm-paper-grid)" stroke="#ffffff" strokeOpacity=".08" />
+            <circle cx="470" cy="104" r="78" fill="none" stroke="#ffb454" strokeOpacity=".22" />
+            <circle cx="470" cy="104" r="58" fill="none" stroke="#ffb454" strokeOpacity=".6" strokeWidth="5" strokeDasharray="250 115" transform="rotate(-92 470 104)" />
+            <g filter="url(#pm-paper-shadow)" transform="rotate(-5 280 250)">
+                <rect x="116" y="74" width="322" height="390" rx="12" fill="#20242b" stroke="#666b72" />
+                <rect x="133" y="92" width="288" height="354" rx="5" fill="#f0ede5" />
+                <path d="M133 92h288v62H133z" fill="#e5dfd2" />
+                <text x="156" y="119" fill="#57534c" fontSize="10" fontFamily="Arial" letterSpacing="1.4">PREPMASTER / PRACTICE PAPER</text>
+                <text x="156" y="140" fill="#17191d" fontSize="16" fontWeight="700" fontFamily="Arial">Examination practice</text>
+                <rect x="156" y="174" width="175" height="5" rx="2.5" fill="#a9a39a" />
+                <rect x="156" y="188" width="228" height="4" rx="2" fill="#d0cbc2" />
+                <rect x="156" y="201" width="204" height="4" rx="2" fill="#d0cbc2" />
+                <text x="156" y="239" fill="#393a3a" fontSize="10" fontWeight="700" fontFamily="Arial">01 / Explain the core concept.</text>
+                <rect x="156" y="250" width="225" height="3" rx="1.5" fill="#c9c4bb" />
+                <rect x="156" y="260" width="195" height="3" rx="1.5" fill="#c9c4bb" />
+                <text x="156" y="296" fill="#393a3a" fontSize="10" fontWeight="700" fontFamily="Arial">02 / Apply your understanding.</text>
+                <rect x="156" y="307" width="224" height="3" rx="1.5" fill="#c9c4bb" />
+                <rect x="156" y="317" width="190" height="3" rx="1.5" fill="#c9c4bb" />
+                <rect x="156" y="350" width="110" height="50" rx="4" fill="#e8e1d4" stroke="#c8bdab" />
+                <path d="M170 382l15-17 12 9 17-20 31 29" fill="none" stroke="#b17b39" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                <rect x="284" y="355" width="96" height="4" rx="2" fill="#c1baae" />
+                <rect x="284" y="367" width="76" height="4" rx="2" fill="#c1baae" />
+                <rect x="284" y="379" width="86" height="4" rx="2" fill="#c1baae" />
+            </g>
+            <g filter="url(#pm-paper-shadow)" transform="rotate(8 475 306)">
+                <rect x="407" y="201" width="165" height="220" rx="10" fill="#292e35" stroke="#72767a" />
+                <rect x="419" y="214" width="141" height="194" rx="5" fill="#f7f4ec" />
+                <text x="433" y="239" fill="#5c564d" fontSize="9" fontFamily="Arial" fontWeight="700">ANSWER SHEET</text>
+                <path d="M433 255h110" stroke="#d5cec2" />
+                <g fill="none" stroke="#b4aa99" strokeWidth="1.5">
+                    <circle cx="440" cy="277" r="5" /><circle cx="457" cy="277" r="5" /><circle cx="474" cy="277" r="5" />
+                    <circle cx="440" cy="295" r="5" /><circle cx="457" cy="295" r="5" /><circle cx="474" cy="295" r="5" />
+                    <circle cx="440" cy="313" r="5" /><circle cx="457" cy="313" r="5" /><circle cx="474" cy="313" r="5" />
+                </g>
+                <g stroke="#bd873f" strokeWidth="2.3" strokeLinecap="round"><path d="M436 277l3 3 6-7M453 295l3 3 6-7M470 313l3 3 6-7" /></g>
+                <rect x="433" y="340" width="111" height="4" rx="2" fill="#d2cbbf" />
+                <rect x="433" y="352" width="91" height="4" rx="2" fill="#d2cbbf" />
+                <rect x="433" y="364" width="101" height="4" rx="2" fill="#d2cbbf" />
+                <path d="M433 384l8 8 16-18" fill="none" stroke="#a9793a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            </g>
+            <g transform="rotate(35 523 430)" filter="url(#pm-paper-shadow)">
+                <rect x="511" y="342" width="17" height="126" rx="5" fill="#c18a46" />
+                <path d="M511 351h17M511 454h17" stroke="#f3c987" strokeWidth="2" />
+                <path d="M511 468l8.5 18 8.5-18Z" fill="#d8c1a0" /><path d="M517 480l2.5 6 2.5-6Z" fill="#35302a" />
+            </g>
+            <g fill="#ffb454"><circle cx="100" cy="367" r="4" /><circle cx="555" cy="162" r="3" /></g>
+            <path d="M85 390l16-16M85 374l16 16" stroke="#ffb454" strokeOpacity=".65" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+    );
+}
+
+function DomainArtwork({ id }) {
+    const common = { fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' };
+    return (
+        <svg className="pm-domain-art" viewBox="0 0 180 120" aria-hidden="true">
+            {id === 'engineering' && <g {...common}><path d="M12 60h36l15-15h31l13 13h61M48 60v31h22M94 45V18h24M120 58v35h42" /><rect x="60" y="34" width="33" height="29" rx="4" /><rect x="106" y="8" width="36" height="22" rx="3" /><rect x="116" y="82" width="30" height="23" rx="3" /><circle cx="48" cy="60" r="4" /><circle cx="120" cy="58" r="4" /><path d="M70 43v10m-5-5h10M125 19h18M125 24h11" /></g>}
+            {id === 'computer-apps' && <g {...common}><rect x="15" y="12" width="110" height="72" rx="5" /><path d="M15 25h110M52 84v11m37-11v11M42 95h57M46 42l-9 9 9 9m21-18 9 9-9 9m18-1 7-16M137 37h28m-28 10h28m-28 10h28M142 29v39" /><circle cx="22" cy="19" r="2" /><circle cx="30" cy="19" r="2" /></g>}
+            {id === 'management' && <g {...common}><path d="M15 99h151M25 99V19h128v80M43 78V57h17v21M75 78V40h17v38M107 78V28h17v50M35 43l27-13 24 7 36-20 20 8M131 25l11 0-2-10M45 88h83" strokeDasharray="none" /></g>}
+            {id === 'science-pharmacy' && <g {...common}><path d="M69 13h39m-30 0v28L49 91q-4 8 7 8h66q11 0 7-9l-29-49V13M59 78h77M69 69q20-12 40 0 10 6 20 0" /><circle cx="44" cy="29" r="8" /><circle cx="24" cy="57" r="5" /><circle cx="49" cy="79" r="5" /><path d="M44 37l-17 16m23 4 2 17" /></g>}
+            {id === 'law-arts' && <g {...common}><path d="M90 22v75M33 37h114M90 22l-10 10h20Z M47 37 29 73h36L47 37Zm86 0-18 36h36l-18-36Z M29 73q18 17 36 0m50 0q18 17 36 0M69 99h42M52 16q38-13 76 0v10q-38-13-76 0Z" /></g>}
+            {id === 'diploma' && <g {...common}><path d="M19 89h143M35 89V28h110v61M47 40h86M47 52h59M47 64h72M31 19h118M41 14v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6" /><circle cx="128" cy="65" r="18" /><path d="M128 50v30m-15-15h30M118 83l-5 17 15-7 15 7-5-17" /></g>}
+        </svg>
+    );
+}
+
+function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagram, liked, onLike }) {
+    return (
+        <article className="pm-people-card">
+            <div className="pm-people-identity">
+                <img src={avatar} alt={name} className="pm-people-avatar" loading="lazy" />
+                <div>
+                    <p className="pm-people-role">The people behind PrepMaster</p>
+                    <h3>{name}</h3>
+                    <p className="pm-people-study">Diploma in Computer Engineering</p>
+                </div>
+                <button className="pm-people-like" type="button" aria-label={liked ? 'Remove appreciation' : 'Appreciate developer'} aria-pressed={liked} onClick={onLike}>
+                    <Heart size={19} fill={liked ? 'currentColor' : 'none'} />
+                </button>
+            </div>
+            <p className="pm-people-passion">{passion}</p>
+            <div className="pm-people-links">
+                <a href={email} target="_blank" rel="noopener noreferrer" aria-label={'Email ' + name}><Mail size={17} /><span>Email</span></a>
+                <a href={github} target="_blank" rel="noopener noreferrer" aria-label={name + ' on GitHub'}><Github size={17} /><span>GitHub</span></a>
+                <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label={name + ' on LinkedIn'}><Linkedin size={17} /><span>LinkedIn</span></a>
+                <a href={instagram} target="_blank" rel="noopener noreferrer" aria-label={name + ' on Instagram'}><Instagram size={17} /><span>Instagram</span></a>
+            </div>
+        </article>
+    );
+}
+
 export default function LandingPage() {
-    const navigate = useNavigate();
     const location = useLocation();
-    const controls = useAnimation();
+    const [liked, setLiked] = useState(() => readSavedLike('dev_liked'));
+    const [liked2, setLiked2] = useState(() => readSavedLike('dev_liked_2'));
 
-    // Developer Likes State
-    const [liked, setLiked] = React.useState(() => {
-        const saved = localStorage.getItem('dev_liked');
-        return saved ? JSON.parse(saved) : false;
-    });
-    const [liked2, setLiked2] = React.useState(() => {
-        const saved = localStorage.getItem('dev_liked_2');
-        return saved ? JSON.parse(saved) : false;
-    });
-
-    // SEO Injection dynamically for this page
     useEffect(() => {
-        document.title = "PrepMaster | University Exam Preparation Platform";
-
+        document.title = 'PrepMaster | University Exam Preparation';
         let metaDescription = document.querySelector('meta[name="description"]');
         if (!metaDescription) {
             metaDescription = document.createElement('meta');
-            metaDescription.name = "description";
+            metaDescription.name = 'description';
             document.head.appendChild(metaDescription);
         }
-        metaDescription.content = "Prepare for university exams including B.Tech, BCA, Law, and Diploma levels. Get 98% accurate syllabus-based questions covering Engineering, Management, Pharmacy, and Arts globally.";
+        metaDescription.content = 'Explore academic programs, courses, semesters and syllabus-led examination practice with PrepMaster.';
     }, []);
 
-    // Scroll to contact section when navigated here with scrollToContact state
     useEffect(() => {
         if (location.state?.scrollToContact) {
-            const el = document.getElementById('contact');
-            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Clear the state so a refresh doesn't re-trigger the scroll
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
             window.history.replaceState({}, '', location.pathname);
         }
-    }, [location.state]);
+    }, [location.pathname, location.state]);
 
-    // Staggered animation variant
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: { type: "spring", stiffness: 100, damping: 12 }
-        }
-    };
-
-    const handleMouseMove = e => {
-        for (const card of document.getElementsByClassName("domain-card")) {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty("--mouse-x", `${x}px`);
-            card.style.setProperty("--mouse-y", `${y}px`);
-        }
+    const updateLike = (key, setter, value) => {
+        setter(value);
+        try { window.localStorage.setItem(key, JSON.stringify(value)); } catch { /* optional preference */ }
     };
 
     return (
-        <main onMouseMove={handleMouseMove}>
-            {/* 3D Floating Hero Background Elements */}
-            <div className="hero-shapes">
-                <div className="floating-element el-1"><Icons.Code size={48} color="#3b82f6" /></div>
-                <div className="floating-element el-2"><Icons.Database size={32} color="#8b5cf6" /></div>
-                <div className="floating-element el-3"><Icons.Activity size={64} color="#10b981" /></div>
-                <div className="floating-element el-4"><Icons.Cpu size={40} color="#ec4899" /></div>
+        <main className="pm-home-refresh">
+            <div className="pm-home-shell">
+                <section className="pm-home-hero" aria-labelledby="pm-home-title">
+                    <div className="pm-home-copy">
+                        <p className="pm-home-kicker">A clearer way to prepare</p>
+                        <h1 id="pm-home-title" className="pm-home-title">Make every study session <em>count.</em></h1>
+                        <p className="pm-home-description">
+                            Find your academic program, move through your semester and practise with exams shaped around your subject syllabus. Your next focused session starts here.
+                        </p>
+                        <div className="pm-home-actions">
+                            <a className="pm-home-primary" href="#programs">Explore academic programs <ArrowDown size={17} /></a>
+                            <Link className="pm-home-secondary" to="/test-rooms">Join a test room <ArrowUpRight size={16} /></Link>
+                        </div>
+                        <div className="pm-home-proof" aria-label="How PrepMaster is organised">
+                            <span><Check size={15} /> 6 academic domains</span>
+                            <span><Check size={15} /> Course-led catalog</span>
+                            <span><Check size={15} /> Syllabus-based practice</span>
+                        </div>
+                    </div>
+                    <div className="pm-home-art-wrap"><StudyDeskArtwork /></div>
+                </section>
             </div>
-
-            <header className="hero-section">
-                <motion.div
-                    className="hero-content"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    {/* <motion.div
-                        className="hero-badge"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.6 }}
-                    >
-                        <Icons.Award size={16} /> Now Supporting Global Universities
-                    </motion.div> */}
-
-                    <motion.h1
-                        className="hero-title"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                    >
-                        Master MU Exams <br />
-                        With <span className="text-gradient">Surgical Precision</span>.
-                    </motion.h1>
-
-                    <motion.p
-                        className="hero-description"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6, duration: 0.8 }}
-                    >
-                        Generate hyper-accurate, 98% syllabus-matched mock examinations instantly. From strict subjective 7/14 marker questions to deeply technical complex MCQ objective sets across B.Tech, Diploma, Pharmacy, and Law degrees.
-                    </motion.p>
-
-                    <motion.div
-                        className="hero-actions"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8, duration: 0.6 }}
-                    >
-                        <button className="btn-primary" onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}>
-                            Explore Programs <Icons.ChevronDown size={20} />
-                        </button>
-                        <button className="btn-secondary" onClick={() => navigate('/test-rooms')}>
-                            Join Test Room
-                        </button>
-                        {/* <button className="btn-google-cta" onClick={() => navigate('/signup?mode=signup&method=google')}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
-                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                            </svg>
-                            Continue with Google
-                        </button> */}
-                    </motion.div>
-
-                    <motion.div
-                        className="stats-container"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.2, duration: 1 }}
-                    >
-                        {/* <div className="stat-item">
-                            <div className="stat-number">6+</div>
-                            <div className="stat-label">Global Faculties</div>
-                        </div> */}
-                        <div className="stat-item">
-                            <div className="stat-number">98%</div>
-                            <div className="stat-label">Syllabus Accuracy</div>
-                        </div>
-                        <div className="stat-item">
-                            <div className="stat-number">20+</div>
-                            <div className="stat-label">Degree Programs</div>
-                        </div>
-                    </motion.div>
-                </motion.div>
-            </header>
-
-            <section className="domains-section">
-                <div className="section-header">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1rem' }}
-                    >
-                        Select Your Academic <span className="text-gradient">Domain</span>
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}
-                    >
-                        Choose your discipline below to instantly generate accurate exams.
-                    </motion.p>
-                </div>
-
-                <motion.div
-                    className="domain-grid"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                >
-                    {domains.map(domain => {
-                        const IconComponent = Icons[domain.icon] || Icons.Book;
-                        return (
-                            <motion.article key={domain.id} variants={itemVariants}>
-                                <Link to={`/domains/${domain.id}/courses`} className="domain-card">
-                                    <div className="domain-icon-wrapper">
-                                        <IconComponent size={32} />
-                                    </div>
-                                    <h3 className="domain-title">{domain.title}</h3>
-                                    <p className="domain-desc">{domain.description}</p>
-                                    <span className="domain-link">
-                                        Explore Courses <Icons.ArrowRight size={18} />
-                                    </span>
-                                </Link>
-                            </motion.article>
-                        )
-                    })}
-                </motion.div>
-            </section>
-
-            {/* Developer Details Section */}
-            <section className="developer-section" id="contact">
-                <div className="section-header" style={{ marginBottom: '3rem' }}>
-                    <h2>Meet the Developers</h2>
-                    <p>The team behind PrepMaster</p>
-                </div>
-
-                <div className="dev-cards-grid">
-                    <motion.div
-                        className="dev-container"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.8, type: "spring" }}
-                    >
-                        <div className="dev-avatar-wrapper">
-                            <img src="/avatar.png" alt="Daksh Hadvani 3D Avatar" className="dev-avatar" />
-                            <div className="dev-glow"></div>
-                        </div>
-
-                        <div className="dev-info">
-                            <div className="dev-badge">Developer</div>
-                            <h2 className="dev-name">Daksh Hadvani</h2>
-                            <h3 className="dev-studies">Diploma in Computer Engineering</h3>
-
-                            <div className="dev-passion">
-                                <motion.button
-                                    onClick={() => {
-                                        const newState = !liked;
-                                        setLiked(newState);
-                                        localStorage.setItem('dev_liked', JSON.stringify(newState));
-                                    }}
-                                    whileHover={{ scale: 1.1, rotate: 5 }}
-                                    whileTap={{ scale: 0.9, rotate: -5 }}
-                                    style={{
-                                        background: 'none',
-                                        border: 'none',
-                                        padding: 0,
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '0.6rem'
-                                    }}
-                                >
-                                    <motion.div
-                                        animate={{
-                                            scale: liked ? [1, 1.4, 1.2] : 1,
-                                            rotateY: liked ? [0, 180, 360] : 0
-                                        }}
-                                        transition={{ type: "spring", duration: 0.6 }}
-                                        style={{ display: 'flex' }}
-                                    >
-                                        <Icons.Heart
-                                            size={22}
-                                            fill={liked ? "#ec4899" : "transparent"}
-                                            color={liked ? "#ec4899" : "var(--text-tertiary)"}
-                                            style={{ filter: liked ? 'drop-shadow(0 0 10px rgba(236, 72, 153, 0.5))' : 'none', transition: 'all 0.3s ease' }}
-                                        />
-                                    </motion.div>
-                                </motion.button>
-                                <p><strong>Passions:</strong> Problem Solving.<br></br>Making positive impact on people's lives through software.</p>
-                            </div>
-
-                            <div className="dev-links">
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daksh.hadvani132235@marwadiuniversity.ac.in" target="_blank" rel="noopener noreferrer" className="dev-link-btn email-btn">
-                                    <Icons.Mail size={20} /> Email Me
-                                </a>
-                                <a href="https://github.com/dakshhadvani19" target="_blank" rel="noopener noreferrer" className="dev-link-btn github-btn">
-                                    <Icons.Github size={20} /> GitHub
-                                </a>
-                                <a href="https://www.linkedin.com/in/daksh-hadvanii-b14176339?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="dev-link-btn linkedin-btn">
-                                    <Icons.Linkedin size={20} /> LinkedIn
-                                </a>
-                                <a href="https://instagram.com/dakshhh.__.19" target="_blank" rel="noopener noreferrer" className="dev-link-btn insta-btn">
-                                    <Icons.Instagram size={20} /> Instagram
-                                </a>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        className="dev-container"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.8, type: "spring", delay: 0.2 }}
-                    >
-                        <div className="dev-avatar-wrapper">
-                            <img src="/avatar2.jpg" alt="Dev Kalola Avatar" className="dev-avatar" />
-                            <div className="dev-glow"></div>
-                        </div>
-
-                        <div className="dev-info">
-                            <div className="dev-badge">Developer</div>
-                            <h2 className="dev-name">Dev Kalola</h2>
-                            <h3 className="dev-studies">Diploma in Computer Engineering</h3>
-
-                            <div className="dev-passion">
-                                <motion.button
-                                    onClick={() => {
-                                        const newState = !liked2;
-                                        setLiked2(newState);
-                                        localStorage.setItem('dev_liked_2', JSON.stringify(newState));
-                                    }}
-                                    whileHover={{ scale: 1.1, rotate: 5 }}
-                                    whileTap={{ scale: 0.9, rotate: -5 }}
-                                    style={{
-                                        background: 'none',
-                                        border: 'none',
-                                        padding: 0,
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '0.6rem'
-                                    }}
-                                >
-                                    <motion.div
-                                        animate={{
-                                            scale: liked2 ? [1, 1.4, 1.2] : 1,
-                                            rotateY: liked2 ? [0, 180, 360] : 0
-                                        }}
-                                        transition={{ type: "spring", duration: 0.6 }}
-                                        style={{ display: 'flex' }}
-                                    >
-                                        <Icons.Heart
-                                            size={22}
-                                            fill={liked2 ? "#ec4899" : "transparent"}
-                                            color={liked2 ? "#ec4899" : "var(--text-tertiary)"}
-                                            style={{ filter: liked2 ? 'drop-shadow(0 0 10px rgba(236, 72, 153, 0.5))' : 'none', transition: 'all 0.3s ease' }}
-                                        />
-                                    </motion.div>
-                                </motion.button>
-                                <p><strong>Passions:</strong> Building innovative solutions.<br></br>Turning ideas into impactful digital experiences.</p>
-                            </div>
-
-                            <div className="dev-links">
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dev.kalola132220@marwadiuniversity.ac.in" target="_blank" rel="noopener noreferrer" className="dev-link-btn email-btn">
-                                    <Icons.Mail size={20} /> Email Me
-                                </a>
-                                <a href="https://github.com/devkalola" target="_blank" rel="noopener noreferrer" className="dev-link-btn github-btn">
-                                    <Icons.Github size={20} /> GitHub
-                                </a>
-                                <a href="https://www.linkedin.com/in/dev-kalola-646442380/" target="_blank" rel="noopener noreferrer" className="dev-link-btn linkedin-btn">
-                                    <Icons.Linkedin size={20} /> LinkedIn
-                                </a>
-                                <a href="https://www.instagram.com/kalola_dev_14/" target="_blank" rel="noopener noreferrer" className="dev-link-btn insta-btn">
-                                    <Icons.Instagram size={20} /> Instagram
-                                </a>
-                            </div>
-                        </div>
-                    </motion.div>
+            <div className="pm-home-rule" />
+            <section id="programs" className="pm-programs">
+                <div className="pm-home-shell">
+                    <div className="pm-section-head">
+                        <h2>Select Your Academic <span>Domain</span></h2>
+                        <p>Start with your field of study. We’ll take you from program to semester and then to the subject you want to practise.</p>
+                    </div>
+                    <div className="pm-domain-grid">
+                        {domains.map((domain) => (
+                            <Link key={domain.id} to={'/domains/' + domain.id + '/courses'} className="pm-domain-card">
+                                <div className="pm-domain-top"><DomainArtwork id={domain.id} /></div>
+                                <div className="pm-domain-content">
+                                    <h3>{domain.title}</h3>
+                                    <p>{domain.description}</p>
+                                    <span className="pm-domain-open">Explore programs <ArrowUpRight size={15} /></span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </section>
-        </main >
+            <section id="contact" className="pm-people-section">
+                <div className="pm-home-shell">
+                    <div className="pm-people-head">
+                        <div><h2>Meet the people behind PrepMaster</h2><p>A small team building tools to make exam preparation more focused.</p></div>
+                    </div>
+                    <div className="pm-people-grid">
+                        <DeveloperCard
+                            name="Daksh Hadvani" avatar="/avatar.png"
+                            passion="Problem solving, and building software that can make a positive impact on people’s lives."
+                            email="https://mail.google.com/mail/?view=cm&fs=1&to=daksh.hadvani132235@marwadiuniversity.ac.in"
+                            github="https://github.com/dakshhadvani19"
+                            linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                            instagram="https://instagram.com/dakshhh.__.19"
+                            liked={liked} onLike={() => updateLike('dev_liked', setLiked, !liked)}
+                        />
+                        <DeveloperCard
+                            name="Dev Kalola" avatar="/avatar2.jpg"
+                            passion="Building innovative solutions and turning ideas into impactful digital experiences."
+                            email="https://mail.google.com/mail/?view=cm&fs=1&to=dev.kalola132220@marwadiuniversity.ac.in"
+                            github="https://github.com/devkalola"
+                            linkedin="https://www.linkedin.com/in/dev-kalola-646442380/"
+                            instagram="https://www.instagram.com/kalola_dev_14/"
+                            liked={liked2} onLike={() => updateLike('dev_liked_2', setLiked2, !liked2)}
+                        />
+                    </div>
+                </div>
+            </section>
+        </main>
     );
 }
