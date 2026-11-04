@@ -81,6 +81,8 @@ export default function ExamPortal() {
 
     const [autoProcessing, setAutoProcessing] = useState(false);
     const [autoError, setAutoError] = useState('');
+    const autoStartTriggeredRef = useRef(false);
+    const startExamActionRef = useRef(null);
 
     // Supabase attempt tracking
     const [attemptId, setAttemptId] = useState(null);
@@ -545,6 +547,24 @@ export default function ExamPortal() {
         }
     };
 
+    // A Test Room started with Auto AI begins generating as soon as the subject
+    // context is ready. Keep the instructions visible and drive the existing
+    // generate button into its loading state without requiring another click.
+    startExamActionRef.current = startExam;
+    useEffect(() => {
+        if (testRoomMode !== 'create'
+            || examMode !== 'auto'
+            || examState !== 'intro'
+            || autoProcessing
+            || subjectContextLoading
+            || currentCatalogStatus === 'inactive'
+            || !examInfo
+            || examInfo.type !== 'objective'
+            || autoStartTriggeredRef.current) return;
+        autoStartTriggeredRef.current = true;
+        startExamActionRef.current?.();
+    }, [testRoomMode, examMode, examState, autoProcessing, subjectContextLoading, currentCatalogStatus, examInfo]);
+
     // Countdown timer for rate limit cool-down
     useEffect(() => {
         if (retryCountdown <= 0) return;
@@ -970,10 +990,10 @@ export default function ExamPortal() {
                         }}
                     >
                         {uploadProcessing
-                            ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Generating Questions...</>
+                            ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> {testRoomMode ? 'Generating questions for Test Room...' : 'Generating Questions...'}</>
                             : retryCountdown > 0
                                 ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Retry in {retryCountdown}s...</>
-                                : <><Cpu size={18} /> Generate Questions &amp; Start Exam</>}
+                                : <><Cpu size={18} /> {testRoomMode ? 'Generate Questions &amp; Create Test Room' : 'Generate Questions &amp; Start Exam'}</>}
                     </button>
 
                     <style>{`@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
@@ -1055,10 +1075,10 @@ export default function ExamPortal() {
                         }}
                     >
                         {autoProcessing
-                                ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Building Live AI Exam...</>
+                                ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> {testRoomMode ? 'Generating questions for Test Room...' : 'Building Live AI Exam...'}</>
                                 : retryCountdown > 0
                                     ? <><Loader size={18} style={{ animation: 'spin 1s linear infinite' }} /> Retry in {retryCountdown}s...</>
-                                    : <><Cpu size={18} /> I am Ready, Generate Live AI Exam</>}
+                                    : <><Cpu size={18} /> {testRoomMode ? 'Generate Questions & Create Test Room' : 'I am Ready, Generate Live AI Exam'}</>}
                     </button>
                     <style>{`@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
                 </div>
