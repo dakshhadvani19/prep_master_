@@ -214,4 +214,59 @@ describe('leaderboard filtering access', () => {
     expect(screen.getByTestId('lb-selected-subject').textContent).toMatch(/Administrator preview/i);
     expect(screen.queryByTestId('lb-top100')).toBeNull();
   });
+  it('stores the hierarchy in the URL and restores fresh lock status after refresh', async () => {
+    signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Student One' });
+    let currentAccess = [
+      { subject_id: 1001131010601, course_id: 1, semester: 1 },
+    ];
+    vi.stubGlobal('fetch', vi.fn(async (_url, options) => {
+      const body = JSON.parse(options?.body || '{}');
+      if (body.action === 'load') {
+        return { ok: true, status: 200, json: async () => ({ completedSubjects: currentAccess }) };
+      }
+      return { ok: false, status: 503, json: async () => ({ error: 'Leaderboard unavailable.' }) };
+    }));
+
+    const firstVisit = await at();
+    await waitFor(() => expect(screen.getByTestId('lb-department-engineering')).not.toBeDisabled());
+    fireEvent.click(screen.getByTestId('lb-department-engineering'));
+    await waitFor(() => expect(screen.getByTestId('lb-course-1')).not.toBeDisabled());
+    expect(new URLSearchParams(window.location.search).get('department')).toBe('engineering');
+
+    fireEvent.click(screen.getByTestId('lb-course-1'));
+    await waitFor(() => expect(screen.getByTestId('lb-semester-1')).not.toBeDisabled());
+    expect(new URLSearchParams(window.location.search).get('courseId')).toBe('1');
+
+    fireEvent.click(screen.getByTestId('lb-semester-1'));
+    await waitFor(() => expect(screen.getByTestId('lb-subject-1001131010601')).toBeInTheDocument());
+    expect(new URLSearchParams(window.location.search).get('semester')).toBe('1');
+
+    fireEvent.click(screen.getByTestId('lb-subject-1001131010601'));
+    await waitFor(() => expect(screen.getByTestId('lb-selected-subject')).toHaveTextContent(/SUBJECT SELECTED/i));
+    const savedSearch = window.location.search;
+    expect(new URLSearchParams(savedSearch).get('subjectId')).toBe('1001131010601');
+
+    // Refresh with another completion in the same semester: the parent remains
+    // available, but the previously selected subject becomes locked.
+    currentAccess = [{ subject_id: 1000135110101, course_id: 1, semester: 1 }];
+    firstVisit.unmount();
+    await at(`/leaderboards${savedSearch}`);
+
+    const restoredSelection = await screen.findByTestId('lb-selected-subject');
+    expect(restoredSelection).toHaveTextContent(/BOARD LOCKED/i);
+    expect(screen.getByTestId('lb-subject-1001131010601')).toBeDisabled();
+    expect(screen.queryByTestId('lb-top100')).toBeNull();
+    expect(new URLSearchParams(window.location.search).get('subjectId')).toBe('1001131010601');
+  });
+
+  it('restores an administrator deep link without student access restrictions', async () => {
+    signedInAs({ uid: 'admin-1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
+    mockUnlockResponse([]);
+    await at('/leaderboards?department=engineering&courseId=1&semester=1&subjectId=1001131010601');
+
+    expect(await screen.findByTestId('lb-selected-subject')).toHaveTextContent(/Administrator preview/i);
+    expect(screen.getByTestId('lb-subject-1001131010601')).not.toBeDisabled();
+    expect(new URLSearchParams(window.location.search).get('subjectId')).toBe('1001131010601');
+  });
+
 });

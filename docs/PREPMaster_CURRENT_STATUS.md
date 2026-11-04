@@ -1,6 +1,6 @@
 # PrepMaster — Current Status
 
-_Last updated: 2026-11-01_
+_Last updated: 2026-11-04_
 
 ## 1. Repository and deployment
 
@@ -348,3 +348,10 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Extended the white-and-amber setup treatment to Test Room entry, duration setup, share and waiting lobby. Blue styling is kept for active exam/Test Room answer and question navigation, including the left-side current-question bubble and its spring transition.
 - Preserved all exam/Test Room behavior and data flows. The CSS is scoped to setup/lobby classes; active Test Room attempt surfaces are deliberately excluded. The normal exam Submit action remains blue with the active test controls.
 - Verification: checked the exact auth source colors and CSS selectors, confirmed the active attempt root does not receive the pre-test room classes, and verified the active test blue question/answer selectors are untouched. Local build and visual browser testing were not run through the connected repository session.
+
+## Leaderboard filter persistence — 2026-11-04
+
+- The department → course → semester → subject filters are URL-backed with `department`, `courseId`, `semester`, and `subjectId` query parameters. Selection survives refresh and browser history navigation.
+- Student URL restoration waits for a fresh, uncached server-verified completed-subject access response. Current locked/unlocked status is recalculated before filters are restored; administrator catalog preview remains unrestricted.
+- A subject whose access has become locked remains visibly marked locked after refresh, and its ranking board is not rendered. Invalid or inaccessible ancestor filters are reduced to the nearest accessible step.
+- This is a frontend routing/access-state change only; no database schema or RPC change was made.

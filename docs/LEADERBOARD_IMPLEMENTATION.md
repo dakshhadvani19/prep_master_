@@ -25,6 +25,13 @@ The catalog can show locked options, but locked buttons are disabled and the nav
 
 Attempts created before the canonical SubjectId field existed stored a short subject code and name but not the course or semester. The backfill assigned canonical IDs only where the code uniquely identifies one catalog subject: four existing completions were mapped to Basics of Accounting (BCA, semester 2) and Fundamentals of Machine Learning (Diploma CE, semester 6). The two old Calculus attempts remain unassigned because code 01ma0106 occurs in seven different courses; unlocking all or one of those courses would be an unsupported guess. New normal exams and Test Room attempts launched from canonical catalog subject routes carry a server-verified canonical SubjectId.
 
+## URL-backed filter restoration — 2026-11-04
+
+- The hierarchy is encoded in the `department`, `courseId`, `semester`, and `subjectId` query parameters on `/leaderboards`. Selecting a filter creates a browser-history entry; refresh and Back/Forward restore the selected hierarchy.
+- Student restoration waits for the authenticated `POST /api/leaderboard-filters` request for the current Auth UID. The client request explicitly uses `cache: 'no-store'`; the endpoint also sends `Cache-Control: no-store`. Department, course, and semester are checked against the fresh completed-subject response before they are restored.
+- A selected subject that has become locked remains selected and is shown as locked, but its ranking board is not mounted. Invalid or inaccessible ancestor filters are reduced to the nearest accessible level. Administrator preview remains unrestricted.
+- This change does not alter database schemas, RPCs, or authorization contracts. URL progression, refresh with changed access, and administrator deep links are covered in `tests/leaderboard.test.jsx`.
+
 ## Phase 1: result projection and published Top 100
 
 ### Source-of-truth flow

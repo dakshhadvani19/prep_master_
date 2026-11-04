@@ -1,4 +1,5 @@
 import { createElement, useCallback, useEffect, useMemo, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
     AlertCircle,
     ArrowLeft,
@@ -25,6 +26,7 @@ import {
     CATALOG_DOMAINS,
     fetchCourseAndSubjects,
     fetchCoursesForDomain,
+    getCatalogDomain,
     mappingForCourseId,
 } from '../utils/catalogApi';
 import { getLeaderboardCompletedSubjects } from '../utils/supabaseExam';
@@ -91,6 +93,16 @@ function semesterHasCompletion(courseId, semester, completedSubjects) {
         ));
 }
 
+function leaderboardSearch({ department, courseId, semester, subjectId } = {}) {
+    const params = new URLSearchParams();
+    if (department) params.set('department', String(department));
+    if (courseId != null) params.set('courseId', String(courseId));
+    if (semester != null) params.set('semester', String(semester));
+    if (subjectId != null) params.set('subjectId', String(subjectId));
+    const query = params.toString();
+    return query ? `?${query}` : '';
+}
+
 function EmptyState({ icon = BookOpen, title, children }) {
     return (
         <div className="lb-empty-state">
@@ -149,6 +161,9 @@ export default function Leaderboard() {
     const auth = useAuth();
     const isAdmin = Boolean(auth.isAdmin);
     const userId = auth.currentUser?.uid || '';
+    const location = useLocation();
+    const navigate = useNavigate();
+    const accessIdentity = `${userId}:${isAdmin ? 'admin' : 'student'}`;
     const [step, setStep] = useState('department');
     const [domain, setDomain] = useState(null);
     const [courses, setCourses] = useState([]);
@@ -163,23 +178,28 @@ export default function Leaderboard() {
     const [loadingAccess, setLoadingAccess] = useState(!isAdmin);
     const [completedSubjects, setCompletedSubjects] = useState([]);
     const [accessError, setAccessError] = useState('');
+    const [accessIdentityChecked, setAccessIdentityChecked] = useState('');
+    const [hydrationVersion, setHydrationVersion] = useState(0);
     const [catalogError, setCatalogError] = useState('');
 
     const loadCompletedSubjects = useCallback(async () => {
         if (isAdmin) {
             setCompletedSubjects([]);
             setAccessError('');
+            setAccessIdentityChecked(accessIdentity);
             setLoadingAccess(false);
             return;
         }
         setLoadingAccess(true);
         setCompletedSubjects([]);
         setAccessError('');
+        setAccessIdentityChecked('');
         const result = await getLeaderboardCompletedSubjects();
         setCompletedSubjects(result.subjects || []);
         setAccessError(result.error || '');
+        setAccessIdentityChecked(accessIdentity);
         setLoadingAccess(false);
-    }, [isAdmin]);
+    }, [accessIdentity, isAdmin]);
 
     useEffect(() => {
         let active = true;
@@ -188,20 +208,174 @@ export default function Leaderboard() {
                 setLoadingAccess(false);
                 setCompletedSubjects([]);
                 setAccessError('');
+                setAccessIdentityChecked(accessIdentity);
                 return;
             }
             setLoadingAccess(true);
             setCompletedSubjects([]);
             setAccessError('');
+            setAccessIdentityChecked('');
             const result = await getLeaderboardCompletedSubjects();
             if (!active) return;
             setCompletedSubjects(result.subjects || []);
             setAccessError(result.error || '');
+            setAccessIdentityChecked(accessIdentity);
             setLoadingAccess(false);
         }
         load();
         return () => { active = false; };
-    }, [userId, isAdmin]);
+    }, [accessIdentity, isAdmin]);
+
+    // Restore URL filters only after the current student's live access check
+    // finishes. A stale URL must never bypass a newly locked hierarchy level.
+    useEffect(() => {
+        if (!isAdmin && (loadingAccess || accessIdentityChecked !== accessIdentity)) return undefined;
+
+        let active = true;
+        async function restoreSelection() {
+            setStep('department');
+            setDomain(null);
+            setCourses([]);
+            setCourse(null);
+            setSubjects([]);
+            setSemester(null);
+            setSelectedSubjectId(null);
+            setCourseQuery('');
+            setSubjectQuery('');
+            setCatalogError('');
+            setLoadingCourses(false);
+            setLoadingSubjects(false);
+
+            const params = new URLSearchParams(location.search);
+            const departmentId = params.get('department');
+            const courseParam = params.get('courseId');
+            const semesterParam = params.get('semester');
+            const subjectParam = params.get('subjectId');
+
+            if (!departmentId) {
+                if (courseParam || semesterParam !== null || subjectParam) {
+                    navigate({ pathname: '/leaderboards', search: '' }, { replace: true });
+                }
+                return;
+            }
+
+            // Keep the URL available for retry, but never restore student access on error.
+            if (!isAdmin && accessError) return;
+
+            const nextDomain = getCatalogDomain(departmentId);
+            if (!nextDomain || (!isAdmin && !departmentHasCompletion(nextDomain, completedSubjects))) {
+                navigate({ pathname: '/leaderboards', search: '' }, { replace: true });
+                return;
+            }
+
+            setDomain(nextDomain);
+            setStep('course');
+            setLoadingCourses(true);
+            const courseResult = await fetchCoursesForDomain(nextDomain.id);
+            if (!active) return;
+            setCourses(courseResult.courses || []);
+            setCatalogError(courseResult.error?.message || '');
+            setLoadingCourses(false);
+            if (courseResult.error) return;
+
+            if (!courseParam) {
+                if (semesterParam !== null || subjectParam) {
+                    navigate({
+                        pathname: '/leaderboards',
+                        search: leaderboardSearch({ department: nextDomain.id }),
+                    }, { replace: true });
+                }
+                return;
+            }
+
+            const requestedCourseId = /^[0-9]+$/.test(courseParam) ? Number(courseParam) : NaN;
+            const nextCourse = courseResult.courses?.find((item) => item.courseId === requestedCourseId);
+            if (!nextCourse
+                || mappingForCourseId(requestedCourseId)?.domainId !== nextDomain.id
+                || (!isAdmin && !courseHasCompletion(nextCourse, completedSubjects))) {
+                navigate({
+                    pathname: '/leaderboards',
+                    search: leaderboardSearch({ department: nextDomain.id }),
+                }, { replace: true });
+                return;
+            }
+
+            setCourse(nextCourse);
+            setStep('semester');
+            setLoadingSubjects(true);
+            const subjectsResult = await fetchCourseAndSubjects(nextCourse.courseId);
+            if (!active) return;
+            setSubjects(subjectsResult.subjects || []);
+            setCatalogError(subjectsResult.error?.message || '');
+            setLoadingSubjects(false);
+            if (subjectsResult.error) return;
+            setCourse(subjectsResult.course || nextCourse);
+
+            if (semesterParam === null) {
+                if (subjectParam) {
+                    navigate({
+                        pathname: '/leaderboards',
+                        search: leaderboardSearch({ department: nextDomain.id, courseId: nextCourse.courseId }),
+                    }, { replace: true });
+                }
+                return;
+            }
+
+            const requestedSemester = /^[0-9]+$/.test(semesterParam) ? Number(semesterParam) : NaN;
+            const semesterExists = Number.isInteger(requestedSemester)
+                && subjectsResult.subjects?.some((item) => Number(item.sem) === requestedSemester);
+            if (!semesterExists
+                || (!isAdmin && !semesterHasCompletion(nextCourse.courseId, requestedSemester, completedSubjects))) {
+                navigate({
+                    pathname: '/leaderboards',
+                    search: leaderboardSearch({ department: nextDomain.id, courseId: nextCourse.courseId }),
+                }, { replace: true });
+                return;
+            }
+
+            setSemester(requestedSemester);
+            setStep('subject');
+
+            if (subjectParam === null) return;
+            const requestedSubjectId = /^[0-9]+$/.test(subjectParam) ? Number(subjectParam) : NaN;
+            const nextSubject = subjectsResult.subjects?.find((item) => (
+                item.subjectId === requestedSubjectId && Number(item.sem) === requestedSemester
+            ));
+            if (!nextSubject) {
+                navigate({
+                    pathname: '/leaderboards',
+                    search: leaderboardSearch({
+                        department: nextDomain.id,
+                        courseId: nextCourse.courseId,
+                        semester: requestedSemester,
+                    }),
+                }, { replace: true });
+                return;
+            }
+
+            // Keep a now-locked subject selected for feedback, but never mount its board.
+            setSelectedSubjectId(nextSubject.subjectId);
+        }
+
+        restoreSelection().catch((error) => {
+            if (!active) return;
+            setLoadingCourses(false);
+            setLoadingSubjects(false);
+            setCatalogError(error?.message || 'Could not restore leaderboard filters.');
+        });
+
+        return () => { active = false; };
+    }, [
+        accessError,
+        accessIdentity,
+        accessIdentityChecked,
+        completedSubjects,
+        hydrationVersion,
+        isAdmin,
+        loadingAccess,
+        location.search,
+        navigate,
+    ]);
 
     const filteredCourses = useMemo(() => {
         const query = normalizeName(courseQuery);
@@ -233,7 +407,7 @@ export default function Leaderboard() {
     );
 
     const selectedSubject = subjects.find((item) => String(item.subjectId) === String(selectedSubjectId)) || null;
-    const selectedIsUnlocked = Boolean(isAdmin || (!loadingAccess && !accessError && selectedSubject && subjectIsCompleted(selectedSubject, completedSubjects)));
+    const selectedIsUnlocked = Boolean(selectedSubject && (isAdmin || (!loadingAccess && !accessError && subjectIsCompleted(selectedSubject, completedSubjects))));
     const stepIndex = Math.max(0, STEPS.findIndex((item) => item.id === step));
 
     function canOpenDepartment(candidate) {
@@ -251,91 +425,60 @@ export default function Leaderboard() {
             && semesterHasCompletion(course.courseId, candidateSemester, completedSubjects));
     }
 
-    async function chooseDomain(nextDomain) {
-        if (!canOpenDepartment(nextDomain)) return;
-        setDomain(nextDomain);
-        setCourse(null);
-        setSubjects([]);
-        setSemester(null);
-        setSelectedSubjectId(null);
-        setCourseQuery('');
-        setSubjectQuery('');
-        setCatalogError('');
-        setLoadingCourses(true);
-        setStep('course');
-        const result = await fetchCoursesForDomain(nextDomain.id);
-        setCourses(result.courses || []);
-        setCatalogError(result.error?.message || '');
-        setLoadingCourses(false);
+    function navigateToFilters(filters, replace = false) {
+        navigate({
+            pathname: '/leaderboards',
+            search: leaderboardSearch(filters),
+        }, { replace });
     }
 
-    async function chooseCourse(nextCourse) {
+    function chooseDomain(nextDomain) {
+        if (!canOpenDepartment(nextDomain)) return;
+        navigateToFilters({ department: nextDomain.id });
+    }
+
+    function chooseCourse(nextCourse) {
         if (!canOpenCourse(nextCourse)) return;
-        setCourse(nextCourse);
-        setSemester(null);
-        setSelectedSubjectId(null);
-        setSubjectQuery('');
-        setCatalogError('');
-        setLoadingSubjects(true);
-        setStep('semester');
-        const result = await fetchCourseAndSubjects(nextCourse.courseId);
-        if (result.error) {
-            setSubjects([]);
-            setCatalogError(result.error.message || 'Could not load this course’s subjects.');
-        } else {
-            setCourse(result.course || nextCourse);
-            setSubjects(result.subjects || []);
-            if (!result.subjects?.length) {
-                setCatalogError('No subjects are currently listed for this course.');
-            }
-        }
-        setLoadingSubjects(false);
+        navigateToFilters({ department: domain?.id, courseId: nextCourse.courseId });
     }
 
     function chooseSemester(value) {
         if (!canOpenSemester(value)) return;
-        setSemester(Number(value));
-        setSelectedSubjectId(null);
-        setSubjectQuery('');
-        setStep('subject');
+        navigateToFilters({
+            department: domain?.id,
+            courseId: course?.courseId,
+            semester: Number(value),
+        });
     }
 
     function resetPath() {
-        setStep('department');
-        setDomain(null);
-        setCourses([]);
-        setCourse(null);
-        setSubjects([]);
-        setSemester(null);
-        setSelectedSubjectId(null);
-        setCourseQuery('');
-        setSubjectQuery('');
-        setCatalogError('');
+        navigateToFilters({});
     }
 
     function moveToStep(target) {
         const targetIndex = STEPS.findIndex((item) => item.id === target);
         if (targetIndex < 0 || targetIndex > stepIndex) return;
-        setStep(target);
+
         if (targetIndex === 0) {
-            setDomain(null);
-            setCourse(null);
-            setSubjects([]);
-            setSemester(null);
-            setSelectedSubjectId(null);
-            setCatalogError('');
+            navigateToFilters({});
         } else if (targetIndex === 1) {
-            setCourse(null);
-            setSubjects([]);
-            setSemester(null);
-            setSelectedSubjectId(null);
-            setCatalogError('');
+            navigateToFilters({ department: domain?.id });
         } else if (targetIndex === 2) {
-            setSelectedSubjectId(null);
+            navigateToFilters({
+                department: domain?.id,
+                courseId: course?.courseId,
+                semester,
+            });
+        } else {
+            navigateToFilters({
+                department: domain?.id,
+                courseId: course?.courseId,
+                semester,
+                subjectId: selectedSubjectId,
+            });
         }
     }
 
-    
     return (
         <main className="lb" data-testid="leaderboard-filter-page">
             <header className="lb-hero">
@@ -423,10 +566,7 @@ export default function Leaderboard() {
                     <div className="lb-alert lb-alert--catalog" role="alert">
                         <AlertCircle size={18} />
                         <div><strong>Catalog unavailable</strong><p>{catalogError}</p></div>
-                        <button type="button" onClick={() => {
-                            if (step === 'course' && domain) chooseDomain(domain);
-                            else if (step === 'semester' && course) chooseCourse(course);
-                        }}>Retry</button>
+                        <button type="button" onClick={() => setHydrationVersion((version) => version + 1)}>Retry</button>
                     </div>
                 )}
 
@@ -603,7 +743,14 @@ export default function Leaderboard() {
                                         disabled={!unlocked}
                                         badge={checking ? 'Checking' : unlocked ? (isAdmin ? 'Preview' : 'Unlocked') : 'Locked'}
                                         onClick={() => {
-                                            if (unlocked) setSelectedSubjectId(item.subjectId);
+                                            if (unlocked) {
+                                                navigateToFilters({
+                                                    department: domain?.id,
+                                                    courseId: course?.courseId,
+                                                    semester,
+                                                    subjectId: item.subjectId,
+                                                });
+                                            }
                                         }}
                                         testId={`lb-subject-${item.subjectId}`}
                                     />
