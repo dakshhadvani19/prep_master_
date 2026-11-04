@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import {
     AlertCircle, ArrowLeft, ArrowRight, Check, CheckCircle2, Clipboard,
     Clock3, DoorOpen, LoaderCircle, LockKeyhole, Play,
-    Link as LinkIcon, ShieldCheck, Users, XCircle,
+    Link as LinkIcon, Users, XCircle,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { requireSupabase } from '../supabase';
