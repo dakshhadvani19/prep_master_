@@ -384,3 +384,11 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - An authenticated admin entering the bare production origin `/` is routed to `/dashboard`. Student and guest entry behavior is unchanged.
 - No authorization source, role policy, route protection, database schema, or page-level URL state contract was changed.
 - Added regression coverage for a delayed admin-role lookup during a deep-link refresh and for the admin bare-origin redirect.
+
+
+## Subject-name capitalization — 2026-11-04
+
+- Normalized all 1,856 canonical `public."Subjects"` rows using PostgreSQL `initcap(btrim("SubjectName"))`; 1,147 names were changed and 709 already matched the requested word capitalization.
+- Added private trigger function `private.pm_normalize_subject_name_title_case()` and `subjects_normalize_subject_name_title_case` BEFORE INSERT / UPDATE OF `SubjectName` trigger. All future subject inserts, renames, and archive restores are normalized at the database boundary.
+- Live verification: 1,856 total rows, 1,855 active, 1 archived, zero names outside the normalized format. The insert smoke test stored `fUTURE aUTOMATIC subject tEST` as `Future Automatic Subject Test`; the temporary test row was then removed.
+- Migration: `20261104052852_normalize_subject_names_title_case`. Subject IDs, course/semester links, departmental flags, archive state, and syllabus data were not modified.
