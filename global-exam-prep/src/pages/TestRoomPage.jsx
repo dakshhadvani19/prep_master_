@@ -234,7 +234,7 @@ export default function TestRoomPage() {
     const joinRequestPendingRef = useRef(false);
     const joinRetryEligibleRef = useRef(false);
     const hostConnectionLostRef = useRef(false);
-    const channelErrorReturnViewRef = useRef('share');
+    const channelErrorReturnViewRef = useRef('lobby');
     const participantPresenceRef = useRef(null);
     const fallbackJoinPendingRef = useRef(false);
     const autoCreateStartedRef = useRef(false);
@@ -292,7 +292,7 @@ export default function TestRoomPage() {
                     setDurationMinutes(Number(hostPresence.durationMinutes) || Number(createPayload?.timeMinutes) || 45);
                     setVerifiedJoin(true);
                     setPersistenceError('');
-                    setView('share');
+                    setView('lobby');
                 } catch (err) {
                     if (cancelled) return;
                     setError(err.message || 'The host session could not be restored. Create a new Test Room.');
@@ -655,7 +655,6 @@ export default function TestRoomPage() {
                         setError('');
                         setPersistenceError('');
                         setView((previous) => {
-                            if (previous === 'setup') return 'share';
                             if (previous === 'error') {
                                 return roomMetaRef.current?.status === 'started'
                                     ? 'attempt'
@@ -695,7 +694,7 @@ export default function TestRoomPage() {
                 });
 
                 // Realtime accelerates updates; Redis/API is the fallback source of truth.
-                channelErrorReturnViewRef.current = latestViewRef.current === 'lobby' ? 'lobby' : 'share';
+                channelErrorReturnViewRef.current = 'lobby';
                 setConnected(false);
                 setError('');
                 setPersistenceError('Live updates are reconnecting. Room status and participants will sync through the server.');
@@ -762,7 +761,7 @@ export default function TestRoomPage() {
                 }
                 if (latestViewRef.current === 'error' && nextRoom.status === 'waiting' && (isHostFlow || attemptIdRef.current)) {
                     setError('');
-                    setView(isHostFlow ? 'share' : 'lobby');
+                    setView('lobby');
                 }
                 setConnected(true);
             } catch (pollError) {
@@ -828,7 +827,7 @@ export default function TestRoomPage() {
             setRoomMeta(meta);
             setRoomCode(response.code);
             setPersistenceError('');
-            setView('share');
+            setView('lobby');
             // Keep the join code in the address bar for the host and any copied invite link.
             // Store the exact code so only this room's current instance skips server recovery.
             hostCreatedRoomRef.current = normalizedCode(response.code);
@@ -849,14 +848,6 @@ export default function TestRoomPage() {
         autoCreateStartedRef.current = true;
         createRoomActionRef.current?.();
     }, [isHostFlow, view, canonicalQuestions.length]);
-
-    const enterLobby = () => {
-        if (!connected) {
-            setError('The room is still connecting. Wait until it is ready.');
-            return;
-        }
-        setView('lobby');
-    };
 
     const startRoom = async () => {
         if (!isHostFlow || roomMetaRef.current?.status !== 'waiting' || working) return;
@@ -1276,43 +1267,6 @@ export default function TestRoomPage() {
                             </button>
                         </>
                     )}
-                </div>
-            </div>
-        );
-    }
-
-    if (view === 'share') {
-        return (
-            <div className="container pm-test-room-page pm-room-share animate-fade-in" style={{ maxWidth: 760, marginTop: '2.5rem', marginBottom: '4rem' }}>
-                <div className="glass-panel" style={{ padding: 'clamp(1.4rem,4vw,2.8rem)', textAlign: 'center' }}>
-                    <MotionDiv initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} style={{ width: 70, height: 70, borderRadius: 22, margin: '0 auto 1.1rem', display: 'grid', placeItems: 'center', background: 'rgba(16,185,129,0.12)', color: 'var(--success)' }}>
-                        <CheckCircle2 size={36} />
-                    </MotionDiv>
-                    <h1 style={{ fontSize: '1.9rem', marginBottom: '0.65rem' }}>Your room is ready</h1>
-                    <p style={{ color: 'var(--text-secondary)', maxWidth: 500, margin: '0 auto 1.6rem' }}>Share this code with the participants. Enter the lobby when you are ready to wait for everyone.</p>
-
-                    <div className="pm-room-code-card" style={{ border: '1px solid var(--border-color)', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-xl)', padding: '1.5rem', maxWidth: 500, margin: '0 auto 1.5rem' }}>
-                        <div style={{ color: 'var(--text-tertiary)', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '0.55rem' }}>Room join code</div>
-                        <div style={{ fontSize: 'clamp(1.7rem,6vw,2.5rem)', fontWeight: 800, letterSpacing: '0.13em', fontVariantNumeric: 'tabular-nums' }}>{formattedCode(roomCode)}</div>
-                        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '0.65rem', marginTop: '1.1rem' }}>
-                            <button className="pm-room-glass-utility" onClick={copyRoomCode} style={{ ...roomButtonStyle('secondary'), maxWidth: 220, marginInline: 'auto' }}>
-                                {copied ? <><Check size={17} /> Copied</> : <><Clipboard size={17} /> Copy code</>}
-                            </button>
-                            <button className="pm-room-glass-utility" onClick={copyRoomLink} style={{ ...roomButtonStyle('secondary'), maxWidth: 240, marginInline: 'auto' }}>
-                                {linkCopied ? <><Check size={17} /> Link copied</> : <><LinkIcon size={17} /> Copy invite link</>}
-                            </button>
-                        </div>
-                    </div>
-
-                    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '0.88rem' }}>
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}><Clock3 size={16} /> {durationMinutes} minutes</span>
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}><Users size={16} /> 1 / {MAX_PARTICIPANTS} capacity</span>
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}><ShieldCheck size={16} /> Host starts the test</span>
-                    </div>
-
-                    {!connected && <p style={{ color: 'var(--warning)', marginBottom: '1rem', fontSize: '0.9rem' }}><LoaderCircle size={15} className="spin" style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />Connecting to the live room…</p>}
-                    {error && <p style={{ color: '#fca5a5', marginBottom: '1rem' }}>{error}</p>}
-                    <button className="pm-room-gold-action" disabled={!connected} onClick={enterLobby} style={roomButtonStyle('success', !connected)}><DoorOpen size={18} /> Enter Test Room</button>
                 </div>
             </div>
         );
