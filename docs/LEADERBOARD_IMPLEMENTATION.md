@@ -27,7 +27,7 @@ Attempts created before the canonical SubjectId field existed stored a short sub
 
 ## URL-backed filter restoration — 2026-11-04
 
-- The hierarchy is encoded in the `department`, `courseId`, `semester`, and `subjectId` query parameters on `/leaderboards`. Selecting a filter creates a browser-history entry; refresh and Back/Forward restore the selected hierarchy.
+- The hierarchy is encoded in the `department`, `courseId`, `semester`, and `subjectId` query parameters on `/leaderboards`. Selecting a filter creates a browser-history entry; refresh and Back/Forward restore the selected hierarchy. A temporary `step=semester` parameter preserves the chosen semester while returning to the semester chooser.
 - Student restoration waits for the authenticated `POST /api/leaderboard-filters` request for the current Auth UID. The client request explicitly uses `cache: 'no-store'`; the endpoint also sends `Cache-Control: no-store`. Department, course, and semester are checked against the fresh completed-subject response before they are restored.
 - A selected subject that has become locked remains selected and is shown as locked, but its ranking board is not mounted. Invalid or inaccessible ancestor filters are reduced to the nearest accessible level. Administrator preview remains unrestricted.
 - This change does not alter database schemas, RPCs, or authorization contracts. URL progression, refresh with changed access, and administrator deep links are covered in `tests/leaderboard.test.jsx`.

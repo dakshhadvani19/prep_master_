@@ -351,7 +351,7 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 
 ## Leaderboard filter persistence — 2026-11-04
 
-- The department → course → semester → subject filters are URL-backed with `department`, `courseId`, `semester`, and `subjectId` query parameters. Selection survives refresh and browser history navigation.
+- The department → course → semester → subject filters are URL-backed with `department`, `courseId`, `semester`, and `subjectId` query parameters. Selection survives refresh and browser history navigation. A temporary `step=semester` marker restores the semester chooser without discarding the selected semester.
 - Student URL restoration waits for a fresh, uncached server-verified completed-subject access response. Current locked/unlocked status is recalculated before filters are restored; administrator catalog preview remains unrestricted.
 - A subject whose access has become locked remains visibly marked locked after refresh, and its ranking board is not rendered. Invalid or inaccessible ancestor filters are reduced to the nearest accessible step.
 - This is a frontend routing/access-state change only; no database schema or RPC change was made.

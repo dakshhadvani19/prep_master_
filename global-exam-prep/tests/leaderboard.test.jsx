@@ -222,6 +222,7 @@ describe('leaderboard filtering access', () => {
     vi.stubGlobal('fetch', vi.fn(async (_url, options) => {
       const body = JSON.parse(options?.body || '{}');
       if (body.action === 'load') {
+        expect(options.cache).toBe('no-store');
         return { ok: true, status: 200, json: async () => ({ completedSubjects: currentAccess }) };
       }
       return { ok: false, status: 503, json: async () => ({ error: 'Leaderboard unavailable.' }) };
@@ -243,6 +244,18 @@ describe('leaderboard filtering access', () => {
 
     fireEvent.click(screen.getByTestId('lb-subject-1001131010601'));
     await waitFor(() => expect(screen.getByTestId('lb-selected-subject')).toHaveTextContent(/SUBJECT SELECTED/i));
+    fireEvent.click(screen.getByTestId('lb-step-semester'));
+    await screen.findByRole('heading', { name: 'Choose a semester' });
+    expect(new URLSearchParams(window.location.search).get('step')).toBe('semester');
+
+    // Re-selecting the same semester returns to its subject list and clears
+    // the temporary step marker before selecting the subject again.
+    fireEvent.click(screen.getByTestId('lb-semester-1'));
+    await waitFor(() => expect(screen.getByTestId('lb-subject-1001131010601')).toBeInTheDocument());
+    expect(new URLSearchParams(window.location.search).get('step')).toBeNull();
+    fireEvent.click(screen.getByTestId('lb-subject-1001131010601'));
+    await waitFor(() => expect(screen.getByTestId('lb-selected-subject')).toHaveTextContent(/SUBJECT SELECTED/i));
+
     const savedSearch = window.location.search;
     expect(new URLSearchParams(savedSearch).get('subjectId')).toBe('1001131010601');
 

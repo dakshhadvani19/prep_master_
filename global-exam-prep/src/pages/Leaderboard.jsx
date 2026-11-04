@@ -93,12 +93,13 @@ function semesterHasCompletion(courseId, semester, completedSubjects) {
         ));
 }
 
-function leaderboardSearch({ department, courseId, semester, subjectId } = {}) {
+function leaderboardSearch({ department, courseId, semester, subjectId, step } = {}) {
     const params = new URLSearchParams();
     if (department) params.set('department', String(department));
     if (courseId != null) params.set('courseId', String(courseId));
     if (semester != null) params.set('semester', String(semester));
     if (subjectId != null) params.set('subjectId', String(subjectId));
+    if (step) params.set('step', String(step));
     const query = params.toString();
     return query ? `?${query}` : '';
 }
@@ -251,9 +252,10 @@ export default function Leaderboard() {
             const courseParam = params.get('courseId');
             const semesterParam = params.get('semester');
             const subjectParam = params.get('subjectId');
+            const stageParam = params.get('step');
 
             if (!departmentId) {
-                if (courseParam || semesterParam !== null || subjectParam) {
+                if (courseParam || semesterParam !== null || subjectParam || stageParam) {
                     navigate({ pathname: '/leaderboards', search: '' }, { replace: true });
                 }
                 return;
@@ -334,9 +336,9 @@ export default function Leaderboard() {
             }
 
             setSemester(requestedSemester);
-            setStep('subject');
+            setStep(stageParam === 'semester' ? 'semester' : 'subject');
 
-            if (subjectParam === null) return;
+            if (stageParam === 'semester' || subjectParam === null) return;
             const requestedSubjectId = /^[0-9]+$/.test(subjectParam) ? Number(subjectParam) : NaN;
             const nextSubject = subjectsResult.subjects?.find((item) => (
                 item.subjectId === requestedSubjectId && Number(item.sem) === requestedSemester
@@ -468,6 +470,7 @@ export default function Leaderboard() {
                 department: domain?.id,
                 courseId: course?.courseId,
                 semester,
+                step: 'semester',
             });
         } else {
             navigateToFilters({

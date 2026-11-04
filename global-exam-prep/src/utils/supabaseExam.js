@@ -157,6 +157,7 @@ export async function getLeaderboardCompletedSubjects() {
         const token = await getAccessToken();
         const response = await fetch('/api/leaderboard-filters', {
             method: 'POST',
+            cache: 'no-store',
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + token,
