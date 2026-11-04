@@ -375,3 +375,12 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 
 - Legacy PDF superscript markers are normalized before Unicode compatibility conversion.
 - Admin Courses retry behavior is restored; tests now wait for URL-backed subject-editor hydration.
+
+
+## Admin deep-link refresh and base URL routing — 2026-11-04
+
+- Authentication now shares one in-flight identity/authorization lookup across duplicate Supabase session events. The protected-route gate does not settle from the listener's initial-session event before the explicit session snapshot and server-derived Admins role check finish.
+- Refreshing an admin deep link such as `/admin/courses` or `/admin/syllabus` retains the requested pathname and query instead of briefly treating the account as a student and replacing the route with `/dashboard`.
+- An authenticated admin entering the bare production origin `/` is routed to `/dashboard`. Student and guest entry behavior is unchanged.
+- No authorization source, role policy, route protection, database schema, or page-level URL state contract was changed.
+- Added regression coverage for a delayed admin-role lookup during a deep-link refresh and for the admin bare-origin redirect.

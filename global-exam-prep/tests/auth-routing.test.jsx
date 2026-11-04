@@ -13,7 +13,7 @@ import { render, screen, cleanup, waitFor } from '@testing-library/react';
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
 const state = await import('./supabaseMock.js').then((m) => m.state);
-const { resetSupabaseStub, makeSession, authUser, studentRow, adminRow } = await import('./supabaseMock.js');
+const { resetSupabaseStub, makeSession, authUser, studentRow, adminRow, callsTo } = await import('./supabaseMock.js');
 
 const holder = { entry: '/', user: null, profile: null };
 
@@ -35,18 +35,24 @@ vi.mock('react-router-dom', async (importOriginal) => {
 vi.mock('../src/pages/LandingPage', () => ({ default: () => <div>LANDING</div> }));
 vi.mock('../src/pages/Dashboard', () => ({ default: () => <div>DASHBOARD</div> }));
 vi.mock('../src/pages/SyllabusAdmin', () => ({ default: () => <div>ADMIN SYLLABUS</div> }));
+vi.mock('../src/pages/AdminCourses', () => ({ default: () => <div>ADMIN COURSES</div> }));
+vi.mock('../src/pages/DashboardSwitch', () => ({ default: () => <div>ADMIN DASHBOARD ROUTE</div> }));
 vi.mock('../src/pages/ExamPortal', () => ({ default: () => <div>EXAM</div> }));
 vi.mock('../src/pages/ReviewPage', () => ({ default: () => <div>REVIEW</div> }));
 // Layout must render <Outlet/> — React Router injects nested route content via
 // Outlet, not via children.
 vi.mock('../src/components/Layout', async () => {
-  const { Outlet } = await import('react-router-dom');
+  const { Outlet, useLocation } = await import('react-router-dom');
   return {
-    default: () => (
-      <div data-testid="layout">
-        <Outlet />
-      </div>
-    ),
+    default: () => {
+      const location = useLocation();
+      return (
+        <div data-testid="layout">
+          <span data-testid="current-route">{location.pathname}{location.search}</span>
+          <Outlet />
+        </div>
+      );
+    },
   };
 });
 
@@ -56,6 +62,10 @@ function selectedTab() {
   const tabs = screen.queryAllByRole('tab');
   const active = tabs.find((t) => t.getAttribute('aria-selected') === 'true');
   return active ? active.textContent.trim() : null;
+}
+
+function currentRoute() {
+  return screen.getByTestId('current-route').textContent;
 }
 
 /**
@@ -120,6 +130,29 @@ describe('RBAC role derivation (from public.admins, keyed by auth.uid())', () =>
     signedInAs({ uid: 'u4', email: 'root@x.com', fullName: 'Root', staff: 'super' });
     render(<App />);
     await waitFor(() => expect(screen.getByText('ADMIN SYLLABUS')).toBeInTheDocument());
+  });
+
+  it('preserves an admin deep link and its query while the initial role lookup is pending', async () => {
+    holder.entry = '/admin/courses?department=diploma&courseId=44&semester=1&mode=remove&subjectId=44000935210101';
+    signedInAs({ uid: 'u10', email: 'refresh-admin@x.com', fullName: 'Refresh Admin', staff: 'admin' });
+    state.adminLookupDelayMs = 80;
+
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByText('ADMIN COURSES')).toBeInTheDocument();
+      expect(currentRoute()).toBe(holder.entry);
+    });
+    expect(callsTo('rpc:admin_role_for_uid')).toHaveLength(1);
+  });
+
+  it('routes an admin entering the bare core URL to /dashboard', async () => {
+    holder.entry = '/';
+    signedInAs({ uid: 'u11', email: 'root-entry@x.com', fullName: 'Root Entry', staff: 'admin' });
+    render(<App />);
+
+    await waitFor(() => expect(screen.getByText('ADMIN DASHBOARD ROUTE')).toBeInTheDocument());
+    expect(currentRoute()).toBe('/dashboard');
   });
 
   it('a students row that claims admin is not enough', async () => {

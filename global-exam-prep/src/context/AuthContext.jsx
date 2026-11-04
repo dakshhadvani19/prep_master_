@@ -168,6 +168,8 @@ export function AuthProvider({ children }) {
     // fires hourly; refetching on every one of those is how a refresh race with the
     // post-redirect effects gets invented.
     const loadedForRef = useRef(null);
+    // Duplicate INITIAL_SESSION sources must await the same server-derived identity read.
+    const identityLoadRef = useRef(null);
     const settledRef = useRef(false);
 
     const markSettled = useCallback(() => {
@@ -241,13 +243,30 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
+    // Share one authorization/profile lookup for each auth uid. This prevents a
+    // duplicate session event from marking auth as ready while the Admins lookup
+    // is still pending, which would make ProtectedRoute misclassify an admin.
+    const loadIdentityOnce = useCallback((user, { force = false } = {}) => {
+        if (!user) return Promise.resolve(null);
+
+        const pending = identityLoadRef.current;
+        if (!force && pending?.uid === user.id && loadedForRef.current === user.id) {
+            return pending.promise;
+        }
+
+        loadedForRef.current = user.id;
+        const promise = loadIdentity(user);
+        identityLoadRef.current = { uid: user.id, promise };
+        return promise;
+    }, [loadIdentity]);
+
     // ─── Session plumbing ────────────────────────────────────────────────────
     useEffect(() => {
         if (!supabase) return undefined;   // nothing to subscribe to; see authLoading init
 
         let cancelled = false;
 
-        const apply = async (event, nextSession) => {
+        const apply = async (event, nextSession, { settle = true } = {}) => {
             if (cancelled) return;
 
             if (event === 'SIGNED_OUT') {
@@ -259,7 +278,8 @@ export function AuthProvider({ children }) {
                 setAdminRecord(null);
                 setAuthorizationError('');
                 loadedForRef.current = null;
-                markSettled();
+                identityLoadRef.current = null;
+                if (settle) markSettled();
                 return;
             }
 
@@ -273,21 +293,25 @@ export function AuthProvider({ children }) {
             // this callback free of a stale `recoveryMode` dependency.
             if (event === 'SIGNED_IN') setRecoveryMode((prev) => (prev ? false : prev));
 
-            if (user && loadedForRef.current !== user.id) {
-                // Claim the uid before awaiting: a second event for the same user
-                // (TOKEN_REFRESHED, or the duplicate INITIAL_SESSION read) starts no
-                // second load, so no answer can land out of order.
-                loadedForRef.current = user.id;
-                await loadIdentity(user);
+            if (user) {
+                // onAuthStateChange and getSession can report the same user in
+                // parallel. Both must await the same role lookup before the route
+                // guard is allowed to render protected pages.
+                await loadIdentityOnce(user);
+                if (cancelled || loadedForRef.current !== user.id) return;
+            } else {
+                loadedForRef.current = null;
+                identityLoadRef.current = null;
             }
 
-            markSettled();
+            if (settle) markSettled();
         };
 
         const { data: sub } = supabase.auth.onAuthStateChange((event, nextSession) => {
-            // Supabase warns against awaiting auth calls inside this callback; the
-            // profile read is a PostgREST read, and it is fire-and-forget either way.
-            void apply(event, nextSession);
+            // The explicit getSession snapshot below is the initialization barrier.
+            // Do not let the listener's INITIAL_SESSION event release the route
+            // guard before that snapshot has shared/finished its identity lookup.
+            void apply(event, nextSession, { settle: event !== 'INITIAL_SESSION' });
         });
 
         // The return leg first: if this page load arrived with a one-time code, it
@@ -327,8 +351,7 @@ export function AuthProvider({ children }) {
             // INITIAL_SESSION is not guaranteed on every adapter, so read it
             // directly too. Whichever arrives first wins; the other is a no-op by uid.
             const { data } = await supabase.auth.getSession().catch(() => ({ data: null }));
-            if (!cancelled) await apply('INITIAL_SESSION', data?.session ?? null);
-            markSettled();
+            if (!cancelled) await apply('INITIAL_SESSION', data?.session ?? null, { settle: true });
         })().catch(() => markSettled());
 
         // A cold, offline, or misrouted auth request must never strand the app on
@@ -342,7 +365,7 @@ export function AuthProvider({ children }) {
             clearTimeout(failsafe);
             sub?.subscription?.unsubscribe?.();
         };
-    }, [loadIdentity, markSettled, reportGoogle]);
+    }, [loadIdentityOnce, markSettled, reportGoogle]);
 
     // ─── Sign up: custom OTP first, Supabase account second ──────────────────
     /**
@@ -432,12 +455,11 @@ export function AuthProvider({ children }) {
         const { user, session: nextSession } = result;
         // onAuthStateChange normally lands first; this covers the tick where it has
         // not, so the success overlay and the redirect see one consistent state.
-        if (user && loadedForRef.current !== user.id) {
-            loadedForRef.current = user.id;
+        if (user) {
             setSession(nextSession ?? null);
             setSupabaseUser(user);
             setCurrentUser(toCurrentUser(user));
-            await loadIdentity(user);
+            await loadIdentityOnce(user);
         }
         markSettled();
         return { status: result.status };
@@ -488,6 +510,7 @@ export function AuthProvider({ children }) {
         reportGoogle('idle', '');
 
         loadedForRef.current = null;
+        identityLoadRef.current = null;
         setStudentData(null);
         setCurrentUser(null);
         setSupabaseUser(null);
@@ -590,10 +613,10 @@ export function AuthProvider({ children }) {
             const { data } = await supabase.auth.getUser();
             // Re-read profile AND role: a staff account resets its password through
             // this same flow and must come back with its admin status intact.
-            if (data?.user) await loadIdentity(data.user);
+            if (data?.user) await loadIdentityOnce(data.user, { force: true });
         } catch { /* the session may have ended by design */ }
         return true;
-    }, [loadIdentity]);
+    }, [loadIdentityOnce]);
 
     /**
      * Password change for a signed-in account. There is no current-password check
@@ -613,9 +636,8 @@ export function AuthProvider({ children }) {
         if (!data?.user) return null;
         setSupabaseUser(data.user);
         setCurrentUser(toCurrentUser(data.user));
-        loadedForRef.current = data.user.id;
-        return loadIdentity(data.user);
-    }, [loadIdentity]);
+        return loadIdentityOnce(data.user, { force: true });
+    }, [loadIdentityOnce]);
 
     const updateFullName = useCallback(async (fullName) => {
         if (!supabase || !supabaseUser) throw new Error('You are not signed in.');

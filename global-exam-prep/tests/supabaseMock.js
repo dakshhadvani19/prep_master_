@@ -27,6 +27,7 @@ export const state = {
   adminRow: null,          // the staff row keyed by auth_uid
   adminLookup: 'rpc',      // 'rpc' (function exists) | 'missing' | 'error'
   adminRowError: null,     // a PostgREST error from whichever path was taken
+  adminLookupDelayMs: 0,    // delays the server-derived role response for routing race tests
   adminsSelfRead: false,   // does public.admins have a self-read policy?
   signInError: null,
   oauthError: null,
@@ -63,6 +64,7 @@ export function resetSupabaseStub() {
   state.adminRow = null;
   state.adminLookup = 'rpc';
   state.adminRowError = null;
+  state.adminLookupDelayMs = 0;
   state.adminsSelfRead = false;
   state.signInError = null;
   state.oauthError = null;
@@ -358,6 +360,9 @@ export const client = {
       return { data: { total, seen }, error: null };
     }
 
+    if (fn === 'admin_role_for_uid' && state.adminLookupDelayMs) {
+      await new Promise((resolve) => setTimeout(resolve, state.adminLookupDelayMs));
+    }
     if (fn !== 'admin_role_for_uid' || state.adminLookup === 'missing') {
       return {
         data: null,
