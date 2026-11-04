@@ -1,6 +1,6 @@
 # Admin Courses & Question Management — Phase Plan
 
-Last updated: 2026-11-01
+Last updated: 2026-11-04
 
 ## Purpose
 
@@ -104,3 +104,11 @@ Real-bank smoke testing remains pending: production currently has zero published
 - npx vitest run tests/admin-courses.test.jsx: 7/7 passed.
 - npx eslint src/pages/AdminCourses.jsx tests/admin-courses.test.jsx: passed.
 - npm run build: passed. Existing Vite circular vendor chunk and large chunk-size warnings remain unrelated to this phase.
+
+## URL-backed admin locator state — 2026-11-04
+
+- `/admin/courses` stores the selected `department`, numeric `courseId`, and `semester` in query parameters. Refresh and browser Back/Forward restore the same locator path from the live catalog.
+- A `step` query parameter preserves earlier locator screens while keeping their selected hierarchy values. Returning to the semester chooser does not discard the selected semester.
+- The subject editor's `mode=remove` and selected `subjectId` are URL-backed as well, so a refresh restores the remove tab and selected subject. Invalid/stale IDs are discarded after checking the live course and subject catalog.
+- No admin route guard, authentication contract, public catalog schema, CRUD API, or database permission was changed.
+- Focused Vitest coverage was added for URL progression, direct deep links, semester back-navigation, and subject-removal selection restoration.

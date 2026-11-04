@@ -355,3 +355,10 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Student URL restoration waits for a fresh, uncached server-verified completed-subject access response. Current locked/unlocked status is recalculated before filters are restored; administrator catalog preview remains unrestricted.
 - A subject whose access has become locked remains visibly marked locked after refresh, and its ranking board is not rendered. Invalid or inaccessible ancestor filters are reduced to the nearest accessible step.
 - This is a frontend routing/access-state change only; no database schema or RPC change was made.
+
+## Admin Courses URL persistence — 2026-11-04
+
+- The admin course locator persists department, course, semester, current locator step, subject-editor mode, and selected removal SubjectId in the `/admin/courses` query string.
+- Refresh and browser Back/Forward restore the same hierarchy from live catalog reads. A temporary `step` parameter preserves the selected course/semester while viewing an earlier picker.
+- `mode=remove` and `subjectId` restore the subject-removal tab and its selected subject. Invalid or archived selections are removed from the URL after the live subject list is loaded.
+- Existing admin route protection, Supabase catalog reads, subject upload/archive operations, and database schemas remain unchanged.

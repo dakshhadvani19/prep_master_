@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
     AlertCircle, ArrowLeft, BookOpen, Check, ChevronRight, Cpu, GraduationCap,
     Layers3, LayoutGrid, BriefcaseBusiness, FlaskConical, Scale, Search, RefreshCw, X,
 } from 'lucide-react';
-import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain, resetCatalogCache } from '../utils/catalogApi';
+import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain, getCatalogDomain, resetCatalogCache } from '../utils/catalogApi';
 import AdminSubjectEditor from '../components/AdminSubjectEditor.jsx';
 import './AdminCourses.css';
 
@@ -27,6 +27,18 @@ function normalizeSemesterList(values) {
     if (!Array.isArray(values)) return [];
     return [...new Set(values.map(Number).filter(Number.isInteger).filter(value => value >= 0 && value <= 20))]
         .sort((a, b) => a - b);
+}
+
+function adminCoursesSearch({ department, courseId, semester, step, mode, subjectId } = {}) {
+    const params = new URLSearchParams();
+    if (department) params.set('department', String(department));
+    if (courseId != null) params.set('courseId', String(courseId));
+    if (semester != null) params.set('semester', String(semester));
+    if (step) params.set('step', String(step));
+    if (mode === 'remove') params.set('mode', 'remove');
+    if (subjectId != null && subjectId !== '') params.set('subjectId', String(subjectId));
+    const query = params.toString();
+    return query ? `?${query}` : '';
 }
 
 function StageHeading({ eyebrow, title, description, count }) {
@@ -58,6 +70,11 @@ function ErrorState({ message, onRetry }) {
 }
 
 export default function AdminCourses() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const routeParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
+    const editorMode = routeParams.get('mode') === 'remove' || routeParams.has('subjectId') ? 'remove' : 'add';
+    const editorSubjectId = routeParams.get('subjectId') || '';
     const [step, setStep] = useState('department');
     const [domainId, setDomainId] = useState(null);
     const [courses, setCourses] = useState([]);
@@ -84,77 +101,224 @@ export default function AdminCourses() {
         semester === null ? [] : subjects.filter(item => Number(item.sem) === Number(semester))
     ), [subjects, semester]);
 
+    // The URL is the source of truth for the admin locator. Re-read the live
+    // catalog on refresh and browser history navigation before restoring each level.
     useEffect(() => {
-        if (!domainId) return undefined;
         let cancelled = false;
-        fetchCoursesForDomain(domainId)
-            .then(result => {
-                if (cancelled) return;
-                if (result.error) throw result.error;
-                setCourses(result.courses || []);
-            })
-            .catch(error => {
-                if (!cancelled) setCoursesError(error?.message || 'The department courses could not be loaded.');
-            })
-            .finally(() => { if (!cancelled) setCoursesLoading(false); });
-        return () => { cancelled = true; };
-    }, [domainId, retryKey]);
 
-    useEffect(() => {
-        if (courseId === null) return undefined;
-        let cancelled = false;
-        fetchCourseAndSubjects(courseId)
-            .then(result => {
+        async function restoreLocator() {
+            const params = new URLSearchParams(location.search);
+            const departmentParam = params.get('department');
+            const courseParam = params.get('courseId');
+            const semesterParam = params.get('semester');
+            const requestedStep = params.get('step');
+            const modeParam = params.get('mode');
+            const subjectParam = params.get('subjectId');
+
+            setStep('department');
+            setDomainId(null);
+            setCourses([]);
+            setCourseId(null);
+            setCourse(null);
+            setSubjects([]);
+            setSemester(null);
+            setCourseSearch('');
+            setCoursesError('');
+            setSubjectsError('');
+            setCoursesLoading(false);
+            setSubjectsLoading(false);
+
+            if (!departmentParam) {
+                if (courseParam || semesterParam !== null || requestedStep || modeParam || subjectParam) {
+                    navigate({ pathname: '/admin/courses', search: '' }, { replace: true });
+                }
+                return;
+            }
+
+            const nextDomain = getCatalogDomain(departmentParam);
+            if (!nextDomain) {
+                navigate({ pathname: '/admin/courses', search: '' }, { replace: true });
+                return;
+            }
+
+            setDomainId(nextDomain.id);
+            setCoursesLoading(true);
+            let availableCourses = [];
+            try {
+                const courseResult = await fetchCoursesForDomain(nextDomain.id);
                 if (cancelled) return;
-                if (result.error) throw result.error;
-                if (!result.course) throw new Error('The selected course is no longer available in the catalog.');
-                setCourse(result.course);
-                setSubjects(result.subjects || []);
-            })
-            .catch(error => {
-                if (!cancelled) setSubjectsError(error?.message || 'The selected course subjects could not be loaded.');
-            })
-            .finally(() => { if (!cancelled) setSubjectsLoading(false); });
+                if (courseResult.error) throw courseResult.error;
+                availableCourses = courseResult.courses || [];
+                setCourses(availableCourses);
+            } catch (error) {
+                if (!cancelled) {
+                    setCoursesError(error?.message || 'The department courses could not be loaded.');
+                    setStep('course');
+                }
+                return;
+            } finally {
+                if (!cancelled) setCoursesLoading(false);
+            }
+
+            let nextCourse = null;
+            let nextCourseId = null;
+            let availableSubjects = [];
+            if (courseParam !== null) {
+                const parsedCourseId = /^[0-9]+$/.test(courseParam) ? Number(courseParam) : NaN;
+                nextCourse = Number.isSafeInteger(parsedCourseId) && parsedCourseId > 0
+                    ? availableCourses.find(item => Number(item.courseId) === parsedCourseId
+                        && item.domainId === nextDomain.id)
+                    : null;
+
+                if (!nextCourse) {
+                    navigate({
+                        pathname: '/admin/courses',
+                        search: adminCoursesSearch({ department: nextDomain.id }),
+                    }, { replace: true });
+                    return;
+                }
+
+                nextCourseId = Number(nextCourse.courseId);
+                setCourseId(nextCourseId);
+                setCourse(nextCourse);
+                setSubjectsLoading(true);
+                try {
+                    const subjectResult = await fetchCourseAndSubjects(nextCourseId);
+                    if (cancelled) return;
+                    if (subjectResult.error) throw subjectResult.error;
+                    if (!subjectResult.course) throw new Error('The selected course is no longer available in the catalog.');
+                    nextCourse = subjectResult.course;
+                    availableSubjects = subjectResult.subjects || [];
+                    setCourse(nextCourse);
+                    setSubjects(availableSubjects);
+                } catch (error) {
+                    if (!cancelled) {
+                        setSubjectsError(error?.message || 'The selected course subjects could not be loaded.');
+                    }
+                } finally {
+                    if (!cancelled) setSubjectsLoading(false);
+                }
+            } else if (semesterParam !== null || modeParam || subjectParam) {
+                navigate({
+                    pathname: '/admin/courses',
+                    search: adminCoursesSearch({ department: nextDomain.id }),
+                }, { replace: true });
+                return;
+            }
+
+            let nextSemester = null;
+            if (semesterParam !== null) {
+                const parsedSemester = /^[0-9]+$/.test(semesterParam) ? Number(semesterParam) : NaN;
+                if (!nextCourse || !normalizeSemesterList(nextCourse.sems).includes(parsedSemester)) {
+                    navigate({
+                        pathname: '/admin/courses',
+                        search: adminCoursesSearch({
+                            department: nextDomain.id,
+                            courseId: nextCourseId,
+                        }),
+                    }, { replace: true });
+                    return;
+                }
+                nextSemester = parsedSemester;
+                setSemester(nextSemester);
+            }
+
+            let nextSubjectId = null;
+            if (subjectParam !== null && nextSemester !== null) {
+                const parsedSubjectId = /^[0-9]+$/.test(subjectParam) ? Number(subjectParam) : NaN;
+                const selectedSubject = Number.isSafeInteger(parsedSubjectId) && parsedSubjectId > 0
+                    ? availableSubjects.find(item => Number(item.subjectId) === parsedSubjectId
+                        && Number(item.sem) === nextSemester)
+                    : null;
+                if (selectedSubject) nextSubjectId = Number(selectedSubject.subjectId);
+            }
+
+            const nextMode = nextSemester !== null && (modeParam === 'remove' || nextSubjectId !== null)
+                ? 'remove'
+                : null;
+            const maxStepIndex = nextSemester !== null ? 3 : nextCourseId !== null ? 2 : 1;
+            const requestedStepIndex = STEPS.findIndex(item => item.id === requestedStep);
+            const restoredStepIndex = requestedStepIndex < 0
+                ? maxStepIndex
+                : Math.min(requestedStepIndex, maxStepIndex);
+            const restoredStep = STEPS[restoredStepIndex].id;
+            setStep(restoredStep);
+
+            const canonicalSearch = adminCoursesSearch({
+                department: nextDomain.id,
+                courseId: nextCourseId,
+                semester: nextSemester,
+                step: restoredStepIndex === maxStepIndex ? null : restoredStep,
+                mode: nextMode,
+                subjectId: nextSubjectId,
+            });
+            if (canonicalSearch !== location.search) {
+                navigate({ pathname: '/admin/courses', search: canonicalSearch }, { replace: true });
+            }
+        }
+
+        restoreLocator().catch(error => {
+            if (!cancelled) {
+                setCoursesError(error?.message || 'The department courses could not be loaded.');
+                setCoursesLoading(false);
+                setSubjectsLoading(false);
+            }
+        });
+
         return () => { cancelled = true; };
-    }, [courseId, retryKey]);
+    }, [location.search, navigate, retryKey]);
+
+    function navigateToLocator(filters, replace = false) {
+        navigate({
+            pathname: '/admin/courses',
+            search: adminCoursesSearch(filters),
+        }, { replace });
+    }
 
     function chooseDepartment(nextDomain) {
-        setDomainId(nextDomain.id);
-        setCourseId(null);
-        setCourse(null);
-        setCourses([]);
-        setSemester(null);
-        setSubjects([]);
-        setCourseSearch('');
-        setCoursesError('');
-        setCoursesLoading(true);
-        setStep('course');
+        navigateToLocator({ department: nextDomain.id });
     }
 
     function chooseCourse(nextCourse) {
-        setCourseId(nextCourse.courseId);
-        setCourse(nextCourse);
-        setSemester(null);
-        setSubjects([]);
-        setSubjectsError('');
-        setSubjectsLoading(true);
-        setStep('semester');
+        navigateToLocator({
+            department: domainId,
+            courseId: nextCourse.courseId,
+        });
     }
 
     function chooseSemester(value) {
-        setSemester(Number(value));
-        setStep('subject');
+        navigateToLocator({
+            department: domainId,
+            courseId,
+            semester: Number(value),
+        });
     }
 
-    function retryCurrentStage() {
-        if (step === 'course') {
-            setCoursesError('');
-            setCoursesLoading(true);
-        } else {
-            setSubjectsError('');
-            setSubjectsLoading(true);
-        }
-        setRetryKey(value => value + 1);
+    function goToStep(target) {
+        const targetIndex = STEPS.findIndex(item => item.id === target);
+        if (targetIndex < 0 || targetIndex > stepIndex) return;
+        navigateToLocator({
+            department: domainId,
+            courseId,
+            semester,
+            step: target,
+            mode: editorMode,
+            subjectId: editorSubjectId || null,
+        });
+    }
+
+    function resetLocator() {
+        navigateToLocator({});
+    }
+
+    function handleEditorStateChange({ mode, subjectId }) {
+        navigateToLocator({
+            department: domainId,
+            courseId,
+            semester,
+            mode,
+            subjectId,
+        });
     }
 
     async function refreshSubjectData() {
@@ -165,24 +329,20 @@ export default function AdminCourses() {
             if (result.error) throw result.error;
             setCourse(result.course);
             setSubjects(result.subjects || []);
+            const selectedId = new URLSearchParams(location.search).get('subjectId');
+            if (selectedId && !(result.subjects || []).some(item => String(item.subjectId) === selectedId)) {
+                navigateToLocator({
+                    department: domainId,
+                    courseId,
+                    semester,
+                    mode: editorMode,
+                }, true);
+            }
         } catch (error) {
             setSubjectsError(error?.message || 'The updated subject catalog could not be loaded.');
         } finally {
             setSubjectsLoading(false);
         }
-    }
-
-    function resetLocator() {
-        setStep('department');
-        setDomainId(null);
-        setCourses([]);
-        setCourseId(null);
-        setCourse(null);
-        setSubjects([]);
-        setSemester(null);
-        setCourseSearch('');
-        setCoursesError('');
-        setSubjectsError('');
     }
 
     const stepIndex = Math.max(0, STEPS.findIndex(item => item.id === step));
@@ -215,7 +375,7 @@ export default function AdminCourses() {
                             <button
                                 type="button"
                                 className={'ac-step' + (step === item.id ? ' is-active' : '') + (complete ? ' is-complete' : '')}
-                                onClick={() => setStep(item.id)}
+                                onClick={() => goToStep(item.id)}
                                 disabled={index > stepIndex}
                                 aria-current={step === item.id ? 'step' : undefined}
                             >
@@ -258,7 +418,7 @@ export default function AdminCourses() {
                                 <label className="ac-search"><Search size={17} /><input value={courseSearch} onChange={event => setCourseSearch(event.target.value)} placeholder="Search courses…" aria-label="Search courses" />
                                     {courseSearch && <button type="button" aria-label="Clear course search" onClick={() => setCourseSearch('')}><X size={15} /></button>}
                                 </label>
-                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => setStep('department')}>Change department</button>
+                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => goToStep('department')}>Change department</button>
                             </div>
                             {coursesLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading courses from the catalog…</div>
                                 : coursesError ? <ErrorState message={coursesError} onRetry={retryCurrentStage} />
@@ -278,7 +438,7 @@ export default function AdminCourses() {
                     {step === 'semester' && (
                         <div className="ac-stage animate-fade-in">
                             <StageHeading eyebrow="STEP 3 · SEMESTER" title={course?.courseName || 'Select a semester'} description="Semester options come directly from the selected course record." />
-                            <div className="ac-toolbar"><button type="button" className="ac-btn ac-btn--secondary" onClick={() => setStep('course')}><ArrowLeft size={15} /> Courses</button></div>
+                            <div className="ac-toolbar"><button type="button" className="ac-btn ac-btn--secondary" onClick={() => goToStep('course')}><ArrowLeft size={15} /> Courses</button></div>
                             {subjectsLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading course and semester data…</div>
                                 : subjectsError ? <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
                                     : semesters.length === 0 ? <div className="ac-empty-state"><Layers3 size={26} /><strong>No semesters listed</strong><span>This course has no semester values in the live catalog.</span></div>
@@ -304,14 +464,18 @@ export default function AdminCourses() {
                             />
                             <div className="ac-toolbar">
                                 <span className="ac-context-label">{domain?.title} · {course?.courseName} · Semester {semester}</span>
-                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => setStep('semester')}><ArrowLeft size={15} /> Change semester</button>
+                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => goToStep('semester')}><ArrowLeft size={15} /> Change semester</button>
                             </div>
                             {subjectsLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading subjects…</div>
                                 : subjectsError ? <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
                                     : course && <AdminSubjectEditor
+                                        key={`${courseId}-${semester}-${editorMode}-${editorSubjectId}`}
                                         course={course}
                                         semester={semester}
                                         subjects={semesterSubjects}
+                                        initialMode={editorMode}
+                                        initialSubjectId={editorSubjectId}
+                                        onEditorStateChange={handleEditorStateChange}
                                         onChanged={refreshSubjectData}
                                     />}
                         </div>

@@ -37,13 +37,13 @@ async function callAdminApi(session, payload) {
     return result;
 }
 
-export default function AdminSubjectEditor({ course, semester, subjects = [], onChanged }) {
-    const [mode, setMode] = useState('add');
+export default function AdminSubjectEditor({ course, semester, subjects = [], onChanged, initialMode = 'add', initialSubjectId = '', onEditorStateChange }) {
+    const [mode, setMode] = useState(initialMode);
     const [subjectName, setSubjectName] = useState('');
     const [subjectCode, setSubjectCode] = useState('');
     const [isDepartmental, setIsDepartmental] = useState('false');
     const [syllabusFile, setSyllabusFile] = useState(null);
-    const [removeId, setRemoveId] = useState('');
+    const [removeId, setRemoveId] = useState(initialSubjectId);
     const [confirmRemove, setConfirmRemove] = useState(false);
     const [busy, setBusy] = useState(false);
     const [error, setError] = useState('');
@@ -58,9 +58,11 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
 
     function switchMode(nextMode) {
         setMode(nextMode);
+        setRemoveId('');
         setError('');
         setNotice('');
         setConfirmRemove(false);
+        onEditorStateChange?.({ mode: nextMode, subjectId: '' });
     }
 
     async function addSubject(event) {
@@ -225,7 +227,13 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
                         <>
                             <label className="ac-editor__field">
                                 <span>Choose subject to remove</span>
-                                <select value={removeId} onChange={event => { setRemoveId(event.target.value); setConfirmRemove(false); setError(''); }}>
+                                <select value={removeId} onChange={event => {
+                                    const nextSubjectId = event.target.value;
+                                    setRemoveId(nextSubjectId);
+                                    setConfirmRemove(false);
+                                    setError('');
+                                    onEditorStateChange?.({ mode: 'remove', subjectId: nextSubjectId });
+                                }}>
                                     <option value="">Select a subject</option>
                                     {sortedSubjects.map(item => <option key={item.subjectId} value={String(item.subjectId)}>{item.subjectName} · {item.subjectId}</option>)}
                                 </select>

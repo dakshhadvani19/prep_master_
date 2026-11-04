@@ -1,7 +1,7 @@
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, useLocation } from 'react-router-dom';
 
 const catalogMocks = vi.hoisted(() => ({
     fetchCoursesForDomain: vi.fn(),
@@ -46,8 +46,18 @@ const subjects = [
     { subjectId: 104, subjectName: 'Machine Learning', courseId: 1, sem: 2, isDepartmentalSubject: false },
 ];
 
-function renderAdmin() {
-    return render(<MemoryRouter><AdminCourses /></MemoryRouter>);
+function LocationProbe() {
+    const location = useLocation();
+    return <output data-testid="admin-course-location">{location.pathname}{location.search}</output>;
+}
+
+function renderAdmin(initialEntry = '/admin/courses') {
+    return render(
+        <MemoryRouter initialEntries={[initialEntry]}>
+            <AdminCourses />
+            <LocationProbe />
+        </MemoryRouter>,
+    );
 }
 
 beforeEach(() => {
@@ -144,7 +154,7 @@ describe('admin subject and question locator — Phase 1', () => {
         fireEvent.click(await screen.findByTestId('semester-option-1'));
         fireEvent.click(await screen.findByRole('tab', { name: 'Remove subject' }));
 
-        fireEvent.change(screen.getByRole('combobox', { name: /Choose subject to remove/ }), { target: { value: '103' } });
+        fireEvent.change(await screen.findByRole('combobox', { name: /Choose subject to remove/ }), { target: { value: '103' } });
         fireEvent.click(screen.getByRole('button', { name: 'Remove subject' }));
         expect(screen.getByText(/cannot be undone/i)).toBeInTheDocument();
         fireEvent.click(screen.getByRole('button', { name: 'Confirm removal' }));
@@ -173,4 +183,52 @@ describe('admin subject and question locator — Phase 1', () => {
         expect(screen.queryByRole('button', { name: /Add Course|Remove Course|Edit Course/ })).not.toBeInTheDocument();
         expect(screen.queryByText(/Preview only/)).not.toBeInTheDocument();
     });
+    it('writes each selected hierarchy level to the URL and restores it from a deep link', async () => {
+        const firstVisit = renderAdmin();
+        fireEvent.click(screen.getByRole('button', { name: /Engineering & Technology/ }));
+
+        await waitFor(() => expect(screen.getByTestId('admin-course-location')).toHaveTextContent('department=engineering'));
+        fireEvent.click(await screen.findByRole('button', { name: /B.Tech - Computer Engineering/ }));
+        await waitFor(() => expect(screen.getByTestId('admin-course-location')).toHaveTextContent('courseId=1'));
+
+        fireEvent.click(await screen.findByTestId('semester-option-1'));
+        await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ });
+        await waitFor(() => expect(screen.getByTestId('admin-course-location')).toHaveTextContent('semester=1'));
+
+        const savedLocation = screen.getByTestId('admin-course-location').textContent;
+        firstVisit.unmount();
+        renderAdmin(savedLocation);
+
+        expect(await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ })).toBeInTheDocument();
+        expect(screen.queryByTestId('semester-option-1')).not.toBeInTheDocument();
+        expect(screen.getByTestId('admin-course-location')).toHaveTextContent('semester=1');
+        expect(catalogMocks.fetchCoursesForDomain).toHaveBeenCalledWith('engineering');
+        expect(catalogMocks.fetchCourseAndSubjects).toHaveBeenCalledWith(1);
+    });
+
+    it('preserves the semester while returning to the semester chooser and restores editor subject selection', async () => {
+        const initialVisit = renderAdmin('/admin/courses?department=engineering&courseId=1&semester=1');
+        expect(await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ })).toBeInTheDocument();
+
+        fireEvent.click(screen.getByRole('button', { name: 'Change semester' }));
+        await waitFor(() => expect(screen.getByTestId('admin-course-location')).toHaveTextContent('step=semester'));
+        expect(screen.getByTestId('admin-course-location')).toHaveTextContent('semester=1');
+        expect(await screen.findByTestId('semester-option-1')).toBeInTheDocument();
+
+        fireEvent.click(screen.getByTestId('semester-option-1'));
+        await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ });
+        fireEvent.click(screen.getByRole('tab', { name: 'Remove subject' }));
+        await waitFor(() => expect(screen.getByTestId('admin-course-location')).toHaveTextContent('mode=remove'));
+        fireEvent.change(await screen.findByRole('combobox', { name: /Choose subject to remove/ }), { target: { value: '103' } });
+        await waitFor(() => expect(screen.getByTestId('admin-course-location')).toHaveTextContent('subjectId=103'));
+
+        const savedLocation = screen.getByTestId('admin-course-location').textContent;
+        initialVisit.unmount();
+        renderAdmin(savedLocation);
+
+        expect(await screen.findByRole('tab', { name: 'Remove subject' })).toHaveAttribute('aria-selected', 'true');
+        expect(screen.getByRole('combobox', { name: /Choose subject to remove/ })).toHaveValue('103');
+        expect(screen.getByText('Computer Programming')).toBeInTheDocument();
+    });
+
 });
