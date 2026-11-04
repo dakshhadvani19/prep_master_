@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { render, screen, waitFor, cleanup, fireEvent } from '@testing-library/react';
+import { act, render, screen, waitFor, cleanup, fireEvent } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
 const holder = vi.hoisted(() => ({ entry: '/' }));
@@ -21,7 +21,7 @@ vi.mock('react-router-dom', async (orig) => {
 });
 
 const { state, resetSupabaseStub, callsTo } = await import('./supabaseMock.js');
-const { resetCatalogCache, courseIdsForDomain, resolveCourseParam } = await import('../src/utils/catalogApi.js');
+const { CATALOG_CACHE_TTL_MS, resetCatalogCache, courseIdsForDomain, resolveCourseParam } = await import('../src/utils/catalogApi.js');
 const { CATALOG_DOMAINS } = await import('../src/data/catalogDomains.js');
 const courseMapping = (await import('../src/data/courseMapping.json')).default;
 const App = (await import('../src/App.jsx')).default;
@@ -140,6 +140,37 @@ describe('course → subjects', () => {
     expect(screen.getByText('Mathematics-I')).toBeTruthy();
     expect(screen.queryByText('Should not appear')).toBeNull();
   });
+
+    it('refreshes an open subject list after another admin activates a subject', async () => {
+        seedEngineering();
+        state.catalogSubjects = [
+            { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
+        ];
+        vi.useFakeTimers();
+        try {
+            renderSubjects(1);
+            await act(async () => {
+                await Promise.resolve();
+                await Promise.resolve();
+                await Promise.resolve();
+            });
+            fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
+            expect(screen.getByText('Mathematics-I')).toBeTruthy();
+
+            state.catalogSubjects = [
+                { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
+                { SubjectId: MATH_ID + 1, SubjectName: 'Computer Fundamental Skill', CourseId: 1, Semester: 1 },
+            ];
+            await act(async () => {
+                await vi.advanceTimersByTimeAsync(CATALOG_CACHE_TTL_MS);
+            });
+
+            expect(screen.getByText('Computer Fundamental Skill')).toBeTruthy();
+            expect(callsTo('rpc:pm_catalog_subjects_for_course')).toHaveLength(2);
+        } finally {
+            vi.useRealTimers();
+        }
+    });
 
   it('hides archived subjects from the active student catalog without deleting their rows', async () => {
     seedEngineering();

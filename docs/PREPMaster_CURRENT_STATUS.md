@@ -362,3 +362,16 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Refresh and browser Back/Forward restore the same hierarchy from live catalog reads. A temporary `step` parameter preserves the selected course/semester while viewing an earlier picker.
 - `mode=remove` and `subjectId` restore the subject-removal tab and its selected subject. Invalid or archived selections are removed from the URL after the live subject list is loaded.
 - Existing admin route protection, Supabase catalog reads, subject upload/archive operations, and database schemas remain unchanged.
+
+
+## Catalog activation freshness and syllabus extraction — 2026-11-04
+
+- Student catalog cache entries expire after 20 seconds; mounted course-subject views revalidate while visible and on focus.
+- Admin uploads are checked for explicit printed course code and semester mismatches before the atomic catalog create/restore RPC runs.
+- PDF extraction rebuilds reading order from PDF.js text item coordinates and normalizes common legacy glyphs/control bytes; DOCX extraction receives the same cleanup.
+
+
+## CI follow-up — 2026-11-04
+
+- Legacy PDF superscript markers are normalized before Unicode compatibility conversion.
+- Admin Courses retry behavior is restored; tests now wait for URL-backed subject-editor hydration.

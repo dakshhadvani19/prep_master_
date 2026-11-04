@@ -14,6 +14,9 @@ export { CATALOG_DOMAINS, getCatalogDomain };
 
 const COURSE_COLS = 'CourseId,CourseName,Sems';
 
+// Bound catalog staleness so new/archived subjects propagate across sessions.
+export const CATALOG_CACHE_TTL_MS = 20_000;
+
 const coursesByDomain = new Map();
 const coursePages = new Map();
 const inflight = new Map();
@@ -22,6 +25,16 @@ export function resetCatalogCache() {
     coursesByDomain.clear();
     coursePages.clear();
     inflight.clear();
+}
+
+function readFreshCache(cache, key) {
+    const entry = cache.get(key);
+    if (!entry) return null;
+    if (Date.now() - entry.cachedAt >= CATALOG_CACHE_TTL_MS) {
+        cache.delete(key);
+        return null;
+    }
+    return entry.value;
 }
 
 function once(key, fn) {
@@ -88,20 +101,21 @@ export function resolveCourseParam(courseIdParam) {
     return mapped ? mapped.courseId : null;
 }
 
-export async function fetchCoursesForDomain(domainId) {
+export async function fetchCoursesForDomain(domainId, { forceRefresh = false } = {}) {
     const domain = getCatalogDomain(domainId);
     if (!domain) {
         return { domain: null, courses: [], error: new Error('Department not found.') };
     }
 
-    if (coursesByDomain.has(domainId)) {
-        return { domain, courses: coursesByDomain.get(domainId), error: null, fromCache: true };
+    const cachedCourses = forceRefresh ? null : readFreshCache(coursesByDomain, domainId);
+    if (cachedCourses) {
+        return { domain, courses: cachedCourses, error: null, fromCache: true };
     }
 
     return once(`domain:${domainId}`, async () => {
         const ids = courseIdsForDomain(domainId);
         if (!ids.length) {
-            coursesByDomain.set(domainId, []);
+            coursesByDomain.set(domainId, { value: [], cachedAt: Date.now() });
             return { domain, courses: [], error: null };
         }
         if (!supabase) return { domain, courses: [], error: catalogUnavailable() };
@@ -114,19 +128,20 @@ export async function fetchCoursesForDomain(domainId) {
         if (error) return { domain, courses: [], error };
         const byId = new Map((data || []).map((row) => [Number(row.CourseId), mapCourseRow(row)]));
         const courses = ids.map((id) => byId.get(id)).filter(Boolean);
-        coursesByDomain.set(domainId, courses);
+        coursesByDomain.set(domainId, { value: courses, cachedAt: Date.now() });
         return { domain, courses, error: null };
     });
 }
 
-export async function fetchCourseAndSubjects(courseIdParam) {
+export async function fetchCourseAndSubjects(courseIdParam, { forceRefresh = false } = {}) {
     const courseId = resolveCourseParam(courseIdParam);
     if (courseId == null) {
         return { course: null, subjects: [], unmapped: [], error: new Error('Course not found.') };
     }
 
-    if (coursePages.has(courseId)) {
-        return { ...coursePages.get(courseId), error: null, fromCache: true };
+    const cachedPage = forceRefresh ? null : readFreshCache(coursePages, courseId);
+    if (cachedPage) {
+        return { ...cachedPage, error: null, fromCache: true };
     }
 
     return once(`course:${courseId}`, async () => {
@@ -155,7 +170,7 @@ export async function fetchCourseAndSubjects(courseIdParam) {
             .filter(Boolean);
 
         const page = { course, subjects, unmapped: [] };
-        coursePages.set(courseId, page);
+        coursePages.set(courseId, { value: page, cachedAt: Date.now() });
         return { ...page, error: null };
     });
 }

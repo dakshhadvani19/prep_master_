@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 import {
     UploadValidationError,
     extractSyllabusText,
+    validateSyllabusIdentity,
     validateUploadMetadata,
 } from './_lib/admin-course-upload-validation.js';
 
@@ -191,6 +192,8 @@ async function addSubject(client, user, body) {
         if (extracted.word_count < 10) {
             throw new UploadValidationError('The syllabus contains too little readable text. Upload a complete text-readable PDF or DOCX.');
         }
+
+        validateSyllabusIdentity(extracted.text, { subjectCode, semester });
 
         const subjectId = await allocateSubjectId(client, courseId, subjectCode, semester, course.Sems);
         const { data, error } = await client.rpc('pm_admin_subject_create', {

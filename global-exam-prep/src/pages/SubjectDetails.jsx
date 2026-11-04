@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getExamTypesForSubject, getSubjectExamInfo, normalizeDepartmentalFlag } from '../utils/subjectExamPolicy';
-import { fetchCourseAndSubjects } from '../utils/catalogApi';
-import { motion, useReducedMotion } from 'framer-motion';
+import { CATALOG_CACHE_TTL_MS, fetchCourseAndSubjects } from '../utils/catalogApi';
+import { motion as Motion, useReducedMotion } from 'framer-motion';
 import {
     ChevronLeft, Book, Target, Activity, Flame, Shield,
     Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader, Users
@@ -33,6 +33,7 @@ export default function SubjectDetails() {
 
     useEffect(() => {
         let cancelled = false;
+        let refreshInFlight = false;
         setLoading(true);
         setError(null);
         setCurrentCourse(null);
@@ -42,28 +43,54 @@ export default function SubjectDetails() {
         setSelectedExamType(null);
         setSelectedMode(null);
 
-        fetchCourseAndSubjects(courseId).then((result) => {
-            if (cancelled) return;
-            if (result.error) {
-                setError(result.error.message || 'Could not load this course.');
-                setLoading(false);
-                return;
-            }
-            setCurrentCourse(result.course);
-            setSubjects((result.subjects || []).map((s) => ({
-                id: s.subjectId,
-                title: s.subjectName,
-                sem: s.sem,
-                isDepartmentalSubject: normalizeDepartmentalFlag(s.isDepartmentalSubject),
-            })));
-            setLoading(false);
-        }).catch((err) => {
-            if (cancelled) return;
-            setError(err.message || 'Could not load this course.');
-            setLoading(false);
-        });
+        async function loadCatalog({ initial = false } = {}) {
+            if (refreshInFlight || cancelled) return;
+            refreshInFlight = true;
+            try {
+                const result = await fetchCourseAndSubjects(courseId, { forceRefresh: !initial });
+                if (cancelled) return;
+                if (result.error) {
+                    if (initial) {
+                        setError(result.error.message || 'Could not load this course.');
+                        setLoading(false);
+                    }
+                    return;
+                }
 
-        return () => { cancelled = true; };
+                const nextSubjects = (result.subjects || []).map((s) => ({
+                    id: s.subjectId,
+                    title: s.subjectName,
+                    sem: s.sem,
+                    isDepartmentalSubject: normalizeDepartmentalFlag(s.isDepartmentalSubject),
+                }));
+                setCurrentCourse(result.course);
+                setSubjects(nextSubjects);
+                setLoading(false);
+                setError(null);
+            } catch (err) {
+                if (!cancelled && initial) {
+                    setError(err.message || 'Could not load this course.');
+                    setLoading(false);
+                }
+            } finally {
+                refreshInFlight = false;
+            }
+        }
+
+        loadCatalog({ initial: true });
+        const refreshWhenVisible = () => {
+            if (document.visibilityState === 'visible') loadCatalog();
+        };
+        const refreshTimer = window.setInterval(refreshWhenVisible, CATALOG_CACHE_TTL_MS);
+        window.addEventListener('focus', refreshWhenVisible);
+        document.addEventListener('visibilitychange', refreshWhenVisible);
+
+        return () => {
+            cancelled = true;
+            window.clearInterval(refreshTimer);
+            window.removeEventListener('focus', refreshWhenVisible);
+            document.removeEventListener('visibilitychange', refreshWhenVisible);
+        };
     }, [courseId]);
 
     const semesters = useMemo(() => {
@@ -188,7 +215,7 @@ export default function SubjectDetails() {
             )}
 
             {subjects.length > 0 && (
-            <motion.section className="pm-selection-section pm-semester-selection" initial={reduceMotion ? false : { opacity: 0, y: 10, filter: 'blur(3px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}>
+            <Motion.section className="pm-selection-section pm-semester-selection" initial={reduceMotion ? false : { opacity: 0, y: 10, filter: 'blur(3px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}>
                 <h2>Step 1 — Select Semester</h2>
                 <div className="pm-semester-grid">
                     {semesters.map(sem => {
@@ -210,11 +237,11 @@ export default function SubjectDetails() {
                         );
                     })}
                 </div>
-            </motion.section>
+            </Motion.section>
             )}
 
             {selectedSem != null && (
-                <motion.section className="pm-selection-section pm-subject-selection" initial={reduceMotion ? false : { opacity: 0, y: 12, filter: 'blur(3px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}>
+                <Motion.section className="pm-selection-section pm-subject-selection" initial={reduceMotion ? false : { opacity: 0, y: 12, filter: 'blur(3px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}>
                     <h2>Step 2 — Select Subject</h2>
                     <div className="pm-subject-list">
                         {subjectsInSem.map((subject, idx) => {
@@ -433,7 +460,7 @@ export default function SubjectDetails() {
                             );
                         })}
                     </div>
-                </motion.section>
+                </Motion.section>
             )}
 
 

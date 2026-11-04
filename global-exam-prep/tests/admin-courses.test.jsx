@@ -122,6 +122,7 @@ describe('admin subject and question locator — Phase 1', () => {
 
         expect(await screen.findByRole('tab', { name: 'Add subject' })).toBeInTheDocument();
         fireEvent.click(screen.getByRole('tab', { name: 'Remove subject' }));
+        await screen.findByRole('combobox', { name: /Choose subject to remove/ });
         expect(screen.getByRole('option', { name: /Computer Workshop · 101/ })).toBeInTheDocument();
         expect(screen.queryByRole('option', { name: /Calculus · 102/ })).not.toBeInTheDocument();
     });
@@ -155,7 +156,7 @@ describe('admin subject and question locator — Phase 1', () => {
         fireEvent.click(await screen.findByRole('tab', { name: 'Remove subject' }));
 
         fireEvent.change(await screen.findByRole('combobox', { name: /Choose subject to remove/ }), { target: { value: '103' } });
-        fireEvent.click(screen.getByRole('button', { name: 'Remove subject' }));
+        fireEvent.click(await screen.findByRole('button', { name: 'Remove subject' }));
         expect(screen.getByText(/cannot be undone/i)).toBeInTheDocument();
         fireEvent.click(screen.getByRole('button', { name: 'Confirm removal' }));
 

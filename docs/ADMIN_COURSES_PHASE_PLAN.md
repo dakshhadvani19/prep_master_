@@ -112,3 +112,10 @@ Real-bank smoke testing remains pending: production currently has zero published
 - The subject editor's `mode=remove` and selected `subjectId` are URL-backed as well, so a refresh restores the remove tab and selected subject. Invalid/stale IDs are discarded after checking the live course and subject catalog.
 - No admin route guard, authentication contract, public catalog schema, CRUD API, or database permission was changed.
 - Focused Vitest coverage was added for URL progression, direct deep links, semester back-navigation, and subject-removal selection restoration.
+
+
+## Subject extraction and activation propagation — 2026-11-04
+
+- PDF extraction preserves coordinate-based line order and normalizes common PDF glyph/control artefacts.
+- Explicit syllabus course-code/semester identity is checked before catalog activation.
+- The in-memory course/subject cache expires after 20 seconds. Open student subject pages refresh while visible and when regaining focus.

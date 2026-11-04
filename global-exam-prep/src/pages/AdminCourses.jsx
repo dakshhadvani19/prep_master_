@@ -321,6 +321,17 @@ export default function AdminCourses() {
         });
     }
 
+    function retryCurrentStage() {
+        if (step === 'course') {
+            setCoursesError('');
+            setCoursesLoading(true);
+        } else {
+            setSubjectsError('');
+            setSubjectsLoading(true);
+        }
+        setRetryKey(value => value + 1);
+    }
+
     async function refreshSubjectData() {
         resetCatalogCache();
         setSubjectsError('');

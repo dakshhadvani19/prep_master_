@@ -176,3 +176,19 @@ Live example verified: Diploma Computer Engineering, CourseId 44, Computer Funda
 - PDF.js extraction now enables XFA handling, continues through recoverable parser warnings, accepts a PDF header within the first 1,024 bytes without rewriting the original bytes, and includes available AcroForm values alongside page text. Failure to read optional form values does not discard successfully extracted page text.
 - Focused upload/catalog regression checks (9 files) and the Vite production build passed for the preceding code commit. The latest tiny guard around optional AcroForm extraction is queued for the same CI checks.
 - **Deployment blocker:** Vercel rejected the production deployment because the team hit its free deployment/API quota (`api-deployments-free-per-day`, retry reported in 24 hours). The fix is committed to `main` but is not live on the production domain yet.
+
+
+## Subject extraction and activation freshness — 2026-11-04
+
+- PDF text extraction now reconstructs text using PDF.js baseline coordinates, preserving visual line order and avoiding the previous single-line flattening of tables and adjacent fields.
+- Extracted PDF/DOCX text is normalized for common legacy font glyphs, watermark text, invisible characters and control bytes.
+- Explicit course-code and semester markers in extracted syllabus content are checked against the selected catalog subject before any create/restore transaction.
+- Course and subject catalog cache entries now expire after 20 seconds. Open student subject pages revalidate while visible and on focus; no manual reload is required for normal activation propagation.
+- Public Courses/Subjects schemas, existing SubjectIds, and admin-only metadata/storage permissions remain unchanged.
+
+
+## CI follow-up — 2026-11-04
+
+- Corrected legacy superscript quote-glyph normalization to run before Unicode NFKC conversion.
+- Restored the Admin Courses retry callback and updated tests to wait for URL-driven editor hydration.
+- Repository-wide ESLint still reports unrelated pre-existing errors in other pages and utilities; changed-file lint remains the relevant focused check.

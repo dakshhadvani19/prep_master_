@@ -55,6 +55,127 @@ function assertCharacterLimit(text) {
     return wordCount(content);
 }
 
+/**
+ * Normalize common PDF text-layer artefacts without changing ordinary syllabus text.
+ */
+export function normalizeSyllabusText(value) {
+    const source = String(value ?? '')
+        .replace(/³\s*([^´\r\n]{1,120})\s*´/g, (_match, quoted) => '"' + quoted.trim() + '"')
+        .replace(/μ\s*confidential\s*¶?/gi, 'CONFIDENTIAL')
+        .normalize('NFKC');
+
+    let cleaned = '';
+    for (const character of source) {
+        const code = character.charCodeAt(0);
+        if (code === 9 || code === 10 || code === 13) {
+            cleaned += character;
+            continue;
+        }
+        if (code < 32 || (code >= 127 && code <= 159)) {
+            if (cleaned.endsWith('±')) cleaned = cleaned.slice(0, -1) + ' — ';
+            else if (cleaned.endsWith('¶')) cleaned = cleaned.slice(0, -1) + ' ';
+            else cleaned += ' ';
+            continue;
+        }
+        cleaned += character;
+    }
+
+    return cleaned
+        .replace(/[\u200B-\u200D\uFEFF]/g, '')
+        .replace(/\uFFFD/g, ' ')
+        .replace(/[ \t]+/g, ' ')
+        .replace(/[ \t]*\n[ \t]*/g, '\n')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+}
+
+/**
+ * Rebuild PDF text in visual reading order instead of flattening all text items.
+ * PDF.js provides baseline coordinates in each text item's transform matrix.
+ */
+export function reconstructPdfPageText(items = []) {
+    const normalizedItems = (Array.isArray(items) ? items : [])
+        .map((item, index) => {
+            const text = normalizeSyllabusText(item?.str);
+            if (!text) return null;
+            const transform = Array.isArray(item?.transform) ? item.transform : [];
+            const x = Number(transform[4]);
+            const y = Number(transform[5]);
+            return {
+                text,
+                x: Number.isFinite(x) ? x : null,
+                y: Number.isFinite(y) ? y : null,
+                index,
+                hasPosition: Number.isFinite(x) && Number.isFinite(y),
+            };
+        })
+        .filter(Boolean);
+
+    if (!normalizedItems.some(item => item.hasPosition)) {
+        return normalizeSyllabusText(normalizedItems.map(item => item.text).join(' '));
+    }
+
+    const positioned = normalizedItems.filter(item => item.hasPosition)
+        .sort((a, b) => (b.y - a.y) || (a.x - b.x) || (a.index - b.index));
+    const lines = [];
+    for (const item of positioned) {
+        let line = lines[lines.length - 1];
+        if (!line || Math.abs(line.y - item.y) > 2.5) {
+            line = { y: item.y, parts: [] };
+            lines.push(line);
+        }
+        line.parts.push(item);
+    }
+
+    const renderedLines = lines.map(line => line.parts
+        .sort((a, b) => (a.x - b.x) || (a.index - b.index))
+        .map(item => item.text)
+        .join(' ')
+        .replace(/\s+/g, ' ')
+        .trim())
+        .filter(Boolean);
+
+    const unpositioned = normalizedItems
+        .filter(item => !item.hasPosition)
+        .sort((a, b) => a.index - b.index)
+        .map(item => item.text);
+    if (unpositioned.length) renderedLines.push(unpositioned.join(' '));
+
+    return normalizeSyllabusText(renderedLines.join('\n'));
+}
+
+/**
+ * Prevent an explicitly identified syllabus from being stored under a different
+ * course code or semester. Documents without printed identifiers remain valid.
+ */
+export function validateSyllabusIdentity(text, { subjectCode, semester } = {}) {
+    const content = normalizeSyllabusText(text);
+    const expectedCode = String(subjectCode || '').trim().toUpperCase().replace(/\s+/g, '');
+    const explicitCodes = [...content.matchAll(/\bCOURSE\s*(?:CODE|NO\.?|NUMBER)\s*[:#-]?\s*([A-Z0-9][A-Z0-9./-]{2,})/gi)]
+        .map(match => match[1].toUpperCase().replace(/\s+/g, ''));
+    const uniqueCodes = [...new Set(explicitCodes)];
+    if (expectedCode && uniqueCodes.length === 1 && uniqueCodes[0] !== expectedCode) {
+        throw new UploadValidationError(
+            'The syllabus identifies course code ' + uniqueCodes[0]
+            + ', but the selected subject code is ' + expectedCode + '. Check the course and semester before saving.',
+        );
+    }
+
+    const expectedSemester = Number(semester);
+    const explicitSemesters = [...content.matchAll(/\bSEMESTER\s*(?:NO\.?\s*)?[:#-]?\s*(\d{1,2})\b/gi)]
+        .map(match => Number(match[1]))
+        .filter(Number.isInteger);
+    const uniqueSemesters = [...new Set(explicitSemesters)];
+    if (Number.isInteger(expectedSemester) && uniqueSemesters.length === 1
+        && uniqueSemesters[0] !== expectedSemester) {
+        throw new UploadValidationError(
+            'The uploaded syllabus identifies Semester ' + uniqueSemesters[0]
+            + ', but the selected catalog semester is ' + expectedSemester + '. Select the matching semester and upload again.',
+        );
+    }
+    return true;
+}
+
 async function extractPdf(buffer) {
     // Some valid PDF producers prepend a short binary/comment header. The PDF
     // specification permits the %PDF marker within the first 1024 bytes.
@@ -98,12 +219,7 @@ async function extractPdf(buffer) {
         for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
             const page = await pdf.getPage(pageNumber);
             const content = await page.getTextContent();
-            pageTexts.push(content.items
-                .filter(item => typeof item.str === 'string')
-                .map(item => item.str)
-                .join(' ')
-                .replace(/\s+/g, ' ')
-                .trim());
+            pageTexts.push(reconstructPdfPageText(content.items || []));
             page.cleanup?.();
         }
 
@@ -119,7 +235,7 @@ async function extractPdf(buffer) {
                         .map(field => field?.value)
                         .flatMap(value => Array.isArray(value) ? value : [value])
                         .filter(value => typeof value === 'string' || typeof value === 'number')
-                        .map(value => String(value).trim())
+                        .map(value => normalizeSyllabusText(value))
                         .filter(Boolean),
                 );
             } catch (fieldError) {
@@ -155,7 +271,7 @@ async function extractDocx(buffer) {
     }
     try {
         const result = await mammoth.extractRawText({ buffer });
-        const text = String(result.value || '').split(String.fromCharCode(0)).join('').trim();
+        const text = normalizeSyllabusText(result.value || '');
         if (!text) throw new UploadValidationError('The DOCX contains no readable document text.');
         return { text, messages: (result.messages || []).map(item => item.type).slice(0, 20) };
     } catch (error) {
@@ -306,7 +422,7 @@ export async function extractSyllabusText(record, buffer) {
     const extracted = extension === 'pdf'
         ? await extractPdf(buffer)
         : await extractDocx(buffer);
-    const content = String(extracted.text || '').trim();
+    const content = normalizeSyllabusText(extracted.text || '');
     const words = assertCharacterLimit(content);
     return {
         text: content,

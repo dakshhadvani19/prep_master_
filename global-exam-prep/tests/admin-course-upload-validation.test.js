@@ -5,6 +5,9 @@ import {
     MIME_BY_EXTENSION,
     QUESTION_BANK_CSV_HEADERS,
     UploadValidationError,
+    normalizeSyllabusText,
+    reconstructPdfPageText,
+    validateSyllabusIdentity,
     validateCourseUpload,
     validateUploadMetadata,
 } from '../api/_lib/admin-course-upload-validation.js';
@@ -160,6 +163,46 @@ describe('question bank CSV validation', () => {
             ...record,
             kind: 'syllabus',
         }, Buffer.from(validCsv))).rejects.toThrow(/Syllabus files must be PDF or DOCX/);
+    });
+});
+
+describe('PDF syllabus text normalization', () => {
+    it('reconstructs positioned text in page reading order with line breaks', () => {
+        const text = reconstructPdfPageText([
+            { str: '09CE2101', transform: [1, 0, 0, 1, 150, 100] },
+            { str: 'COURSE CODE', transform: [1, 0, 0, 1, 20, 100] },
+            { str: 'SEMESTER 1', transform: [1, 0, 0, 1, 20, 80] },
+            { str: 'COMPUTER ENGINEERING', transform: [1, 0, 0, 1, 20, 120] },
+        ]);
+        expect(text).toBe('COMPUTER ENGINEERING\nCOURSE CODE 09CE2101\nSEMESTER 1');
+    });
+
+    it('cleans common legacy glyphs and embedded control bytes', () => {
+        const text = normalizeSyllabusText(
+            'CPU ±\u0003 Memory\nμ confidential ¶\u0003\nSave as ³ INVEST ´\u0011\u0003',
+        );
+        expect(text).toContain('CPU — Memory');
+        expect(text).toContain('CONFIDENTIAL');
+        expect(text).toContain('"INVEST"');
+        expect([...text].some(character => {
+            const code = character.charCodeAt(0);
+            const validWhitespace = character === '\t' || character === '\n' || character === '\r';
+            return !validWhitespace && (code < 32 || (code >= 127 && code <= 159));
+        })).toBe(false);
+    });
+
+    it('blocks explicit mismatched course code or semester before catalog activation', () => {
+        const syllabus = 'COURSE CODE 09CE2101\nDIPLOMA ENGINEERING\nSEMESTER 1';
+        expect(() => validateSyllabusIdentity(syllabus, {
+            subjectCode: '09CE2101',
+            semester: 6,
+        })).toThrow(/identifies Semester 1.*selected catalog semester is 6/);
+        expect(() => validateSyllabusIdentity('COURSE CODE 09CE2103\nSEMESTER 1', {
+            subjectCode: '09CE2101',
+            semester: 1,
+        })).toThrow(/identifies course code 09CE2103/);
+        expect(validateSyllabusIdentity(syllabus, { subjectCode: '09CE2101', semester: 1 })).toBe(true);
+        expect(validateSyllabusIdentity('No printed identifier here', { subjectCode: '09CE2101', semester: 1 })).toBe(true);
     });
 });
 

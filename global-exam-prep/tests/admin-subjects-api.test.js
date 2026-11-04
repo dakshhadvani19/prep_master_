@@ -3,12 +3,13 @@ import process from 'node:process';
 import { Buffer } from 'node:buffer';
 import handler from '../api/admin-subjects.js';
 import { createClient } from '@supabase/supabase-js';
-import { extractSyllabusText, validateUploadMetadata } from '../api/_lib/admin-course-upload-validation.js';
+import { extractSyllabusText, validateSyllabusIdentity, validateUploadMetadata } from '../api/_lib/admin-course-upload-validation.js';
 
 vi.mock('@supabase/supabase-js', () => ({ createClient: vi.fn() }));
 vi.mock('../api/_lib/admin-course-upload-validation.js', () => ({
     UploadValidationError: class UploadValidationError extends Error {},
     extractSyllabusText: vi.fn(),
+    validateSyllabusIdentity: vi.fn(),
     validateUploadMetadata: vi.fn(({ fileName, mimeType, sizeBytes }) => ({
         fileName,
         extension: String(fileName).split('.').pop().toLowerCase(),
@@ -138,6 +139,7 @@ describe('admin subject management API', () => {
             pageCount: 4,
         });
         expect(download).toHaveBeenCalledWith(objectPath);
+        expect(validateSyllabusIdentity).toHaveBeenCalledWith(expect.any(String), { subjectCode: '09CE3102', semester: 1 });
         expect(extractSyllabusText).toHaveBeenCalledWith({
             file_extension: 'pdf',
             mime_type: 'application/pdf',
