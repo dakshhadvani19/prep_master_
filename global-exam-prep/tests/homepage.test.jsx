@@ -192,7 +192,9 @@ describe('homepage', () => {
           questions,
         },
       });
-      expect(await screen.findByRole('heading', { name: /Your room is ready/i })).toBeTruthy();
+      expect(await screen.findByRole('heading', { name: /Demo Subject/i })).toBeTruthy();
+      expect(screen.getByText(/Live waiting room/i)).toBeTruthy();
+      expect(screen.getByRole('button', { name: /Start Test Room/i })).toBeTruthy();
       expect(screen.queryByText(/The host session cannot be resumed/i)).toBeNull();
       await waitFor(() => {
         expect(client.channel).toHaveBeenCalledWith(
