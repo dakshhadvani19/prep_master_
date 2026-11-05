@@ -17,7 +17,6 @@ export default function SubjectDetails() {
     const { courseId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    const reduceMotion = useReducedMotion();
 
     const [selectedSem, setSelectedSem] = useState(null);
     const [selectedSubject, setSelectedSubject] = useState(null);
