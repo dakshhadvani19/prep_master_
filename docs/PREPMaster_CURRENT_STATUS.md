@@ -396,7 +396,7 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 ## Global dark-canvas and warm-white surface system — 2026-11-05
 
 - Added a shared theme layer for student and administrator routes: near-black page canvas, charcoal navigation, warm-white reading surfaces, dark text on light cards, and gold primary actions/selected states.
-- Applied the system to student performance/history panels, admin dashboard cards and staff actions, admin course/catalog workspaces, leaderboard filters and ranking tables, feedback forms/inbox cards, user-guide content, and course/semester selection surfaces.
+- Applied the system to student performance/history panels, admin dashboard cards and staff actions, admin course/catalog workspaces, leaderboard filters and ranking tables, feedback forms/inbox cards, user-guide content, course/semester selection, Syllabus Administration, Search Results, and non-active Test Room setup/lobby surfaces.
 - Updated the product UI skill so future UI work follows the new visual system instead of the previous dark-card / blue-primary-action defaults.
 - Preserved blue for active exam and Test Room question/answer controls, along with semantic success, warning, and error colors. No routes, authorization rules, exam logic, APIs, or database schemas were changed.
-- Local browser screenshots and local npm checks were not available through the connected repository session; build/deployment verification is reported separately after the commit.
+- Local browser screenshots and local npm checks were not available through the connected repository session. Vercel production deployment for the theme commit completed with `READY` status.

@@ -333,3 +333,67 @@ body {
     #root .pm-main .admin-card,
     #root .pm-main .guide-card { transition: none !important; }
 }
+
+
+/* Additional admin/search cards and non-active Test Room setup/lobby surfaces. */
+#root .pm-main :is(.glass-card,.pm-room-code-card,.pm-room-glass-utility,.pm-room-participant),
+#root .pm-main :is(.pm-room-setup .glass-panel,.pm-room-lobby .glass-panel) {
+    --text-primary: var(--pm-ink);
+    --text-secondary: var(--pm-text-muted);
+    --text-tertiary: var(--pm-text-subtle);
+    --bg-primary: var(--pm-surface);
+    --bg-secondary: var(--pm-surface-raised);
+    --bg-tertiary: var(--pm-surface-inset);
+    --border-color: var(--pm-border);
+    --glass-border: var(--pm-border);
+    --gold: var(--pm-gold-ink);
+    --gold-soft: var(--pm-gold-soft);
+    --gold-line: var(--pm-gold-line);
+    color: var(--pm-ink);
+    background: var(--pm-surface);
+    border-color: var(--pm-border);
+    box-shadow: 0 10px 26px rgba(0,0,0,.09);
+}
+
+#root .pm-main .glass-card .text-blue-400,
+#root .pm-main .glass-card .text-purple-400,
+#root .pm-main .glass-card .text-orange-400 {
+    color: var(--pm-gold-ink) !important;
+}
+
+#root .pm-main .glass-card .text-gradient {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#root .pm-main .glass-card div[style*="255,255,255,0.05"] {
+    background: var(--pm-surface-inset) !important;
+}
+
+#root .pm-main .glass-card button[style*="accent-gradient"] {
+    color: #211707 !important;
+}
+
+#root .pm-main .pm-room-setup .glass-panel,
+#root .pm-main .pm-room-lobby .glass-panel {
+    --text-primary: var(--pm-ink);
+    --text-secondary: var(--pm-text-muted);
+    --text-tertiary: var(--pm-text-subtle);
+    --bg-primary: var(--pm-surface);
+    --bg-secondary: var(--pm-surface-raised);
+    --bg-tertiary: var(--pm-surface-inset);
+    --border-color: var(--pm-border);
+    background: var(--pm-surface);
+    border-color: var(--pm-border);
+    color: var(--pm-ink);
+}
+
+#root .pm-main .pm-room-code-card {
+    color: var(--pm-ink);
+    background: var(--pm-surface-inset);
+    border-color: var(--pm-border);
+}
+
+/* The in-progress room exam topbar, question navigator and question card are
+   intentionally excluded from these rules and keep their existing treatment. */
