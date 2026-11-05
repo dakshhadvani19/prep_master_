@@ -250,14 +250,14 @@ export default function LandingPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <motion.div
-                        className="hero-badge"
+                    <motion.p
+                        className="legacy-home-kicker"
                         initial={reduceMotion ? false : { opacity: 0, y: -14 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.55 }}
                     >
-                        <Icons.Sparkles size={15} /> A clearer way to prepare
-                    </motion.div>
+                        A clearer way to prepare
+                    </motion.p>
 
                     <motion.h1
                         className="hero-title"
