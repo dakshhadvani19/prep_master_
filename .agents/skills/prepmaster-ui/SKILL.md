@@ -33,7 +33,7 @@ Do not sacrifice task completion or readability for decoration, animation, novel
 - Product: PrepMaster — a web application for exam preparation, learning, student progress, and administration.
 - Primary audiences: students and administrators. Their screens may have different information density and workflows, but must share one design language.
 - Mood: focused, credible, encouraging, modern, and mature.
-- Visual foundation: dark-first, near-black canvas; layered charcoal surfaces; cool blue interaction accents; warm amber/gold for achievement and brand emphasis; restrained violet for secondary accents.
+- Visual foundation: near-black application canvas and charcoal navigation; warm-white reading surfaces for information-heavy cards and workspaces; dark text on light surfaces; gold primary actions and selected states. Blue remains reserved for active exam/Test Room interaction controls and established semantic uses; violet is a restrained secondary data accent.
 - Personality: traditional product-design fundamentals with small, intentional moments of creativity.
 - The existing amber focus/progress ring is a recognizable motif. Preserve and reuse it where relevant; do not scatter it across every component.
 
@@ -44,14 +44,17 @@ The current global token source is `global-exam-prep/src/index.css`. Read it bef
 | Role | Current token / value | Intended use |
 |---|---|---|
 | Main canvas | `--bg-primary: #0f1115` | App background and deepest page layer |
-| Main surface | `--bg-secondary: #16181d` | Cards, panels, navigation surfaces |
+| Main surface | `--bg-secondary: #16181d` | Charcoal navigation, floating chrome, and secondary dark surfaces |
+| Reading surface | `--pm-surface: #f7f6f1` | Main information cards and workspaces on application pages |
+| Raised reading surface | `--pm-surface-raised: #ffffff` | Tables, selectable cards, and secondary white surfaces |
+| Inset reading surface | `--pm-surface-inset: #efede6` | Inputs and nested neutral surfaces inside light cards |
 | Raised surface | `--bg-tertiary: #1c1f26` | Inputs, nested panels, selected neutral surfaces |
 | Primary text | `--text-primary: #ffffff` | Headings and essential content |
 | Secondary text | `--text-secondary: #a0a5b1` | Supporting content and descriptions |
 | Tertiary text | `--text-tertiary: #6b7280` | Metadata only when contrast remains adequate |
-| Primary action blue | `--accent-primary: #3b82f6` | Primary interactive actions, links, focus-adjacent emphasis |
+| Exam/Test Room blue | `--accent-primary: #3b82f6` | Active exam and Test Room question/answer controls and their in-progress navigation |
 | Hover blue | `--accent-hover: #2563eb` | Hover/active treatment for blue actions |
-| Warm gold | `--gold: #ffb454` | Achievements, progress milestones, premium emphasis, selected brand details |
+| Warm gold | `--gold: #ffb454` | General-app primary actions, achievements, progress milestones, and selected states |
 | Bright gold | `--gold-bright: #ffd08a` | Small high-emphasis gold detail; use sparingly |
 | Violet | `--violet: #8d7bff` | Secondary accent, analytics/insight visuals, restrained illustration |
 | Success | `--success: #10b981` | Successful state, always paired with text/icon |
@@ -59,13 +62,13 @@ The current global token source is `global-exam-prep/src/index.css`. Read it bef
 | Danger | `--danger: #ef4444` | Destructive/error state, always paired with text/icon |
 | Borders | `--border-color`, `--glass-border` | Quiet separation and component boundaries |
 
-Additional established values include `--accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6)`, translucent gold/violet fills, and subtle dark shadows. Treat gradients as an accent, not as the default background for every card, button, or page.
+Additional established values include `--accent-gradient: linear-gradient(135deg, #ffb454, #ffd08a)`, the warm-white `--pm-surface` family, translucent gold/violet fills, and subtle dark shadows. Use the gold gradient for primary application actions, not as a full-page or universal card background.
 
 ### Color rules
 
-- Maintain the existing dark-first product appearance unless a light theme is explicitly requested.
-- Keep purple/violet and gold balanced. Neither should flood large surfaces. Gold is a meaningful highlight, not the default button color; violet is a supporting accent, not a full-page wash.
-- Preserve blue as the established primary-action color in current global tokens. Do not silently remap it while styling an unrelated screen.
+- Maintain the near-black page canvas and charcoal navigation. Use warm-white content surfaces for information-heavy panels, cards, and workspaces; this is a dark-canvas system, not a light page theme.
+- Use gold as the primary action and selection signal across ordinary application pages. Prefer a warm gold fill with dark text for primary actions and white with dark text for secondary actions. Keep gold restrained to CTAs, achievements, selected states, and thin indicators; violet remains a small secondary data accent.
+- Preserve blue for active exam and Test Room question/answer controls, including in-progress navigation. Use gold for primary actions outside active exam flows.
 - Assign each color a stable semantic meaning. Do not use the same accent indiscriminately for primary actions, passive decoration, success, and selection.
 - Use semantic success/warning/danger colors consistently and include labels, icons, or shapes so color is never the only signal.
 - Prefer surface contrast, borders, spacing, and type hierarchy over adding more accent colors.
@@ -129,7 +132,7 @@ Use established editorial and application layout techniques:
 ### Buttons and actions
 
 - Provide a clear action hierarchy: one primary action per major region, secondary actions visually quieter, destructive actions unmistakably separate.
-- Use filled blue for the established primary action; use neutral/outlined treatments for secondary actions. Reserve gold for a meaningful milestone, special action, or established brand moment rather than coloring every CTA gold.
+- Use a warm gold fill with dark text for primary application actions and a white surface with dark text for secondary actions. Destructive actions remain red. Preserve blue only for active exam and Test Room interaction controls.
 - Labels must state the outcome with a clear verb. Prefer `Save changes`, `Start exam`, `View results` over vague labels such as `Continue` when context is insufficient.
 - Keep button heights and padding consistent within a view. Aim for a minimum interactive target of 44 × 44 CSS px where practical.
 - Provide visible hover, pressed, focus-visible, disabled, and loading states. A pointer hover is never the only interaction cue.
@@ -138,7 +141,7 @@ Use established editorial and application layout techniques:
 
 ### Cards and panels
 
-- Use a clear surface hierarchy: page canvas → primary panel → optional nested inset.
+- Use a clear surface hierarchy: near-black page canvas → warm-white primary panel → pale neutral nested inset. Keep floating menus and navigation charcoal when that creates clearer layering.
 - Keep borders low-contrast and shadows restrained. A card should not need a glow to appear elevated.
 - Use consistent corner radii within a component family. Prefer the existing 12–16 px family for ordinary panels; larger hero surfaces may use a larger radius when justified.
 - Hover lift is optional and should be small (typically 1–3 px) and only applied to cards that are genuinely interactive.

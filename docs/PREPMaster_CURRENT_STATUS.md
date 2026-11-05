@@ -392,3 +392,11 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Added private trigger function `private.pm_normalize_subject_name_title_case()` and `subjects_normalize_subject_name_title_case` BEFORE INSERT / UPDATE OF `SubjectName` trigger. All future subject inserts, renames, and archive restores are normalized at the database boundary.
 - Live verification: 1,856 total rows, 1,855 active, 1 archived, zero names outside the normalized format. The insert smoke test stored `fUTURE aUTOMATIC subject tEST` as `Future Automatic Subject Test`; the temporary test row was then removed.
 - Migration: `20261104052852_normalize_subject_names_title_case`. Subject IDs, course/semester links, departmental flags, archive state, and syllabus data were not modified.
+
+## Global dark-canvas and warm-white surface system — 2026-11-05
+
+- Added a shared theme layer for student and administrator routes: near-black page canvas, charcoal navigation, warm-white reading surfaces, dark text on light cards, and gold primary actions/selected states.
+- Applied the system to student performance/history panels, admin dashboard cards and staff actions, admin course/catalog workspaces, leaderboard filters and ranking tables, feedback forms/inbox cards, user-guide content, and course/semester selection surfaces.
+- Updated the product UI skill so future UI work follows the new visual system instead of the previous dark-card / blue-primary-action defaults.
+- Preserved blue for active exam and Test Room question/answer controls, along with semantic success, warning, and error colors. No routes, authorization rules, exam logic, APIs, or database schemas were changed.
+- Local browser screenshots and local npm checks were not available through the connected repository session; build/deployment verification is reported separately after the commit.

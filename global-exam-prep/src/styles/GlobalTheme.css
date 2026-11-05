@@ -1,0 +1,335 @@
+/*
+ * PrepMaster shared visual system:
+ * near-black application canvas, warm-white reading surfaces, gold primary actions.
+ * Active exam and Test Room interactions retain their existing blue controls.
+ */
+:root {
+    --pm-canvas: #0a0b0d;
+    --pm-surface: #f7f6f1;
+    --pm-surface-raised: #ffffff;
+    --pm-surface-inset: #efede6;
+    --pm-ink: #1b1c1f;
+    --pm-text-muted: #5f6064;
+    --pm-text-subtle: #76787d;
+    --pm-border: rgba(27, 28, 31, 0.13);
+    --pm-gold-ink: #84560f;
+    --pm-gold-soft: rgba(255, 180, 84, 0.18);
+    --pm-gold-line: rgba(132, 86, 15, 0.30);
+    --accent-gradient: linear-gradient(135deg, #ffb454 0%, #ffd08a 100%);
+    --shadow-glow: 0 8px 24px rgba(255, 180, 84, 0.18);
+}
+
+html,
+body {
+    background-color: var(--pm-canvas);
+}
+
+body {
+    background-color: var(--pm-canvas);
+    background-image:
+        radial-gradient(900px 420px at 8% -12%, rgba(255, 180, 84, 0.075), transparent 62%),
+        radial-gradient(760px 420px at 100% 8%, rgba(255, 208, 138, 0.045), transparent 58%);
+    background-attachment: fixed;
+}
+
+/* Charcoal navigation with a restrained gold active state. */
+#root .pm-nav {
+    background: rgba(9, 10, 12, 0.94) !important;
+    border-bottom: 1px solid rgba(255, 180, 84, 0.18) !important;
+}
+#root .pm-nav .nav-desktop {
+    background: rgba(24, 25, 28, 0.88) !important;
+    border-color: rgba(255, 255, 255, 0.11) !important;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.035), 0 10px 25px rgba(0,0,0,.36) !important;
+}
+#root .pm-nav .nav-desktop [style*="position: absolute"] {
+    background: rgba(255,180,84,.12) !important;
+    border-color: rgba(255,180,84,.38) !important;
+    box-shadow: 0 7px 20px rgba(0,0,0,.3) !important;
+}
+#root .pm-nav .pm-logo__mark {
+    background: linear-gradient(145deg, #ffb454, #ffd08a) !important;
+}
+#root .pm-nav .pm-logo__mark svg { color: #24180a !important; }
+
+/* Standard light reading surfaces with a local text/surface palette. */
+#root .pm-main :is(
+    .sd-card, .sd-performance, .admin-card, .admin-modal, .admin-staff__btn,
+    .ac-stepper, .ac-workspace, .ac-department-card, .ac-course-card,
+    .ac-semester-card, .ac-subject-row, .ac-subject-detail,
+    .lb-stepper, .lb-step, .lb-guidance, .lb-browser, .lb-choice, .lb-search,
+    .lb-board, .lb-viewer, .lb-board__table-wrap,
+    .admin-feedback-inbox__main, .admin-feedback-inbox__spam,
+    .guide-card, .mode-box, .faq-item
+),
+#root .pm-main :is(
+    .sd .glass-panel, .pm-room-entry .glass-panel,
+    .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel
+) {
+    --text-primary: var(--pm-ink);
+    --text-secondary: var(--pm-text-muted);
+    --text-tertiary: var(--pm-text-subtle);
+    --bg-primary: var(--pm-surface);
+    --bg-secondary: var(--pm-surface-raised);
+    --bg-tertiary: var(--pm-surface-inset);
+    --border-color: var(--pm-border);
+    --glass-border: var(--pm-border);
+    --glass-bg: var(--pm-surface);
+    --gold: var(--pm-gold-ink);
+    --gold-bright: var(--pm-gold-ink);
+    --gold-soft: var(--pm-gold-soft);
+    --gold-line: var(--pm-gold-line);
+    --violet: #655486;
+    --violet-soft: rgba(101,84,134,.10);
+    --lb-gold: var(--pm-gold-ink);
+    --lb-gold-soft: var(--pm-gold-soft);
+    --lb-gold-line: var(--pm-gold-line);
+    --lb-line: var(--pm-border);
+    --ac-gold: var(--pm-gold-ink);
+    --ac-gold-soft: var(--pm-gold-soft);
+    --ac-gold-line: var(--pm-gold-line);
+    --ac-violet: #655486;
+    --sd-gold: var(--pm-gold-ink);
+    --sd-violet: #655486;
+    --text: var(--pm-ink);
+    --muted: var(--pm-text-muted);
+    --line: var(--pm-border);
+    --bg-elevated: var(--pm-surface);
+    color: var(--pm-ink);
+    background: var(--pm-surface);
+    border-color: var(--pm-border);
+    box-shadow: 0 10px 26px rgba(0,0,0,.09);
+}
+
+/* Student dashboard cards and progress visuals. */
+#root .pm-main .sd-performance { border-left-color: #c28a35; }
+#root .pm-main .sd-metric {
+    background: var(--pm-surface-inset);
+    border-color: var(--pm-border);
+}
+#root .pm-main .sd-subject__track { background: rgba(27,28,31,.12); }
+#root .pm-main .sd-subject__track > span {
+    background: linear-gradient(90deg, #b87924, #e2ad59);
+}
+
+/* Admin cards, staff actions and gold action buttons. */
+#root .pm-main .admin-dash .admin-card,
+#root .pm-main .admin-dash .admin-modal,
+#root .pm-main .admin-dash .admin-staff__btn {
+    --text: var(--pm-ink);
+    --muted: var(--pm-text-muted);
+    --line: var(--pm-border);
+    --bg-elevated: var(--pm-surface);
+    background: var(--pm-surface);
+    color: var(--pm-ink);
+    border-color: var(--pm-border);
+}
+#root .pm-main .admin-dash .admin-card--staff { background: var(--pm-surface) !important; }
+#root .pm-main .admin-card .admin-card__tag,
+#root .pm-main .admin-card .admin-pills .is-gold,
+#root .pm-main .admin-card .admin-pills .is-gold b,
+#root .pm-main .admin-card .admin-entry__icon--gold { color: var(--pm-gold-ink); }
+#root .pm-main .admin-card .admin-banner {
+    color: var(--pm-gold-ink);
+    background: var(--pm-gold-soft);
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .admin-card .admin-feedback-open,
+#root .pm-main .admin-dash .admin-btn--gold {
+    color: #211707;
+    background: linear-gradient(135deg, #ffb454, #ffd08a);
+    border-color: #e3a044;
+}
+#root .pm-main .admin-card .admin-feedback-open:hover,
+#root .pm-main .admin-dash .admin-btn--gold:hover {
+    background: #ffd08a;
+    border-color: #bd832d;
+}
+#root .pm-main .admin-dash .admin-btn:not(.admin-btn--gold) {
+    color: var(--pm-ink);
+    background: #fff;
+    border-color: var(--pm-border);
+}
+#root .pm-main .admin-dash__visual {
+    background:
+        radial-gradient(90% 85% at 75% 90%, rgba(255,180,84,.17), transparent 58%),
+        linear-gradient(145deg, #17181b, #222329);
+    box-shadow: inset 0 0 0 1px rgba(255,180,84,.16);
+}
+
+/* Admin catalog cards: white reading surfaces and gold current/selected states. */
+#root .pm-main .ac-department-card:hover,
+#root .pm-main .ac-department-card.is-selected,
+#root .pm-main .ac-course-card:hover,
+#root .pm-main .ac-semester-card:hover {
+    background: #fff;
+    border-color: var(--pm-gold-line);
+    box-shadow: 0 8px 22px rgba(0,0,0,.08);
+}
+#root .pm-main .ac-subject-row:hover,
+#root .pm-main .ac-subject-row.is-selected {
+    background: var(--pm-gold-soft);
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .ac-subject-row__type { color: #655486; }
+#root .pm-main .ac-subject-row__type.is-departmental { color: var(--pm-gold-ink); }
+#root .pm-main .ac-step.is-active {
+    color: var(--pm-ink);
+    background: var(--pm-gold-soft);
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .ac-btn--primary {
+    color: #211707;
+    background: linear-gradient(135deg, #ffb454, #ffd08a);
+    border-color: #e3a044;
+}
+#root .pm-main .ac-btn--secondary {
+    color: var(--pm-ink);
+    background: #fff;
+    border-color: var(--pm-border);
+}
+#root .pm-main .ac-btn:hover { border-color: var(--pm-gold-line); }
+
+/* Leaderboard selector, filters, board and table. */
+#root .pm-main .lb-choice:hover,
+#root .pm-main .lb-step:not(:disabled):hover {
+    background: #fff;
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .lb-choice.is-selected,
+#root .pm-main .lb-step.is-active {
+    color: var(--pm-ink);
+    background: var(--pm-gold-soft);
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .lb-choice.is-locked {
+    color: #777a7d;
+    background: var(--pm-surface-inset);
+}
+#root .pm-main .lb-board__refresh {
+    color: #211707;
+    background: linear-gradient(135deg, #ffb454, #ffd08a);
+    border-color: #e3a044;
+}
+#root .pm-main .lb-board__clear {
+    color: var(--pm-ink);
+    background: #fff;
+    border-color: var(--pm-border);
+}
+
+/* Feedback inbox is light; moderation popovers deliberately stay charcoal. */
+#root .pm-main .admin-feedback-card,
+#root .pm-main .admin-spam-user {
+    color: var(--pm-ink);
+    background: var(--pm-surface-raised);
+    border-color: var(--pm-border);
+}
+#root .pm-main .admin-feedback-card:hover {
+    background: #fff;
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .admin-feedback-menu__panel {
+    background: #20222a;
+    border-color: rgba(255,255,255,.12);
+}
+#root .pm-main .admin-feedback-menu__panel button { color: #e4e5eb; }
+
+/* Guide pages: light reading cards, gold primary action. */
+#root .pm-main .guide-container .btn-primary {
+    color: #211707;
+    background: linear-gradient(135deg, #ffb454, #ffd08a);
+    box-shadow: 0 8px 20px rgba(255,180,84,.18);
+}
+
+/* Student course and subject selection cards. Landing domain tiles remain dark. */
+#root .pm-main .pm-course-card {
+    color: var(--pm-ink);
+    background: var(--pm-surface);
+    border-color: var(--pm-border);
+    box-shadow: 0 9px 22px rgba(0,0,0,.12);
+}
+#root .pm-main .pm-course-card .pm-course-name { color: var(--pm-ink); }
+#root .pm-main .pm-course-card__meta { color: var(--pm-text-muted); }
+#root .pm-main .pm-course-card__action { color: var(--pm-gold-ink); }
+#root .pm-main .pm-course-card:hover {
+    background: #fff;
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .pm-semester-button,
+#root .pm-main .pm-subject-trigger {
+    color: var(--pm-ink);
+    background: var(--pm-surface);
+    border-color: var(--pm-border);
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+#root .pm-main .pm-semester-button:hover,
+#root .pm-main .pm-subject-trigger:hover {
+    color: var(--pm-ink);
+    background: #fff;
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .pm-semester-button[aria-pressed="true"],
+#root .pm-main .pm-subject-trigger[aria-expanded="true"] {
+    color: var(--pm-ink);
+    background: var(--pm-gold-soft);
+    border-color: var(--pm-gold-line);
+}
+#root .pm-main .pm-semester-button span:last-child { color: var(--pm-text-muted); }
+
+/* Feedback-page inline styles keep their behavior but use the shared palette. */
+#root .pm-main .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel textarea {
+    color: var(--pm-ink) !important;
+    background: var(--pm-surface-inset) !important;
+    border-color: var(--pm-border) !important;
+}
+#root .pm-main .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel button[aria-pressed="true"] {
+    color: var(--pm-gold-ink) !important;
+    background: var(--pm-gold-soft) !important;
+    border-color: var(--pm-gold-line) !important;
+}
+#root .pm-main .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel button[aria-pressed="false"] {
+    color: var(--pm-text-muted) !important;
+    background: var(--pm-surface-inset) !important;
+    border-color: var(--pm-border) !important;
+}
+#root .pm-main .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel button[type="submit"] {
+    color: #211707 !important;
+    background: linear-gradient(135deg, #ffb454, #ffd08a) !important;
+    border: 1px solid #e3a044 !important;
+    box-shadow: 0 8px 20px rgba(255,180,84,.18) !important;
+}
+#root .pm-main .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel button[type="submit"]:disabled {
+    color: #777a7d !important;
+    background: var(--pm-surface-inset) !important;
+    border-color: var(--pm-border) !important;
+    box-shadow: none !important;
+    opacity: .75;
+}
+#root .pm-main .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel div[style*="139,92,246"] {
+    color: var(--pm-text-muted) !important;
+    background: var(--pm-gold-soft) !important;
+    border-color: var(--pm-gold-line) !important;
+}
+#root .pm-main .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel button:not([aria-pressed]):not([type="submit"]) {
+    color: var(--pm-gold-ink);
+}
+
+/* Explicitly retain the blue action styling of active exam/room controls. */
+#root .pm-main .pm-exam-question-step--next,
+#root .pm-main .pm-room-question-step--next {
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    #root .pm-main .admin-feedback-inbox__main,
+    #root .pm-main .admin-feedback-inbox__spam { padding: .8rem; }
+    #root .pm-main .ac-stepper,
+    #root .pm-main .ac-workspace { border-radius: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #root .pm-main .sd-card,
+    #root .pm-main .admin-card,
+    #root .pm-main .guide-card { transition: none !important; }
+}
