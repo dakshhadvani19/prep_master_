@@ -133,224 +133,186 @@ function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagr
     );
 }
 
-const LEGACY_HOME_STYLES = "/* ── Hero Section ────────────────────────────────────── */\n.hero-section {\n    position: relative;\n    min-height: 90vh;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    overflow: hidden;\n    padding: 6rem 2rem;\n}\n\n.hero-content {\n    position: relative;\n    z-index: 10;\n    text-align: center;\n    max-width: 900px;\n    margin: 0 auto;\n}\n\n.hero-badge {\n    display: inline-flex;\n    align-items: center;\n    gap: 0.5rem;\n    padding: 0.5rem 1.25rem;\n    background: rgba(59, 130, 246, 0.1);\n    border: 1px solid rgba(59, 130, 246, 0.2);\n    color: var(--accent-primary);\n    border-radius: var(--radius-full);\n    font-size: 0.875rem;\n    font-weight: 600;\n    margin-bottom: 2rem;\n    backdrop-filter: blur(10px);\n}\n\n.hero-title {\n    font-size: clamp(2.2rem, 7vw, 5rem);\n    line-height: 1.1;\n    letter-spacing: -0.03em;\n    margin-bottom: 1.5rem;\n    font-weight: 800;\n}\n\n.hero-description {\n    font-size: clamp(1rem, 2vw, 1.2rem);\n    color: var(--text-secondary);\n    max-width: 700px;\n    margin: 0 auto 3rem auto;\n    line-height: 1.6;\n    padding: 0 1rem;\n}\n\n.hero-actions {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 1.5rem;\n    flex-wrap: wrap;\n}\n\n.btn-primary {\n    background: var(--accent-gradient);\n    color: white;\n    padding: 1rem 2rem;\n    border-radius: var(--radius-full);\n    font-size: 1.05rem;\n    font-weight: 600;\n    display: flex;\n    align-items: center;\n    gap: 0.75rem;\n    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.5);\n}\n\n.btn-primary:hover {\n    transform: translateY(-3px) scale(1.02);\n    box-shadow: 0 20px 35px -5px rgba(59, 130, 246, 0.6);\n}\n\n.btn-secondary {\n    background: rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(255, 255, 255, 0.1);\n    color: var(--text-primary);\n    padding: 1rem 2rem;\n    border-radius: var(--radius-full);\n    font-size: 1.05rem;\n    font-weight: 600;\n    transition: all 0.3s ease;\n    backdrop-filter: blur(10px);\n}\n\n.btn-secondary:hover {\n    background: rgba(255, 255, 255, 0.1);\n    transform: translateY(-3px);\n}\n\n.btn-google-cta {\n    display: inline-flex;\n    align-items: center;\n    gap: 0.55rem;\n    background: rgba(255, 255, 255, 0.04);\n    border: 1px solid rgba(255, 255, 255, 0.12);\n    color: var(--text-primary);\n    padding: 0.85rem 1.75rem;\n    border-radius: var(--radius-full);\n    font-size: 0.95rem;\n    font-weight: 600;\n    transition: all 0.3s ease;\n    backdrop-filter: blur(10px);\n    cursor: pointer;\n    font-family: inherit;\n}\n\n.btn-google-cta:hover {\n    background: rgba(255, 255, 255, 0.09);\n    border-color: rgba(255, 255, 255, 0.2);\n    transform: translateY(-2px);\n}\n\n\n\n/* ── 3D Floating Elements ────────────────────────────── */\n.hero-shapes {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    perspective: 1000px;\n    z-index: 0;\n    pointer-events: none;\n}\n\n.floating-element {\n    position: absolute;\n    border-radius: var(--radius-lg);\n    background: rgba(255, 255, 255, 0.03);\n    border: 1px solid rgba(255, 255, 255, 0.05);\n    backdrop-filter: blur(10px);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);\n    transform-style: preserve-3d;\n}\n\n.el-1 {\n    top: 15%;\n    left: 4%;\n    width: 100px;\n    height: 100px;\n    animation: float3d 12s ease-in-out infinite;\n}\n\n.el-2 {\n    top: 60%;\n    left: 2%;\n    width: 70px;\n    height: 70px;\n    animation: float3d 15s ease-in-out infinite reverse;\n}\n\n.el-3 {\n    top: 20%;\n    right: 4%;\n    width: 130px;\n    height: 130px;\n    animation: float3d 18s ease-in-out infinite 2s;\n}\n\n.el-4 {\n    top: 70%;\n    right: 4%;\n    width: 90px;\n    height: 90px;\n    animation: float3d 14s ease-in-out infinite 1s reverse;\n}\n\n@keyframes float3d {\n\n    0%,\n    100% {\n        transform: translateY(0) rotateX(10deg) rotateY(10deg);\n    }\n\n    33% {\n        transform: translateY(-30px) rotateX(-5deg) rotateY(20deg);\n    }\n\n    66% {\n        transform: translateY(20px) rotateX(15deg) rotateY(-10deg);\n    }\n}\n\n/* ── Stats ───────────────────────────────────────────── */\n.stats-container {\n    display: flex;\n    justify-content: center;\n    gap: 3rem;\n    margin-top: 4rem;\n    flex-wrap: wrap;\n}\n\n.stat-item {\n    text-align: center;\n}\n\n.stat-number {\n    font-size: 2.8rem;\n    font-weight: 800;\n    background: var(--accent-gradient);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    margin-bottom: 0.5rem;\n}\n\n.stat-label {\n    color: var(--text-secondary);\n    font-size: 0.9rem;\n    font-weight: 500;\n    text-transform: uppercase;\n    letter-spacing: 0.05em;\n}\n\n/* ── Domains Section ─────────────────────────────────── */\n.domains-section {\n    padding: 5rem 2rem;\n    position: relative;\n    z-index: 5;\n    background: linear-gradient(to bottom, transparent, rgba(15, 17, 21, 1));\n}\n\n.section-header {\n    text-align: center;\n    margin-bottom: 3.5rem;\n}\n\n.domain-grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n    gap: 1.5rem;\n    max-width: 1200px;\n    margin: 0 auto;\n}\n\n.domain-card {\n    background: rgba(22, 24, 29, 0.6);\n    border: 1px solid rgba(255, 255, 255, 0.05);\n    border-radius: var(--radius-xl);\n    padding: 2rem;\n    position: relative;\n    overflow: hidden;\n    backdrop-filter: blur(20px);\n    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n    display: flex;\n    flex-direction: column;\n    min-height: 240px;\n}\n\n.domain-card::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.1), transparent 40%);\n    z-index: 0;\n    opacity: 0;\n    transition: opacity 0.3s;\n}\n\n.domain-card:hover {\n    transform: translateY(-8px) scale(1.02);\n    border-color: rgba(59, 130, 246, 0.3);\n    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7), 0 0 20px rgba(59, 130, 246, 0.1);\n}\n\n.domain-card:hover::before {\n    opacity: 1;\n}\n\n.domain-icon-wrapper {\n    width: 56px;\n    height: 56px;\n    border-radius: var(--radius-lg);\n    background: rgba(59, 130, 246, 0.1);\n    color: var(--accent-primary);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 1.25rem;\n    position: relative;\n    z-index: 1;\n    transition: all 0.3s ease;\n}\n\n.domain-card:hover .domain-icon-wrapper {\n    background: var(--accent-gradient);\n    color: white;\n    transform: scale(1.1) rotate(5deg);\n}\n\n.domain-title {\n    font-size: 1.35rem;\n    font-weight: 700;\n    margin-bottom: 0.75rem;\n    position: relative;\n    z-index: 1;\n}\n\n.domain-desc {\n    color: var(--text-secondary);\n    line-height: 1.6;\n    margin-bottom: 1.5rem;\n    flex-grow: 1;\n    position: relative;\n    z-index: 1;\n    font-size: 0.95rem;\n}\n\n.domain-link {\n    display: inline-flex;\n    align-items: center;\n    gap: 0.5rem;\n    color: var(--accent-primary);\n    font-weight: 600;\n    font-size: 0.95rem;\n    margin-top: auto;\n    position: relative;\n    z-index: 1;\n    transition: gap 0.3s;\n}\n\n.domain-card:hover .domain-link {\n    gap: 1rem;\n}\n\n/* ── Developer Section ───────────────────────────────── */\n.developer-section {\n    padding: 5rem 2rem;\n    position: relative;\n    z-index: 5;\n    background: linear-gradient(to top, rgba(15, 17, 21, 1), transparent);\n}\n\n.dev-cards-grid {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 2rem;\n    max-width: 1200px;\n    margin: 0 auto;\n}\n\n.dev-container {\n    background: rgba(22, 24, 29, 0.6);\n    border: 1px solid rgba(255, 255, 255, 0.05);\n    border-radius: var(--radius-2xl);\n    padding: 2.5rem;\n    backdrop-filter: blur(20px);\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    text-align: center;\n    gap: 2rem;\n    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);\n    position: relative;\n    overflow: hidden;\n}\n\n.dev-container::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 4px;\n    background: var(--accent-gradient);\n}\n\n.dev-avatar-wrapper {\n    position: relative;\n    width: 180px;\n    max-width: 180px;\n    perspective: 1000px;\n    margin: 0 auto;\n}\n\n.dev-avatar {\n    width: 100%;\n    aspect-ratio: 1;\n    object-fit: cover;\n    border-radius: 50%;\n    z-index: 2;\n    position: relative;\n    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);\n    border: 2px solid rgba(255, 255, 255, 0.1);\n    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n.dev-avatar-wrapper:hover .dev-avatar {\n    transform: rotateY(5deg) scale(1.05);\n}\n\n.dev-glow {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 120%;\n    height: 120%;\n    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);\n    z-index: 1;\n    filter: blur(20px);\n    animation: pulse 4s ease-in-out infinite;\n}\n\n@keyframes pulse {\n\n    0%,\n    100% {\n        transform: translate(-50%, -50%) scale(1);\n        opacity: 0.8;\n    }\n\n    50% {\n        transform: translate(-50%, -50%) scale(1.1);\n        opacity: 1;\n    }\n}\n\n.dev-info {\n    flex: 1;\n    width: 100%;\n}\n\n.dev-badge {\n    display: inline-block;\n    padding: 0.4rem 0.9rem;\n    background: rgba(59, 130, 246, 0.1);\n    color: var(--accent-primary);\n    border-radius: var(--radius-full);\n    font-size: 0.8rem;\n    font-weight: 600;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    margin-bottom: 1.25rem;\n}\n\n.dev-name {\n    font-size: clamp(2rem, 4vw, 3rem);\n    font-weight: 800;\n    margin-bottom: 0.4rem;\n    background: var(--text-primary);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n}\n\n.dev-studies {\n    font-size: 1.1rem;\n    color: var(--text-secondary);\n    font-weight: 500;\n    margin-bottom: 1.5rem;\n}\n\n.dev-passion {\n    display: flex;\n    flex-direction: column;\n    gap: 0.75rem;\n    align-items: center;\n    padding: 1.25rem;\n    background: rgba(255, 255, 255, 0.03);\n    border-radius: var(--radius-lg);\n    border: 1px solid rgba(255, 255, 255, 0.05);\n    margin-bottom: 2rem;\n    text-align: center;\n}\n\n.passion-icon {\n    color: inherit;\n    flex-shrink: 0;\n}\n\n.dev-passion p {\n    color: var(--text-secondary);\n    line-height: 1.6;\n    margin: 0;\n    font-size: 0.95rem;\n}\n\n.dev-passion strong {\n    color: var(--text-primary);\n}\n\n.dev-links {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 0.75rem;\n    justify-content: center;\n}\n\n.dev-link-btn {\n    display: inline-flex;\n    align-items: center;\n    gap: 0.6rem;\n    padding: 0.75rem 1.25rem;\n    border-radius: var(--radius-lg);\n    font-weight: 600;\n    font-size: 0.875rem;\n    transition: all 0.3s ease;\n    text-decoration: none;\n}\n\n.email-btn {\n    background: #ffffff;\n    color: #0f1115;\n}\n\n.email-btn:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 10px 20px -5px rgba(255, 255, 255, 0.2);\n}\n\n.github-btn {\n    background: #24292e;\n    color: white;\n}\n\n.github-btn:hover {\n    background: #2f363d;\n    transform: translateY(-2px);\n    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);\n}\n\n.linkedin-btn {\n    background: #0077b5;\n    color: white;\n}\n\n.linkedin-btn:hover {\n    background: #0088cc;\n    transform: translateY(-2px);\n    box-shadow: 0 10px 20px -5px rgba(0, 119, 181, 0.4);\n}\n\n.insta-btn {\n    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);\n    color: white;\n}\n\n.insta-btn:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 10px 20px -5px rgba(220, 39, 67, 0.4);\n}\n\n/* ══════════════════════════════════════════════════════\n   RESPONSIVE BREAKPOINTS\n══════════════════════════════════════════════════════ */\n\n/* Tablet & below — 1024px */\n@media (max-width: 1024px) {\n\n    .el-1,\n    .el-2,\n    .el-3,\n    .el-4 {\n        opacity: 0.5;\n    }\n\n    .domain-grid {\n        grid-template-columns: repeat(2, 1fr);\n    }\n}\n\n/* Tablet — 768px */\n@media (max-width: 768px) {\n    .hero-section {\n        padding: 5rem 1.25rem 3rem;\n        min-height: 80vh;\n    }\n\n    .hero-title {\n        font-size: clamp(2rem, 9vw, 3.2rem);\n    }\n\n    .hero-actions {\n        gap: 0.75rem;\n    }\n\n    .btn-primary,\n    .btn-secondary {\n        padding: 0.875rem 1.5rem;\n        font-size: 0.95rem;\n    }\n\n    .stats-container {\n        gap: 2rem;\n    }\n\n    .stat-number {\n        font-size: 2.2rem;\n    }\n\n    .domains-section {\n        padding: 3rem 1.25rem;\n    }\n\n    .domain-grid {\n        grid-template-columns: 1fr;\n        max-width: 500px;\n    }\n\n    .section-header h2 {\n        font-size: 2rem !important;\n    }\n\n    .developer-section {\n        padding: 3rem 1.25rem;\n    }\n\n    .dev-cards-grid {\n        grid-template-columns: 1fr;\n        max-width: 600px;\n        margin: 0 auto;\n    }\n\n    .dev-container {\n        padding: 2rem;\n        gap: 1.5rem;\n    }\n\n    .dev-avatar-wrapper {\n        max-width: 160px;\n        width: 160px;\n    }\n\n    .dev-info {\n        min-width: unset;\n        width: 100%;\n    }\n\n    .dev-passion {\n        text-align: center;\n    }\n\n    .dev-links {\n        justify-content: center;\n    }\n\n    .dev-link-btn {\n        padding: 0.65rem 1rem;\n        font-size: 0.82rem;\n    }\n\n    /* Hide large floating decorations on mobile */\n    .el-3,\n    .el-4 {\n        display: none;\n    }\n\n    .el-1 {\n        width: 60px;\n        height: 60px;\n        top: 8%;\n        left: 2%;\n    }\n\n    .el-2 {\n        width: 50px;\n        height: 50px;\n        top: 75%;\n        left: 1%;\n    }\n}\n\n/* Mobile — 480px */\n@media (max-width: 480px) {\n    .hero-section {\n        padding: 4rem 1rem 2.5rem;\n    }\n\n    .hero-title {\n        font-size: clamp(1.8rem, 11vw, 2.8rem);\n    }\n\n    .hero-description {\n        font-size: 0.95rem;\n        padding: 0;\n    }\n\n    .hero-badge {\n        font-size: 0.78rem;\n        padding: 0.4rem 0.9rem;\n    }\n\n    .btn-primary,\n    .btn-secondary {\n        width: 100%;\n        justify-content: center;\n    }\n\n    .hero-actions {\n        flex-direction: column;\n        gap: 0.75rem;\n    }\n\n    .stats-container {\n        gap: 1.5rem;\n    }\n\n    .stat-number {\n        font-size: 1.8rem;\n    }\n\n    .domain-card {\n        padding: 1.5rem;\n        min-height: 200px;\n    }\n\n    .domain-title {\n        font-size: 1.1rem;\n    }\n\n    .section-header h2 {\n        font-size: 1.6rem !important;\n    }\n\n    .section-header p {\n        font-size: 0.95rem !important;\n    }\n\n    .dev-container {\n        padding: 1.5rem;\n    }\n\n    .dev-avatar-wrapper {\n        width: 140px;\n        max-width: 140px;\n    }\n\n    .dev-name {\n        font-size: 1.8rem;\n    }\n\n    .dev-studies {\n        font-size: 0.95rem;\n    }\n\n    .dev-links {\n        gap: 0.5rem;\n    }\n\n    .dev-link-btn {\n        font-size: 0.78rem;\n        padding: 0.6rem 0.85rem;\n    }\n}\n\n/* Large screens — 1400px+ */\n@media (min-width: 1400px) {\n    .hero-section {\n        padding: 8rem 4rem;\n    }\n\n    .domain-grid {\n        grid-template-columns: repeat(3, 1fr);\n        gap: 2rem;\n        max-width: 1400px;\n    }\n\n    .dev-container {\n        padding: 3rem;\n    }\n\n    .dev-cards-grid {\n        max-width: 1400px;\n    }\n}\n/* Current study-desk illustration is retained inside the historical centered hero. */\n.hero-section { isolation: isolate; }\n.legacy-hero-art { position: absolute; z-index: 1; right: max(1rem, calc((100vw - 1320px) / 2)); top: 50%; width: min(34vw, 420px); transform: translateY(-46%); opacity: .36; pointer-events: none; filter: drop-shadow(0 18px 36px rgba(75,65,150,.18)); }\n.legacy-hero-art svg { display: block; width: 100%; height: auto; }\n.hero-content { z-index: 3; }\n.hero-badge { position: relative; z-index: 3; }\n.domain-icon-wrapper { overflow: hidden; }\n.domain-icon-wrapper .pm-domain-art { width: 116px; height: 92px; color: #b9adff; }\n.domain-icon-wrapper .pm-domain-art__accent { stroke: #a78bfa; }\n@media (max-width: 768px) { .legacy-hero-art { right: 50%; top: auto; bottom: -2.25rem; width: min(72vw, 360px); transform: translateX(50%); opacity: .16; } }\n@media (prefers-reduced-motion: reduce) { .legacy-hero-art { transition: none !important; } }";
+
+const MotionLink = motion(Link);
+
+function readLikePreference(key) {
+    try {
+        return JSON.parse(window.localStorage.getItem(key) || 'false') === true;
+    } catch {
+        return false;
+    }
+}
 
 export default function LandingPage() {
     const navigate = useNavigate();
-    const reduceMotion = useReducedMotion();
     const location = useLocation();
+    const reduceMotion = useReducedMotion();
+    const [liked, setLiked] = React.useState(() => readLikePreference('dev_liked'));
+    const [liked2, setLiked2] = React.useState(() => readLikePreference('dev_liked_2'));
 
-    // Developer Likes State
-    const [liked, setLiked] = React.useState(() => {
-        const saved = localStorage.getItem('dev_liked');
-        return saved ? JSON.parse(saved) : false;
-    });
-    const [liked2, setLiked2] = React.useState(() => {
-        const saved = localStorage.getItem('dev_liked_2');
-        return saved ? JSON.parse(saved) : false;
-    });
-
-    // SEO Injection dynamically for this page
     useEffect(() => {
-        document.title = "PrepMaster | University Exam Preparation Platform";
-
+        document.title = 'PrepMaster | University Exam Preparation';
         let metaDescription = document.querySelector('meta[name="description"]');
         if (!metaDescription) {
             metaDescription = document.createElement('meta');
-            metaDescription.name = "description";
+            metaDescription.name = 'description';
             document.head.appendChild(metaDescription);
         }
-        metaDescription.content = "Prepare for university exams including B.Tech, BCA, Law, and Diploma levels. Get 98% accurate syllabus-based questions covering Engineering, Management, Pharmacy, and Arts globally.";
+        metaDescription.content = 'Explore academic programs, courses, semesters and syllabus-led examination practice with PrepMaster.';
     }, []);
 
-    // Scroll to contact section when navigated here with scrollToContact state
     useEffect(() => {
-        if (location.state?.scrollToContact) {
-            const el = document.getElementById('contact');
-            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Clear the state so a refresh doesn't re-trigger the scroll
-            window.history.replaceState({}, '', location.pathname);
-        }
-    }, [location.state]);
+        if (!location.state?.scrollToContact) return;
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.history.replaceState({}, '', location.pathname);
+    }, [location.pathname, location.state]);
 
-    // Staggered animation variant
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
+    const updateLike = (key, setter, value) => {
+        setter(value);
+        try {
+            window.localStorage.setItem(key, JSON.stringify(value));
+        } catch {
+            // Appreciation still works when browser storage is unavailable.
         }
     };
 
-    const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+    const handleMouseMove = (event) => {
+        const card = event.target.closest?.('.domain-card');
+        if (!card) return;
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', (event.clientX - rect.left) + 'px');
+        card.style.setProperty('--mouse-y', (event.clientY - rect.top) + 'px');
+    };
+
+    const heroSequence = {
+        hidden: {},
+        visible: { transition: { staggerChildren: 0.11, delayChildren: 0.08 } },
+    };
+    const heroReveal = {
+        hidden: { opacity: 0, y: 18, filter: 'blur(5px)' },
         visible: {
+            opacity: 1,
             y: 0,
-            opacity: 1,
-            transition: { type: "spring", stiffness: 100, damping: 12 }
-        }
-    };
-
-    const handleMouseMove = e => {
-        for (const card of document.getElementsByClassName("domain-card")) {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty("--mouse-x", `${x}px`);
-            card.style.setProperty("--mouse-y", `${y}px`);
-        }
+            filter: 'blur(0px)',
+            transition: { duration: 0.66, ease: smoothEase },
+        },
     };
 
     return (
-        <main onMouseMove={handleMouseMove}>
-            <style>{LEGACY_HOME_STYLES}</style>
-            {/* 3D Floating Hero Background Elements */}
-            <div className="hero-shapes">
-                <div className="floating-element el-1"><Icons.Code size={48} color="#3b82f6" /></div>
-                <div className="floating-element el-2"><Icons.Database size={32} color="#8b5cf6" /></div>
-                <div className="floating-element el-3"><Icons.Activity size={64} color="#10b981" /></div>
-                <div className="floating-element el-4"><Icons.Cpu size={40} color="#ec4899" /></div>
+        <main className="pm-home-refresh" onMouseMove={handleMouseMove}>
+            <div className="pm-home-shell">
+                <motion.section
+                    className="pm-home-hero"
+                    aria-labelledby="pm-home-title"
+                    variants={heroSequence}
+                    initial={reduceMotion ? false : 'hidden'}
+                    animate="visible"
+                >
+                    <motion.div className="pm-home-copy" variants={heroSequence}>
+                        <motion.p className="pm-home-kicker" variants={heroReveal}>
+                            A clearer way to prepare
+                        </motion.p>
+                        <motion.h1 id="pm-home-title" className="pm-home-title" variants={heroReveal}>
+                            Make every study session count.
+                        </motion.h1>
+                        <motion.p className="pm-home-description" variants={heroReveal}>
+                            Find your academic program, move through your semester and practise with exams shaped around your subject syllabus. Your next focused session starts here.
+                        </motion.p>
+                        <motion.div className="pm-home-actions" variants={heroReveal}>
+                            <motion.a
+                                className="pm-home-primary"
+                                href="#programs"
+                                whileHover={reduceMotion ? undefined : { y: -2, scale: 1.015 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
+                                transition={{ duration: 0.24, ease: smoothEase }}
+                            >
+                                Explore Programs <ArrowDown size={17} />
+                            </motion.a>
+                            <motion.button
+                                className="pm-home-secondary"
+                                type="button"
+                                onClick={() => navigate('/test-rooms')}
+                                whileHover={reduceMotion ? undefined : { y: -2 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
+                                transition={{ duration: 0.24, ease: smoothEase }}
+                            >
+                                Join Test Room <ArrowUpRight size={16} />
+                            </motion.button>
+                        </motion.div>
+                        <motion.div className="pm-home-proof" aria-label="How PrepMaster is organised" variants={heroReveal}>
+                            <span><Check size={15} /> 6 academic domains</span>
+                            <span><Check size={15} /> Course-led catalog</span>
+                            <span><Check size={15} /> Syllabus-based practice</span>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div
+                        className="pm-home-art-wrap"
+                        initial={reduceMotion ? false : { opacity: 0, scale: 0.96, filter: 'blur(5px)' }}
+                        animate={reduceMotion
+                            ? { opacity: 1 }
+                            : { opacity: 1, scale: 1, filter: 'blur(0px)', y: [0, -7, 0] }}
+                        transition={reduceMotion
+                            ? { duration: 0 }
+                            : {
+                                opacity: { duration: 0.8, ease: smoothEase },
+                                scale: { duration: 0.9, ease: smoothEase },
+                                filter: { duration: 0.8 },
+                                y: { duration: 9, repeat: Infinity, ease: 'easeInOut' },
+                            }}
+                        aria-hidden="true"
+                    >
+                        <StudyDeskArtwork />
+                    </motion.div>
+                </motion.section>
             </div>
 
-            <header className="hero-section">
-                <motion.div
-                    className="hero-content"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <motion.p
-                        className="legacy-home-kicker"
-                        initial={reduceMotion ? false : { opacity: 0, y: -14 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.55 }}
-                    >
-                        A clearer way to prepare
-                    </motion.p>
+            <div className="pm-home-rule" />
 
-                    <motion.h1
-                        className="hero-title"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                    >
-                        Master MU Exams <br />
-                        With <span className="text-gradient">Surgical Precision</span>.
-                    </motion.h1>
-
-                    <motion.p
-                        className="hero-description"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6, duration: 0.8 }}
-                    >
-                        Generate hyper-accurate, 98% syllabus-matched mock examinations instantly. From strict subjective 7/14 marker questions to deeply technical complex MCQ objective sets across B.Tech, Diploma, Pharmacy, and Law degrees.
-                    </motion.p>
-
+            <section id="programs" className="pm-programs">
+                <div className="pm-home-shell">
                     <motion.div
-                        className="hero-actions"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8, duration: 0.6 }}
-                    >
-                        <button className="btn-primary" onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}>
-                            Explore Programs <Icons.ChevronDown size={20} />
-                        </button>
-                        <button className="btn-secondary" onClick={() => navigate('/test-rooms')}>
-                            Join Test Room
-                        </button>
-                        {/* <button className="btn-google-cta" onClick={() => navigate('/signup?mode=signup&method=google')}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
-                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                            </svg>
-                            Continue with Google
-                        </button> */}
-                    </motion.div>
-
-                    <motion.div
-                        className="stats-container"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.2, duration: 1 }}
-                    >
-                        {/* <div className="stat-item">
-                            <div className="stat-number">6+</div>
-                            <div className="stat-label">Global Faculties</div>
-                        </div> */}
-                        <div className="stat-item">
-                            <div className="stat-number">98%</div>
-                            <div className="stat-label">Syllabus Accuracy</div>
-                        </div>
-                        <div className="stat-item">
-                            <div className="stat-number">20+</div>
-                            <div className="stat-label">Degree Programs</div>
-                        </div>
-                    </motion.div>
-                </motion.div> 
-                <motion.div
-                    className="legacy-hero-art"
-                    initial={reduceMotion ? false : { opacity: 0, scale: .96, y: 12 }}
-                    animate={reduceMotion ? { opacity: .16 } : { opacity: .36, scale: 1, y: [0, -8, 0] }}
-                    transition={reduceMotion ? { duration: 0 } : { opacity: { duration: .9 }, scale: { duration: .9 }, y: { duration: 9, repeat: Infinity, ease: 'easeInOut' } }}
-                    aria-hidden="true"
-                >
-                    <StudyDeskArtwork />
-                </motion.div>
-            </header>
-
-            <section className="domains-section">
-                <div className="section-header">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
+                        className="pm-section-head"
+                        initial={reduceMotion ? false : { opacity: 0, y: 14 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1rem' }}
+                        viewport={{ once: true, amount: 0.6 }}
+                        transition={{ duration: 0.65, ease: smoothEase }}
                     >
-                        Select Your Academic <span className="text-gradient">Domain</span>
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}
-                    >
-                        Choose your discipline below to instantly generate accurate exams.
-                    </motion.p>
-                </div>
+                        <h2>Select Your Academic Domain</h2>
+                        <p>Choose your discipline below to browse its courses and start preparing for your examinations.</p>
+                    </motion.div>
 
-                <motion.div
-                    className="domain-grid"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                >
-                    {domains.map(domain => {
-                        
-                        return (
-                            <motion.article key={domain.id} variants={itemVariants}>
-                                <Link to={`/domains/${domain.id}/courses`} className="domain-card pm-domain-card">
-                                    <div className="domain-icon-wrapper">
-                                        <DomainArtwork id={domain.id} />
-                                    </div>
-                                    <h3 className="domain-title">{domain.title}</h3>
-                                    <p className="domain-desc">{domain.description}</p>
-                                    <span className="domain-link">
-                                        Explore Courses <Icons.ArrowRight size={18} />
+                    <motion.div
+                        className="pm-domain-grid"
+                        variants={cardSequence}
+                        initial={reduceMotion ? false : 'hidden'}
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.12 }}
+                    >
+                        {domains.map((domain) => (
+                            <MotionLink
+                                key={domain.id}
+                                to={'/domains/' + domain.id + '/courses'}
+                                className="domain-card pm-domain-card"
+                                variants={cardReveal}
+                                whileHover={reduceMotion ? undefined : { y: -7, scale: 1.012 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
+                                transition={{ duration: 0.34, ease: smoothEase }}
+                            >
+                                <div className="pm-domain-art-wrap">
+                                    <DomainArtwork id={domain.id} />
+                                </div>
+                                <div className="pm-domain-content">
+                                    <h3>{domain.title}</h3>
+                                    <p>{domain.description}</p>
+                                    <span className="pm-domain-open">
+                                        Explore Courses <ArrowUpRight size={16} />
                                     </span>
-                                </Link>
-                            </motion.article>
-                        )
-                    })}
-                </motion.div>
+                                </div>
+                            </MotionLink>
+                        ))}
+                    </motion.div>
+                </div>
             </section>
 
             <section id="contact" className="pm-people-section">
@@ -396,6 +358,6 @@ export default function LandingPage() {
                     </motion.div>
                 </div>
             </section>
-        </main >
+        </main>
     );
 }
