@@ -61,8 +61,8 @@ function StudyDeskArtwork() {
                 </filter>
             </defs>
             <path d="M70 100C145 22 291 15 401 65s190 119 179 229-105 164-228 164S78 394 47 289 1 175 70 100Z" fill="url(#pm-paper-grid)" stroke="#ffffff" strokeOpacity=".08" />
-            <circle cx="470" cy="104" r="78" fill="none" stroke="#ffb454" strokeOpacity=".22" />
-            <circle cx="470" cy="104" r="58" fill="none" stroke="#ffb454" strokeOpacity=".6" strokeWidth="5" strokeDasharray="250 115" transform="rotate(-92 470 104)" />
+            <circle cx="470" cy="104" r="78" fill="none" stroke="#ffc06a" strokeOpacity=".22" />
+            <circle cx="470" cy="104" r="58" fill="none" stroke="#ffc06a" strokeOpacity=".6" strokeWidth="5" strokeDasharray="250 115" transform="rotate(-92 470 104)" />
             <g filter="url(#pm-paper-shadow)" transform="rotate(-5 280 250)">
                 <rect x="116" y="74" width="322" height="390" rx="12" fill="#20242b" stroke="#aeb5bf" />
                 <rect x="133" y="92" width="288" height="354" rx="5" fill="#ffffff" />
@@ -106,8 +106,8 @@ function StudyDeskArtwork() {
                 <path d="M511 468l8.5 18 8.5-18Z" fill="#f0f2f5" />
                 <path d="M517 480l2.5 6 2.5-6Z" fill="#35302a" />
             </g>
-            <g fill="#ffb454"><circle cx="100" cy="367" r="4" /><circle cx="555" cy="162" r="3" /></g>
-            <path d="M85 390l16-16M85 374l16 16" stroke="#ffb454" strokeOpacity=".65" strokeWidth="1.5" strokeLinecap="round" />
+            <g fill="#ffc06a"><circle cx="100" cy="367" r="4" /><circle cx="555" cy="162" r="3" /></g>
+            <path d="M85 390l16-16M85 374l16 16" stroke="#ffc06a" strokeOpacity=".65" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
     );
 }
@@ -269,7 +269,7 @@ export default function LandingPage() {
                                 to={'/domains/' + domain.id + '/courses'}
                                 className="pm-domain-card"
                                 variants={cardReveal}
-                                whileHover={reduceMotion ? undefined : { y: -5, scale: 1.008 }}
+                                whileHover={reduceMotion ? undefined : { y: -3, scale: 1.005 }}
                                 whileTap={reduceMotion ? undefined : { scale: 0.99 }}
                                 transition={{ duration: 0.32, ease: smoothEase }}
                             >

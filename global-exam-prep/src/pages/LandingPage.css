@@ -1,13 +1,13 @@
 /* PrepMaster student visual system — study-desk warmth, soft depth, deliberate motion. */
 .pm-home-refresh,
 .pm-catalog-page {
-    --pm-gold: #ffb454;
-    --pm-gold-bright: #ffd08a;
-    --pm-glass-border: rgba(226,223,241,.24);
-    --pm-glass-surface: rgba(122,124,145,.24);
-    --pm-glass-deep: rgba(37,40,51,.70);
-    --pm-glass-highlight: rgba(239,236,251,.22);
-    --pm-glass-lavender: rgba(171,162,199,.13);
+    --pm-gold: #ffc06a;
+    --pm-gold-bright: #ffd696;
+    --pm-glass-border: rgba(232,229,244,.19);
+    --pm-glass-surface: rgba(15,17,21,.58);
+    --pm-glass-deep: rgba(15,17,21,.85);
+    --pm-glass-highlight: rgba(245,242,255,.13);
+    --pm-glass-lavender: rgba(178,170,204,.10);
     --pm-muted: #aeb4bf;
     color: #fff;
 }
@@ -20,7 +20,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     background:
-        radial-gradient(700px 420px at 89% 8%, rgba(255,180,84,.105), transparent 68%),
+        radial-gradient(700px 420px at 89% 8%, rgba(255,192,106,.105), transparent 68%),
         radial-gradient(640px 380px at 0% 34%, rgba(255,255,255,.05), transparent 68%);
 }
 .pm-home-refresh *,
@@ -44,7 +44,7 @@
 }
 .pm-home-kicker::before {
     content: ""; width: 30px; height: 1px; background: var(--pm-gold);
-    box-shadow: 0 0 10px rgba(255,180,84,.42);
+    box-shadow: 0 0 10px rgba(255,192,106,.42);
 }
 .pm-home-title {
     max-width: 640px; margin: 0 0 22px; color: var(--pm-home-white);
@@ -73,13 +73,13 @@
     background: linear-gradient(180deg,#ffffff 0%,#edf0f4 100%);
     border: 1px solid rgba(255,255,255,.92);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.98), inset 0 -1px 0 rgba(20,24,30,.06),
-        0 8px 22px rgba(0,0,0,.2), 0 8px 26px rgba(255,180,84,.12);
+        0 8px 22px rgba(0,0,0,.2), 0 8px 26px rgba(255,192,106,.12);
 }
 .pm-home-primary:hover {
-    color: #17191d; border-color: rgba(255,208,138,.82);
+    color: #17191d; border-color: rgba(255,214,150,.82);
     filter: brightness(1.035); transform: translateY(-1px);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.98), 0 12px 30px rgba(0,0,0,.2),
-        0 10px 30px rgba(255,180,84,.2);
+        0 10px 30px rgba(255,192,106,.2);
 }
 .pm-home-secondary {
     color: #f7f8fa;
@@ -90,33 +90,33 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 8px 22px rgba(0,0,0,.15);
 }
 .pm-home-secondary:hover {
-    color: #fff; border-color: rgba(255,208,138,.58);
-    background: linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,180,84,.055));
+    color: #fff; border-color: rgba(255,214,150,.58);
+    background: linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,192,106,.055));
     box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 10px 28px rgba(0,0,0,.2),
-        0 8px 24px rgba(255,180,84,.1);
+        0 8px 24px rgba(255,192,106,.1);
 }
 .pm-home-proof { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 34px; color: #c3c9d2; font-size: 13px; }
 .pm-home-proof span { display: inline-flex; align-items: center; gap: 8px; }
-.pm-home-proof svg { color: var(--pm-gold); filter: drop-shadow(0 0 7px rgba(255,180,84,.22)); }
+.pm-home-proof svg { color: var(--pm-gold); filter: drop-shadow(0 0 7px rgba(255,192,106,.22)); }
 .pm-home-art-wrap { position: relative; min-width: 0; display: grid; place-items: center; transform: translateZ(0); }
 .pm-home-art-wrap::before {
     content: ""; position: absolute; width: 82%; aspect-ratio: 1;
-    border: 1px solid rgba(255,180,84,.2); border-radius: 50%;
+    border: 1px solid rgba(255,192,106,.2); border-radius: 50%;
     transform: rotate(-18deg) scaleY(.72);
-    box-shadow: 0 0 80px rgba(255,180,84,.065), inset 0 0 40px rgba(255,180,84,.035);
+    box-shadow: 0 0 80px rgba(255,192,106,.065), inset 0 0 40px rgba(255,192,106,.035);
 }
 .pm-home-art-wrap::after {
     content: ""; position: absolute; width: 91%; height: 1px;
-    background: linear-gradient(90deg,transparent,rgba(255,208,138,.3),transparent);
+    background: linear-gradient(90deg,transparent,rgba(255,214,150,.3),transparent);
     top: 50%; transform: rotate(-19deg);
 }
 .pm-home-artwork {
     position: relative; z-index: 1; width: 100%; max-width: 620px; height: auto; overflow: visible;
-    filter: drop-shadow(0 12px 28px rgba(255,180,84,.08));
+    filter: drop-shadow(0 12px 28px rgba(255,192,106,.08));
 }
 .pm-home-rule {
     height: 1px; width: min(1240px,calc(100% - 64px)); margin: 0 auto;
-    background: linear-gradient(90deg,rgba(255,180,84,.38),rgba(255,255,255,.09) 52%,transparent);
+    background: linear-gradient(90deg,rgba(255,192,106,.38),rgba(255,255,255,.09) 52%,transparent);
 }
 
 /* Department cards: same dimensions, with the subject illustration as the visual anchor. */
@@ -144,13 +144,13 @@
 }
 .pm-domain-card:hover {
     color: #fff;
-    border-color: rgba(255,180,84,.76);
+    border-color: rgba(255,192,106,.76);
     background: #333b46;
     box-shadow:
         inset 0 1.5px 0 rgba(255,255,255,.28),
         inset 0 -1px 0 rgba(0,0,0,.2),
         0 22px 48px rgba(0,0,0,.4),
-        0 5px 16px rgba(255,180,84,.11);
+        0 5px 16px rgba(255,192,106,.11);
 }
 
 .pm-domain-art-wrap {
@@ -160,13 +160,13 @@
 }
 .pm-domain-art-wrap::after {
     content: ""; position: absolute; width: 128px; height: 1px; bottom: 10px;
-    background: rgba(255,180,84,.58);
+    background: rgba(255,192,106,.58);
 }
 .pm-domain-art {
     width: 174px; height: 116px; color: #ffffff;
     filter: drop-shadow(0 3px 8px rgba(0,0,0,.2));
 }
-.pm-domain-art__accent { stroke: var(--pm-gold-bright); filter: drop-shadow(0 0 5px rgba(255,180,84,.32)); }
+.pm-domain-art__accent { stroke: var(--pm-gold-bright); filter: drop-shadow(0 0 5px rgba(255,192,106,.32)); }
 .pm-domain-content { display: flex; flex-direction: column; flex: 1; position: relative; z-index: 1; padding: 12px 4px 1px; }
 .pm-domain-card h3 { margin: 0 0 7px; color: #fff; font-size: 17px; font-weight: 620; letter-spacing: -.025em; line-height: 1.3; }
 .pm-domain-card p { min-height: 40px; margin: 0; color: #c1c7d0; font-size: 13px; line-height: 1.58; }
@@ -198,7 +198,7 @@
     border: 1px solid rgba(255,255,255,.12); border-radius: 22px;
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,.16),
-        inset 0 -1px 0 rgba(255,180,84,.035),
+        inset 0 -1px 0 rgba(255,192,106,.035),
         0 18px 42px rgba(0,0,0,.22);
 }
 .pm-people-identity { position: relative; display: flex; align-items: center; gap: 15px; padding-right: 42px; }
@@ -214,7 +214,7 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,.16),0 5px 12px rgba(0,0,0,.16);
     transition: background .25s ease,border-color .25s ease,box-shadow .25s ease;
 }
-.pm-people-like:hover,.pm-people-like[aria-pressed="true"] { background: rgba(255,180,84,.14); border-color: rgba(255,208,138,.5); box-shadow: 0 6px 18px rgba(255,180,84,.1); }
+.pm-people-like:hover,.pm-people-like[aria-pressed="true"] { background: rgba(255,192,106,.14); border-color: rgba(255,214,150,.5); box-shadow: 0 6px 18px rgba(255,192,106,.1); }
 .pm-people-passion { min-height: 44px; margin: 17px 0 16px; color: #cbd1da; font-size: 13px; line-height: 1.62; }
 .pm-people-links { display: flex; flex-wrap: wrap; gap: 8px; }
 .pm-people-links a {
@@ -226,9 +226,9 @@
     transition: background .25s ease,border-color .25s ease,transform .25s ease,color .25s ease;
 }
 .pm-people-links a:hover {
-    color: #fff; border-color: rgba(255,208,138,.48);
-    background: linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,180,84,.065));
-    box-shadow: 0 7px 20px rgba(255,180,84,.08); transform: translateY(-1px);
+    color: #fff; border-color: rgba(255,214,150,.48);
+    background: linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,192,106,.065));
+    box-shadow: 0 7px 20px rgba(255,192,106,.08); transform: translateY(-1px);
 }
 .pm-home-refresh a:focus-visible,
 .pm-home-refresh button:focus-visible,
@@ -244,7 +244,7 @@
 .pm-catalog-page::before {
     content: ""; position: absolute; z-index: -1; pointer-events: none;
     top: -70px; right: -8%; width: 420px; height: 300px;
-    background: radial-gradient(ellipse,rgba(255,180,84,.075),transparent 69%);
+    background: radial-gradient(ellipse,rgba(255,192,106,.075),transparent 69%);
     filter: blur(12px);
 }
 .pm-catalog-back {
@@ -287,15 +287,15 @@
     transition: border-color .24s ease,background-color .24s ease,box-shadow .24s ease,transform .24s ease;
 }
 .pm-course-card:hover {
-    color: #fff; border-color: rgba(255,180,84,.72); background: #333b46;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.25),0 21px 42px rgba(0,0,0,.38),0 5px 15px rgba(255,180,84,.09);
+    color: #fff; border-color: rgba(255,192,106,.72); background: #333b46;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.25),0 21px 42px rgba(0,0,0,.38),0 5px 15px rgba(255,192,106,.09);
 }
 
 .pm-course-card__top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 24px; }
 .pm-course-mark {
     width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px;
     color: var(--pm-gold-bright); background: #403526;
-    border: 1px solid rgba(255,208,138,.48); box-shadow: inset 0 1px 0 rgba(255,255,255,.16),0 6px 12px rgba(0,0,0,.2);
+    border: 1px solid rgba(255,214,150,.48); box-shadow: inset 0 1px 0 rgba(255,255,255,.16),0 6px 12px rgba(0,0,0,.2);
 }
 .pm-course-count {
     padding: 7px 11px; color: #f1f3f6; font-size: 11px; font-weight: 600;
@@ -320,8 +320,8 @@
 .pm-subject-header__title { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
 .pm-subject-header__mark {
     width: 46px; height: 46px; display: grid; place-items: center; flex: 0 0 46px;
-    color: var(--pm-gold-bright); background: linear-gradient(145deg,rgba(255,208,138,.18),rgba(255,180,84,.06));
-    border: 1px solid rgba(255,208,138,.27); border-radius: 14px;
+    color: var(--pm-gold-bright); background: linear-gradient(145deg,rgba(255,214,150,.18),rgba(255,192,106,.06));
+    border: 1px solid rgba(255,214,150,.27); border-radius: 14px;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.16),0 6px 15px rgba(0,0,0,.15);
 }
 .pm-subject-header h1 { margin: 0; font-size: clamp(27px,3.5vw,39px); }
@@ -343,8 +343,8 @@
     transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.24),0 13px 25px rgba(0,0,0,.34);
 }
 .pm-semester-button[aria-pressed="true"] {
-    color: #ffffff; border-color: rgba(255,180,84,.82); background: #3b3226;
-    box-shadow: inset 0 1px 0 rgba(255,228,190,.2),0 9px 24px rgba(0,0,0,.3),0 0 0 1px rgba(255,180,84,.18);
+    color: #ffffff; border-color: rgba(255,192,106,.82); background: #3b3226;
+    box-shadow: inset 0 1px 0 rgba(255,228,190,.2),0 9px 24px rgba(0,0,0,.3),0 0 0 1px rgba(255,192,106,.18);
 }
 .pm-semester-button span:last-child { color: #d0d5dd; font-size: 12px; font-weight: 500; }
 .pm-semester-button[aria-pressed="true"] span:last-child { color: var(--pm-gold-bright); }
@@ -366,9 +366,9 @@
 .pm-subject-trigger > div svg { flex: 0 0 auto; color: var(--pm-gold-bright); }
 .pm-subject-trigger:hover { color: #fff; border-color: rgba(255,255,255,.42); background: #343c47; transform: translateY(-1px); }
 .pm-subject-trigger[aria-expanded="true"] {
-    color: #fff; border-color: rgba(255,180,84,.82);
+    color: #fff; border-color: rgba(255,192,106,.82);
     background: #3b3226;
-    box-shadow: inset 0 1px 0 rgba(255,228,190,.18),0 10px 24px rgba(0,0,0,.3),0 0 0 1px rgba(255,180,84,.14);
+    box-shadow: inset 0 1px 0 rgba(255,228,190,.18),0 10px 24px rgba(0,0,0,.3),0 0 0 1px rgba(255,192,106,.14);
     border-radius: 15px 15px 9px 9px;
 }
 .pm-subject-trigger > svg { color: #e3e6eb; transition: transform .3s cubic-bezier(.22,1,.36,1),color .25s ease; }
@@ -381,163 +381,217 @@
 }
 
 /*
- * Student catalog glass material.
- * Content cards stay dark enough for readable copy; the gray/lavender cast is
- * deliberately muted so the graphite page remains the dominant color.
+ * Homepage/catalog Liquid Glass.
+ * Use the navbar's translucent graphite base as the material reference, with a
+ * faint cool-lavender cast. Surface depth comes from blur, translucency and a
+ * narrow inner rim — not from a heavy drop shadow.
  */
 .pm-home-refresh .pm-domain-card,
 .pm-catalog-page .pm-course-card,
 .pm-catalog-page .pm-semester-button,
 .pm-catalog-page .pm-subject-trigger {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #f7f7fb;
     border-color: var(--pm-glass-border);
-    background-color: rgba(65, 68, 82, .56);
-    -webkit-backdrop-filter: blur(22px) saturate(1.28);
-    backdrop-filter: blur(22px) saturate(1.28);
+    background:
+        radial-gradient(125% 115% at 10% -8%, rgba(196,192,220,.12), transparent 58%),
+        linear-gradient(148deg, rgba(15,17,21,.78) 0%, rgba(45,47,61,.58) 52%, rgba(15,17,21,.84) 100%);
+    -webkit-backdrop-filter: blur(18px) saturate(1.42);
+    backdrop-filter: blur(18px) saturate(1.42);
     box-shadow:
-        inset 0 1px 0 var(--pm-glass-highlight),
-        inset 1px 0 0 rgba(232,229,246,.07),
-        inset 0 -1px 0 rgba(8,10,15,.42),
-        0 16px 38px rgba(0,0,0,.31);
+        inset 0 1px 0 rgba(248,246,255,.13),
+        inset 1px 0 0 rgba(235,232,249,.045);
+    transition:
+        background-color .55s ease,
+        border-color .42s ease,
+        box-shadow .42s ease,
+        transform .58s cubic-bezier(.22,1,.36,1);
 }
 
-.pm-home-refresh .pm-domain-card {
-    background:
-        radial-gradient(125% 90% at 7% 0%, rgba(218,214,237,.18), transparent 58%),
-        linear-gradient(145deg, rgba(151,151,171,.23), rgba(89,94,111,.20) 48%, rgba(33,37,47,.72));
+.pm-home-refresh .pm-domain-card::before,
+.pm-home-refresh .pm-domain-card::after,
+.pm-catalog-page .pm-course-card::before,
+.pm-catalog-page .pm-course-card::after,
+.pm-catalog-page .pm-semester-button::before,
+.pm-catalog-page .pm-semester-button::after,
+.pm-catalog-page .pm-subject-trigger::before,
+.pm-catalog-page .pm-subject-trigger::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
 }
-.pm-home-refresh .pm-domain-card:hover {
-    border-color: rgba(255,180,84,.62);
+
+.pm-home-refresh .pm-domain-card::before,
+.pm-catalog-page .pm-course-card::before,
+.pm-catalog-page .pm-semester-button::before,
+.pm-catalog-page .pm-subject-trigger::before {
+    inset: -38% -24%;
+    opacity: .62;
     background:
-        radial-gradient(125% 90% at 7% 0%, rgba(224,219,241,.22), transparent 58%),
-        linear-gradient(145deg, rgba(166,164,184,.29), rgba(97,101,119,.24) 48%, rgba(38,42,52,.76));
+        radial-gradient(ellipse at 24% 34%, rgba(198,194,222,.16), transparent 40%),
+        radial-gradient(ellipse at 78% 72%, rgba(255,192,106,.055), transparent 36%);
+    transform: translate3d(-3%,-1%,0) rotate(-5deg) scale(.98);
+    transition: opacity .65s ease, transform .9s cubic-bezier(.22,1,.36,1);
+}
+
+.pm-home-refresh .pm-domain-card::after,
+.pm-catalog-page .pm-course-card::after,
+.pm-catalog-page .pm-semester-button::after,
+.pm-catalog-page .pm-subject-trigger::after {
+    top: -55%;
+    bottom: -55%;
+    left: -82%;
+    width: 44%;
+    opacity: 0;
+    background: linear-gradient(100deg, transparent, rgba(247,245,255,.055) 48%, rgba(255,214,150,.055) 58%, transparent);
+    transform: translate3d(0,0,0) rotate(18deg);
+    transition: opacity .5s ease, transform 1.15s cubic-bezier(.22,1,.36,1);
+}
+
+.pm-home-refresh .pm-domain-card > *,
+.pm-catalog-page .pm-course-card > *,
+.pm-catalog-page .pm-semester-button > *,
+.pm-catalog-page .pm-subject-trigger > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes pm-catalog-liquid-drift {
+    from { transform: translate3d(-3%,-1%,0) rotate(-5deg) scale(.98); }
+    to { transform: translate3d(4%,3%,0) rotate(3deg) scale(1.035); }
+}
+
+.pm-home-refresh .pm-domain-card:hover,
+.pm-home-refresh .pm-domain-card:focus-visible,
+.pm-catalog-page .pm-course-card:hover,
+.pm-catalog-page .pm-course-card:focus-visible,
+.pm-catalog-page .pm-semester-button:hover,
+.pm-catalog-page .pm-semester-button:focus-visible,
+.pm-catalog-page .pm-subject-trigger:hover,
+.pm-catalog-page .pm-subject-trigger:focus-visible {
+    color: #fff;
+    border-color: rgba(255,192,106,.46);
     box-shadow:
-        inset 0 1px 0 rgba(247,244,255,.29),
-        inset 0 -1px 0 rgba(8,10,15,.42),
-        0 21px 45px rgba(0,0,0,.38),
-        0 4px 15px rgba(255,180,84,.07);
+        inset 0 1px 0 rgba(250,247,255,.17),
+        inset 1px 0 0 rgba(244,224,194,.06);
+}
+
+.pm-home-refresh .pm-domain-card:hover::before,
+.pm-home-refresh .pm-domain-card:focus-visible::before,
+.pm-catalog-page .pm-course-card:hover::before,
+.pm-catalog-page .pm-course-card:focus-visible::before,
+.pm-catalog-page .pm-semester-button:hover::before,
+.pm-catalog-page .pm-semester-button:focus-visible::before,
+.pm-catalog-page .pm-subject-trigger:hover::before,
+.pm-catalog-page .pm-subject-trigger:focus-visible::before {
+    opacity: .95;
+    animation: pm-catalog-liquid-drift 3.4s ease-in-out infinite alternate;
+}
+
+.pm-home-refresh .pm-domain-card:hover::after,
+.pm-home-refresh .pm-domain-card:focus-visible::after,
+.pm-catalog-page .pm-course-card:hover::after,
+.pm-catalog-page .pm-course-card:focus-visible::after,
+.pm-catalog-page .pm-semester-button:hover::after,
+.pm-catalog-page .pm-semester-button:focus-visible::after,
+.pm-catalog-page .pm-subject-trigger:hover::after,
+.pm-catalog-page .pm-subject-trigger:focus-visible::after {
+    opacity: .8;
+    transform: translate3d(360%,0,0) rotate(18deg);
 }
 
 .pm-home-refresh .pm-domain-art-wrap {
-    border-color: rgba(223,220,239,.19);
+    z-index: 1;
+    border-color: rgba(229,226,242,.16);
     background:
-        linear-gradient(145deg, rgba(183,181,204,.14), rgba(72,77,94,.28)),
-        rgba(25,29,38,.34);
-    -webkit-backdrop-filter: blur(14px) saturate(1.18);
-    backdrop-filter: blur(14px) saturate(1.18);
-    box-shadow:
-        inset 0 1px 0 rgba(245,242,255,.15),
-        inset 0 -1px 0 rgba(8,10,15,.28);
+        radial-gradient(115% 90% at 10% 0%, rgba(193,190,216,.11), transparent 64%),
+        linear-gradient(145deg, rgba(15,17,21,.38), rgba(42,45,58,.36));
+    -webkit-backdrop-filter: blur(14px) saturate(1.3);
+    backdrop-filter: blur(14px) saturate(1.3);
+    box-shadow: inset 0 1px 0 rgba(247,245,255,.10);
 }
 
-.pm-catalog-page .pm-course-card {
-    color: #f8f8fb;
-    border-color: rgba(224,222,239,.24);
-    background:
-        radial-gradient(125% 90% at 8% 0%, rgba(218,214,237,.17), transparent 58%),
-        linear-gradient(145deg, rgba(151,151,171,.22), rgba(89,94,111,.19) 48%, rgba(33,37,47,.72));
-    box-shadow:
-        inset 0 1px 0 rgba(247,245,255,.22),
-        inset 1px 0 0 rgba(232,229,246,.07),
-        inset 0 -1px 0 rgba(8,10,15,.42),
-        0 16px 36px rgba(0,0,0,.31);
-}
-.pm-catalog-page .pm-course-card:hover {
-    color: #fff;
-    border-color: rgba(255,180,84,.62);
-    background:
-        radial-gradient(125% 90% at 8% 0%, rgba(224,219,241,.21), transparent 58%),
-        linear-gradient(145deg, rgba(166,164,184,.28), rgba(97,101,119,.23) 48%, rgba(38,42,52,.76));
-    box-shadow:
-        inset 0 1px 0 rgba(247,245,255,.28),
-        inset 0 -1px 0 rgba(8,10,15,.42),
-        0 20px 42px rgba(0,0,0,.38),
-        0 4px 14px rgba(255,180,84,.07);
-}
+.pm-home-refresh .pm-section-head h2 span { color: var(--pm-gold-bright); }
 
+.pm-catalog-page .pm-course-card__top { position: relative; z-index: 1; }
 .pm-catalog-page .pm-course-mark {
     color: var(--pm-gold-bright);
-    border-color: rgba(226,218,240,.25);
-    background: linear-gradient(145deg, rgba(211,207,229,.20), rgba(255,180,84,.06));
-    box-shadow: inset 0 1px 0 rgba(247,245,255,.18), 0 6px 14px rgba(0,0,0,.18);
+    border-color: rgba(255,214,150,.30);
+    background: linear-gradient(145deg, rgba(255,214,150,.105), rgba(15,17,21,.32));
+    box-shadow: inset 0 1px 0 rgba(250,247,255,.12);
 }
 .pm-catalog-page .pm-course-count {
     color: #e7e7ef;
-    border-color: rgba(225,223,240,.22);
-    background: rgba(206,204,224,.10);
-    -webkit-backdrop-filter: blur(12px) saturate(1.12);
-    backdrop-filter: blur(12px) saturate(1.12);
+    border-color: rgba(229,226,242,.17);
+    background: rgba(15,17,21,.34);
+    -webkit-backdrop-filter: blur(12px) saturate(1.22);
+    backdrop-filter: blur(12px) saturate(1.22);
 }
 .pm-catalog-page .pm-course-name { color: #f7f7fa; }
-.pm-catalog-page .pm-course-card__meta { color: #c5c7d1; }
+.pm-catalog-page .pm-course-card__meta { color: #c8c9d2; }
 .pm-catalog-page .pm-course-card__action {
     color: var(--pm-gold-bright);
-    border-top-color: rgba(226,223,241,.16);
+    border-top-color: rgba(232,229,244,.13);
 }
 
 .pm-catalog-page .pm-semester-button,
 .pm-catalog-page .pm-subject-trigger {
     color: #f5f5f8;
-    border-color: rgba(224,222,239,.23);
+    border-color: rgba(232,229,244,.17);
     background:
-        radial-gradient(130% 110% at 8% 0%, rgba(216,213,235,.16), transparent 60%),
-        linear-gradient(145deg, rgba(142,143,163,.20), rgba(76,81,98,.18) 52%, rgba(33,37,47,.73));
-    box-shadow:
-        inset 0 1px 0 rgba(247,245,255,.21),
-        inset 0 -1px 0 rgba(8,10,15,.4),
-        0 9px 22px rgba(0,0,0,.28);
+        radial-gradient(130% 110% at 10% -5%, rgba(193,190,216,.11), transparent 62%),
+        linear-gradient(148deg, rgba(15,17,21,.78), rgba(45,47,61,.56) 52%, rgba(15,17,21,.84));
+    -webkit-backdrop-filter: blur(16px) saturate(1.36);
+    backdrop-filter: blur(16px) saturate(1.36);
 }
 .pm-catalog-page .pm-semester-button:hover,
 .pm-catalog-page .pm-subject-trigger:hover {
-    color: #fff;
-    border-color: rgba(238,235,248,.38);
-    background:
-        radial-gradient(130% 110% at 8% 0%, rgba(222,218,240,.20), transparent 60%),
-        linear-gradient(145deg, rgba(158,157,179,.25), rgba(88,92,110,.23) 52%, rgba(39,43,54,.78));
-    box-shadow:
-        inset 0 1px 0 rgba(248,246,255,.26),
-        0 12px 26px rgba(0,0,0,.34);
+    border-color: rgba(255,214,150,.36);
 }
 .pm-catalog-page .pm-semester-button[aria-pressed="true"],
 .pm-catalog-page .pm-subject-trigger[aria-expanded="true"] {
     color: #fff;
-    border-color: rgba(255,180,84,.72);
+    border-color: rgba(255,192,106,.68);
     background:
-        radial-gradient(130% 110% at 8% 0%, rgba(255,218,163,.19), transparent 62%),
-        linear-gradient(145deg, rgba(175,151,116,.25), rgba(99,91,93,.22) 52%, rgba(43,42,47,.8));
+        radial-gradient(130% 110% at 10% -5%, rgba(255,214,150,.14), transparent 62%),
+        linear-gradient(148deg, rgba(55,45,34,.68), rgba(42,42,49,.64) 52%, rgba(15,17,21,.86));
     box-shadow:
-        inset 0 1px 0 rgba(255,231,197,.22),
-        inset 0 -1px 0 rgba(8,10,15,.4),
-        0 10px 24px rgba(0,0,0,.31),
-        0 0 0 1px rgba(255,180,84,.08);
+        inset 0 1px 0 rgba(255,234,205,.16),
+        inset 1px 0 0 rgba(255,218,172,.055);
 }
 .pm-catalog-page .pm-semester-button span:last-child { color: #d3d2dc; }
 .pm-catalog-page .pm-semester-button[aria-pressed="true"] span:last-child { color: var(--pm-gold-bright); }
 
-/* Browsers without backdrop-filter retain the same depth with an opaque fallback. */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
     .pm-home-refresh .pm-domain-card,
     .pm-catalog-page .pm-course-card,
     .pm-catalog-page .pm-semester-button,
     .pm-catalog-page .pm-subject-trigger {
-        background: linear-gradient(145deg, #555767, #303541 58%, #20242d);
+        background: linear-gradient(148deg, #30333e, #222630 60%, #191c23);
     }
 }
 
-/* Reduced-transparency and high-contrast settings use a solid, sharply edged fallback. */
 @media (prefers-contrast: more), (prefers-reduced-transparency: reduce) {
-    .pm-domain-card,.pm-course-card,.pm-semester-button,.pm-subject-trigger {
+    .pm-home-refresh .pm-domain-card,
+    .pm-catalog-page .pm-course-card,
+    .pm-catalog-page .pm-semester-button,
+    .pm-catalog-page .pm-subject-trigger {
         -webkit-backdrop-filter: none !important;
         backdrop-filter: none !important;
         border-color: rgba(255,255,255,.58) !important;
         background: #252832 !important;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,.30), 0 12px 28px rgba(0,0,0,.35) !important;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.24) !important;
     }
-    .pm-semester-button[aria-pressed="true"],
-    .pm-subject-trigger[aria-expanded="true"] {
+    .pm-catalog-page .pm-semester-button[aria-pressed="true"],
+    .pm-catalog-page .pm-subject-trigger[aria-expanded="true"] {
         background: #3b3226 !important;
-        border-color: #ffb454 !important;
+        border-color: #ffc06a !important;
     }
 }
+
 @media (max-width: 1000px) {
     .pm-home-hero { grid-template-columns: minmax(0,1fr) minmax(300px,.9fr); min-height: 520px; }
     .pm-home-title { font-size: clamp(40px,6vw,60px); }

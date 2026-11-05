@@ -409,3 +409,13 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Added opaque graphite fallbacks for browsers without backdrop-filter and for increased-contrast / reduced-transparency preferences. No animation, decorative refraction, or moving shine effect was added.
 - Updated DESIGN.md and the PrepMaster UI skill with this scoped exception so later homepage refinements retain the same material direction.
 - Verification scope: source-level selectors, responsive rules, focus states and accessibility fallbacks inspected. A production build/deployment result will be reported separately; no authenticated catalog interaction was smoke-tested.
+
+
+## Homepage Liquid Glass and softer gold refinement — 2026-11-05
+
+- Reworked only the homepage/catalog department, course, semester and subject selector materials to match the navbar's own translucent graphite base (rgba(15, 17, 21, 0.85), 16px blur), with a quiet gray/lavender cast and 18px backdrop blur on larger cards.
+- Removed heavy outer card shadows. Material definition now relies on translucent layers, soft blur, a narrow rim and a restrained inner highlight rather than elevation shadows or white fills.
+- Added a slow gradient drift and a brief refraction pass only while cards are hovered or keyboard-focused. Reduced-motion and reduced-transparency / high-contrast fallbacks remain in place.
+- Lightened homepage-local gold accents slightly from #ffb454 / #ffd08a to #ffc06a / #ffd696. The course explorer's existing graduation-cap mark remains the visual gold icon; section emphasis and selected states use the same local pair. Global app colors and navbar styling are unchanged.
+- Hero layout, contact content, card geometry, responsive grids, routes, selection semantics, catalog queries and exam setup behavior remain unchanged.
+- Verification scope: source-level CSS/JSX selectors, state semantics, responsive rules and accessibility fallbacks checked. A local npm build and authenticated browser visual test are not available through this GitHub-connected session; deployment build status will be checked separately.
