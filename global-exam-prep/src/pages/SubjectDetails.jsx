@@ -228,6 +228,8 @@ export default function SubjectDetails() {
                         return (
                             <button
                                 key={sem}
+                                type="button"
+                                aria-pressed={isSelected}
                                 onClick={() => handleSemClick(sem)}
                                 style={{
                                     padding: '0.75rem 1.5rem',
