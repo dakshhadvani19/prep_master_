@@ -241,40 +241,7 @@ body {
     box-shadow: 0 8px 20px rgba(255,180,84,.18);
 }
 
-/* Student course and subject selection cards. Landing domain tiles remain dark. */
-#root .pm-main .pm-course-card {
-    color: var(--pm-ink);
-    background: var(--pm-surface);
-    border-color: var(--pm-border);
-    box-shadow: 0 9px 22px rgba(0,0,0,.12);
-}
-#root .pm-main .pm-course-card .pm-course-name { color: var(--pm-ink); }
-#root .pm-main .pm-course-card__meta { color: var(--pm-text-muted); }
-#root .pm-main .pm-course-card__action { color: var(--pm-gold-ink); }
-#root .pm-main .pm-course-card:hover {
-    background: #fff;
-    border-color: var(--pm-gold-line);
-}
-#root .pm-main .pm-semester-button,
-#root .pm-main .pm-subject-trigger {
-    color: var(--pm-ink);
-    background: var(--pm-surface);
-    border-color: var(--pm-border);
-    box-shadow: 0 8px 20px rgba(0,0,0,.10);
-}
-#root .pm-main .pm-semester-button:hover,
-#root .pm-main .pm-subject-trigger:hover {
-    color: var(--pm-ink);
-    background: #fff;
-    border-color: var(--pm-gold-line);
-}
-#root .pm-main .pm-semester-button[aria-pressed="true"],
-#root .pm-main .pm-subject-trigger[aria-expanded="true"] {
-    color: var(--pm-ink);
-    background: var(--pm-gold-soft);
-    border-color: var(--pm-gold-line);
-}
-#root .pm-main .pm-semester-button span:last-child { color: var(--pm-text-muted); }
+/* Homepage catalog materials are page-scoped in LandingPage.css. */
 
 /* Feedback-page inline styles keep their behavior but use the shared palette. */
 #root .pm-main .container:not(.pm-exam-portal):not(.pm-test-room-page) .glass-panel textarea {

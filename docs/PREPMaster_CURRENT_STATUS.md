@@ -400,3 +400,12 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Updated the product UI skill so future UI work follows the new visual system instead of the previous dark-card / blue-primary-action defaults.
 - Preserved blue for active exam and Test Room question/answer controls, along with semantic success, warning, and error colors. No routes, authorization rules, exam logic, APIs, or database schemas were changed.
 - Local browser screenshots and local npm checks were not available through the connected repository session. Vercel production deployment for the theme commit completed with `READY` status.
+
+## Student homepage smoked-glass catalog refinement — 2026-11-05
+
+- Replaced the student homepage/catalog department, program, semester and subject selector card fills with a smoked graphite-glass material: cool gray with a faint lavender cast, moderate backdrop blur/saturation, crisp pale edge definition and restrained inner highlights.
+- Removed the previous shared warm-white overrides only for the student catalog selectors. Admin dashboard, admin courses, leaderboard, feedback, and other previously themed surfaces remain unchanged.
+- The selected semester / expanded subject state uses a subtle warm-gold smoked fill and clearer gold edge. Domain and course card content, typography, card geometry, routes, responsive grids, selection semantics, and catalog data flow are preserved.
+- Added opaque graphite fallbacks for browsers without backdrop-filter and for increased-contrast / reduced-transparency preferences. No animation, decorative refraction, or moving shine effect was added.
+- Updated DESIGN.md and the PrepMaster UI skill with this scoped exception so later homepage refinements retain the same material direction.
+- Verification scope: source-level selectors, responsive rules, focus states and accessibility fallbacks inspected. A production build/deployment result will be reported separately; no authenticated catalog interaction was smoke-tested.

@@ -34,6 +34,7 @@ Do not sacrifice task completion or readability for decoration, animation, novel
 - Primary audiences: students and administrators. Their screens may have different information density and workflows, but must share one design language.
 - Mood: focused, credible, encouraging, modern, and mature.
 - Visual foundation: near-black application canvas and charcoal navigation; warm-white reading surfaces for information-heavy cards and workspaces; dark text on light surfaces; gold primary actions and selected states. Blue remains reserved for active exam/Test Room interaction controls and established semantic uses; violet is a restrained secondary data accent.
+- Student catalog exception: the homepage department → program → semester → subject selector uses the documented smoked gray/lavender glass material in `DESIGN.md`, not warm-white card fills. Keep this exception scoped to those selector surfaces; admin and dashboard reading panels retain their own surface system.
 - Personality: traditional product-design fundamentals with small, intentional moments of creativity.
 - The existing amber focus/progress ring is a recognizable motif. Preserve and reuse it where relevant; do not scatter it across every component.
 

@@ -3,9 +3,11 @@
 .pm-catalog-page {
     --pm-gold: #ffb454;
     --pm-gold-bright: #ffd08a;
-    --pm-glass-border: rgba(255,255,255,.16);
-    --pm-glass-surface: rgba(30,33,40,.68);
-    --pm-glass-deep: rgba(18,21,27,.82);
+    --pm-glass-border: rgba(226,223,241,.24);
+    --pm-glass-surface: rgba(122,124,145,.24);
+    --pm-glass-deep: rgba(37,40,51,.70);
+    --pm-glass-highlight: rgba(239,236,251,.22);
+    --pm-glass-lavender: rgba(171,162,199,.13);
     --pm-muted: #aeb4bf;
     color: #fff;
 }
@@ -378,14 +380,162 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,.12),0 12px 26px rgba(0,0,0,.17);
 }
 
-/* Crisp solid cards keep their hierarchy in high-contrast mode. */
-@media (prefers-contrast: more) {
-    .pm-domain-card,.pm-course-card,.pm-semester-button,.pm-subject-trigger,.pm-people-card {
-        border-color: rgba(255,255,255,.52);
+/*
+ * Student catalog glass material.
+ * Content cards stay dark enough for readable copy; the gray/lavender cast is
+ * deliberately muted so the graphite page remains the dominant color.
+ */
+.pm-home-refresh .pm-domain-card,
+.pm-catalog-page .pm-course-card,
+.pm-catalog-page .pm-semester-button,
+.pm-catalog-page .pm-subject-trigger {
+    border-color: var(--pm-glass-border);
+    background-color: rgba(65, 68, 82, .56);
+    -webkit-backdrop-filter: blur(22px) saturate(1.28);
+    backdrop-filter: blur(22px) saturate(1.28);
+    box-shadow:
+        inset 0 1px 0 var(--pm-glass-highlight),
+        inset 1px 0 0 rgba(232,229,246,.07),
+        inset 0 -1px 0 rgba(8,10,15,.42),
+        0 16px 38px rgba(0,0,0,.31);
+}
+
+.pm-home-refresh .pm-domain-card {
+    background:
+        radial-gradient(125% 90% at 7% 0%, rgba(218,214,237,.18), transparent 58%),
+        linear-gradient(145deg, rgba(151,151,171,.23), rgba(89,94,111,.20) 48%, rgba(33,37,47,.72));
+}
+.pm-home-refresh .pm-domain-card:hover {
+    border-color: rgba(255,180,84,.62);
+    background:
+        radial-gradient(125% 90% at 7% 0%, rgba(224,219,241,.22), transparent 58%),
+        linear-gradient(145deg, rgba(166,164,184,.29), rgba(97,101,119,.24) 48%, rgba(38,42,52,.76));
+    box-shadow:
+        inset 0 1px 0 rgba(247,244,255,.29),
+        inset 0 -1px 0 rgba(8,10,15,.42),
+        0 21px 45px rgba(0,0,0,.38),
+        0 4px 15px rgba(255,180,84,.07);
+}
+
+.pm-home-refresh .pm-domain-art-wrap {
+    border-color: rgba(223,220,239,.19);
+    background:
+        linear-gradient(145deg, rgba(183,181,204,.14), rgba(72,77,94,.28)),
+        rgba(25,29,38,.34);
+    -webkit-backdrop-filter: blur(14px) saturate(1.18);
+    backdrop-filter: blur(14px) saturate(1.18);
+    box-shadow:
+        inset 0 1px 0 rgba(245,242,255,.15),
+        inset 0 -1px 0 rgba(8,10,15,.28);
+}
+
+.pm-catalog-page .pm-course-card {
+    color: #f8f8fb;
+    border-color: rgba(224,222,239,.24);
+    background:
+        radial-gradient(125% 90% at 8% 0%, rgba(218,214,237,.17), transparent 58%),
+        linear-gradient(145deg, rgba(151,151,171,.22), rgba(89,94,111,.19) 48%, rgba(33,37,47,.72));
+    box-shadow:
+        inset 0 1px 0 rgba(247,245,255,.22),
+        inset 1px 0 0 rgba(232,229,246,.07),
+        inset 0 -1px 0 rgba(8,10,15,.42),
+        0 16px 36px rgba(0,0,0,.31);
+}
+.pm-catalog-page .pm-course-card:hover {
+    color: #fff;
+    border-color: rgba(255,180,84,.62);
+    background:
+        radial-gradient(125% 90% at 8% 0%, rgba(224,219,241,.21), transparent 58%),
+        linear-gradient(145deg, rgba(166,164,184,.28), rgba(97,101,119,.23) 48%, rgba(38,42,52,.76));
+    box-shadow:
+        inset 0 1px 0 rgba(247,245,255,.28),
+        inset 0 -1px 0 rgba(8,10,15,.42),
+        0 20px 42px rgba(0,0,0,.38),
+        0 4px 14px rgba(255,180,84,.07);
+}
+
+.pm-catalog-page .pm-course-mark {
+    color: var(--pm-gold-bright);
+    border-color: rgba(226,218,240,.25);
+    background: linear-gradient(145deg, rgba(211,207,229,.20), rgba(255,180,84,.06));
+    box-shadow: inset 0 1px 0 rgba(247,245,255,.18), 0 6px 14px rgba(0,0,0,.18);
+}
+.pm-catalog-page .pm-course-count {
+    color: #e7e7ef;
+    border-color: rgba(225,223,240,.22);
+    background: rgba(206,204,224,.10);
+    -webkit-backdrop-filter: blur(12px) saturate(1.12);
+    backdrop-filter: blur(12px) saturate(1.12);
+}
+.pm-catalog-page .pm-course-name { color: #f7f7fa; }
+.pm-catalog-page .pm-course-card__meta { color: #c5c7d1; }
+.pm-catalog-page .pm-course-card__action {
+    color: var(--pm-gold-bright);
+    border-top-color: rgba(226,223,241,.16);
+}
+
+.pm-catalog-page .pm-semester-button,
+.pm-catalog-page .pm-subject-trigger {
+    color: #f5f5f8;
+    border-color: rgba(224,222,239,.23);
+    background:
+        radial-gradient(130% 110% at 8% 0%, rgba(216,213,235,.16), transparent 60%),
+        linear-gradient(145deg, rgba(142,143,163,.20), rgba(76,81,98,.18) 52%, rgba(33,37,47,.73));
+    box-shadow:
+        inset 0 1px 0 rgba(247,245,255,.21),
+        inset 0 -1px 0 rgba(8,10,15,.4),
+        0 9px 22px rgba(0,0,0,.28);
+}
+.pm-catalog-page .pm-semester-button:hover,
+.pm-catalog-page .pm-subject-trigger:hover {
+    color: #fff;
+    border-color: rgba(238,235,248,.38);
+    background:
+        radial-gradient(130% 110% at 8% 0%, rgba(222,218,240,.20), transparent 60%),
+        linear-gradient(145deg, rgba(158,157,179,.25), rgba(88,92,110,.23) 52%, rgba(39,43,54,.78));
+    box-shadow:
+        inset 0 1px 0 rgba(248,246,255,.26),
+        0 12px 26px rgba(0,0,0,.34);
+}
+.pm-catalog-page .pm-semester-button[aria-pressed="true"],
+.pm-catalog-page .pm-subject-trigger[aria-expanded="true"] {
+    color: #fff;
+    border-color: rgba(255,180,84,.72);
+    background:
+        radial-gradient(130% 110% at 8% 0%, rgba(255,218,163,.19), transparent 62%),
+        linear-gradient(145deg, rgba(175,151,116,.25), rgba(99,91,93,.22) 52%, rgba(43,42,47,.8));
+    box-shadow:
+        inset 0 1px 0 rgba(255,231,197,.22),
+        inset 0 -1px 0 rgba(8,10,15,.4),
+        0 10px 24px rgba(0,0,0,.31),
+        0 0 0 1px rgba(255,180,84,.08);
+}
+.pm-catalog-page .pm-semester-button span:last-child { color: #d3d2dc; }
+.pm-catalog-page .pm-semester-button[aria-pressed="true"] span:last-child { color: var(--pm-gold-bright); }
+
+/* Browsers without backdrop-filter retain the same depth with an opaque fallback. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .pm-home-refresh .pm-domain-card,
+    .pm-catalog-page .pm-course-card,
+    .pm-catalog-page .pm-semester-button,
+    .pm-catalog-page .pm-subject-trigger {
+        background: linear-gradient(145deg, #555767, #303541 58%, #20242d);
     }
+}
+
+/* Reduced-transparency and high-contrast settings use a solid, sharply edged fallback. */
+@media (prefers-contrast: more), (prefers-reduced-transparency: reduce) {
     .pm-domain-card,.pm-course-card,.pm-semester-button,.pm-subject-trigger {
-        background: #202630;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,.3),0 12px 28px rgba(0,0,0,.35);
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+        border-color: rgba(255,255,255,.58) !important;
+        background: #252832 !important;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.30), 0 12px 28px rgba(0,0,0,.35) !important;
+    }
+    .pm-semester-button[aria-pressed="true"],
+    .pm-subject-trigger[aria-expanded="true"] {
+        background: #3b3226 !important;
+        border-color: #ffb454 !important;
     }
 }
 @media (max-width: 1000px) {
