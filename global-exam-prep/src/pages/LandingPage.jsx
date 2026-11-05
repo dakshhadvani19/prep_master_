@@ -164,6 +164,7 @@ const LEGACY_HOME_STYLES = "/* ── Hero Section ─────────�
 
 export default function LandingPage() {
     const navigate = useNavigate();
+    const reduceMotion = useReducedMotion();
     const location = useLocation();
     const controls = useAnimation();
 
