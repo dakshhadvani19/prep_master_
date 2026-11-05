@@ -365,7 +365,7 @@ export default function LandingPage() {
                         
                         return (
                             <motion.article key={domain.id} variants={itemVariants}>
-                                <Link to={`/domains/${domain.id}/courses`} className="domain-card">
+                                <Link to={`/domains/${domain.id}/courses`} className="domain-card pm-domain-card">
                                     <div className="domain-icon-wrapper">
                                         <DomainArtwork id={domain.id} />
                                     </div>
