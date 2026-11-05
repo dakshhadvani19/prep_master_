@@ -437,3 +437,13 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Removed the homepage kicker ornament.
 - Fixed a missing reduced-motion hook found during preview smoke testing and removed a stale hook reference from the restored SubjectDetails component.
 - Preview verification: Vite production build passed. Full Vitest/lint execution remains pending because the repository could not be cloned in the available runtime. Do not promote until the latest preview has been smoke-tested in-browser.
+
+
+### Homepage split-hero refinement — November 5, 2026
+- Reinstated the split desktop hero: PrepMaster copy and the two existing calls to action on the left, retained study-desk SVG artwork on the right.
+- Increased the right-side illustration scale and raised its visual position without changing its SVG geometry.
+- Kept the existing six domain illustrations and current developer contact cards.
+- Reworked the six department cards with larger illustration frames, pointer-tracked blue/violet light, stronger glass depth, lift/press feedback, and responsive card sizing.
+- Kept the current blue/violet brand colors and removed the decorative kicker rule.
+- Preserved route navigation, scroll-to-contact behavior, appreciation state persistence, and reduced-motion handling.
+- Preview deployment created from commit ff451f7aa4f93815aaec00d23be19e71f4bd5ac4; build state was pending at the time of this update.
