@@ -689,27 +689,52 @@
     will-change: transform;
 }
 
-/* Skip layout/paint work for sections below the initial viewport until they approach view. */
-.pm-home-refresh .pm-programs {
-    content-visibility: auto;
-    contain-intrinsic-block-size: 1240px;
-}
-.pm-home-refresh .pm-people-section {
-    content-visibility: auto;
-    contain-intrinsic-block-size: 500px;
-}
-@media (max-width: 720px) {
-    .pm-home-refresh .pm-programs { contain-intrinsic-block-size: 1980px; }
-}
-@media (max-width: 480px) {
-    .pm-home-refresh .pm-programs { contain-intrinsic-block-size: 2180px; }
-}
 @media (prefers-reduced-motion: reduce) {
     .pm-home-refresh .pm-home-art-wrap {
         animation: none !important;
         will-change: auto;
     }
     .pm-home-refresh .pm-domain-card {
+        transition: none !important;
+    }
+}
+
+
+/* Lightweight reveal transitions use one observer for the homepage, not per-card motion controllers. */
+.pm-home-refresh .pm-home-reveal {
+    opacity: 0;
+    transform: translate3d(0,12px,0);
+    transition:
+        opacity .42s ease,
+        transform .42s cubic-bezier(.22,1,.36,1);
+    transition-delay: var(--home-reveal-delay,0ms);
+}
+.pm-home-refresh .pm-home-reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+.pm-home-refresh .pm-home-primary:active,
+.pm-home-refresh .pm-home-secondary:active {
+    transform: translate3d(0,0,0) scale(.985);
+}
+.pm-home-refresh .pm-people-like {
+    transition: transform .18s ease, background-color .22s ease, border-color .22s ease;
+}
+.pm-home-refresh .pm-people-like:active { transform: scale(.92); }
+@media (prefers-reduced-motion: reduce) {
+    .pm-home-refresh .pm-home-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .pm-home-refresh .pm-home-art-wrap {
+        animation: none !important;
+        will-change: auto;
+    }
+    .pm-home-refresh .pm-domain-card,
+    .pm-home-refresh .pm-home-primary,
+    .pm-home-refresh .pm-home-secondary,
+    .pm-home-refresh .pm-people-like {
         transition: none !important;
     }
 }
