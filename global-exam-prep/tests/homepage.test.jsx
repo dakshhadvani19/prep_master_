@@ -93,6 +93,7 @@ describe('homepage', () => {
   it('keeps developer appreciation state local to the selected card', async () => {
     const { container } = await at('/');
     await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
+    await waitFor(() => expect(container.querySelectorAll('.pm-domain-art')).toHaveLength(6));
 
     const buttons = screen.getAllByRole('button', { name: /Appreciate developer/i });
     expect(buttons).toHaveLength(2);
