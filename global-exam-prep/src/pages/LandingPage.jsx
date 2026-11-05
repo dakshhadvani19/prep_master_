@@ -9,63 +9,46 @@ import './LandingPage.css';
 
 const StudyDeskArtwork = React.memo(function StudyDeskArtwork() {
     return (
-        <svg className="pm-home-artwork" viewBox="0 0 650 500" role="img" aria-label="Exam paper, answer sheet and pencil arranged on a study desk">
-            <defs>
-                <pattern id="pm-paper-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-                    <path d="M48 0H0V48" fill="none" stroke="#ffffff" strokeOpacity=".045" />
-                </pattern>
-                <filter id="pm-paper-shadow" x="-18%" y="-18%" width="136%" height="142%">
-                    <feDropShadow dx="0" dy="9" stdDeviation="6" floodColor="#000000" floodOpacity=".24" />
-                </filter>
-            </defs>
-            <path d="M70 100C145 22 291 15 401 65s190 119 179 229-105 164-228 164S78 394 47 289 1 175 70 100Z" fill="url(#pm-paper-grid)" stroke="#ffffff" strokeOpacity=".08" />
-            <circle cx="470" cy="104" r="78" fill="none" stroke="#ffc06a" strokeOpacity=".22" />
-            <circle cx="470" cy="104" r="58" fill="none" stroke="#ffc06a" strokeOpacity=".6" strokeWidth="5" strokeDasharray="250 115" transform="rotate(-92 470 104)" />
-            <g filter="url(#pm-paper-shadow)" transform="rotate(-5 280 250)">
-                <rect x="116" y="74" width="322" height="390" rx="12" fill="#20242b" stroke="#aeb5bf" />
-                <rect x="133" y="92" width="288" height="354" rx="5" fill="#ffffff" />
-                <path d="M133 92h288v62H133z" fill="#f1f3f6" />
-                <text x="156" y="119" fill="#555d68" fontSize="10" fontFamily="Arial" letterSpacing="1.4">PREPMASTER / PRACTICE PAPER</text>
-                <text x="156" y="140" fill="#17191d" fontSize="16" fontWeight="700" fontFamily="Arial">Examination practice</text>
-                <rect x="156" y="174" width="175" height="5" rx="2.5" fill="#b9c0c9" />
-                <rect x="156" y="188" width="228" height="4" rx="2" fill="#cbd1d9" />
-                <rect x="156" y="201" width="204" height="4" rx="2" fill="#cbd1d9" />
-                <text x="156" y="239" fill="#333a44" fontSize="10" fontWeight="700" fontFamily="Arial">01 / Explain the core concept.</text>
-                <rect x="156" y="250" width="225" height="3" rx="1.5" fill="#c8ced7" />
-                <rect x="156" y="260" width="195" height="3" rx="1.5" fill="#c8ced7" />
-                <text x="156" y="296" fill="#333a44" fontSize="10" fontWeight="700" fontFamily="Arial">02 / Apply your understanding.</text>
-                <rect x="156" y="307" width="224" height="3" rx="1.5" fill="#c8ced7" />
-                <rect x="156" y="317" width="190" height="3" rx="1.5" fill="#c8ced7" />
-                <rect x="156" y="350" width="110" height="50" rx="4" fill="#f6f7f9" stroke="#d0d5dc" />
-                <path d="M170 382l15-17 12 9 17-20 31 29" fill="none" stroke="#b17b39" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                <rect x="284" y="355" width="96" height="4" rx="2" fill="#c5ccd5" />
-                <rect x="284" y="367" width="76" height="4" rx="2" fill="#c5ccd5" />
-                <rect x="284" y="379" width="86" height="4" rx="2" fill="#c5ccd5" />
+        <svg className="pm-home-artwork" viewBox="0 0 640 480" role="img" aria-label="Writing pad and multiple-choice answer sheet">
+            <g transform="rotate(-4 260 230)">
+                <rect x="90" y="38" width="350" height="392" rx="12" fill="#20242b" stroke="#9aa4b3" strokeWidth="2" />
+                <rect x="104" y="52" width="322" height="364" rx="5" fill="#ffffff" />
+                <path d="M104 52H426V132H104Z" fill="#f0f2f6" />
+                <text x="132" y="84" fill="#626b79" fontSize="10" fontFamily="Arial" letterSpacing="1.3">PREPMASTER / NOTES</text>
+                <text x="132" y="113" fill="#171b24" fontSize="22" fontWeight="700" fontFamily="Arial">Writing pad</text>
+                <path d="M132 139H398" stroke="#d9dee7" strokeWidth="2" />
+
+                <text x="132" y="171" fill="#353d4b" fontSize="12" fontWeight="700" fontFamily="Arial">01 / Key concepts</text>
+                <path d="M132 188H386M132 203H358M132 218H378" stroke="#c8ced8" strokeWidth="3" strokeLinecap="round" />
+
+                <text x="132" y="257" fill="#353d4b" fontSize="12" fontWeight="700" fontFamily="Arial">02 / Practice notes</text>
+                <path d="M132 274H386M132 289H365" stroke="#c8ced8" strokeWidth="3" strokeLinecap="round" />
+
+                <rect x="132" y="316" width="116" height="72" rx="4" fill="#f5f6f9" stroke="#d3d9e2" />
+                <path d="M145 375L163 354L181 364L199 340L232 373" fill="none" stroke="#8b5cf6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M275 329H389M275 345H373M275 361H389M275 377H352" stroke="#c8ced8" strokeWidth="3" strokeLinecap="round" />
             </g>
-            <g filter="url(#pm-paper-shadow)" transform="rotate(8 475 306)">
-                <rect x="407" y="201" width="165" height="220" rx="10" fill="#292e35" stroke="#aeb5bf" />
-                <rect x="419" y="214" width="141" height="194" rx="5" fill="#ffffff" />
-                <text x="433" y="239" fill="#555d68" fontSize="9" fontFamily="Arial" fontWeight="700">ANSWER SHEET</text>
-                <path d="M433 255h110" stroke="#d1d7df" />
-                <g fill="none" stroke="#bfc6d0" strokeWidth="1.5">
-                    <circle cx="440" cy="277" r="5" /><circle cx="457" cy="277" r="5" /><circle cx="474" cy="277" r="5" />
-                    <circle cx="440" cy="295" r="5" /><circle cx="457" cy="295" r="5" /><circle cx="474" cy="295" r="5" />
-                    <circle cx="440" cy="313" r="5" /><circle cx="457" cy="313" r="5" /><circle cx="474" cy="313" r="5" />
+
+            <g transform="rotate(6 470 300)">
+                <rect x="378" y="176" width="188" height="250" rx="10" fill="#292e35" stroke="#9aa4b3" strokeWidth="2" />
+                <rect x="391" y="189" width="162" height="224" rx="5" fill="#ffffff" />
+                <text x="407" y="218" fill="#343b47" fontSize="11" fontWeight="700" fontFamily="Arial" letterSpacing=".5">ANSWER SHEET</text>
+                <path d="M407 231H537" stroke="#d4dae3" strokeWidth="1.5" />
+                <text x="407" y="250" fill="#707989" fontSize="7.5" fontFamily="Arial" letterSpacing=".4">MARK ONE OPTION</text>
+
+                <g stroke="#aeb7c5" strokeWidth="1.6">
+                    <circle cx="418" cy="270" r="6" fill="#8b5cf6" stroke="#8b5cf6" />
+                    <circle cx="442" cy="270" r="6" fill="none" />
+                    <circle cx="466" cy="270" r="6" fill="none" />
+                    <circle cx="418" cy="296" r="6" fill="none" />
+                    <circle cx="442" cy="296" r="6" fill="#8b5cf6" stroke="#8b5cf6" />
+                    <circle cx="466" cy="296" r="6" fill="none" />
+                    <circle cx="418" cy="322" r="6" fill="none" />
+                    <circle cx="442" cy="322" r="6" fill="none" />
+                    <circle cx="466" cy="322" r="6" fill="#8b5cf6" stroke="#8b5cf6" />
                 </g>
-                <g stroke="#d99c4a" strokeWidth="2.3" strokeLinecap="round"><path d="M436 277l3 3 6-7M453 295l3 3 6-7M470 313l3 3 6-7" /></g>
-                <rect x="433" y="340" width="111" height="4" rx="2" fill="#c8ced7" />
-                <rect x="433" y="352" width="91" height="4" rx="2" fill="#c8ced7" />
-                <rect x="433" y="364" width="101" height="4" rx="2" fill="#c8ced7" />
-                <path d="M433 384l8 8 16-18" fill="none" stroke="#d99c4a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M487 270H532M487 296H532M487 322H532M407 351H537M407 364H522M407 377H532" stroke="#cbd1da" strokeWidth="3" strokeLinecap="round" />
             </g>
-            <g transform="rotate(35 523 430)" filter="url(#pm-paper-shadow)">
-                <rect x="511" y="342" width="17" height="126" rx="5" fill="#f7f8fa" stroke="#d99c4a" strokeWidth="1.4" />
-                <path d="M511 351h17M511 454h17" stroke="#d99c4a" strokeWidth="2" />
-                <path d="M511 468l8.5 18 8.5-18Z" fill="#f0f2f5" />
-                <path d="M517 480l2.5 6 2.5-6Z" fill="#35302a" />
-            </g>
-            <g fill="#ffc06a"><circle cx="100" cy="367" r="4" /><circle cx="555" cy="162" r="3" /></g>
-            <path d="M85 390l16-16M85 374l16 16" stroke="#ffc06a" strokeOpacity=".65" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
     );
 });
