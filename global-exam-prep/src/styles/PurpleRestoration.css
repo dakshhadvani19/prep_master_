@@ -77,8 +77,11 @@
 
 /* Preserve current SVG geometry; recolor only existing gold accent strokes/fills. */
 .pm-home-artwork [stroke="#ffb454"],
+.pm-home-artwork [stroke="#ffc06a"],
+.pm-home-artwork [stroke="#b17b39"],
 .pm-home-artwork [stroke="#d99c4a"] { stroke: #a78bfa !important; }
 .pm-home-artwork [fill="#ffb454"],
+.pm-home-artwork [fill="#ffc06a"],
 .pm-home-artwork [fill="#d99c4a"] { fill: #8b5cf6 !important; }
 .pm-domain-art__accent {
     stroke: #a78bfa !important;
