@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { motion, useReducedMotion, useAnimation } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import {
     ArrowDown, ArrowUpRight, Check, Github, Heart, Instagram,
     Linkedin, Mail,
@@ -9,27 +9,8 @@ import { CATALOG_DOMAINS as domains } from '../data/catalogDomains';
 import * as Icons from 'lucide-react';
 import './LandingPage.css';
 
-const MotionLink = motion(Link);
 const smoothEase = [0.22, 1, 0.36, 1];
 
-const heroSequence = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.12, delayChildren: 0.06 } },
-};
-const heroReveal = {
-    hidden: { opacity: 0, y: 18, filter: 'blur(8px)' },
-    visible: {
-        opacity: 1, y: 0, filter: 'blur(0px)',
-        transition: { duration: 0.82, ease: smoothEase },
-    },
-};
-const titleLine = {
-    hidden: { y: '112%', opacity: 0, filter: 'blur(9px)' },
-    visible: {
-        y: '0%', opacity: 1, filter: 'blur(0px)',
-        transition: { duration: 0.95, ease: smoothEase },
-    },
-};
 const cardSequence = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.075, delayChildren: 0.04 } },
@@ -41,14 +22,6 @@ const cardReveal = {
         transition: { duration: 0.65, ease: smoothEase },
     },
 };
-
-function readSavedLike(key) {
-    try {
-        return JSON.parse(window.localStorage.getItem(key) || 'false') === true;
-    } catch {
-        return false;
-    }
-}
 
 function StudyDeskArtwork() {
     return (
@@ -166,7 +139,6 @@ export default function LandingPage() {
     const navigate = useNavigate();
     const reduceMotion = useReducedMotion();
     const location = useLocation();
-    const controls = useAnimation();
 
     // Developer Likes State
     const [liked, setLiked] = React.useState(() => {
