@@ -137,6 +137,7 @@ function readLikePreference(key) {
 export default function LandingPage() {
     const navigate = useNavigate();
     const location = useLocation();
+    const [domainArtworkReady, setDomainArtworkReady] = React.useState(false);
 
     useEffect(() => {
         document.title = 'PrepMaster | University Exam Preparation';
@@ -156,23 +157,34 @@ export default function LandingPage() {
     }, [location.pathname, location.state]);
 
     useEffect(() => {
-        const targets = document.querySelectorAll('.pm-home-refresh [data-home-reveal]');
-        if (!targets.length) return;
+        const root = document.querySelector('.pm-home-refresh');
+        if (!root) return undefined;
+
+        const revealTargets = root.querySelectorAll('[data-home-reveal]');
+        const artworkGrid = root.querySelector('[data-home-domain-grid]');
+        if (!revealTargets.length && !artworkGrid) return undefined;
 
         if (!('IntersectionObserver' in window)) {
-            targets.forEach((target) => target.classList.add('is-visible'));
+            revealTargets.forEach((target) => target.classList.add('is-visible'));
+            setDomainArtworkReady(true);
             return undefined;
         }
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) return;
-                entry.target.classList.add('is-visible');
+
+                if (entry.target === artworkGrid) {
+                    setDomainArtworkReady(true);
+                } else {
+                    entry.target.classList.add('is-visible');
+                }
                 observer.unobserve(entry.target);
             });
-        }, { rootMargin: '0px 0px -28px 0px', threshold: 0.04 });
+        }, { rootMargin: '180px 0px 180px 0px', threshold: 0.02 });
 
-        targets.forEach((target) => observer.observe(target));
+        revealTargets.forEach((target) => observer.observe(target));
+        if (artworkGrid) observer.observe(artworkGrid);
         return () => observer.disconnect();
     }, []);
 
@@ -219,7 +231,7 @@ export default function LandingPage() {
                         <p>Choose your discipline below to browse its courses and start preparing for your examinations.</p>
                     </div>
 
-                    <div className="pm-domain-grid">
+                    <div className="pm-domain-grid" data-home-domain-grid>
                         {domains.map((domain, index) => (
                             <Link
                                 key={domain.id}
@@ -229,7 +241,9 @@ export default function LandingPage() {
                                 style={{ '--home-reveal-delay': (index * 55) + 'ms' }}
                             >
                                 <div className="pm-domain-art-wrap">
-                                    <DomainArtwork id={domain.id} />
+                                    {domainArtworkReady
+                                        ? <DomainArtwork id={domain.id} />
+                                        : <span className="pm-domain-art-placeholder" aria-hidden="true" />}
                                 </div>
                                 <div className="pm-domain-content">
                                     <h3>{domain.title}</h3>
