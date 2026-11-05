@@ -447,3 +447,18 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Kept the current blue/violet brand colors and removed the decorative kicker rule.
 - Preserved route navigation, scroll-to-contact behavior, appreciation state persistence, and reduced-motion handling.
 - Preview deployment created from commit ff451f7aa4f93815aaec00d23be19e71f4bd5ac4; build state was pending at the time of this update.
+
+
+### Homepage rendering optimization — November 5, 2026
+- Memoized the static study-desk SVG, all six department SVG components, and developer contact cards.
+- Moved appreciation state into each developer card so a like click does not re-render the homepage hero and six-card grid; storage writes now happen in the click handler.
+- Removed per-pointer-move DOM measurement and CSS variable writes from the homepage; department cards retain a fixed blue/violet hover light and CSS-only lift/press feedback.
+- Removed the continuous hero float loop and all Framer Motion wrappers from LandingPage; one IntersectionObserver now drives CSS opacity/translation reveals and defers creation of the six department SVG nodes until the grid approaches the viewport.
+- Reduced the hero SVG's repeating grid density and shadow filter cost; removed CSS drop-shadow filters from the six small illustrations and accents.
+- Reduced homepage glass sampling from 20px on department cards to 8px and art frames from 14px to 6px; removed the secondary CTA's backdrop blur and expensive animated card-shadow changes.
+- Kept the below-fold layout in normal flow; six lightweight department cards did not justify content-visibility containment and its placeholder-height risk. The artwork wrapper retains its fixed dimensions while SVG DOM nodes are deferred, avoiding layout shift.
+- Removed 54 lines of superseded homepage restoration CSS and added a homepage smoke test for isolated appreciation state plus all six domain SVGs.
+- Verification: latest application commit `bf6a03cf752c5afb6e471ad614594e9b636c3841` built successfully on Vercel (`READY`; Vite transformed 2,264 modules in 8.32s). LandingPage output is 14.62 kB raw / 4.68 kB gzip versus the pre-optimization 15.31 kB / 4.98 kB. Source-level checks pass. Vitest/ESLint and an authenticated browser-performance trace were not run from this environment; the preview still needs a PC-side interaction check before merge.
+- Added early preconnects and a `display=swap` stylesheet link for Inter in `index.html`, removing the later CSS `@import`; the same family and weights are retained.
+- Scoped `background-attachment: scroll` to the homepage lifecycle to avoid fixed-background repaint work during scrolling; the original global background remains unchanged on other routes.
+- Updated the homepage smoke test selector to `.pm-home-actions` so it matches the current CTA markup.

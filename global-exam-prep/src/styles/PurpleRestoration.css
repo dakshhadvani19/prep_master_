@@ -24,23 +24,6 @@
     color: var(--text-primary);
 }
 
-.pm-home-refresh {
-    background:
-        radial-gradient(950px 510px at 88% 5%, rgba(139, 92, 246, .15), transparent 62%),
-        radial-gradient(760px 430px at 0% 36%, rgba(59, 130, 246, .12), transparent 64%);
-}
-
-.pm-home-kicker { color: #c6c9ff; }
-.pm-home-kicker::before {
-    background: var(--accent-primary);
-    box-shadow: 0 0 12px rgba(59, 130, 246, .48);
-}
-.pm-home-title { color: var(--text-primary); }
-.pm-title-line--accent { color: #a78bfa; }
-.pm-home-description { color: var(--text-secondary); }
-.pm-home-proof { color: #b8bdca; }
-.pm-home-proof svg { color: var(--accent-primary); filter: drop-shadow(0 0 7px rgba(59,130,246,.24)); }
-
 .pm-home-primary {
     color: #fff !important;
     background: var(--accent-gradient) !important;
@@ -66,15 +49,6 @@
     box-shadow: 0 8px 24px rgba(59,130,246,.12);
 }
 
-.pm-home-art-wrap::before {
-    border-color: rgba(139,92,246,.28);
-    box-shadow: 0 0 72px rgba(139,92,246,.12), inset 0 0 38px rgba(59,130,246,.055);
-}
-.pm-home-art-wrap::after {
-    background: linear-gradient(90deg, transparent, rgba(167,139,250,.42), transparent);
-}
-.pm-home-artwork { filter: drop-shadow(0 12px 28px rgba(91,75,190,.12)); }
-
 /* Preserve current SVG geometry; recolor only existing gold accent strokes/fills. */
 .pm-home-artwork [stroke="#ffb454"],
 .pm-home-artwork [stroke="#ffc06a"],
@@ -83,12 +57,6 @@
 .pm-home-artwork [fill="#ffb454"],
 .pm-home-artwork [fill="#ffc06a"],
 .pm-home-artwork [fill="#d99c4a"] { fill: #8b5cf6 !important; }
-.pm-domain-art__accent {
-    stroke: #a78bfa !important;
-    filter: drop-shadow(0 0 5px rgba(139,92,246,.32));
-}
-
-.pm-home-refresh .pm-domain-card,
 .pm-catalog-page .pm-course-card,
 .pm-catalog-page .pm-semester-button,
 .pm-catalog-page .pm-subject-trigger {
@@ -101,7 +69,6 @@
     transition: background .28s ease, border-color .28s ease, box-shadow .28s ease, transform .28s ease;
 }
 
-.pm-home-refresh .pm-domain-card::before,
 .pm-catalog-page .pm-course-card::before,
 .pm-catalog-page .pm-semester-button::before,
 .pm-catalog-page .pm-subject-trigger::before {
@@ -114,13 +81,10 @@
     animation: none !important;
     transition: opacity .28s ease;
 }
-.pm-home-refresh .pm-domain-card::after,
 .pm-catalog-page .pm-course-card::after,
 .pm-catalog-page .pm-semester-button::after,
 .pm-catalog-page .pm-subject-trigger::after { display: none !important; }
 
-.pm-home-refresh .pm-domain-card:hover,
-.pm-home-refresh .pm-domain-card:focus-visible,
 .pm-catalog-page .pm-course-card:hover,
 .pm-catalog-page .pm-course-card:focus-visible,
 .pm-catalog-page .pm-semester-button:hover,
@@ -132,30 +96,12 @@
     background: rgba(27,29,40,.82);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.075), 0 22px 46px rgba(0,0,0,.36), 0 0 22px rgba(59,130,246,.09);
 }
-.pm-home-refresh .pm-domain-card:hover::before,
-.pm-home-refresh .pm-domain-card:focus-visible::before,
 .pm-catalog-page .pm-course-card:hover::before,
 .pm-catalog-page .pm-course-card:focus-visible::before,
 .pm-catalog-page .pm-semester-button:hover::before,
 .pm-catalog-page .pm-semester-button:focus-visible::before,
 .pm-catalog-page .pm-subject-trigger:hover::before,
 .pm-catalog-page .pm-subject-trigger:focus-visible::before { opacity: 1; }
-
-.pm-home-refresh .pm-domain-art-wrap {
-    border-color: rgba(139,92,246,.20);
-    background:
-        linear-gradient(145deg, rgba(59,130,246,.11), rgba(139,92,246,.075)),
-        rgba(22,24,29,.48);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.065);
-}
-.pm-domain-art-wrap::after { background: rgba(139,92,246,.56); }
-
-.pm-domain-card h3 { color: #f7f7ff; }
-.pm-domain-card p { color: #b5bac8; }
-.pm-domain-open { color: #d7dbff; }
-.pm-domain-open svg { color: #a78bfa; }
 
 .pm-people-section {
     border-top-color: rgba(139,92,246,.12);
@@ -478,28 +424,13 @@
     margin-top: -48px;
     display: grid;
     place-items: center;
-    isolation: isolate;
-}
-.pm-home-art-wrap::before {
-    width: 88%;
-    border-color: rgba(139,92,246,.28);
-    box-shadow:
-        0 0 96px rgba(139,92,246,.13),
-        0 0 42px rgba(59,130,246,.08),
-        inset 0 0 48px rgba(59,130,246,.055);
-}
-.pm-home-art-wrap::after {
-    width: 96%;
-    background: linear-gradient(90deg,transparent,rgba(167,139,250,.34),transparent);
-    opacity: .7;
 }
 .pm-home-artwork {
-    width: min(112%,740px);
-    max-width: 740px;
-    transform: translateY(-14px) scale(1.055);
+    width: min(100%,680px);
+    max-width: 680px;
+    transform: translateY(-10px);
     transform-origin: center;
-    filter: drop-shadow(0 18px 36px rgba(59,130,246,.10))
-            drop-shadow(0 9px 22px rgba(139,92,246,.12));
+    filter: none;
 }
 
 /* Department tiles: larger discipline artwork and the original pointer-lit glass behaviour. */
@@ -682,4 +613,106 @@
         transition: none !important;
     }
     .pm-home-artwork { transform: none !important; }
+}
+
+
+/* Homepage performance layer: preserve the visual language without expensive paint work. */
+.pm-home-refresh {
+    --pm-home-glass-blur: 8px;
+}
+.pm-home-refresh .pm-home-secondary {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+.pm-home-refresh .pm-home-artwork {
+    filter: none;
+}
+.pm-home-refresh .pm-home-proof svg {
+    filter: none;
+}
+
+/* Keep a translucent surface; reduce per-card backdrop sampling and shadow animation. */
+.pm-home-refresh .pm-domain-card {
+    -webkit-backdrop-filter: blur(var(--pm-home-glass-blur)) saturate(1.12);
+    backdrop-filter: blur(var(--pm-home-glass-blur)) saturate(1.12);
+    transition: transform .24s ease, border-color .24s ease;
+}
+.pm-home-refresh .pm-domain-card::before {
+    background:
+        radial-gradient(420px circle at 50% 34%,rgba(59,130,246,.20),transparent 60%),
+        radial-gradient(520px circle at 92% 100%,rgba(139,92,246,.14),transparent 58%);
+    transition: opacity .24s ease;
+}
+.pm-home-refresh .pm-domain-card:hover,
+.pm-home-refresh .pm-domain-card:focus-visible {
+    transform: translate3d(0,-5px,0);
+    background: linear-gradient(148deg,rgba(43,48,68,.97),rgba(22,24,39,.98));
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.13),
+        inset 1px 0 0 rgba(255,255,255,.035),
+        0 17px 38px rgba(0,0,0,.32);
+}
+.pm-home-refresh .pm-domain-card:active {
+    transform: translate3d(0,-1px,0) scale(.992);
+}
+.pm-home-refresh .pm-domain-art-wrap {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+.pm-home-refresh .pm-domain-art,
+.pm-home-refresh .pm-domain-art__accent {
+    filter: none !important;
+}
+.pm-home-refresh .pm-domain-art-placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pm-home-refresh .pm-home-art-wrap {
+    transform: translate3d(0,-4px,0);
+}
+
+body.pm-home-body {
+    background-attachment: scroll;
+}
+
+
+/* Lightweight reveal transitions use one observer for the homepage, not per-card motion controllers. */
+.pm-home-refresh .pm-home-reveal {
+    opacity: 0;
+    transform: translate3d(0,12px,0);
+    transition:
+        opacity .42s ease,
+        transform .42s cubic-bezier(.22,1,.36,1);
+    transition-delay: var(--home-reveal-delay,0ms);
+}
+.pm-home-refresh .pm-home-reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+.pm-home-refresh .pm-home-primary:active,
+.pm-home-refresh .pm-home-secondary:active {
+    transform: translate3d(0,0,0) scale(.985);
+}
+.pm-home-refresh .pm-people-like {
+    transition: transform .18s ease, background-color .22s ease, border-color .22s ease;
+}
+.pm-home-refresh .pm-people-like:active { transform: scale(.92); }
+@media (prefers-reduced-motion: reduce) {
+    .pm-home-refresh .pm-home-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .pm-home-refresh .pm-home-art-wrap {
+        animation: none !important;
+        will-change: auto;
+    }
+    .pm-home-refresh .pm-domain-card,
+    .pm-home-refresh .pm-home-primary,
+    .pm-home-refresh .pm-home-secondary,
+    .pm-home-refresh .pm-people-like {
+        transition: none !important;
+    }
 }

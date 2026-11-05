@@ -1,92 +1,59 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { motion, useReducedMotion } from 'framer-motion';
 import {
     ArrowDown, ArrowUpRight, Check, Github, Heart, Instagram,
     Linkedin, Mail,
 } from 'lucide-react';
 import { CATALOG_DOMAINS as domains } from '../data/catalogDomains';
-import * as Icons from 'lucide-react';
 import './LandingPage.css';
 
-const smoothEase = [0.22, 1, 0.36, 1];
-
-const cardSequence = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.075, delayChildren: 0.04 } },
-};
-const cardReveal = {
-    hidden: { opacity: 0, y: 16, filter: 'blur(4px)' },
-    visible: {
-        opacity: 1, y: 0, filter: 'blur(0px)',
-        transition: { duration: 0.65, ease: smoothEase },
-    },
-};
-
-function StudyDeskArtwork() {
+const StudyDeskArtwork = React.memo(function StudyDeskArtwork() {
     return (
-        <svg className="pm-home-artwork" viewBox="0 0 650 500" role="img" aria-label="Exam paper, answer sheet and pencil arranged on a study desk">
-            <defs>
-                <pattern id="pm-paper-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-                    <path d="M18 0H0V18" fill="none" stroke="#ffffff" strokeOpacity=".045" />
-                </pattern>
-                <filter id="pm-paper-shadow" x="-30%" y="-30%" width="160%" height="170%">
-                    <feDropShadow dx="0" dy="20" stdDeviation="18" floodColor="#000000" floodOpacity=".42" />
-                </filter>
-            </defs>
-            <path d="M70 100C145 22 291 15 401 65s190 119 179 229-105 164-228 164S78 394 47 289 1 175 70 100Z" fill="url(#pm-paper-grid)" stroke="#ffffff" strokeOpacity=".08" />
-            <circle cx="470" cy="104" r="78" fill="none" stroke="#ffc06a" strokeOpacity=".22" />
-            <circle cx="470" cy="104" r="58" fill="none" stroke="#ffc06a" strokeOpacity=".6" strokeWidth="5" strokeDasharray="250 115" transform="rotate(-92 470 104)" />
-            <g filter="url(#pm-paper-shadow)" transform="rotate(-5 280 250)">
-                <rect x="116" y="74" width="322" height="390" rx="12" fill="#20242b" stroke="#aeb5bf" />
-                <rect x="133" y="92" width="288" height="354" rx="5" fill="#ffffff" />
-                <path d="M133 92h288v62H133z" fill="#f1f3f6" />
-                <text x="156" y="119" fill="#555d68" fontSize="10" fontFamily="Arial" letterSpacing="1.4">PREPMASTER / PRACTICE PAPER</text>
-                <text x="156" y="140" fill="#17191d" fontSize="16" fontWeight="700" fontFamily="Arial">Examination practice</text>
-                <rect x="156" y="174" width="175" height="5" rx="2.5" fill="#b9c0c9" />
-                <rect x="156" y="188" width="228" height="4" rx="2" fill="#cbd1d9" />
-                <rect x="156" y="201" width="204" height="4" rx="2" fill="#cbd1d9" />
-                <text x="156" y="239" fill="#333a44" fontSize="10" fontWeight="700" fontFamily="Arial">01 / Explain the core concept.</text>
-                <rect x="156" y="250" width="225" height="3" rx="1.5" fill="#c8ced7" />
-                <rect x="156" y="260" width="195" height="3" rx="1.5" fill="#c8ced7" />
-                <text x="156" y="296" fill="#333a44" fontSize="10" fontWeight="700" fontFamily="Arial">02 / Apply your understanding.</text>
-                <rect x="156" y="307" width="224" height="3" rx="1.5" fill="#c8ced7" />
-                <rect x="156" y="317" width="190" height="3" rx="1.5" fill="#c8ced7" />
-                <rect x="156" y="350" width="110" height="50" rx="4" fill="#f6f7f9" stroke="#d0d5dc" />
-                <path d="M170 382l15-17 12 9 17-20 31 29" fill="none" stroke="#b17b39" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                <rect x="284" y="355" width="96" height="4" rx="2" fill="#c5ccd5" />
-                <rect x="284" y="367" width="76" height="4" rx="2" fill="#c5ccd5" />
-                <rect x="284" y="379" width="86" height="4" rx="2" fill="#c5ccd5" />
+        <svg className="pm-home-artwork" viewBox="0 0 640 480" role="img" aria-label="Writing pad and multiple-choice answer sheet">
+            <g transform="rotate(-4 260 230)">
+                <rect x="90" y="38" width="350" height="392" rx="12" fill="#20242b" stroke="#9aa4b3" strokeWidth="2" />
+                <rect x="104" y="52" width="322" height="364" rx="5" fill="#ffffff" />
+                <path d="M104 52H426V132H104Z" fill="#f0f2f6" />
+                <text x="132" y="84" fill="#626b79" fontSize="10" fontFamily="Arial" letterSpacing="1.3">PREPMASTER / NOTES</text>
+                <text x="132" y="113" fill="#171b24" fontSize="22" fontWeight="700" fontFamily="Arial">Writing pad</text>
+                <path d="M132 139H398" stroke="#d9dee7" strokeWidth="2" />
+
+                <text x="132" y="171" fill="#353d4b" fontSize="12" fontWeight="700" fontFamily="Arial">01 / Key concepts</text>
+                <path d="M132 188H386M132 203H358M132 218H378" stroke="#c8ced8" strokeWidth="3" strokeLinecap="round" />
+
+                <text x="132" y="257" fill="#353d4b" fontSize="12" fontWeight="700" fontFamily="Arial">02 / Practice notes</text>
+                <path d="M132 274H386M132 289H365" stroke="#c8ced8" strokeWidth="3" strokeLinecap="round" />
+
+                <rect x="132" y="316" width="116" height="72" rx="4" fill="#f5f6f9" stroke="#d3d9e2" />
+                <path d="M145 375L163 354L181 364L199 340L232 373" fill="none" stroke="#8b5cf6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M275 329H389M275 345H373M275 361H389M275 377H352" stroke="#c8ced8" strokeWidth="3" strokeLinecap="round" />
             </g>
-            <g filter="url(#pm-paper-shadow)" transform="rotate(8 475 306)">
-                <rect x="407" y="201" width="165" height="220" rx="10" fill="#292e35" stroke="#aeb5bf" />
-                <rect x="419" y="214" width="141" height="194" rx="5" fill="#ffffff" />
-                <text x="433" y="239" fill="#555d68" fontSize="9" fontFamily="Arial" fontWeight="700">ANSWER SHEET</text>
-                <path d="M433 255h110" stroke="#d1d7df" />
-                <g fill="none" stroke="#bfc6d0" strokeWidth="1.5">
-                    <circle cx="440" cy="277" r="5" /><circle cx="457" cy="277" r="5" /><circle cx="474" cy="277" r="5" />
-                    <circle cx="440" cy="295" r="5" /><circle cx="457" cy="295" r="5" /><circle cx="474" cy="295" r="5" />
-                    <circle cx="440" cy="313" r="5" /><circle cx="457" cy="313" r="5" /><circle cx="474" cy="313" r="5" />
+
+            <g transform="rotate(6 470 300)">
+                <rect x="378" y="176" width="188" height="250" rx="10" fill="#292e35" stroke="#9aa4b3" strokeWidth="2" />
+                <rect x="391" y="189" width="162" height="224" rx="5" fill="#ffffff" />
+                <text x="407" y="218" fill="#343b47" fontSize="11" fontWeight="700" fontFamily="Arial" letterSpacing=".5">ANSWER SHEET</text>
+                <path d="M407 231H537" stroke="#d4dae3" strokeWidth="1.5" />
+                <text x="407" y="250" fill="#707989" fontSize="7.5" fontFamily="Arial" letterSpacing=".4">MARK ONE OPTION</text>
+
+                <g stroke="#aeb7c5" strokeWidth="1.6">
+                    <circle cx="418" cy="270" r="6" fill="#8b5cf6" stroke="#8b5cf6" />
+                    <circle cx="442" cy="270" r="6" fill="none" />
+                    <circle cx="466" cy="270" r="6" fill="none" />
+                    <circle cx="418" cy="296" r="6" fill="none" />
+                    <circle cx="442" cy="296" r="6" fill="#8b5cf6" stroke="#8b5cf6" />
+                    <circle cx="466" cy="296" r="6" fill="none" />
+                    <circle cx="418" cy="322" r="6" fill="none" />
+                    <circle cx="442" cy="322" r="6" fill="none" />
+                    <circle cx="466" cy="322" r="6" fill="#8b5cf6" stroke="#8b5cf6" />
                 </g>
-                <g stroke="#d99c4a" strokeWidth="2.3" strokeLinecap="round"><path d="M436 277l3 3 6-7M453 295l3 3 6-7M470 313l3 3 6-7" /></g>
-                <rect x="433" y="340" width="111" height="4" rx="2" fill="#c8ced7" />
-                <rect x="433" y="352" width="91" height="4" rx="2" fill="#c8ced7" />
-                <rect x="433" y="364" width="101" height="4" rx="2" fill="#c8ced7" />
-                <path d="M433 384l8 8 16-18" fill="none" stroke="#d99c4a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M487 270H532M487 296H532M487 322H532M407 351H537M407 364H522M407 377H532" stroke="#cbd1da" strokeWidth="3" strokeLinecap="round" />
             </g>
-            <g transform="rotate(35 523 430)" filter="url(#pm-paper-shadow)">
-                <rect x="511" y="342" width="17" height="126" rx="5" fill="#f7f8fa" stroke="#d99c4a" strokeWidth="1.4" />
-                <path d="M511 351h17M511 454h17" stroke="#d99c4a" strokeWidth="2" />
-                <path d="M511 468l8.5 18 8.5-18Z" fill="#f0f2f5" />
-                <path d="M517 480l2.5 6 2.5-6Z" fill="#35302a" />
-            </g>
-            <g fill="#ffc06a"><circle cx="100" cy="367" r="4" /><circle cx="555" cy="162" r="3" /></g>
-            <path d="M85 390l16-16M85 374l16 16" stroke="#ffc06a" strokeOpacity=".65" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
     );
-}
+});
 
-function DomainArtwork({ id }) {
+const DomainArtwork = React.memo(function DomainArtwork({ id }) {
     const common = { fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' };
     return (
         <svg className="pm-domain-art" viewBox="0 0 180 120" aria-hidden="true">
@@ -98,29 +65,38 @@ function DomainArtwork({ id }) {
             {id === 'diploma' && <g {...common}><path d="M19 89h143M35 89V28h110v61M47 40h86M47 52h59M47 64h72M31 19h118M41 14v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6" /><circle cx="128" cy="65" r="18" /><path className="pm-domain-art__accent" d="M128 50v30m-15-15h30" /><path d="M118 83l-5 17 15-7 15 7-5-17" /></g>}
         </svg>
     );
-}
+});
 
-function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagram, liked, onLike }) {
+const DeveloperCard = React.memo(function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagram, preferenceKey }) {
+    const [liked, setLiked] = React.useState(() => readLikePreference(preferenceKey));
+    const handleLike = React.useCallback(() => {
+        const next = !liked;
+        setLiked(next);
+        try {
+            window.localStorage.setItem(preferenceKey, JSON.stringify(next));
+        } catch {
+            // Appreciation still works when browser storage is unavailable.
+        }
+    }, [liked, preferenceKey]);
+
     return (
         <article className="pm-people-card">
             <div className="pm-people-identity">
-                <img src={avatar} alt={name} className="pm-people-avatar" loading="lazy" />
+                <img src={avatar} alt={name} className="pm-people-avatar" loading="lazy" decoding="async" fetchPriority="low" />
                 <div>
                     <p className="pm-people-role">The people behind PrepMaster</p>
                     <h3>{name}</h3>
                     <p className="pm-people-study">Diploma in Computer Engineering</p>
                 </div>
-                <motion.button
+                <button
                     className="pm-people-like"
                     type="button"
                     aria-label={liked ? 'Remove appreciation' : 'Appreciate developer'}
                     aria-pressed={liked}
-                    onClick={onLike}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ duration: 0.18, ease: smoothEase }}
+                    onClick={handleLike}
                 >
                     <Heart size={19} fill={liked ? 'currentColor' : 'none'} />
-                </motion.button>
+                </button>
             </div>
             <p className="pm-people-passion">{passion}</p>
             <div className="pm-people-links">
@@ -131,10 +107,7 @@ function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagr
             </div>
         </article>
     );
-}
-
-
-const MotionLink = motion(Link);
+});
 
 function readLikePreference(key) {
     try {
@@ -147,11 +120,10 @@ function readLikePreference(key) {
 export default function LandingPage() {
     const navigate = useNavigate();
     const location = useLocation();
-    const reduceMotion = useReducedMotion();
-    const [liked, setLiked] = React.useState(() => readLikePreference('dev_liked'));
-    const [liked2, setLiked2] = React.useState(() => readLikePreference('dev_liked_2'));
+    const [domainArtworkReady, setDomainArtworkReady] = React.useState(false);
 
     useEffect(() => {
+        document.body.classList.add('pm-home-body');
         document.title = 'PrepMaster | University Exam Preparation';
         let metaDescription = document.querySelector('meta[name="description"]');
         if (!metaDescription) {
@@ -160,6 +132,7 @@ export default function LandingPage() {
             document.head.appendChild(metaDescription);
         }
         metaDescription.content = 'Explore academic programs, courses, semesters and syllabus-led examination practice with PrepMaster.';
+        return () => document.body.classList.remove('pm-home-body');
     }, []);
 
     useEffect(() => {
@@ -168,139 +141,94 @@ export default function LandingPage() {
         window.history.replaceState({}, '', location.pathname);
     }, [location.pathname, location.state]);
 
-    const updateLike = (key, setter, value) => {
-        setter(value);
-        try {
-            window.localStorage.setItem(key, JSON.stringify(value));
-        } catch {
-            // Appreciation still works when browser storage is unavailable.
+    useEffect(() => {
+        const root = document.querySelector('.pm-home-refresh');
+        if (!root) return undefined;
+
+        const revealTargets = root.querySelectorAll('[data-home-reveal]');
+        const artworkGrid = root.querySelector('[data-home-domain-grid]');
+        if (!revealTargets.length && !artworkGrid) return undefined;
+
+        if (!('IntersectionObserver' in window)) {
+            revealTargets.forEach((target) => target.classList.add('is-visible'));
+            setDomainArtworkReady(true);
+            return undefined;
         }
-    };
 
-    const handleMouseMove = (event) => {
-        const card = event.target.closest?.('.domain-card');
-        if (!card) return;
-        const rect = card.getBoundingClientRect();
-        card.style.setProperty('--mouse-x', (event.clientX - rect.left) + 'px');
-        card.style.setProperty('--mouse-y', (event.clientY - rect.top) + 'px');
-    };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
 
-    const heroSequence = {
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.11, delayChildren: 0.08 } },
-    };
-    const heroReveal = {
-        hidden: { opacity: 0, y: 18, filter: 'blur(5px)' },
-        visible: {
-            opacity: 1,
-            y: 0,
-            filter: 'blur(0px)',
-            transition: { duration: 0.66, ease: smoothEase },
-        },
-    };
+                if (entry.target === artworkGrid) {
+                    setDomainArtworkReady(true);
+                } else {
+                    entry.target.classList.add('is-visible');
+                }
+                observer.unobserve(entry.target);
+            });
+        }, { rootMargin: '180px 0px 180px 0px', threshold: 0.02 });
+
+        revealTargets.forEach((target) => observer.observe(target));
+        if (artworkGrid) observer.observe(artworkGrid);
+        return () => observer.disconnect();
+    }, []);
 
     return (
-        <main className="pm-home-refresh" onMouseMove={handleMouseMove}>
+        <main className="pm-home-refresh">
             <div className="pm-home-shell">
-                <motion.section
-                    className="pm-home-hero"
-                    aria-labelledby="pm-home-title"
-                    variants={heroSequence}
-                    initial={reduceMotion ? false : 'hidden'}
-                    animate="visible"
-                >
-                    <motion.div className="pm-home-copy" variants={heroSequence}>
-                        <motion.p className="pm-home-kicker" variants={heroReveal}>
+                <section className="pm-home-hero" aria-labelledby="pm-home-title">
+                    <div className="pm-home-copy">
+                        <p className="pm-home-kicker pm-home-reveal" data-home-reveal style={{ '--home-reveal-delay': '0ms' }}>
                             A clearer way to prepare
-                        </motion.p>
-                        <motion.h1 id="pm-home-title" className="pm-home-title" variants={heroReveal}>
+                        </p>
+                        <h1 id="pm-home-title" className="pm-home-title pm-home-reveal" data-home-reveal style={{ '--home-reveal-delay': '70ms' }}>
                             Make every study session count.
-                        </motion.h1>
-                        <motion.p className="pm-home-description" variants={heroReveal}>
+                        </h1>
+                        <p className="pm-home-description pm-home-reveal" data-home-reveal style={{ '--home-reveal-delay': '140ms' }}>
                             Find your academic program, move through your semester and practise with exams shaped around your subject syllabus. Your next focused session starts here.
-                        </motion.p>
-                        <motion.div className="pm-home-actions" variants={heroReveal}>
-                            <motion.a
-                                className="pm-home-primary"
-                                href="#programs"
-                                whileHover={reduceMotion ? undefined : { y: -2, scale: 1.015 }}
-                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
-                                transition={{ duration: 0.24, ease: smoothEase }}
-                            >
+                        </p>
+                        <div className="pm-home-actions pm-home-reveal" data-home-reveal style={{ '--home-reveal-delay': '210ms' }}>
+                            <a className="pm-home-primary" href="#programs">
                                 Explore Programs <ArrowDown size={17} />
-                            </motion.a>
-                            <motion.button
-                                className="pm-home-secondary"
-                                type="button"
-                                onClick={() => navigate('/test-rooms')}
-                                whileHover={reduceMotion ? undefined : { y: -2 }}
-                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
-                                transition={{ duration: 0.24, ease: smoothEase }}
-                            >
+                            </a>
+                            <button className="pm-home-secondary" type="button" onClick={() => navigate('/test-rooms')}>
                                 Join Test Room <ArrowUpRight size={16} />
-                            </motion.button>
-                        </motion.div>
-                        <motion.div className="pm-home-proof" aria-label="How PrepMaster is organised" variants={heroReveal}>
+                            </button>
+                        </div>
+                        <div className="pm-home-proof pm-home-reveal" aria-label="How PrepMaster is organised" data-home-reveal style={{ '--home-reveal-delay': '280ms' }}>
                             <span><Check size={15} /> 6 academic domains</span>
                             <span><Check size={15} /> Course-led catalog</span>
                             <span><Check size={15} /> Syllabus-based practice</span>
-                        </motion.div>
-                    </motion.div>
-                    <motion.div
-                        className="pm-home-art-wrap"
-                        initial={reduceMotion ? false : { opacity: 0, scale: 0.96, filter: 'blur(5px)' }}
-                        animate={reduceMotion
-                            ? { opacity: 1 }
-                            : { opacity: 1, scale: 1, filter: 'blur(0px)', y: [0, -7, 0] }}
-                        transition={reduceMotion
-                            ? { duration: 0 }
-                            : {
-                                opacity: { duration: 0.8, ease: smoothEase },
-                                scale: { duration: 0.9, ease: smoothEase },
-                                filter: { duration: 0.8 },
-                                y: { duration: 9, repeat: Infinity, ease: 'easeInOut' },
-                            }}
-                        aria-hidden="true"
-                    >
+                        </div>
+                    </div>
+                    <div className="pm-home-art-wrap" aria-hidden="true">
                         <StudyDeskArtwork />
-                    </motion.div>
-                </motion.section>
+                    </div>
+                </section>
             </div>
 
             <div className="pm-home-rule" />
 
             <section id="programs" className="pm-programs">
                 <div className="pm-home-shell">
-                    <motion.div
-                        className="pm-section-head"
-                        initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.6 }}
-                        transition={{ duration: 0.65, ease: smoothEase }}
-                    >
+                    <div className="pm-section-head pm-home-reveal" data-home-reveal>
                         <h2>Select Your Academic Domain</h2>
                         <p>Choose your discipline below to browse its courses and start preparing for your examinations.</p>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        className="pm-domain-grid"
-                        variants={cardSequence}
-                        initial={reduceMotion ? false : 'hidden'}
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.12 }}
-                    >
-                        {domains.map((domain) => (
-                            <MotionLink
+                    <div className="pm-domain-grid" data-home-domain-grid>
+                        {domains.map((domain, index) => (
+                            <Link
                                 key={domain.id}
                                 to={'/domains/' + domain.id + '/courses'}
-                                className="domain-card pm-domain-card"
-                                variants={cardReveal}
-                                whileHover={reduceMotion ? undefined : { y: -7, scale: 1.012 }}
-                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
-                                transition={{ duration: 0.34, ease: smoothEase }}
+                                className="domain-card pm-domain-card pm-home-reveal"
+                                data-home-reveal
+                                style={{ '--home-reveal-delay': (index * 55) + 'ms' }}
                             >
                                 <div className="pm-domain-art-wrap">
-                                    <DomainArtwork id={domain.id} />
+                                    {domainArtworkReady
+                                        ? <DomainArtwork id={domain.id} />
+                                        : <span className="pm-domain-art-placeholder" aria-hidden="true" />}
                                 </div>
                                 <div className="pm-domain-content">
                                     <h3>{domain.title}</h3>
@@ -309,31 +237,19 @@ export default function LandingPage() {
                                         Explore Courses <ArrowUpRight size={16} />
                                     </span>
                                 </div>
-                            </MotionLink>
+                            </Link>
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
             <section id="contact" className="pm-people-section">
                 <div className="pm-home-shell">
-                    <motion.div
-                        className="pm-people-head"
-                        initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.6 }}
-                        transition={{ duration: 0.7, ease: smoothEase }}
-                    >
+                    <div className="pm-people-head pm-home-reveal" data-home-reveal>
                         <div><h2>Meet the people behind PrepMaster</h2><p>A small team building tools to make exam preparation more focused.</p></div>
-                    </motion.div>
-                    <motion.div
-                        className="pm-people-grid"
-                        initial={reduceMotion ? false : 'hidden'}
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.12 }}
-                        variants={cardSequence}
-                    >
-                        <motion.div variants={cardReveal}>
+                    </div>
+                    <div className="pm-people-grid">
+                        <div className="pm-home-reveal" data-home-reveal style={{ '--home-reveal-delay': '0ms' }}>
                             <DeveloperCard
                                 name="Daksh Hadvani" avatar="/avatar.png"
                                 passion="Problem solving, and building software that can make a positive impact on people’s lives."
@@ -341,10 +257,10 @@ export default function LandingPage() {
                                 github="https://github.com/dakshhadvani19"
                                 linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                                 instagram="https://instagram.com/dakshhh.__.19"
-                                liked={liked} onLike={() => updateLike('dev_liked', setLiked, !liked)}
+                                preferenceKey="dev_liked"
                             />
-                        </motion.div>
-                        <motion.div variants={cardReveal}>
+                        </div>
+                        <div className="pm-home-reveal" data-home-reveal style={{ '--home-reveal-delay': '70ms' }}>
                             <DeveloperCard
                                 name="Dev Kalola" avatar="/avatar2.jpg"
                                 passion="Building innovative solutions and turning ideas into impactful digital experiences."
@@ -352,10 +268,10 @@ export default function LandingPage() {
                                 github="https://github.com/devkalola"
                                 linkedin="https://www.linkedin.com/in/dev-kalola-646442380/"
                                 instagram="https://www.instagram.com/kalola_dev_14/"
-                                liked={liked2} onLike={() => updateLike('dev_liked_2', setLiked2, !liked2)}
+                                preferenceKey="dev_liked_2"
                             />
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

@@ -83,11 +83,27 @@ describe('homepage', () => {
     // assertion, not a warm-up.
     const { container } = await at('/');
     await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
-    expect(container.querySelector('.hero-actions')).toBeTruthy();
+    expect(container.querySelector('.pm-home-actions')).toBeTruthy();
     expect(container.querySelector('h1')).toBeTruthy();
     // the shell is there too, with both auth entries
     expect(container.querySelector('a[href="/signup?mode=login"]')).toBeTruthy();
     expect(container.querySelector('a[href="/signup?mode=signup"]')).toBeTruthy();
+  }, 20000);
+
+  it('keeps developer appreciation state local to the selected card', async () => {
+    const { container } = await at('/');
+    await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
+    await waitFor(() => expect(container.querySelectorAll('.pm-domain-art')).toHaveLength(6));
+
+    const buttons = screen.getAllByRole('button', { name: /Appreciate developer/i });
+    expect(buttons).toHaveLength(2);
+    fireEvent.click(buttons[0]);
+
+    expect(buttons[0]).toHaveAttribute('aria-pressed', 'true');
+    expect(buttons[1]).toHaveAttribute('aria-pressed', 'false');
+    expect(localStorage.getItem('dev_liked')).toBe('true');
+    expect(localStorage.getItem('dev_liked_2')).toBeNull();
+    expect(container.querySelectorAll('.pm-domain-art')).toHaveLength(6);
   }, 20000);
 
   it('"Join Test Room" opens the join-code screen without forcing subject selection or sign-in first', async () => {
