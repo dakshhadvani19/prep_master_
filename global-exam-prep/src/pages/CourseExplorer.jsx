@@ -93,8 +93,13 @@ export default function CourseExplorer() {
                         <Link
                             key={course.courseId}
                             to={`/courses/${course.courseId}/subjects`}
-                            className="glass-panel"
+                            className="glass-panel pm-course-card"
                             style={{
+                                background: "var(--glass-bg)",
+                                border: "1px solid var(--glass-border)",
+                                borderRadius: "var(--radius-lg)",
+                                minHeight: "auto",
+                                boxShadow: "none",
                                 padding: '2rem',
                                 display: 'flex',
                                 flexDirection: 'column',
