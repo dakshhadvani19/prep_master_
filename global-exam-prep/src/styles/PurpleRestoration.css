@@ -424,28 +424,13 @@
     margin-top: -48px;
     display: grid;
     place-items: center;
-    isolation: isolate;
-}
-.pm-home-art-wrap::before {
-    width: 88%;
-    border-color: rgba(139,92,246,.28);
-    box-shadow:
-        0 0 96px rgba(139,92,246,.13),
-        0 0 42px rgba(59,130,246,.08),
-        inset 0 0 48px rgba(59,130,246,.055);
-}
-.pm-home-art-wrap::after {
-    width: 96%;
-    background: linear-gradient(90deg,transparent,rgba(167,139,250,.34),transparent);
-    opacity: .7;
 }
 .pm-home-artwork {
-    width: min(112%,740px);
-    max-width: 740px;
-    transform: translateY(-14px) scale(1.055);
+    width: min(100%,680px);
+    max-width: 680px;
+    transform: translateY(-10px);
     transform-origin: center;
-    filter: drop-shadow(0 18px 36px rgba(59,130,246,.10))
-            drop-shadow(0 9px 22px rgba(139,92,246,.12));
+    filter: none;
 }
 
 /* Department tiles: larger discipline artwork and the original pointer-lit glass behaviour. */
