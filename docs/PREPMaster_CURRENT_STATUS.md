@@ -453,9 +453,9 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Memoized the static study-desk SVG, all six department SVG components, and developer contact cards.
 - Moved appreciation state into each developer card so a like click does not re-render the homepage hero and six-card grid; storage writes now happen in the click handler.
 - Removed per-pointer-move DOM measurement and CSS variable writes from the homepage; department cards retain a fixed blue/violet hover light and CSS-only lift/press feedback.
-- Replaced the JavaScript-driven infinite study illustration animation and blur/scale/filter entrance effects with a compositor-friendly transform animation and opacity/translation entrances.
+- Replaced the JavaScript-driven infinite illustration loop with a CSS transform animation; removed blur-based motion effects and all Framer Motion wrappers from the homepage in favour of one IntersectionObserver plus CSS opacity/translation transitions.
 - Reduced the hero SVG's repeating grid density and shadow filter cost; removed CSS drop-shadow filters from the six small illustrations and accents.
 - Reduced homepage glass sampling from 20px on department cards to 8px and art frames from 14px to 6px; removed the secondary CTA's backdrop blur and expensive animated card-shadow changes.
-- Added content-visibility to below-the-fold department and contact sections, with intrinsic block-size estimates and mobile adjustments.
+- Kept the below-fold layout in normal flow; six lightweight department cards did not justify content-visibility containment and its placeholder-height risk.
 - Removed 54 lines of superseded homepage restoration CSS and added a homepage smoke test for isolated appreciation state plus all six domain SVGs.
-- Verification pending: Vercel preview build and source-level checks. Local Git clone/test/lint execution is unavailable in this environment because the GitHub host cannot be resolved.
+- Verification: source-level optimization checks pass. Vercel preview build and browser smoke test pending; local Git clone/test/lint execution is unavailable because the GitHub host cannot be resolved from this environment.
