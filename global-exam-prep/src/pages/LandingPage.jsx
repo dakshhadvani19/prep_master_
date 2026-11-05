@@ -1,34 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import {
     ArrowDown, ArrowUpRight, Check, Github, Heart, Instagram,
     Linkedin, Mail,
 } from 'lucide-react';
 import { CATALOG_DOMAINS as domains } from '../data/catalogDomains';
+import * as Icons from 'lucide-react';
 import './LandingPage.css';
 
-const MotionLink = motion(Link);
 const smoothEase = [0.22, 1, 0.36, 1];
 
-const heroSequence = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.12, delayChildren: 0.06 } },
-};
-const heroReveal = {
-    hidden: { opacity: 0, y: 18, filter: 'blur(8px)' },
-    visible: {
-        opacity: 1, y: 0, filter: 'blur(0px)',
-        transition: { duration: 0.82, ease: smoothEase },
-    },
-};
-const titleLine = {
-    hidden: { y: '112%', opacity: 0, filter: 'blur(9px)' },
-    visible: {
-        y: '0%', opacity: 1, filter: 'blur(0px)',
-        transition: { duration: 0.95, ease: smoothEase },
-    },
-};
 const cardSequence = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.075, delayChildren: 0.04 } },
@@ -40,14 +22,6 @@ const cardReveal = {
         transition: { duration: 0.65, ease: smoothEase },
     },
 };
-
-function readSavedLike(key) {
-    try {
-        return JSON.parse(window.localStorage.getItem(key) || 'false') === true;
-    } catch {
-        return false;
-    }
-}
 
 function StudyDeskArtwork() {
     return (
@@ -159,11 +133,23 @@ function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagr
     );
 }
 
+
+const MotionLink = motion(Link);
+
+function readLikePreference(key) {
+    try {
+        return JSON.parse(window.localStorage.getItem(key) || 'false') === true;
+    } catch {
+        return false;
+    }
+}
+
 export default function LandingPage() {
+    const navigate = useNavigate();
     const location = useLocation();
     const reduceMotion = useReducedMotion();
-    const [liked, setLiked] = useState(() => readSavedLike('dev_liked'));
-    const [liked2, setLiked2] = useState(() => readSavedLike('dev_liked_2'));
+    const [liked, setLiked] = React.useState(() => readLikePreference('dev_liked'));
+    const [liked2, setLiked2] = React.useState(() => readLikePreference('dev_liked_2'));
 
     useEffect(() => {
         document.title = 'PrepMaster | University Exam Preparation';
@@ -177,19 +163,44 @@ export default function LandingPage() {
     }, []);
 
     useEffect(() => {
-        if (location.state?.scrollToContact) {
-            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            window.history.replaceState({}, '', location.pathname);
-        }
+        if (!location.state?.scrollToContact) return;
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.history.replaceState({}, '', location.pathname);
     }, [location.pathname, location.state]);
 
     const updateLike = (key, setter, value) => {
         setter(value);
-        try { window.localStorage.setItem(key, JSON.stringify(value)); } catch { /* optional preference */ }
+        try {
+            window.localStorage.setItem(key, JSON.stringify(value));
+        } catch {
+            // Appreciation still works when browser storage is unavailable.
+        }
+    };
+
+    const handleMouseMove = (event) => {
+        const card = event.target.closest?.('.domain-card');
+        if (!card) return;
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', (event.clientX - rect.left) + 'px');
+        card.style.setProperty('--mouse-y', (event.clientY - rect.top) + 'px');
+    };
+
+    const heroSequence = {
+        hidden: {},
+        visible: { transition: { staggerChildren: 0.11, delayChildren: 0.08 } },
+    };
+    const heroReveal = {
+        hidden: { opacity: 0, y: 18, filter: 'blur(5px)' },
+        visible: {
+            opacity: 1,
+            y: 0,
+            filter: 'blur(0px)',
+            transition: { duration: 0.66, ease: smoothEase },
+        },
     };
 
     return (
-        <main className="pm-home-refresh">
+        <main className="pm-home-refresh" onMouseMove={handleMouseMove}>
             <div className="pm-home-shell">
                 <motion.section
                     className="pm-home-hero"
@@ -199,11 +210,12 @@ export default function LandingPage() {
                     animate="visible"
                 >
                     <motion.div className="pm-home-copy" variants={heroSequence}>
-                        <motion.p className="pm-home-kicker" variants={heroReveal}>A clearer way to prepare</motion.p>
-                        <h1 id="pm-home-title" className="pm-home-title" aria-label="Make every study session count.">
-                            <span className="pm-title-line"><motion.span variants={titleLine} aria-hidden="true">Make every study session</motion.span></span>
-                            <span className="pm-title-line pm-title-line--accent"><motion.span variants={titleLine} aria-hidden="true">count.</motion.span></span>
-                        </h1>
+                        <motion.p className="pm-home-kicker" variants={heroReveal}>
+                            A clearer way to prepare
+                        </motion.p>
+                        <motion.h1 id="pm-home-title" className="pm-home-title" variants={heroReveal}>
+                            Make every study session count.
+                        </motion.h1>
                         <motion.p className="pm-home-description" variants={heroReveal}>
                             Find your academic program, move through your semester and practise with exams shaped around your subject syllabus. Your next focused session starts here.
                         </motion.p>
@@ -215,17 +227,18 @@ export default function LandingPage() {
                                 whileTap={reduceMotion ? undefined : { scale: 0.985 }}
                                 transition={{ duration: 0.24, ease: smoothEase }}
                             >
-                                Explore academic programs <ArrowDown size={17} />
+                                Explore Programs <ArrowDown size={17} />
                             </motion.a>
-                            <MotionLink
+                            <motion.button
                                 className="pm-home-secondary"
-                                to="/test-rooms"
+                                type="button"
+                                onClick={() => navigate('/test-rooms')}
                                 whileHover={reduceMotion ? undefined : { y: -2 }}
                                 whileTap={reduceMotion ? undefined : { scale: 0.985 }}
                                 transition={{ duration: 0.24, ease: smoothEase }}
                             >
-                                Join a test room <ArrowUpRight size={16} />
-                            </MotionLink>
+                                Join Test Room <ArrowUpRight size={16} />
+                            </motion.button>
                         </motion.div>
                         <motion.div className="pm-home-proof" aria-label="How PrepMaster is organised" variants={heroReveal}>
                             <span><Check size={15} /> 6 academic domains</span>
@@ -235,27 +248,40 @@ export default function LandingPage() {
                     </motion.div>
                     <motion.div
                         className="pm-home-art-wrap"
-                        initial={reduceMotion ? false : { opacity: 0, scale: 0.97, filter: 'blur(5px)' }}
-                        animate={reduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1, filter: 'blur(0px)', y: [0, -7, 0] }}
-                        transition={reduceMotion ? { duration: 0 } : { opacity: { duration: 0.9, ease: smoothEase }, scale: { duration: 1, ease: smoothEase }, filter: { duration: 0.9 }, y: { duration: 9, repeat: Infinity, ease: 'easeInOut' } }}
+                        initial={reduceMotion ? false : { opacity: 0, scale: 0.96, filter: 'blur(5px)' }}
+                        animate={reduceMotion
+                            ? { opacity: 1 }
+                            : { opacity: 1, scale: 1, filter: 'blur(0px)', y: [0, -7, 0] }}
+                        transition={reduceMotion
+                            ? { duration: 0 }
+                            : {
+                                opacity: { duration: 0.8, ease: smoothEase },
+                                scale: { duration: 0.9, ease: smoothEase },
+                                filter: { duration: 0.8 },
+                                y: { duration: 9, repeat: Infinity, ease: 'easeInOut' },
+                            }}
+                        aria-hidden="true"
                     >
                         <StudyDeskArtwork />
                     </motion.div>
                 </motion.section>
             </div>
+
             <div className="pm-home-rule" />
+
             <section id="programs" className="pm-programs">
                 <div className="pm-home-shell">
                     <motion.div
                         className="pm-section-head"
-                        initial={reduceMotion ? false : { opacity: 0, y: 14, filter: 'blur(5px)' }}
-                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.6 }}
-                        transition={{ duration: 0.75, ease: smoothEase }}
+                        transition={{ duration: 0.65, ease: smoothEase }}
                     >
-                        <h2>Select Your Academic <span>Domain</span></h2>
-                        <p>Start with your field of study. We’ll take you from program to semester and then to the subject you want to practise.</p>
+                        <h2>Select Your Academic Domain</h2>
+                        <p>Choose your discipline below to browse its courses and start preparing for your examinations.</p>
                     </motion.div>
+
                     <motion.div
                         className="pm-domain-grid"
                         variants={cardSequence}
@@ -267,23 +293,28 @@ export default function LandingPage() {
                             <MotionLink
                                 key={domain.id}
                                 to={'/domains/' + domain.id + '/courses'}
-                                className="pm-domain-card"
+                                className="domain-card pm-domain-card"
                                 variants={cardReveal}
-                                whileHover={reduceMotion ? undefined : { y: -3, scale: 1.005 }}
-                                whileTap={reduceMotion ? undefined : { scale: 0.99 }}
-                                transition={{ duration: 0.32, ease: smoothEase }}
+                                whileHover={reduceMotion ? undefined : { y: -7, scale: 1.012 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
+                                transition={{ duration: 0.34, ease: smoothEase }}
                             >
-                                <div className="pm-domain-art-wrap"><DomainArtwork id={domain.id} /></div>
+                                <div className="pm-domain-art-wrap">
+                                    <DomainArtwork id={domain.id} />
+                                </div>
                                 <div className="pm-domain-content">
                                     <h3>{domain.title}</h3>
                                     <p>{domain.description}</p>
-                                    <span className="pm-domain-open">Explore programs <ArrowUpRight size={15} /></span>
+                                    <span className="pm-domain-open">
+                                        Explore Courses <ArrowUpRight size={16} />
+                                    </span>
                                 </div>
                             </MotionLink>
                         ))}
                     </motion.div>
                 </div>
             </section>
+
             <section id="contact" className="pm-people-section">
                 <div className="pm-home-shell">
                     <motion.div
