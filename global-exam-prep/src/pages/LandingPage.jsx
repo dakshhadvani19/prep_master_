@@ -140,6 +140,7 @@ export default function LandingPage() {
     const [domainArtworkReady, setDomainArtworkReady] = React.useState(false);
 
     useEffect(() => {
+        document.body.classList.add('pm-home-body');
         document.title = 'PrepMaster | University Exam Preparation';
         let metaDescription = document.querySelector('meta[name="description"]');
         if (!metaDescription) {
@@ -148,6 +149,7 @@ export default function LandingPage() {
             document.head.appendChild(metaDescription);
         }
         metaDescription.content = 'Explore academic programs, courses, semesters and syllabus-led examination practice with PrepMaster.';
+        return () => document.body.classList.remove('pm-home-body');
     }, []);
 
     useEffect(() => {
