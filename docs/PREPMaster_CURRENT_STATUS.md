@@ -429,3 +429,11 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Replaced only the active visual layer: the new branch stops importing the warm-white/gold `GlobalTheme.css` and loads `PurpleRestoration.css` after the current page styles.
 - Current page components, current SVG drawable components, course and subject logic, auth, leaderboard URL state, syllabus upload, exam-generation algorithms, Test Room flows, migrations, API handlers and tests are retained from current main.
 - The backup branch is the full rollback point if the visual restoration needs to be abandoned. Preview build and functional checks are pending.
+
+
+### Purple UI restoration follow-up — November 5, 2026
+- Reinstated the pre-redesign centered homepage hero and domain-card layout while retaining the current study-desk/domain SVG artwork and current developer contact cards.
+- Restored the pre-redesign course-card layout and semester/subject/exam/mode/difficulty selection markup; kept the current Supabase catalog refresh and exam/test-room navigation logic.
+- Removed the homepage kicker ornament.
+- Fixed a missing reduced-motion hook found during preview smoke testing and removed a stale hook reference from the restored SubjectDetails component.
+- Preview verification: Vite production build passed. Full Vitest/lint execution remains pending because the repository could not be cloned in the available runtime. Do not promote until the latest preview has been smoke-tested in-browser.
