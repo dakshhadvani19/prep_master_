@@ -678,25 +678,18 @@
 .pm-home-refresh .pm-domain-art__accent {
     filter: none !important;
 }
-
-/* A compositor-friendly transform replaces the JS-driven infinite Framer Motion loop. */
-@keyframes pm-home-art-float {
-    0%, 100% { transform: translate3d(0,-4px,0); }
-    50% { transform: translate3d(0,4px,0); }
+.pm-home-refresh .pm-domain-art-placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
+
 .pm-home-refresh .pm-home-art-wrap {
-    animation: pm-home-art-float 10s ease-in-out infinite;
-    will-change: transform;
+    transform: translate3d(0,-4px,0);
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .pm-home-refresh .pm-home-art-wrap {
-        animation: none !important;
-        will-change: auto;
-    }
-    .pm-home-refresh .pm-domain-card {
-        transition: none !important;
-    }
+body.pm-home-body {
+    background-attachment: scroll;
 }
 
 
