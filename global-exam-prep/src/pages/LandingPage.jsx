@@ -115,16 +115,14 @@ const DomainArtwork = React.memo(function DomainArtwork({ id }) {
 const DeveloperCard = React.memo(function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagram, preferenceKey }) {
     const [liked, setLiked] = React.useState(() => readLikePreference(preferenceKey));
     const handleLike = React.useCallback(() => {
-        setLiked((current) => {
-            const next = !current;
-            try {
-                window.localStorage.setItem(preferenceKey, JSON.stringify(next));
-            } catch {
-                // Appreciation still works when browser storage is unavailable.
-            }
-            return next;
-        });
-    }, [preferenceKey]);
+        const next = !liked;
+        setLiked(next);
+        try {
+            window.localStorage.setItem(preferenceKey, JSON.stringify(next));
+        } catch {
+            // Appreciation still works when browser storage is unavailable.
+        }
+    }, [liked, preferenceKey]);
 
     return (
         <article className="pm-people-card">
