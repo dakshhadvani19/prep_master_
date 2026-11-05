@@ -19,9 +19,6 @@
     font-family: inherit;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background:
-        radial-gradient(700px 420px at 89% 8%, rgba(255,192,106,.105), transparent 68%),
-        radial-gradient(640px 380px at 0% 34%, rgba(255,255,255,.05), transparent 68%);
 }
 .pm-home-refresh *,
 .pm-catalog-page * { box-sizing: border-box; }
@@ -96,21 +93,9 @@
 .pm-home-proof { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 34px; color: #c3c9d2; font-size: 13px; }
 .pm-home-proof span { display: inline-flex; align-items: center; gap: 8px; }
 .pm-home-proof svg { color: var(--pm-gold); }
-.pm-home-art-wrap { position: relative; min-width: 0; display: grid; place-items: center; transform: translateZ(0); }
-.pm-home-art-wrap::before {
-    content: ""; position: absolute; width: 82%; aspect-ratio: 1;
-    border: 1px solid rgba(255,192,106,.2); border-radius: 50%;
-    transform: rotate(-18deg) scaleY(.72);
-    box-shadow: 0 0 80px rgba(255,192,106,.065), inset 0 0 40px rgba(255,192,106,.035);
-}
-.pm-home-art-wrap::after {
-    content: ""; position: absolute; width: 91%; height: 1px;
-    background: linear-gradient(90deg,transparent,rgba(255,214,150,.3),transparent);
-    top: 50%; transform: rotate(-19deg);
-}
+.pm-home-art-wrap { position: relative; min-width: 0; display: grid; place-items: center; }
 .pm-home-artwork {
-    position: relative; z-index: 1; width: 100%; max-width: 620px; height: auto; overflow: visible;
-
+    position: relative; width: 100%; max-width: 680px; height: auto; overflow: visible;
 }
 .pm-home-rule {
     height: 1px; width: min(1240px,calc(100% - 64px)); margin: 0 auto;
