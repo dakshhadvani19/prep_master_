@@ -90,6 +90,21 @@ describe('homepage', () => {
     expect(container.querySelector('a[href="/signup?mode=signup"]')).toBeTruthy();
   }, 20000);
 
+  it('keeps developer appreciation state local to the selected card', async () => {
+    const { container } = await at('/');
+    await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
+
+    const buttons = screen.getAllByRole('button', { name: /Appreciate developer/i });
+    expect(buttons).toHaveLength(2);
+    fireEvent.click(buttons[0]);
+
+    expect(buttons[0]).toHaveAttribute('aria-pressed', 'true');
+    expect(buttons[1]).toHaveAttribute('aria-pressed', 'false');
+    expect(localStorage.getItem('dev_liked')).toBe('true');
+    expect(localStorage.getItem('dev_liked_2')).toBeNull();
+    expect(container.querySelectorAll('.pm-domain-art')).toHaveLength(6);
+  }, 20000);
+
   it('"Join Test Room" opens the join-code screen without forcing subject selection or sign-in first', async () => {
     await at('/');
     const cta = await screen.findByRole('button', { name: /Join Test Room/i });
