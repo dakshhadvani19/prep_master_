@@ -1,0 +1,421 @@
+/*
+ * Historical PrepMaster purple UI restoration.
+ * Visual reference: pre-study-desk UI at ca9fcfd0dae241f5a5d70ec391b34e99e9e33271.
+ * Keep current components, layouts, SVG artwork, routes and state/data behavior.
+ * Restore the original dark translucent surfaces and blue-violet brand language.
+ */
+
+/* The imported index.css already owns the original tokens and page background:
+   --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6)
+   --violet: #8d7bff
+   --glass-bg: rgba(22, 24, 29, 0.7)
+   Do not replace these with the newer gold/white theme. */
+
+.pm-home-refresh,
+.pm-catalog-page {
+    --pm-gold: var(--accent-primary);
+    --pm-gold-bright: #a78bfa;
+    --pm-glass-border: rgba(167, 139, 250, .19);
+    --pm-glass-surface: rgba(22, 24, 29, .68);
+    --pm-glass-deep: rgba(18, 20, 28, .88);
+    --pm-glass-highlight: rgba(255, 255, 255, .065);
+    --pm-glass-lavender: rgba(139, 92, 246, .12);
+    --pm-muted: var(--text-secondary);
+    color: var(--text-primary);
+}
+
+.pm-home-refresh {
+    background:
+        radial-gradient(950px 510px at 88% 5%, rgba(139, 92, 246, .15), transparent 62%),
+        radial-gradient(760px 430px at 0% 36%, rgba(59, 130, 246, .12), transparent 64%);
+}
+
+.pm-home-kicker { color: #c6c9ff; }
+.pm-home-kicker::before {
+    background: var(--accent-primary);
+    box-shadow: 0 0 12px rgba(59, 130, 246, .48);
+}
+.pm-home-title { color: var(--text-primary); }
+.pm-title-line--accent { color: #a78bfa; }
+.pm-home-description { color: var(--text-secondary); }
+.pm-home-proof { color: #b8bdca; }
+.pm-home-proof svg { color: var(--accent-primary); filter: drop-shadow(0 0 7px rgba(59,130,246,.24)); }
+
+.pm-home-primary {
+    color: #fff !important;
+    background: var(--accent-gradient) !important;
+    border: 1px solid rgba(167,139,250,.45) !important;
+    box-shadow: 0 10px 25px rgba(59,130,246,.30), 0 4px 22px rgba(139,92,246,.16) !important;
+}
+.pm-home-primary:hover {
+    color: #fff !important;
+    background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+    border-color: rgba(196,181,253,.72) !important;
+    box-shadow: 0 14px 32px rgba(59,130,246,.32), 0 8px 26px rgba(139,92,246,.22) !important;
+}
+.pm-home-secondary {
+    color: #eef0ff;
+    border-color: rgba(167,139,250,.26);
+    background: linear-gradient(145deg, rgba(59,130,246,.10), rgba(139,92,246,.055));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.10);
+}
+.pm-home-secondary:hover {
+    color: #fff;
+    border-color: rgba(167,139,250,.56);
+    background: linear-gradient(145deg, rgba(59,130,246,.18), rgba(139,92,246,.13));
+    box-shadow: 0 8px 24px rgba(59,130,246,.12);
+}
+
+.pm-home-art-wrap::before {
+    border-color: rgba(139,92,246,.28);
+    box-shadow: 0 0 72px rgba(139,92,246,.12), inset 0 0 38px rgba(59,130,246,.055);
+}
+.pm-home-art-wrap::after {
+    background: linear-gradient(90deg, transparent, rgba(167,139,250,.42), transparent);
+}
+.pm-home-artwork { filter: drop-shadow(0 12px 28px rgba(91,75,190,.12)); }
+
+/* Preserve current SVG geometry; recolor only existing gold accent strokes/fills. */
+.pm-home-artwork [stroke="#ffb454"],
+.pm-home-artwork [stroke="#d99c4a"] { stroke: #a78bfa !important; }
+.pm-home-artwork [fill="#ffb454"],
+.pm-home-artwork [fill="#d99c4a"] { fill: #8b5cf6 !important; }
+.pm-domain-art__accent {
+    stroke: #a78bfa !important;
+    filter: drop-shadow(0 0 5px rgba(139,92,246,.32));
+}
+
+.pm-home-refresh .pm-domain-card,
+.pm-catalog-page .pm-course-card,
+.pm-catalog-page .pm-semester-button,
+.pm-catalog-page .pm-subject-trigger {
+    color: #f5f6ff;
+    border-color: rgba(255,255,255,.075);
+    background: rgba(22,24,29,.68);
+    -webkit-backdrop-filter: blur(20px) saturate(1.22);
+    backdrop-filter: blur(20px) saturate(1.22);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.055), 0 18px 38px rgba(0,0,0,.28);
+    transition: background .28s ease, border-color .28s ease, box-shadow .28s ease, transform .28s ease;
+}
+
+.pm-home-refresh .pm-domain-card::before,
+.pm-catalog-page .pm-course-card::before,
+.pm-catalog-page .pm-semester-button::before,
+.pm-catalog-page .pm-subject-trigger::before {
+    inset: 0;
+    opacity: 0;
+    background:
+        radial-gradient(650px circle at 12% 5%, rgba(59,130,246,.15), transparent 48%),
+        radial-gradient(520px circle at 92% 95%, rgba(139,92,246,.13), transparent 48%);
+    transform: none;
+    animation: none !important;
+    transition: opacity .28s ease;
+}
+.pm-home-refresh .pm-domain-card::after,
+.pm-catalog-page .pm-course-card::after,
+.pm-catalog-page .pm-semester-button::after,
+.pm-catalog-page .pm-subject-trigger::after { display: none !important; }
+
+.pm-home-refresh .pm-domain-card:hover,
+.pm-home-refresh .pm-domain-card:focus-visible,
+.pm-catalog-page .pm-course-card:hover,
+.pm-catalog-page .pm-course-card:focus-visible,
+.pm-catalog-page .pm-semester-button:hover,
+.pm-catalog-page .pm-semester-button:focus-visible,
+.pm-catalog-page .pm-subject-trigger:hover,
+.pm-catalog-page .pm-subject-trigger:focus-visible {
+    color: #fff;
+    border-color: rgba(139,92,246,.42);
+    background: rgba(27,29,40,.82);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.075), 0 22px 46px rgba(0,0,0,.36), 0 0 22px rgba(59,130,246,.09);
+}
+.pm-home-refresh .pm-domain-card:hover::before,
+.pm-home-refresh .pm-domain-card:focus-visible::before,
+.pm-catalog-page .pm-course-card:hover::before,
+.pm-catalog-page .pm-course-card:focus-visible::before,
+.pm-catalog-page .pm-semester-button:hover::before,
+.pm-catalog-page .pm-semester-button:focus-visible::before,
+.pm-catalog-page .pm-subject-trigger:hover::before,
+.pm-catalog-page .pm-subject-trigger:focus-visible::before { opacity: 1; }
+
+.pm-home-refresh .pm-domain-art-wrap {
+    border-color: rgba(139,92,246,.20);
+    background:
+        linear-gradient(145deg, rgba(59,130,246,.11), rgba(139,92,246,.075)),
+        rgba(22,24,29,.48);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.065);
+}
+.pm-domain-art-wrap::after { background: rgba(139,92,246,.56); }
+
+.pm-domain-card h3 { color: #f7f7ff; }
+.pm-domain-card p { color: #b5bac8; }
+.pm-domain-open { color: #d7dbff; }
+.pm-domain-open svg { color: #a78bfa; }
+
+.pm-people-section {
+    border-top-color: rgba(139,92,246,.12);
+    background: linear-gradient(180deg, rgba(59,130,246,.025), transparent);
+}
+.pm-people-head h2 { color: #f7f7ff; }
+.pm-people-card {
+    background:
+        radial-gradient(100% 90% at 5% -5%, rgba(139,92,246,.10), transparent 60%),
+        linear-gradient(145deg, rgba(30,31,43,.78), rgba(18,20,27,.92));
+    border-color: rgba(167,139,250,.16);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 18px 42px rgba(0,0,0,.25);
+}
+.pm-people-role { color: #c8c9ff; }
+.pm-people-like { color: #a78bfa; border-color: rgba(167,139,250,.24); }
+.pm-people-like:hover,
+.pm-people-like[aria-pressed="true"] { background: rgba(139,92,246,.15); border-color: rgba(167,139,250,.52); box-shadow: 0 6px 18px rgba(139,92,246,.12); }
+.pm-people-links a {
+    border-color: rgba(167,139,250,.20);
+    background: linear-gradient(145deg, rgba(59,130,246,.08), rgba(139,92,246,.045));
+}
+.pm-people-links a:hover {
+    border-color: rgba(167,139,250,.46);
+    background: linear-gradient(145deg, rgba(59,130,246,.15), rgba(139,92,246,.11));
+    box-shadow: 0 7px 20px rgba(139,92,246,.10);
+}
+
+/* Course / semester / subject selector colors match the pre-redesign catalog. */
+.pm-catalog-page::before {
+    background: radial-gradient(ellipse, rgba(139,92,246,.13), transparent 70%);
+    filter: blur(10px);
+}
+.pm-catalog-kicker { color: #a78bfa; }
+.pm-course-header h1 span { color: #a78bfa; }
+.pm-catalog-description { color: #b5bac8; }
+.pm-catalog-message {
+    color: #eef0ff;
+    border-color: rgba(139,92,246,.22);
+    background: linear-gradient(145deg, rgba(29,31,45,.80), rgba(18,20,28,.92));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.055), 0 12px 28px rgba(0,0,0,.20);
+}
+.pm-catalog-message p { color: #b7bdca; }
+
+.pm-catalog-page .pm-course-card {
+    background:
+        radial-gradient(125% 90% at 8% 0%, rgba(59,130,246,.12), transparent 58%),
+        linear-gradient(145deg, rgba(31,32,45,.84), rgba(18,20,28,.91));
+}
+.pm-catalog-page .pm-course-card:hover {
+    background:
+        radial-gradient(125% 90% at 8% 0%, rgba(59,130,246,.18), transparent 58%),
+        linear-gradient(145deg, rgba(38,38,55,.90), rgba(19,21,31,.94));
+}
+.pm-catalog-page .pm-course-mark {
+    color: #a78bfa;
+    border-color: rgba(167,139,250,.28);
+    background: linear-gradient(145deg, rgba(59,130,246,.13), rgba(139,92,246,.11));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+.pm-catalog-page .pm-course-count {
+    color: #c8c9db;
+    border-color: rgba(167,139,250,.20);
+    background: rgba(12,14,22,.38);
+}
+.pm-catalog-page .pm-course-name { color: #f5f6ff; }
+.pm-catalog-page .pm-course-card__meta { color: #b8bdcc; }
+.pm-catalog-page .pm-course-card__meta svg { color: #8b5cf6; }
+.pm-catalog-page .pm-course-card__action {
+    color: #a78bfa;
+    border-top-color: rgba(167,139,250,.16);
+}
+
+.pm-catalog-page .pm-semester-button,
+.pm-catalog-page .pm-subject-trigger {
+    color: #eef0ff;
+    border-color: rgba(167,139,250,.18);
+    background: rgba(22,24,29,.74);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.055), 0 8px 20px rgba(0,0,0,.24);
+}
+.pm-catalog-page .pm-semester-button:hover,
+.pm-catalog-page .pm-subject-trigger:hover {
+    border-color: rgba(139,92,246,.46);
+    background: rgba(31,32,46,.86);
+}
+.pm-catalog-page .pm-semester-button[aria-pressed="true"],
+.pm-catalog-page .pm-subject-trigger[aria-expanded="true"] {
+    color: #fff;
+    border-color: rgba(139,92,246,.72);
+    background: linear-gradient(145deg, rgba(59,130,246,.20), rgba(139,92,246,.18));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 0 0 1px rgba(139,92,246,.09);
+}
+.pm-semester-button span:last-child { color: #aeb4c5; }
+.pm-semester-button[aria-pressed="true"] span:last-child { color: #c4b5fd; }
+.pm-subject-header__mark {
+    color: #a78bfa;
+    border-color: rgba(167,139,250,.28);
+    background: linear-gradient(145deg, rgba(59,130,246,.15), rgba(139,92,246,.10));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+@media (prefers-contrast: more), (prefers-reduced-transparency: reduce) {
+    .pm-home-refresh .pm-domain-card,
+    .pm-catalog-page .pm-course-card,
+    .pm-catalog-page .pm-semester-button,
+    .pm-catalog-page .pm-subject-trigger {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+        background: #20212e !important;
+        border-color: rgba(167,139,250,.54) !important;
+    }
+}
+
+/* Exam configuration restores the original blue-violet theme. Active exam
+   question navigation retains its established blue progress/selection states. */
+.pm-exam-portal,
+.pm-active-exam,
+.pm-subject-page,
+.pm-test-room-page {
+    --pm-exam-blue: #3b82f6;
+    --pm-exam-blue-deep: #1d4ed8;
+    --pm-exam-glass: rgba(22,24,29,.92);
+    --pm-exam-glass-raised: rgba(30,31,45,.94);
+    --pm-exam-glass-border: rgba(167,139,250,.22);
+}
+.pm-exam-portal::before,
+.pm-test-room-page::before,
+.pm-subject-page::before {
+    background: radial-gradient(ellipse, rgba(139,92,246,.14), transparent 70%);
+}
+.pm-exam-portal .glass-panel,
+.pm-active-exam .glass-panel,
+.pm-subject-page .pm-exam-config-panel,
+.pm-test-room-page .glass-panel {
+    background: var(--pm-exam-glass) !important;
+    border-color: var(--pm-exam-glass-border) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 16px 38px rgba(0,0,0,.32);
+}
+.pm-exam-config-panel {
+    border: 1px solid rgba(139,92,246,.34) !important;
+    border-top-color: rgba(167,139,250,.25) !important;
+    border-radius: 0 0 22px 22px !important;
+    background:
+        radial-gradient(115% 85% at 0% 0%, rgba(139,92,246,.14), transparent 56%),
+        rgba(22,24,29,.94) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 16px 36px rgba(0,0,0,.32) !important;
+}
+.pm-exam-step-label { color: #eeeaff; }
+.pm-exam-choice,
+.pm-exam-mode-choice,
+.pm-exam-difficulty-choice {
+    color: #f2efff !important;
+    border: 1px solid rgba(167,139,250,.27) !important;
+    background: linear-gradient(145deg, rgba(34,34,51,.92), rgba(20,21,31,.94)) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 6px 16px rgba(0,0,0,.20);
+}
+.pm-exam-choice:hover,
+.pm-exam-mode-choice:hover,
+.pm-exam-difficulty-choice:hover,
+.pm-exam-choice[aria-pressed="true"],
+.pm-exam-mode-choice[aria-pressed="true"],
+.pm-exam-difficulty-choice[aria-pressed="true"] {
+    color: #fff !important;
+    border-color: rgba(167,139,250,.70) !important;
+    background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 8px 22px rgba(91,75,190,.25);
+}
+.pm-exam-choice[aria-pressed="true"] span,
+.pm-exam-mode-choice[aria-pressed="true"] span,
+.pm-exam-difficulty-choice[aria-pressed="true"] span,
+.pm-exam-mode-choice[aria-pressed="true"] svg,
+.pm-exam-difficulty-choice[aria-pressed="true"] svg { color: #fff !important; }
+.pm-exam-choice:focus-visible,
+.pm-exam-mode-choice:focus-visible,
+.pm-exam-difficulty-choice:focus-visible,
+.pm-exam-start-action:focus-visible,
+.pm-exam-room-action:focus-visible { outline: 2px solid #a78bfa; outline-offset: 3px; }
+
+.pm-exam-start-action,
+.pm-exam-generate-action,
+.pm-exam-room-action {
+    color: #fff !important;
+    border: 1px solid rgba(167,139,250,.42) !important;
+    border-radius: 999px !important;
+    background: var(--accent-gradient) !important;
+    box-shadow: 0 8px 22px rgba(59,130,246,.24), 0 4px 16px rgba(139,92,246,.12) !important;
+}
+.pm-exam-start-action::before,
+.pm-exam-generate-action::before { background: linear-gradient(135deg, #2563eb, #7c3aed); }
+.pm-exam-start-action:hover:not(:disabled),
+.pm-exam-generate-action:hover:not(:disabled),
+.pm-exam-room-action:hover {
+    color: #fff !important;
+    border-color: rgba(196,181,253,.82) !important;
+    box-shadow: 0 11px 28px rgba(59,130,246,.26), 0 7px 22px rgba(139,92,246,.18) !important;
+}
+.pm-exam-start-action:disabled,
+.pm-exam-generate-action:disabled {
+    color: #d6d4e4 !important;
+    background: #2a2b38 !important;
+    border-color: rgba(167,139,250,.18) !important;
+    box-shadow: none !important;
+}
+.pm-exam-intro-card,
+.pm-exam-upload-card {
+    background:
+        radial-gradient(115% 85% at 0% 0%, rgba(139,92,246,.12), transparent 54%),
+        rgba(22,24,29,.92) !important;
+    border-color: rgba(139,92,246,.28) !important;
+}
+.pm-exam-intro-card h2,
+.pm-exam-upload-card h2 { color: #f6f4ff !important; }
+.pm-exam-instructions {
+    color: #f0efff !important;
+    background: rgba(24,25,37,.92) !important;
+    border: 1px solid rgba(167,139,250,.24) !important;
+}
+.pm-exam-instructions h3,
+.pm-exam-instructions li { color: #e5e2f6 !important; }
+.pm-exam-dropzone {
+    color: #eceaff;
+    background: rgba(36,34,54,.76) !important;
+    border: 2px dashed rgba(167,139,250,.56) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+.pm-exam-dropzone p,
+.pm-exam-dropzone svg { color: #b7a8ff !important; }
+.pm-exam-dropzone:hover,
+.pm-exam-dropzone:focus-within {
+    background: linear-gradient(135deg, rgba(37,99,235,.24), rgba(124,58,237,.26)) !important;
+    border-color: #a78bfa !important;
+    box-shadow: 0 0 24px rgba(139,92,246,.18);
+}
+.pm-exam-uploaded-file {
+    color: #f0efff !important;
+    background: rgba(30,31,45,.92) !important;
+    border: 1px solid rgba(167,139,250,.25) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+.pm-exam-uploaded-file span { color: #e4e1f2 !important; }
+
+/* Existing blue progress states remain distinct while room setup surfaces use violet. */
+.pm-test-room-page .pm-room-action {
+    color: #f2efff;
+    background: rgba(31,30,46,.84);
+    border-color: rgba(167,139,250,.22);
+}
+.pm-test-room-page .pm-room-action:not(:disabled):hover { border-color: rgba(167,139,250,.62); }
+.pm-room-summary-tile,
+.pm-room-participant {
+    background: rgba(27,28,42,.94) !important;
+    border-color: rgba(167,139,250,.18) !important;
+}
+.pm-room-code-card {
+    background:
+        radial-gradient(110% 100% at 0% 0%, rgba(139,92,246,.18), transparent 58%),
+        rgba(22,24,36,.98) !important;
+    border-color: rgba(167,139,250,.34) !important;
+}
+.pm-room-participant-avatar[data-host="false"] {
+    background: rgba(59,130,246,.18) !important;
+    color: #dbeafe !important;
+    border-color: rgba(96,165,250,.30);
+}
+.pm-room-participant-avatar[data-host="true"] { background: rgba(245,158,11,.15) !important; }

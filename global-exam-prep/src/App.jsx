@@ -7,7 +7,7 @@ import { Loader } from 'lucide-react';
 import './index.css';
 import './pages/LandingPage.css';
 import './pages/ExamExperience.css';
-import './styles/GlobalTheme.css';
+import './styles/PurpleRestoration.css';
 
 // Lazy loading route components for FAANG-level performance splitting
 const LandingPage = lazy(() => import('./pages/LandingPage'));

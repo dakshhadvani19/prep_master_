@@ -419,3 +419,13 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Lightened homepage-local gold accents slightly from #ffb454 / #ffd08a to #ffc06a / #ffd696. The course explorer's existing graduation-cap mark remains the visual gold icon; section emphasis and selected states use the same local pair. Global app colors and navbar styling are unchanged.
 - Hero layout, contact content, card geometry, responsive grids, routes, selection semantics, catalog queries and exam setup behavior remain unchanged.
 - Verification scope: source-level CSS/JSX selectors, state semantics, responsive rules and accessibility fallbacks checked. A local npm build and authenticated browser visual test are not available through this GitHub-connected session; deployment build status will be checked separately.
+
+
+## Purple UI restoration branch — 2026-11-05
+
+- Protected the current production source commit `360f5a38fcb78bb7b059e045f13f4bd85e5df8ff` with branch `backup/main-before-purple-ui-restore-2026-11-05`.
+- Created isolated branch `restore/purple-ui-with-current-logic-2026-11-05` from the same current commit. `main` and the production deployment are not modified.
+- The restoration baseline is the pre-study-desk interface snapshot `ca9fcfd0dae241f5a5d70ec391b34e99e9e33271`; the original blue/violet tokens in `src/index.css` are unchanged between that snapshot and current main.
+- Replaced only the active visual layer: the new branch stops importing the warm-white/gold `GlobalTheme.css` and loads `PurpleRestoration.css` after the current page styles.
+- Current page components, current SVG drawable components, course and subject logic, auth, leaderboard URL state, syllabus upload, exam-generation algorithms, Test Room flows, migrations, API handlers and tests are retained from current main.
+- The backup branch is the full rollback point if the visual restoration needs to be abandoned. Preview build and functional checks are pending.
