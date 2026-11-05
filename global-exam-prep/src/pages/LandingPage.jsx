@@ -6,7 +6,6 @@ import {
     Linkedin, Mail,
 } from 'lucide-react';
 import { CATALOG_DOMAINS as domains } from '../data/catalogDomains';
-import * as Icons from 'lucide-react';
 import './LandingPage.css';
 
 const smoothEase = [0.22, 1, 0.36, 1];
@@ -16,22 +15,35 @@ const cardSequence = {
     visible: { transition: { staggerChildren: 0.075, delayChildren: 0.04 } },
 };
 const cardReveal = {
-    hidden: { opacity: 0, y: 16, filter: 'blur(4px)' },
+    hidden: { opacity: 0, y: 14 },
     visible: {
-        opacity: 1, y: 0, filter: 'blur(0px)',
-        transition: { duration: 0.65, ease: smoothEase },
+        opacity: 1, y: 0,
+        transition: { duration: 0.52, ease: smoothEase },
     },
 };
 
-function StudyDeskArtwork() {
+const heroSequence = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.09, delayChildren: 0.06 } },
+};
+const heroReveal = {
+    hidden: { opacity: 0, y: 14 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.48, ease: smoothEase },
+    },
+};
+
+const StudyDeskArtwork = React.memo(function StudyDeskArtwork() {
     return (
         <svg className="pm-home-artwork" viewBox="0 0 650 500" role="img" aria-label="Exam paper, answer sheet and pencil arranged on a study desk">
             <defs>
-                <pattern id="pm-paper-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-                    <path d="M18 0H0V18" fill="none" stroke="#ffffff" strokeOpacity=".045" />
+                <pattern id="pm-paper-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+                    <path d="M48 0H0V48" fill="none" stroke="#ffffff" strokeOpacity=".045" />
                 </pattern>
-                <filter id="pm-paper-shadow" x="-30%" y="-30%" width="160%" height="170%">
-                    <feDropShadow dx="0" dy="20" stdDeviation="18" floodColor="#000000" floodOpacity=".42" />
+                <filter id="pm-paper-shadow" x="-18%" y="-18%" width="136%" height="142%">
+                    <feDropShadow dx="0" dy="9" stdDeviation="6" floodColor="#000000" floodOpacity=".24" />
                 </filter>
             </defs>
             <path d="M70 100C145 22 291 15 401 65s190 119 179 229-105 164-228 164S78 394 47 289 1 175 70 100Z" fill="url(#pm-paper-grid)" stroke="#ffffff" strokeOpacity=".08" />
@@ -84,9 +96,9 @@ function StudyDeskArtwork() {
             <path d="M85 390l16-16M85 374l16 16" stroke="#ffc06a" strokeOpacity=".65" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
     );
-}
+});
 
-function DomainArtwork({ id }) {
+const DomainArtwork = React.memo(function DomainArtwork({ id }) {
     const common = { fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' };
     return (
         <svg className="pm-domain-art" viewBox="0 0 180 120" aria-hidden="true">
@@ -98,13 +110,26 @@ function DomainArtwork({ id }) {
             {id === 'diploma' && <g {...common}><path d="M19 89h143M35 89V28h110v61M47 40h86M47 52h59M47 64h72M31 19h118M41 14v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6m13-6v10m13-10v6" /><circle cx="128" cy="65" r="18" /><path className="pm-domain-art__accent" d="M128 50v30m-15-15h30" /><path d="M118 83l-5 17 15-7 15 7-5-17" /></g>}
         </svg>
     );
-}
+});
 
-function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagram, liked, onLike }) {
+const DeveloperCard = React.memo(function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagram, preferenceKey }) {
+    const [liked, setLiked] = React.useState(() => readLikePreference(preferenceKey));
+    const handleLike = React.useCallback(() => {
+        setLiked((current) => {
+            const next = !current;
+            try {
+                window.localStorage.setItem(preferenceKey, JSON.stringify(next));
+            } catch {
+                // Appreciation still works when browser storage is unavailable.
+            }
+            return next;
+        });
+    }, [preferenceKey]);
+
     return (
         <article className="pm-people-card">
             <div className="pm-people-identity">
-                <img src={avatar} alt={name} className="pm-people-avatar" loading="lazy" />
+                <img src={avatar} alt={name} className="pm-people-avatar" loading="lazy" decoding="async" fetchPriority="low" />
                 <div>
                     <p className="pm-people-role">The people behind PrepMaster</p>
                     <h3>{name}</h3>
@@ -115,7 +140,7 @@ function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagr
                     type="button"
                     aria-label={liked ? 'Remove appreciation' : 'Appreciate developer'}
                     aria-pressed={liked}
-                    onClick={onLike}
+                    onClick={handleLike}
                     whileTap={{ scale: 0.9 }}
                     transition={{ duration: 0.18, ease: smoothEase }}
                 >
@@ -131,8 +156,7 @@ function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagr
             </div>
         </article>
     );
-}
-
+});
 
 const MotionLink = motion(Link);
 
@@ -148,8 +172,6 @@ export default function LandingPage() {
     const navigate = useNavigate();
     const location = useLocation();
     const reduceMotion = useReducedMotion();
-    const [liked, setLiked] = React.useState(() => readLikePreference('dev_liked'));
-    const [liked2, setLiked2] = React.useState(() => readLikePreference('dev_liked_2'));
 
     useEffect(() => {
         document.title = 'PrepMaster | University Exam Preparation';
@@ -168,39 +190,8 @@ export default function LandingPage() {
         window.history.replaceState({}, '', location.pathname);
     }, [location.pathname, location.state]);
 
-    const updateLike = (key, setter, value) => {
-        setter(value);
-        try {
-            window.localStorage.setItem(key, JSON.stringify(value));
-        } catch {
-            // Appreciation still works when browser storage is unavailable.
-        }
-    };
-
-    const handleMouseMove = (event) => {
-        const card = event.target.closest?.('.domain-card');
-        if (!card) return;
-        const rect = card.getBoundingClientRect();
-        card.style.setProperty('--mouse-x', (event.clientX - rect.left) + 'px');
-        card.style.setProperty('--mouse-y', (event.clientY - rect.top) + 'px');
-    };
-
-    const heroSequence = {
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.11, delayChildren: 0.08 } },
-    };
-    const heroReveal = {
-        hidden: { opacity: 0, y: 18, filter: 'blur(5px)' },
-        visible: {
-            opacity: 1,
-            y: 0,
-            filter: 'blur(0px)',
-            transition: { duration: 0.66, ease: smoothEase },
-        },
-    };
-
     return (
-        <main className="pm-home-refresh" onMouseMove={handleMouseMove}>
+        <main className="pm-home-refresh">
             <div className="pm-home-shell">
                 <motion.section
                     className="pm-home-hero"
@@ -246,24 +237,9 @@ export default function LandingPage() {
                             <span><Check size={15} /> Syllabus-based practice</span>
                         </motion.div>
                     </motion.div>
-                    <motion.div
-                        className="pm-home-art-wrap"
-                        initial={reduceMotion ? false : { opacity: 0, scale: 0.96, filter: 'blur(5px)' }}
-                        animate={reduceMotion
-                            ? { opacity: 1 }
-                            : { opacity: 1, scale: 1, filter: 'blur(0px)', y: [0, -7, 0] }}
-                        transition={reduceMotion
-                            ? { duration: 0 }
-                            : {
-                                opacity: { duration: 0.8, ease: smoothEase },
-                                scale: { duration: 0.9, ease: smoothEase },
-                                filter: { duration: 0.8 },
-                                y: { duration: 9, repeat: Infinity, ease: 'easeInOut' },
-                            }}
-                        aria-hidden="true"
-                    >
+                    <div className="pm-home-art-wrap" aria-hidden="true">
                         <StudyDeskArtwork />
-                    </motion.div>
+                    </div>
                 </motion.section>
             </div>
 
@@ -295,9 +271,6 @@ export default function LandingPage() {
                                 to={'/domains/' + domain.id + '/courses'}
                                 className="domain-card pm-domain-card"
                                 variants={cardReveal}
-                                whileHover={reduceMotion ? undefined : { y: -7, scale: 1.012 }}
-                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
-                                transition={{ duration: 0.34, ease: smoothEase }}
                             >
                                 <div className="pm-domain-art-wrap">
                                     <DomainArtwork id={domain.id} />
@@ -341,7 +314,7 @@ export default function LandingPage() {
                                 github="https://github.com/dakshhadvani19"
                                 linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                                 instagram="https://instagram.com/dakshhh.__.19"
-                                liked={liked} onLike={() => updateLike('dev_liked', setLiked, !liked)}
+                                preferenceKey="dev_liked"
                             />
                         </motion.div>
                         <motion.div variants={cardReveal}>
@@ -352,7 +325,7 @@ export default function LandingPage() {
                                 github="https://github.com/devkalola"
                                 linkedin="https://www.linkedin.com/in/dev-kalola-646442380/"
                                 instagram="https://www.instagram.com/kalola_dev_14/"
-                                liked={liked2} onLike={() => updateLike('dev_liked_2', setLiked2, !liked2)}
+                                preferenceKey="dev_liked_2"
                             />
                         </motion.div>
                     </motion.div>
