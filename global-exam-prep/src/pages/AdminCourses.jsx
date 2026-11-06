@@ -1,8 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+import { createElement, useEffect, useMemo, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
     AlertCircle, ArrowLeft, BookOpen, CheckCircle2, ChevronRight, Cpu, GraduationCap,
-    Layers3, LayoutGrid, BriefcaseBusiness, FlaskConical, Scale, Search, RefreshCw, X,
+    Layers3, LayoutGrid, Briefcase, FlaskConical, Scale, Search, RefreshCw, X,
     LoaderCircle,
 } from 'lucide-react';
 import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain, getCatalogDomain, resetCatalogCache } from '../utils/catalogApi';
@@ -13,7 +13,7 @@ import './AdminCourses.css';
 const DOMAIN_ICONS = {
     engineering: Cpu,
     'computer-apps': LayoutGrid,
-    management: BriefcaseBusiness,
+    management: Briefcase,
     'science-pharmacy': FlaskConical,
     'law-arts': Scale,
     diploma: GraduationCap,
@@ -52,7 +52,7 @@ function CatalogChoice({ icon: Icon, title, subtitle, meta, onClick, testId }) {
             data-testid={testId}
         >
             <span className="lb-choice__icon">
-                <Icon size={21} strokeWidth={1.8} />
+                {createElement(Icon, { size: 21, strokeWidth: 1.8 })}
             </span>
             <span className="lb-choice__copy">
                 <span className="lb-choice__title">{title}</span>
@@ -68,7 +68,7 @@ function EmptyState({ icon: Icon = BookOpen, title, children }) {
     return (
         <div className="lb-empty-state">
             <span className="lb-empty-state__icon">
-                <Icon size={21} strokeWidth={1.8} />
+                {createElement(Icon, { size: 21, strokeWidth: 1.8 })}
             </span>
             <h3>{title}</h3>
             {children && <p>{children}</p>}
