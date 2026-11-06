@@ -137,6 +137,32 @@ describe('admin subject and question locator — Phase 1', () => {
         expect(screen.queryByRole('option', { name: /Calculus · 102/ })).not.toBeInTheDocument();
     });
 
+    it('keeps the removal dropdown within the visible viewport when space below is limited', async () => {
+        renderAdmin('/admin/courses?department=engineering&courseId=1&semester=1');
+        await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ });
+        fireEvent.click(screen.getByRole('tab', { name: 'Remove subject' }));
+
+        const picker = await screen.findByRole('combobox', { name: /Choose subject to remove/ });
+        const previousHeight = window.innerHeight;
+        Object.defineProperty(window, 'innerHeight', { configurable: true, value: 768 });
+        const rectSpy = vi.spyOn(picker, 'getBoundingClientRect').mockReturnValue({
+            x: 0, y: 640, top: 640, right: 420, bottom: 684, left: 0, width: 420, height: 44,
+            toJSON: () => ({}),
+        });
+
+        try {
+            fireEvent.click(picker);
+            const menu = await screen.findByRole('listbox');
+            await waitFor(() => {
+                expect(menu.style.maxHeight).toBe('72px');
+                expect(menu).toHaveAttribute('data-placement', 'bottom');
+            });
+        } finally {
+            rectSpy.mockRestore();
+            Object.defineProperty(window, 'innerHeight', { configurable: true, value: previousHeight });
+        }
+    });
+
     it('shows the add-subject form after Department → Course → Semester selection', async () => {
         renderAdmin();
         fireEvent.click(screen.getByRole('button', { name: /Engineering & Technology/ }));
