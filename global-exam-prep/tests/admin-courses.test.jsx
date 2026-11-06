@@ -130,6 +130,9 @@ describe('admin subject and question locator — Phase 1', () => {
         expect(await screen.findByRole('tab', { name: 'Add subject' })).toBeInTheDocument();
         fireEvent.click(screen.getByRole('tab', { name: 'Remove subject' }));
         await screen.findByRole('combobox', { name: /Choose subject to remove/ });
+        const removeSubjectPicker = screen.getByRole('combobox', { name: /Choose subject to remove/ });
+        fireEvent.click(removeSubjectPicker);
+        expect(screen.getByRole('listbox')).toHaveAttribute('data-placement', 'bottom');
         expect(screen.getByRole('option', { name: /Computer Workshop · 101/ })).toBeInTheDocument();
         expect(screen.queryByRole('option', { name: /Calculus · 102/ })).not.toBeInTheDocument();
     });
@@ -162,7 +165,8 @@ describe('admin subject and question locator — Phase 1', () => {
         fireEvent.click(await screen.findByTestId('semester-option-1'));
         fireEvent.click(await screen.findByRole('tab', { name: 'Remove subject' }));
 
-        fireEvent.change(await screen.findByRole('combobox', { name: /Choose subject to remove/ }), { target: { value: '103' } });
+        fireEvent.click(await screen.findByRole('combobox', { name: /Choose subject to remove/ }));
+        fireEvent.click(await screen.findByRole('option', { name: /Computer Programming · 103/ }));
         fireEvent.click(await screen.findByRole('button', { name: 'Remove subject' }));
         expect(screen.getByText(/cannot be undone/i)).toBeInTheDocument();
         fireEvent.click(screen.getByRole('button', { name: 'Confirm removal' }));
@@ -214,6 +218,32 @@ describe('admin subject and question locator — Phase 1', () => {
         expect(catalogMocks.fetchCourseAndSubjects).toHaveBeenCalledWith(1);
     });
 
+    it('keeps the admin locator on the subject step while changing removal mode and subject selection', async () => {
+        renderAdmin();
+        fireEvent.click(screen.getByRole('button', { name: /Engineering & Technology/ }));
+        fireEvent.click(await screen.findByRole('button', { name: /B.Tech - Computer Engineering/ }));
+        fireEvent.click(await screen.findByTestId('semester-option-1'));
+
+        expect(await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ })).toBeInTheDocument();
+        fireEvent.click(screen.getByRole('tab', { name: 'Remove subject' }));
+
+        const picker = await screen.findByRole('combobox', { name: /Choose subject to remove/ });
+        expect(screen.getByTestId('admin-step-subject')).toHaveAttribute('aria-current', 'step');
+        expect(catalogMocks.fetchCoursesForDomain).toHaveBeenCalledTimes(1);
+        expect(catalogMocks.fetchCourseAndSubjects).toHaveBeenCalledTimes(1);
+
+        fireEvent.click(picker);
+        expect(screen.getByRole('listbox')).toHaveAttribute('data-placement', 'bottom');
+        fireEvent.click(screen.getByRole('option', { name: /Computer Programming · 103/ }));
+
+        const selectedPicker = await screen.findByRole('combobox', { name: /Choose subject to remove/ });
+        expect(selectedPicker).toHaveTextContent('Computer Programming · 103');
+        expect(screen.getByTestId('admin-step-subject')).toHaveAttribute('aria-current', 'step');
+        expect(screen.queryByTestId('admin-departments')).not.toBeInTheDocument();
+        expect(catalogMocks.fetchCoursesForDomain).toHaveBeenCalledTimes(1);
+        expect(catalogMocks.fetchCourseAndSubjects).toHaveBeenCalledTimes(1);
+    });
+
     it('preserves the semester while returning to the semester chooser and restores editor subject selection', async () => {
         const initialVisit = renderAdmin('/admin/courses?department=engineering&courseId=1&semester=1');
         expect(await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ })).toBeInTheDocument();
@@ -235,7 +265,7 @@ describe('admin subject and question locator — Phase 1', () => {
         renderAdmin(savedLocation);
 
         expect(await screen.findByRole('tab', { name: 'Remove subject' })).toHaveAttribute('aria-selected', 'true');
-        expect(screen.getByRole('combobox', { name: /Choose subject to remove/ })).toHaveValue('103');
+        expect(screen.getByRole('combobox', { name: /Choose subject to remove/ })).toHaveTextContent('Computer Programming · 103');
         expect(screen.getByText('Computer Programming')).toBeInTheDocument();
     });
 

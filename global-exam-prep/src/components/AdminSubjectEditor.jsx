@@ -1,5 +1,5 @@
-import { useMemo, useRef, useState } from 'react';
-import { AlertCircle, BookOpen, CheckCircle2, FilePlus2, Trash2, UploadCloud } from 'lucide-react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
+import { AlertCircle, BookOpen, Check, CheckCircle2, ChevronDown, FilePlus2, Trash2, UploadCloud } from 'lucide-react';
 import { supabase } from '../supabase.js';
 
 const BUCKET = 'admin-course-files';
@@ -48,13 +48,49 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
     const [busy, setBusy] = useState(false);
     const [error, setError] = useState('');
     const [notice, setNotice] = useState('');
+    const [removeMenuOpen, setRemoveMenuOpen] = useState(false);
+    const removeSelectId = useId();
     const fileInputRef = useRef(null);
+    const removeSelectRef = useRef(null);
+    const removeMenuRef = useRef(null);
 
     const sortedSubjects = useMemo(
         () => [...subjects].sort((a, b) => a.subjectName.localeCompare(b.subjectName)),
         [subjects],
     );
     const selectedForRemoval = sortedSubjects.find(item => String(item.subjectId) === String(removeId)) || null;
+
+    useEffect(() => {
+        if (!removeMenuOpen) return undefined;
+
+        function closeOnOutsidePointer(event) {
+            if (!removeSelectRef.current?.contains(event.target)) {
+                setRemoveMenuOpen(false);
+            }
+        }
+
+        function closeOnEscape(event) {
+            if (event.key === 'Escape') {
+                setRemoveMenuOpen(false);
+                removeSelectRef.current?.querySelector('[role="combobox"]')?.focus();
+            }
+        }
+
+        document.addEventListener('pointerdown', closeOnOutsidePointer);
+        document.addEventListener('keydown', closeOnEscape);
+        return () => {
+            document.removeEventListener('pointerdown', closeOnOutsidePointer);
+            document.removeEventListener('keydown', closeOnEscape);
+        };
+    }, [removeMenuOpen]);
+
+    function selectSubjectForRemoval(nextSubjectId) {
+        setRemoveId(nextSubjectId);
+        setConfirmRemove(false);
+        setError('');
+        setRemoveMenuOpen(false);
+        onEditorStateChange?.({ mode: 'remove', subjectId: nextSubjectId });
+    }
 
     function switchMode(nextMode) {
         setMode(nextMode);
@@ -225,19 +261,62 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
                         <div className="ac-empty-state"><BookOpen size={26} /><strong>No subjects in this semester</strong><span>Add the first subject using the Add subject option.</span></div>
                     ) : (
                         <>
-                            <label className="ac-editor__field">
-                                <span>Choose subject to remove</span>
-                                <select value={removeId} onChange={event => {
-                                    const nextSubjectId = event.target.value;
-                                    setRemoveId(nextSubjectId);
-                                    setConfirmRemove(false);
-                                    setError('');
-                                    onEditorStateChange?.({ mode: 'remove', subjectId: nextSubjectId });
-                                }}>
-                                    <option value="">Select a subject</option>
-                                    {sortedSubjects.map(item => <option key={item.subjectId} value={String(item.subjectId)}>{item.subjectName} · {item.subjectId}</option>)}
-                                </select>
-                            </label>
+                            <div className="ac-editor__field">
+                                <span id={removeSelectId + '-label'}>Choose subject to remove</span>
+                                <div className="ac-editor__remove-select-wrap" ref={removeSelectRef}>
+                                    <button
+                                        type="button"
+                                        className="ac-editor__remove-select-trigger"
+                                        role="combobox"
+                                        aria-labelledby={removeSelectId + '-label'}
+                                        aria-haspopup="listbox"
+                                        aria-expanded={removeMenuOpen}
+                                        aria-controls={removeSelectId + '-listbox'}
+                                        onClick={() => setRemoveMenuOpen(open => !open)}
+                                        onKeyDown={event => {
+                                            if (event.key === 'ArrowDown') {
+                                                event.preventDefault();
+                                                setRemoveMenuOpen(true);
+                                                requestAnimationFrame(() => {
+                                                    removeMenuRef.current?.querySelector('[role="option"]')?.focus();
+                                                });
+                                            }
+                                        }}
+                                    >
+                                        <span>{selectedForRemoval
+                                            ? selectedForRemoval.subjectName + ' · ' + selectedForRemoval.subjectId
+                                            : 'Select a subject'}</span>
+                                        <ChevronDown size={16} aria-hidden="true" />
+                                    </button>
+                                    {removeMenuOpen && (
+                                        <div
+                                            id={removeSelectId + '-listbox'}
+                                            className="ac-editor__remove-select-menu"
+                                            role="listbox"
+                                            aria-labelledby={removeSelectId + '-label'}
+                                            data-placement="bottom"
+                                            ref={removeMenuRef}
+                                        >
+                                            {sortedSubjects.map(item => {
+                                                const selected = String(item.subjectId) === String(removeId);
+                                                return (
+                                                    <button
+                                                        type="button"
+                                                        role="option"
+                                                        aria-selected={selected}
+                                                        className={'ac-editor__remove-select-option' + (selected ? ' is-selected' : '')}
+                                                        key={item.subjectId}
+                                                        onClick={() => selectSubjectForRemoval(String(item.subjectId))}
+                                                    >
+                                                        <span>{item.subjectName} · {item.subjectId}</span>
+                                                        {selected && <Check size={15} aria-hidden="true" />}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
                             {selectedForRemoval && (
                                 <div className="ac-editor__selected">
                                     <div><strong>{selectedForRemoval.subjectName}</strong><small>Subject ID {selectedForRemoval.subjectId}</small></div>

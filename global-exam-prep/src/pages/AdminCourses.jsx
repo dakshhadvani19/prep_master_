@@ -1,4 +1,4 @@
-import { createElement, useEffect, useMemo, useState } from 'react';
+import { createElement, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
     AlertCircle, ArrowLeft, BookOpen, CheckCircle2, ChevronRight, Cpu, GraduationCap,
@@ -110,6 +110,14 @@ export default function AdminCourses() {
     const [coursesError, setCoursesError] = useState('');
     const [subjectsError, setSubjectsError] = useState('');
     const [retryKey, setRetryKey] = useState(0);
+    const catalogCacheRef = useRef({
+        domainId: null,
+        courses: [],
+        courseId: null,
+        course: null,
+        subjects: [],
+    });
+    const restoredRetryKeyRef = useRef(retryKey);
 
     const domain = CATALOG_DOMAINS.find(item => item.id === domainId) || null;
     const semesters = useMemo(() => normalizeSemesterList(course?.sems), [course?.sems]);
@@ -123,10 +131,13 @@ export default function AdminCourses() {
         semester === null ? [] : subjects.filter(item => Number(item.sem) === Number(semester))
     ), [subjects, semester]);
 
-    // The URL is the source of truth for the admin locator. Re-read the live
-    // catalog on refresh and browser history navigation before restoring each level.
+    // Keep the visible locator stable while URL state changes. Reuse the already
+    // loaded catalog for semester/mode/subject changes instead of flashing back
+    // to Department and fetching the same hierarchy again.
     useEffect(() => {
         let cancelled = false;
+        const forceReload = retryKey !== restoredRetryKeyRef.current;
+        restoredRetryKeyRef.current = retryKey;
 
         async function restoreLocator() {
             const params = new URLSearchParams(location.search);
@@ -137,20 +148,26 @@ export default function AdminCourses() {
             const modeParam = params.get('mode');
             const subjectParam = params.get('subjectId');
 
-            setStep('department');
-            setDomainId(null);
-            setCourses([]);
-            setCourseId(null);
-            setCourse(null);
-            setSubjects([]);
-            setSemester(null);
-            setCourseSearch('');
-            setCoursesError('');
-            setSubjectsError('');
-            setCoursesLoading(false);
-            setSubjectsLoading(false);
-
             if (!departmentParam) {
+                setStep('department');
+                setDomainId(null);
+                setCourses([]);
+                setCourseId(null);
+                setCourse(null);
+                setSubjects([]);
+                setSemester(null);
+                setCourseSearch('');
+                setCoursesError('');
+                setSubjectsError('');
+                setCoursesLoading(false);
+                setSubjectsLoading(false);
+                catalogCacheRef.current = {
+                    domainId: null,
+                    courses: [],
+                    courseId: null,
+                    course: null,
+                    subjects: [],
+                };
                 if (courseParam || semesterParam !== null || requestedStep || modeParam || subjectParam) {
                     navigate({ pathname: '/admin/courses', search: '' }, { replace: true });
                 }
@@ -159,40 +176,74 @@ export default function AdminCourses() {
 
             const nextDomain = getCatalogDomain(departmentParam);
             if (!nextDomain) {
+                setStep('department');
+                setDomainId(null);
+                setCourseId(null);
+                setCourse(null);
+                setSubjects([]);
+                setSemester(null);
                 navigate({ pathname: '/admin/courses', search: '' }, { replace: true });
                 return;
             }
 
+            const cached = catalogCacheRef.current;
+            const sameDepartment = cached.domainId === nextDomain.id;
+            const requestedStepIndex = STEPS.findIndex(item => item.id === requestedStep);
+            const provisionalMaxStep = semesterParam !== null ? 3 : courseParam !== null ? 2 : 1;
+            const provisionalStepIndex = requestedStepIndex < 0
+                ? provisionalMaxStep
+                : Math.min(requestedStepIndex, provisionalMaxStep);
+
             setDomainId(nextDomain.id);
-            setCoursesLoading(true);
-            let availableCourses = [];
-            try {
-                const courseResult = await fetchCoursesForDomain(nextDomain.id);
-                if (cancelled) return;
-                if (courseResult.error) throw courseResult.error;
-                availableCourses = courseResult.courses || [];
-                setCourses(availableCourses);
-            } catch (error) {
-                if (!cancelled) {
-                    setCoursesError(error?.message || 'The department courses could not be loaded.');
-                    setStep('course');
-                }
-                return;
-            } finally {
-                if (!cancelled) setCoursesLoading(false);
+            setStep(STEPS[provisionalStepIndex].id);
+            setCoursesError('');
+            setSubjectsError('');
+
+            if (!sameDepartment) {
+                setCourseId(null);
+                setCourse(null);
+                setSubjects([]);
+                setSemester(null);
+                setCourseSearch('');
             }
 
-            let nextCourse = null;
-            let nextCourseId = null;
-            let availableSubjects = [];
-            if (courseParam !== null) {
-                const parsedCourseId = /^[0-9]+$/.test(courseParam) ? Number(courseParam) : NaN;
-                nextCourse = Number.isSafeInteger(parsedCourseId) && parsedCourseId > 0
-                    ? availableCourses.find(item => Number(item.courseId) === parsedCourseId
-                        && item.domainId === nextDomain.id)
-                    : null;
+            let availableCourses = [];
+            if (sameDepartment && !forceReload) {
+                availableCourses = cached.courses;
+                setCourses(availableCourses);
+                setCoursesLoading(false);
+            } else {
+                setCoursesLoading(true);
+                try {
+                    const courseResult = await fetchCoursesForDomain(nextDomain.id);
+                    if (cancelled) return;
+                    if (courseResult.error) throw courseResult.error;
+                    availableCourses = courseResult.courses || [];
+                    setCourses(availableCourses);
+                    catalogCacheRef.current = {
+                        domainId: nextDomain.id,
+                        courses: availableCourses,
+                        courseId: null,
+                        course: null,
+                        subjects: [],
+                    };
+                } catch (error) {
+                    if (!cancelled) {
+                        setCoursesError(error?.message || 'The department courses could not be loaded.');
+                        setStep('course');
+                    }
+                    return;
+                } finally {
+                    if (!cancelled) setCoursesLoading(false);
+                }
+            }
 
-                if (!nextCourse) {
+            if (courseParam === null) {
+                setCourseId(null);
+                setCourse(null);
+                setSubjects([]);
+                setSemester(null);
+                if (semesterParam !== null || modeParam || subjectParam) {
                     navigate({
                         pathname: '/admin/courses',
                         search: adminCoursesSearch({ department: nextDomain.id }),
@@ -200,19 +251,75 @@ export default function AdminCourses() {
                     return;
                 }
 
-                nextCourseId = Number(nextCourse.courseId);
+                const maxStepIndex = 1;
+                const restoredStepIndex = requestedStepIndex < 0
+                    ? maxStepIndex
+                    : Math.min(requestedStepIndex, maxStepIndex);
+                const restoredStep = STEPS[restoredStepIndex].id;
+                setStep(restoredStep);
+                const canonicalSearch = adminCoursesSearch({
+                    department: nextDomain.id,
+                    step: restoredStepIndex === maxStepIndex ? null : restoredStep,
+                });
+                if (canonicalSearch !== location.search) {
+                    navigate({ pathname: '/admin/courses', search: canonicalSearch }, { replace: true });
+                }
+                return;
+            }
+
+            const parsedCourseId = /^[0-9]+$/.test(courseParam) ? Number(courseParam) : NaN;
+            const listedCourse = Number.isSafeInteger(parsedCourseId) && parsedCourseId > 0
+                ? availableCourses.find(item => Number(item.courseId) === parsedCourseId
+                    && item.domainId === nextDomain.id)
+                : null;
+
+            if (!listedCourse) {
+                navigate({
+                    pathname: '/admin/courses',
+                    search: adminCoursesSearch({ department: nextDomain.id }),
+                }, { replace: true });
+                return;
+            }
+
+            const nextCourseId = Number(listedCourse.courseId);
+            const sameCourse = sameDepartment
+                && !forceReload
+                && Number(cached.courseId) === nextCourseId
+                && Boolean(cached.course);
+
+            let nextCourse = listedCourse;
+            let availableSubjects = [];
+            if (sameCourse) {
+                nextCourse = cached.course;
+                availableSubjects = cached.subjects;
                 setCourseId(nextCourseId);
                 setCourse(nextCourse);
+                setSubjects(availableSubjects);
+                setSubjectsLoading(false);
+            } else {
+                setCourseId(nextCourseId);
+                setCourse(listedCourse);
+                setSubjects([]);
+                setSemester(null);
                 setSubjectsLoading(true);
                 try {
                     const subjectResult = await fetchCourseAndSubjects(nextCourseId);
                     if (cancelled) return;
                     if (subjectResult.error) throw subjectResult.error;
-                    if (!subjectResult.course) throw new Error('The selected course is no longer available in the catalog.');
+                    if (!subjectResult.course) {
+                        throw new Error('The selected course is no longer available in the catalog.');
+                    }
                     nextCourse = subjectResult.course;
                     availableSubjects = subjectResult.subjects || [];
                     setCourse(nextCourse);
                     setSubjects(availableSubjects);
+                    catalogCacheRef.current = {
+                        domainId: nextDomain.id,
+                        courses: availableCourses,
+                        courseId: nextCourseId,
+                        course: nextCourse,
+                        subjects: availableSubjects,
+                    };
                 } catch (error) {
                     if (!cancelled) {
                         setSubjectsError(error?.message || 'The selected course subjects could not be loaded.');
@@ -220,12 +327,6 @@ export default function AdminCourses() {
                 } finally {
                     if (!cancelled) setSubjectsLoading(false);
                 }
-            } else if (semesterParam !== null || modeParam || subjectParam) {
-                navigate({
-                    pathname: '/admin/courses',
-                    search: adminCoursesSearch({ department: nextDomain.id }),
-                }, { replace: true });
-                return;
             }
 
             let nextSemester = null;
@@ -243,6 +344,8 @@ export default function AdminCourses() {
                 }
                 nextSemester = parsedSemester;
                 setSemester(nextSemester);
+            } else {
+                setSemester(null);
             }
 
             let nextSubjectId = null;
@@ -258,8 +361,7 @@ export default function AdminCourses() {
             const nextMode = nextSemester !== null && (modeParam === 'remove' || nextSubjectId !== null)
                 ? 'remove'
                 : null;
-            const maxStepIndex = nextSemester !== null ? 3 : nextCourseId !== null ? 2 : 1;
-            const requestedStepIndex = STEPS.findIndex(item => item.id === requestedStep);
+            const maxStepIndex = nextSemester !== null ? 3 : 2;
             const restoredStepIndex = requestedStepIndex < 0
                 ? maxStepIndex
                 : Math.min(requestedStepIndex, maxStepIndex);
@@ -298,10 +400,27 @@ export default function AdminCourses() {
     }
 
     function chooseDepartment(nextDomain) {
+        setStep('course');
+        setDomainId(nextDomain.id);
+        setCourseId(null);
+        setCourse(null);
+        setSubjects([]);
+        setSemester(null);
+        setCourses([]);
+        setSubjectsLoading(false);
+        setCoursesError('');
+        setSubjectsError('');
         navigateToLocator({ department: nextDomain.id });
     }
 
     function chooseCourse(nextCourse) {
+        setStep('semester');
+        setCourseId(Number(nextCourse.courseId));
+        setCourse(nextCourse);
+        setSubjects([]);
+        setSemester(null);
+        setSubjectsLoading(true);
+        setSubjectsError('');
         navigateToLocator({
             department: domainId,
             courseId: nextCourse.courseId,
@@ -309,16 +428,20 @@ export default function AdminCourses() {
     }
 
     function chooseSemester(value) {
+        const nextSemester = Number(value);
+        setStep('subject');
+        setSemester(nextSemester);
         navigateToLocator({
             department: domainId,
             courseId,
-            semester: Number(value),
+            semester: nextSemester,
         });
     }
 
     function goToStep(target) {
         const targetIndex = STEPS.findIndex(item => item.id === target);
         if (targetIndex < 0 || targetIndex > stepIndex) return;
+        setStep(target);
         navigateToLocator({
             department: domainId,
             courseId,
@@ -362,6 +485,15 @@ export default function AdminCourses() {
             if (result.error) throw result.error;
             setCourse(result.course);
             setSubjects(result.subjects || []);
+            catalogCacheRef.current = {
+                domainId,
+                courses: catalogCacheRef.current.domainId === domainId
+                    ? catalogCacheRef.current.courses
+                    : courses,
+                courseId: Number(courseId),
+                course: result.course,
+                subjects: result.subjects || [],
+            };
             const selectedId = new URLSearchParams(location.search).get('subjectId');
             if (selectedId && !(result.subjects || []).some(item => String(item.subjectId) === selectedId)) {
                 navigateToLocator({
