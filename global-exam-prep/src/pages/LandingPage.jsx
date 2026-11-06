@@ -223,7 +223,7 @@ export default function LandingPage() {
                             <motion.a
                                 className="pm-home-primary"
                                 href="#programs"
-                                whileHover={reduceMotion ? undefined : { y: -2, scale: 1.015 }}
+                                whileHover={reduceMotion ? undefined : { y: -2, scale: 1.035 }}
                                 whileTap={reduceMotion ? undefined : { scale: 0.985 }}
                                 transition={{ duration: 0.24, ease: smoothEase }}
                             >
@@ -233,7 +233,7 @@ export default function LandingPage() {
                                 className="pm-home-secondary"
                                 type="button"
                                 onClick={() => navigate('/test-rooms')}
-                                whileHover={reduceMotion ? undefined : { y: -2 }}
+                                whileHover={reduceMotion ? undefined : { y: -2, scale: 1.035 }}
                                 whileTap={reduceMotion ? undefined : { scale: 0.985 }}
                                 transition={{ duration: 0.24, ease: smoothEase }}
                             >

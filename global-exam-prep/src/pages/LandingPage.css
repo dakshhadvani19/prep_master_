@@ -61,9 +61,9 @@
 .pm-home-actions { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
 .pm-home-primary,
 .pm-home-secondary {
-    min-height: 51px; padding: 0 21px; display: inline-flex; align-items: center;
-    justify-content: center; gap: 11px; border-radius: 999px;
-    font-size: 14px; font-weight: 600; letter-spacing: -.01em; text-decoration: none;
+    min-height: 56px; padding: 0 25px; display: inline-flex; align-items: center;
+    justify-content: center; gap: 12px; border-radius: 999px;
+    font-size: 15px; font-weight: 600; letter-spacing: -.01em; text-decoration: none;
     transform: translateZ(0);
     transition: color .28s ease, background .28s ease, border-color .28s ease,
         box-shadow .32s ease, filter .28s ease;
