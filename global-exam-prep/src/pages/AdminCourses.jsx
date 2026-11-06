@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
-    AlertCircle, ArrowLeft, BookOpen, Check, ChevronRight, Cpu, GraduationCap,
+    AlertCircle, ArrowLeft, BookOpen, CheckCircle2, ChevronRight, Cpu, GraduationCap,
     Layers3, LayoutGrid, BriefcaseBusiness, FlaskConical, Scale, Search, RefreshCw, X,
+    LoaderCircle,
 } from 'lucide-react';
 import { CATALOG_DOMAINS, fetchCourseAndSubjects, fetchCoursesForDomain, getCatalogDomain, resetCatalogCache } from '../utils/catalogApi';
 import AdminSubjectEditor from '../components/AdminSubjectEditor.jsx';
+import './Leaderboard.css';
 import './AdminCourses.css';
 
 const DOMAIN_ICONS = {
@@ -41,28 +43,50 @@ function adminCoursesSearch({ department, courseId, semester, step, mode, subjec
     return query ? `?${query}` : '';
 }
 
-function StageHeading({ title, description, count }) {
+function CatalogChoice({ icon: Icon, title, subtitle, meta, onClick, testId }) {
     return (
-        <div className="ac-stage-heading">
-            <div>
-                <h2>{title}</h2>
-                <p>{description}</p>
-            </div>
-            {count !== undefined && <span className="ac-count">{count} {count === 1 ? 'result' : 'results'}</span>}
+        <button
+            type="button"
+            className="lb-choice"
+            onClick={onClick}
+            aria-pressed="false"
+            data-testid={testId}
+        >
+            <span className="lb-choice__icon">
+                <Icon size={21} strokeWidth={1.8} />
+            </span>
+            <span className="lb-choice__copy">
+                <span className="lb-choice__title">{title}</span>
+                {subtitle && <span className="lb-choice__sub">{subtitle}</span>}
+                {meta && <span className="lb-choice__meta">{meta}</span>}
+            </span>
+            <ChevronRight className="lb-choice__arrow" size={17} />
+        </button>
+    );
+}
+
+function EmptyState({ icon: Icon = BookOpen, title, children }) {
+    return (
+        <div className="lb-empty-state">
+            <span className="lb-empty-state__icon">
+                <Icon size={21} strokeWidth={1.8} />
+            </span>
+            <h3>{title}</h3>
+            {children && <p>{children}</p>}
         </div>
     );
 }
 
 function ErrorState({ message, onRetry }) {
     return (
-        <div className="ac-state ac-state--error" role="alert">
-            <AlertCircle size={20} aria-hidden="true" />
+        <div className="lb-alert" role="alert">
+            <AlertCircle size={18} aria-hidden="true" />
             <div>
                 <strong>Could not load catalog data</strong>
                 <p>{message || 'Please check your connection and try again.'}</p>
             </div>
-            <button type="button" className="ac-btn ac-btn--secondary" onClick={onRetry}>
-                <RefreshCw size={15} /> Retry
+            <button type="button" onClick={onRetry}>
+                <RefreshCw size={14} /> Retry
             </button>
         </div>
     );
@@ -364,132 +388,215 @@ export default function AdminCourses() {
     ];
 
     return (
-        <main className="ac">
-            <header className="ac-hero">
-                <div className="ac-hero__copy">
+        <main className="ac lb" data-testid="admin-course-catalog">
+            <header className="lb-hero">
+                <div className="lb-hero__copy">
                     <h1>Edit subjects</h1>
                     <p>Add a subject with its syllabus or remove a subject from the selected semester.</p>
                 </div>
-                <div className="ac-hero__actions">
-                    <Link to="/dashboard" className="ac-btn ac-btn--secondary"><ArrowLeft size={16} /> Dashboard</Link>
-                    <button type="button" className="ac-btn ac-btn--secondary" onClick={resetLocator}><RefreshCw size={15} /> Start over</button>
+                <div className="ac-courses__hero-side">
+                    <div className="lb-hero__mark" aria-hidden="true">
+                        <BookOpen size={25} strokeWidth={1.7} />
+                    </div>
+                    <div className="ac-hero__actions">
+                        <Link to="/dashboard" className="lb-back"><ArrowLeft size={15} /> Dashboard</Link>
+                        <button type="button" className="lb-back" onClick={resetLocator}>
+                            <RefreshCw size={14} /> Start over
+                        </button>
+                    </div>
                 </div>
             </header>
 
-            <nav className="ac-stepper" aria-label="Catalog location">
+            <nav className="lb-stepper" aria-label="Catalog location">
                 {STEPS.map((item, index) => {
-                    const complete = index < stepIndex || (index === stepIndex && Boolean(stepValues[index]));
+                    const complete = index < stepIndex;
+                    const active = step === item.id;
                     return (
-                        <div className="ac-stepper__item" key={item.id}>
-                            <button
-                                type="button"
-                                className={'ac-step' + (step === item.id ? ' is-active' : '') + (complete ? ' is-complete' : '')}
-                                onClick={() => goToStep(item.id)}
-                                disabled={index > stepIndex}
-                                aria-current={step === item.id ? 'step' : undefined}
-                            >
-                                <span className="ac-step__number">{complete ? <Check size={16} /> : index + 1}</span>
-                                <span className="ac-step__copy">
-                                    <span className="ac-step__label">{item.label}</span>
-                                    {stepValues[index] && <span className="ac-step__value">{stepValues[index]}</span>}
-                                </span>
-                            </button>
-                            {index < STEPS.length - 1 && <ChevronRight className="ac-stepper__arrow" size={16} />}
-                        </div>
+                        <button
+                            type="button"
+                            key={item.id}
+                            className={'lb-step' + (active ? ' is-active' : '') + (complete ? ' is-complete' : '')}
+                            onClick={() => goToStep(item.id)}
+                            disabled={index > stepIndex}
+                            aria-current={active ? 'step' : undefined}
+                            data-testid={'admin-step-' + item.id}
+                        >
+                            <span className="lb-step__number">
+                                {complete ? <CheckCircle2 size={16} /> : index + 1}
+                            </span>
+                            <span className="lb-step__labels">
+                                <span className="lb-step__label">{item.label}</span>
+                                {stepValues[index] && <span className="lb-step__value">{stepValues[index]}</span>}
+                            </span>
+                        </button>
                     );
                 })}
             </nav>
 
-            <section className="ac-workspace" aria-live="polite">
-                        {step === 'department' && (
-                        <div className="ac-stage animate-fade-in">
-                            <StageHeading title="Choose a department" description="All six catalog departments are available to administrators." />
-                            <div className="ac-department-grid">
-                                {CATALOG_DOMAINS.map(item => {
-                                    const Icon = DOMAIN_ICONS[item.id] || GraduationCap;
+            <section className="lb-browser" aria-live="polite" aria-label="Department, course and subject catalog">
+                <div className="lb-browser__head">
+                    <div>
+                        <h2>
+                            {step === 'department' ? 'Choose a department'
+                                : step === 'course' ? (domain?.title || 'Select a course')
+                                    : step === 'semester' ? (course?.courseName || 'Select a semester')
+                                        : semester === 0 ? 'Edit semester 0 subjects' : 'Edit semester ' + semester + ' subjects'}
+                        </h2>
+                        <p>
+                            {step === 'department' ? 'All six catalog departments are available to administrators.'
+                                : step === 'course' ? 'Courses are loaded from the live catalog. Select a course to see its semesters.'
+                                    : step === 'semester' ? 'Semester options come directly from the selected course record.'
+                                        : (course?.courseName || 'Selected course') + ' · Add a new subject with its syllabus or remove an eligible subject.'}
+                        </p>
+                    </div>
+                    {(step === 'course' || step === 'subject') && (
+                        <span className="lb-count">
+                            {step === 'course'
+                                ? filteredCourses.length + (filteredCourses.length === 1 ? ' result' : ' results')
+                                : semesterSubjects.length + (semesterSubjects.length === 1 ? ' subject' : ' subjects')}
+                        </span>
+                    )}
+                    {step === 'course' && (
+                        <button type="button" className="lb-back" onClick={() => goToStep('department')}>
+                            <ArrowLeft size={15} /> Change department
+                        </button>
+                    )}
+                    {step === 'semester' && (
+                        <button type="button" className="lb-back" onClick={() => goToStep('course')}>
+                            <ArrowLeft size={15} /> Courses
+                        </button>
+                    )}
+                    {step === 'subject' && (
+                        <button type="button" className="lb-back" onClick={() => goToStep('semester')}>
+                            <ArrowLeft size={15} /> Change semester
+                        </button>
+                    )}
+                </div>
+
+                {step === 'department' && (
+                    <div className="lb-grid lb-grid--departments" data-testid="admin-departments">
+                        {CATALOG_DOMAINS.map(item => (
+                            <CatalogChoice
+                                key={item.id}
+                                icon={DOMAIN_ICONS[item.id] || GraduationCap}
+                                title={item.title}
+                                subtitle={item.description}
+                                meta="Browse courses"
+                                onClick={() => chooseDepartment(item)}
+                                testId={'admin-department-' + item.id}
+                            />
+                        ))}
+                    </div>
+                )}
+
+                {step === 'course' && (
+                    <>
+                        <div className="lb-subject-toolbar ac-courses__toolbar">
+                            <label className="lb-search" htmlFor="admin-course-search">
+                                <Search size={17} />
+                                <input
+                                    id="admin-course-search"
+                                    value={courseSearch}
+                                    onChange={event => setCourseSearch(event.target.value)}
+                                    placeholder="Search courses…"
+                                    aria-label="Search courses"
+                                />
+                                {courseSearch && (
+                                    <button
+                                        type="button"
+                                        className="ac-courses__clear"
+                                        aria-label="Clear course search"
+                                        onClick={() => setCourseSearch('')}
+                                    >
+                                        <X size={15} />
+                                    </button>
+                                )}
+                            </label>
+                        </div>
+                        {coursesLoading ? (
+                            <div className="lb-loading" role="status">
+                                <LoaderCircle className="lb-spin" size={22} /> Loading courses from the catalog…
+                            </div>
+                        ) : coursesError ? (
+                            <ErrorState message={coursesError} onRetry={retryCurrentStage} />
+                        ) : filteredCourses.length === 0 ? (
+                            <EmptyState icon={BookOpen} title="No courses found">
+                                {courses.length ? 'Try another search term.' : 'No live courses are linked to this department.'}
+                            </EmptyState>
+                        ) : (
+                            <div className="lb-grid lb-grid--courses" data-testid="admin-courses">
+                                {filteredCourses.map(item => (
+                                    <CatalogChoice
+                                        key={item.courseId}
+                                        icon={GraduationCap}
+                                        title={item.courseName}
+                                        subtitle={(item.sems?.length || 0) + ' listed semesters'}
+                                        meta="Select course to view semesters"
+                                        onClick={() => chooseCourse(item)}
+                                        testId={'admin-course-' + item.courseId}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </>
+                )}
+
+                {step === 'semester' && (
+                    <>
+                        {subjectsLoading ? (
+                            <div className="lb-loading" role="status">
+                                <LoaderCircle className="lb-spin" size={22} /> Loading course and semester data…
+                            </div>
+                        ) : subjectsError ? (
+                            <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
+                        ) : semesters.length === 0 ? (
+                            <EmptyState icon={Layers3} title="No semesters listed">
+                                This course has no semester values in the live catalog.
+                            </EmptyState>
+                        ) : (
+                            <div className="lb-grid lb-grid--semesters" data-testid="admin-semesters">
+                                {semesters.map(value => {
+                                    const count = subjects.filter(item => Number(item.sem) === Number(value)).length;
                                     return (
-                                        <button type="button" key={item.id} className="ac-department-card" onClick={() => chooseDepartment(item)}>
-                                            <span className="ac-department-card__icon"><Icon size={21} /></span>
-                                            <span className="ac-department-card__title">{item.title}</span>
-                                            <span className="ac-department-card__description">{item.description}</span>
-                                            <span className="ac-department-card__action">Browse courses <ChevronRight size={15} /></span>
-                                        </button>
+                                        <CatalogChoice
+                                            key={value}
+                                            icon={Layers3}
+                                            title={value === 0 ? 'Semester 0' : 'Semester ' + value}
+                                            subtitle={count + (count === 1 ? ' subject' : ' subjects')}
+                                            meta="Browse subjects"
+                                            onClick={() => chooseSemester(value)}
+                                            testId={'semester-option-' + value}
+                                        />
                                     );
                                 })}
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </>
+                )}
 
-                    {step === 'course' && (
-                        <div className="ac-stage animate-fade-in">
-                            <StageHeading title={domain?.title || 'Select a course'} description="Courses are loaded from the live catalog. Select a course to see its semesters." count={filteredCourses.length} />
-                            <div className="ac-toolbar">
-                                <label className="ac-search"><Search size={17} /><input value={courseSearch} onChange={event => setCourseSearch(event.target.value)} placeholder="Search courses…" aria-label="Search courses" />
-                                    {courseSearch && <button type="button" aria-label="Clear course search" onClick={() => setCourseSearch('')}><X size={15} /></button>}
-                                </label>
-                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => goToStep('department')}>Change department</button>
+                {step === 'subject' && (
+                    <div className="ac-courses__subject-stage">
+                        {subjectsLoading ? (
+                            <div className="lb-loading" role="status">
+                                <LoaderCircle className="lb-spin" size={22} /> Loading subjects…
                             </div>
-                            {coursesLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading courses from the catalog…</div>
-                                : coursesError ? <ErrorState message={coursesError} onRetry={retryCurrentStage} />
-                                    : filteredCourses.length === 0 ? <div className="ac-empty-state"><BookOpen size={26} /><strong>No courses found</strong><span>{courses.length ? 'Try another search term.' : 'No live courses are linked to this department.'}</span></div>
-                                        : <div className="ac-course-grid">
-                                            {filteredCourses.map(item => (
-                                                <button type="button" key={item.courseId} className="ac-course-card" onClick={() => chooseCourse(item)}>
-                                                    <span className="ac-course-card__top"><GraduationCap size={20} /><span>{item.sems?.length || 0} semesters</span></span>
-                                                    <strong>{item.courseName}</strong>
-                                                    <span className="ac-course-card__action">Select course <ChevronRight size={15} /></span>
-                                                </button>
-                                            ))}
-                                        </div>}
-                        </div>
-                    )}
-
-                    {step === 'semester' && (
-                        <div className="ac-stage animate-fade-in">
-                            <StageHeading title={course?.courseName || 'Select a semester'} description="Semester options come directly from the selected course record." />
-                            <div className="ac-toolbar"><button type="button" className="ac-btn ac-btn--secondary" onClick={() => goToStep('course')}><ArrowLeft size={15} /> Courses</button></div>
-                            {subjectsLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading course and semester data…</div>
-                                : subjectsError ? <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
-                                    : semesters.length === 0 ? <div className="ac-empty-state"><Layers3 size={26} /><strong>No semesters listed</strong><span>This course has no semester values in the live catalog.</span></div>
-                                        : <div className="ac-semester-grid">
-                                            {semesters.map(value => (
-                                                <button type="button" key={value} data-testid={"semester-option-" + value} className="ac-semester-card" onClick={() => chooseSemester(value)}>
-                                                    <span className="ac-semester-card__number">{String(value).padStart(2, '0')}</span>
-                                                    <strong>{value === 0 ? 'Semester 0' : 'Semester ' + value}</strong>
-                                                    <span>Browse subjects <ChevronRight size={15} /></span>
-                                                </button>
-                                            ))}
-                                        </div>}
-                        </div>
-                    )}
-
-                    {step === 'subject' && (
-                        <div className="ac-stage animate-fade-in">
-                            <StageHeading
-                                title={semester === 0 ? 'Edit semester 0 subjects' : 'Edit semester ' + semester + ' subjects'}
-                                description={(course?.courseName || 'Selected course') + ' · Add a new subject with its syllabus or remove an eligible subject.'}
-                                count={semesterSubjects.length}
+                        ) : subjectsError ? (
+                            <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
+                        ) : (
+                            course && <AdminSubjectEditor
+                                key={courseId + '-' + semester + '-' + editorMode + '-' + editorSubjectId}
+                                course={course}
+                                semester={semester}
+                                subjects={semesterSubjects}
+                                initialMode={editorMode}
+                                initialSubjectId={editorSubjectId}
+                                onEditorStateChange={handleEditorStateChange}
+                                onChanged={refreshSubjectData}
                             />
-                            <div className="ac-toolbar">
-                                <span className="ac-context-label">{domain?.title} · {course?.courseName} · Semester {semester}</span>
-                                <button type="button" className="ac-btn ac-btn--secondary" onClick={() => goToStep('semester')}><ArrowLeft size={15} /> Change semester</button>
-                            </div>
-                            {subjectsLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading subjects…</div>
-                                : subjectsError ? <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
-                                    : course && <AdminSubjectEditor
-                                        key={`${courseId}-${semester}-${editorMode}-${editorSubjectId}`}
-                                        course={course}
-                                        semester={semester}
-                                        subjects={semesterSubjects}
-                                        initialMode={editorMode}
-                                        initialSubjectId={editorSubjectId}
-                                        onEditorStateChange={handleEditorStateChange}
-                                        onChanged={refreshSubjectData}
-                                    />}
-                        </div>
-                    )}
-                </section>
-
+                        )}
+                    </div>
+                )}
+            </section>
         </main>
     );
 }

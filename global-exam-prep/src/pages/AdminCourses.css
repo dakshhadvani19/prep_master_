@@ -180,3 +180,57 @@
     .ac-editor__footer { align-items:stretch; flex-direction:column; }
     .ac-editor__footer .ac-btn { width:100%; }
 }
+
+
+/* Admin course locator: layout details around the shared Leaderboard components. */
+.ac-courses__hero-side {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.ac-courses__hero-side .lb-hero__mark {
+    flex: 0 0 auto;
+}
+.ac-courses__toolbar {
+    margin-bottom: 0.9rem;
+}
+.ac-courses__clear {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 0;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    background: transparent;
+    cursor: pointer;
+}
+.ac-courses__clear:hover {
+    color: var(--text-primary);
+    background: var(--lb-violet-soft);
+}
+.ac-courses__subject-stage {
+    min-width: 0;
+}
+@media (max-width: 640px) {
+    .ac-courses__hero-side {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .ac-courses__hero-side .ac-hero__actions {
+        justify-content: flex-end;
+    }
+    .ac-courses__toolbar .lb-search {
+        width: 100%;
+    }
+}
+
+.ac.lb {
+    width: min(1120px, 100%);
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 1.2rem clamp(0.9rem, 2vw, 1.4rem) 3rem;
+    color: var(--text-primary);
+}

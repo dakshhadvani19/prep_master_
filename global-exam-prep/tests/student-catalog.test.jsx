@@ -97,8 +97,7 @@ describe('department → courses', () => {
     expect(screen.queryByText(/BCA/)).toBeNull();
     const computerEngineeringLink = screen.getByRole('link', { name: /B.Tech - Computer Engineering/i });
     expect(computerEngineeringLink.getAttribute('href')).toBe('/courses/1/subjects');
-    expect(computerEngineeringLink.classList.contains('lb-choice')).toBe(true);
-    expect(computerEngineeringLink.classList.contains('catalog-flow__course')).toBe(true);
+    expect(computerEngineeringLink.classList.contains('pm-course-card')).toBe(true);
   });
 
   it('shows a loading state while courses are in flight', async () => {
@@ -137,11 +136,8 @@ describe('course → subjects', () => {
     const subjectLists = callsTo('rpc:pm_catalog_subjects_for_course');
     expect(subjectLists.length).toBe(1);
     expect(subjectLists[0].args.p_course_id).toBe(1);
-    const semesterCard = screen.getByRole('button', { name: /Sem 1/i });
-    expect(semesterCard.classList.contains('lb-choice')).toBe(true);
-    fireEvent.click(semesterCard);
+    fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
     expect(screen.getByText('Mathematics-I')).toBeTruthy();
-    expect(screen.getByRole('button', { name: 'Mathematics-I' }).classList.contains('lb-choice')).toBe(true);
     expect(screen.queryByText('Should not appear')).toBeNull();
   });
 

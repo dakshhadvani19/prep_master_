@@ -47,16 +47,12 @@ Use the original dark glass material from the pre-redesign interface: a charcoal
 
 This design contract applies to the student homepage, academic domain cards, course explorer, semester/subject selection, exam generation and difficulty selection, Test Room lobby, and active exam/Test Room question navigation. Dashboards and admin surfaces remain outside this change.
 
-## Leaderboard-aligned course and subject browsers
 
-**Added:** 2026-11-06. The course explorer and course subject selector use the same visual component language as the Leaderboards browser. This is a local extension of the shared student catalog direction, not a change to the broader homepage or active exam/Test Room palettes.
+## Admin course catalog locator
 
-- **Palette:** use the Leaderboards tokens verbatim: muted violet `#75649b` with `rgba(117, 100, 155, .10)` fills and `rgba(117, 100, 155, .34)` borders; warm gold `#c8a35b` with `rgba(200, 163, 91, .12)` fills and `rgba(200, 163, 91, .42)` borders. Charcoal content surfaces continue to use the global `--bg-secondary` and `--bg-tertiary` tokens.
-- **Components:** reuse the Leaderboard browser's `.lb-hero`, `.lb-hero__mark`, `.lb-back`, `.lb-browser`, `.lb-grid`, `.lb-choice`, `.lb-choice__icon`, `.lb-tag`, `.lb-loading`, `.lb-alert`, and `.lb-empty-state` styles. Course cards, semester cards, subject rows, exam options and mode/difficulty choices share the same surface, icon sizing, stroke weight and selected-state language.
-- **Selection:** neutral choices use violet icon tiles and charcoal surfaces; selected choices use the gold soft fill and border. A selected state always includes `aria-pressed` or `aria-expanded`; it is not communicated by color alone.
-- **Iconography:** use Lucide icons at 15–21 px with a consistent 1.8 stroke where practical. Course, semester, subject, exam, mode and difficulty icons are semantic; do not add decorative symbols.
-- **Behavior and copy:** preserve all existing course names, semester/subject counts, exam-type labels, mode descriptions, difficulty descriptions, loading/error/empty messages, routes, query behavior and exam/Test Room state handling.
-- **Responsive behavior:** keep the Leaderboard's 2-column course/subject grid and 3-column semester grid on wide layouts, then collapse at the same 900 px and 640 px breakpoints. Allow card copy to wrap; do not truncate course or subject names.
+**Added:** 2026-11-06. The admin Courses page uses the same department, course, semester, and subject-locator visual language as the Leaderboards page: shared .lb palette tokens, stepper, browser surface, search field, choice cards, icons, loading, error, and empty states.
 
-Apple-informed review lens (translated for this React web app): use familiar, responsive grids and clear visual hierarchy (`layout.md › Visual hierarchy`, `collections.md`); keep icon weight consistent with nearby labels (`icons.md`); ensure visible selected state and accessible control targets (`buttons.md` and `accessibility.md`). These are web-app usability principles, not native Apple component requirements.
-
+- Keep the admin locator URL-backed and unrestricted across all six catalog departments.
+- Preserve existing course/semester/subject data retrieval, counts, search, browser history restoration, and route parameters.
+- The AdminSubjectEditor remains unchanged. Its Add subject / Remove subject tabs, form fields, syllabus upload, removal confirmation, and persistence flow retain their existing UI and behavior.
+- This is scoped to the admin Courses locator. Student course and subject pages are not part of this treatment.

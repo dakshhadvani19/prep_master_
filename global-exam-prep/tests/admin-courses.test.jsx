@@ -88,6 +88,9 @@ beforeEach(() => {
 describe('admin subject and question locator — Phase 1', () => {
     it('starts with all six departments and does not lock any department', () => {
         renderAdmin();
+        expect(screen.getByRole('main')).toHaveClass('ac', 'lb');
+        expect(screen.getByRole('navigation', { name: 'Catalog location' })).toHaveClass('lb-stepper');
+        expect(screen.getByTestId('admin-departments')).toHaveClass('lb-grid', 'lb-grid--departments');
         expect(screen.getByRole('heading', { name: 'Edit subjects' })).toBeInTheDocument();
         expect(screen.getByRole('button', { name: /Engineering & Technology/ })).toBeEnabled();
         expect(screen.getByRole('button', { name: /Computer Applications/ })).toBeEnabled();
@@ -104,7 +107,9 @@ describe('admin subject and question locator — Phase 1', () => {
         fireEvent.click(screen.getByRole('button', { name: /Engineering & Technology/ }));
 
         await waitFor(() => expect(catalogMocks.fetchCoursesForDomain).toHaveBeenCalledWith('engineering'));
-        expect(await screen.findByRole('button', { name: /B.Tech - Computer Engineering/ })).toBeInTheDocument();
+        const courseChoice = await screen.findByRole('button', { name: /B.Tech - Computer Engineering/ });
+        expect(courseChoice).toHaveClass('lb-choice');
+        expect(screen.getByTestId('admin-courses')).toHaveClass('lb-grid', 'lb-grid--courses');
 
         fireEvent.change(screen.getByRole('textbox', { name: 'Search courses' }), { target: { value: 'information technology' } });
         expect(screen.getByText('No courses found')).toBeInTheDocument();
@@ -117,7 +122,9 @@ describe('admin subject and question locator — Phase 1', () => {
         fireEvent.click(await screen.findByRole('button', { name: /B.Tech - Computer Engineering/ }));
 
         await waitFor(() => expect(catalogMocks.fetchCourseAndSubjects).toHaveBeenCalledWith(1));
-        expect(await screen.findByTestId('semester-option-0')).toBeInTheDocument();
+        const semesterChoice = await screen.findByTestId('semester-option-0');
+        expect(semesterChoice).toHaveClass('lb-choice');
+        expect(screen.getByTestId('admin-semesters')).toHaveClass('lb-grid', 'lb-grid--semesters');
         fireEvent.click(screen.getByTestId('semester-option-0'));
 
         expect(await screen.findByRole('tab', { name: 'Add subject' })).toBeInTheDocument();

@@ -3,29 +3,15 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getExamTypesForSubject, getSubjectExamInfo, normalizeDepartmentalFlag } from '../utils/subjectExamPolicy';
 import { CATALOG_CACHE_TTL_MS, fetchCourseAndSubjects } from '../utils/catalogApi';
 import {
-    Activity,
-    AlertCircle,
-    ArrowRight,
-    BookOpen,
-    ChevronLeft,
-    ChevronRight,
-    Cpu,
-    Flame,
-    GraduationCap,
-    Layers3,
-    LoaderCircle,
-    Shield,
-    Target,
-    Upload,
-    Users,
+    ChevronLeft, Book, Target, Activity, Flame, Shield,
+    Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader, Users
 } from 'lucide-react';
-import './Leaderboard.css';
-import './CatalogFlow.css';
+import './LandingPage.css';
 
 const DIFFICULTY_LEVELS = [
-    { id: 'easy', label: 'Easy', icon: Shield, desc: 'Fundamental concepts' },
-    { id: 'medium', label: 'Medium', icon: Activity, desc: 'Standard curriculum' },
-    { id: 'hard', label: 'Hard', icon: Flame, desc: 'Advanced problem solving' },
+    { id: 'easy', label: 'Easy', icon: Shield, color: '#10b981', desc: 'Fundamental concepts' },
+    { id: 'medium', label: 'Medium', icon: Activity, color: '#f59e0b', desc: 'Standard curriculum' },
+    { id: 'hard', label: 'Hard', icon: Flame, color: '#ef4444', desc: 'Advanced problem solving' },
 ];
 
 export default function SubjectDetails() {
@@ -133,26 +119,22 @@ export default function SubjectDetails() {
 
     if (loading) {
         return (
-            <main className="lb catalog-flow">
-                <div className="lb-loading" data-testid="catalog-loading">
-                    <LoaderCircle size={22} className="lb-spin" />
-                    Loading subjects…
-                </div>
-            </main>
+            <div className="container" style={{ marginTop: '4rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)' }}>
+                <Loader size={22} className="spinner" style={{ color: 'var(--accent-primary)' }} />
+                <span data-testid="catalog-loading">Loading subjects…</span>
+            </div>
         );
     }
 
     if (error || !currentCourse) {
         return (
-            <main className="lb catalog-flow" data-testid="catalog-error">
-                <div className="lb-alert" role="alert">
-                    <AlertCircle size={19} />
-                    <div>
-                        <strong>{error && error !== 'Course not found.' ? 'Could not load course' : 'Course not found'}</strong>
-                        {error && error !== 'Course not found.' && <p>{error}</p>}
-                    </div>
-                </div>
-            </main>
+            <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }} data-testid="catalog-error">
+                <BookOpen size={48} style={{ color: 'var(--text-secondary)', margin: '0 auto 1rem', display: 'block' }} />
+                <h2>{error && error !== 'Course not found.' ? 'Could not load course' : 'Course not found'}</h2>
+                {error && error !== 'Course not found.' && (
+                    <p style={{ color: 'var(--text-secondary)', marginTop: '0.75rem' }}>{error}</p>
+                )}
+            </div>
         );
     }
 
@@ -206,201 +188,298 @@ export default function SubjectDetails() {
     };
 
     return (
-        <main className="lb catalog-flow" data-testid="course-subject-browser">
-            <button type="button" className="lb-back catalog-flow__back" onClick={() => navigate(-1)}>
+        <div className="container animate-fade-in" style={{ maxWidth: '960px' }}>
+            <button
+                onClick={() => navigate(-1)}
+                style={{
+                    display: 'flex', alignItems: 'center', gap: '0.5rem',
+                    color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem'
+                }}
+            >
                 <ChevronLeft size={16} /> Back to Programs
             </button>
 
-            <header className="lb-hero">
-                <div className="lb-hero__copy">
-                    <h1>{currentCourse.courseName}</h1>
-                    <p>{semesters.length} Semesters · {subjects.length} Subjects</p>
+            <header style={{ marginBottom: '2.5rem', paddingBottom: '2rem', borderBottom: '1px solid var(--glass-border)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
+                    <div style={{ background: 'var(--accent-light)', color: 'var(--accent-primary)', padding: '0.6rem', borderRadius: 'var(--radius-md)' }}>
+                        <GraduationCap size={24} />
+                    </div>
+                    <h1 style={{ fontSize: '2rem' }}>{currentCourse.courseName}</h1>
                 </div>
-                <div className="lb-hero__mark" aria-hidden="true">
-                    <GraduationCap size={27} strokeWidth={1.7} />
-                </div>
+                <p style={{ color: 'var(--text-secondary)', marginLeft: '0.25rem' }}>
+                    {semesters.length} Semesters · {subjects.length} Subjects
+                </p>
             </header>
 
-            {subjects.length === 0 && (
-                <div data-testid="catalog-empty" className="lb-empty-state">
-                    <span className="lb-empty-state__icon"><BookOpen size={21} /></span>
-                    <h3>No subjects are listed for this course yet.</h3>
+            {!loading && subjects.length === 0 && (
+                <div data-testid="catalog-empty" className="glass-panel" style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                    No subjects are listed for this course yet.
                 </div>
             )}
 
             {subjects.length > 0 && (
-                <section className="lb-browser catalog-flow__stage" aria-labelledby="catalog-semester-heading">
-                    <div className="lb-browser__head">
-                        <div>
-                            <h2 id="catalog-semester-heading">Step 1 — Select Semester</h2>
-                        </div>
-                    </div>
-                    <div className="lb-grid lb-grid--semesters catalog-flow__semester-grid">
-                        {semesters.map((sem) => {
-                            const isSelected = selectedSem === sem;
-                            const count = subjects.filter((subject) => subject.sem === sem).length;
-                            return (
-                                <button
-                                    key={sem}
-                                    type="button"
-                                    className={`lb-choice catalog-flow__semester ${isSelected ? 'is-selected' : ''}`}
-                                    aria-pressed={isSelected}
-                                    aria-label={`Sem ${sem}, ${count} subjects`}
-                                    onClick={() => handleSemClick(sem)}
-                                >
-                                    <span className="lb-choice__icon" aria-hidden="true">
-                                        <Layers3 size={21} strokeWidth={1.8} />
-                                    </span>
-                                    <span className="lb-choice__copy">
-                                        <span className="lb-choice__title">Sem {sem}</span>
-                                        <span className="lb-choice__sub">{count} subject{count !== 1 ? 's' : ''}</span>
-                                    </span>
-                                    {isSelected
-                                        ? <span className="lb-tag lb-tag--selected">Selected</span>
-                                        : <ChevronRight className="lb-choice__arrow" size={17} aria-hidden="true" />}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </section>
+            <section style={{ marginBottom: '2.5rem' }}>
+                <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '1rem' }}>
+                    Step 1 — Select Semester
+                </h2>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                    {semesters.map(sem => {
+                        const isSelected = selectedSem === sem;
+                        const count = subjects.filter(s => s.sem === sem).length;
+                        return (
+                            <button
+                                key={sem}
+                                type="button"
+                                aria-pressed={isSelected}
+                                onClick={() => handleSemClick(sem)}
+                                style={{
+                                    padding: '0.75rem 1.5rem',
+                                    borderRadius: 'var(--radius-md)',
+                                    border: `1px solid ${isSelected ? 'var(--accent-primary)' : 'var(--glass-border)'}`,
+                                    background: isSelected ? 'var(--accent-light)' : 'var(--bg-tertiary)',
+                                    color: isSelected ? 'var(--accent-primary)' : 'var(--text-primary)',
+                                    fontWeight: 600,
+                                    fontSize: '0.95rem',
+                                    cursor: 'pointer',
+                                    transition: 'all var(--transition-fast)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    gap: '0.25rem',
+                                    minWidth: '100px',
+                                }}
+                            >
+                                <span>Sem {sem}</span>
+                                <span style={{ fontSize: '0.72rem', color: isSelected ? 'var(--accent-primary)' : 'var(--text-tertiary)', fontWeight: 400 }}>
+                                    {count} subject{count !== 1 ? 's' : ''}
+                                </span>
+                            </button>
+                        );
+                    })}
+                </div>
+            </section>
             )}
 
             {selectedSem != null && (
-                <section className="lb-browser catalog-flow__stage catalog-flow__subject-stage" aria-labelledby="catalog-subject-heading">
-                    <div className="lb-browser__head">
-                        <div>
-                            <h2 id="catalog-subject-heading">Step 2 — Select Subject</h2>
-                        </div>
-                    </div>
-
-                    <div className="lb-grid lb-grid--subjects catalog-flow__subject-grid">
-                        {subjectsInSem.map((subject, index) => {
+                <section style={{ marginBottom: '2.5rem', animation: 'fadeIn 0.3s ease' }}>
+                    <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '1rem' }}>
+                        Step 2 — Select Subject
+                    </h2>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                        {subjectsInSem.map((subject, idx) => {
                             const isOpen = selectedSubject?.id === subject.id;
                             return (
-                                <div key={`${subject.id}-${index}`} id={String(subject.id)} className="catalog-flow__subject">
+                                <div key={`${subject.id}-${idx}`} id={String(subject.id)}>
                                     <button
-                                        type="button"
-                                        className={`lb-choice catalog-flow__subject-trigger ${isOpen ? 'is-selected' : ''}`}
-                                        aria-expanded={isOpen}
-                                        aria-label={subject.title}
                                         onClick={() => handleSubjectClick(subject)}
+                                        style={{
+                                            width: '100%',
+                                            padding: '1.1rem 1.5rem',
+                                            background: isOpen ? 'var(--accent-light)' : 'var(--bg-secondary)',
+                                            border: `1px solid ${isOpen ? 'var(--accent-primary)' : 'var(--glass-border)'}`,
+                                            borderRadius: isOpen ? 'var(--radius-md) var(--radius-md) 0 0' : 'var(--radius-md)',
+                                            color: isOpen ? 'var(--accent-primary)' : 'var(--text-primary)',
+                                            fontWeight: 600,
+                                            fontSize: '1rem',
+                                            textAlign: 'left',
+                                            cursor: 'pointer',
+                                            transition: 'all var(--transition-fast)',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'space-between',
+                                            gap: '1rem',
+                                        }}
                                     >
-                                        <span className="lb-choice__icon" aria-hidden="true">
-                                            <BookOpen size={20} strokeWidth={1.8} />
-                                        </span>
-                                        <span className="lb-choice__copy">
-                                            <span className="lb-choice__title">{subject.title}</span>
-                                        </span>
-                                        <ChevronRight
-                                            className="lb-choice__arrow"
-                                            size={17}
-                                            aria-hidden="true"
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                            <Book size={18} style={{ flexShrink: 0 }} />
+                                            {subject.title}
+                                        </div>
+                                        <ChevronLeft
+                                            size={18}
+                                            style={{
+                                                transform: isOpen ? 'rotate(-90deg)' : 'rotate(180deg)',
+                                                transition: 'transform 0.25s ease',
+                                                flexShrink: 0
+                                            }}
                                         />
                                     </button>
 
                                     {isOpen && (
-                                        <div className="catalog-flow__subject-panel">
-                                            <div className="catalog-flow__choice-group">
-                                                <p className="catalog-flow__choice-label">Choose Exam Type</p>
-                                                <div className="catalog-flow__chip-list">
-                                                    {getExamTypesForSubject(subject.isDepartmentalSubject).map((examType) => {
-                                                        const info = getSubjectExamInfo(examType, subject.isDepartmentalSubject);
-                                                        const isSelected = selectedExamType === examType;
-                                                        return (
-                                                            <button
-                                                                key={examType}
-                                                                type="button"
-                                                                className={`catalog-flow__chip ${isSelected ? 'is-selected' : ''}`}
-                                                                aria-pressed={isSelected}
-                                                                onClick={() => { setSelectedExamType(examType); setSelectedMode(null); }}
-                                                            >
-                                                                <Target size={15} aria-hidden="true" />
-                                                                <span>{info?.title || examType}</span>
-                                                                <small>{info?.timeMinutes}m · {info?.totalMarks}M</small>
-                                                            </button>
-                                                        );
-                                                    })}
-                                                </div>
+                                        <div
+                                            style={{
+                                                border: '1px solid var(--accent-primary)',
+                                                borderTop: 'none',
+                                                borderRadius: '0 0 var(--radius-md) var(--radius-md)',
+                                                background: 'var(--bg-secondary)',
+                                                padding: '1.5rem',
+                                                animation: 'fadeIn 0.25s ease',
+                                            }}
+                                        >
+                                            <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
+                                                Choose Exam Type
+                                            </p>
+                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
+                                                {getExamTypesForSubject(subject.isDepartmentalSubject).map(examType => {
+                                                    const info = getSubjectExamInfo(examType, subject.isDepartmentalSubject);
+                                                    const isSel = selectedExamType === examType;
+                                                    return (
+                                                        <button
+                                                            key={examType}
+                                                            onClick={() => { setSelectedExamType(examType); setSelectedMode(null); }}
+                                                            style={{
+                                                                padding: '0.6rem 1.2rem',
+                                                                borderRadius: 'var(--radius-full)',
+                                                                border: `1px solid ${isSel ? 'var(--accent-primary)' : 'var(--glass-border)'}`,
+                                                                background: isSel ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
+                                                                color: isSel ? 'white' : 'var(--text-primary)',
+                                                                fontWeight: 600,
+                                                                fontSize: '0.875rem',
+                                                                cursor: 'pointer',
+                                                                transition: 'all var(--transition-fast)',
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                gap: '0.5rem',
+                                                            }}
+                                                        >
+                                                            <Target size={14} />
+                                                            {info?.title || examType}
+                                                            <span style={{ opacity: 0.7, fontWeight: 400, fontSize: '0.78rem' }}>
+                                                                {info?.timeMinutes}m · {info?.totalMarks}M
+                                                            </span>
+                                                        </button>
+                                                    );
+                                                })}
                                             </div>
 
                                             {selectedExamType && (
-                                                <div className="catalog-flow__choice-group">
-                                                    <p className="catalog-flow__choice-label">Choose Mode</p>
-                                                    <div className="catalog-flow__option-grid catalog-flow__option-grid--two">
+                                                <div style={{ animation: 'fadeIn 0.2s ease' }}>
+                                                    <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
+                                                        Choose Mode
+                                                    </p>
+                                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
                                                         {[
-                                                            { id: 'auto', label: 'Auto AI Exam', desc: 'AI generates questions from syllabus', icon: Cpu },
-                                                            { id: 'upload', label: 'Upload File', desc: 'AI reads your notes/PDF', icon: Upload },
-                                                        ].map((mode) => {
+                                                            { id: 'auto', label: 'Auto AI Exam', desc: 'AI generates questions from syllabus', icon: Cpu, color: 'var(--accent-primary)' },
+                                                            { id: 'upload', label: 'Upload File', desc: 'AI reads your notes/PDF', icon: Upload, color: '#8b5cf6' },
+                                                        ].map(mode => {
                                                             const Icon = mode.icon;
-                                                            const isSelected = selectedMode === mode.id;
+                                                            const isSel = selectedMode === mode.id;
                                                             return (
                                                                 <button
                                                                     key={mode.id}
-                                                                    type="button"
-                                                                    className={`catalog-flow__option-card ${isSelected ? 'is-selected' : ''}`}
-                                                                    aria-pressed={isSelected}
                                                                     onClick={() => setSelectedMode(mode.id)}
+                                                                    style={{
+                                                                        flex: '1',
+                                                                        minWidth: '200px',
+                                                                        padding: '1rem 1.25rem',
+                                                                        border: `1px solid ${isSel ? mode.color : 'var(--glass-border)'}`,
+                                                                        borderRadius: 'var(--radius-md)',
+                                                                        background: isSel ? `${mode.color}1a` : 'var(--bg-tertiary)',
+                                                                        color: isSel ? mode.color : 'var(--text-primary)',
+                                                                        cursor: 'pointer',
+                                                                        textAlign: 'left',
+                                                                        transition: 'all var(--transition-fast)',
+                                                                        display: 'flex',
+                                                                        alignItems: 'center',
+                                                                        gap: '0.75rem',
+                                                                    }}
                                                                 >
-                                                                    <span className="lb-choice__icon" aria-hidden="true">
-                                                                        <Icon size={19} strokeWidth={1.8} />
-                                                                    </span>
-                                                                    <span className="catalog-flow__option-copy">
-                                                                        <strong>{mode.label}</strong>
-                                                                        <small>{mode.desc}</small>
-                                                                    </span>
+                                                                    <Icon size={20} style={{ flexShrink: 0 }} />
+                                                                    <div>
+                                                                        <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>{mode.label}</div>
+                                                                        <div style={{ fontSize: '0.78rem', color: 'var(--text-tertiary)', marginTop: '0.15rem' }}>{mode.desc}</div>
+                                                                    </div>
                                                                 </button>
                                                             );
                                                         })}
                                                     </div>
-                                                </div>
-                                            )}
 
-                                            {selectedMode && (
-                                                <div className="catalog-flow__choice-group">
-                                                    <p className="catalog-flow__choice-label">Choose Difficulty</p>
-                                                    <div className="catalog-flow__option-grid catalog-flow__option-grid--three">
-                                                        {DIFFICULTY_LEVELS.map((level) => {
-                                                            const Icon = level.icon;
-                                                            const isSelected = selectedDifficulty === level.id;
-                                                            return (
+                                                    {selectedMode && (
+                                                        <div style={{ animation: 'fadeIn 0.2s ease' }}>
+                                                            <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
+                                                                Choose Difficulty
+                                                            </p>
+                                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
+                                                                {DIFFICULTY_LEVELS.map(level => {
+                                                                    const Icon = level.icon;
+                                                                    const isSel = selectedDifficulty === level.id;
+                                                                    return (
+                                                                        <button
+                                                                            key={level.id}
+                                                                            onClick={() => setSelectedDifficulty(level.id)}
+                                                                            style={{
+                                                                                flex: '1',
+                                                                                minWidth: '130px',
+                                                                                padding: '0.75rem 1rem',
+                                                                                border: `1px solid ${isSel ? level.color : 'var(--glass-border)'}`,
+                                                                                background: isSel ? `${level.color}1a` : 'var(--bg-tertiary)',
+                                                                                color: isSel ? level.color : 'var(--text-secondary)',
+                                                                                borderRadius: 'var(--radius-md)',
+                                                                                cursor: 'pointer',
+                                                                                fontWeight: 600,
+                                                                                transition: 'all var(--transition-fast)',
+                                                                                display: 'flex',
+                                                                                alignItems: 'center',
+                                                                                gap: '0.5rem',
+                                                                            }}
+                                                                        >
+                                                                            <Icon size={16} />
+                                                                            <div>
+                                                                                <div style={{ fontSize: '0.9rem' }}>{level.label}</div>
+                                                                                <div style={{ fontSize: '0.72rem', fontWeight: 400, color: 'var(--text-tertiary)' }}>{level.desc}</div>
+                                                                            </div>
+                                                                        </button>
+                                                                    );
+                                                                })}
+                                                            </div>
+
+                                                            <div style={{ display: 'grid', gridTemplateColumns: canUseTestRoom ? 'repeat(auto-fit,minmax(210px,1fr))' : '1fr', gap: '0.75rem' }}>
                                                                 <button
-                                                                    key={level.id}
-                                                                    type="button"
-                                                                    className={`catalog-flow__option-card ${isSelected ? 'is-selected' : ''}`}
-                                                                    aria-pressed={isSelected}
-                                                                    onClick={() => setSelectedDifficulty(level.id)}
+                                                                    onClick={handleStartExam}
+                                                                    disabled={!canStart}
+                                                                    style={{
+                                                                        width: '100%',
+                                                                        padding: '1rem',
+                                                                        borderRadius: 'var(--radius-full)',
+                                                                        background: canStart ? 'var(--accent-gradient)' : 'var(--bg-tertiary)',
+                                                                        color: canStart ? 'white' : 'var(--text-tertiary)',
+                                                                        fontWeight: 700,
+                                                                        fontSize: '1.05rem',
+                                                                        cursor: canStart ? 'pointer' : 'not-allowed',
+                                                                        transition: 'all 0.2s',
+                                                                        display: 'flex',
+                                                                        alignItems: 'center',
+                                                                        justifyContent: 'center',
+                                                                        gap: '0.6rem',
+                                                                        boxShadow: canStart ? 'var(--shadow-glow)' : 'none',
+                                                                    }}
                                                                 >
-                                                                    <span className="lb-choice__icon" aria-hidden="true">
-                                                                        <Icon size={18} strokeWidth={1.8} />
-                                                                    </span>
-                                                                    <span className="catalog-flow__option-copy">
-                                                                        <strong>{level.label}</strong>
-                                                                        <small>{level.desc}</small>
-                                                                    </span>
+                                                                    <ArrowRight size={18} /> Start Exam
                                                                 </button>
-                                                            );
-                                                        })}
-                                                    </div>
-
-                                                    <div className={`catalog-flow__actions ${canUseTestRoom ? 'has-secondary' : ''}`}>
-                                                        <button
-                                                            type="button"
-                                                            onClick={handleStartExam}
-                                                            disabled={!canStart}
-                                                            className="catalog-flow__action catalog-flow__action--primary"
-                                                        >
-                                                            <ArrowRight size={18} aria-hidden="true" /> Start Exam
-                                                        </button>
-                                                        {canUseTestRoom && (
-                                                            <button
-                                                                type="button"
-                                                                onClick={handleCreateTestRoom}
-                                                                className="catalog-flow__action catalog-flow__action--secondary"
-                                                            >
-                                                                <Users size={18} aria-hidden="true" /> Create Test Room
-                                                            </button>
-                                                        )}
-                                                    </div>
+                                                                {canUseTestRoom && (
+                                                                    <button
+                                                                        onClick={handleCreateTestRoom}
+                                                                        style={{
+                                                                            width: '100%',
+                                                                            padding: '1rem',
+                                                                            borderRadius: 'var(--radius-full)',
+                                                                            border: '1px solid rgba(141,123,255,0.4)',
+                                                                            background: 'rgba(141,123,255,0.12)',
+                                                                            color: '#b9adff',
+                                                                            fontWeight: 750,
+                                                                            fontSize: '1.02rem',
+                                                                            cursor: 'pointer',
+                                                                            display: 'flex',
+                                                                            alignItems: 'center',
+                                                                            justifyContent: 'center',
+                                                                            gap: '0.6rem',
+                                                                        }}
+                                                                    >
+                                                                        <Users size={18} /> Create Test Room
+                                                                    </button>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             )}
                                         </div>
@@ -411,6 +490,14 @@ export default function SubjectDetails() {
                     </div>
                 </section>
             )}
-        </main>
+
+
+            <style>{`
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(6px); }
+                    to   { opacity: 1; transform: translateY(0); }
+                }
+            `}</style>
+        </div>
     );
 }

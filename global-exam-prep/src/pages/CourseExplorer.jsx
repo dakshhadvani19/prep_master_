@@ -1,17 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import {
-    AlertCircle,
-    Building2,
-    ChevronLeft,
-    ChevronRight,
-    Clock,
-    GraduationCap,
-    LoaderCircle,
-} from 'lucide-react';
+import { ChevronLeft, GraduationCap, Clock, Loader, AlertCircle } from 'lucide-react';
+import './LandingPage.css';
 import { fetchCoursesForDomain, getCatalogDomain } from '../utils/catalogApi';
-import './Leaderboard.css';
-import './CatalogFlow.css';
 
 export default function CourseExplorer() {
     const { domainId } = useParams();
@@ -42,84 +33,150 @@ export default function CourseExplorer() {
     }, [domainId]);
 
     if (!domainMeta) {
-        return (
-            <main className="lb catalog-flow" data-testid="catalog-domain-not-found">
-                <div className="lb-empty-state">
-                    <span className="lb-empty-state__icon"><Building2 size={21} /></span>
-                    <h3>Domain not found</h3>
-                </div>
-            </main>
-        );
+        return <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }}><h2>Domain not found</h2></div>;
     }
 
     return (
-        <main className="lb catalog-flow" data-testid="course-explorer">
-            <button type="button" className="lb-back catalog-flow__back" onClick={() => navigate(-1)}>
+        <div className="container animate-fade-in">
+            <button
+                onClick={() => navigate(-1)}
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    color: 'var(--text-secondary)',
+                    marginBottom: '2rem',
+                    fontSize: '0.9rem'
+                }}
+            >
                 <ChevronLeft size={16} /> Back to Domains
             </button>
 
-            <header className="lb-hero">
-                <div className="lb-hero__copy">
-                    <h1>{domain?.title || domainMeta.title} Programs</h1>
-                    <p>
-                        Select your specific degree program to view subjects and prepare for your upcoming examinations.
-                    </p>
-                </div>
-                <div className="lb-hero__mark" aria-hidden="true">
-                    <Building2 size={27} strokeWidth={1.7} />
-                </div>
+            <header style={{ marginBottom: '3rem' }}>
+                <h1 style={{ fontSize: 'clamp(1.75rem, 7vw, 3rem)', marginBottom: '1rem', overflowWrap: 'anywhere' }}>
+                    {domain?.title || domainMeta.title} <span className="text-gradient">Programs</span>
+                </h1>
+                <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 2vw, 1.2rem)', maxWidth: '600px', overflowWrap: 'anywhere' }}>
+                    Select your specific degree program to view subjects and prepare for your upcoming examinations.
+                </p>
             </header>
 
-            <section className="lb-browser" aria-label="Programs">
-                {loading && (
-                    <div className="lb-loading" data-testid="catalog-loading">
-                        <LoaderCircle size={22} className="lb-spin" />
-                        Loading courses…
-                    </div>
-                )}
+            {loading && (
+                <div data-testid="catalog-loading" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)' }}>
+                    <Loader size={22} className="spinner" style={{ color: 'var(--accent-primary)' }} />
+                    Loading courses…
+                </div>
+            )}
 
-                {!loading && error && (
-                    <div data-testid="catalog-error" className="lb-alert" role="alert">
-                        <AlertCircle size={19} />
-                        <div>
-                            <strong>Could not load courses</strong>
-                            <p>{error}</p>
-                        </div>
+            {!loading && error && (
+                <div data-testid="catalog-error" className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                    <AlertCircle size={22} style={{ color: '#ef4444', flexShrink: 0 }} />
+                    <div>
+                        <h3 style={{ marginBottom: '0.35rem' }}>Could not load courses</h3>
+                        <p style={{ color: 'var(--text-secondary)' }}>{error}</p>
                     </div>
-                )}
+                </div>
+            )}
 
-                {!loading && !error && courses.length === 0 && (
-                    <div data-testid="catalog-empty" className="lb-empty-state">
-                        <span className="lb-empty-state__icon"><GraduationCap size={21} /></span>
-                        <h3>No courses are listed for this department yet.</h3>
-                    </div>
-                )}
+            {!loading && !error && courses.length === 0 && (
+                <div data-testid="catalog-empty" className="glass-panel" style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                    No courses are listed for this department yet.
+                </div>
+            )}
 
-                {!loading && !error && courses.length > 0 && (
-                    <div className="lb-grid lb-grid--courses catalog-flow__course-grid">
-                        {courses.map((course) => (
-                            <Link
-                                key={course.courseId}
-                                to={`/courses/${course.courseId}/subjects`}
-                                className="lb-choice catalog-flow__course"
-                            >
-                                <span className="lb-choice__icon" aria-hidden="true">
-                                    <GraduationCap size={21} strokeWidth={1.8} />
+            {!loading && !error && courses.length > 0 && (
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
+                    gap: '2rem',
+                    minWidth: 0
+                }}>
+                    {courses.map(course => (
+                        <Link
+                            key={course.courseId}
+                            to={`/courses/${course.courseId}/subjects`}
+                            className="glass-panel pm-course-card"
+                            style={{
+                                background: "var(--glass-bg)",
+                                border: "1px solid var(--glass-border)",
+                                borderRadius: "var(--radius-lg)",
+                                minHeight: "auto",
+                                boxShadow: "none",
+                                padding: '2rem',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                transition: 'transform var(--transition-normal), box-shadow var(--transition-normal)',
+                                textDecoration: 'none',
+                                minWidth: 0,
+                                width: '100%'
+                            }}
+                            onMouseOver={e => {
+                                e.currentTarget.style.transform = 'translateY(-4px)';
+                                e.currentTarget.style.boxShadow = 'var(--shadow-lg)';
+                                e.currentTarget.style.borderColor = 'var(--accent-primary)';
+                            }}
+                            onMouseOut={e => {
+                                e.currentTarget.style.transform = 'translateY(0)';
+                                e.currentTarget.style.boxShadow = 'none';
+                                e.currentTarget.style.borderColor = 'var(--glass-border)';
+                            }}
+                        >
+                            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start', justifyContent: 'space-between', gap: '0.75rem', minWidth: 0, marginBottom: '1.5rem' }}>
+                                <div style={{
+                                    background: 'rgba(59, 130, 246, 0.1)',
+                                    padding: '0.75rem',
+                                    borderRadius: 'var(--radius-md)',
+                                    color: 'var(--accent-primary)'
+                                }}>
+                                    <GraduationCap size={24} />
+                                </div>
+                                <span style={{
+                                    background: 'var(--bg-tertiary)',
+                                    padding: '0.25rem 0.75rem',
+                                    borderRadius: 'var(--radius-full)',
+                                    fontSize: '0.8rem',
+                                    color: 'var(--text-secondary)',
+                                    maxWidth: '100%',
+                                    overflowWrap: 'anywhere'
+                                }}>
+                                    {course.sems?.length || 0} Semesters
                                 </span>
-                                <span className="lb-choice__copy">
-                                    <span className="lb-choice__title">{course.courseName}</span>
-                                    <span className="lb-choice__sub">{course.sems?.length || 0} Semesters</span>
-                                    <span className="lb-choice__meta">
-                                        <Clock size={14} aria-hidden="true" /> 3 Exams / Subject
-                                    </span>
-                                    <span className="lb-tag catalog-flow__course-action">View Syllabus</span>
-                                </span>
-                                <ChevronRight className="lb-choice__arrow" size={17} aria-hidden="true" />
-                            </Link>
-                        ))}
-                    </div>
-                )}
-            </section>
-        </main>
+                            </div>
+
+                            <h3 style={{ minWidth: 0, marginBottom: '0.5rem', fontSize: '1.4rem', overflowWrap: 'anywhere' }}>{course.courseName}</h3>
+
+                            <div style={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                gap: '1rem',
+                                minWidth: 0,
+                                marginTop: 'auto',
+                                paddingTop: '1.5rem',
+                                color: 'var(--text-tertiary)',
+                                fontSize: '0.9rem'
+                            }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                    <Clock size={16} /> 3 Exams / Subject
+                                </div>
+                            </div>
+
+                            <div style={{
+                                marginTop: '1.5rem',
+                                width: '100%',
+                                textAlign: 'center',
+                                padding: '0.75rem',
+                                background: 'var(--bg-tertiary)',
+                                borderRadius: 'var(--radius-md)',
+                                color: 'var(--accent-primary)',
+                                fontWeight: 500,
+                                transition: 'background var(--transition-fast)'
+                            }}>
+                                View Syllabus
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            )}
+        </div>
     );
 }
