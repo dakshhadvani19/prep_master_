@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft, GraduationCap, Clock, Loader, AlertCircle } from 'lucide-react';
+import './LandingPage.css';
 import { fetchCoursesForDomain, getCatalogDomain } from '../utils/catalogApi';
 
 export default function CourseExplorer() {

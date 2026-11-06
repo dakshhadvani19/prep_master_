@@ -13,31 +13,25 @@ const smoothEase = [0.22, 1, 0.36, 1];
 
 const cardSequence = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.075, delayChildren: 0.04 } },
+    visible: { transition: { staggerChildren: 0.035, delayChildren: 0.02 } },
 };
 const cardReveal = {
-    hidden: { opacity: 0, y: 16, filter: 'blur(4px)' },
+    hidden: { opacity: 0, y: 8 },
     visible: {
-        opacity: 1, y: 0, filter: 'blur(0px)',
-        transition: { duration: 0.65, ease: smoothEase },
+        opacity: 1, y: 0,
+        transition: { duration: 0.28, ease: smoothEase },
     },
 };
 
 function StudyDeskArtwork() {
     return (
-        <svg className="pm-home-artwork" viewBox="0 0 650 500" role="img" aria-label="Exam paper, answer sheet and pencil arranged on a study desk">
-            <defs>
-                <pattern id="pm-paper-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-                    <path d="M18 0H0V18" fill="none" stroke="#ffffff" strokeOpacity=".045" />
-                </pattern>
-                <filter id="pm-paper-shadow" x="-30%" y="-30%" width="160%" height="170%">
-                    <feDropShadow dx="0" dy="20" stdDeviation="18" floodColor="#000000" floodOpacity=".42" />
-                </filter>
-            </defs>
-            <path d="M70 100C145 22 291 15 401 65s190 119 179 229-105 164-228 164S78 394 47 289 1 175 70 100Z" fill="url(#pm-paper-grid)" stroke="#ffffff" strokeOpacity=".08" />
-            <circle cx="470" cy="104" r="78" fill="none" stroke="#ffc06a" strokeOpacity=".22" />
-            <circle cx="470" cy="104" r="58" fill="none" stroke="#ffc06a" strokeOpacity=".6" strokeWidth="5" strokeDasharray="250 115" transform="rotate(-92 470 104)" />
-            <g filter="url(#pm-paper-shadow)" transform="rotate(-5 280 250)">
+        <svg
+            className="pm-home-artwork"
+            viewBox="90 55 500 450"
+            role="img"
+            aria-label="Two exam paper sheets and a pen"
+        >
+            <g transform="rotate(-5 280 250)">
                 <rect x="116" y="74" width="322" height="390" rx="12" fill="#20242b" stroke="#aeb5bf" />
                 <rect x="133" y="92" width="288" height="354" rx="5" fill="#ffffff" />
                 <path d="M133 92h288v62H133z" fill="#f1f3f6" />
@@ -58,7 +52,7 @@ function StudyDeskArtwork() {
                 <rect x="284" y="367" width="76" height="4" rx="2" fill="#c5ccd5" />
                 <rect x="284" y="379" width="86" height="4" rx="2" fill="#c5ccd5" />
             </g>
-            <g filter="url(#pm-paper-shadow)" transform="rotate(8 475 306)">
+            <g transform="rotate(8 475 306)">
                 <rect x="407" y="201" width="165" height="220" rx="10" fill="#292e35" stroke="#aeb5bf" />
                 <rect x="419" y="214" width="141" height="194" rx="5" fill="#ffffff" />
                 <text x="433" y="239" fill="#555d68" fontSize="9" fontFamily="Arial" fontWeight="700">ANSWER SHEET</text>
@@ -74,14 +68,12 @@ function StudyDeskArtwork() {
                 <rect x="433" y="364" width="101" height="4" rx="2" fill="#c8ced7" />
                 <path d="M433 384l8 8 16-18" fill="none" stroke="#d99c4a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             </g>
-            <g transform="rotate(35 523 430)" filter="url(#pm-paper-shadow)">
+            <g transform="rotate(35 523 430)">
                 <rect x="511" y="342" width="17" height="126" rx="5" fill="#f7f8fa" stroke="#d99c4a" strokeWidth="1.4" />
                 <path d="M511 351h17M511 454h17" stroke="#d99c4a" strokeWidth="2" />
                 <path d="M511 468l8.5 18 8.5-18Z" fill="#f0f2f5" />
                 <path d="M517 480l2.5 6 2.5-6Z" fill="#35302a" />
             </g>
-            <g fill="#ffc06a"><circle cx="100" cy="367" r="4" /><circle cx="555" cy="162" r="3" /></g>
-            <path d="M85 390l16-16M85 374l16 16" stroke="#ffc06a" strokeOpacity=".65" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
     );
 }
@@ -104,7 +96,7 @@ function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagr
     return (
         <article className="pm-people-card">
             <div className="pm-people-identity">
-                <img src={avatar} alt={name} className="pm-people-avatar" loading="lazy" />
+                <img src={avatar} alt={name} className="pm-people-avatar" loading="lazy" decoding="async" />
                 <div>
                     <p className="pm-people-role">The people behind PrepMaster</p>
                     <h3>{name}</h3>
@@ -177,30 +169,21 @@ export default function LandingPage() {
         }
     };
 
-    const handleMouseMove = (event) => {
-        const card = event.target.closest?.('.domain-card');
-        if (!card) return;
-        const rect = card.getBoundingClientRect();
-        card.style.setProperty('--mouse-x', (event.clientX - rect.left) + 'px');
-        card.style.setProperty('--mouse-y', (event.clientY - rect.top) + 'px');
-    };
-
     const heroSequence = {
         hidden: {},
-        visible: { transition: { staggerChildren: 0.11, delayChildren: 0.08 } },
+        visible: { transition: { staggerChildren: 0.06, delayChildren: 0.02 } },
     };
     const heroReveal = {
-        hidden: { opacity: 0, y: 18, filter: 'blur(5px)' },
+        hidden: { opacity: 0, y: 10 },
         visible: {
             opacity: 1,
             y: 0,
-            filter: 'blur(0px)',
-            transition: { duration: 0.66, ease: smoothEase },
+            transition: { duration: 0.36, ease: smoothEase },
         },
     };
 
     return (
-        <main className="pm-home-refresh" onMouseMove={handleMouseMove}>
+        <main className="pm-home-refresh">
             <div className="pm-home-shell">
                 <motion.section
                     className="pm-home-hero"
@@ -246,24 +229,9 @@ export default function LandingPage() {
                             <span><Check size={15} /> Syllabus-based practice</span>
                         </motion.div>
                     </motion.div>
-                    <motion.div
-                        className="pm-home-art-wrap"
-                        initial={reduceMotion ? false : { opacity: 0, scale: 0.96, filter: 'blur(5px)' }}
-                        animate={reduceMotion
-                            ? { opacity: 1 }
-                            : { opacity: 1, scale: 1, filter: 'blur(0px)', y: [0, -7, 0] }}
-                        transition={reduceMotion
-                            ? { duration: 0 }
-                            : {
-                                opacity: { duration: 0.8, ease: smoothEase },
-                                scale: { duration: 0.9, ease: smoothEase },
-                                filter: { duration: 0.8 },
-                                y: { duration: 9, repeat: Infinity, ease: 'easeInOut' },
-                            }}
-                        aria-hidden="true"
-                    >
+                    <div className="pm-home-art-wrap" aria-hidden="true">
                         <StudyDeskArtwork />
-                    </motion.div>
+                    </div>
                 </motion.section>
             </div>
 
@@ -295,9 +263,9 @@ export default function LandingPage() {
                                 to={'/domains/' + domain.id + '/courses'}
                                 className="domain-card pm-domain-card"
                                 variants={cardReveal}
-                                whileHover={reduceMotion ? undefined : { y: -7, scale: 1.012 }}
-                                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
-                                transition={{ duration: 0.34, ease: smoothEase }}
+                                whileHover={reduceMotion ? undefined : { y: -2 }}
+                                whileTap={reduceMotion ? undefined : { scale: 0.995 }}
+                                transition={{ duration: 0.18, ease: smoothEase }}
                             >
                                 <div className="pm-domain-art-wrap">
                                     <DomainArtwork id={domain.id} />

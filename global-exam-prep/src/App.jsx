@@ -5,7 +5,6 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import { Loader } from 'lucide-react';
 import './index.css';
-import './pages/LandingPage.css';
 import './pages/ExamExperience.css';
 import './styles/PurpleRestoration.css';
 

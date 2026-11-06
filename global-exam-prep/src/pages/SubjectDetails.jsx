@@ -6,6 +6,7 @@ import {
     ChevronLeft, Book, Target, Activity, Flame, Shield,
     Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader, Users
 } from 'lucide-react';
+import './LandingPage.css';
 
 const DIFFICULTY_LEVELS = [
     { id: 'easy', label: 'Easy', icon: Shield, color: '#10b981', desc: 'Fundamental concepts' },
