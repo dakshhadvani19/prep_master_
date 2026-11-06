@@ -106,11 +106,13 @@ describe('standard admin', () => {
   it('replaces Home→Dashboard and Subscriptions→Courses, lands on Admin Dashboard', async () => {
     signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     await at('/dashboard');
-    await waitFor(() => expect(screen.getByRole('heading', { name: 'Command' })).toBeInTheDocument());
-    expect(screen.getByText('Standard Admin')).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByRole('heading', { name: 'Feedback overview' })).toBeInTheDocument());
+    expect(screen.queryByRole('heading', { name: 'Command' })).toBeNull();
     expect(screen.getByText('Feedback overview')).toBeInTheDocument();
     expect(screen.getByText('Spam users')).toBeInTheDocument();
-    expect(screen.getByText('Leaderboard & ranking')).toBeInTheDocument();
+    expect(screen.queryByText('Leaderboard & ranking')).toBeNull();
+    expect(screen.queryByText('Edit subject / question')).toBeNull();
+    expect(screen.queryByText('Syllabus files')).toBeNull();
     expect(screen.queryByText('STUDENT DASHBOARD')).toBeNull();
     expect(screen.queryByText('Add Admin')).toBeNull();
     expect(screen.queryByText('Remove Admin')).toBeNull();
@@ -128,7 +130,7 @@ describe('standard admin', () => {
   it('has no Home page — / redirects to the Admin Dashboard', async () => {
     signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     await at('/');
-    await waitFor(() => expect(screen.getByRole('heading', { name: 'Command' })).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByRole('heading', { name: 'Feedback overview' })).toBeInTheDocument());
     expect(screen.queryByText('LANDING')).toBeNull();
   });
 
@@ -148,6 +150,13 @@ describe('super admin', () => {
     await at('/dashboard');
     await waitFor(() => expect(screen.getByText('Add Admin')).toBeInTheDocument());
     expect(screen.getAllByText('Super Admin').length).toBeGreaterThan(0);
+    expect(screen.queryByRole('heading', { name: 'Command' })).toBeNull();
+    expect(screen.queryByText('Edit subject / question')).toBeNull();
+    expect(screen.queryByText('Leaderboard & ranking')).toBeNull();
+    expect(screen.queryByText('Syllabus files')).toBeNull();
+    const staffPanel = document.querySelector('.admin-card--staff');
+    expect(staffPanel).toBeTruthy();
+    expect(document.querySelector('.admin-dash').firstElementChild).toBe(staffPanel);
     expect(screen.getByText('Add Admin')).toBeInTheDocument();
     expect(screen.getByText('Remove Admin')).toBeInTheDocument();
     expect(screen.getByText('Add Super Admin')).toBeInTheDocument();

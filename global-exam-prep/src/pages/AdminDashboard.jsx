@@ -6,13 +6,11 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-    MessageSquare, ShieldAlert, BookOpen, Trophy,
-    Shield, UserPlus, UserMinus, Crown, ChevronRight,
+    MessageSquare, ShieldAlert, UserPlus, UserMinus, Crown, ChevronRight,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../supabase';
 import { manageAdminStaff } from '../utils/supabaseAuth';
-import AdminController from '../components/AdminController';
 import './AdminDashboard.css';
 
 const PREVIEW_ADMINS = [
@@ -69,7 +67,7 @@ function FeedbackDonut({ total, seen, focus, onFocus }) {
 }
 
 export default function AdminDashboard() {
-    const { isSuperAdmin, adminProfile, currentUser } = useAuth();
+    const { isSuperAdmin } = useAuth();
     const [notice, setNotice] = useState('');
     const [modal, setModal] = useState(null);
     const [form, setForm] = useState({ name: '', email: '', target: '' });
@@ -115,8 +113,6 @@ export default function AdminDashboard() {
         return () => { cancelled = true; };
     }, [feedbackRetry]);
 
-    const displayName = adminProfile?.full_name || currentUser?.displayName || 'Administrator';
-
     function previewOnly(message) {
         setNotice(message);
     }
@@ -151,29 +147,30 @@ export default function AdminDashboard() {
 
     return (
         <div className="admin-dash">
-            <motion.header
-                className="admin-dash__hero"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            >
-                <div className="admin-dash__id">
-                    <h1 className="admin-dash__title">Command</h1>
-                    <p className="admin-dash__sub">{displayName}</p>
-                    <div className="admin-pills" aria-label="Feedback counts">
-                        <span><b>{stats.total}</b> Feedback</span>
-                        <span><b>{stats.seen}</b> Seen</span>
-                        <span className="is-gold"><b>{stats.remaining}</b> Remaining</span>
-                    </div>
-                </div>
-                <div className="admin-dash__visual">
-                    <AdminController gold={isSuperAdmin} />
-                    <span className={`admin-dash__badge ${isSuperAdmin ? 'admin-dash__badge--gold' : ''}`}>
-                        {isSuperAdmin ? <Crown size={14} /> : <Shield size={14} />}
-                        {isSuperAdmin ? 'Super Admin' : 'Standard Admin'}
-                    </span>
-                </div>
-            </motion.header>
+
+
+                {isSuperAdmin && (
+                    <section className="admin-card admin-card--staff" aria-labelledby="staff-heading">
+                        <div className="admin-card__head">
+                            <h2 className="admin-card__title" id="staff-heading">
+                                <Crown size={16} style={{ marginRight: 8, verticalAlign: -2, color: '#ffb454' }} />
+                                Administration
+                            </h2>
+                            <span className="admin-card__tag">Super Admin</span>
+                        </div>
+                        <div className="admin-staff">
+                            <button type="button" className="admin-staff__btn admin-staff__btn--add" onClick={() => setModal('add')}>
+                                <strong><UserPlus size={14} /> Add Admin</strong>
+                            </button>
+                            <button type="button" className="admin-staff__btn admin-staff__btn--remove" onClick={() => setModal('remove')}>
+                                <strong><UserMinus size={14} /> Remove Admin</strong>
+                            </button>
+                            <button type="button" className="admin-staff__btn admin-staff__btn--super" onClick={() => setModal('super')}>
+                                <strong><Crown size={14} /> Add Super Admin</strong>
+                            </button>
+                        </div>
+                    </section>
+                )}
 
             <div className="admin-grid">
                 <section className="admin-card admin-card--span-8 admin-card--feedback" aria-labelledby="feedback-heading">
@@ -220,52 +217,9 @@ export default function AdminDashboard() {
                     </Link>
                 </section>
 
-                <Link to="/admin/courses" className="admin-card admin-card--span-4 admin-entry admin-entry--courses" aria-labelledby="courses-entry">
-                    <div className="admin-path" aria-hidden>
-                        <i /><i /><i /><i />
-                    </div>
-                    <div className="admin-entry__icon"><BookOpen size={18} /></div>
-                    <h2 className="admin-card__title" id="courses-entry">Edit subject / question</h2>
-                    <span className="admin-linkish">Courses</span>
-                </Link>
 
-                <Link to="/leaderboards" className="admin-card admin-card--span-4 admin-entry admin-entry--ranks" aria-labelledby="leaderboard-entry">
-                    <div className="admin-bars" aria-hidden>
-                        <span /><span /><span />
-                    </div>
-                    <div className="admin-entry__icon admin-entry__icon--gold"><Trophy size={18} /></div>
-                    <h2 className="admin-card__title" id="leaderboard-entry">Leaderboard &amp; ranking</h2>
-                    <span className="admin-linkish">Ranks</span>
-                </Link>
 
-                <Link to="/admin/syllabus" className="admin-card admin-card--span-4 admin-entry admin-entry--files" aria-labelledby="syllabus-entry">
-                    <div className="admin-entry__icon"><Shield size={18} /></div>
-                    <h2 className="admin-card__title" id="syllabus-entry">Syllabus files</h2>
-                    <span className="admin-linkish">Files</span>
-                </Link>
 
-                {isSuperAdmin && (
-                    <section className="admin-card admin-card--span-12 admin-card--staff" aria-labelledby="staff-heading">
-                        <div className="admin-card__head">
-                            <h2 className="admin-card__title" id="staff-heading">
-                                <Crown size={16} style={{ marginRight: 8, verticalAlign: -2, color: '#ffb454' }} />
-                                Administration
-                            </h2>
-                            <span className="admin-card__tag">Super Admin</span>
-                        </div>
-                        <div className="admin-staff">
-                            <button type="button" className="admin-staff__btn admin-staff__btn--add" onClick={() => setModal('add')}>
-                                <strong><UserPlus size={14} /> Add Admin</strong>
-                            </button>
-                            <button type="button" className="admin-staff__btn admin-staff__btn--remove" onClick={() => setModal('remove')}>
-                                <strong><UserMinus size={14} /> Remove Admin</strong>
-                            </button>
-                            <button type="button" className="admin-staff__btn admin-staff__btn--super" onClick={() => setModal('super')}>
-                                <strong><Crown size={14} /> Add Super Admin</strong>
-                            </button>
-                        </div>
-                    </section>
-                )}
             </div>
 
             <AnimatePresence>
