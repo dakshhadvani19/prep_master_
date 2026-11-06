@@ -794,3 +794,17 @@
     }
 }
 
+/* Softer geometry for the Administration panel and its glass actions. */
+#root .pm-main .admin-dash .admin-card--staff {
+    border-radius: 20px !important;
+}
+
+#root .pm-main .admin-dash .admin-card--staff .admin-staff__btn {
+    border-radius: 18px !important;
+}
+
+#root .pm-main .admin-dash .admin-card--staff .admin-staff__btn::before,
+#root .pm-main .admin-dash .admin-card--staff .admin-staff__btn::after {
+    border-radius: inherit;
+}
+
