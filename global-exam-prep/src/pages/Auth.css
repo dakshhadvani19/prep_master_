@@ -1315,3 +1315,55 @@ main:has(.auth-container) {
     font-size: 0.8rem;
     color: #fbbf24;
 }
+
+
+/* PrepMaster action palette: simple blue-violet primary and neutral alternatives. */
+:root {
+    --accent: #8b5cf6;
+    --accent-soft: rgba(139,92,246,.14);
+    --accent-2: #3b82f6;
+}
+.segment-btn.active { color: #fff; }
+.active-segment-bg {
+    background: var(--accent-gradient);
+    box-shadow: none;
+}
+.premium-btn {
+    background: var(--accent-gradient);
+    color: #fff;
+    box-shadow: none;
+    transition: background .15s ease, color .15s ease;
+}
+.premium-btn::before,
+.premium-btn::after,
+.premium-email-btn::before {
+    display: none !important;
+    content: none !important;
+}
+.premium-btn:hover:not(:disabled) {
+    color: #fff;
+    background: linear-gradient(135deg,#2563eb,#6d28d9);
+    box-shadow: none;
+    transform: none;
+}
+.premium-google-btn {
+    background: rgba(255,255,255,.035);
+    box-shadow: none;
+    transition: background .15s ease, border-color .15s ease;
+}
+.premium-google-btn:hover:not(:disabled) {
+    border-color: rgba(255,255,255,.2);
+    background: rgba(255,255,255,.075);
+    box-shadow: none;
+}
+.premium-email-btn {
+    color: #e5e7eb;
+    background: rgba(22,24,29,.72);
+    border-color: rgba(255,255,255,.12);
+    box-shadow: none;
+}
+.premium-email-btn:hover:not(:disabled) {
+    color: #fff;
+    border-color: rgba(167,139,250,.48);
+    background: rgba(139,92,246,.12);
+}

@@ -144,7 +144,7 @@
 .pm-exam-difficulty-choice:focus-visible,
 .pm-exam-start-action:focus-visible,
 .pm-exam-room-action:focus-visible {
-    outline: 2px solid #ffd08a;
+    outline: 2px solid #a78bfa;
     outline-offset: 3px;
 }
 
@@ -276,25 +276,32 @@
 .pm-exam-uploaded-file span {
     color: #2c241b !important;
 }
-/* The normal exam toolbar is part of the active-test layer: keep its submit action blue. */
+/* Exam submission is a completion action: use a clear, flat success green. */
 .pm-active-exam .pm-exam-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
     min-height: 44px;
-    border: 1px solid rgba(147, 197, 253, .72) !important;
+    padding: .65rem 1.1rem;
+    border: 1px solid #059669 !important;
     border-radius: 999px !important;
-    background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+    background: #10b981 !important;
     color: #ffffff !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 9px 24px rgba(37, 99, 235, .32) !important;
+    box-shadow: none !important;
+    transition: background .15s ease, border-color .15s ease !important;
 }
 .pm-active-exam .pm-exam-submit:hover:not(:disabled) {
-    transform: translateY(-2px);
-    border-color: rgba(191, 219, 254, .96) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .36), 0 13px 28px rgba(37, 99, 235, .4) !important;
+    transform: none;
+    border-color: #0f9f6b !important;
+    background: #0f9f6b !important;
+    box-shadow: none !important;
 }
 .pm-active-exam .pm-exam-submit:disabled {
-    background: linear-gradient(135deg, #273b59, #304967) !important;
-    border-color: rgba(191, 215, 250, .3) !important;
-    color: #d4e1f3 !important;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.12) !important;
+    background: #285747 !important;
+    border-color: #285747 !important;
+    color: #d1fae5 !important;
+    box-shadow: none !important;
 }
 
 /* Normal exam header, palette, question card and answers. */
@@ -442,6 +449,12 @@
 }
 .pm-exam-question-step,
 .pm-room-question-step {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: .5rem;
+    text-align: center !important;
+    white-space: nowrap;
     min-width: 124px;
     min-height: 46px;
     padding: .75rem 1.2rem !important;
@@ -449,14 +462,14 @@
     border-radius: 999px !important;
     background: rgba(31, 45, 66, .96) !important;
     color: #f1f6ff !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 6px 16px rgba(0, 0, 0, .22);
+    box-shadow: none;
 }
 .pm-exam-question-step--next,
 .pm-room-question-step--next {
     border-color: rgba(147, 197, 253, .66) !important;
     background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
     color: white !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .26), 0 8px 22px rgba(37, 99, 235, .3);
+    box-shadow: none;
 }
 .pm-exam-question-step:disabled,
 .pm-room-question-step:disabled {
@@ -472,13 +485,16 @@
     border: 1px solid rgba(220, 235, 255, .22);
     border-radius: 999px;
     font-weight: 700;
-    backdrop-filter: blur(20px) saturate(150%);
-    -webkit-backdrop-filter: blur(20px) saturate(150%);
-    transition: transform .2s ease, box-shadow .22s ease, border-color .22s ease;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    text-align: center;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
 }
 .pm-test-room-page .pm-room-action:not(:disabled):hover {
-    transform: translateY(-2px);
-    border-color: rgba(191, 219, 254, .72);
+    transform: none;
+    border-color: rgba(167, 139, 250, .55);
+    box-shadow: none;
 }
 .pm-test-room-page .pm-room-action:disabled {
     opacity: 1;
@@ -713,44 +729,47 @@
 }
 .pm-room-lobby button.pm-room-glass-utility,
 .pm-room-share button.pm-room-glass-utility {
-    color: #ffd08a !important;
-    background: rgba(255,180,84,.08) !important;
-    border: 1px solid rgba(255,180,84,.34) !important;
+    color: #c4b5fd !important;
+    background: rgba(139,92,246,.08) !important;
+    border: 1px solid rgba(167,139,250,.3) !important;
     border-radius: 999px;
     padding: .52rem .8rem !important;
 }
 .pm-room-lobby button.pm-room-glass-utility:hover,
 .pm-room-share button.pm-room-glass-utility:hover {
-    background: rgba(255,180,84,.18) !important;
-    border-color: rgba(255,208,138,.75) !important;
+    background: rgba(139,92,246,.14) !important;
+    border-color: rgba(167,139,250,.58) !important;
 }
+/* Primary Test Room actions use the PrepMaster blue-violet brand treatment. */
 .pm-room-lobby .pm-room-gold-action,
 .pm-room-setup .pm-room-gold-action,
 .pm-room-share .pm-room-gold-action,
 .pm-room-entry .pm-room-gold-action {
     min-height: 48px;
-    border: 1px solid rgba(255,208,138,.92) !important;
+    border: 1px solid rgba(167,139,250,.5) !important;
     border-radius: 999px !important;
-    background: linear-gradient(135deg, #ffb454 0%, #ffd08a 55%, #ffb454 100%) !important;
-    color: #1a0e00 !important;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.52), 0 9px 24px rgba(255,180,84,.28) !important;
-    transition: transform .24s ease, box-shadow .3s ease, border-color .25s ease !important;
+    background: var(--accent-gradient) !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    transition: background .15s ease, border-color .15s ease !important;
 }
 .pm-room-lobby .pm-room-gold-action:hover:not(:disabled),
 .pm-room-setup .pm-room-gold-action:hover:not(:disabled),
 .pm-room-share .pm-room-gold-action:hover:not(:disabled),
 .pm-room-entry .pm-room-gold-action:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 12px 28px rgba(255,180,84,.38) !important;
+    transform: none;
+    border-color: rgba(196,181,253,.82) !important;
+    background: linear-gradient(135deg,#2563eb,#6d28d9) !important;
+    box-shadow: none !important;
 }
 .pm-room-lobby .pm-room-gold-action:disabled,
 .pm-room-setup .pm-room-gold-action:disabled,
 .pm-room-share .pm-room-gold-action:disabled,
 .pm-room-entry .pm-room-gold-action:disabled {
-    background: linear-gradient(135deg, #f4f1eb, #e6e0d7) !important;
-    border-color: rgba(255,180,84,.35) !important;
-    color: #756858 !important;
-    box-shadow: inset 0 1px 0 #fff !important;
+    background: #2a2d38 !important;
+    border-color: rgba(255,255,255,.12) !important;
+    color: #aeb4bf !important;
+    box-shadow: none !important;
 }
 .pm-room-lobby .pm-room-gold-action:focus-visible,
 .pm-room-setup .pm-room-gold-action:focus-visible,

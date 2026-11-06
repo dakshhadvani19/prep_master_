@@ -130,40 +130,46 @@ function roomButtonStyle(variant = 'primary', disabled = false) {
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
+        textAlign: 'center',
+        lineHeight: 1.25,
         gap: '0.55rem',
         padding: '0.85rem 1.15rem',
         borderRadius: 'var(--radius-full)',
         fontWeight: 700,
         fontSize: '0.93rem',
-        transition: 'transform 0.16s ease, opacity 0.16s ease, border-color 0.16s ease',
-        opacity: 1,
+        transition: 'background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease',
+        opacity: disabled ? 0.72 : 1,
         cursor: disabled ? 'not-allowed' : 'pointer',
         width: '100%',
         minHeight: 48,
-        border: '1px solid rgba(255,255,255,.2)',
-        background: 'rgba(26,36,53,.94)',
-        color: '#f4f8ff',
-        backdropFilter: 'blur(20px) saturate(155%)',
-        WebkitBackdropFilter: 'blur(20px) saturate(155%)',
-        boxShadow: 'inset 0 1px 0 rgba(255,255,255,.18), 0 8px 22px rgba(0,0,0,.3)',
+        border: '1px solid rgba(255,255,255,.14)',
+        background: 'rgba(22,24,29,.92)',
+        color: '#f4f4f8',
+        backdropFilter: 'none',
+        WebkitBackdropFilter: 'none',
+        boxShadow: 'none',
     };
     if (variant === 'secondary') {
         return {
             ...common,
-            border: '1px solid rgba(255,255,255,.24)',
-            background: 'rgba(34,46,65,.94)',
-            color: '#f4f8ff',
-            boxShadow: 'inset 0 1px 0 rgba(255,255,255,.2), 0 8px 20px rgba(0,0,0,.24)',
+            border: '1px solid rgba(255,255,255,.14)',
+            background: 'rgba(22,24,29,.82)',
+            color: '#e5e7eb',
+        };
+    }
+    if (variant === 'success') {
+        return {
+            ...common,
+            border: '1px solid #059669',
+            background: disabled ? '#285747' : '#10b981',
+            color: disabled ? '#d1fae5' : '#ffffff',
         };
     }
     return {
         ...common,
-        border: '1px solid rgba(147,197,253,.68)',
-        background: disabled ? 'linear-gradient(135deg,#263956,#304967)' : 'linear-gradient(135deg,#1d4ed8,#3b82f6)',
-        color: disabled ? '#d5e2f4' : 'white',
-        boxShadow: disabled
-            ? 'inset 0 1px 0 rgba(255,255,255,.12)'
-            : 'inset 0 1px 0 rgba(255,255,255,.28), 0 9px 26px rgba(37,99,235,.34)',
+        border: '1px solid rgba(167,139,250,.5)',
+        background: disabled ? '#2a2d38' : 'var(--accent-gradient)',
+        color: disabled ? '#aeb4bf' : '#ffffff',
     };
 }
 
@@ -1322,7 +1328,7 @@ export default function TestRoomPage() {
                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '1rem' }}>Everyone stays here until the host starts the test. The shared {roomMeta?.durationMinutes || durationMinutes}-minute timer will begin at the same moment for every participant.</p>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.7rem 0.8rem', background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.18)', borderRadius: 'var(--radius-md)', color: '#fbbf24', fontSize: '0.82rem', marginBottom: '1.2rem' }}><Clock3 size={16} /> {roomMeta?.durationMinutes || durationMinutes} minutes · {roomMeta?.questionCount || canonicalQuestions.length || 30} questions</div>
                         {isHostFlow ? (
-                            <button className="pm-room-gold-action" disabled={!connected || working || participantCount > MAX_PARTICIPANTS} onClick={startRoom} style={roomButtonStyle('success', !connected || working || participantCount > MAX_PARTICIPANTS)}>{working ? <><LoaderCircle size={18} className="spin" /> Starting…</> : <><Play size={18} /> Start Test Room</>}</button>
+                            <button className="pm-room-gold-action" disabled={!connected || working || participantCount > MAX_PARTICIPANTS} onClick={startRoom} style={roomButtonStyle('primary', !connected || working || participantCount > MAX_PARTICIPANTS)}>{working ? <><LoaderCircle size={18} className="spin" /> Starting…</> : <><Play size={18} /> Start Test Room</>}</button>
                         ) : (
                             <div style={{ ...roomButtonStyle('secondary', true), cursor: 'default', lineHeight: 1.4 }}><LoaderCircle size={17} className="spin" /> Waiting for host to start…</div>
                         )}

@@ -728,3 +728,59 @@
         transition: none !important;
     }
 }
+
+
+/* Consistent admin actions: restrained surfaces with colors tied to the action. */
+.admin-staff__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 48px;
+    box-shadow: none;
+}
+.admin-staff__btn strong { justify-content: center; }
+.admin-staff__btn--add:hover {
+    border-color: rgba(59,130,246,.5);
+    background: rgba(59,130,246,.09);
+}
+.admin-staff__btn--remove:hover {
+    border-color: rgba(239,68,68,.5);
+    background: rgba(239,68,68,.09);
+}
+.admin-staff__btn--super {
+    border-color: rgba(167,139,250,.36);
+}
+.admin-staff__btn--super:hover {
+    border-color: rgba(167,139,250,.56);
+    background: rgba(139,92,246,.1);
+}
+.admin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 40px;
+    box-shadow: none;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.admin-btn--gold {
+    color: #fff;
+    background: var(--accent-gradient);
+    border-color: rgba(167,139,250,.5);
+    box-shadow: none;
+}
+.admin-btn--gold:hover:not(:disabled) {
+    color: #fff;
+    background: linear-gradient(135deg,#2563eb,#6d28d9);
+    border-color: rgba(196,181,253,.72);
+    box-shadow: none;
+}
+.admin-feedback-open,
+.admin-feedback-open:hover {
+    box-shadow: none;
+}
+.admin-dash button:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 3px;
+}

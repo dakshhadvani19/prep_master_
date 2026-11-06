@@ -217,13 +217,14 @@
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: background 0.15s ease, border-color 0.15s ease;
     text-align: center;
 }
 
 .guide-container .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+    transform: none;
+    background: linear-gradient(135deg, #2563eb, #6d28d9);
+    box-shadow: none;
 }
 
 /* FAQ Styles */

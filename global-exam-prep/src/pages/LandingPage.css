@@ -630,3 +630,32 @@
         transition-duration: .01ms !important;
     }
 }
+
+
+/* Keep homepage actions crisp: retain the brand gradient, remove colored outer glows. */
+.pm-home-primary {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 4px 12px rgba(0,0,0,.18);
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.pm-home-primary:hover {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 6px 14px rgba(0,0,0,.2);
+    transform: translateY(-1px);
+}
+.pm-home-secondary {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.pm-home-secondary:hover {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    transform: translateY(-1px);
+}
+.pm-people-like,
+.pm-people-like:hover,
+.pm-people-like[aria-pressed="true"] {
+    box-shadow: none !important;
+}
+.pm-home-refresh .pm-home-primary:focus-visible,
+.pm-home-refresh .pm-home-secondary:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 3px;
+}

@@ -98,7 +98,7 @@ export default function FeedbackPage() {
                     <button
                         type="button"
                         onClick={() => navigate('/')}
-                        style={{ background: 'var(--accent-gradient)', color: 'white', padding: '0.875rem 2.5rem', borderRadius: 'var(--radius-full)', fontWeight: 700, fontSize: '1rem', cursor: 'pointer', boxShadow: 'var(--shadow-glow)' }}
+                        style={{ background: 'var(--accent-gradient)', color: 'white', padding: '0.875rem 2.5rem', borderRadius: 'var(--radius-full)', fontWeight: 700, fontSize: '1rem', cursor: 'pointer', boxShadow: 'none' }}
                     >
                         Back to Home
                     </button>
@@ -260,7 +260,7 @@ export default function FeedbackPage() {
                             justifyContent: 'center',
                             gap: '0.6rem',
                             transition: 'all 0.2s',
-                            boxShadow: canSubmit ? '0 8px 25px rgba(139,92,246,0.25)' : 'none',
+                            boxShadow: 'none',
                         }}
                     >
                         {status === 'loading'
