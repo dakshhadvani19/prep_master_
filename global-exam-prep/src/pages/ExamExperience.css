@@ -594,8 +594,7 @@
     }
     .pm-room-question-nav,
     .pm-exam-question-nav {
-        position: relative !important;
-        top: auto !important;
+        position: static !important;
         max-width: none !important;
         min-width: 0 !important;
         max-height: none !important;

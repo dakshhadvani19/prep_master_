@@ -1348,15 +1348,15 @@ export default function TestRoomPage() {
 
         return (
             <div className="container pm-test-room-page animate-fade-in" style={{ maxWidth: 1100, marginTop: '1rem', marginBottom: '3rem' }}>
-                <div className="glass-panel pm-room-exam-topbar" style={{ position: 'sticky', top: 64, zIndex: 50, padding: '0.85rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
-                    <div style={{ fontWeight: 700 }}>{roomMeta?.examTitle || 'Test Room'} <span style={{ display: 'block', color: 'var(--text-tertiary)', fontSize: '0.77rem', fontWeight: 500 }}>{roomMeta?.subjectName || 'MCQ exam'}</span></div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: timeLeft < 300 ? 'var(--danger)' : 'var(--accent-primary)', fontWeight: 800, fontSize: '1.2rem', fontVariantNumeric: 'tabular-nums' }}><Clock3 size={20} /> {timeLabel}</div>
-                    {persistenceError && <span role="status" style={{ color: 'var(--warning)', fontSize: '0.78rem', maxWidth: 200 }}>{persistenceError}</span>}
-                    <button disabled={submissionPending || submittedRef.current} onClick={() => submitHandlerRef.current?.()} style={{ ...roomButtonStyle('success', submissionPending || submittedRef.current), width: 'auto', minWidth: 130 }}><CheckCircle2 size={17} /> Submit</button>
+                <div className="glass-panel pm-room-exam-topbar" style={{ padding: '0.85rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                    <div style={{ fontWeight: 700, minWidth: 0, flex: '1 1 220px', overflowWrap: 'anywhere' }}>{roomMeta?.examTitle || 'Test Room'} <span style={{ display: 'block', color: 'var(--text-tertiary)', fontSize: '0.77rem', fontWeight: 500 }}>{roomMeta?.subjectName || 'MCQ exam'}</span></div>
+                    <div style={{ display: 'flex', alignItems: 'center', flex: '0 0 auto', whiteSpace: 'nowrap', gap: '0.5rem', color: timeLeft < 300 ? 'var(--danger)' : 'var(--accent-primary)', fontWeight: 800, fontSize: '1.2rem', fontVariantNumeric: 'tabular-nums' }}><Clock3 size={20} /> {timeLabel}</div>
+                    {persistenceError && <span role="status" style={{ color: 'var(--warning)', fontSize: '0.78rem', maxWidth: 200, flex: '1 1 180px' }}>{persistenceError}</span>}
+                    <button disabled={submissionPending || submittedRef.current} onClick={() => submitHandlerRef.current?.()} style={{ ...roomButtonStyle('success', submissionPending || submittedRef.current), width: 'auto', minWidth: 130, flex: '0 0 auto', whiteSpace: 'nowrap' }}><CheckCircle2 size={17} /> Submit</button>
                 </div>
 
                 <div className="pm-room-attempt-layout" style={{ display: 'grid', gridTemplateColumns: 'minmax(150px,0.34fr) minmax(0,1fr)', gap: '1rem', alignItems: 'start' }}>
-                    <aside className="glass-panel pm-room-question-nav" style={{ padding: '1rem', position: 'sticky', top: 145 }}>
+                    <aside className="glass-panel pm-room-question-nav" style={{ padding: '1rem' }}>
                         <h2 style={{ fontSize: '0.95rem', marginBottom: '0.85rem', color: 'var(--text-secondary)' }}>Questions</h2>
                         <div className="pm-room-question-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,minmax(0,1fr))', gap: '0.4rem' }}>
                             {displayQuestions.map((question, index) => {

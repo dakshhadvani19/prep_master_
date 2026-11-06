@@ -1206,16 +1206,16 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                position: 'sticky',
-                top: '64px',
-                zIndex: 40,
+
                 gap: '0.75rem',
                 flexWrap: 'wrap',
             }}>
-                <div style={{ fontWeight: 600 }}>{examInfo.title} <span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{examInfo.totalMarks}M</span></div>
+                <div style={{ fontWeight: 600, minWidth: 0, flex: '1 1 240px', overflowWrap: 'anywhere' }}>{examInfo.title} <span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{examInfo.totalMarks}M</span></div>
                 <div style={{
                     display: 'flex',
                     alignItems: 'center',
+                    flex: '0 0 auto',
+                    whiteSpace: 'nowrap',
                     gap: '0.5rem',
                     color: timeLeft < 300 ? 'var(--danger)' : 'var(--accent-primary)',
                     fontWeight: 700,
@@ -1238,6 +1238,8 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                         cursor: isSubmitting ? 'not-allowed' : 'pointer',
                         display: 'flex',
                         alignItems: 'center',
+                        flex: '0 0 auto',
+                        whiteSpace: 'nowrap',
                         gap: '0.5rem'
                     }}
                 >
