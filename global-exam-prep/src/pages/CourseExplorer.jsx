@@ -53,10 +53,10 @@ export default function CourseExplorer() {
             </button>
 
             <header style={{ marginBottom: '3rem' }}>
-                <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>
+                <h1 style={{ fontSize: 'clamp(1.75rem, 7vw, 3rem)', marginBottom: '1rem', overflowWrap: 'anywhere' }}>
                     {domain?.title || domainMeta.title} <span className="text-gradient">Programs</span>
                 </h1>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px' }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 2vw, 1.2rem)', maxWidth: '600px', overflowWrap: 'anywhere' }}>
                     Select your specific degree program to view subjects and prepare for your upcoming examinations.
                 </p>
             </header>
@@ -87,8 +87,9 @@ export default function CourseExplorer() {
             {!loading && !error && courses.length > 0 && (
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
-                    gap: '2rem'
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
+                    gap: '2rem',
+                    minWidth: 0
                 }}>
                     {courses.map(course => (
                         <Link
@@ -105,7 +106,9 @@ export default function CourseExplorer() {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 transition: 'transform var(--transition-normal), box-shadow var(--transition-normal)',
-                                textDecoration: 'none'
+                                textDecoration: 'none',
+                                minWidth: 0,
+                                width: '100%'
                             }}
                             onMouseOver={e => {
                                 e.currentTarget.style.transform = 'translateY(-4px)';
@@ -118,7 +121,7 @@ export default function CourseExplorer() {
                                 e.currentTarget.style.borderColor = 'var(--glass-border)';
                             }}
                         >
-                            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start', justifyContent: 'space-between', gap: '0.75rem', minWidth: 0, marginBottom: '1.5rem' }}>
                                 <div style={{
                                     background: 'rgba(59, 130, 246, 0.1)',
                                     padding: '0.75rem',
@@ -132,17 +135,21 @@ export default function CourseExplorer() {
                                     padding: '0.25rem 0.75rem',
                                     borderRadius: 'var(--radius-full)',
                                     fontSize: '0.8rem',
-                                    color: 'var(--text-secondary)'
+                                    color: 'var(--text-secondary)',
+                                    maxWidth: '100%',
+                                    overflowWrap: 'anywhere'
                                 }}>
                                     {course.sems?.length || 0} Semesters
                                 </span>
                             </div>
 
-                            <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{course.courseName}</h3>
+                            <h3 style={{ minWidth: 0, marginBottom: '0.5rem', fontSize: '1.4rem', overflowWrap: 'anywhere' }}>{course.courseName}</h3>
 
                             <div style={{
                                 display: 'flex',
+                                flexWrap: 'wrap',
                                 gap: '1rem',
+                                minWidth: 0,
                                 marginTop: 'auto',
                                 paddingTop: '1.5rem',
                                 color: 'var(--text-tertiary)',
