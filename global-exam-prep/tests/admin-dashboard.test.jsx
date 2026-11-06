@@ -106,10 +106,14 @@ describe('standard admin', () => {
   it('replaces Home→Dashboard and Subscriptions→Courses, lands on Admin Dashboard', async () => {
     signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     await at('/dashboard');
-    await waitFor(() => expect(screen.getByRole('heading', { name: 'Feedback overview' })).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByRole('heading', { name: 'Most attempted subjects' })).toBeInTheDocument());
     expect(screen.queryByRole('heading', { name: 'Command' })).toBeNull();
-    expect(screen.getByText('Feedback overview')).toBeInTheDocument();
-    expect(screen.getByText('Spam users')).toBeInTheDocument();
+    expect(screen.getByText('Bookmarked feedback')).toBeInTheDocument();
+    expect(screen.getByText('Flagged students')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(state.calls.some((call) => call.fn === 'admin_get_dashboard_subject_activity')).toBe(true);
+      expect(state.calls.some((call) => call.fn === 'admin_get_dashboard_moderation_preview')).toBe(true);
+    });
     expect(screen.queryByText('Leaderboard & ranking')).toBeNull();
     expect(screen.queryByText('Edit subject / question')).toBeNull();
     expect(screen.queryByText('Syllabus files')).toBeNull();
@@ -130,7 +134,7 @@ describe('standard admin', () => {
   it('has no Home page — / redirects to the Admin Dashboard', async () => {
     signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     await at('/');
-    await waitFor(() => expect(screen.getByRole('heading', { name: 'Feedback overview' })).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByRole('heading', { name: 'Most attempted subjects' })).toBeInTheDocument());
     expect(screen.queryByText('LANDING')).toBeNull();
   });
 
@@ -154,9 +158,9 @@ describe('super admin', () => {
     expect(screen.queryByText('Edit subject / question')).toBeNull();
     expect(screen.queryByText('Leaderboard & ranking')).toBeNull();
     expect(screen.queryByText('Syllabus files')).toBeNull();
-    const staffPanel = document.querySelector('.admin-card--staff');
+    const staffPanel = document.querySelector('.admin-dashboard-staff');
     expect(staffPanel).toBeTruthy();
-    expect(document.querySelector('.admin-dash').firstElementChild).toBe(staffPanel);
+    expect(document.querySelector('.admin-dash').firstElementChild).not.toBe(staffPanel);
     expect(screen.getByText('Add Admin')).toBeInTheDocument();
     expect(screen.getByText('Remove Admin')).toBeInTheDocument();
     expect(screen.getByText('Add Super Admin')).toBeInTheDocument();
@@ -173,8 +177,8 @@ describe('super admin', () => {
     fireEvent.click(screen.getByText('Add Admin'));
     fireEvent.change(screen.getByLabelText(/Full name/i), { target: { value: 'New Person' } });
     fireEvent.change(screen.getByLabelText(/^Email$/i), { target: { value: 'n@x.com' } });
-    fireEvent.click(screen.getByRole('button', { name: /Confirm \(preview\)/i }));
-    await waitFor(() => expect(screen.getByRole('status').textContent).toMatch(/Staff added|account yet|not applied|Super Admin/i));
+    fireEvent.click(screen.getByRole('button', { name: /^Confirm$/i }));
+    await waitFor(() => expect(screen.getByRole('status').textContent).toMatch(/Admin access added|account yet|not applied|Super Admin/i));
     expect(state.calls.some((c) => c.fn === 'manage_admin_staff' || c.name === 'rpc:manage_admin_staff')).toBe(true);
     expect(state.calls.some((c) => c.table === 'admins' && c.op !== 'select')).toBe(false);
   });

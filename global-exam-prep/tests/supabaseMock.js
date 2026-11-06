@@ -44,6 +44,10 @@ export const state = {
   feedbackRows: [],
   spamStudents: [],
   feedbackActionEvents: [],
+  dashboardOverview: null,
+  dashboardSubjects: [],
+  dashboardModeration: null,
+  dashboardStaff: null,
 
   // What the page load arrived with, in the shape src/supabase.js produces. Tests set
   // this instead of rewriting window.location, because in the real app the code is
@@ -79,6 +83,10 @@ export function resetSupabaseStub() {
   state.feedbackRows = [];
   state.spamStudents = [];
   state.feedbackActionEvents = [];
+  state.dashboardOverview = null;
+  state.dashboardSubjects = [];
+  state.dashboardModeration = null;
+  state.dashboardStaff = null;
   state.authCallback = null;
   state.exchangeError = null;
   state.exchangeDelayMs = 0;
@@ -277,6 +285,50 @@ export const client = {
         error: null,
       };
     }
+    if (fn === 'admin_get_dashboard_overview') {
+      const mine = ownAdminRow();
+      if (!mine) return { data: null, error: { code: '42501', message: 'not_authorized' } };
+      const fallback = {
+        students: 0,
+        attemptsLast7Days: 0,
+        pendingFeedback: state.feedbackRows.filter((row) => !row.isSeen).length,
+        flaggedStudents: state.spamStudents.length,
+        bookmarkedFeedback: state.feedbackRows.filter((row) => row.isBookmark).length,
+      };
+      return { data: state.dashboardOverview || fallback, error: null };
+    }
+
+    if (fn === 'admin_get_dashboard_subject_activity') {
+      const mine = ownAdminRow();
+      if (!mine) return { data: null, error: { code: '42501', message: 'not_authorized' } };
+      return { data: state.dashboardSubjects || [], error: null };
+    }
+
+    if (fn === 'admin_get_dashboard_moderation_preview') {
+      const mine = ownAdminRow();
+      if (!mine) return { data: null, error: { code: '42501', message: 'not_authorized' } };
+      const fallback = {
+        bookmarkedFeedback: state.feedbackRows.filter((row) => row.isBookmark).slice(0, 4),
+        flaggedStudents: state.spamStudents.slice(0, 4),
+      };
+      return { data: state.dashboardModeration || fallback, error: null };
+    }
+
+    if (fn === 'admin_get_dashboard_staff') {
+      const mine = ownAdminRow();
+      if (!mine || mine.is_super_admin !== true) {
+        return { data: null, error: { code: '42501', message: 'not_authorized' } };
+      }
+      const fallback = [{
+        adminId: mine.admin_id,
+        name: mine.full_name,
+        email: mine.email,
+        isSuperAdmin: mine.is_super_admin === true,
+        createdAt: mine.created_at,
+      }];
+      return { data: state.dashboardStaff || fallback, error: null };
+    }
+
     if ([
       'admin_get_feedback_dashboard',
       'admin_update_feedback_flag',
