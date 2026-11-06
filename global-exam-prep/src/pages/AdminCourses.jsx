@@ -49,7 +49,6 @@ function CatalogChoice({ icon: Icon, title, subtitle, meta, onClick, testId }) {
             type="button"
             className="lb-choice"
             onClick={onClick}
-            aria-pressed="false"
             data-testid={testId}
         >
             <span className="lb-choice__icon">

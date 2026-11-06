@@ -45,7 +45,7 @@ Use the original dark glass material from the pre-redesign interface: a charcoal
 
 ## Scope boundaries
 
-This design contract applies to the student homepage, academic domain cards, course explorer, semester/subject selection, exam generation and difficulty selection, Test Room lobby, and active exam/Test Room question navigation. Dashboards and admin surfaces remain outside this change.
+This base design contract applies to the student homepage, academic domain cards, course explorer, semester/subject selection, exam generation and difficulty selection, Test Room lobby, and active exam/Test Room question navigation. Admin dashboards and other admin surfaces follow their own existing visual systems; the scoped admin catalog treatment is defined separately below.
 
 
 ## Admin course catalog locator
