@@ -659,3 +659,23 @@
     outline: 2px solid #a78bfa;
     outline-offset: 3px;
 }
+
+/* The student homepage starts directly below the navigation.
+   Match the top chrome to the page canvas so no separate color strip or
+   divider line appears above the hero; other routes keep their own shell. */
+body:has(.pm-home-refresh) {
+    background-color: #0f1115;
+    background-image: none;
+}
+
+body:has(.pm-home-refresh) .pm-nav {
+    background: #0f1115 !important;
+    border-bottom-color: transparent !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+
+body:has(.pm-home-refresh) .pm-main {
+    padding-top: 0 !important;
+}
+
