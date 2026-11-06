@@ -257,7 +257,8 @@ describe('admin subject and question locator — Phase 1', () => {
         await screen.findByRole('heading', { name: /Add a subject to B.Tech - Computer Engineering/ });
         fireEvent.click(screen.getByRole('tab', { name: 'Remove subject' }));
         await waitFor(() => expect(screen.getByTestId('admin-course-location')).toHaveTextContent('mode=remove'));
-        fireEvent.change(await screen.findByRole('combobox', { name: /Choose subject to remove/ }), { target: { value: '103' } });
+        fireEvent.click(await screen.findByRole('combobox', { name: /Choose subject to remove/ }));
+        fireEvent.click(await screen.findByRole('option', { name: /Computer Programming · 103/ }));
         await waitFor(() => expect(screen.getByTestId('admin-course-location')).toHaveTextContent('subjectId=103'));
 
         const savedLocation = screen.getByTestId('admin-course-location').textContent;
