@@ -145,10 +145,12 @@ export default function SubjectDetails() {
     if (error || !currentCourse) {
         return (
             <main className="lb catalog-flow" data-testid="catalog-error">
-                <div className="lb-empty-state">
-                    <span className="lb-empty-state__icon"><BookOpen size={21} /></span>
-                    <h3>{error && error !== 'Course not found.' ? 'Could not load course' : 'Course not found'}</h3>
-                    {error && error !== 'Course not found.' && <p>{error}</p>}
+                <div className="lb-alert" role="alert">
+                    <AlertCircle size={19} />
+                    <div>
+                        <strong>{error && error !== 'Course not found.' ? 'Could not load course' : 'Course not found'}</strong>
+                        {error && error !== 'Course not found.' && <p>{error}</p>}
+                    </div>
                 </div>
             </main>
         );
