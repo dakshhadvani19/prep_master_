@@ -158,7 +158,6 @@ export default function AdminDashboard() {
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
                 <div className="admin-dash__id">
-                    <div className="admin-dash__kicker">Admin control center</div>
                     <h1 className="admin-dash__title">Command</h1>
                     <p className="admin-dash__sub">{displayName}</p>
                     <div className="admin-pills" aria-label="Feedback counts">
@@ -318,7 +317,7 @@ export default function AdminDashboard() {
                             )}
                             <div className="admin-modal__row">
                                 <button type="button" className="admin-btn" onClick={closeModal}>Cancel</button>
-                                <button type="submit" className="admin-btn admin-btn--gold" disabled={staffBusy}>Confirm (preview)</button>
+                                <button type="submit" className={'admin-btn admin-btn--gold' + (modal === 'remove' ? ' admin-btn--danger' : '')} disabled={staffBusy}>Confirm (preview)</button>
                             </div>
                         </motion.form>
                     </motion.div>

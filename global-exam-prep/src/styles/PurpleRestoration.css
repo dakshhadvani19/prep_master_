@@ -735,3 +735,11 @@
     border-color: #0f9f6b !important;
     box-shadow: none !important;
 }
+
+
+/* Application action controls use flat surfaces; state is communicated by color and border. */
+#root .pm-main button { box-shadow: none !important; }
+#root .pm-main button:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 3px;
+}

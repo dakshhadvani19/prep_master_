@@ -434,7 +434,6 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
         <section className="ac-uploads" aria-labelledby="ac-uploads-title">
             <div className="ac-uploads__heading">
                 <div>
-                    <span className="ac-eyebrow">PHASE 2 + 3 · PRIVATE INTAKE & QUESTION BANK REVIEW</span>
                     <h3 id="ac-uploads-title">Syllabus &amp; question-bank files</h3>
                     <p>Validate source files, correct extracted questions, then publish an approved subject-linked question bank.</p>
                 </div>
@@ -645,7 +644,6 @@ export default function AdminCourseUploads({ subject, examTypes = [] }) {
                 <section className="ac-question-review" aria-labelledby="ac-question-review-title">
                     <div className="ac-question-review__header">
                         <div>
-                            <span className="ac-eyebrow">PHASE 3 · PARSE / NORMALIZE / QA</span>
                             <h4 id="ac-question-review-title">{review.bank.source_file_name}</h4>
                             <p>Subject {review.bank.subject_id} · Course {review.bank.course_id} · Semester {review.bank.semester} · {String(review.bank.exam_type).replace(/-/g, ' ').toUpperCase()}</p>
                         </div>

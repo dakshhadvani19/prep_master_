@@ -33,15 +33,6 @@
     margin-bottom: 1.75rem;
 }
 
-.admin-dash__kicker {
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-}
-
 .admin-dash__title {
     font-size: clamp(2.4rem, 6vw, 4rem);
     line-height: 0.9;
@@ -783,4 +774,24 @@
 .admin-dash button:focus-visible {
     outline: 2px solid #a78bfa;
     outline-offset: 3px;
+}
+
+
+.admin-staff__btn--remove {
+    border-color: rgba(239,68,68,.35);
+    background: rgba(239,68,68,.07);
+    color: #ffb4b4;
+}
+.admin-staff__btn--remove:hover {
+    border-color: rgba(239,68,68,.52);
+    background: rgba(239,68,68,.12);
+}
+.admin-btn--danger {
+    border-color: rgba(239,68,68,.5) !important;
+    background: #dc4444 !important;
+    color: #fff !important;
+}
+.admin-btn--danger:hover:not(:disabled) {
+    border-color: #ef6262 !important;
+    background: #c93636 !important;
 }

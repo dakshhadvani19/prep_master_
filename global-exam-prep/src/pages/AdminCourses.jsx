@@ -41,11 +41,10 @@ function adminCoursesSearch({ department, courseId, semester, step, mode, subjec
     return query ? `?${query}` : '';
 }
 
-function StageHeading({ eyebrow, title, description, count }) {
+function StageHeading({ title, description, count }) {
     return (
         <div className="ac-stage-heading">
             <div>
-                <span className="ac-eyebrow">{eyebrow}</span>
                 <h2>{title}</h2>
                 <p>{description}</p>
             </div>
@@ -368,7 +367,6 @@ export default function AdminCourses() {
         <main className="ac">
             <header className="ac-hero">
                 <div className="ac-hero__copy">
-                    <div className="ac-kicker">ADMIN · COURSE CATALOG</div>
                     <h1>Edit subjects</h1>
                     <p>Add a subject with its syllabus or remove a subject from the selected semester.</p>
                 </div>
@@ -405,7 +403,7 @@ export default function AdminCourses() {
             <section className="ac-workspace" aria-live="polite">
                         {step === 'department' && (
                         <div className="ac-stage animate-fade-in">
-                            <StageHeading eyebrow="STEP 1 · ACADEMIC AREA" title="Choose a department" description="All six catalog departments are available to administrators." />
+                            <StageHeading title="Choose a department" description="All six catalog departments are available to administrators." />
                             <div className="ac-department-grid">
                                 {CATALOG_DOMAINS.map(item => {
                                     const Icon = DOMAIN_ICONS[item.id] || GraduationCap;
@@ -424,7 +422,7 @@ export default function AdminCourses() {
 
                     {step === 'course' && (
                         <div className="ac-stage animate-fade-in">
-                            <StageHeading eyebrow="STEP 2 · COURSE" title={domain?.title || 'Select a course'} description="Courses are loaded from the live catalog. Select a course to see its semesters." count={filteredCourses.length} />
+                            <StageHeading title={domain?.title || 'Select a course'} description="Courses are loaded from the live catalog. Select a course to see its semesters." count={filteredCourses.length} />
                             <div className="ac-toolbar">
                                 <label className="ac-search"><Search size={17} /><input value={courseSearch} onChange={event => setCourseSearch(event.target.value)} placeholder="Search courses…" aria-label="Search courses" />
                                     {courseSearch && <button type="button" aria-label="Clear course search" onClick={() => setCourseSearch('')}><X size={15} /></button>}
@@ -448,7 +446,7 @@ export default function AdminCourses() {
 
                     {step === 'semester' && (
                         <div className="ac-stage animate-fade-in">
-                            <StageHeading eyebrow="STEP 3 · SEMESTER" title={course?.courseName || 'Select a semester'} description="Semester options come directly from the selected course record." />
+                            <StageHeading title={course?.courseName || 'Select a semester'} description="Semester options come directly from the selected course record." />
                             <div className="ac-toolbar"><button type="button" className="ac-btn ac-btn--secondary" onClick={() => goToStep('course')}><ArrowLeft size={15} /> Courses</button></div>
                             {subjectsLoading ? <div className="ac-loading" role="status"><span className="ac-spinner" /> Loading course and semester data…</div>
                                 : subjectsError ? <ErrorState message={subjectsError} onRetry={retryCurrentStage} />
@@ -468,7 +466,6 @@ export default function AdminCourses() {
                     {step === 'subject' && (
                         <div className="ac-stage animate-fade-in">
                             <StageHeading
-                                eyebrow="STEP 4 · SUBJECT MANAGEMENT"
                                 title={semester === 0 ? 'Edit semester 0 subjects' : 'Edit semester ' + semester + ' subjects'}
                                 description={(course?.courseName || 'Selected course') + ' · Add a new subject with its syllabus or remove an eligible subject.'}
                                 count={semesterSubjects.length}
@@ -493,10 +490,6 @@ export default function AdminCourses() {
                     )}
                 </section>
 
-            <footer className="ac-footer">
-                <span><span className="ac-footer__dot" /> Live catalog · Subject management</span>
-                <span>Department → Course → Semester → Add / Remove Subject</span>
-            </footer>
         </main>
     );
 }

@@ -106,7 +106,7 @@ describe('standard admin', () => {
   it('replaces Home→Dashboard and Subscriptions→Courses, lands on Admin Dashboard', async () => {
     signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     await at('/dashboard');
-    await waitFor(() => expect(screen.getByText('Admin control center')).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByRole('heading', { name: 'Command' })).toBeInTheDocument());
     expect(screen.getByText('Standard Admin')).toBeInTheDocument();
     expect(screen.getByText('Feedback overview')).toBeInTheDocument();
     expect(screen.getByText('Spam users')).toBeInTheDocument();
@@ -128,7 +128,7 @@ describe('standard admin', () => {
   it('has no Home page — / redirects to the Admin Dashboard', async () => {
     signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     await at('/');
-    await waitFor(() => expect(screen.getByText('Admin control center')).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByRole('heading', { name: 'Command' })).toBeInTheDocument());
     expect(screen.queryByText('LANDING')).toBeNull();
   });
 

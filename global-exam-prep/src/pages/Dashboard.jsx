@@ -256,7 +256,6 @@ export default function Dashboard() {
             <section className="sd-performance" aria-labelledby="sd-performance-title">
                 <div className="sd-performance__header">
                     <div>
-                        <span className="sd-performance__eyebrow">YOUR PROGRESS</span>
                         <h2 id="sd-performance-title">Performance overview</h2>
                         <p>Calculated only from your saved exam and Test Room attempts.</p>
                     </div>

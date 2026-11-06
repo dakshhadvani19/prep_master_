@@ -1284,7 +1284,7 @@ export default function TestRoomPage() {
                 <div className="glass-panel" style={{ padding: 'clamp(1.2rem,3vw,2rem)', marginBottom: '1.2rem' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
                         <div>
-                            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--success)', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', marginBottom: '0.65rem' }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: 'currentColor', boxShadow: '0 0 10px currentColor' }} /> Live waiting room</div>
+                            <div style={{ display: 'inline-flex', alignItems: 'center', color: 'var(--success)', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', marginBottom: '0.65rem' }}>Live waiting room</div>
                             <h1 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>{roomMeta?.subjectName || 'Test Room'}</h1>
                             <p style={{ color: 'var(--text-secondary)' }}>{roomMeta?.examTitle || 'MCQ exam'} · <span style={{ textTransform: 'capitalize' }}>{roomMeta?.difficulty || 'medium'}</span> · {roomMeta?.questionCount || canonicalQuestions.length || 30} questions</p>
                         </div>

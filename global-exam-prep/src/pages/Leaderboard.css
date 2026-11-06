@@ -21,7 +21,7 @@
 
 .lb button:focus-visible,
 .lb input:focus-visible {
-    outline: 2px solid var(--lb-gold);
+    outline: 2px solid var(--accent-primary);
     outline-offset: 3px;
 }
 
@@ -35,23 +35,7 @@
 
 .lb-hero__copy { min-width: 0; }
 
-.lb-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 0.48rem;
-    margin-bottom: 0.5rem;
-    color: var(--lb-muted);
-    font-size: 0.68rem;
-    font-weight: 750;
-    letter-spacing: 0.13em;
-}
 
-.lb-eyebrow span {
-    width: 0.45rem;
-    height: 0.45rem;
-    border-radius: 50%;
-    background: var(--lb-gold);
-}
 
 .lb-hero h1 {
     margin: 0;
@@ -262,13 +246,6 @@
     margin-bottom: 1.1rem;
 }
 
-.lb-stage-kicker {
-    margin-bottom: 0.25rem;
-    color: var(--lb-violet);
-    font-size: 0.66rem;
-    font-weight: 800;
-    letter-spacing: 0.11em;
-}
 
 .lb-browser__head h2 {
     margin: 0;
@@ -562,14 +539,6 @@
 
 .lb-selection__copy { min-width: 0; flex: 1; }
 
-.lb-selection__eyebrow {
-    display: block;
-    margin-bottom: 0.23rem;
-    color: var(--text-tertiary);
-    font-size: 0.63rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-}
 
 .lb-selection h3 { margin: 0; font-size: 0.92rem; font-weight: 750; }
 .lb-selection p { margin: 0.3rem 0 0; color: var(--text-secondary); font-size: 0.79rem; line-height: 1.55; }
@@ -606,16 +575,7 @@
     line-height: 1.5;
 }
 
-.lb-footer > div { display: flex; align-items: center; gap: 0.48rem; }
 
-.lb-footer__dot {
-    display: inline-block;
-    width: 0.42rem;
-    height: 0.42rem;
-    flex: 0 0 auto;
-    border-radius: 50%;
-    background: var(--lb-gold);
-}
 
 .lb-footer button {
     display: inline-flex;

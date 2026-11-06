@@ -486,7 +486,6 @@ export default function Leaderboard() {
         <main className="lb" data-testid="leaderboard-filter-page">
             <header className="lb-hero">
                 <div className="lb-hero__copy">
-                    <div className="lb-eyebrow"><span /> LEARN · COMPETE · IMPROVE</div>
                     <h1>Leaderboards</h1>
                     <p>Explore academic boards through your department, course, semester, and subject.</p>
                 </div>
@@ -545,7 +544,6 @@ export default function Leaderboard() {
             <section className="lb-browser" aria-labelledby="lb-stage-heading">
                 <div className="lb-browser__head">
                     <div>
-                        <div className="lb-stage-kicker">STEP {stepIndex + 1} OF {STEPS.length}</div>
                         <h2 id="lb-stage-heading">
                             {step === 'department' ? 'Choose a department'
                                 : step === 'course' ? 'Select your course'
@@ -771,7 +769,6 @@ export default function Leaderboard() {
                                     {selectedIsUnlocked ? <CheckCircle2 size={21} /> : <LockKeyhole size={21} />}
                                 </span>
                                 <div className="lb-selection__copy">
-                                    <span className="lb-selection__eyebrow">{selectedIsUnlocked ? 'SUBJECT SELECTED' : 'BOARD LOCKED'}</span>
                                     <h3>{selectedSubject.subjectName}</h3>
                                     <p>{selectedIsUnlocked
                                         ? isAdmin
@@ -798,7 +795,7 @@ export default function Leaderboard() {
             </section>
 
             <footer className="lb-footer">
-                <div><span className="lb-footer__dot" /> Rankings are generated only from finalized, verified results; no mock scores are displayed.</div>
+                <div>Rankings are generated only from finalized, verified results; no mock scores are displayed.</div>
                 <button type="button" onClick={resetPath}><RotateCcw size={15} /> Start over</button>
             </footer>
         </main>

@@ -209,7 +209,6 @@ export default function AdminFeedbackInbox() {
                 transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
             >
                 <div>
-                    <span className="admin-feedback-inbox__eyebrow">ADMINISTRATION</span>
                     <h1>Student feedback</h1>
                     <p>Review student suggestions, reports, and content issues.</p>
                 </div>

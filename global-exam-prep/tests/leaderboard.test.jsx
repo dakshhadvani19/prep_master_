@@ -147,7 +147,7 @@ describe('leaderboard filtering access', () => {
     expect(screen.queryByTestId('lb-top100')).toBeNull();
 
     expect(programming).toBeDisabled();
-    expect(screen.getByTestId('lb-selected-subject').textContent).not.toMatch(/BOARD LOCKED/i);
+    expect(screen.getByTestId('lb-selected-subject').textContent).not.toMatch(/\bLocked\b/i);
     expect(screen.queryByText(/Preview ranks/i)).toBeNull();
   });
 
@@ -243,7 +243,7 @@ describe('leaderboard filtering access', () => {
     expect(new URLSearchParams(window.location.search).get('semester')).toBe('1');
 
     fireEvent.click(screen.getByTestId('lb-subject-1001131010601'));
-    await waitFor(() => expect(screen.getByTestId('lb-selected-subject')).toHaveTextContent(/SUBJECT SELECTED/i));
+    await waitFor(() => expect(screen.getByTestId('lb-selected-subject')).toHaveTextContent(/\bUnlocked\b/i));
     fireEvent.click(screen.getByTestId('lb-step-semester'));
     await screen.findByRole('heading', { name: 'Choose a semester' });
     expect(new URLSearchParams(window.location.search).get('step')).toBe('semester');
@@ -254,7 +254,7 @@ describe('leaderboard filtering access', () => {
     await waitFor(() => expect(screen.getByTestId('lb-subject-1001131010601')).toBeInTheDocument());
     expect(new URLSearchParams(window.location.search).get('step')).toBeNull();
     fireEvent.click(screen.getByTestId('lb-subject-1001131010601'));
-    await waitFor(() => expect(screen.getByTestId('lb-selected-subject')).toHaveTextContent(/SUBJECT SELECTED/i));
+    await waitFor(() => expect(screen.getByTestId('lb-selected-subject')).toHaveTextContent(/\bUnlocked\b/i));
 
     const savedSearch = window.location.search;
     expect(new URLSearchParams(savedSearch).get('subjectId')).toBe('1001131010601');
@@ -266,7 +266,7 @@ describe('leaderboard filtering access', () => {
     await at(`/leaderboards${savedSearch}`);
 
     const restoredSelection = await screen.findByTestId('lb-selected-subject');
-    expect(restoredSelection).toHaveTextContent(/BOARD LOCKED/i);
+    expect(restoredSelection).toHaveTextContent(/\bLocked\b/i);
     expect(screen.getByTestId('lb-subject-1001131010601')).toBeDisabled();
     expect(screen.queryByTestId('lb-top100')).toBeNull();
     expect(new URLSearchParams(window.location.search).get('subjectId')).toBe('1001131010601');

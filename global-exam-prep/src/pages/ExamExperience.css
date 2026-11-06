@@ -778,3 +778,32 @@
     outline: 2px solid #ffd08a;
     outline-offset: 3px;
 }
+
+
+/* Remaining exam controls keep their state colors but avoid colored outer glow. */
+.pm-exam-dropzone:hover,
+.pm-exam-dropzone:focus-within {
+    background: rgba(139,92,246,.10) !important;
+    border-color: rgba(167,139,250,.72) !important;
+    box-shadow: none !important;
+}
+.pm-exam-question-pill,
+.pm-room-question-pill,
+.pm-exam-question-pill:hover,
+.pm-room-question-pill:hover,
+.pm-exam-question-pill[aria-current="step"],
+.pm-room-question-pill[aria-current="step"],
+.pm-exam-question-active-pill,
+.pm-room-question-active-pill,
+.pm-exam-option,
+.pm-room-answer-option,
+.pm-exam-option[data-selected="true"],
+.pm-room-answer-option[data-selected="true"] {
+    box-shadow: none !important;
+}
+.pm-exam-question-pill:hover,
+.pm-room-question-pill:hover,
+.pm-exam-option:hover,
+.pm-room-answer-option:hover {
+    transform: none !important;
+}
