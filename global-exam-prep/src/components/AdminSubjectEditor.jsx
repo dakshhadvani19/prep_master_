@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useRef, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { AlertCircle, BookOpen, Check, CheckCircle2, ChevronDown, FilePlus2, Trash2, UploadCloud } from 'lucide-react';
 import { supabase } from '../supabase.js';
 
@@ -8,6 +8,18 @@ const MIME_BY_EXTENSION = {
     pdf: 'application/pdf',
     docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 };
+
+function findScrollableAncestor(element) {
+    let ancestor = element?.parentElement;
+    while (ancestor && ancestor !== document.body) {
+        const overflowY = window.getComputedStyle(ancestor).overflowY;
+        if (/(auto|scroll|overlay)/.test(overflowY) && ancestor.scrollHeight > ancestor.clientHeight + 1) {
+            return ancestor;
+        }
+        ancestor = ancestor.parentElement;
+    }
+    return null;
+}
 
 async function getSession() {
     if (!supabase) throw new Error('Supabase is not configured on this deployment.');
@@ -49,6 +61,7 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
     const [error, setError] = useState('');
     const [notice, setNotice] = useState('');
     const [removeMenuOpen, setRemoveMenuOpen] = useState(false);
+    const [removeMenuMaxHeight, setRemoveMenuMaxHeight] = useState(256);
     const removeSelectId = useId();
     const fileInputRef = useRef(null);
     const removeSelectRef = useRef(null);
@@ -83,6 +96,54 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
             document.removeEventListener('keydown', closeOnEscape);
         };
     }, [removeMenuOpen]);
+
+    useLayoutEffect(() => {
+        if (!removeMenuOpen) return undefined;
+
+        const trigger = removeSelectRef.current?.querySelector('[role="combobox"]');
+        if (!trigger) return undefined;
+
+        let autoScrollStarted = false;
+        let frameId = 0;
+
+        function updateMenuBounds() {
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            const triggerRect = trigger.getBoundingClientRect();
+            const preferredHeight = Math.min(256, Math.max(44, sortedSubjects.length * 42 + 8));
+            const availableBelow = Math.max(0, viewportHeight - triggerRect.bottom - 12);
+            const minimumVisibleHeight = Math.min(preferredHeight, 160);
+
+            // Move the field upward only when the menu would otherwise be cramped.
+            // The list stays below the trigger; its own scroll area handles long catalogs.
+            if (!autoScrollStarted && availableBelow < minimumVisibleHeight && triggerRect.top > 20) {
+                const scrollAmount = Math.min(minimumVisibleHeight - availableBelow, triggerRect.top - 16);
+                if (scrollAmount > 8) {
+                    autoScrollStarted = true;
+                    const scrollableAncestor = findScrollableAncestor(trigger);
+                    if (scrollableAncestor) {
+                        scrollableAncestor.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+                    } else if (typeof window.scrollBy === 'function') {
+                        window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+                    }
+                }
+            }
+
+            const currentRect = trigger.getBoundingClientRect();
+            const remainingSpace = Math.max(0, viewportHeight - currentRect.bottom - 12);
+            const nextMaxHeight = Math.min(preferredHeight, remainingSpace);
+            setRemoveMenuMaxHeight(current => current === nextMaxHeight ? current : nextMaxHeight);
+        }
+
+        frameId = requestAnimationFrame(updateMenuBounds);
+        window.addEventListener('scroll', updateMenuBounds, true);
+        window.addEventListener('resize', updateMenuBounds);
+
+        return () => {
+            cancelAnimationFrame(frameId);
+            window.removeEventListener('scroll', updateMenuBounds, true);
+            window.removeEventListener('resize', updateMenuBounds);
+        };
+    }, [removeMenuOpen, sortedSubjects.length]);
 
     function selectSubjectForRemoval(nextSubjectId) {
         setRemoveId(nextSubjectId);
@@ -296,6 +357,7 @@ export default function AdminSubjectEditor({ course, semester, subjects = [], on
                                             aria-labelledby={removeSelectId + '-label'}
                                             data-placement="bottom"
                                             ref={removeMenuRef}
+                                            style={{ maxHeight: `${removeMenuMaxHeight}px` }}
                                         >
                                             {sortedSubjects.map(item => {
                                                 const selected = String(item.subjectId) === String(removeId);
