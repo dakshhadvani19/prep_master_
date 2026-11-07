@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getExamTypesForSubject, getSubjectExamInfo, normalizeDepartmentalFlag } from '../utils/subjectExamPolicy';
 import { CATALOG_CACHE_TTL_MS, fetchCourseAndSubjects } from '../utils/catalogApi';
@@ -8,7 +8,11 @@ import {
 } from 'lucide-react';
 import './LandingPage.css';
 import { useAuth } from '../context/AuthContext';
-import { navigateBackOrHome } from '../utils/navigation';
+import {
+    navigateBackOrHome,
+    readSubjectSelection,
+    mergeSubjectSelectionState,
+} from '../utils/navigation';
 
 const DIFFICULTY_LEVELS = [
     { id: 'easy', label: 'Easy', icon: Shield, color: '#10b981', desc: 'Fundamental concepts' },
@@ -21,12 +25,27 @@ export default function SubjectDetails() {
     const navigate = useNavigate();
     const { isAdmin = false } = useAuth() || {};
     const location = useLocation();
+    const locationStateRef = useRef(location.state);
+    locationStateRef.current = location.state;
 
-    const [selectedSem, setSelectedSem] = useState(null);
+    const initialSelection = readSubjectSelection(location.state, courseId);
+    const [selectedSem, setSelectedSem] = useState(initialSelection?.semester ?? null);
+    const [selectedSubjectId, setSelectedSubjectId] = useState(initialSelection?.subjectId ?? null);
     const [selectedSubject, setSelectedSubject] = useState(null);
-    const [selectedExamType, setSelectedExamType] = useState(null);
-    const [selectedMode, setSelectedMode] = useState(null); // 'auto' | 'upload'
-    const [selectedDifficulty, setSelectedDifficulty] = useState('medium');
+    const [selectedExamType, setSelectedExamType] = useState(initialSelection?.examType ?? null);
+    const [selectedMode, setSelectedMode] = useState(initialSelection?.mode ?? null); // 'auto' | 'upload'
+    const [selectedDifficulty, setSelectedDifficulty] = useState(initialSelection?.difficulty ?? 'medium');
+    const selectedDifficultyRef = useRef(selectedDifficulty);
+    selectedDifficultyRef.current = selectedDifficulty;
+
+    const persistSelection = useCallback((selection) => {
+        const state = mergeSubjectSelectionState(locationStateRef.current, courseId, selection);
+        const hash = selection.subjectId ? '#' + encodeURIComponent(String(selection.subjectId)) : '';
+        navigate(location.pathname + location.search + hash, {
+            replace: true,
+            state,
+        });
+    }, [courseId, location.pathname, location.search, navigate]);
 
     const [currentCourse, setCurrentCourse] = useState(null);
     const [subjects, setSubjects] = useState([]);
@@ -40,10 +59,13 @@ export default function SubjectDetails() {
         setError(null);
         setCurrentCourse(null);
         setSubjects([]);
-        setSelectedSem(null);
+        const savedSelection = readSubjectSelection(locationStateRef.current, courseId);
+        setSelectedSem(savedSelection?.semester ?? null);
+        setSelectedSubjectId(savedSelection?.subjectId ?? null);
         setSelectedSubject(null);
-        setSelectedExamType(null);
-        setSelectedMode(null);
+        setSelectedExamType(savedSelection?.examType ?? null);
+        setSelectedMode(savedSelection?.mode ?? null);
+        setSelectedDifficulty(savedSelection?.difficulty ?? 'medium');
 
         async function loadCatalog({ initial = false } = {}) {
             if (refreshInFlight || cancelled) return;
@@ -107,18 +129,66 @@ export default function SubjectDetails() {
     }, [subjects, selectedSem]);
 
     useEffect(() => {
-        if (!location.hash || !subjects.length) return;
-        const subjectId = location.hash.replace('#', '');
-        const subject = subjects.find(s => String(s.id) === String(subjectId));
+        if (!selectedSubjectId || !subjects.length) return;
+        const subject = subjects.find((item) => String(item.id) === String(selectedSubjectId));
+
         if (subject) {
+            setSelectedSubject((current) => (current?.id === subject.id ? current : subject));
+            if (selectedSem !== subject.sem) {
+                setSelectedSem(subject.sem);
+                persistSelection({
+                    semester: subject.sem,
+                    subjectId: String(subject.id),
+                    examType: selectedExamType,
+                    mode: selectedMode,
+                    difficulty: selectedDifficulty,
+                });
+            }
+            return;
+        }
+
+        // A saved subject may have been removed or deactivated since the
+        // previous visit. Keep the valid semester, but discard invalid steps.
+        setSelectedSubjectId(null);
+        setSelectedSubject(null);
+        setSelectedExamType(null);
+        setSelectedMode(null);
+        persistSelection({
+            semester: selectedSem,
+            subjectId: null,
+            examType: null,
+            mode: null,
+            difficulty: selectedDifficulty,
+        });
+    }, [subjects, selectedSubjectId, selectedSem, selectedExamType, selectedMode, selectedDifficulty, persistSelection]);
+
+    useEffect(() => {
+        if (!location.hash || !subjects.length) return;
+        const subjectIdFromHash = location.hash.slice(1);
+        const savedSelection = readSubjectSelection(locationStateRef.current, courseId);
+        // A saved selection is more complete than the hash. In particular, do
+        // not clear the selected exam type/mode when returning from instructions.
+        if (savedSelection?.subjectId === String(subjectIdFromHash)) return;
+
+        const subject = subjects.find((item) => String(item.id) === String(subjectIdFromHash));
+        if (subject) {
+            const selection = {
+                semester: subject.sem,
+                subjectId: String(subject.id),
+                examType: null,
+                mode: null,
+                difficulty: selectedDifficultyRef.current,
+            };
             setSelectedSem(subject.sem);
-            setTimeout(() => {
-                setSelectedSubject(subject);
-            }, 150);
+            setSelectedSubjectId(String(subject.id));
+            setSelectedSubject(subject);
+            setSelectedExamType(null);
+            setSelectedMode(null);
+            persistSelection(selection);
         } else {
             window.scrollTo(0, 0);
         }
-    }, [location.hash, subjects]);
+    }, [location.hash, subjects, courseId, persistSelection]);
 
     if (loading) {
         return (
@@ -141,11 +211,33 @@ export default function SubjectDetails() {
         );
     }
 
+    const getReturnToSubject = () => {
+        const selection = readSubjectSelection(locationStateRef.current, courseId) || {
+            semester: selectedSem,
+            subjectId: selectedSubject?.id ? String(selectedSubject.id) : null,
+            examType: selectedExamType,
+            mode: selectedMode,
+            difficulty: selectedDifficulty,
+        };
+
+        return {
+            path: '/courses/' + courseId + '/subjects',
+            state: mergeSubjectSelectionState(null, courseId, selection),
+        };
+    };
+
     const handleStartExam = () => {
         if (!selectedSubject || !selectedExamType || !selectedMode || !selectedDifficulty) return;
         navigate(
             `/exams/${selectedSubject.id}/${selectedExamType}/${selectedDifficulty}`,
-            { state: { examMode: selectedMode, isDepartmentalSubject: selectedSubject.isDepartmentalSubject } }
+            {
+                state: {
+                    examMode: selectedMode,
+                    isDepartmentalSubject: selectedSubject.isDepartmentalSubject,
+                    courseId: String(courseId),
+                    returnTo: getReturnToSubject(),
+                },
+            }
         );
     };
 
@@ -166,28 +258,77 @@ export default function SubjectDetails() {
                     subjectName: selectedSubject.title,
                     examTitle: info?.title || selectedExamType,
                     difficulty: selectedDifficulty,
+                    returnTo: getReturnToSubject(),
                 },
             }
         );
     };
 
     const handleSemClick = (sem) => {
+        const selection = {
+            semester: sem,
+            subjectId: null,
+            examType: null,
+            mode: null,
+            difficulty: selectedDifficulty,
+        };
         setSelectedSem(sem);
+        setSelectedSubjectId(null);
         setSelectedSubject(null);
         setSelectedExamType(null);
         setSelectedMode(null);
+        persistSelection(selection);
     };
 
     const handleSubjectClick = (subject) => {
-        if (selectedSubject?.id === subject.id) {
-            setSelectedSubject(null);
-            setSelectedExamType(null);
-            setSelectedMode(null);
-        } else {
-            setSelectedSubject(subject);
-            setSelectedExamType(null);
-            setSelectedMode(null);
-        }
+        const isAlreadySelected = selectedSubject?.id === subject.id;
+        const selection = {
+            semester: selectedSem,
+            subjectId: isAlreadySelected ? null : String(subject.id),
+            examType: null,
+            mode: null,
+            difficulty: selectedDifficulty,
+        };
+
+        setSelectedSubject(isAlreadySelected ? null : subject);
+        setSelectedSubjectId(isAlreadySelected ? null : String(subject.id));
+        setSelectedExamType(null);
+        setSelectedMode(null);
+        persistSelection(selection);
+    };
+
+    const handleExamTypeClick = (examType) => {
+        setSelectedExamType(examType);
+        setSelectedMode(null);
+        persistSelection({
+            semester: selectedSem,
+            subjectId: selectedSubject?.id ? String(selectedSubject.id) : selectedSubjectId,
+            examType,
+            mode: null,
+            difficulty: selectedDifficulty,
+        });
+    };
+
+    const handleModeClick = (mode) => {
+        setSelectedMode(mode);
+        persistSelection({
+            semester: selectedSem,
+            subjectId: selectedSubject?.id ? String(selectedSubject.id) : selectedSubjectId,
+            examType: selectedExamType,
+            mode,
+            difficulty: selectedDifficulty,
+        });
+    };
+
+    const handleDifficultyClick = (difficulty) => {
+        setSelectedDifficulty(difficulty);
+        persistSelection({
+            semester: selectedSem,
+            subjectId: selectedSubject?.id ? String(selectedSubject.id) : selectedSubjectId,
+            examType: selectedExamType,
+            mode: selectedMode,
+            difficulty,
+        });
     };
 
     return (
@@ -274,6 +415,8 @@ export default function SubjectDetails() {
                             return (
                                 <div key={`${subject.id}-${idx}`} id={String(subject.id)}>
                                     <button
+                                        type="button"
+                                        aria-pressed={isOpen}
                                         onClick={() => handleSubjectClick(subject)}
                                         style={{
                                             width: '100%',
@@ -328,7 +471,9 @@ export default function SubjectDetails() {
                                                     return (
                                                         <button
                                                             key={examType}
-                                                            onClick={() => { setSelectedExamType(examType); setSelectedMode(null); }}
+                                                            type="button"
+                                                            aria-pressed={isSel}
+                                                            onClick={() => handleExamTypeClick(examType)}
                                                             style={{
                                                                 padding: '0.6rem 1.2rem',
                                                                 borderRadius: 'var(--radius-full)',
@@ -369,7 +514,9 @@ export default function SubjectDetails() {
                                                             return (
                                                                 <button
                                                                     key={mode.id}
-                                                                    onClick={() => setSelectedMode(mode.id)}
+                                                                    type="button"
+                                                                    aria-pressed={isSel}
+                                                                    onClick={() => handleModeClick(mode.id)}
                                                                     style={{
                                                                         flex: '1',
                                                                         minWidth: '200px',
@@ -408,7 +555,9 @@ export default function SubjectDetails() {
                                                                     return (
                                                                         <button
                                                                             key={level.id}
-                                                                            onClick={() => setSelectedDifficulty(level.id)}
+                                                                            type="button"
+                                                                            aria-pressed={isSel}
+                                                                            onClick={() => handleDifficultyClick(level.id)}
                                                                             style={{
                                                                                 flex: '1',
                                                                                 minWidth: '130px',
