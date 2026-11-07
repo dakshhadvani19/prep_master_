@@ -1,6 +1,6 @@
 # PrepMaster — Current Status
 
-_Last updated: 2026-11-04_
+_Last updated: 2026-11-07_
 
 ## 1. Repository and deployment
 
@@ -447,3 +447,13 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Kept the current blue/violet brand colors and removed the decorative kicker rule.
 - Preserved route navigation, scroll-to-contact behavior, appreciation state persistence, and reduced-motion handling.
 - Preview deployment created from commit ff451f7aa4f93815aaec00d23be19e71f4bd5ac4; build state was pending at the time of this update.
+
+
+## 16. Homepage Contact Us team cards (2026-11-07)
+
+- Updated the homepage Contact Us section to show four team members: Daksh Hadvani, Dev Kalola, Harsh Joshi, and Kashyap Ladani.
+- Removed portrait images and the per-card “The people behind PrepMaster” and passion/description copy. Cards use initials as a deliberate text identity treatment.
+- Kept the shared study label as Diploma in Computer Engineering for all four profiles.
+- Limited social actions to GitHub, LinkedIn, and email. Each card renders only links that have been supplied; no profile URLs are fabricated.
+- Added Harsh Joshi’s provided LinkedIn profile and email, and Kashyap Ladani’s provided email.
+- Added a homepage regression test for the four cards, removed photo/copy elements, available link types, and supplied contact details.

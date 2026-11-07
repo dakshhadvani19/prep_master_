@@ -301,6 +301,37 @@ describe('homepage', () => {
     expect(screen.queryByText('404')).toBeNull();
   }, 20000);
 
+  it('shows four text-led team cards and only the available GitHub, LinkedIn, and email links', async () => {
+    const { container } = await at('/');
+    await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
+
+    const contact = container.querySelector('#contact');
+    expect(contact).toBeTruthy();
+    const cards = [...contact.querySelectorAll('.pm-people-card')];
+    expect(cards).toHaveLength(4);
+    expect(contact.querySelectorAll('img, .pm-people-avatar, .pm-people-role, .pm-people-passion')).toHaveLength(0);
+
+    const names = cards.map((card) => card.querySelector('h3')?.textContent.trim());
+    expect(names).toEqual(['Daksh Hadvani', 'Dev Kalola', 'Harsh Joshi', 'Kashyap Ladani']);
+    expect([...contact.querySelectorAll('.pm-people-study')].map((node) => node.textContent.trim()))
+      .toEqual(Array(4).fill('Diploma in Computer Engineering'));
+
+    const allowedLabels = new Set(['GitHub', 'LinkedIn', 'Email']);
+    const renderedLabels = [...contact.querySelectorAll('.pm-people-links a span')]
+      .map((node) => node.textContent.trim());
+    expect(renderedLabels.length).toBeGreaterThan(0);
+    expect(renderedLabels.every((label) => allowedLabels.has(label))).toBe(true);
+    expect(contact.querySelectorAll('a[href*="instagram.com"]')).toHaveLength(0);
+
+    const harsh = cards.find((card) => card.querySelector('h3')?.textContent.trim() === 'Harsh Joshi');
+    expect(harsh.querySelector('a[href^="https://www.linkedin.com/in/harsh-joshi-1a5a2837a"]')).toBeTruthy();
+    expect(harsh.querySelector('a[href="mailto:harshjoshi30112007@gmail.com"]')).toBeTruthy();
+
+    const kashyap = cards.find((card) => card.querySelector('h3')?.textContent.trim() === 'Kashyap Ladani');
+    expect(kashyap.querySelector('a[href="mailto:kashyapladani5636@gmail.com"]')).toBeTruthy();
+    expect(kashyap.querySelector('a[href*="github.com"], a[href*="linkedin.com"]')).toBeNull();
+  }, 20000);
+
   it('the auth page is reachable by its legacy aliases without a redirect loop', async () => {
     for (const entry of ['/login', '/register', '/signup?mode=login', '/signup?mode=signup']) {
       cleanup();

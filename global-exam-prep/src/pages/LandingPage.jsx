@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import {
-    ArrowDown, ArrowUpRight, Check, Github, Heart, Instagram,
-    Linkedin, Mail,
+    ArrowDown, ArrowUpRight, Check, Github, Heart, Linkedin, Mail,
 } from 'lucide-react';
 import { CATALOG_DOMAINS as domains } from '../data/catalogDomains';
 import * as Icons from 'lucide-react';
@@ -92,34 +91,45 @@ function DomainArtwork({ id }) {
     );
 }
 
-function DeveloperCard({ name, avatar, passion, email, github, linkedin, instagram, liked, onLike }) {
+function DeveloperCard({ name, initials, email, github, linkedin, liked, onLike }) {
+    const links = [
+        { key: 'github', href: github, label: 'GitHub', Icon: Github },
+        { key: 'linkedin', href: linkedin, label: 'LinkedIn', Icon: Linkedin },
+        { key: 'email', href: email ? 'mailto:' + email : '', label: 'Email', Icon: Mail },
+    ].filter((link) => Boolean(link.href));
+
     return (
         <article className="pm-people-card">
             <div className="pm-people-identity">
-                <img src={avatar} alt={name} className="pm-people-avatar" loading="lazy" decoding="async" />
-                <div>
-                    <p className="pm-people-role">The people behind PrepMaster</p>
+                <span className="pm-people-monogram" aria-hidden="true">{initials}</span>
+                <div className="pm-people-identity-copy">
                     <h3>{name}</h3>
                     <p className="pm-people-study">Diploma in Computer Engineering</p>
                 </div>
                 <motion.button
                     className="pm-people-like"
                     type="button"
-                    aria-label={liked ? 'Remove appreciation' : 'Appreciate developer'}
+                    aria-label={liked ? 'Remove appreciation for ' + name : 'Appreciate ' + name}
                     aria-pressed={liked}
                     onClick={onLike}
-                    whileTap={{ scale: 0.9 }}
+                    whileTap={{ scale: 0.94 }}
                     transition={{ duration: 0.18, ease: smoothEase }}
                 >
-                    <Heart size={19} fill={liked ? 'currentColor' : 'none'} />
+                    <Heart size={18} fill={liked ? 'currentColor' : 'none'} />
                 </motion.button>
             </div>
-            <p className="pm-people-passion">{passion}</p>
-            <div className="pm-people-links">
-                <a href={email} target="_blank" rel="noopener noreferrer" aria-label={'Email ' + name}><Mail size={17} /><span>Email</span></a>
-                <a href={github} target="_blank" rel="noopener noreferrer" aria-label={name + ' on GitHub'}><Github size={17} /><span>GitHub</span></a>
-                <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label={name + ' on LinkedIn'}><Linkedin size={17} /><span>LinkedIn</span></a>
-                <a href={instagram} target="_blank" rel="noopener noreferrer" aria-label={name + ' on Instagram'}><Instagram size={17} /><span>Instagram</span></a>
+            <div className="pm-people-links" aria-label={name + ' contact links'}>
+                {links.map(({ key, href, label, Icon }) => (
+                    <a
+                        key={key}
+                        href={href}
+                        {...(key === 'email' ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                        aria-label={key === 'email' ? 'Email ' + name : name + ' on ' + label}
+                    >
+                        <Icon size={17} aria-hidden="true" />
+                        <span>{label}</span>
+                    </a>
+                ))}
             </div>
         </article>
     );
@@ -142,6 +152,8 @@ export default function LandingPage() {
     const reduceMotion = useReducedMotion();
     const [liked, setLiked] = React.useState(() => readLikePreference('dev_liked'));
     const [liked2, setLiked2] = React.useState(() => readLikePreference('dev_liked_2'));
+    const [likedHarsh, setLikedHarsh] = React.useState(() => readLikePreference('dev_liked_harsh'));
+    const [likedKashyap, setLikedKashyap] = React.useState(() => readLikePreference('dev_liked_kashyap'));
 
     useEffect(() => {
         document.title = 'PrepMaster | University Exam Preparation';
@@ -303,24 +315,37 @@ export default function LandingPage() {
                     >
                         <motion.div variants={cardReveal}>
                             <DeveloperCard
-                                name="Daksh Hadvani" avatar="/avatar.png"
-                                passion="Problem solving, and building software that can make a positive impact on people’s lives."
-                                email="https://mail.google.com/mail/?view=cm&fs=1&to=daksh.hadvani132235@marwadiuniversity.ac.in"
+                                name="Daksh Hadvani" initials="DH"
+                                email="daksh.hadvani132235@marwadiuniversity.ac.in"
                                 github="https://github.com/dakshhadvani19"
-                                linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                                instagram="https://instagram.com/dakshhh.__.19"
+                                linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339/"
                                 liked={liked} onLike={() => updateLike('dev_liked', setLiked, !liked)}
                             />
                         </motion.div>
                         <motion.div variants={cardReveal}>
                             <DeveloperCard
-                                name="Dev Kalola" avatar="/avatar2.jpg"
-                                passion="Building innovative solutions and turning ideas into impactful digital experiences."
-                                email="https://mail.google.com/mail/?view=cm&fs=1&to=dev.kalola132220@marwadiuniversity.ac.in"
+                                name="Dev Kalola" initials="DK"
+                                email="dev.kalola132220@marwadiuniversity.ac.in"
                                 github="https://github.com/devkalola"
                                 linkedin="https://www.linkedin.com/in/dev-kalola-646442380/"
-                                instagram="https://www.instagram.com/kalola_dev_14/"
                                 liked={liked2} onLike={() => updateLike('dev_liked_2', setLiked2, !liked2)}
+                            />
+                        </motion.div>
+                        <motion.div variants={cardReveal}>
+                            <DeveloperCard
+                                name="Harsh Joshi" initials="HJ"
+                                email="harshjoshi30112007@gmail.com"
+                                linkedin="https://www.linkedin.com/in/harsh-joshi-1a5a2837a/"
+                                liked={likedHarsh}
+                                onLike={() => updateLike('dev_liked_harsh', setLikedHarsh, !likedHarsh)}
+                            />
+                        </motion.div>
+                        <motion.div variants={cardReveal}>
+                            <DeveloperCard
+                                name="Kashyap Ladani" initials="KL"
+                                email="kashyapladani5636@gmail.com"
+                                liked={likedKashyap}
+                                onLike={() => updateLike('dev_liked_kashyap', setLikedKashyap, !likedKashyap)}
                             />
                         </motion.div>
                     </motion.div>
