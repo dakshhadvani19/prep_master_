@@ -1,6 +1,6 @@
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, useLocation } from 'react-router-dom';
 
 const catalogMocks = vi.hoisted(() => ({
@@ -86,6 +86,49 @@ beforeEach(() => {
 });
 
 describe('admin subject and question locator — Phase 1', () => {
+    it('shows a loading state immediately when a department is selected and its courses are still pending', async () => {
+        let resolveCourses;
+        catalogMocks.fetchCoursesForDomain.mockReturnValueOnce(new Promise(resolve => {
+            resolveCourses = resolve;
+        }));
+
+        renderAdmin();
+        fireEvent.click(screen.getByRole('button', { name: /Diploma in Engineering/ }));
+
+        await waitFor(() => expect(catalogMocks.fetchCoursesForDomain).toHaveBeenCalledWith('diploma'));
+        expect(screen.getByRole('status')).toHaveTextContent('Loading courses from the catalog');
+
+        await act(async () => {
+            resolveCourses({
+                domain: { id: 'diploma', title: 'Diploma in Engineering' },
+                courses: [],
+                error: null,
+            });
+        });
+        expect(await screen.findByText(/No courses found/i)).toBeInTheDocument();
+    });
+
+    it('opens a department deep link directly into its loading state', async () => {
+        let resolveCourses;
+        catalogMocks.fetchCoursesForDomain.mockReturnValueOnce(new Promise(resolve => {
+            resolveCourses = resolve;
+        }));
+
+        renderAdmin('/admin/courses?department=engineering');
+
+        expect(screen.getByRole('status')).toHaveTextContent('Loading courses from the catalog');
+        expect(screen.queryByTestId('admin-departments')).not.toBeInTheDocument();
+
+        await act(async () => {
+            resolveCourses({
+                domain: { id: 'engineering', title: 'Engineering & Technology' },
+                courses: [course],
+                error: null,
+            });
+        });
+        expect(await screen.findByRole('button', { name: /B.Tech - Computer Engineering/ })).toBeInTheDocument();
+    });
+
     it('starts with all six departments and does not lock any department', () => {
         renderAdmin();
         expect(screen.getByRole('main')).toHaveClass('ac', 'lb');

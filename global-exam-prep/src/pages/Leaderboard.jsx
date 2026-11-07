@@ -165,17 +165,28 @@ export default function Leaderboard() {
     const location = useLocation();
     const navigate = useNavigate();
     const accessIdentity = `${userId}:${isAdmin ? 'admin' : 'student'}`;
-    const [step, setStep] = useState('department');
-    const [domain, setDomain] = useState(null);
+
+    const initialFilters = new URLSearchParams(location.search);
+    const initialDepartmentId = initialFilters.get('department');
+    const initialCourseId = initialFilters.get('courseId');
+    const initialSemesterParam = initialFilters.get('semester');
+    const initialStage = initialFilters.get('step');
+    const initialRequestedStep = STEPS.findIndex(item => item.id === initialStage);
+    const initialMaxStep = initialSemesterParam !== null ? 3 : initialCourseId !== null ? 2 : 1;
+    const initialStepIndex = initialRequestedStep < 0
+        ? initialMaxStep
+        : Math.min(initialRequestedStep, initialMaxStep);
+    const [step, setStep] = useState(initialDepartmentId ? STEPS[initialStepIndex].id : 'department');
+    const [domain, setDomain] = useState(() => getCatalogDomain(initialDepartmentId));
     const [courses, setCourses] = useState([]);
     const [course, setCourse] = useState(null);
     const [subjects, setSubjects] = useState([]);
-    const [semester, setSemester] = useState(null);
-    const [selectedSubjectId, setSelectedSubjectId] = useState(null);
+    const [semester, setSemester] = useState(/^[0-9]+$/.test(initialSemesterParam || '') ? Number(initialSemesterParam) : null);
+    const [selectedSubjectId, setSelectedSubjectId] = useState(/^[0-9]+$/.test(initialFilters.get('subjectId') || '') ? Number(initialFilters.get('subjectId')) : null);
     const [courseQuery, setCourseQuery] = useState('');
     const [subjectQuery, setSubjectQuery] = useState('');
-    const [loadingCourses, setLoadingCourses] = useState(false);
-    const [loadingSubjects, setLoadingSubjects] = useState(false);
+    const [loadingCourses, setLoadingCourses] = useState(Boolean(initialDepartmentId));
+    const [loadingSubjects, setLoadingSubjects] = useState(Boolean(initialCourseId));
     const [loadingAccess, setLoadingAccess] = useState(!isAdmin);
     const [completedSubjects, setCompletedSubjects] = useState([]);
     const [accessError, setAccessError] = useState('');
@@ -436,11 +447,28 @@ export default function Leaderboard() {
 
     function chooseDomain(nextDomain) {
         if (!canOpenDepartment(nextDomain)) return;
+        setDomain(nextDomain);
+        setStep('course');
+        setCourses([]);
+        setCourse(null);
+        setSubjects([]);
+        setSemester(null);
+        setSelectedSubjectId(null);
+        setLoadingCourses(true);
+        setLoadingSubjects(false);
+        setCatalogError('');
         navigateToFilters({ department: nextDomain.id });
     }
 
     function chooseCourse(nextCourse) {
         if (!canOpenCourse(nextCourse)) return;
+        setCourse(nextCourse);
+        setStep('semester');
+        setSubjects([]);
+        setSemester(null);
+        setSelectedSubjectId(null);
+        setLoadingSubjects(true);
+        setCatalogError('');
         navigateToFilters({ department: domain?.id, courseId: nextCourse.courseId });
     }
 

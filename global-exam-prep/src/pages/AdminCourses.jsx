@@ -97,16 +97,26 @@ export default function AdminCourses() {
     const routeParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
     const editorMode = routeParams.get('mode') === 'remove' || routeParams.has('subjectId') ? 'remove' : 'add';
     const editorSubjectId = routeParams.get('subjectId') || '';
-    const [step, setStep] = useState('department');
-    const [domainId, setDomainId] = useState(null);
+
+    const initialRouteParams = new URLSearchParams(location.search);
+    const initialDomain = getCatalogDomain(initialRouteParams.get('department'));
+    const initialCourseParam = initialRouteParams.get('courseId');
+    const initialSemesterParam = initialRouteParams.get('semester');
+    const initialRequestedStep = STEPS.findIndex(item => item.id === initialRouteParams.get('step'));
+    const initialMaxStep = initialSemesterParam !== null ? 3 : initialCourseParam !== null ? 2 : 1;
+    const initialStepIndex = initialRequestedStep < 0
+        ? initialMaxStep
+        : Math.min(initialRequestedStep, initialMaxStep);
+    const [step, setStep] = useState(initialDomain ? STEPS[initialStepIndex].id : 'department');
+    const [domainId, setDomainId] = useState(initialDomain?.id || null);
     const [courses, setCourses] = useState([]);
-    const [courseId, setCourseId] = useState(null);
+    const [courseId, setCourseId] = useState(/^[0-9]+$/.test(initialCourseParam || '') ? Number(initialCourseParam) : null);
     const [course, setCourse] = useState(null);
     const [subjects, setSubjects] = useState([]);
-    const [semester, setSemester] = useState(null);
+    const [semester, setSemester] = useState(/^[0-9]+$/.test(initialSemesterParam || '') ? Number(initialSemesterParam) : null);
     const [courseSearch, setCourseSearch] = useState('');
-    const [coursesLoading, setCoursesLoading] = useState(false);
-    const [subjectsLoading, setSubjectsLoading] = useState(false);
+    const [coursesLoading, setCoursesLoading] = useState(Boolean(initialDomain));
+    const [subjectsLoading, setSubjectsLoading] = useState(Boolean(initialDomain && initialCourseParam !== null));
     const [coursesError, setCoursesError] = useState('');
     const [subjectsError, setSubjectsError] = useState('');
     const [retryKey, setRetryKey] = useState(0);
@@ -406,7 +416,11 @@ export default function AdminCourses() {
         setCourse(null);
         setSubjects([]);
         setSemester(null);
-        setCourses([]);
+        const cachedCourses = catalogCacheRef.current.domainId === nextDomain.id
+            ? catalogCacheRef.current.courses
+            : null;
+        setCourses(cachedCourses || []);
+        setCoursesLoading(!cachedCourses);
         setSubjectsLoading(false);
         setCoursesError('');
         setSubjectsError('');
@@ -479,6 +493,7 @@ export default function AdminCourses() {
 
     async function refreshSubjectData() {
         resetCatalogCache();
+        setSubjectsLoading(true);
         setSubjectsError('');
         try {
             const result = await fetchCourseAndSubjects(courseId);

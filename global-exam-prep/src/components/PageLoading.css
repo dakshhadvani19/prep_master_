@@ -1,0 +1,29 @@
+.pm-page-loading {
+    width: 100%;
+    min-height: min(60vh, 560px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 2rem 1.25rem;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    text-align: center;
+}
+
+.pm-page-loading__icon {
+    flex: 0 0 auto;
+    color: var(--accent-primary);
+    animation: pm-page-loading-spin 900ms linear infinite;
+}
+
+@keyframes pm-page-loading-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pm-page-loading__icon {
+        animation: none;
+    }
+}

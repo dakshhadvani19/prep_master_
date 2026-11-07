@@ -3,7 +3,7 @@ import React, { useEffect, Suspense, lazy } from 'react';
 import Layout from './components/Layout';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
-import { Loader } from 'lucide-react';
+import PageLoading from './components/PageLoading';
 import './index.css';
 import './pages/ExamExperience.css';
 import './styles/PurpleRestoration.css';
@@ -80,11 +80,7 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <ScrollToTop />
-          <Suspense fallback={
-            <div style={{ height: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Loader size={32} className="spinner" style={{ color: 'var(--accent-primary)' }} />
-            </div>
-          }>
+          <Suspense fallback={<PageLoading message="Preparing PrepMaster…" />}>
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<HomeIndex />} />

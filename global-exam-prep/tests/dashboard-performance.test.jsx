@@ -1,6 +1,6 @@
 import React from 'react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, render, screen } from '@testing-library/react';
+import { act, cleanup, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 const mocks = vi.hoisted(() => ({
@@ -41,6 +41,21 @@ beforeEach(()=>{
 afterEach(()=>{cleanup();vi.restoreAllMocks();});
 
 describe('student attempt history',()=>{
+    it('shows the history loading state while the first persisted-attempt request is pending',async()=>{
+        let finishReconciliation;
+        mocks.reconcileTestRoomAttempts.mockReturnValue(new Promise(resolve=>{
+            finishReconciliation=resolve;
+        }));
+
+        renderDashboard();
+        expect(screen.getByText('Loading saved attempts…')).toBeInTheDocument();
+
+        await act(async()=>{
+            finishReconciliation({ok:true,error:null});
+        });
+        expect(await screen.findByText('Operating Systems')).toBeInTheDocument();
+    });
+
     it('loads only the two persisted attempt sources and marks Test Room cards',async()=>{
         window.localStorage.setItem('prepmaster_exam_history_v1:student-1',JSON.stringify([{id:'legacy-local',subjectName:'Legacy local attempt'}]));
         renderDashboard();

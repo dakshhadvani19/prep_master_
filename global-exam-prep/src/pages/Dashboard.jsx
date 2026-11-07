@@ -22,7 +22,7 @@ function resolveSubjectName(subjectId) {
 
 export default function Dashboard() {
     const [history, setHistory] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [justSubmitted, setJustSubmitted] = useState(false);
     const [historyError, setHistoryError] = useState('');
     const activeEvaluations = useRef(new Set());
