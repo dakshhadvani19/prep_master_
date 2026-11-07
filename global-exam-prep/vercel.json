@@ -10,7 +10,7 @@
     ],
     "functions": {
         "api/admin-subjects.js": {
-            "includeFiles": "node_modules/{pdfjs-dist,@napi-rs}/**/*"
+            "includeFiles": "node_modules/{pdfjs-dist/legacy/build/*.mjs,pdfjs-dist/cmaps/**/*,pdfjs-dist/standard_fonts/**/*,pdfjs-dist/wasm/**/*,pdfjs-dist/iccs/**/*,pdfjs-dist/image_decoders/**/*,@napi-rs/canvas/**/*,@napi-rs/canvas-linux-x64-gnu/**/*}"
         }
     }
 }
