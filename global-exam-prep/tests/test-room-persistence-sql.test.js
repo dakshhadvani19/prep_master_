@@ -24,6 +24,7 @@ const MIGRATIONS = [
     '20261107043957_claim_shared_testsdata_papers_atomically.sql',
     '20261107044336_count_distinct_subject_exams_and_bind_charge_to_attempt.sql',
     '20261107044838_allow_testsdata_reuse_after_subject_generation_cap.sql',
+    '20261107045210_prevent_repeated_testsdata_papers_per_user.sql',
 ].map((filename) => readFileSync(
     `${globalThis.process.cwd()}/supabase/migrations/${filename}`,
     'utf8',
@@ -31,6 +32,7 @@ const MIGRATIONS = [
 
 const USER_A = 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
 const USER_B = 'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+const USER_C = 'cccccccc-cccc-4ccc-8ccc-cccccccccccc';
 const ONE_QUESTION = '[{"id":"q1","type":"mcq","text":"Q1","options":["A","B","C","D"]}]';
 const TWO_QUESTIONS = '[{"id":"q1","type":"mcq","text":"Q1","options":["A","B","C","D"]},{"id":"q2","type":"mcq","text":"Q2","options":["A","B","C","D"]}]';
 let db;
@@ -52,7 +54,7 @@ beforeAll(async () => {
         grant usage on schema public to anon, authenticated, service_role;
         grant usage on schema auth to anon, authenticated, service_role;
         grant execute on function auth.uid() to anon, authenticated, service_role;
-        insert into auth.users (id) values ('${USER_A}'), ('${USER_B}');
+        insert into auth.users (id) values ('${USER_A}'), ('${USER_B}'), ('${USER_C}');
 
         -- Minimal fixture of the existing public ERD tables. Production definitions
         -- are not changed by the migration under test.
@@ -559,14 +561,71 @@ describe('Weekly exam credits and subject-specific generation cap', () => {
         expect(Number(resolved.rows[0].subject_id)).toBe(1001);
     });
 
-    it('keeps quota storage and reservation RPC inaccessible to browser roles', async () => {
+    it('does not give a student the same saved paper twice, even after a week', async () => {
+        const firstReservation = await db.query(
+            `select public.pm_exam_usage_reserve($1::uuid,$2::uuid,'exam',1,1001) as result`,
+            [USER_C, '00000000-0000-4000-8000-000000000031'],
+        );
+        expect(firstReservation.rows[0].result.allowed).toBe(true);
+        const firstClaim = await db.query(
+            `select public.pm_exam_source_paper_claim($1::uuid,$2::uuid,99001,true) as result`,
+            [USER_C, firstReservation.rows[0].result.reservationId],
+        );
+        expect(firstClaim.rows[0].result.ok).toBe(true);
+        await db.query(
+            `update private.exam_source_paper_history
+                set first_received_at=now()-interval '30 days'
+              where user_id=$1 and source_test_id=99001`,
+            [USER_C],
+        );
+
+        const secondReservation = await db.query(
+            `select public.pm_exam_usage_reserve($1::uuid,$2::uuid,'exam',1,1001) as result`,
+            [USER_C, '00000000-0000-4000-8000-000000000032'],
+        );
+        const repeatedClaim = await db.query(
+            `select public.pm_exam_source_paper_claim($1::uuid,$2::uuid,99001,true) as result`,
+            [USER_C, secondReservation.rows[0].result.reservationId],
+        );
+        expect(repeatedClaim.rows[0].result).toMatchObject({ ok: false, reason: 'paper_already_received' });
+
+        const otherStudentClaim = await db.query(
+            `select public.pm_exam_source_paper_claim($1::uuid,null,99001,false) as result`,
+            [USER_B],
+        );
+        expect(otherStudentClaim.rows[0].result.ok).toBe(true);
+    });
+
+    it('excludes legacy papers already used more than seven days ago', async () => {
+        await db.query(
+            `insert into private.exam_usage_ledger
+              (user_id,idempotency_key,usage_kind,credit_cost,subject_id,source_test_id,status,reserved_at,expires_at,committed_at,created_at)
+             values ($1,'00000000-0000-4000-8000-000000000041','exam',1,1001,99002,'committed',now()-interval '30 days',now()-interval '30 days',now()-interval '30 days',now()-interval '30 days')`,
+            [USER_A],
+        );
+        const claim = await db.query(
+            `select public.pm_exam_source_paper_claim($1::uuid,null,99002,false) as result`,
+            [USER_A],
+        );
+        expect(claim.rows[0].result).toMatchObject({ ok: false, reason: 'paper_already_received' });
+    });
+
+    it('keeps quota and paper-history storage inaccessible to browser roles', async () => {
         await expect(asRole('authenticated','select * from private.exam_usage_ledger'))
+            .rejects.toThrow(/permission denied/i);
+        await expect(asRole('authenticated','select * from private.exam_source_paper_history'))
             .rejects.toThrow(/permission denied/i);
         const grants = await db.query(`
             select has_function_privilege('anon','public.pm_exam_usage_reserve(uuid,uuid,text,integer,bigint)','EXECUTE') as anon_exec,
                    has_function_privilege('authenticated','public.pm_exam_usage_reserve(uuid,uuid,text,integer,bigint)','EXECUTE') as authenticated_exec,
-                   has_function_privilege('service_role','public.pm_exam_usage_reserve(uuid,uuid,text,integer,bigint)','EXECUTE') as service_exec
+                   has_function_privilege('service_role','public.pm_exam_usage_reserve(uuid,uuid,text,integer,bigint)','EXECUTE') as service_exec,
+                   has_function_privilege('anon','public.pm_exam_source_paper_claim(uuid,uuid,bigint,boolean)','EXECUTE') as anon_claim,
+                   has_function_privilege('authenticated','public.pm_exam_source_paper_claim(uuid,uuid,bigint,boolean)','EXECUTE') as authenticated_claim,
+                   has_function_privilege('service_role','public.pm_exam_source_paper_claim(uuid,uuid,bigint,boolean)','EXECUTE') as service_claim
         `);
-        expect(grants.rows[0]).toEqual({ anon_exec: false, authenticated_exec: false, service_exec: true });
+        expect(grants.rows[0]).toEqual({
+            anon_exec: false, authenticated_exec: false, service_exec: true,
+            anon_claim: false, authenticated_claim: false, service_claim: true,
+        });
     });
 });
