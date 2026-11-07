@@ -169,7 +169,7 @@ describe('course → subjects', () => {
 
     fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
     fireEvent.click(screen.getByRole('button', { name: /Mathematics-I/i }));
-    fireEvent.click(screen.getByRole('button', { name: /Mid-Term 1 \\(Theory\\)/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Mid-Term 1 \(Theory\)/i }));
     fireEvent.click(screen.getByRole('button', { name: /Auto AI Exam/i }));
     fireEvent.click(screen.getByRole('button', { name: /Hard/ }));
 
@@ -190,7 +190,7 @@ describe('course → subjects', () => {
     expect(await screen.findByRole('button', { name: /Start Exam/i })).toBeTruthy();
     expect(screen.getByRole('button', { name: /Sem 1/i }).getAttribute('aria-pressed')).toBe('true');
     expect(screen.getByRole('button', { name: /Mathematics-I/i }).getAttribute('aria-pressed')).toBe('true');
-    expect(screen.getByRole('button', { name: /Mid-Term 1 \\(Theory\\)/i }).getAttribute('aria-pressed')).toBe('true');
+    expect(screen.getByRole('button', { name: /Mid-Term 1 \(Theory\)/i }).getAttribute('aria-pressed')).toBe('true');
     expect(screen.getByRole('button', { name: /Auto AI Exam/i }).getAttribute('aria-pressed')).toBe('true');
     expect(screen.getByRole('button', { name: /Hard/ }).getAttribute('aria-pressed')).toBe('true');
   });

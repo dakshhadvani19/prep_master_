@@ -8,7 +8,11 @@ import {
 } from 'lucide-react';
 import './LandingPage.css';
 import { useAuth } from '../context/AuthContext';
-import {\n    navigateBackOrHome,\n    readSubjectSelection,\n    mergeSubjectSelectionState,\n} from '../utils/navigation';
+import {
+    navigateBackOrHome,
+    readSubjectSelection,
+    mergeSubjectSelectionState,
+} from '../utils/navigation';
 
 const DIFFICULTY_LEVELS = [
     { id: 'easy', label: 'Easy', icon: Shield, color: '#10b981', desc: 'Fundamental concepts' },
