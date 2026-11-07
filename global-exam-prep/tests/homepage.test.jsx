@@ -301,7 +301,7 @@ describe('homepage', () => {
     expect(screen.queryByText('404')).toBeNull();
   }, 20000);
 
-  it('shows four text-led team cards and only the available GitHub, LinkedIn, and email links', async () => {
+  it('shows the four original-style team cards with only the supplied GitHub, LinkedIn, and email links', async () => {
     const { container } = await at('/');
     await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
 
@@ -309,7 +309,7 @@ describe('homepage', () => {
     expect(contact).toBeTruthy();
     const cards = [...contact.querySelectorAll('.pm-people-card')];
     expect(cards).toHaveLength(4);
-    expect(contact.querySelectorAll('img, .pm-people-avatar, .pm-people-role, .pm-people-passion')).toHaveLength(0);
+    expect(contact.querySelectorAll('img, .pm-people-avatar, .pm-people-monogram, .pm-people-role, .pm-people-passion')).toHaveLength(0);
 
     const names = cards.map((card) => card.querySelector('h3')?.textContent.trim());
     expect(names).toEqual(['Daksh Hadvani', 'Dev Kalola', 'Harsh Joshi', 'Kashyap Ladani']);
@@ -325,10 +325,10 @@ describe('homepage', () => {
 
     const harsh = cards.find((card) => card.querySelector('h3')?.textContent.trim() === 'Harsh Joshi');
     expect(harsh.querySelector('a[href^="https://www.linkedin.com/in/harsh-joshi-1a5a2837a"]')).toBeTruthy();
-    expect(harsh.querySelector('a[href="mailto:harshjoshi30112007@gmail.com"]')).toBeTruthy();
+    expect(harsh.querySelector('a[href^="https://mail.google.com/mail/?view=cm&fs=1&to=harshjoshi30112007@gmail.com"]')).toBeTruthy();
 
     const kashyap = cards.find((card) => card.querySelector('h3')?.textContent.trim() === 'Kashyap Ladani');
-    expect(kashyap.querySelector('a[href="mailto:kashyapladani5636@gmail.com"]')).toBeTruthy();
+    expect(kashyap.querySelector('a[href^="https://mail.google.com/mail/?view=cm&fs=1&to=kashyapladani5636@gmail.com"]')).toBeTruthy();
     expect(kashyap.querySelector('a[href*="github.com"], a[href*="linkedin.com"]')).toBeNull();
   }, 20000);
 

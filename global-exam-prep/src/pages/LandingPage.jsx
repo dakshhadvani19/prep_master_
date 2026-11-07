@@ -91,17 +91,16 @@ function DomainArtwork({ id }) {
     );
 }
 
-function DeveloperCard({ name, initials, email, github, linkedin, liked, onLike }) {
+function DeveloperCard({ name, email, github, linkedin, liked, onLike }) {
     const links = [
+        { key: 'email', href: email, label: 'Email', Icon: Mail },
         { key: 'github', href: github, label: 'GitHub', Icon: Github },
         { key: 'linkedin', href: linkedin, label: 'LinkedIn', Icon: Linkedin },
-        { key: 'email', href: email ? 'mailto:' + email : '', label: 'Email', Icon: Mail },
     ].filter((link) => Boolean(link.href));
 
     return (
         <article className="pm-people-card">
             <div className="pm-people-identity">
-                <span className="pm-people-monogram" aria-hidden="true">{initials}</span>
                 <div className="pm-people-identity-copy">
                     <h3>{name}</h3>
                     <p className="pm-people-study">Diploma in Computer Engineering</p>
@@ -109,24 +108,25 @@ function DeveloperCard({ name, initials, email, github, linkedin, liked, onLike 
                 <motion.button
                     className="pm-people-like"
                     type="button"
-                    aria-label={liked ? 'Remove appreciation for ' + name : 'Appreciate ' + name}
+                    aria-label={liked ? 'Remove appreciation' : 'Appreciate developer'}
                     aria-pressed={liked}
                     onClick={onLike}
-                    whileTap={{ scale: 0.94 }}
+                    whileTap={{ scale: 0.9 }}
                     transition={{ duration: 0.18, ease: smoothEase }}
                 >
-                    <Heart size={18} fill={liked ? 'currentColor' : 'none'} />
+                    <Heart size={19} fill={liked ? 'currentColor' : 'none'} />
                 </motion.button>
             </div>
-            <div className="pm-people-links" aria-label={name + ' contact links'}>
+            <div className="pm-people-links">
                 {links.map(({ key, href, label, Icon }) => (
                     <a
                         key={key}
                         href={href}
-                        {...(key === 'email' ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         aria-label={key === 'email' ? 'Email ' + name : name + ' on ' + label}
                     >
-                        <Icon size={17} aria-hidden="true" />
+                        <Icon size={17} />
                         <span>{label}</span>
                     </a>
                 ))}
@@ -134,7 +134,6 @@ function DeveloperCard({ name, initials, email, github, linkedin, liked, onLike 
         </article>
     );
 }
-
 
 const MotionLink = motion(Link);
 
@@ -315,17 +314,17 @@ export default function LandingPage() {
                     >
                         <motion.div variants={cardReveal}>
                             <DeveloperCard
-                                name="Daksh Hadvani" initials="DH"
-                                email="daksh.hadvani132235@marwadiuniversity.ac.in"
+                                name="Daksh Hadvani"
+                                email="https://mail.google.com/mail/?view=cm&fs=1&to=daksh.hadvani132235@marwadiuniversity.ac.in"
                                 github="https://github.com/dakshhadvani19"
-                                linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339/"
+                                linkedin="https://www.linkedin.com/in/daksh-hadvanii-b14176339?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                                 liked={liked} onLike={() => updateLike('dev_liked', setLiked, !liked)}
                             />
                         </motion.div>
                         <motion.div variants={cardReveal}>
                             <DeveloperCard
-                                name="Dev Kalola" initials="DK"
-                                email="dev.kalola132220@marwadiuniversity.ac.in"
+                                name="Dev Kalola"
+                                email="https://mail.google.com/mail/?view=cm&fs=1&to=dev.kalola132220@marwadiuniversity.ac.in"
                                 github="https://github.com/devkalola"
                                 linkedin="https://www.linkedin.com/in/dev-kalola-646442380/"
                                 liked={liked2} onLike={() => updateLike('dev_liked_2', setLiked2, !liked2)}
@@ -333,19 +332,17 @@ export default function LandingPage() {
                         </motion.div>
                         <motion.div variants={cardReveal}>
                             <DeveloperCard
-                                name="Harsh Joshi" initials="HJ"
-                                email="harshjoshi30112007@gmail.com"
-                                linkedin="https://www.linkedin.com/in/harsh-joshi-1a5a2837a/"
-                                liked={likedHarsh}
-                                onLike={() => updateLike('dev_liked_harsh', setLikedHarsh, !likedHarsh)}
+                                name="Harsh Joshi"
+                                email="https://mail.google.com/mail/?view=cm&fs=1&to=harshjoshi30112007@gmail.com"
+                                linkedin="https://www.linkedin.com/in/harsh-joshi-1a5a2837a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                                liked={likedHarsh} onLike={() => updateLike('dev_liked_harsh', setLikedHarsh, !likedHarsh)}
                             />
                         </motion.div>
                         <motion.div variants={cardReveal}>
                             <DeveloperCard
-                                name="Kashyap Ladani" initials="KL"
-                                email="kashyapladani5636@gmail.com"
-                                liked={likedKashyap}
-                                onLike={() => updateLike('dev_liked_kashyap', setLikedKashyap, !likedKashyap)}
+                                name="Kashyap Ladani"
+                                email="https://mail.google.com/mail/?view=cm&fs=1&to=kashyapladani5636@gmail.com"
+                                liked={likedKashyap} onLike={() => updateLike('dev_liked_kashyap', setLikedKashyap, !likedKashyap)}
                             />
                         </motion.div>
                     </motion.div>

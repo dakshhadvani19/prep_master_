@@ -452,8 +452,9 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 ## 16. Homepage Contact Us team cards (2026-11-07)
 
 - Updated the homepage Contact Us section to show four team members: Daksh Hadvani, Dev Kalola, Harsh Joshi, and Kashyap Ladani.
-- Removed portrait images and the per-card “The people behind PrepMaster” and passion/description copy. Cards use initials as a deliberate text identity treatment.
+- Removed portrait images and the per-card “The people behind PrepMaster” and passion/description copy. Member names remain text-first without replacement avatar graphics.
 - Kept the shared study label as Diploma in Computer Engineering for all four profiles.
 - Limited social actions to GitHub, LinkedIn, and email. Each card renders only links that have been supplied; no profile URLs are fabricated.
 - Added Harsh Joshi’s provided LinkedIn profile and email, and Kashyap Ladani’s provided email.
 - Added a homepage regression test for the four cards, removed photo/copy elements, available link types, and supplied contact details.
+- Restored the original developer-card surfaces, appreciation control, and rounded pill social-button styling; kept the original email-compose link behavior.
