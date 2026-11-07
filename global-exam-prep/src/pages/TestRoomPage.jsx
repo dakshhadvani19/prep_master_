@@ -7,6 +7,7 @@ import {
     Link as LinkIcon, Users, XCircle,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { releaseExamUsage } from '../utils/supabaseExam';
 import { navigateBackOrHome } from '../utils/navigation';
 import { requireSupabase } from '../supabase';
 import {
@@ -49,6 +50,9 @@ function uniqueParticipants(channel) {
 function safeRoomError(message, status) {
     const raw = String(message || '').toLowerCase();
 
+    if (status === 429 || /weekly exam limit|subscribe to a paid plan/.test(raw)) {
+        return 'You have reached your weekly exam limit. Please subscribe to a paid plan for more exams.';
+    }
     if (/host session.*no longer active|saved host attempt/.test(raw)) {
         return 'This host session is no longer active. Create a new Test Room.';
     }
@@ -800,9 +804,13 @@ export default function TestRoomPage() {
         try {
             const response = await callRoomApi({
                 action: 'create',
+                reservationId: createPayload?.usageReservationId || null,
+                sourceTestId: createPayload?.sourceTestId || null,
                 room: {
                     subjectCode: createPayload?.subjectId || createPayload?.subjectCode || '',
                     catalogSubjectId: createPayload?.catalogSubjectId || null,
+                    catalogCourseId: createPayload?.catalogCourseId || null,
+                    semester: createPayload?.semester ?? null,
                     subjectName: createPayload?.subjectName || 'MCQ Exam',
                     examTitle: createPayload?.examTitle || 'MCQ Exam',
                     difficulty: createPayload?.difficulty,
@@ -840,9 +848,10 @@ export default function TestRoomPage() {
             hostCreatedRoomRef.current = normalizedCode(response.code);
             navigate('/test-rooms/' + normalizedCode(response.code), {
                 replace: true,
-                state: { ...location.state, testRoomHost: true },
+                state: { ...location.state, testRoomHost: true, usageReservationId: null },
             });
         } catch (err) {
+            if (createPayload?.usageReservationId) await releaseExamUsage(createPayload.usageReservationId);
             setError(err.message || 'Could not create a Test Room.');
         } finally {
             setWorking(false);

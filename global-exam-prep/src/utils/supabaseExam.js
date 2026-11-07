@@ -23,6 +23,45 @@ async function callExamAttemptApi(payload) {
     return result || {};
 }
 
+export async function reserveExamUsage(payload) {
+    try {
+        const idempotencyKey = globalThis.crypto?.randomUUID?.();
+        if (!idempotencyKey) throw new Error('Secure request identifiers are unavailable. Refresh and try again.');
+        const result = await callExamAttemptApi({ action: 'reserve_usage', ...payload, idempotencyKey });
+        return { reservationId: result.reservationId || null, exempt: result.exempt === true,
+            remainingCredits: Number.isFinite(Number(result.remainingCredits)) ? Number(result.remainingCredits) : null, error: null };
+    } catch (error) {
+        return { reservationId: null, exempt: false, remainingCredits: null, error: error.message || 'Could not check your weekly exam allowance.' };
+    }
+}
+export async function checkExamGenerationAllowance(reservationId) {
+    try {
+        const result = await callExamAttemptApi({ action: 'check_generation', reservationId });
+        return { allowed: result.allowed === true, error: null };
+    } catch (error) {
+        return { allowed: false, error: error.message || 'New exam generation is not available for this subject.' };
+    }
+}
+export async function releaseExamUsage(reservationId) {
+    if (!reservationId) return { ok: true, error: null };
+    try {
+        const result = await callExamAttemptApi({ action: 'release_usage', reservationId });
+        return { ok: result.ok === true, error: null };
+    } catch (error) {
+        return { ok: false, error: error.message || 'Could not release the pending exam reservation.' };
+    }
+}
+export async function createExamFromTestsData(payload) {
+    try {
+        const result = await callExamAttemptApi({ action: 'create_from_tests_data', ...payload });
+        return { found: result.found === true, id: result.id || null,
+            questions: Array.isArray(result.questions) ? result.questions : [],
+            sourceTestId: result.sourceTestId || null, error: null };
+    } catch (error) {
+        return { found: false, id: null, questions: [], sourceTestId: null, error: error.message || 'Could not load a saved exam paper.' };
+    }
+}
+
 export async function createExamFromPublishedBank(payload) {
     try {
         const result = await callExamAttemptApi({ action: 'create_from_question_bank', ...payload });

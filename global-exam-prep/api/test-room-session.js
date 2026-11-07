@@ -3,6 +3,7 @@ import { randomInt } from 'node:crypto';
 
 const process = globalThis.process;
 const ROOM_TTL_SECONDS = 60 * 60;
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const ROOM_CLEANUP_GRACE_SECONDS = 5 * 60;
 const MAX_PARTICIPANTS = 50;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -195,6 +196,37 @@ export function scoreAnswers(key, input) {
     });
     return { correct, incorrect: attempted - correct, attempted, unattempted: Math.max(0, key.length - attempted), points: correct, totalQuestions: key.length };
 }
+const QUOTA_EXEMPT_EMAIL = 'dakshpatel09765gy@gmail.com';
+function isQuotaExempt(user) { return String(user?.email || '').trim().toLowerCase() === QUOTA_EXEMPT_EMAIL; }
+async function resolveRoomCatalogSubjectId(admin, input = {}) {
+    const directId = Number(input.catalogSubjectId);
+    if (Number.isSafeInteger(directId) && directId > 0) return directId;
+    const c = Number(input.catalogCourseId ?? input.courseId), sem = Number(input.semester);
+    const { data, error } = await admin.rpc('pm_exam_resolve_subject_id', {
+        p_subject_code: input.subjectCode == null ? null : String(input.subjectCode),
+        p_subject_name: input.subjectName == null ? null : String(input.subjectName),
+        p_course_id: Number.isSafeInteger(c) && c > 0 ? c : null,
+        p_semester: Number.isSafeInteger(sem) && sem >= 0 ? sem : null,
+    });
+    if (error) throw new Error('The selected subject could not be matched to the academic catalog.');
+    return Number.isSafeInteger(Number(data)) && Number(data) > 0 ? Number(data) : null;
+}
+async function commitHostRoomUsage(admin, user, reservationId, attempt, sourceTestId = null) {
+    if (isQuotaExempt(user)) return;
+    if (!UUID_RE.test(String(reservationId || ''))) throw new Error('You have reached your weekly exam limit. Please subscribe to a paid plan for more exams.');
+    const { data, error } = await admin.rpc('pm_exam_usage_commit', {
+        p_user_id: user.id, p_reservation_id: reservationId, p_attempt_id: attempt?.id || null,
+        p_source_test_id: Number(sourceTestId || attempt?.core_test_id) || null,
+        p_expected_kind: 'test_room', p_expected_cost: 2,
+    });
+    if (error || data?.ok !== true) throw new Error('Your Test Room reservation expired or could not be confirmed. Please create the room again.');
+}
+async function releaseHostRoomUsage(admin, user, reservationId) {
+    if (isQuotaExempt(user) || !UUID_RE.test(String(reservationId || ''))) return;
+    const { error } = await admin.rpc('pm_exam_usage_release', { p_user_id: user.id, p_reservation_id: reservationId });
+    if (error) console.warn('[test-room-session] Could not release unused host quota reservation:', error.message);
+}
+
 async function authenticate(req, admin) {
     const match = String(req.headers.authorization || '').match(/^Bearer\s+(.+)$/i);
     if (!match) return null;
@@ -595,29 +627,31 @@ export default async function handler(req, res) {
         return fail(res, 503, 'Test Rooms are temporarily unavailable. Please try again shortly.');
     }
     if (!user) return fail(res, 401, 'Sign in to join this Test Room.');
+    if (action === 'create' && !isQuotaExempt(user) && !UUID_RE.test(String(body.reservationId || ''))) {
+        return fail(res, 429, 'Please verify your weekly exam allowance before creating a Test Room. Please subscribe to a paid plan for more exams.');
+    }
     try {
         if (action === 'create') {
             const questions = cleanQuestions(body.questions);
             const input = body.room && typeof body.room === 'object' ? body.room : {};
-            let catalogSubjectId = null;
-            if (input.catalogSubjectId !== undefined && input.catalogSubjectId !== null && input.catalogSubjectId !== '') {
-                catalogSubjectId = Number(input.catalogSubjectId);
-                if (!Number.isSafeInteger(catalogSubjectId) || catalogSubjectId <= 0) {
-                    return fail(res, 400, 'Invalid catalog subject identifier.');
-                }
-                const { data: catalogSubject, error: catalogError } = await admin
-                    .from('Subjects')
-                    .select('SubjectId')
-                    .eq('SubjectId', catalogSubjectId)
-                    .maybeSingle();
+            const catalogSubjectId = await resolveRoomCatalogSubjectId(admin, input);
+            if (!catalogSubjectId && !isQuotaExempt(user)) {
+                await releaseHostRoomUsage(admin, user, String(body.reservationId || ''));
+                return fail(res, 409, 'We could not verify this subject in the academic catalog. Please reload the subject and try again.');
+            }
+            if (catalogSubjectId) {
+                const { data: catalogSubject, error: catalogError } = await admin.from('Subjects').select('SubjectId').eq('SubjectId', catalogSubjectId).maybeSingle();
                 if (catalogError) throw new Error(catalogError.message);
-                if (!catalogSubject) return fail(res, 400, 'The selected catalog subject no longer exists.');
-                const { data: subjectIsActive, error: activeError } = await admin.rpc('pm_catalog_subject_is_active', {
-                    p_subject_id: catalogSubjectId,
-                });
+                if (!catalogSubject) {
+                    await releaseHostRoomUsage(admin, user, String(body.reservationId || ''));
+                    return fail(res, 400, 'The selected catalog subject no longer exists.');
+                }
+                const { data: active, error: activeError } = await admin.rpc('pm_catalog_subject_is_active', { p_subject_id: catalogSubjectId });
                 if (activeError) throw new Error(activeError.message || 'Subject availability could not be verified.');
-                if (subjectIsActive !== true) return fail(res, 409, 'This subject has been removed from the active catalog. Ask an administrator to restore it.');
-                catalogSubjectId = Number(catalogSubject.SubjectId);
+                if (active !== true) {
+                    await releaseHostRoomUsage(admin, user, String(body.reservationId || ''));
+                    return fail(res, 409, 'This subject has been removed from the active catalog. Ask an administrator to restore it.');
+                }
             }
             const createdAtMs = Date.now();
             const room = {
@@ -669,6 +703,7 @@ export default async function handler(req, res) {
                 const attempt = await createAttempt(admin, room, user.id, room.hostName, 'host', safe);
                 host.attemptId = attempt.id;
                 await setJson(keys(code, user.id).participant, host, roomTtlSeconds(room));
+                await commitHostRoomUsage(admin, user, String(body.reservationId || ''), attempt, body.sourceTestId);
                 return res.status(200).json({ code, room, attemptId: attempt.id, questions: safe, serverNow: Date.now() });
             } catch (error) {
                 // Preserve an audit record if the DB attempt was inserted but a later
@@ -1150,6 +1185,7 @@ export default async function handler(req, res) {
         return fail(res, 400, 'Unknown Test Room action.');
     } catch (error) {
         const message = String(error?.message || 'Test Room operation failed.');
+        if (action === 'create') await releaseHostRoomUsage(admin, user, String(body.reservationId || ''));
         const unavailable = /redis|upstash|fetch failed|credentials|supabase|database|postgres/i.test(message);
         console.error('[test-room-session] request failed:', { action, message });
         return fail(
