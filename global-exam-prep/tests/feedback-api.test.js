@@ -59,7 +59,7 @@ beforeEach(() => {
     });
     mocks.studentSelect.mockReturnValue(studentQuery);
     mocks.studentEq.mockReturnValue(studentQuery);
-    mocks.studentMaybeSingle.mockResolvedValue({ data: { StudentId: 42 }, error: null });
+    mocks.studentMaybeSingle.mockResolvedValue({ data: { StudentId: 42, IsSpam: false }, error: null });
     mocks.insert.mockReturnValue(feedbackQuery);
     mocks.feedbackSelect.mockReturnValue(feedbackQuery);
     mocks.feedbackSingle.mockResolvedValue({ data: { FeedbackId: 101 }, error: null });
@@ -139,7 +139,7 @@ describe('POST /api/feedback', () => {
         expect(res.statusCode).toBe(201);
         expect(mocks.getUser).toHaveBeenCalledWith('verified-token');
         expect(mocks.from).toHaveBeenNthCalledWith(1, 'Students');
-        expect(mocks.studentSelect).toHaveBeenCalledWith('StudentId');
+        expect(mocks.studentSelect).toHaveBeenCalledWith('StudentId,IsSpam');
         expect(mocks.studentEq).toHaveBeenNthCalledWith(1, 'auth_uid', USER_ID);
         expect(mocks.studentEq).toHaveBeenNthCalledWith(2, 'role', 'student');
         expect(mocks.from).toHaveBeenNthCalledWith(2, 'Feedbacks');
@@ -153,6 +153,36 @@ describe('POST /api/feedback', () => {
         expect(res.payload).toEqual({ success: true, feedbackId: 101 });
         expect(res.headers['Cache-Control']).toContain('no-store');
         expect(res.headers.Vary).toBe('Authorization');
+    });
+
+    it('returns the current spam status for the authenticated student', async () => {
+        mocks.studentMaybeSingle.mockResolvedValue({ data: { StudentId: 42, IsSpam: true }, error: null });
+        const res = makeRes();
+        await handler(request({ action: 'status' }, {
+            authorization: 'Bearer verified-token',
+        }), res);
+
+        expect(res.statusCode).toBe(200);
+        expect(res.payload).toEqual({ isSpam: true });
+        expect(mocks.getUser).toHaveBeenCalledWith('verified-token');
+        expect(mocks.studentSelect).toHaveBeenCalledWith('StudentId,IsSpam');
+        expect(mocks.insert).not.toHaveBeenCalled();
+        expect(res.headers['Cache-Control']).toContain('no-store');
+    });
+
+    it('refuses feedback submission when the verified student is marked as spam', async () => {
+        mocks.studentMaybeSingle.mockResolvedValue({ data: { StudentId: 42, IsSpam: true }, error: null });
+        const res = makeRes();
+        await handler(request({ type: 'general', description: 'A new suggestion.' }, {
+            authorization: 'Bearer verified-token',
+        }), res);
+
+        expect(res.statusCode).toBe(403);
+        expect(res.payload).toEqual({
+            error: 'Your account has been marked as spam by an administrator. You can no longer submit feedback.',
+            code: 'STUDENT_FLAGGED_SPAM',
+        });
+        expect(mocks.insert).not.toHaveBeenCalled();
     });
 
     it('requires a student profile', async () => {
