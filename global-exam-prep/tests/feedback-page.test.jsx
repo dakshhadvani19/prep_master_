@@ -21,7 +21,11 @@ function renderPage() {
 }
 
 beforeEach(() => {
-    vi.stubGlobal('fetch', vi.fn());
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
+        ok: true,
+        status: 200,
+        json: async () => ({ isSpam: false }),
+    }));
 });
 
 afterEach(() => {
@@ -44,9 +48,9 @@ describe('FeedbackPage', () => {
         expect(globalThis.fetch).not.toHaveBeenCalled();
     });
 
-    it('shows only Feedback Type and Description, without rating or personal-detail fields', () => {
+    it('shows only Feedback Type and Description, without rating or personal-detail fields', async () => {
         renderPage();
-        expect(screen.getByText('Feedback Type')).toBeTruthy();
+        expect(await screen.findByText('Feedback Type')).toBeTruthy();
         expect(screen.getByRole('button', { name: /general feedback/i })).toBeTruthy();
         expect(screen.getByRole('button', { name: /bug report/i })).toBeTruthy();
         expect(screen.getByRole('button', { name: /feature request/i })).toBeTruthy();
@@ -77,15 +81,19 @@ describe('FeedbackPage', () => {
         render(<MemoryRouter><FeedbackPage /></MemoryRouter>);
         expect(screen.queryByText(/sign in with a student account/i)).toBeNull();
 
-        fireEvent.change(screen.getByRole('textbox', { name: /description/i }), {
+        fireEvent.change(await screen.findByRole('textbox', { name: /description/i }), {
             target: { value: 'The profile ID is still loading.' },
         });
         const submitButton = screen.getByRole('button', { name: /send feedback/i });
         expect(submitButton).not.toBeDisabled();
         fireEvent.click(submitButton);
 
-        await waitFor(() => expect(globalThis.fetch).toHaveBeenCalledTimes(1));
-        const [, options] = globalThis.fetch.mock.calls[0];
+        await waitFor(() => expect(globalThis.fetch).toHaveBeenCalledTimes(2));
+        const [statusUrl, statusOptions] = globalThis.fetch.mock.calls[0];
+        expect(statusUrl).toBe('/api/feedback');
+        expect(JSON.parse(statusOptions.body)).toEqual({ action: 'status' });
+        const [submitUrl, options] = globalThis.fetch.mock.calls[1];
+        expect(submitUrl).toBe('/api/feedback');
         expect(options.headers.Authorization).toBe('Bearer verified-session-token');
         expect(JSON.parse(options.body)).toEqual({
             type: 'general',
@@ -108,9 +116,9 @@ describe('FeedbackPage', () => {
             target: { value: 'A useful suggestion.' },
         });
         fireEvent.click(screen.getByRole('button', { name: /send feedback/i }));
-        await waitFor(() => expect(globalThis.fetch).toHaveBeenCalledTimes(1));
+        await waitFor(() => expect(globalThis.fetch).toHaveBeenCalledTimes(2));
 
-        const [url, options] = globalThis.fetch.mock.calls[0];
+        const [url, options] = globalThis.fetch.mock.calls[1];
         expect(url).toBe('/api/feedback');
         expect(options.method).toBe('POST');
         expect(options.headers.Authorization).toBe('Bearer verified-session-token');
@@ -124,12 +132,18 @@ describe('FeedbackPage', () => {
 
     it('shows the loading state until the API confirms that feedback was saved', async () => {
         let resolveResponse;
-        globalThis.fetch.mockImplementation(() => new Promise((resolve) => {
-            resolveResponse = resolve;
-        }));
+        globalThis.fetch
+            .mockResolvedValueOnce({
+                ok: true,
+                status: 200,
+                json: async () => ({ isSpam: false }),
+            })
+            .mockImplementationOnce(() => new Promise((resolve) => {
+                resolveResponse = resolve;
+            }));
 
         renderPage();
-        fireEvent.change(screen.getByRole('textbox', { name: /description/i }), {
+        fireEvent.change(await screen.findByRole('textbox', { name: /description/i }), {
             target: { value: 'Wait for the server response.' },
         });
         fireEvent.click(screen.getByRole('button', { name: /send feedback/i }));
@@ -146,9 +160,53 @@ describe('FeedbackPage', () => {
         expect(await screen.findByText(/saved successfully/i)).toBeTruthy();
     });
 
-    it('enforces the 1,000-character limit in the browser', () => {
+    it('shows a clear restricted-access message and hides the form for a spam-flagged student', async () => {
+        globalThis.fetch.mockResolvedValue({
+            ok: true,
+            status: 200,
+            json: async () => ({ isSpam: true }),
+        });
+
         renderPage();
-        const field = screen.getByRole('textbox', { name: /description/i });
+
+        expect(await screen.findByRole('heading', { name: 'Feedback access restricted' })).toBeTruthy();
+        expect(screen.getByText(/marked as spam by an administrator/i)).toBeTruthy();
+        expect(screen.getByText(/can no longer submit feedback/i)).toBeTruthy();
+        expect(screen.queryByText('Feedback Type')).toBeNull();
+        expect(screen.queryByRole('textbox', { name: /description/i })).toBeNull();
+        expect(screen.getByRole('button', { name: /back to home/i })).toBeTruthy();
+        expect(JSON.parse(globalThis.fetch.mock.calls[0][1].body)).toEqual({ action: 'status' });
+    });
+
+    it('switches to the restriction message when an admin flags the student while the form is open', async () => {
+        globalThis.fetch
+            .mockResolvedValueOnce({
+                ok: true,
+                status: 200,
+                json: async () => ({ isSpam: false }),
+            })
+            .mockResolvedValueOnce({
+                ok: false,
+                status: 403,
+                json: async () => ({
+                    code: 'STUDENT_FLAGGED_SPAM',
+                    error: 'Your account has been marked as spam by an administrator.',
+                }),
+            });
+
+        renderPage();
+        fireEvent.change(await screen.findByRole('textbox', { name: /description/i }), {
+            target: { value: 'This should be rejected.' },
+        });
+        fireEvent.click(screen.getByRole('button', { name: /send feedback/i }));
+
+        expect(await screen.findByRole('heading', { name: 'Feedback access restricted' })).toBeTruthy();
+        expect(globalThis.fetch).toHaveBeenCalledTimes(2);
+    });
+
+    it('enforces the 1,000-character limit in the browser', async () => {
+        renderPage();
+        const field = await screen.findByRole('textbox', { name: /description/i });
         fireEvent.change(field, { target: { value: 'x'.repeat(1001) } });
         expect(field.value).toHaveLength(1000);
         expect(screen.getByText('1000 / 1000 characters')).toBeTruthy();
