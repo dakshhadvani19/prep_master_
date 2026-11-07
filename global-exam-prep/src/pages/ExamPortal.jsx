@@ -25,6 +25,10 @@ import {
     saveExamAttempt,
     updateAttemptAnswers,
     submitExamAttempt,
+    reserveExamUsage,
+    checkExamGenerationAllowance,
+    releaseExamUsage,
+    createExamFromTestsData,
     createExamFromPublishedBank,
 } from '../utils/supabaseExam';
 
@@ -300,29 +304,85 @@ export default function ExamPortal() {
     };
 
     const startExam = async () => {
+        let usageReservation = null;
         if (examMode === 'auto') {
             setAutoProcessing(true);
             setAutoError('');
             setSupabaseError('');
             try {
-                // \u2500\u2500 Syllabus dataset integration \u2500\u2500
-                // Prefer an admin-published question bank for numeric catalog subjects.
-                // The server creates the attempt and retains the answer key privately;
-                // this browser receives only student-safe question content.
+                usageReservation = await reserveExamUsage({
+                    usageKind: testRoomMode === 'create' ? 'test_room' : 'exam',
+                    catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
+                    subjectCode: sourceSubjectId,
+                    subjectName: subjectDetail?.title,
+                    courseId: subjectContext.courseId,
+                    semester: subjectContext.sem,
+                });
+                if (usageReservation.error) throw new Error(usageReservation.error);
+
+                const savedPaper = await createExamFromTestsData({
+                    catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
+                    subjectCode: sourceSubjectId,
+                    subjectName: subjectDetail?.title,
+                    courseId: subjectContext.courseId,
+                    semester: subjectContext.sem,
+                    examType,
+                    difficulty,
+                    questionType: examInfo.type === 'objective' ? 'mcq' : 'theory',
+                    forTestRoom: testRoomMode === 'create',
+                    reservationId: usageReservation.reservationId,
+                });
+                if (savedPaper.error) throw new Error(savedPaper.error);
+                if (savedPaper.found) {
+                    if (testRoomMode === 'create') {
+                        navigate('/test-rooms/create', {
+                            state: {
+                                testRoomMode: 'create',
+                                questions: savedPaper.questions,
+                                courseId: String(location.state?.courseId || ''),
+                                catalogCourseId: subjectContext.courseId || null,
+                                semester: subjectContext.sem ?? null,
+                                catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
+                                subjectId: sourceSubjectId,
+                                subjectName: subjectDetail.title,
+                                examType,
+                                examTitle: examInfo.title,
+                                difficulty,
+                                timeMinutes: examInfo.timeMinutes,
+                                examMode: 'auto',
+                                usageReservationId: usageReservation.reservationId || null,
+                                sourceTestId: savedPaper.sourceTestId,
+                            },
+                        });
+                        usageReservation = null;
+                        return;
+                    }
+                    usageReservation = null;
+                    setAiQuestions(savedPaper.questions);
+                    setAttemptId(savedPaper.id);
+                    setExamState('active');
+                    return;
+                }
+
                 if (!testRoomMode && subjectContext.kind === 'numeric' && subjectContext.numericSubjectId) {
                     const curated = await createExamFromPublishedBank({
                         catalogSubjectId: subjectContext.numericSubjectId,
                         examType,
                         difficulty,
+                        reservationId: usageReservation.reservationId,
                     });
                     if (curated.error) throw new Error(curated.error);
                     if (curated.found) {
+                        usageReservation = null;
                         setAiQuestions(curated.questions);
                         setAttemptId(curated.id);
                         setExamState('active');
                         return;
                     }
                 }
+
+                const generationAllowance = await checkExamGenerationAllowance(usageReservation.reservationId);
+                if (generationAllowance.error) throw new Error(generationAllowance.error);
 
                 // Prefer the full text extracted and saved when an administrator adds a
                 // subject. Older catalog subjects continue to use the existing static dataset.
@@ -501,12 +561,16 @@ export default function ExamPortal() {
                             questions: generatedQuestions,
                             totalMarks: config.totalMarks,
                             timeMinutes: config.timeMinutes,
+                            courseId: subjectContext.courseId,
+                            semester: subjectContext.sem,
+                            reservationId: usageReservation?.reservationId || null,
                         };
                         const result = await saveExamAttempt(attemptPayload);
                         if (result.error || !result.id) {
                             throw new Error(result.error || 'Attempt could not be persisted.');
                         }
                         setAttemptId(result.id);
+                        usageReservation = null;
                     } catch (supabaseErr) {
                         setSupabaseError(supabaseErr.message || 'Supabase unavailable');
                         throw new Error('The exam cannot start until its attempt and answer key are saved securely.');
@@ -519,6 +583,8 @@ export default function ExamPortal() {
                             testRoomMode: 'create',
                             questions: generatedQuestions,
                             courseId: String(location.state?.courseId || ''),
+                            catalogCourseId: subjectContext.courseId || null,
+                            semester: subjectContext.sem ?? null,
                             catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
                             subjectId: sourceSubjectId,
                             subjectName: subjectDetail.title,
@@ -527,13 +593,16 @@ export default function ExamPortal() {
                             difficulty,
                             timeMinutes: config.timeMinutes || examInfo.timeMinutes,
                             examMode: 'auto',
+                            usageReservationId: usageReservation?.reservationId || null,
                         },
                     });
+                    usageReservation = null;
                     return;
                 }
 
                 setExamState('active');
             } catch (err) {
+                if (usageReservation?.reservationId) await releaseExamUsage(usageReservation.reservationId);
                 if (err.retryAfter) {
                     setRetryCountdown(err.retryAfter + 3);
                 } else {
@@ -587,6 +656,7 @@ export default function ExamPortal() {
     const removeFile = (idx) => setUploadedFiles(prev => prev.filter((_, i) => i !== idx));
 
     const processFilesAndStartExam = async () => {
+        let usageReservation = null;
         if (uploadedFiles.length === 0) {
             setUploadError('Please upload at least one file.');
             return;
@@ -616,6 +686,18 @@ export default function ExamPortal() {
             if (!uploadExamConfig) throw new Error('No exam blueprint is configured for this exam type.');
             const examCount = isObj ? 30 : uploadExamConfig.questionCount;
             const theoryMarks = isObj ? null : uploadExamConfig.markSequence;
+
+            usageReservation = await reserveExamUsage({
+                usageKind: testRoomMode === 'create' ? 'test_room' : 'exam',
+                catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
+                subjectCode: sourceSubjectId,
+                subjectName: subjectDetail?.title,
+                courseId: subjectContext.courseId,
+                semester: subjectContext.sem,
+            });
+            if (usageReservation.error) throw new Error(usageReservation.error);
+            const generationAllowance = await checkExamGenerationAllowance(usageReservation.reservationId);
+            if (generationAllowance.error) throw new Error(generationAllowance.error);
 
             const questions = await generateQuestionsFromText({
                 text: uploadContext.text,
@@ -653,6 +735,8 @@ export default function ExamPortal() {
                         testRoomMode: 'create',
                         questions: blueprintQuestions,
                         courseId: String(location.state?.courseId || ''),
+                        catalogCourseId: subjectContext.courseId || null,
+                        semester: subjectContext.sem ?? null,
                         catalogSubjectId: subjectContext.kind === 'numeric' ? subjectContext.numericSubjectId : null,
                         subjectId: sourceSubjectId,
                         subjectName: subjectDetail.title,
@@ -661,8 +745,10 @@ export default function ExamPortal() {
                         difficulty,
                         timeMinutes: examInfo.timeMinutes,
                         examMode: 'upload',
+                        usageReservationId: usageReservation?.reservationId || null,
                     },
                 });
+                usageReservation = null;
                 return;
             }
 
@@ -679,12 +765,16 @@ export default function ExamPortal() {
                     questions: generatedQuestions,
                     totalMarks: uploadExamConfig.totalMarks,
                     timeMinutes: uploadExamConfig.timeMinutes,
+                    courseId: subjectContext.courseId,
+                    semester: subjectContext.sem,
+                    reservationId: usageReservation?.reservationId || null,
                 };
                 const result = await saveExamAttempt(attemptPayload);
                 if (result.error || !result.id) {
                     throw new Error(result.error || 'Attempt could not be persisted.');
                 }
                 setAttemptId(result.id);
+                usageReservation = null;
             } catch (saveError) {
                 setSupabaseError(saveError.message || 'Supabase unavailable');
                 throw new Error('The uploaded exam cannot start until its answer key and marking rubric are saved securely.');
@@ -693,6 +783,7 @@ export default function ExamPortal() {
             setAiQuestions(generatedQuestions.map(stripAnswerKeyForStudent));
             setExamState('active');
         } catch (err) {
+            if (usageReservation?.reservationId) await releaseExamUsage(usageReservation.reservationId);
             if (err.retryAfter) {
                 setUploadError('');
                 setRetryCountdown(err.retryAfter + 3); // +3s buffer
