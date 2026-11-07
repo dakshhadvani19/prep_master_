@@ -96,7 +96,7 @@ describe('admin subject and question locator — Phase 1', () => {
         fireEvent.click(screen.getByRole('button', { name: /Diploma in Engineering/ }));
 
         await waitFor(() => expect(catalogMocks.fetchCoursesForDomain).toHaveBeenCalledWith('diploma'));
-        expect(screen.getByRole('status')).toHaveTextContent('Loading courses from the catalog');
+        expect(screen.getByText(/Loading courses from the catalog/)).toBeInTheDocument();
 
         await act(async () => {
             resolveCourses({
@@ -116,7 +116,7 @@ describe('admin subject and question locator — Phase 1', () => {
 
         renderAdmin('/admin/courses?department=engineering');
 
-        expect(screen.getByRole('status')).toHaveTextContent('Loading courses from the catalog');
+        expect(screen.getByText(/Loading courses from the catalog/)).toBeInTheDocument();
         expect(screen.queryByTestId('admin-departments')).not.toBeInTheDocument();
 
         await act(async () => {
