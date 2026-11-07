@@ -470,10 +470,13 @@ export default async function handler(req, res) {
             if (candidatesError) throw new Error('Saved exam papers could not be checked. Please retry.');
 
             let selectedPaper = null;
+            const expectedQuestionCount = examType === 'mid-1' && examInfo.type === 'objective'
+                ? 30
+                : blueprint.questionCount;
             for (const candidate of (Array.isArray(candidates) ? candidates : [])) {
                 try {
                     const paper = buildTestsDataPaper(candidate, questionType);
-                    if (paper.questions.length !== blueprint.questionCount) continue;
+                    if (paper.questions.length !== expectedQuestionCount) continue;
                     const claimed = await claimTestsDataPaper(
                         admin, user, String(body.reservationId || ''), paper.sourceTestId,
                     );
@@ -513,8 +516,8 @@ export default async function handler(req, res) {
                     exam_type: examType,
                     difficulty,
                     questions: privateQuestions,
-                    total_marks: selectedPaper.totalMarks || blueprint.totalMarks,
-                    time_minutes: selectedPaper.timeMinutes || blueprint.timeMinutes,
+                    total_marks: selectedPaper.totalMarks || examInfo.totalMarks || blueprint.totalMarks,
+                    time_minutes: selectedPaper.timeMinutes || examInfo.timeMinutes || blueprint.timeMinutes,
                     answers: Object.fromEntries(Object.keys(selectedPaper.answerKey).map((questionId) => [questionId, -1])),
                     score: null,
                     status: 'in_progress',
