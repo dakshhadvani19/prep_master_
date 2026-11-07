@@ -7,6 +7,7 @@ import {
     Link as LinkIcon, Users, XCircle,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { navigateBackOrHome } from '../utils/navigation';
 import { requireSupabase } from '../supabase';
 import {
     buildCanonicalRoomQuestions,
@@ -178,7 +179,7 @@ export default function TestRoomPage() {
     const navigate = useNavigate();
     const location = useLocation();
     const routeCode = routeCodeParam || location.state?.temporaryRoomCode || '';
-    const { currentUser } = useAuth();
+    const { currentUser, isAdmin } = useAuth();
     const reduceMotion = useReducedMotion();
 
     const createPayload = location.state?.testRoomMode === 'create' && Array.isArray(location.state?.questions)
@@ -1140,7 +1141,7 @@ export default function TestRoomPage() {
         const hasCode = normalized.length > 0;
         return (
             <div className="container pm-test-room-page pm-room-entry animate-fade-in" style={{ maxWidth: 720, marginTop: '3rem', marginBottom: '4rem' }}>
-                <button onClick={() => navigate(-1)} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+                <button onClick={() => navigateBackOrHome(navigate, isAdmin)} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
                     <ArrowLeft size={17} /> Back
                 </button>
                 <div className="glass-panel" style={{ padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
@@ -1184,7 +1185,7 @@ export default function TestRoomPage() {
                     <AlertCircle size={32} style={{ margin: '0 auto 1rem', color: 'var(--warning)' }} />
                     <h2 style={{ marginBottom: '0.75rem' }}>Room setup expired</h2>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>The generated exam and room setup are held temporarily in this browser session. Return to the subject page and create the room again.</p>
-                    <button style={roomButtonStyle()} onClick={() => navigate(-1)}>Return to exam setup</button>
+                    <button style={roomButtonStyle()} onClick={() => navigateBackOrHome(navigate, isAdmin)}>Return to exam setup</button>
                 </div>
             </div>
         );
@@ -1237,7 +1238,7 @@ export default function TestRoomPage() {
                         <h2 style={{ fontSize: '1.35rem' }}>Test Room unavailable</h2>
                     </div>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>{error || 'The live room is no longer available.'}</p>
-                    <button style={roomButtonStyle('secondary')} onClick={() => navigate(-1)}><ArrowLeft size={17} /> Go back</button>
+                    <button style={roomButtonStyle('secondary')} onClick={() => navigateBackOrHome(navigate, isAdmin)}><ArrowLeft size={17} /> Go back</button>
                     {routeCode && roomMeta?.status === 'waiting' && /connect|host|connection|session/i.test(error) && (
                         <button style={{ ...roomButtonStyle('primary'), marginTop: '0.75rem' }} onClick={() => {
                             setChannelRetryNonce((current) => current + 1);

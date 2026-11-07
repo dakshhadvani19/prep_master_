@@ -110,7 +110,7 @@ function scrubCallbackFromUrl() {
         const url = new URL(window.location.href);
         for (const key of CALLBACK_PARAMS) url.searchParams.delete(key);
         const search = url.searchParams.toString();
-        window.history.replaceState({}, '', `${url.pathname}${search ? `?${search}` : ''}`);
+        window.history.replaceState(window.history.state || {}, '', `${url.pathname}${search ? `?${search}` : ''}`);
     } catch {
         // A browser that will not let us rewrite the address bar is not worth
         // failing sign-in over: the params stay, and the exchange is still the

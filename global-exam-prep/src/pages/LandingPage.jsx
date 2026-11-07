@@ -157,7 +157,7 @@ export default function LandingPage() {
     useEffect(() => {
         if (!location.state?.scrollToContact) return;
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        window.history.replaceState({}, '', location.pathname);
+        navigate(location.pathname, { replace: true, state: null });
     }, [location.pathname, location.state]);
 
     const updateLike = (key, setter, value) => {

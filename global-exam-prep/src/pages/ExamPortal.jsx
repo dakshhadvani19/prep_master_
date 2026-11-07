@@ -14,6 +14,7 @@ import { fetchSyllabus } from '../utils/syllabusStorage';
 import predictedSyllabus from '../data/predicted_ai_syllabus.json';
 import { Clock, AlertCircle, CheckCircle, ChevronLeft, ArrowRight, ArrowLeft, Upload, Cpu, BookOpen, FileText, X, Loader } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { navigateBackOrHome } from '../utils/navigation';
 import { supabase } from '../supabase.js';
 import { CATALOG_DOMAINS, mappingForCourseId } from '../utils/catalogApi.js';
 
@@ -60,7 +61,7 @@ export default function ExamPortal() {
     const { subjectId, examType, difficulty } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    const { currentUser } = useAuth();
+    const { currentUser, isAdmin } = useAuth();
 
     const [examState, setExamState] = useState('intro'); // intro, active, submitted
     const [timeLeft, setTimeLeft] = useState(0);
@@ -901,7 +902,7 @@ export default function ExamPortal() {
             {/* ── STEP 2: File Upload UI ── */}
             {examState === 'intro' && examMode === 'upload' && (
                 <div className="glass-panel pm-exam-upload-card" style={{ padding: '2.5rem', marginTop: '2rem', maxWidth: '680px', margin: '2rem auto 0' }}>
-                    <button onClick={() => navigate(-1)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}>
+                    <button onClick={() => navigateBackOrHome(navigate, isAdmin)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}>
                         <ChevronLeft size={16} /> Back to Subject
                     </button>
 
@@ -1004,7 +1005,7 @@ export default function ExamPortal() {
             {examState === 'intro' && examMode === 'auto' && (
                 <div className="glass-panel pm-exam-intro-card" style={{ padding: '3rem', textAlign: 'center', marginTop: '2rem' }}>
                     <button
-                        onClick={() => navigate(-1)}
+                        onClick={() => navigateBackOrHome(navigate, isAdmin)}
                         style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}
                     >
                         <ChevronLeft size={16} /> Back

@@ -1,13 +1,14 @@
 /**
- * /dashboard shows the student Dashboard for students and the Admin Dashboard
- * for admin / superAdmin. Same route, two components — student Dashboard.jsx
- * is not overwritten.
+ * /dashboard selects one role-specific bundle.
+ * The opposite dashboard is not downloaded until a user with that role opens it.
  */
+import { lazy } from 'react';
 import { useAuth } from '../context/AuthContext';
-import Dashboard from './Dashboard';
-import AdminDashboard from './AdminDashboard';
+
+const StudentDashboard = lazy(() => import('./Dashboard'));
+const AdminDashboard = lazy(() => import('./AdminDashboard'));
 
 export default function DashboardSwitch() {
     const { isAdmin } = useAuth();
-    return isAdmin ? <AdminDashboard /> : <Dashboard />;
+    return isAdmin ? <AdminDashboard /> : <StudentDashboard />;
 }

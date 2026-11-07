@@ -3,10 +3,13 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft, GraduationCap, Clock, Loader, AlertCircle } from 'lucide-react';
 import './LandingPage.css';
 import { fetchCoursesForDomain, getCatalogDomain } from '../utils/catalogApi';
+import { useAuth } from '../context/AuthContext';
+import { navigateBackOrHome } from '../utils/navigation';
 
 export default function CourseExplorer() {
     const { domainId } = useParams();
     const navigate = useNavigate();
+    const { isAdmin } = useAuth();
     const domainMeta = getCatalogDomain(domainId);
 
     const [courses, setCourses] = useState([]);
@@ -39,7 +42,7 @@ export default function CourseExplorer() {
     return (
         <div className="container animate-fade-in">
             <button
-                onClick={() => navigate(-1)}
+                onClick={() => navigateBackOrHome(navigate, isAdmin)}
                 style={{
                     display: 'flex',
                     alignItems: 'center',

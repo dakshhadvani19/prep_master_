@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, Suspense } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
-import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard } from 'lucide-react';
+import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard, Loader } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import { CATALOG_DOMAINS } from '../data/catalogDomains';
@@ -648,7 +648,17 @@ export default function Layout() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    <Outlet />
+                    <Suspense fallback={
+                        <div
+                            role="status"
+                            aria-label="Loading page"
+                            style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                        >
+                            <Loader size={30} className="spinner" style={{ color: 'var(--accent-primary)' }} />
+                        </div>
+                    }>
+                        <Outlet />
+                    </Suspense>
                 </motion.div>
             </main>
 

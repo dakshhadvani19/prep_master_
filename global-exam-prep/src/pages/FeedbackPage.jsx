@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import AdminFeedbackInbox from '../components/AdminFeedbackInbox';
+import { navigateBackOrHome } from '../utils/navigation';
 
 const MAX_DESCRIPTION_LENGTH = 1000;
 const FEEDBACK_TYPES = [
@@ -111,7 +112,7 @@ export default function FeedbackPage() {
         <div className="container animate-fade-in" style={{ maxWidth: '720px', paddingTop: '2rem', paddingBottom: '4rem' }}>
             <button
                 type="button"
-                onClick={() => navigate(-1)}
+                onClick={() => navigateBackOrHome(navigate, isAdmin)}
                 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem', cursor: 'pointer' }}
             >
                 <ChevronLeft size={16} /> Back

@@ -7,6 +7,8 @@ import {
     Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader, Users
 } from 'lucide-react';
 import './LandingPage.css';
+import { useAuth } from '../context/AuthContext';
+import { navigateBackOrHome } from '../utils/navigation';
 
 const DIFFICULTY_LEVELS = [
     { id: 'easy', label: 'Easy', icon: Shield, color: '#10b981', desc: 'Fundamental concepts' },
@@ -17,6 +19,7 @@ const DIFFICULTY_LEVELS = [
 export default function SubjectDetails() {
     const { courseId } = useParams();
     const navigate = useNavigate();
+    const { isAdmin } = useAuth();
     const location = useLocation();
 
     const [selectedSem, setSelectedSem] = useState(null);
@@ -190,7 +193,7 @@ export default function SubjectDetails() {
     return (
         <div className="container animate-fade-in" style={{ maxWidth: '960px' }}>
             <button
-                onClick={() => navigate(-1)}
+                onClick={() => navigateBackOrHome(navigate, isAdmin)}
                 style={{
                     display: 'flex', alignItems: 'center', gap: '0.5rem',
                     color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem'

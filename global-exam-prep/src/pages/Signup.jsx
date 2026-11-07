@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { resolveAuthReturnTarget } from '../utils/navigation';
 import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -443,7 +444,7 @@ export default function Signup() {
 
     // Where to land after a successful login/signup: the page that bounced the
     // visitor here via ProtectedRoute, if there was one.
-    const resumePath = location.state?.from?.pathname || '/dashboard';
+    const { path: resumePath, state: resumeState } = resolveAuthReturnTarget(location.state?.from);
 
     const [googleLoading, setGoogleLoading] = useState(false);
     const [globalError,   setGlobalError]   = useState('');
@@ -541,7 +542,7 @@ const [successData, setSuccessData] = useState(null);
         // yet, and sending the student to /dashboard would end the reset silently.
         if (recoveryMode) return;
         if (currentUser && !successDataRef.current && !authActionPending.current) {
-            navigate(resumePath, { replace: true });
+            navigate(resumePath, { replace: true, state: resumeState });
         }
     }, [currentUser, navigate, resumePath, recoveryMode]);
 
@@ -549,7 +550,7 @@ const [successData, setSuccessData] = useState(null);
     const handleSuccessDone = useCallback(() => {
         successDataRef.current = null;
         authActionPending.current = false;
-        navigate(resumePath, { replace: true });
+        navigate(resumePath, { replace: true, state: resumeState });
     }, [navigate, resumePath]);
 
     // ─── Google Redirect Sign-Up ─────────────────────────────────────────────

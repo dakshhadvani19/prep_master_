@@ -12,6 +12,7 @@ import {
 } from '../utils/supabaseExam';
 import { findSubjectContext } from '../utils/subjectResolver';
 import AttemptSourceBadge from '../components/AttemptSourceBadge';
+import { navigateBackOrHome } from '../utils/navigation';
 import './Dashboard.css';
 
 function resolveSubjectName(subjectId) {
@@ -28,7 +29,7 @@ export default function Dashboard() {
     const automaticEvaluationRunning = useRef(false);
     const navigate = useNavigate();
     const location = useLocation();
-    const { currentUser } = useAuth();
+    const { currentUser, isAdmin } = useAuth();
 
     const runEvaluation = useCallback(async (attemptId, automatic = false) => {
         if (activeEvaluations.current.has(attemptId)) return { status: 'evaluating' };
@@ -178,7 +179,7 @@ export default function Dashboard() {
     return (
         <div className="container animate-fade-in sd" style={{ maxWidth: '900px' }}>
             <button
-                onClick={() => navigate(-1)}
+                onClick={() => navigateBackOrHome(navigate, isAdmin)}
                 style={{
                     display: 'flex',
                     alignItems: 'center',
