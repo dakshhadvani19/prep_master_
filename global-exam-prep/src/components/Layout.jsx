@@ -655,17 +655,6 @@ export default function Layout() {
                 </motion.div>
             </main>
 
-            <footer style={{
-                borderTop: '1px solid var(--glass-border)',
-                padding: '1.5rem 1.5rem',
-                marginTop: 'auto',
-                textAlign: 'center',
-                color: 'var(--text-tertiary)',
-                fontSize: '0.875rem',
-            }}>
-                <p>© 2026 PrepMaster — Built by <strong style={{ color: 'var(--text-secondary)' }}>Daksh Hadvani</strong>. University Exam Preparation Platform.</p>
-            </footer>
-
             <style>{`
                 @media (max-width: 900px) {
                     .nav-desktop { display: none !important; }
