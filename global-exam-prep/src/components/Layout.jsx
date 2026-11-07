@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo, Suspense } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import { CATALOG_DOMAINS } from '../data/catalogDomains';
 import courseMapping from '../data/courseMapping.json';
