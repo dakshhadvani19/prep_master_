@@ -21,6 +21,164 @@ function adminClient() {
     if (!url || !key) throw new Error('Supabase server credentials are not configured.');
     return createClient(url, key, { auth: { autoRefreshToken: false, persistSession: false, detectSessionInUrl: false } });
 }
+const QUOTA_EXEMPT_EMAIL = 'dakshpatel09765gy@gmail.com';
+const QUOTA_LIMIT_MESSAGE = 'You have reached your weekly exam limit. Please subscribe to a paid plan for more exams.';
+
+function isQuotaExempt(user) {
+    return String(user?.email || '').trim().toLowerCase() === QUOTA_EXEMPT_EMAIL;
+}
+
+async function resolveCatalogSubjectId(admin, input = {}) {
+    const directId = Number(input.catalogSubjectId);
+    if (Number.isSafeInteger(directId) && directId > 0) return directId;
+
+    const courseValue = Number(input.courseId);
+    const semesterValue = Number(input.semester);
+    const { data, error } = await admin.rpc('pm_exam_resolve_subject_id', {
+        p_subject_code: input.subjectCode == null ? null : String(input.subjectCode),
+        p_subject_name: input.subjectName == null ? null : String(input.subjectName),
+        p_course_id: Number.isSafeInteger(courseValue) && courseValue > 0 ? courseValue : null,
+        p_semester: Number.isSafeInteger(semesterValue) && semesterValue >= 0 ? semesterValue : null,
+    });
+    if (error) throw new Error('The selected subject could not be matched to the academic catalog.');
+    return Number.isSafeInteger(Number(data)) && Number(data) > 0 ? Number(data) : null;
+}
+
+async function commitUsageReservation(admin, user, {
+    reservationId,
+    usageKind = 'exam',
+    creditCost = 1,
+    attemptId = null,
+    sourceTestId = null,
+}) {
+    if (isQuotaExempt(user)) return true;
+    if (!UUID_RE.test(String(reservationId || ''))) {
+        throw new Error(QUOTA_LIMIT_MESSAGE + ' Please restart the exam to verify your allowance.');
+    }
+    const { data, error } = await admin.rpc('pm_exam_usage_commit', {
+        p_user_id: user.id,
+        p_reservation_id: reservationId,
+        p_attempt_id: attemptId,
+        p_source_test_id: sourceTestId == null ? null : Number(sourceTestId),
+        p_expected_kind: usageKind,
+        p_expected_cost: creditCost,
+    });
+    if (error) throw new Error('Your exam allowance could not be confirmed. Please restart and try again.');
+    if (data?.ok !== true) throw new Error('Your exam reservation expired or was already used. Please start the exam again.');
+    return true;
+}
+
+async function releaseUsageReservation(admin, user, reservationId) {
+    if (isQuotaExempt(user) || !UUID_RE.test(String(reservationId || ''))) return;
+    const { error } = await admin.rpc('pm_exam_usage_release', {
+        p_user_id: user.id,
+        p_reservation_id: reservationId,
+    });
+    if (error) console.warn('[exam-attempts] Could not release an unused quota reservation:', error.message);
+}
+
+async function checkGenerationAllowance(admin, user, reservationId) {
+    if (isQuotaExempt(user)) return { allowed: true };
+    if (!UUID_RE.test(String(reservationId || ''))) {
+        return { allowed: false, message: QUOTA_LIMIT_MESSAGE };
+    }
+    const { data, error } = await admin.rpc('pm_exam_usage_check_generation', {
+        p_user_id: user.id,
+        p_reservation_id: reservationId,
+    });
+    if (error) throw new Error('The subject-specific exam allowance could not be verified. Please retry.');
+    return data || { allowed: false, message: QUOTA_LIMIT_MESSAGE };
+}
+
+async function claimTestsDataPaper(admin, user, reservationId, sourceTestId) {
+    if (isQuotaExempt(user)) return true;
+    if (!UUID_RE.test(String(reservationId || ''))) throw new Error(QUOTA_LIMIT_MESSAGE);
+    const { data, error } = await admin.rpc('pm_exam_usage_claim_source_test', {
+        p_user_id: user.id,
+        p_reservation_id: reservationId,
+        p_source_test_id: Number(sourceTestId),
+    });
+    if (error) throw new Error('This saved paper could not be reserved. Please try again.');
+    return data?.ok === true;
+}
+
+function expectedBlueprint(examType) {
+    const key = String(examType || '').toLowerCase() === 'final'
+        ? 'ese'
+        : String(examType || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    return EXAM_BLUEPRINTS[key] || null;
+}
+
+export function buildTestsDataPaper(candidate, questionType) {
+    if (!candidate || !Array.isArray(candidate.questions) || !candidate.questions.length) {
+        throw new Error('The saved exam paper is incomplete.');
+    }
+    const privateQuestions = Array.isArray(candidate.privateQuestions) ? candidate.privateQuestions : [];
+    const flatOptions = Array.isArray(candidate.options) ? candidate.options : [];
+    const answerValues = Array.isArray(candidate.answers) ? candidate.answers : [];
+    const keySnapshot = candidate.answerKey;
+    const keyIsArray = Array.isArray(keySnapshot);
+    const keyObject = keySnapshot && typeof keySnapshot === 'object' && !keyIsArray ? keySnapshot : {};
+    const answerKey = {};
+
+    const questions = candidate.questions.map((sourceQuestion, index) => {
+        const source = sourceQuestion && typeof sourceQuestion === 'object' && !Array.isArray(sourceQuestion)
+            ? sourceQuestion : { text: String(sourceQuestion || '') };
+        const privateQuestion = privateQuestions.find((question) => (
+            question?.id != null && String(question.id) === String(source.id || '')
+        )) || privateQuestions[index] || {};
+        const id = String(source.id || privateQuestion.id || ('db_q' + index)).slice(0, 120);
+        const question = { ...privateQuestion, ...source, id };
+        const normalizeOption = (option) => String(
+            option && typeof option === 'object' ? (option.text ?? option.label ?? '') : (option ?? '')
+        );
+
+        if (questionType === 'mcq') {
+            const options = Array.isArray(source.options) ? source.options
+                : Array.isArray(privateQuestion.options) ? privateQuestion.options
+                    : flatOptions.slice(index * 4, index * 4 + 4);
+            const rawAnswer = (keyIsArray ? keySnapshot[index] : keyObject[id])
+                ?? answerValues[index]
+                ?? privateQuestion.answer;
+            const answer = Number(rawAnswer);
+            if (!String(question.text || '').trim() || options.length !== 4
+                || options.some((option) => !normalizeOption(option).trim())
+                || !Number.isInteger(answer) || answer < 0 || answer > 3) {
+                throw new Error('The saved MCQ paper did not pass question and answer-key validation.');
+            }
+            question.type = 'mcq';
+            question.options = options.map(normalizeOption);
+            question.answer = answer;
+            answerKey[id] = answer;
+            return question;
+        }
+
+        if (questionType === 'theory') {
+            const answer = privateQuestion.answer ?? keyObject[id] ?? answerValues[index];
+            if (!String(question.text || '').trim()
+                || typeof answer !== 'string' || !answer.trim()
+                || !Array.isArray(privateQuestion.rubric) || !privateQuestion.rubric.length) {
+                throw new Error('The saved theory paper is missing its private model answer or marking rubric.');
+            }
+            question.type = 'subjective';
+            question.answer = answer;
+            question.rubric = privateQuestion.rubric;
+            question.answerFormat = privateQuestion.answerFormat || question.answerFormat || 'points';
+            return question;
+        }
+
+        throw new Error('Unsupported question type in saved exam paper.');
+    });
+
+    return {
+        questions,
+        answerKey: questionType === 'mcq' ? answerKey : {},
+        totalMarks: Number(candidate.totalMarks) || 0,
+        timeMinutes: Number(candidate.timeMinutes) || 0,
+        sourceTestId: Number(candidate.sourceTestId) || null,
+    };
+}
+
 function fail(res, status, message) {
     return res.status(status).json({ error: message });
 }
@@ -217,6 +375,181 @@ export default async function handler(req, res) {
         const user = await authenticate(req, admin);
         if (!user) return fail(res, 401, 'Sign in to continue.');
 
+        if (action === 'reserve_usage') {
+            const usageKind = String(body.usageKind || '');
+            if (!['exam', 'test_room'].includes(usageKind)) return fail(res, 400, 'Invalid exam usage type.');
+            const idempotencyKey = String(body.idempotencyKey || '');
+            if (!UUID_RE.test(idempotencyKey)) return fail(res, 400, 'Invalid exam request identifier.');
+            if (isQuotaExempt(user)) {
+                return res.status(200).json({ allowed: true, exempt: true, reservationId: null, remainingCredits: null });
+            }
+
+            const subjectId = await resolveCatalogSubjectId(admin, body);
+            if (!subjectId) {
+                return fail(res, 409, 'We could not verify this subject in the academic catalog. Please reload the subject and try again.');
+            }
+            if (!(await isActiveCatalogSubject(admin, subjectId))) {
+                return fail(res, 409, 'This subject has been removed from the active catalog.');
+            }
+            const { data, error } = await admin.rpc('pm_exam_usage_reserve', {
+                p_user_id: user.id,
+                p_idempotency_key: idempotencyKey,
+                p_usage_kind: usageKind,
+                p_credit_cost: usageKind === 'test_room' ? 2 : 1,
+                p_subject_id: subjectId,
+            });
+            if (error) throw new Error('Your weekly exam allowance could not be checked. Please retry.');
+            if (data?.allowed !== true) {
+                return res.status(429).json({
+                    error: data?.message || QUOTA_LIMIT_MESSAGE,
+                    code: 'EXAM_USAGE_LIMIT',
+                    usedCredits: Number(data?.usedCredits) || 0,
+                    remainingCredits: Number(data?.remainingCredits) || 0,
+                });
+            }
+            return res.status(200).json({
+                allowed: true,
+                exempt: false,
+                reservationId: data.reservationId,
+                remainingCredits: Number(data.remainingCredits) || 0,
+            });
+        }
+
+        if (action === 'check_generation') {
+            if (isQuotaExempt(user)) return res.status(200).json({ allowed: true });
+            const reservationId = String(body.reservationId || '');
+            const result = await checkGenerationAllowance(admin, user, reservationId);
+            if (result.allowed !== true) {
+                await releaseUsageReservation(admin, user, reservationId);
+                return res.status(429).json({
+                    error: result.message || QUOTA_LIMIT_MESSAGE,
+                    code: 'SUBJECT_EXAM_GENERATION_LIMIT',
+                });
+            }
+            return res.status(200).json({ allowed: true, subjectCount: result.subjectCount ?? null });
+        }
+
+        if (action === 'release_usage') {
+            await releaseUsageReservation(admin, user, String(body.reservationId || ''));
+            return res.status(200).json({ ok: true });
+        }
+
+        if (action === 'create_from_tests_data') {
+            const subjectId = await resolveCatalogSubjectId(admin, body);
+            if (!subjectId) return res.status(200).json({ found: false, reason: 'subject_not_mapped' });
+            const difficulty = String(body.difficulty || 'medium');
+            const examType = String(body.examType || '');
+            const questionType = String(body.questionType || '');
+            const forTestRoom = body.forTestRoom === true;
+            if (!['easy', 'medium', 'hard'].includes(difficulty)
+                || !['mcq', 'theory'].includes(questionType)
+                || (forTestRoom && questionType !== 'mcq')) {
+                return fail(res, 400, 'Invalid saved exam selection.');
+            }
+
+            const { data: subject, error: subjectError } = await admin.from('Subjects')
+                .select('SubjectId,SubjectName,isDepartmentalSubject')
+                .eq('SubjectId', subjectId).maybeSingle();
+            if (subjectError || !subject) return fail(res, 404, 'The selected subject could not be verified.');
+            if (!(await isActiveCatalogSubject(admin, subjectId))) {
+                return fail(res, 409, 'This subject has been removed from the active catalog.');
+            }
+            const examInfo = getSubjectExamInfo(examType, subject.isDepartmentalSubject);
+            const blueprint = expectedBlueprint(examType);
+            if (!examInfo || !blueprint || (examInfo.type === 'objective') !== (questionType === 'mcq')) {
+                return fail(res, 400, 'This exam type is not available for the selected subject.');
+            }
+
+            const { data: candidates, error: candidatesError } = await admin.rpc('pm_exam_testsdata_candidates', {
+                p_user_id: user.id,
+                p_subject_id: subjectId,
+                p_exam_type: examType,
+                p_difficulty: difficulty,
+                p_question_type: questionType,
+            });
+            if (candidatesError) throw new Error('Saved exam papers could not be checked. Please retry.');
+
+            let selectedPaper = null;
+            for (const candidate of (Array.isArray(candidates) ? candidates : [])) {
+                try {
+                    const paper = buildTestsDataPaper(candidate, questionType);
+                    if (paper.questions.length !== blueprint.questionCount) continue;
+                    const claimed = await claimTestsDataPaper(
+                        admin, user, String(body.reservationId || ''), paper.sourceTestId,
+                    );
+                    if (!claimed) continue;
+                    selectedPaper = paper;
+                    break;
+                } catch (paperError) {
+                    console.warn('[exam-attempts] Skipping an incomplete TestsData paper:', paperError?.message || paperError);
+                }
+            }
+            if (!selectedPaper) return res.status(200).json({ found: false });
+
+            if (forTestRoom) {
+                return res.status(200).json({
+                    found: true,
+                    questions: selectedPaper.questions,
+                    sourceTestId: selectedPaper.sourceTestId,
+                });
+            }
+
+            const privateQuestions = selectedPaper.questions.map((question) => studentSafeQuestion(question));
+            const studentQuestions = selectedPaper.questions.map((question) => {
+                const safe = { ...question };
+                delete safe.answer;
+                delete safe.answerFormat;
+                delete safe.rubric;
+                delete safe.review;
+                return safe;
+            });
+            let attempt = null;
+            try {
+                const now = new Date().toISOString();
+                attempt = await privateExamData(admin, 'create_attempt', {
+                    user_id: user.id,
+                    subject_code: String(subjectId),
+                    subject_name: String(subject.SubjectName || body.subjectName || 'Unknown subject').slice(0, 200),
+                    exam_type: examType,
+                    difficulty,
+                    questions: privateQuestions,
+                    total_marks: selectedPaper.totalMarks || blueprint.totalMarks,
+                    time_minutes: selectedPaper.timeMinutes || blueprint.timeMinutes,
+                    answers: Object.fromEntries(Object.keys(selectedPaper.answerKey).map((questionId) => [questionId, -1])),
+                    score: null,
+                    status: 'in_progress',
+                    attempt_type: 'exam',
+                    started_at: now,
+                    updated_at: now,
+                    answer_key: selectedPaper.answerKey,
+                });
+                if (!attempt?.id) throw new Error('The saved exam attempt could not be created.');
+                await tagAttemptSubject(admin, attempt.id, user.id, subjectId);
+                await commitUsageReservation(admin, user, {
+                    reservationId: body.reservationId,
+                    usageKind: 'exam',
+                    creditCost: 1,
+                    attemptId: attempt.id,
+                    sourceTestId: selectedPaper.sourceTestId,
+                });
+            } catch (error) {
+                if (attempt?.id) {
+                    await privateExamData(admin, 'update_attempt', {
+                        id: attempt.id, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
+                        patch: { status: 'cancelled', end_reason: 'testsdata_reuse_failed', updated_at: new Date().toISOString() },
+                    }).catch(() => {});
+                }
+                await releaseUsageReservation(admin, user, String(body.reservationId || ''));
+                throw error;
+            }
+            return res.status(201).json({
+                found: true,
+                id: attempt.id,
+                questions: studentQuestions,
+                sourceTestId: selectedPaper.sourceTestId,
+            });
+        }
+
         if (action === 'create_from_question_bank') {
             const catalogSubjectId = Number(body.catalogSubjectId);
             const examType = String(body.examType || '');
@@ -296,11 +629,19 @@ export default async function handler(req, res) {
             if (!attempt?.id) throw new Error('The curated question-bank attempt was not saved.');
             try {
                 await tagAttemptSubject(admin, attempt.id, user.id, catalogSubjectId);
+                await commitUsageReservation(admin, user, {
+                    reservationId: body.reservationId,
+                    usageKind: 'exam',
+                    creditCost: 1,
+                    attemptId: attempt.id,
+                    sourceTestId: Number(attempt.core_test_id) || null,
+                });
             } catch (error) {
                 await privateExamData(admin, 'update_attempt', {
                     id: attempt.id, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
                     patch: { status: 'cancelled', end_reason: 'catalog_subject_link_failed', updated_at: new Date().toISOString() },
                 }).catch(() => {});
+                await releaseUsageReservation(admin, user, String(body.reservationId || ''));
                 throw error;
             }
             return res.status(201).json({
@@ -332,21 +673,18 @@ export default async function handler(req, res) {
                 }
                 safeQuestions.push(studentSafeQuestion(question));
             }
-            let catalogSubjectId = null;
-            if (body.catalogSubjectId !== undefined && body.catalogSubjectId !== null && body.catalogSubjectId !== '') {
-                catalogSubjectId = Number(body.catalogSubjectId);
-                if (!Number.isSafeInteger(catalogSubjectId) || catalogSubjectId <= 0) {
-                    return fail(res, 400, 'Invalid catalog subject identifier.');
-                }
-                const { data: catalogSubject, error: catalogError } = await admin
-                    .from('Subjects')
-                    .select('SubjectId')
-                    .eq('SubjectId', catalogSubjectId)
-                    .maybeSingle();
-                if (catalogError) throw new Error(catalogError.message);
-                if (!catalogSubject) return fail(res, 400, 'The selected catalog subject no longer exists.');
-                if (!(await isActiveCatalogSubject(admin, catalogSubjectId))) return fail(res, 409, 'This subject has been removed from the active catalog. Ask an administrator to restore it.');
+            const catalogSubjectId = await resolveCatalogSubjectId(admin, body);
+            if (!catalogSubjectId) {
+                return fail(res, 409, 'We could not verify this subject in the academic catalog. Please reload the subject and try again.');
             }
+            const { data: catalogSubject, error: catalogError } = await admin
+                .from('Subjects')
+                .select('SubjectId')
+                .eq('SubjectId', catalogSubjectId)
+                .maybeSingle();
+            if (catalogError) throw new Error(catalogError.message);
+            if (!catalogSubject) return fail(res, 400, 'The selected catalog subject no longer exists.');
+            if (!(await isActiveCatalogSubject(admin, catalogSubjectId))) return fail(res, 409, 'This subject has been removed from the active catalog. Ask an administrator to restore it.');
 
             const payload = {
                 user_id: user.id,
@@ -381,6 +719,25 @@ export default async function handler(req, res) {
                     }).catch(() => {});
                     throw error;
                 }
+            }
+            try {
+                const refreshedAttempt = await privateExamData(admin, 'get_attempt', {
+                    id: attempt.id, user_id: user.id, attempt_type: 'exam',
+                });
+                await commitUsageReservation(admin, user, {
+                    reservationId: body.reservationId,
+                    usageKind: 'exam',
+                    creditCost: 1,
+                    attemptId: attempt.id,
+                    sourceTestId: Number(refreshedAttempt?.core_test_id || attempt.core_test_id) || null,
+                });
+            } catch (error) {
+                await privateExamData(admin, 'update_attempt', {
+                    id: attempt.id, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
+                    patch: { status: 'cancelled', end_reason: 'usage_commit_failed', updated_at: new Date().toISOString() },
+                }).catch(() => {});
+                await releaseUsageReservation(admin, user, String(body.reservationId || ''));
+                throw error;
             }
             return res.status(201).json({ id: attempt.id });
         }
