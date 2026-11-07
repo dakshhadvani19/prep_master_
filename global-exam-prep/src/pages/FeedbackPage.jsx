@@ -29,8 +29,6 @@ async function requestFeedback(accessToken, payload) {
     return { response, result };
 }
 
-
-
 export default function FeedbackPage() {
     const navigate = useNavigate();
     const { session, currentUser, isAdmin, authLoading } = useAuth();
