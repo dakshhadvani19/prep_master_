@@ -27,6 +27,7 @@ function clientMock({ isActive = true } = {}) {
         if (name === 'pm_student_question_bank_candidates') return { data: { banks: [bank] }, error: null };
         if (name === 'pm_private_exam_data') return { data: { id: 'attempt-uuid', saved: args.p_payload }, error: null };
         if (name === 'pm_private_exam_tag_subject') return { data: { ok: true }, error: null };
+        if (name === 'pm_exam_usage_commit') return { data: { ok: true }, error: null };
         return { data: null, error: new Error('Unexpected RPC ' + name) };
     });
     const client = {
@@ -50,7 +51,13 @@ describe('student published question-bank API', () => {
         createClient.mockReturnValue(client);
         const res = response();
         await handler({ method: 'POST', url: '/api/exam-attempts', headers: { authorization: 'Bearer student-token' },
-            body: { action: 'create_from_question_bank', catalogSubjectId: 411, examType: 'mid-2', difficulty: 'medium' } }, res);
+            body: {
+                action: 'create_from_question_bank',
+                catalogSubjectId: 411,
+                examType: 'mid-2',
+                difficulty: 'medium',
+                reservationId: 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',
+            } }, res);
         expect(res.statusCode).toBe(201);
         expect(res.body.questions).toHaveLength(30);
         expect(res.body.questions.every(question => !('answer' in question))).toBe(true);
