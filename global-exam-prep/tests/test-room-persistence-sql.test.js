@@ -17,6 +17,13 @@ const MIGRATIONS = [
     '20261027113555_leaderboard_canonical_subject_binding.sql',
     '20261027114334_backfill_unambiguous_legacy_leaderboard_subjects.sql',
     '20261027115731_leaderboard_include_finalized_attempts.sql',
+    '20261107043017_exam_usage_limits_and_reservations.sql',
+    '20261107043118_exam_testsdata_lookup_and_usage_backfill.sql',
+    '20261107043226_include_private_exam_rubric_in_testdata_lookup.sql',
+    '20261107043848_enforce_generation_only_subject_cap_and_resolve_exam_subjects.sql',
+    '20261107043957_claim_shared_testsdata_papers_atomically.sql',
+    '20261107044336_count_distinct_subject_exams_and_bind_charge_to_attempt.sql',
+    '20261107044838_allow_testsdata_reuse_after_subject_generation_cap.sql',
 ].map((filename) => readFileSync(
     `${globalThis.process.cwd()}/supabase/migrations/${filename}`,
     'utf8',
@@ -492,5 +499,74 @@ describe('Private attempt persistence and public ERD mirroring', () => {
         expect(verified.rows[0].result.ok).toBe(true);
         const missing = await db.query(`select count(*)::int as count from private.auth_otp where email='new@example.com'`);
         expect(missing.rows[0].count).toBe(0);
+    });
+});
+
+describe('Weekly exam credits and subject-specific generation cap', () => {
+    it('charges two credits per Test Room and rejects use above ten weekly credits', async () => {
+        for (let index = 0; index < 5; index += 1) {
+            const key = `00000000-0000-4000-8000-${String(index + 1).padStart(12, '0')}`;
+            const result = await db.query(
+                `select public.pm_exam_usage_reserve($1::uuid,$2::uuid,'test_room',2,1001) as result`,
+                [USER_A, key],
+            );
+            expect(result.rows[0].result.allowed).toBe(true);
+            expect(result.rows[0].result.remainingCredits).toBe(8 - index * 2);
+        }
+        const blocked = await db.query(
+            `select public.pm_exam_usage_reserve($1::uuid,$2::uuid,'exam',1,1001) as result`,
+            [USER_A, '00000000-0000-4000-8000-000000000006'],
+        );
+        expect(blocked.rows[0].result).toMatchObject({
+            allowed: false, reason: 'weekly_limit', usedCredits: 10, remainingCredits: 0,
+        });
+    });
+
+    it('blocks new AI generation after ten distinct exams for one subject', async () => {
+        await db.query(
+            `insert into private.exam_usage_ledger
+              (user_id,idempotency_key,usage_kind,credit_cost,subject_id,source_test_id,status,reserved_at,expires_at,committed_at)
+             select $1, ('00000000-0000-4000-8000-' || lpad(g::text,12,'0'))::uuid,
+                    'exam',1,1001,70000+g,'committed',now(),now(),now()
+               from generate_series(1,10) g`,
+            [USER_B],
+        );
+        const reservation = await db.query(
+            `insert into private.exam_usage_ledger
+              (user_id,idempotency_key,usage_kind,credit_cost,subject_id,status,expires_at)
+             values ($1,'00000000-0000-4000-8000-000000000021','exam',1,1001,'reserved',now()+interval '15 minutes')
+             returning id`,
+            [USER_B],
+        );
+        const gate = await db.query(
+            `select public.pm_exam_usage_check_generation($1::uuid,$2::uuid) as result`,
+            [USER_B, reservation.rows[0].id],
+        );
+        expect(gate.rows[0].result).toMatchObject({
+            allowed: false, reason: 'subject_generation_limit', subjectCount: 10,
+        });
+        const released = await db.query(
+            'select status from private.exam_usage_ledger where id=$1',
+            [reservation.rows[0].id],
+        );
+        expect(released.rows[0].status).toBe('released');
+    });
+
+    it('resolves canonical subject IDs from subject name and course hierarchy', async () => {
+        const resolved = await db.query(
+            `select public.pm_exam_resolve_subject_id('01ma0106','Calculus',1,1) as subject_id`,
+        );
+        expect(Number(resolved.rows[0].subject_id)).toBe(1001);
+    });
+
+    it('keeps quota storage and reservation RPC inaccessible to browser roles', async () => {
+        await expect(asRole('authenticated','select * from private.exam_usage_ledger'))
+            .rejects.toThrow(/permission denied/i);
+        const grants = await db.query(`
+            select has_function_privilege('anon','public.pm_exam_usage_reserve(uuid,uuid,text,integer,bigint)','EXECUTE') as anon_exec,
+                   has_function_privilege('authenticated','public.pm_exam_usage_reserve(uuid,uuid,text,integer,bigint)','EXECUTE') as authenticated_exec,
+                   has_function_privilege('service_role','public.pm_exam_usage_reserve(uuid,uuid,text,integer,bigint)','EXECUTE') as service_exec
+        `);
+        expect(grants.rows[0]).toEqual({ anon_exec: false, authenticated_exec: false, service_exec: true });
     });
 });
