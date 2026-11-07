@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
-const config = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf8'));
+const config = JSON.parse(readFileSync('vercel.json', 'utf8'));
 const includeFiles = config.functions?.['api/admin-subjects.js']?.includeFiles || '';
 
 describe('PDF upload function bundle configuration', () => {
