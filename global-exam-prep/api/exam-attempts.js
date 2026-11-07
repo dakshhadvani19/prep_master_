@@ -91,12 +91,13 @@ async function checkGenerationAllowance(admin, user, reservationId) {
 }
 
 async function claimTestsDataPaper(admin, user, reservationId, sourceTestId) {
-    if (isQuotaExempt(user)) return true;
-    if (!UUID_RE.test(String(reservationId || ''))) throw new Error(QUOTA_LIMIT_MESSAGE);
-    const { data, error } = await admin.rpc('pm_exam_usage_claim_source_test', {
+    const exempt = isQuotaExempt(user);
+    if (!exempt && !UUID_RE.test(String(reservationId || ''))) throw new Error(QUOTA_LIMIT_MESSAGE);
+    const { data, error } = await admin.rpc('pm_exam_source_paper_claim', {
         p_user_id: user.id,
-        p_reservation_id: reservationId,
+        p_reservation_id: exempt ? null : reservationId,
         p_source_test_id: Number(sourceTestId),
+        p_require_usage_reservation: !exempt,
     });
     if (error) throw new Error('This saved paper could not be reserved. Please try again.');
     return data?.ok === true;
