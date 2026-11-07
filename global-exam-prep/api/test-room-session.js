@@ -681,6 +681,7 @@ export default async function handler(req, res) {
                     }).catch(() => {});
                 }
                 await redis('DEL', keys(code).meta, keys(code).questions, keys(code).members, keys(code, user.id).participant).catch(() => {});
+                await releaseHostRoomUsage(admin, user, String(body.reservationId || ''));
                 return fail(res, 503, 'The room was not created because its attempt could not be saved: ' + error.message);
             }
         }
