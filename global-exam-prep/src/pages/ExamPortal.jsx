@@ -993,7 +993,7 @@ export default function ExamPortal() {
             {/* ── STEP 2: File Upload UI ── */}
             {examState === 'intro' && examMode === 'upload' && (
                 <div className="glass-panel pm-exam-upload-card" style={{ padding: '2.5rem', marginTop: '2rem', maxWidth: '680px', margin: '2rem auto 0' }}>
-                    <button onClick={() => navigateBackOrHome(navigate, isAdmin)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}>
+                    <button onClick={() => navigateBackOrHome(navigate, isAdmin, { returnTo: location.state?.returnTo })} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}>
                         <ChevronLeft size={16} /> Back to Subject
                     </button>
 
@@ -1096,7 +1096,7 @@ export default function ExamPortal() {
             {examState === 'intro' && examMode === 'auto' && (
                 <div className="glass-panel pm-exam-intro-card" style={{ padding: '3rem', textAlign: 'center', marginTop: '2rem' }}>
                     <button
-                        onClick={() => navigateBackOrHome(navigate, isAdmin)}
+                        onClick={() => navigateBackOrHome(navigate, isAdmin, { returnTo: location.state?.returnTo })}
                         style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}
                     >
                         <ChevronLeft size={16} /> Back

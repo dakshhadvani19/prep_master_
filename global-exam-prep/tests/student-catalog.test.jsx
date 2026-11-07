@@ -5,7 +5,7 @@
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { act, render, screen, waitFor, cleanup, fireEvent } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { MemoryRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 const holder = vi.hoisted(() => ({ entry: '/' }));
 
@@ -27,6 +27,7 @@ const courseMapping = (await import('../src/data/courseMapping.json')).default;
 const App = (await import('../src/App.jsx')).default;
 const CourseExplorer = (await import('../src/pages/CourseExplorer.jsx')).default;
 const SubjectDetails = (await import('../src/pages/SubjectDetails.jsx')).default;
+const { navigateBackOrHome } = await import('../src/utils/navigation.js');
 
 const ENG_IDS = courseIdsForDomain('engineering');
 const MATH_ID = 1001131010601; // course 1, semester 1 (current final numeric id)
@@ -55,6 +56,37 @@ function renderSubjects(courseId) {
     <MemoryRouter initialEntries={[`/courses/${courseId}/subjects`]}>
       <Routes>
         <Route path="/courses/:courseId/subjects" element={<SubjectDetails />} />
+      </Routes>
+    </MemoryRouter>,
+  );
+}
+
+function ExamInstructionsStub() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  return (
+    <div>
+      <h1>Exam instructions</h1>
+      <output data-testid="saved-selection">
+        {JSON.stringify(location.state?.returnTo?.state?.subjectSelection ?? null)}
+      </output>
+      <button
+        type="button"
+        onClick={() => navigateBackOrHome(navigate, false, { returnTo: location.state?.returnTo })}
+      >
+        Back to subject setup
+      </button>
+    </div>
+  );
+}
+
+function renderSubjectFlow() {
+  return render(
+    <MemoryRouter initialEntries={['/courses/1/subjects']}>
+      <Routes>
+        <Route path="/courses/:courseId/subjects" element={<SubjectDetails />} />
+        <Route path="/exams/:subjectId/:examType/:difficulty" element={<ExamInstructionsStub />} />
       </Routes>
     </MemoryRouter>,
   );
@@ -125,6 +157,44 @@ describe('department → courses', () => {
 });
 
 describe('course → subjects', () => {
+
+  it('restores semester, subject, exam type, mode and difficulty after returning from exam instructions', async () => {
+    seedEngineering();
+    state.catalogSubjects = [
+      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1, isDepartmentalSubject: false },
+    ];
+
+    renderSubjectFlow();
+    await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
+
+    fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Mathematics-I/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Mid-Term 1 \\(Theory\\)/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Auto AI Exam/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Hard/ }));
+
+    fireEvent.click(screen.getByRole('button', { name: /Start Exam/i }));
+    expect(await screen.findByRole('heading', { name: 'Exam instructions' })).toBeTruthy();
+
+    const savedSelection = JSON.parse(screen.getByTestId('saved-selection').textContent);
+    expect(savedSelection).toEqual({
+      courseId: '1',
+      semester: 1,
+      subjectId: String(MATH_ID),
+      examType: 'mid-1',
+      mode: 'auto',
+      difficulty: 'hard',
+    });
+
+    fireEvent.click(screen.getByRole('button', { name: /Back to subject setup/i }));
+    expect(await screen.findByRole('button', { name: /Start Exam/i })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Sem 1/i }).getAttribute('aria-pressed')).toBe('true');
+    expect(screen.getByRole('button', { name: /Mathematics-I/i }).getAttribute('aria-pressed')).toBe('true');
+    expect(screen.getByRole('button', { name: /Mid-Term 1 \\(Theory\\)/i }).getAttribute('aria-pressed')).toBe('true');
+    expect(screen.getByRole('button', { name: /Auto AI Exam/i }).getAttribute('aria-pressed')).toBe('true');
+    expect(screen.getByRole('button', { name: /Hard/ }).getAttribute('aria-pressed')).toBe('true');
+  });
+
   it('fetches subjects only for that CourseId and keeps numeric ids in the route', async () => {
     seedEngineering();
     state.catalogSubjects = [

@@ -12,7 +12,7 @@ import {
 } from '../utils/supabaseExam';
 import { findSubjectContext } from '../utils/subjectResolver';
 import AttemptSourceBadge from '../components/AttemptSourceBadge';
-import { navigateBackOrHome } from '../utils/navigation';
+import { navigateToRoleHome } from '../utils/navigation';
 import './Dashboard.css';
 
 function resolveSubjectName(subjectId) {
@@ -179,7 +179,7 @@ export default function Dashboard() {
     return (
         <div className="container animate-fade-in sd" style={{ maxWidth: '900px' }}>
             <button
-                onClick={() => navigateBackOrHome(navigate, isAdmin)}
+                onClick={() => navigateToRoleHome(navigate, isAdmin)}
                 style={{
                     display: 'flex',
                     alignItems: 'center',

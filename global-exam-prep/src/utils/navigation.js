@@ -2,12 +2,19 @@
  * Navigation helpers shared by student and administrator routes.
  */
 
+function isSafeInternalPath(path) {
+    return typeof path === 'string'
+        && path.startsWith('/')
+        && !path.startsWith('//');
+}
+
 /**
- * Go back only when React Router has an earlier in-app history entry.
- * A direct deep link / newly opened tab has index 0 and should return to the
- * correct role home instead of doing nothing or leaving the application.
+ * Prefer an earlier in-app route. When a route was opened directly and there
+ * is no usable history entry, an explicit lightweight return target can still
+ * restore the screen that launched it.
  */
-export function navigateBackOrHome(navigate, isAdmin = false) {
+export function navigateBackOrHome(navigate, isAdmin = false, options = {}) {
+    const returnTo = options?.returnTo ?? null;
     const historyIndex = typeof window !== 'undefined'
         ? window.history?.state?.idx
         : null;
@@ -17,20 +24,82 @@ export function navigateBackOrHome(navigate, isAdmin = false) {
         return true;
     }
 
-    navigate(isAdmin ? '/dashboard' : '/', { replace: true });
+    if (returnTo && isSafeInternalPath(returnTo.path)) {
+        navigate(returnTo.path, {
+            replace: true,
+            state: returnTo.state ?? null,
+        });
+        return false;
+    }
+
+    navigateToRoleHome(navigate, isAdmin);
     return false;
 }
 
-function isSafeInternalPath(path) {
-    return typeof path === 'string'
-        && path.startsWith('/')
-        && !path.startsWith('//');
+/**
+ * Some screens have a fixed semantic destination and should not depend on
+ * whichever page happens to be behind them in browser history.
+ */
+export function navigateToRoleHome(navigate, isAdmin = false) {
+    const path = isAdmin ? '/dashboard' : '/';
+    navigate(path, { replace: true });
+    return path;
+}
+
+function normalizeSubjectSelection(selection, courseId) {
+    const semesterValue = selection?.semester;
+    const semester = semesterValue === null || semesterValue === undefined || semesterValue === ''
+        ? null
+        : Number(semesterValue);
+    const subjectId = selection?.subjectId === null || selection?.subjectId === undefined || selection?.subjectId === ''
+        ? null
+        : String(selection.subjectId);
+    const examType = typeof selection?.examType === 'string' && selection.examType.length <= 64
+        ? selection.examType
+        : null;
+    const mode = ['auto', 'upload'].includes(selection?.mode) ? selection.mode : null;
+    const difficulty = ['easy', 'medium', 'hard'].includes(selection?.difficulty)
+        ? selection.difficulty
+        : 'medium';
+
+    return {
+        courseId: String(courseId),
+        semester: Number.isInteger(semester) ? semester : null,
+        subjectId,
+        examType,
+        mode,
+        difficulty,
+    };
+}
+
+/** Read a small subject-selection snapshot from a matching course history entry. */
+export function readSubjectSelection(locationState, courseId) {
+    const saved = locationState?.subjectSelection;
+    if (!saved || typeof saved !== 'object' || String(saved.courseId) !== String(courseId)) {
+        return null;
+    }
+
+    return normalizeSubjectSelection(saved, courseId);
 }
 
 /**
- * Restore the complete route that sent a visitor to Signup.
- * ProtectedRoute passes a React Router Location object; a few direct sign-in
- * actions pass a simple path string. Keep query filters, hashes and route state.
+ * Merge IDs and option values into route state without discarding unrelated
+ * metadata. Generated questions, files and syllabus content are never stored.
+ */
+export function mergeSubjectSelectionState(locationState, courseId, selection) {
+    const safeState = locationState && typeof locationState === 'object' && !Array.isArray(locationState)
+        ? locationState
+        : {};
+
+    return {
+        ...safeState,
+        subjectSelection: normalizeSubjectSelection(selection, courseId),
+    };
+}
+
+/**
+ * Restore the complete route that sent a visitor to Signup. ProtectedRoute
+ * passes a React Router Location object; direct sign-in actions pass a path.
  */
 export function resolveAuthReturnTarget(from) {
     if (typeof from === 'string') {
@@ -51,7 +120,7 @@ export function resolveAuthReturnTarget(from) {
         : '';
 
     return {
-        path: `${from.pathname}${search}${hash}`,
+        path: from.pathname + search + hash,
         state: from.state ?? null,
     };
 }
