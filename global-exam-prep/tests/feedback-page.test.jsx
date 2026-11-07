@@ -109,7 +109,7 @@ describe('FeedbackPage', () => {
             json: async () => ({ success: true, feedbackId: 101 }),
         });
         renderPage();
-        fireEvent.click(screen.getByRole('button', { name: /other/i }));
+        fireEvent.click(await screen.findByRole('button', { name: /other/i }));
         expect(screen.getByText(/does not fit the other categories/i)).toBeTruthy();
 
         fireEvent.change(screen.getByRole('textbox', { name: /description/i }), {
