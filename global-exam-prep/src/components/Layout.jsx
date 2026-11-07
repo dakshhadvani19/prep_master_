@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo, Suspense } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import { CATALOG_DOMAINS } from '../data/catalogDomains';
 import courseMapping from '../data/courseMapping.json';
@@ -202,37 +201,19 @@ export default function Layout() {
                         }}
                     >
                         {navItems.map(item => {
-                            const isHovered = hoveredNav === item.id;
                             const isCurrent = activeNavId === item.id;
                             const showPill = activeBackgroundId === item.id;
 
                             return (
                                 <div
                                     key={item.id}
-                                    style={{ position: 'relative', display: 'flex', height: '36px' }}
+                                    className="nav-desktop-item"
                                     onMouseEnter={() => setHoveredNav(item.id)}
                                 >
                                     {showPill && (
-                                        <motion.div
-                                            layoutId="nav-desktop-pill"
-                                            style={{
-                                                position: 'absolute',
-                                                inset: 0,
-                                                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03))',
-                                                backdropFilter: 'blur(12px)',
-                                                WebkitBackdropFilter: 'blur(12px)',
-                                                border: '1px solid rgba(255, 255, 255, 0.18)',
-                                                borderRadius: 'var(--radius-full)',
-                                                zIndex: 0,
-                                                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 18px rgba(255, 180, 84, 0.16)',
-                                            }}
-                                            transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
-                                        />
+                                        <div className="nav-active-pill" aria-hidden="true" />
                                     )}
-                                    <motion.div
-                                        whileTap={{ scale: 0.94 }}
-                                        style={{ display: 'flex', position: 'relative', zIndex: 1 }}
-                                    >
+                                    <div style={{ display: 'flex', position: 'relative', zIndex: 1 }}>
                                         {item.isButton ? (
                                             <button
                                                 onClick={handleContactClick}
@@ -274,7 +255,7 @@ export default function Layout() {
                                                 {item.label}
                                             </Link>
                                         )}
-                                    </motion.div>
+                                    </div>
                                 </div>
                             );
                         })}

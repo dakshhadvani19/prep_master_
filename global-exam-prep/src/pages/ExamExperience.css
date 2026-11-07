@@ -374,18 +374,8 @@
 .pm-room-question-pill[aria-current="step"] {
     color: #ffffff;
     border-color: rgba(191, 219, 254, .82);
-    background: transparent;
-    box-shadow: 0 0 0 1px rgba(96, 165, 250, .18), 0 5px 16px rgba(37, 99, 235, .26);
-}
-.pm-exam-question-active-pill,
-.pm-room-question-active-pill {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    border: 1px solid rgba(191, 219, 254, .8);
-    border-radius: 13px;
     background: linear-gradient(135deg, #1d4ed8, #3b82f6);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .34), 0 5px 16px rgba(37, 99, 235, .42);
+    box-shadow: 0 0 0 1px rgba(96, 165, 250, .18), 0 5px 16px rgba(37, 99, 235, .26);
 }
 .pm-exam-question-pill-label,
 .pm-room-question-pill-label {
@@ -589,10 +579,6 @@
         background: #111c2c !important;
         border-color: rgba(255, 255, 255, .42) !important;
     }
-    .pm-exam-question-active-pill,
-    .pm-room-question-active-pill {
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .28), 0 3px 10px rgba(37, 99, 235, .24);
-    }
 }
 @media (prefers-reduced-motion: reduce) {
     .pm-exam-portal *,
@@ -793,8 +779,6 @@
 .pm-room-question-pill:hover,
 .pm-exam-question-pill[aria-current="step"],
 .pm-room-question-pill[aria-current="step"],
-.pm-exam-question-active-pill,
-.pm-room-question-active-pill,
 .pm-exam-option,
 .pm-room-answer-option,
 .pm-exam-option[data-selected="true"],

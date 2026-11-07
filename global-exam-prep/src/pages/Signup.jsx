@@ -301,13 +301,6 @@ const SegmentedControl = ({ active, onChange }) => {
                         className={`segment-btn ${isActive ? 'active' : ''}`}
                         onClick={() => onChange(val)}
                     >
-                        {isActive && (
-                            <motion.div
-                                layoutId="segment-indicator"
-                                className="active-segment-bg"
-                                transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                            />
-                        )}
                         <span className="segment-text">{option}</span>
                     </button>
                 );

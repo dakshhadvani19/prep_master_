@@ -350,10 +350,12 @@ input:focus-visible,
     color: var(--accent);
 }
 
-.active-segment-bg {
+.segment-btn.active::before {
+    content: "";
     position: absolute;
     inset: 0;
-    /* Brand amber → gold gradient pill */
+    pointer-events: none;
+    /* The active tab owns this fill; it never travels between buttons. */
     background: linear-gradient(135deg, var(--accent) 0%, #ffd08a 55%, #ffb454 100%);
     border-radius: 8px;
     box-shadow:

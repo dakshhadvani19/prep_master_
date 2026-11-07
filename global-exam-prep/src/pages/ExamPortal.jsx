@@ -1381,13 +1381,6 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
                                     aria-label={'Question ' + (idx + 1) + (isAnswered ? ', answered' : ', unanswered')}
                                     onClick={() => setCurrentQ(idx)}
                                 >
-                                    {isCurrent && (
-                                        <motion.span
-                                            layoutId={reduceMotion ? undefined : "pm-exam-question-active-pill"}
-                                            className="pm-exam-question-active-pill"
-                                            transition={reduceMotion ? { duration: 0 } : { type: 'spring', bounce: 0.16, duration: 0.5 }}
-                                        />
-                                    )}
                                     <span className="pm-exam-question-pill-label">{idx + 1}</span>
                                 </button>
                             );

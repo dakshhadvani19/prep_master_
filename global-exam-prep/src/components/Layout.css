@@ -11,6 +11,25 @@
     margin: 0 auto;
 }
 
+/* Local active/hover fill: always positioned within its own nav item. */
+.nav-desktop-item {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    height: 36px;
+}
+
+.nav-desktop-item .nav-active-pill {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 18px rgba(255, 180, 84, 0.16);
+}
+
 .pm-logo {
     position: relative;
     transition: transform 0.28s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));

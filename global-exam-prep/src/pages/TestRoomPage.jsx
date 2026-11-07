@@ -1389,13 +1389,6 @@ export default function TestRoomPage() {
                                         onClick={() => setCurrentQuestionIndex(index)}
                                         whileTap={reduceMotion ? undefined : { scale: 0.94 }}
                                     >
-                                        {isCurrent && (
-                                            <motion.span
-                                                layoutId={reduceMotion ? undefined : "pm-room-question-active-pill"}
-                                                className="pm-room-question-active-pill"
-                                                transition={reduceMotion ? { duration: 0 } : { type: 'spring', bounce: 0.16, duration: 0.5 }}
-                                            />
-                                        )}
                                         <span className="pm-room-question-pill-label">{index + 1}</span>
                                     </MotionButton>
                                 );
