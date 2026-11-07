@@ -19,7 +19,7 @@ const DIFFICULTY_LEVELS = [
 export default function SubjectDetails() {
     const { courseId } = useParams();
     const navigate = useNavigate();
-    const { isAdmin } = useAuth();
+    const { isAdmin = false } = useAuth() || {};
     const location = useLocation();
 
     const [selectedSem, setSelectedSem] = useState(null);

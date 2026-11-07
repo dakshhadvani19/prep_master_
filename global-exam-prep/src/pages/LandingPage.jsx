@@ -158,7 +158,7 @@ export default function LandingPage() {
         if (!location.state?.scrollToContact) return;
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         navigate(location.pathname, { replace: true, state: null });
-    }, [location.pathname, location.state]);
+    }, [location.pathname, location.state, navigate]);
 
     const updateLike = (key, setter, value) => {
         setter(value);

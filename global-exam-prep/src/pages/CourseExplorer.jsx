@@ -9,7 +9,7 @@ import { navigateBackOrHome } from '../utils/navigation';
 export default function CourseExplorer() {
     const { domainId } = useParams();
     const navigate = useNavigate();
-    const { isAdmin } = useAuth();
+    const { isAdmin = false } = useAuth() || {};
     const domainMeta = getCatalogDomain(domainId);
 
     const [courses, setCourses] = useState([]);

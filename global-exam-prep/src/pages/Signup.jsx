@@ -544,14 +544,14 @@ const [successData, setSuccessData] = useState(null);
         if (currentUser && !successDataRef.current && !authActionPending.current) {
             navigate(resumePath, { replace: true, state: resumeState });
         }
-    }, [currentUser, navigate, resumePath, recoveryMode]);
+    }, [currentUser, navigate, resumePath, resumeState, recoveryMode]);
 
     // Callback when success animation finishes → navigate
     const handleSuccessDone = useCallback(() => {
         successDataRef.current = null;
         authActionPending.current = false;
         navigate(resumePath, { replace: true, state: resumeState });
-    }, [navigate, resumePath]);
+    }, [navigate, resumePath, resumeState]);
 
     // ─── Google Redirect Sign-Up ─────────────────────────────────────────────
     const handleGoogleSignIn = async () => {

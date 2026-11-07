@@ -11,21 +11,24 @@ describe('safe route navigation', () => {
         const navigate = vi.fn();
 
         expect(navigateBackOrHome(navigate, false)).toBe(true);
-        expect(navigate).toHaveBeenCalledExactlyOnceWith(-1);
+        expect(navigate).toHaveBeenCalledTimes(1);
+        expect(navigate).toHaveBeenCalledWith(-1);
     });
 
     it('returns students to the homepage on a direct route entry', () => {
         const navigate = vi.fn();
 
         expect(navigateBackOrHome(navigate, false)).toBe(false);
-        expect(navigate).toHaveBeenCalledExactlyOnceWith('/', { replace: true });
+        expect(navigate).toHaveBeenCalledTimes(1);
+        expect(navigate).toHaveBeenCalledWith('/', { replace: true });
     });
 
     it('returns admins to their dashboard on a direct route entry', () => {
         const navigate = vi.fn();
 
         expect(navigateBackOrHome(navigate, true)).toBe(false);
-        expect(navigate).toHaveBeenCalledExactlyOnceWith('/dashboard', { replace: true });
+        expect(navigate).toHaveBeenCalledTimes(1);
+        expect(navigate).toHaveBeenCalledWith('/dashboard', { replace: true });
     });
 
     it('falls back safely when React Router history metadata is missing', () => {
@@ -33,7 +36,8 @@ describe('safe route navigation', () => {
         const navigate = vi.fn();
 
         expect(navigateBackOrHome(navigate, false)).toBe(false);
-        expect(navigate).toHaveBeenCalledExactlyOnceWith('/', { replace: true });
+        expect(navigate).toHaveBeenCalledTimes(1);
+        expect(navigate).toHaveBeenCalledWith('/', { replace: true });
     });
 });
 
