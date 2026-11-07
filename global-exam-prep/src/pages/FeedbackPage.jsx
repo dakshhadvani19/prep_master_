@@ -16,6 +16,21 @@ const FEEDBACK_TYPES = [
     { value: 'other', label: '📝 Other' },
 ];
 
+async function requestFeedback(accessToken, payload) {
+    const response = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + accessToken,
+        },
+        body: JSON.stringify(payload),
+    });
+    const result = await response.json().catch(() => ({}));
+    return { response, result };
+}
+
+
+
 export default function FeedbackPage() {
     const navigate = useNavigate();
     const { session, currentUser, isAdmin, authLoading } = useAuth();
@@ -45,15 +60,7 @@ export default function FeedbackPage() {
         let cancelled = false;
         const verifyFeedbackAccess = async () => {
             try {
-                const response = await fetch('/api/feedback', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: 'Bearer ' + accessToken,
-                    },
-                    body: JSON.stringify({ action: 'status' }),
-                });
-                const result = await response.json().catch(() => ({}));
+                const { response, result } = await requestFeedback(accessToken, { action: 'status' });
                 if (!response.ok) {
                     throw new Error(result.error || 'Feedback access could not be verified.');
                 }
@@ -117,15 +124,10 @@ export default function FeedbackPage() {
         setStatus('loading');
         setErrorMsg('');
         try {
-            const response = await fetch('/api/feedback', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: 'Bearer ' + accessToken,
-                },
-                body: JSON.stringify({ type, description: cleanDescription }),
+            const { response, result } = await requestFeedback(accessToken, {
+                type,
+                description: cleanDescription,
             });
-            const result = await response.json().catch(() => ({}));
             if (response.status === 403 && result.code === 'STUDENT_FLAGGED_SPAM') {
                 setModerationResult({
                     token: accessToken,
