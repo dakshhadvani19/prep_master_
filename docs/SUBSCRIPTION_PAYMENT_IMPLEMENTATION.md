@@ -2,140 +2,128 @@
 
 ## Current status
 
-- The existing public `Subscriptions` and `Subscribers` tables are preserved exactly as defined by the ER diagram.
-- The private `payment_transactions` and `razorpay_webhook_events` tables have been created and verified in Supabase, including indexes for their foreign-key lookup columns.
-- The matching SQL is versioned in `global-exam-prep/supabase/migrations/20261117120000_create_private_razorpay_payment_ledger.sql`.
-- `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET` and `RAZORPAY_MODE=test` are present as sensitive Vercel Production variables. Their values are not stored in this repository. `RAZORPAY_WEBHOOK_SECRET` remains to be configured after creating the Test Mode webhook.
-- No weekly/monthly plan rows have been seeded because token allocations are still undecided.
-- The custom amount-to-validity/token formula is still undecided.
+- Public \`Subscriptions\` and \`Subscribers\` columns remain unchanged from the ER diagram.
+- The private payment ledger and webhook-event tables are created, indexed, RLS-enabled and forced.
+- The database payment gateway is callable only by \`service_role\`; it runs as SECURITY INVOKER with a pinned \`pg_catalog\` search path.
+- Razorpay Test Mode credentials and \`RAZORPAY_WEBHOOK_SECRET\` are present in Vercel Production. Secret values are not stored in this repository or shown in documentation.
+- Weekly and Monthly catalogue rows are seeded with the approved token allocations.
+- Custom checkout uses the approved weekly-rate formula and ₹10–₹999 whole-rupee limits.
 
 ## Public ER tables (unchanged)
 
-`public."Subscriptions"`
-- `SubscriptionId BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY`
-- `Amount VARCHAR(20) NOT NULL`
-- `Tokens BIGINT NOT NULL`
-- `TimeValidity VARCHAR(30) NOT NULL`
+\`public."Subscriptions"\`
+- \`SubscriptionId BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY\`
+- \`Amount VARCHAR(20) NOT NULL\`
+- \`Tokens BIGINT NOT NULL\`
+- \`TimeValidity VARCHAR(30) NOT NULL\`
 
-`public."Subscribers"`
-- `SubscriberId BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY`
-- `StudentId BIGINT` references `public."Students"("StudentId")`
-- `StartDate TIMESTAMP NOT NULL`
-- `EndDate TIMESTAMP NOT NULL`
-- `SubscriptionId BIGINT` references `public."Subscriptions"("SubscriptionId")`
-- `RemainingTokens BIGINT NOT NULL`
+\`public."Subscribers"\`
+- \`SubscriberId BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY\`
+- \`StudentId BIGINT\` references \`public."Students"("StudentId")\`
+- \`StartDate TIMESTAMP NOT NULL\`
+- \`EndDate TIMESTAMP NOT NULL\`
+- \`SubscriptionId BIGINT\` references \`public."Subscriptions"("SubscriptionId")\`
+- \`RemainingTokens BIGINT NOT NULL\`
 
-No columns were added to or removed from either public table.
+No public table columns or constraints were changed. Custom purchases use the nullable \`Subscribers.SubscriptionId\` as designed: custom subscriber rows do not reference a fixed catalogue row. Their precise purchase details stay in the private payment ledger.
 
-## Private payment tables
+## Approved plan rules
 
-### `private.payment_transactions`
+| Plan | Price | Tokens | Validity |
+|---|---:|---:|---:|
+| Weekly | ₹39 | 1,000 | 7 days |
+| Monthly | ₹149 | 4,000 | 30 days |
+| Custom | ₹10–₹999 | Proportional | Proportional |
 
-Stores one backend-created Razorpay order / purchase intent with:
-- authenticated student and selected subscription reference
-- server-calculated amount in paise, token grant and validity snapshots
-- Test/Live environment marker
-- unique idempotency key and Razorpay receipt/order/payment identifiers
-- payment lifecycle status, verification/capture/activation timestamps
-- failure details and resulting subscriber record reference
+The live \`public."Subscriptions"\` catalogue contains:
+- SubscriptionId 1: ₹39, 1,000 tokens, 7 days.
+- SubscriptionId 2: ₹149, 4,000 tokens, 30 days.
 
-The snapshots ensure later plan edits do not silently change the amount or entitlement of an existing checkout.
+Fixed plans are matched by amount and duration and checked against their approved token counts before checkout and again during activation.
 
-### `private.razorpay_webhook_events`
+## Custom plan calculation
 
-Stores webhook event IDs, event type, associated order/payment/transaction IDs, signature-verification marker, processing state, attempt count and processing errors. Event ID is the primary key to deduplicate repeated deliveries. The raw webhook body and secrets are not stored.
+The amount must be a whole number of rupees between ₹10 and ₹999 inclusive. The selected pricing basis is the weekly rate (₹39, 7 days, 1,000 tokens):
 
-### Access control
+\`tokens = floor(amount × 1000 / 39)\`
 
+\`validityDays = round(amount × 7 / 39)\`
+
+Validity rounds to the nearest whole day; positive half-day ties round up. Tokens round down to a whole token so the proportional grant never exceeds the calculated entitlement. The server performs both calculations and ignores browser-supplied token and validity values.
+
+| Custom amount | Tokens | Validity |
+|---:|---:|---:|
+| ₹10 | 256 | 2 days |
+| ₹39 | 1,000 | 7 days |
+| ₹149 | 3,820 | 27 days |
+| ₹999 | 25,615 | 179 days |
+
+The fixed Monthly plan remains more generous than a ₹149 custom purchase by design. Custom purchases store the amount/token/validity snapshot in \`private.payment_transactions\` and do not add extra fixed-plan rows to \`public."Subscriptions"\`.
+
+## Private payment tables and access
+
+### \`private.payment_transactions\`
+Stores the authenticated student, plan kind, fixed catalogue reference when applicable, amount in paise, token and validity snapshots, environment, idempotency key, receipt, Razorpay IDs, status and activation timestamps.
+
+### \`private.razorpay_webhook_events\`
+Stores webhook event IDs, event type, associated order/payment IDs, signature-validation marker, processing state, retry count and errors. Event IDs deduplicate repeated deliveries. Raw webhook bodies and secrets are not stored.
+
+Access:
 - Both private tables have RLS enabled and forced.
-- `anon` and `authenticated` have no schema usage or table privileges.
-- `service_role` has SELECT, INSERT and UPDATE only; DELETE is not granted.
-- The server must keep the service-role key and all Razorpay secrets out of browser code.
+- \`anon\` and \`authenticated\` have no private-schema usage or table grants.
+- \`service_role\` has SELECT/INSERT/UPDATE only; DELETE is not granted.
+- The payment RPC has EXECUTE only for \`service_role\`, runs as SECURITY INVOKER and validates the JWT role.
+- Service-role and Razorpay secrets are never sent to the browser.
 
-## Agreed plan prices and durations
+## Test Mode API flow
 
-| Plan | Price | Validity |
-|---|---:|---|
-| Weekly | ₹39 | 7 × 24 hours |
-| Monthly | ₹149 | 30 × 24 hours |
-| Custom | Student-entered | To be calculated using an approved formula |
+- \`GET /api/subscription-plans\` returns fixed plans, custom rules and checkout readiness.
+- \`POST /api/razorpay-create-order\` authenticates a non-spam student, resolves all purchase values server-side and records a private pending transaction before creating the Razorpay order.
+- \`POST /api/razorpay-verify-payment\` checks the Checkout HMAC, fetches payment details directly from Razorpay and activates only a matching captured payment.
+- \`GET /api/subscription-status\` returns a transaction state only to its owning student.
+- \`POST /api/razorpay-webhook\` validates the exact raw request body, deduplicates event IDs and handles authorised/captured/failed/paid events.
 
-Renewals are queued after the latest existing subscriber `EndDate`, otherwise they start at the current time.
+Renewal activation locks the student row and starts after the latest existing \`Subscribers.EndDate\`; otherwise it starts at the current time. Subscriber creation and payment activation occur atomically. Repeated verification or webhook delivery cannot create a second subscriber for an already-activated transaction.
 
-## Remaining business rules before purchases are enabled
+Public payment URLs are mapped by Vercel rewrites onto existing API functions to stay within the Hobby serverless-function limit.
 
-1. Token allowance for the weekly plan.
-2. Token allowance for the monthly plan.
-3. Custom amount minimum and maximum.
-4. Exact custom amount → validity formula, including rounding.
-5. Custom amount → token allocation formula.
-6. Whether users may edit a calculated custom plan and, if so, what recalculation rule applies.
+## Vercel environment
 
-No production checkout route should accept a purchase until those rules are fixed.
+These sensitive variables are present in Production:
+- \`RAZORPAY_KEY_ID\`
+- \`RAZORPAY_KEY_SECRET\`
+- \`RAZORPAY_WEBHOOK_SECRET\`
+- \`RAZORPAY_MODE=test\`
 
-## Implemented Test Mode integration
+Their values are intentionally not stored here. The server requires Test Mode and an \`rzp_test_\` Key ID; it rejects Live Mode. Razorpay variables currently target Production. Add them to Preview/Development only when checkout will be tested in those environments.
 
-1. Backend authenticates the Supabase session and resolves the plan from server-owned data.
-2. Backend creates a Razorpay Order and a private pending transaction.
-3. Browser opens Standard Checkout using only the public Test Key ID and order details.
-4. Backend verifies the Checkout signature using the server-held Test Key Secret, fetches the payment, and requires the matching order, amount, INR currency and captured status.
-5. Webhook endpoint verifies the HMAC signature against the exact raw request bytes using the separate webhook secret.
-6. Webhook event IDs and payment/order identifiers are processed idempotently.
-7. One database transaction records the verified payment, creates or references the subscription plan, queues/creates the subscriber row and marks the transaction activated.
-8. Student UI polls a no-store payment-status endpoint and displays pending, success, queued, failure or expired status.
+## Razorpay dashboard configuration still to verify
 
-Webhook events to subscribe to in Razorpay Test Mode:
-- `payment.authorized`
-- `payment.captured`
-- `payment.failed`
-- `order.paid`
+The presence of \`RAZORPAY_WEBHOOK_SECRET\` in Vercel does not prove that the corresponding webhook was registered in Razorpay. Confirm that a webhook exists in **Test Mode** at:
 
-Only a captured payment should activate a subscription. An authorised-but-not-captured payment is not sufficient.
+\`https://prepmaster-tau.vercel.app/api/razorpay-webhook\`
 
-## Vercel Test Mode environment variables
+Subscribe to:
+- \`payment.authorized\`
+- \`payment.captured\`
+- \`payment.failed\`
+- \`order.paid\`
 
-Add these as encrypted/sensitive server-only environment variables (Production and Preview only when intentionally testing there):
-- `RAZORPAY_KEY_ID`
-- `RAZORPAY_KEY_SECRET`
-- `RAZORPAY_WEBHOOK_SECRET`
-- `RAZORPAY_MODE=test`
+The secret saved in Razorpay must match the Vercel \`RAZORPAY_WEBHOOK_SECRET\`. Redeploy after changing the Vercel variable.
 
-Do not add the secret values to GitHub or any `VITE_*` variable.
+## Migration history
 
-
-## Code and database implementation
-
-- `global-exam-prep/api/_lib/razorpay-subscriptions.js` centralizes Test Mode enforcement, Supabase student authentication, private RPC access, plan validation and Razorpay API calls.
-- `GET /api/subscription-plans` resolves fixed catalogue rows and indicates whether checkout is configured.
-- `POST /api/razorpay-create-order` authenticates a non-spam student, resolves the plan server-side, records a private pending transaction and creates a Razorpay order.
-- `POST /api/razorpay-verify-payment` verifies the Checkout HMAC and retrieves payment state from Razorpay before activation.
-- `GET /api/subscription-status` returns transaction state only to its owning student.
-- `POST /api/razorpay-webhook` verifies the raw-body HMAC, deduplicates event IDs and processes supported Test Mode events. The public payment URLs are mapped by Vercel rewrites onto existing API functions to stay within the Hobby serverless-function limit.
-- The student-facing `/subscriptions` page contains Weekly, Monthly and Custom cards with distinct visual identities.
-- Test-mode APIs require `RAZORPAY_MODE=test` and a `rzp_test_` Key ID. No live-mode credentials are accepted.
-
-Server-side database migrations:
-- `20261117065000_create_private_razorpay_payment_ledger.sql`
-- `20261117065152_razorpay_checkout_activation_gateway.sql`
-- `20261117065233_fix_razorpay_webhook_event_deduplication.sql`
-- `20261117070254_fix_razorpay_gateway_auth_jwt_search_path.sql` and `20261117070317_fix_razorpay_gateway_pinned_search_path.sql`
-
-## Current catalogue state
-
-The live `public."Subscriptions"` catalogue is empty. No fixed-plan rows have been seeded because weekly and monthly token allowances remain undecided. The page therefore disables fixed-plan checkout rather than using invented token allocations. Custom checkout remains disabled.
-
-After approving token allowances, add one row per fixed plan:
-- Weekly: `Amount = '39'`, approved `Tokens`, `TimeValidity = '7 days'`.
-- Monthly: `Amount = '149'`, approved `Tokens`, `TimeValidity = '30 days'`.
-
-## Remaining account-side configuration
-
-1. Create a Razorpay webhook in **Test Mode** at `https://prepmaster-tau.vercel.app/api/razorpay-webhook`.
-2. Subscribe to `payment.authorized`, `payment.captured`, `payment.failed` and `order.paid`.
-3. Set a strong webhook secret in Razorpay and add the same secret to Vercel as the sensitive Production variable `RAZORPAY_WEBHOOK_SECRET`.
-4. Redeploy after adding the webhook secret. Never put it in GitHub, browser code or a `VITE_*` variable.
-5. Razorpay variables currently target Production only. Add them to Preview/Development only if those environments will be used for checkout testing.
+- \`20261117065000_create_private_razorpay_payment_ledger.sql\`
+- \`20261117065152_razorpay_checkout_activation_gateway.sql\`
+- \`20261117065233_fix_razorpay_webhook_event_deduplication.sql\`
+- \`20261117070254_fix_razorpay_gateway_auth_jwt_search_path.sql\`
+- \`20261117070317_fix_razorpay_gateway_pinned_search_path.sql\`
+- \`20261117082403_activate_approved_subscription_plans_and_custom_weekly_rate.sql\`
+- \`20261117082449_run_subscription_payment_gateway_as_service_role_invoker.sql\`
 
 ## Verification status
 
-The database migrations were applied to the Supabase project. No local `npm run test`, `npm run lint`, `npm run build`, or end-to-end Checkout transaction has been run in this tool session. End-to-end testing still requires fixed-plan token allowances and webhook-secret configuration.
+- Both fixed plan rows were confirmed in the live catalogue with the approved allocations.
+- Custom boundary examples were checked against PostgreSQL numeric arithmetic.
+- The payment RPC has EXECUTE denied to \`anon\` and \`authenticated\`, granted to \`service_role\`, and runs as SECURITY INVOKER with \`search_path = pg_catalog\`.
+- A live Razorpay checkout has not yet been completed. End-to-end testing still requires confirmation of the Test Mode webhook in Razorpay and a simulated payment.

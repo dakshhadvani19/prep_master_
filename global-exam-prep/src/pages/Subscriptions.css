@@ -42,3 +42,7 @@
 @keyframes subscription-spin{to{transform:rotate(360deg)}}
 @media(max-width:900px){.subscriptions-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.subscriptions-page{width:min(calc(100% - 1.25rem),480px)}.subscriptions-header{margin-top:.4rem}.subscriptions-grid{grid-template-columns:1fr;gap:.8rem}.subscription-card{padding:1.25rem}.subscription-card__description{min-height:0}.subscriptions-footer{align-items:flex-start;flex-direction:column}}
+
+.subscription-custom__input:focus{border-color:rgba(214,173,97,.7)}
+.subscription-custom__input:disabled{opacity:.55;cursor:not-allowed}
+.subscription-custom__hint{margin:.42rem 0 1rem;color:var(--text-tertiary);font-size:.7rem}
