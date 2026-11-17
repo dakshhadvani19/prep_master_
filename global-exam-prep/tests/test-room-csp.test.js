@@ -4,13 +4,24 @@ import { readFileSync } from 'node:fs';
 // Vitest from global-exam-prep/, so read the checked-in HTML from the working dir.
 const html = readFileSync('index.html', 'utf8');
 const csp = html.match(/http-equiv="Content-Security-Policy"[^>]*content="([^"]+)"/i)?.[1] || '';
-const connectSrc = csp.split(';').find((directive) => directive.trim().startsWith('connect-src')) || '';
+const directive = (name) => csp.split(';').find((entry) => entry.trim().startsWith(name + ' ')) || '';
+const connectSrc = directive('connect-src');
+const scriptSrc = directive('script-src');
+const frameSrc = directive('frame-src');
 
 describe('Test Room Content Security Policy', () => {
     it('allows HTTPS requests and Supabase Realtime WebSocket connections', () => {
         expect(connectSrc).toContain("https://*.supabase.co");
         expect(connectSrc).toContain("wss://*.supabase.co");
         expect(connectSrc).toContain("https://api.groq.com");
+    });
+
+    it('allows Razorpay Standard Checkout resources without opening arbitrary script origins', () => {
+        expect(scriptSrc).toContain('https://checkout.razorpay.com');
+        expect(scriptSrc).toContain('https://cdn.razorpay.com');
+        expect(connectSrc).toContain('https://api.razorpay.com');
+        expect(frameSrc).toContain('https://checkout.razorpay.com');
+        expect(frameSrc).toContain('https://api.razorpay.com');
     });
 
     it('keeps CSP enabled rather than allowing every connection origin', () => {
