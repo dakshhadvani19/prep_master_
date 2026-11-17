@@ -5,7 +5,7 @@
 - The existing public `Subscriptions` and `Subscribers` tables are preserved exactly as defined by the ER diagram.
 - The private `payment_transactions` and `razorpay_webhook_events` tables have been created and verified in Supabase, including indexes for their foreign-key lookup columns.
 - The matching SQL is versioned in `global-exam-prep/supabase/migrations/20261117120000_create_private_razorpay_payment_ledger.sql`.
-- Razorpay Test Mode environment variables are not configured yet. No Checkout request can be enabled until test credentials are added.
+- `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET` and `RAZORPAY_MODE=test` are present as sensitive Vercel Production variables. Their values are not stored in this repository. `RAZORPAY_WEBHOOK_SECRET` remains to be configured after creating the Test Mode webhook.
 - No weekly/monthly plan rows have been seeded because token allocations are still undecided.
 - The custom amount-to-validity/token formula is still undecided.
 
@@ -73,7 +73,7 @@ Renewals are queued after the latest existing subscriber `EndDate`, otherwise th
 
 No production checkout route should accept a purchase until those rules are fixed.
 
-## Planned Test Mode integration
+## Implemented Test Mode integration
 
 1. Backend authenticates the Supabase session and resolves the plan from server-owned data.
 2. Backend creates a Razorpay Order and a private pending transaction.
@@ -101,3 +101,41 @@ Add these as encrypted/sensitive server-only environment variables (Production a
 - `RAZORPAY_MODE=test`
 
 Do not add the secret values to GitHub or any `VITE_*` variable.
+
+
+## Code and database implementation
+
+- `global-exam-prep/api/_lib/razorpay-subscriptions.js` centralizes Test Mode enforcement, Supabase student authentication, private RPC access, plan validation and Razorpay API calls.
+- `GET /api/subscription-plans` resolves fixed catalogue rows and indicates whether checkout is configured.
+- `POST /api/razorpay-create-order` authenticates a non-spam student, resolves the plan server-side, records a private pending transaction and creates a Razorpay order.
+- `POST /api/razorpay-verify-payment` verifies the Checkout HMAC and retrieves payment state from Razorpay before activation.
+- `GET /api/subscription-status` returns transaction state only to its owning student.
+- `POST /api/razorpay-webhook` verifies the raw-body HMAC, deduplicates event IDs and processes supported Test Mode events.
+- The student-facing `/subscriptions` page contains Weekly, Monthly and Custom cards with distinct visual identities.
+- Test-mode APIs require `RAZORPAY_MODE=test` and a `rzp_test_` Key ID. No live-mode credentials are accepted.
+
+Server-side database migrations:
+- `20261117065000_create_private_razorpay_payment_ledger.sql`
+- `20261117065152_razorpay_checkout_activation_gateway.sql`
+- `20261117065233_fix_razorpay_webhook_event_deduplication.sql`
+- `20261117065330_fix_razorpay_gateway_pinned_search_path.sql`
+
+## Current catalogue state
+
+The live `public."Subscriptions"` catalogue is empty. No fixed-plan rows have been seeded because weekly and monthly token allowances remain undecided. The page therefore disables fixed-plan checkout rather than using invented token allocations. Custom checkout remains disabled.
+
+After approving token allowances, add one row per fixed plan:
+- Weekly: `Amount = '39'`, approved `Tokens`, `TimeValidity = '7 days'`.
+- Monthly: `Amount = '149'`, approved `Tokens`, `TimeValidity = '30 days'`.
+
+## Remaining account-side configuration
+
+1. Create a Razorpay webhook in **Test Mode** at `https://prepmaster-tau.vercel.app/api/razorpay-webhook`.
+2. Subscribe to `payment.authorized`, `payment.captured`, `payment.failed` and `order.paid`.
+3. Set a strong webhook secret in Razorpay and add the same secret to Vercel as the sensitive Production variable `RAZORPAY_WEBHOOK_SECRET`.
+4. Redeploy after adding the webhook secret. Never put it in GitHub, browser code or a `VITE_*` variable.
+5. Razorpay variables currently target Production only. Add them to Preview/Development only if those environments will be used for checkout testing.
+
+## Verification status
+
+The database migrations were applied to the Supabase project. No local `npm run test`, `npm run lint`, `npm run build`, or end-to-end Checkout transaction has been run in this tool session. End-to-end testing still requires fixed-plan token allowances and webhook-secret configuration.

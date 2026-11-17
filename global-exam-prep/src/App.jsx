@@ -24,6 +24,7 @@ const SearchResults = lazy(() => import('./pages/SearchResults'));
 const FeedbackPage = lazy(() => import('./pages/FeedbackPage'));
 const SyllabusAdmin = lazy(() => import('./pages/SyllabusAdmin'));
 const UserGuide = lazy(() => import('./pages/UserGuide'));
+const Subscriptions = lazy(() => import('./pages/Subscriptions'));
 
 
 function ScrollToTop() {
@@ -90,6 +91,7 @@ function App() {
                 <Route path="domains/:domainId/courses" element={<CourseExplorer />} />
                 <Route path="search" element={<SearchResults />} />
                 <Route path="feedback" element={<FeedbackPage />} />
+                <Route path="subscriptions" element={<Subscriptions />} />
                 <Route path="guide" element={<UserGuide />} />
                 <Route path="courses/:courseId/subjects" element={<SubjectDetails />} />
                 <Route path="test-rooms" element={<TestRoomPage />} />

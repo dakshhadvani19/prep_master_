@@ -1,0 +1,44 @@
+.subscriptions-page{width:min(1160px,calc(100% - 2.5rem));margin:0 auto;color:var(--text-primary)}
+.subscriptions-header{text-align:center;margin:1.3rem auto 2.25rem;max-width:680px}
+.subscriptions-eyebrow{display:inline-flex;align-items:center;gap:.45rem;color:#d5ae69;font-size:.73rem;font-weight:750;letter-spacing:.13em}
+.subscriptions-header h1{margin:.8rem 0 .55rem;font-size:clamp(2rem,4vw,3rem);line-height:1.08;letter-spacing:-.045em;font-weight:720}
+.subscriptions-header p{margin:0;color:var(--text-secondary);font-size:.98rem;line-height:1.65}
+.subscriptions-mode{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.1rem;border:1px solid rgba(214,173,97,.28);border-radius:999px;padding:.46rem .8rem;color:#d9bb83;background:rgba(214,173,97,.07);font-size:.77rem;font-weight:650}
+.subscriptions-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-items:stretch}
+.subscription-card{display:flex;flex-direction:column;min-width:0;padding:1.45rem;border:1px solid rgba(255,255,255,.13);border-radius:22px;background:linear-gradient(155deg,rgba(255,255,255,.075),rgba(255,255,255,.025) 60%),rgba(22,24,29,.82);box-shadow:0 16px 44px rgba(0,0,0,.16);overflow:hidden}
+.subscription-card--weekly{border-radius:18px}
+.subscription-card--monthly{border-color:rgba(214,173,97,.5);background:linear-gradient(155deg,rgba(214,173,97,.16),rgba(255,255,255,.035) 56%),rgba(26,25,22,.93);box-shadow:0 16px 44px rgba(124,88,32,.14)}
+.subscription-card--custom{background:linear-gradient(155deg,rgba(255,255,255,.10),rgba(214,173,97,.06) 75%),rgba(20,22,26,.9);border-style:dashed;border-color:rgba(214,173,97,.35)}
+.subscription-card__top{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.subscription-card__eyebrow{color:var(--text-tertiary);font-size:.66rem;font-weight:750;letter-spacing:.1em}
+.subscription-card--monthly .subscription-card__eyebrow,.subscription-card--monthly .subscription-card__symbol{color:#dfbd7d}
+.subscription-card__symbol{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--glass-border);border-radius:12px;color:var(--text-secondary);background:rgba(255,255,255,.045)}
+.subscription-card h2{margin:1.1rem 0 .4rem;font-size:1.32rem;letter-spacing:-.02em}
+.subscription-card__description{min-height:3rem;margin:0;color:var(--text-secondary);font-size:.88rem;line-height:1.55}
+.subscription-card__price{margin:1.25rem 0 1.1rem;font-size:2.65rem;font-weight:760;letter-spacing:-.06em;line-height:1}
+.subscription-card__price>span{margin-right:.12rem;font-size:1.6rem;vertical-align:.28em;color:var(--text-secondary)}
+.subscription-card__price small{font-size:.78rem;color:var(--text-tertiary);font-weight:500;letter-spacing:0}
+.subscription-card__details{display:grid;gap:.72rem;margin:.1rem 0 1.45rem}
+.subscription-card__details>div{display:flex;align-items:center;gap:.55rem;color:var(--text-secondary);font-size:.83rem}
+.subscription-card__details svg{color:#c9a66a;flex:0 0 auto}
+.subscription-card__button{display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;min-height:45px;margin-top:auto;padding:.72rem .9rem;border:1px solid rgba(255,255,255,.17);border-radius:12px;background:rgba(255,255,255,.07);color:var(--text-primary);font:inherit;font-size:.87rem;font-weight:700;cursor:pointer;transition:background .18s ease,transform .18s ease}
+.subscription-card__button:not(:disabled):hover{transform:translateY(-1px);background:rgba(255,255,255,.12)}
+.subscription-card__button:disabled{cursor:not-allowed;opacity:.54}
+.subscription-card--monthly .subscription-card__button:not(:disabled){border-color:rgba(214,173,97,.6);background:linear-gradient(135deg,#d7b574,#9e7840);color:#17130d}
+.subscription-card__footnote{display:flex;align-items:center;justify-content:center;gap:.35rem;margin:.8rem 0 0;min-height:1rem;color:var(--text-tertiary);font-size:.7rem;line-height:1.45;text-align:center}
+.subscription-custom__label{margin:1.05rem 0 .4rem;color:var(--text-secondary);font-size:.76rem;font-weight:650}
+.subscription-custom__input{width:100%;min-height:44px;box-sizing:border-box;padding:.7rem .85rem;border:1px solid var(--glass-border);border-radius:11px;background:rgba(0,0,0,.2);color:var(--text-primary);font:inherit;outline:none}
+.subscriptions-message{display:flex;align-items:flex-start;gap:.65rem;margin:0 auto 1.2rem;width:min(760px,100%);padding:.85rem 1rem;border:1px solid var(--glass-border);border-radius:13px;background:rgba(255,255,255,.045);color:var(--text-secondary);font-size:.87rem;line-height:1.5}
+.subscriptions-message>svg{flex:0 0 auto;margin-top:.05rem}
+.subscriptions-message>button{margin-left:auto;border:0;background:transparent;color:var(--text-tertiary);font-size:1.2rem;cursor:pointer}
+.subscriptions-message.is-success{border-color:rgba(73,177,125,.35);color:#a7e0c0}
+.subscriptions-message.is-error{border-color:rgba(235,100,100,.35);color:#f0aaaa}
+.subscriptions-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;margin:1.25rem 0 2rem;padding:1rem 1.1rem;border:1px solid var(--glass-border);border-radius:16px;background:rgba(255,255,255,.025)}
+.subscriptions-footer>div{display:flex;align-items:center;gap:.55rem;color:var(--text-secondary);font-size:.82rem}
+.subscriptions-footer>div svg{color:#d4ae6c}
+.subscriptions-footer p{margin:0;color:var(--text-tertiary);font-size:.73rem}
+.subscriptions-footer button{display:inline-flex;align-items:center;gap:.4rem;border:0;background:transparent;color:#d7b574;font:inherit;font-size:.78rem;cursor:pointer}
+.is-spinning{animation:subscription-spin .8s linear infinite}
+@keyframes subscription-spin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.subscriptions-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.subscriptions-page{width:min(calc(100% - 1.25rem),480px)}.subscriptions-header{margin-top:.4rem}.subscriptions-grid{grid-template-columns:1fr;gap:.8rem}.subscription-card{padding:1.25rem}.subscription-card__description{min-height:0}.subscriptions-footer{align-items:flex-start;flex-direction:column}}
