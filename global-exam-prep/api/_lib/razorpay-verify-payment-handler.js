@@ -1,6 +1,6 @@
 import { Buffer } from 'node:buffer';
 import { createHmac,timingSafeEqual } from 'node:crypto';
-import { serviceClient,setPrivateHeaders,fail,bodyOf,isUuid,authenticateStudent,getTestCredentials,privatePaymentAction,razorpayRequest } from './_lib/razorpay-subscriptions.js';
+import { serviceClient,setPrivateHeaders,fail,bodyOf,isUuid,authenticateStudent,getTestCredentials,privatePaymentAction,razorpayRequest } from './razorpay-subscriptions.js';
 function validHexSignature(received,expected){
 if(!/^[0-9a-f]{64}$/i.test(String(received||'')))return false;
 const left=Buffer.from(received,'hex'),right=Buffer.from(expected,'hex');

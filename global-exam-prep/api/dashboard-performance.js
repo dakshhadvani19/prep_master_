@@ -1,4 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
+import subscriptionPlansHandler from './_lib/razorpay-plans-handler.js';
+import createOrderHandler from './_lib/razorpay-create-order-handler.js';
+import verifyPaymentHandler from './_lib/razorpay-verify-payment-handler.js';
+import subscriptionStatusHandler from './_lib/razorpay-subscription-status-handler.js';
 
 const process = globalThis.process;
 
@@ -43,10 +47,25 @@ async function authenticate(req, admin) {
     return { user: data?.user || null, unauthorized: !data?.user };
 }
 
+export const config = { maxDuration: 20 };
+
 export default async function handler(req, res) {
     res.setHeader('Cache-Control', 'private, no-store, max-age=0');
     res.setHeader('Vary', 'Authorization');
     res.setHeader('X-Content-Type-Options', 'nosniff');
+
+    const paymentAction = String(req.query?.razorpayAction || '');
+    const paymentHandlers = {
+        plans: subscriptionPlansHandler,
+        createOrder: createOrderHandler,
+        verifyPayment: verifyPaymentHandler,
+        status: subscriptionStatusHandler,
+    };
+    if (paymentAction) {
+        const paymentHandler = paymentHandlers[paymentAction];
+        if (!paymentHandler) return respond(res, 404, 'This payment endpoint does not exist.');
+        return paymentHandler(req, res);
+    }
 
     if (req.method === 'OPTIONS') return res.status(204).end();
     if (req.method !== 'GET') {

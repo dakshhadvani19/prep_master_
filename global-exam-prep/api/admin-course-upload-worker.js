@@ -2,10 +2,11 @@ import { Buffer } from 'node:buffer';
 import { timingSafeEqual } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
 import { UploadValidationError, validateCourseUpload } from './_lib/admin-course-upload-validation.js';
+import { razorpayWebhookHandler } from './_lib/razorpay-webhook-handler.js';
 
 const BUCKET = 'admin-course-files';
 const process = globalThis.process;
-export const config = { maxDuration: 60 };
+export const config = { api: { bodyParser: false }, maxDuration: 60 };
 
 function serviceClient() {
     const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
@@ -40,6 +41,9 @@ async function finishJob(client, job, status, result = {}, errorMessage = null) 
 }
 
 export default async function handler(req, res) {
+    if (String(req.query?.razorpayWebhook || '') === '1') {
+        return razorpayWebhookHandler(req, res);
+    }
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed.' });
     if (!hasWorkerAccess(req)) return res.status(401).json({ error: 'Worker authentication failed.' });
 

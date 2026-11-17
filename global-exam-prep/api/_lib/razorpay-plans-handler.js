@@ -1,9 +1,9 @@
-import { serviceClient,setPrivateHeaders,fail,getTestCredentials,resolveFixedPlan } from './_lib/razorpay-subscriptions.js';
+import { serviceClient,setPrivateHeaders,fail,getTestCredentials,resolveFixedPlan } from './razorpay-subscriptions.js';
 const PLAN_SPECS=[
 {planKind:'weekly',title:'Weekly',amountPaise:3900,price:39,validityDays:7,validityLabel:'7 days'},
 {planKind:'monthly',title:'Monthly',amountPaise:14900,price:149,validityDays:30,validityLabel:'30 days'},
 ];
-export default async function handler(req,res){
+export default async function subscriptionPlansHandler(req,res){
 setPrivateHeaders(res);
 if(req.method==='OPTIONS')return res.status(204).end();
 if(req.method!=='GET'){res.setHeader('Allow','GET, OPTIONS');return fail(res,405,'This request method is not supported.');}

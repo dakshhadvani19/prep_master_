@@ -1,6 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { serviceClient,setPrivateHeaders,fail,bodyOf,isUuid,authenticateStudent,getTestCredentials,resolveFixedPlan,privatePaymentAction,razorpayRequest } from './_lib/razorpay-subscriptions.js';
-export const config={maxDuration:20};
+import { serviceClient,setPrivateHeaders,fail,bodyOf,isUuid,authenticateStudent,getTestCredentials,resolveFixedPlan,privatePaymentAction,razorpayRequest } from './razorpay-subscriptions.js';
 export default async function handler(req,res){
 setPrivateHeaders(res);
 if(req.method==='OPTIONS')return res.status(204).end();

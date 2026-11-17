@@ -1,7 +1,6 @@
 import { Buffer } from 'node:buffer';
 import { createHmac,timingSafeEqual } from 'node:crypto';
-import { serviceClient,privatePaymentAction,getTestCredentials,envFirst,razorpayRequest } from './_lib/razorpay-subscriptions.js';
-export const config={api:{bodyParser:false},maxDuration:20};
+import { serviceClient,privatePaymentAction,getTestCredentials,envFirst,razorpayRequest } from './razorpay-subscriptions.js';
 async function rawBodyOf(req){
 if(Buffer.isBuffer(req.body))return req.body;
 if(typeof req.body==='string')return Buffer.from(req.body,'utf8');
@@ -26,7 +25,7 @@ if(payment.status!=='captured'||payment.order_id!==transaction.razorpay_order_id
 throw new Error('Captured payment does not match the stored PrepMaster order.');
 return privatePaymentAction(admin,'activate_transaction',{transaction_id:transaction.transaction_id,razorpay_payment_id:paymentId,signature_verified:true});
 }
-export default async function handler(req,res){
+export async function razorpayWebhookHandler(req,res){
 res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');
 if(req.method!=='POST'){res.setHeader('Allow','POST');return res.status(405).json({error:'Method not allowed.'});}
 let eventId='',admin=null;

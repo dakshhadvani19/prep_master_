@@ -110,7 +110,7 @@ Do not add the secret values to GitHub or any `VITE_*` variable.
 - `POST /api/razorpay-create-order` authenticates a non-spam student, resolves the plan server-side, records a private pending transaction and creates a Razorpay order.
 - `POST /api/razorpay-verify-payment` verifies the Checkout HMAC and retrieves payment state from Razorpay before activation.
 - `GET /api/subscription-status` returns transaction state only to its owning student.
-- `POST /api/razorpay-webhook` verifies the raw-body HMAC, deduplicates event IDs and processes supported Test Mode events.
+- `POST /api/razorpay-webhook` verifies the raw-body HMAC, deduplicates event IDs and processes supported Test Mode events. The public payment URLs are mapped by Vercel rewrites onto existing API functions to stay within the Hobby serverless-function limit.
 - The student-facing `/subscriptions` page contains Weekly, Monthly and Custom cards with distinct visual identities.
 - Test-mode APIs require `RAZORPAY_MODE=test` and a `rzp_test_` Key ID. No live-mode credentials are accepted.
 
@@ -118,7 +118,7 @@ Server-side database migrations:
 - `20261117065000_create_private_razorpay_payment_ledger.sql`
 - `20261117065152_razorpay_checkout_activation_gateway.sql`
 - `20261117065233_fix_razorpay_webhook_event_deduplication.sql`
-- `20261117065330_fix_razorpay_gateway_pinned_search_path.sql`
+- `20261117070254_fix_razorpay_gateway_auth_jwt_search_path.sql` and `20261117070317_fix_razorpay_gateway_pinned_search_path.sql`
 
 ## Current catalogue state
 

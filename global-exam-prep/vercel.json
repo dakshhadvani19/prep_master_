@@ -4,6 +4,26 @@
     "framework": "vite",
     "rewrites": [
         {
+            "source": "/api/subscription-plans",
+            "destination": "/api/dashboard-performance?razorpayAction=plans"
+        },
+        {
+            "source": "/api/razorpay-create-order",
+            "destination": "/api/dashboard-performance?razorpayAction=createOrder"
+        },
+        {
+            "source": "/api/razorpay-verify-payment",
+            "destination": "/api/dashboard-performance?razorpayAction=verifyPayment"
+        },
+        {
+            "source": "/api/subscription-status",
+            "destination": "/api/dashboard-performance?razorpayAction=status"
+        },
+        {
+            "source": "/api/razorpay-webhook",
+            "destination": "/api/admin-course-upload-worker?razorpayWebhook=1"
+        },
+        {
             "source": "/((?!api/).*)",
             "destination": "/index.html"
         }

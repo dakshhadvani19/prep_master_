@@ -1,4 +1,4 @@
-import { serviceClient,setPrivateHeaders,fail,authenticateStudent,privatePaymentAction,isUuid } from './_lib/razorpay-subscriptions.js';
+import { serviceClient,setPrivateHeaders,fail,authenticateStudent,privatePaymentAction,isUuid } from './razorpay-subscriptions.js';
 export default async function handler(req,res){
 setPrivateHeaders(res);
 if(req.method==='OPTIONS')return res.status(204).end();
