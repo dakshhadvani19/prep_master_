@@ -127,3 +127,34 @@ The secret saved in Razorpay must match the Vercel \`RAZORPAY_WEBHOOK_SECRET\`. 
 - Custom boundary examples were checked against PostgreSQL numeric arithmetic.
 - The payment RPC has EXECUTE denied to \`anon\` and \`authenticated\`, granted to \`service_role\`, and runs as SECURITY INVOKER with \`search_path = pg_catalog\`.
 - A live Razorpay checkout has not yet been completed. End-to-end testing still requires confirmation of the Test Mode webhook in Razorpay and a simulated payment.
+
+
+## Browser Content Security Policy and Firebase audit
+
+### Razorpay Checkout CSP
+
+The application uses the Content Security Policy in `global-exam-prep/index.html`. The policy explicitly permits:
+- `checkout.razorpay.com` and `cdn.razorpay.com` in `script-src`.
+- `api.razorpay.com`, `checkout.razorpay.com` and `cdn.razorpay.com` in `connect-src`.
+- Razorpay Checkout/API frames in `frame-src`.
+- Razorpay-hosted images in `img-src`.
+
+The policy remains an allowlist; do not replace it with broad `https:` or `*` sources. The regression test is `global-exam-prep/tests/test-room-csp.test.js`.
+
+### Firebase dependency audit (2026-11-17)
+
+- No Firebase SDK imports or Firebase-specific service integrations were found in the tracked repository.
+- `firebase` and `firebase-admin` are absent from the installed npm dependency tree and package manifests/lockfile.
+- Student authentication, including Google sign-in, is implemented through Supabase Auth (`signInWithOAuth({ provider: 'google' })`). This is not Firebase and is intentionally retained.
+- Supabase is the active authentication/database/storage backend in the application; no Firebase-backed application feature was identified that needs migration.
+
+The Vercel project still contains these unused legacy environment variables, which are not referenced by the application source:
+- `FIREBASE_MEASUREMENT_ID` (Preview, Production)
+- `FIREBASE_APP_ID` (Preview, Production)
+- `FIREBASE_MESSAGING_SENDER_ID` (Preview, Production)
+- `FIREBASE_STORAGE_BUCKET` (Preview, Production)
+- `FIREBASE_PROJECT_ID` (Preview, Production)
+- `FIREBASE_AUTH_DOMAIN` (Production)
+- `FIREBASE_API_KEY` (Production)
+
+Remove those seven variables in Vercel Project Settings → Environment Variables, then redeploy to finish removing the unused Firebase configuration. No Firebase-to-Supabase code migration is pending based on the current source audit.
