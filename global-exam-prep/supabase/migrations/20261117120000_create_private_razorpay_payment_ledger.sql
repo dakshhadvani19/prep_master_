@@ -85,6 +85,14 @@ CREATE INDEX IF NOT EXISTS razorpay_webhook_events_payment_idx
 CREATE INDEX IF NOT EXISTS razorpay_webhook_events_status_received_idx
     ON private.razorpay_webhook_events (processing_status, received_at);
 
+CREATE INDEX IF NOT EXISTS payment_transactions_subscriber_idx
+    ON private.payment_transactions (subscriber_id)
+    WHERE subscriber_id IS NOT NULL;
+
+CREATE INDEX IF NOT EXISTS razorpay_webhook_events_transaction_idx
+    ON private.razorpay_webhook_events (transaction_id)
+    WHERE transaction_id IS NOT NULL;
+
 REVOKE ALL ON SCHEMA private FROM PUBLIC, anon, authenticated;
 GRANT USAGE ON SCHEMA private TO service_role;
 

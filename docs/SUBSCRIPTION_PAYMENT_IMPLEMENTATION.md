@@ -3,7 +3,7 @@
 ## Current status
 
 - The existing public `Subscriptions` and `Subscribers` tables are preserved exactly as defined by the ER diagram.
-- The private `payment_transactions` and `razorpay_webhook_events` tables have been created and verified in Supabase.
+- The private `payment_transactions` and `razorpay_webhook_events` tables have been created and verified in Supabase, including indexes for their foreign-key lookup columns.
 - The matching SQL is versioned in `global-exam-prep/supabase/migrations/20261117120000_create_private_razorpay_payment_ledger.sql`.
 - Razorpay Test Mode environment variables are not configured yet. No Checkout request can be enabled until test credentials are added.
 - No weekly/monthly plan rows have been seeded because token allocations are still undecided.
