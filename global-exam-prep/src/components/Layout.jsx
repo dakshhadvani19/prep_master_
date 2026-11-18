@@ -1,15 +1,19 @@
 import React, { useState, useEffect, useRef, useMemo, Suspense } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
-import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard, Sun, Moon } from 'lucide-react';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { useAuth } from '../context/AuthContext';
 import { CATALOG_DOMAINS } from '../data/catalogDomains';
 import courseMapping from '../data/courseMapping.json';
 import './Layout.css';
 import PageLoading from './PageLoading';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Layout() {
     const { currentUser, logout, isAdmin, authLoading } = useAuth();
+    const { theme, toggleTheme } = useTheme();
+    const ThemeIcon = theme === 'light' ? Moon : Sun;
+    const themeActionLabel = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -371,6 +375,17 @@ export default function Layout() {
                             )}
                         </div>
 
+                        <button
+                            type="button"
+                            className="pm-theme-toggle"
+                            onClick={toggleTheme}
+                            title={themeActionLabel}
+                            aria-label={themeActionLabel}
+                            aria-pressed={theme === 'dark'}
+                        >
+                            <ThemeIcon size={17} aria-hidden="true" />
+                        </button>
+
                         {/* Auth Buttons */}
                         {currentUser ? (
                             <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
@@ -459,6 +474,18 @@ export default function Layout() {
                         flexDirection: 'column',
                         gap: '1rem',
                     }}>
+                        <button
+                            type="button"
+                            className="pm-theme-toggle pm-theme-toggle--mobile"
+                            onClick={toggleTheme}
+                            title={themeActionLabel}
+                            aria-label={themeActionLabel}
+                            aria-pressed={theme === 'dark'}
+                        >
+                            <ThemeIcon size={17} aria-hidden="true" />
+                            <span className="pm-theme-toggle__label">{theme === 'light' ? 'Dark appearance' : 'Light appearance'}</span>
+                        </button>
+
                         {/* Mobile Search */}
                         <div ref={searchRef} style={{ position: 'relative' }}>
                             <form
@@ -636,6 +663,42 @@ export default function Layout() {
                     </Suspense>
                 </motion.div>
             </main>
+
+            <footer className="pm-footer">
+                <div className="pm-footer__inner">
+                    <div className="pm-footer__top">
+                        <div className="pm-footer__brand">
+                            <div className="pm-footer__brand-title">
+                                <BookOpen size={20} color="#D8CBB3" />
+                                <span>PrepMaster</span>
+                            </div>
+                            <p className="pm-footer__tagline">
+                                A modern academic study environment shaped around university syllabuses and structured examination practice.
+                            </p>
+                        </div>
+                        <div className="pm-footer__links-group">
+                            <div className="pm-footer__links-col">
+                                <span className="pm-footer__col-title">Navigation</span>
+                                <Link to="/" className="pm-footer__link">Home</Link>
+                                <Link to="/leaderboards" className="pm-footer__link">Leaderboards</Link>
+                                <Link to="/feedback" className="pm-footer__link">Feedback</Link>
+                            </div>
+                            <div className="pm-footer__links-col">
+                                <span className="pm-footer__col-title">Study Resources</span>
+                                <Link to="/guide" className="pm-footer__link">User Guide</Link>
+                                <Link to="/dashboard" className="pm-footer__link">Dashboard</Link>
+                                <Link to="/subscriptions" className="pm-footer__link">Subscriptions</Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="pm-footer__bottom">
+                        <span className="pm-footer__stationery-note">
+                            ✏️ Focused digital study desk &amp; examination companion
+                        </span>
+                        <span>© {new Date().getFullYear()} PrepMaster. All rights reserved.</span>
+                    </div>
+                </div>
+            </footer>
 
             <style>{`
                 @media (max-width: 900px) {

@@ -63,3 +63,208 @@
 @media (max-width: 768px) {
     .pm-main { padding: 1.15rem 0 2.5rem; }
 }
+
+/* Footer uses reference layout geometry; theme-specific colors are kept in LightThemeBase.css and ThemeToggle.css. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer — Minimalist Editorial Stationery Aesthetic */
+.pm-footer{
+padding: 3rem 1.5rem 2.5rem;
+position: relative;
+margin-top: auto;
+}
+
+
+.pm-footer::before{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 2px;
+}
+
+
+.pm-footer__inner{
+max-width: 1240px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+
+.pm-footer__top{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+flex-wrap: wrap;
+gap: 2rem;
+}
+
+
+.pm-footer__brand{
+max-width: 380px;
+}
+
+
+.pm-footer__brand-title{
+margin-bottom: 0.5rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+
+
+
+
+
+.pm-footer__links-group{
+display: flex;
+gap: 3rem;
+flex-wrap: wrap;
+}
+
+
+.pm-footer__links-col{
+display: flex;
+flex-direction: column;
+gap: 0.75rem;
+}
+
+
+
+
+
+
+
+
+.pm-footer__bottom{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 1rem;
+padding-top: 1.5rem;
+}
+
+
+.pm-footer__stationery-note{
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
+}
+
+
+@media (max-width: 768px){
+
+    
+    .pm-footer__top{
+flex-direction: column;
+}
+
+    .pm-footer__links-group{
+gap: 2rem;
+}
+
+
+}
+

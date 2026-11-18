@@ -7,6 +7,10 @@ import PageLoading from './components/PageLoading';
 import './index.css';
 import './pages/ExamExperience.css';
 import './styles/PurpleRestoration.css';
+import './styles/LightThemeBase.css';
+import './styles/LightThemePages.css';
+import './styles/ThemeToggle.css';
+import { ThemeProvider } from './context/ThemeContext';
 
 // Lazy loading route components for FAANG-level performance splitting
 const LandingPage = lazy(() => import('./pages/LandingPage'));
@@ -78,7 +82,8 @@ function NotFound() {
 
 function App() {
   return (
-    <AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
       <BrowserRouter>
         <ScrollToTop />
           <Suspense fallback={<PageLoading message="Preparing PrepMaster…" />}>
@@ -151,7 +156,8 @@ function App() {
             </Routes>
           </Suspense>
       </BrowserRouter>
-    </AuthProvider>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
