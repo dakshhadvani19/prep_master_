@@ -8,6 +8,7 @@ const mocks = vi.hoisted(() => ({
     getMyAttempts: vi.fn(),
     getMyTestRoomAttempts: vi.fn(),
     reconcileTestRoomAttempts: vi.fn(),
+    evaluateExamAttempt: vi.fn(),
 }));
 
 vi.mock('../src/context/AuthContext', () => ({
@@ -17,6 +18,7 @@ vi.mock('../src/utils/supabaseExam', () => ({
     getMyAttempts: (...args) => mocks.getMyAttempts(...args),
     getMyTestRoomAttempts: (...args) => mocks.getMyTestRoomAttempts(...args),
     reconcileTestRoomAttempts: (...args) => mocks.reconcileTestRoomAttempts(...args),
+    evaluateExamAttempt: (...args) => mocks.evaluateExamAttempt(...args),
 }));
 
 import Dashboard from '../src/pages/Dashboard.jsx';
@@ -37,6 +39,7 @@ beforeEach(()=>{
         score:1,total_marks:1,started_at:'2026-10-31T09:00:00.000Z',submitted_at:'2026-10-31T09:15:00.000Z',
     }],error:null});
     mocks.reconcileTestRoomAttempts.mockReset().mockResolvedValue({ok:true,error:null});
+    mocks.evaluateExamAttempt.mockReset().mockResolvedValue({status:'pending'});
 });
 afterEach(()=>{cleanup();vi.restoreAllMocks();});
 
@@ -70,6 +73,60 @@ describe('student attempt history',()=>{
         expect(screen.getByText('Completed attempts').parentElement.querySelector('strong')).toHaveTextContent('2');
         expect(screen.getByRole('link',{name:/review answers/i})).toHaveAttribute('href','/review/room-attempt-1?attemptType=test_room');
     });
+    it('shows the same Review Answers action for an objective attempt when its score is not available yet',async()=>{
+        mocks.getMyAttempts.mockResolvedValue({attempts:[{
+            id:'objective-without-score',attempt_type:'exam',status:'submitted',subject_code:'CE201',
+            subject_name:'Fundamentals of Machine Learning',exam_type:'mid-2',difficulty:'medium',
+            questions:[{id:'mcq-1',type:'mcq',text:'Question',options:['A','B','C','D']}],
+            answers:{'mcq-1':2},score:null,total_marks:30,review_status:'ready',
+            submitted_at:'2026-11-06T10:02:00.000Z',
+        }],error:null});
+        mocks.getMyTestRoomAttempts.mockResolvedValue({attempts:[],error:null});
+
+        renderDashboard();
+
+        expect(await screen.findByText('Fundamentals of Machine Learning')).toBeInTheDocument();
+        expect(screen.getByText('Answers submitted')).toBeInTheDocument();
+        expect(screen.queryByText('Theory answers')).toBeNull();
+        expect(screen.getByRole('link',{name:/review answers/i}))
+            .toHaveAttribute('href','/review/objective-without-score?attemptType=exam');
+    });
+
+    it('shows the same Review Answers action for a theory attempt while evaluation is pending',async()=>{
+        mocks.getMyAttempts.mockResolvedValue({attempts:[{
+            id:'theory-pending',attempt_type:'exam',status:'submitted',subject_code:'CE202',
+            subject_name:'Data Structures',exam_type:'mid-1',difficulty:'medium',
+            questions:[{id:'theory-1',type:'subjective',text:'Explain the concept.',marks:4}],
+            answers:{'theory-1':'My submitted answer'},score:null,total_marks:30,review_status:'pending',
+            submitted_at:'2026-11-06T10:02:00.000Z',
+        }],error:null});
+        mocks.getMyTestRoomAttempts.mockResolvedValue({attempts:[],error:null});
+
+        renderDashboard();
+
+        expect(await screen.findByRole('link',{name:/review answers/i}))
+            .toHaveAttribute('href','/review/theory-pending?attemptType=exam');
+        expect(await screen.findByText('Evaluating answers')).toBeInTheDocument();
+        expect(mocks.evaluateExamAttempt).toHaveBeenCalledWith('theory-pending');
+    });
+
+    it('keeps Review Answers available for a theory attempt whose rubric is unavailable',async()=>{
+        mocks.getMyAttempts.mockResolvedValue({attempts:[{
+            id:'theory-no-rubric',attempt_type:'exam',status:'submitted',subject_code:'CE203',
+            subject_name:'Computer Networks',exam_type:'mid-1',difficulty:'medium',
+            questions:[{id:'theory-2',type:'subjective',text:'Explain the concept.',marks:4}],
+            answers:{'theory-2':'My submitted answer'},score:null,total_marks:30,review_status:'unavailable',
+            submitted_at:'2026-11-06T10:02:00.000Z',
+        }],error:null});
+        mocks.getMyTestRoomAttempts.mockResolvedValue({attempts:[],error:null});
+
+        renderDashboard();
+
+        expect(await screen.findByText('Rubric unavailable')).toBeInTheDocument();
+        expect(screen.getByRole('link',{name:/review answers/i}))
+            .toHaveAttribute('href','/review/theory-no-rubric?attemptType=exam');
+    });
+
     it('does not show local history when persisted attempt retrieval fails',async()=>{
         window.localStorage.setItem('prepmaster_exam_history_v1:student-1',JSON.stringify([{id:'legacy-local',subjectName:'Legacy local attempt'}]));
         mocks.getMyAttempts.mockResolvedValue({attempts:[],error:'request failed'});

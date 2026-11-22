@@ -466,3 +466,11 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Kept invisible spacer elements in the original positions so the desktop navbar and mobile menu retain their previous layout footprint.
 - Left page-specific filters such as Admin Courses and Leaderboards unchanged. The standalone `/search` route remains available by direct navigation; the navbar no longer links to or invokes it.
 - Added homepage regression coverage for the absence of navbar search controls and the retained desktop/mobile spacer elements.
+
+
+## 18. Dashboard answer-review action consistency (2026-11-22)
+
+- Removed the dashboard-only requirement that a theory attempt must finish AI rubric evaluation before its review link appears. Every finalized attempt with a saved question snapshot now shows the same **Review Answers** action.
+- Kept evaluation behavior in ReviewPage: pending evaluations are started/resumed there, failed evaluations can be retried, and attempts without a complete rubric are clearly marked unavailable.
+- Replaced the misleading generic “Theory answers” fallback with “Answers submitted”; objective attempts with missing score data no longer appear to be theory attempts.
+- Added dashboard regression tests for objective attempts without score data, theory attempts awaiting evaluation, and theory attempts whose rubric is unavailable.

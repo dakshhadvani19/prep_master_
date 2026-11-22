@@ -23,6 +23,7 @@ The student Performance History page and Answer Review route use only durable no
 - Waiting/cancelled Test Room rows and cancelled normal-exam rows are excluded from the student history list.
 - The Performance overview is calculated from finalized scored attempts in those same lists. It does not fetch `/api/dashboard-performance` or another separate leaderboard summary.
 - Review links carry an `attemptType` query parameter so ReviewPage calls the matching owner-checked endpoint.
+- Every finalized attempt with a non-empty saved question snapshot displays the same **Review Answers** action, independent of MCQ/theory type or theory-evaluation state. ReviewPage handles pending evaluation, failure/retry, and missing-rubric states after navigation.
 - Older direct review links without that parameter try only the two persisted attempt-review endpoints.
 
 ## Browser-local history removal
@@ -55,3 +56,10 @@ The student Performance History page and Answer Review route use only durable no
 ## Compatibility and schema notes
 
 No Supabase schema, RLS policy, public ERD table, question-generation rule, or Test Room lifecycle behavior is changed by this task. The Test Room list endpoint reuses the existing private attempt storage and authenticated API architecture.
+
+
+## Dashboard review-action consistency — 2026-11-22
+
+The dashboard no longer gates the **Review Answers** action on theory rubric evaluation being completed. Finalized MCQ, theory, and Test Room attempts with saved questions all use the same action and source-specific review route. Theory evaluation remains server-side and ReviewPage continues to explain pending, failed, and unavailable evaluation states.
+
+The no-score status for normal exams is labelled **Answers submitted** unless the server has returned an explicit evaluation state. It is not labelled “Theory answers” based on a missing score.

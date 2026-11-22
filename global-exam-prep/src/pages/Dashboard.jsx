@@ -347,8 +347,10 @@ export default function Dashboard() {
                             && ['pending', 'evaluating'].includes(record.reviewStatus);
                         const theoryFailed = record.attemptType === 'exam' && record.type === 'theory'
                             && record.reviewStatus === 'failed';
+                        // ReviewPage owns evaluation progress/retry states, so every finalized
+                        // attempt with a saved question snapshot can open the same review flow.
                         const canReview = Array.isArray(record.questions) && record.questions.length > 0
-                            && isFinalized && (record.type !== 'theory' || record.reviewStatus === 'completed');
+                            && isFinalized;
 
                         let statusColor = 'var(--text-secondary)';
                         if (isScored) {
@@ -407,7 +409,7 @@ export default function Dashboard() {
                                         </div>
                                     ) : (
                                         <div style={{ fontSize: '1.05rem', fontWeight: 600, color: record.reviewStatus === 'completed' ? 'var(--success)' : 'var(--accent-primary)', marginBottom: '0.75rem' }}>
-                                            {record.reviewStatus === 'completed' ? 'AI evaluated' : record.reviewStatus === 'unavailable' ? 'Rubric unavailable' : 'Theory answers'}
+                                            {record.reviewStatus === 'completed' ? 'AI evaluated' : record.reviewStatus === 'unavailable' ? 'Rubric unavailable' : record.reviewStatus === 'failed' ? 'Evaluation failed' : 'Answers submitted'}
                                         </div>
                                     )}
                                     {canReview && (
