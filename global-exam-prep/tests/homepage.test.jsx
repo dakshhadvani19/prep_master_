@@ -301,20 +301,20 @@ describe('homepage', () => {
     expect(screen.queryByText('404')).toBeNull();
   }, 20000);
 
-  it('shows the four original-style team cards with only the supplied GitHub, LinkedIn, and email links', async () => {
+  it('shows the five contact cards with only the supplied GitHub, LinkedIn, and email links', async () => {
     const { container } = await at('/');
     await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
 
     const contact = container.querySelector('#contact');
     expect(contact).toBeTruthy();
     const cards = [...contact.querySelectorAll('.pm-people-card')];
-    expect(cards).toHaveLength(4);
+    expect(cards).toHaveLength(5);
     expect(contact.querySelectorAll('img, .pm-people-avatar, .pm-people-monogram, .pm-people-role, .pm-people-passion')).toHaveLength(0);
 
     const names = cards.map((card) => card.querySelector('h3')?.textContent.trim());
-    expect(names).toEqual(['Daksh Hadvani', 'Dev Kalola', 'Harsh Joshi', 'Kashyap Ladani']);
+    expect(names).toEqual(['Daksh Hadvani', 'Dev Kalola', 'Harsh Joshi', 'Kashyap Ladani', 'Sneh Ghetiya']);
     expect([...contact.querySelectorAll('.pm-people-study')].map((node) => node.textContent.trim()))
-      .toEqual(Array(4).fill('Diploma in Computer Engineering'));
+      .toEqual(['Diploma in Computer Engineering', 'Diploma in Computer Engineering', 'Diploma in Computer Engineering', 'Diploma in Computer Engineering', 'Student at Marwadi University']);
 
     const allowedLabels = new Set(['GitHub', 'LinkedIn', 'Email']);
     const renderedLabels = [...contact.querySelectorAll('.pm-people-links a span')]
@@ -330,6 +330,11 @@ describe('homepage', () => {
     const kashyap = cards.find((card) => card.querySelector('h3')?.textContent.trim() === 'Kashyap Ladani');
     expect(kashyap.querySelector('a[href^="https://mail.google.com/mail/?view=cm&fs=1&to=kashyapladani5636@gmail.com"]')).toBeTruthy();
     expect(kashyap.querySelector('a[href*="github.com"], a[href*="linkedin.com"]')).toBeNull();
+
+    const sneh = cards.find((card) => card.querySelector('h3')?.textContent.trim() === 'Sneh Ghetiya');
+    expect(sneh.querySelector('a[href^="https://mail.google.com/mail/?view=cm&fs=1&to=ghetiyasneh5@gmail.com"]')).toBeTruthy();
+    expect(sneh.querySelector('a[href^="https://www.linkedin.com/in/sneh-ghetiya-3ba99a39b"]')).toBeTruthy();
+    expect(sneh.querySelector('a[href*="github.com"]')).toBeNull();
   }, 20000);
 
   it('the auth page is reachable by its legacy aliases without a redirect loop', async () => {

@@ -91,7 +91,7 @@ function DomainArtwork({ id }) {
     );
 }
 
-function DeveloperCard({ name, email, github, linkedin, liked, onLike }) {
+function DeveloperCard({ name, email, github, linkedin, liked, onLike, study = 'Diploma in Computer Engineering' }) {
     const links = [
         { key: 'email', href: email, label: 'Email', Icon: Mail },
         { key: 'github', href: github, label: 'GitHub', Icon: Github },
@@ -103,7 +103,7 @@ function DeveloperCard({ name, email, github, linkedin, liked, onLike }) {
             <div className="pm-people-identity">
                 <div className="pm-people-identity-copy">
                     <h3>{name}</h3>
-                    <p className="pm-people-study">Diploma in Computer Engineering</p>
+                    <p className="pm-people-study">{study}</p>
                 </div>
                 <motion.button
                     className="pm-people-like"
@@ -153,6 +153,7 @@ export default function LandingPage() {
     const [liked2, setLiked2] = React.useState(() => readLikePreference('dev_liked_2'));
     const [likedHarsh, setLikedHarsh] = React.useState(() => readLikePreference('dev_liked_harsh'));
     const [likedKashyap, setLikedKashyap] = React.useState(() => readLikePreference('dev_liked_kashyap'));
+    const [likedSneh, setLikedSneh] = React.useState(() => readLikePreference('dev_liked_sneh'));
 
     useEffect(() => {
         document.title = 'PrepMaster | University Exam Preparation';
@@ -343,6 +344,15 @@ export default function LandingPage() {
                                 name="Kashyap Ladani"
                                 email="https://mail.google.com/mail/?view=cm&fs=1&to=kashyapladani5636@gmail.com"
                                 liked={likedKashyap} onLike={() => updateLike('dev_liked_kashyap', setLikedKashyap, !likedKashyap)}
+                            />
+                        </motion.div>
+                        <motion.div variants={cardReveal}>
+                            <DeveloperCard
+                                name="Sneh Ghetiya"
+                                email="https://mail.google.com/mail/?view=cm&fs=1&to=ghetiyasneh5@gmail.com"
+                                linkedin="https://www.linkedin.com/in/sneh-ghetiya-3ba99a39b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                                study="Student at Marwadi University"
+                                liked={likedSneh} onLike={() => updateLike('dev_liked_sneh', setLikedSneh, !likedSneh)}
                             />
                         </motion.div>
                     </motion.div>

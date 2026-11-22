@@ -20,7 +20,7 @@ PrepMaster is a student examination-preparation product. The student-facing jour
 - Departments: a consistent three-column desktop grid, two columns on tablet and one column on narrow phones. Six cards share equal dimensions at each breakpoint. Each card uses its own discipline illustration in a shared visual frame.
 - Course list: a responsive, equal-height card grid with program name and semester count prominent.
 - Semester/subject selection: clear two-step hierarchy with larger tap areas and explicit selected state.
-- Contact: retain the original two-column developer-card and pill-button styling, now with four names and the shared Diploma in Computer Engineering label. Remove portraits and per-card role/passion copy; show only each member’s supplied GitHub, LinkedIn, and email links.
+- Contact: retain the original two-column developer-card and pill-button styling, now with five names. Four cards use the shared Diploma in Computer Engineering label; Sneh Ghetiya is labelled Student at Marwadi University. Remove portraits and per-card role/passion copy; show only supplied GitHub, LinkedIn, and email links.
 
 ## Exam and Test Room experience
 
