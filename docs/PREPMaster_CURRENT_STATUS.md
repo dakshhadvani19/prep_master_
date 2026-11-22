@@ -474,3 +474,12 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Kept evaluation behavior in ReviewPage: pending evaluations are started/resumed there, failed evaluations can be retried, and attempts without a complete rubric are clearly marked unavailable.
 - Replaced the misleading generic “Theory answers” fallback with “Answers submitted”; objective attempts with missing score data no longer appear to be theory attempts.
 - Added dashboard regression tests for objective attempts without score data, theory attempts awaiting evaluation, and theory attempts whose rubric is unavailable.
+
+
+## 19. Expired normal-exam attempt reconciliation (2026-11-22)
+
+- Root cause of missing review actions on the November Machine Learning cards: the saved attempts were still `in_progress`, had no `submitted_at`, and had not reached the finalized states required by the owner-authenticated review endpoint. Their 45-minute time limits had elapsed; question snapshots and private MCQ answer keys were present.
+- The normal-exam history API now finalizes only stale `in_progress` attempts whose stored `started_at + time_minutes` deadline has passed. It uses the last server-saved answers, calculates objective scores from the private answer key, records `auto_submitted` at the original deadline, and initializes theory evaluation where a complete rubric exists.
+- Answer writes and normal submissions advance the attempt answer revision and use the private RPC compare-and-set guard, preventing the expiry reconciliation from overwriting a newer saved answer snapshot.
+- Dashboard cards now distinguish `In progress` from `Answers submitted` and label timed-out scored attempts `Auto-submitted`. Review Answers appears once the attempt is finalized.
+- Added tests for deadline boundaries, objective timeout scoring, preserving theory text, in-progress card state, and review availability after auto-submission.

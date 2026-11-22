@@ -398,9 +398,11 @@ export default function Dashboard() {
                                                 {record.score} <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/ {record.totalMarks}M</span>
                                             </div>
                                             <div style={{ color: statusColor, fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.75rem' }}>
-                                                {record.attemptType === 'test_room' && record.status !== 'submitted'
-                                                    ? String(record.status).replaceAll('_', ' ')
-                                                    : percentage >= 50 ? 'Passed' : 'Needs Review'}
+                                                {record.status === 'auto_submitted'
+                                                    ? 'Auto-submitted'
+                                                    : record.attemptType === 'test_room' && record.status !== 'submitted'
+                                                        ? String(record.status).replaceAll('_', ' ')
+                                                        : percentage >= 50 ? 'Passed' : 'Needs Review'}
                                             </div>
                                         </>
                                     ) : record.attemptType === 'test_room' ? (
@@ -408,8 +410,16 @@ export default function Dashboard() {
                                             {record.status === 'in_progress' ? 'Awaiting finalization' : 'Score unavailable'}
                                         </div>
                                     ) : (
-                                        <div style={{ fontSize: '1.05rem', fontWeight: 600, color: record.reviewStatus === 'completed' ? 'var(--success)' : 'var(--accent-primary)', marginBottom: '0.75rem' }}>
-                                            {record.reviewStatus === 'completed' ? 'AI evaluated' : record.reviewStatus === 'unavailable' ? 'Rubric unavailable' : record.reviewStatus === 'failed' ? 'Evaluation failed' : 'Answers submitted'}
+                                        <div style={{ fontSize: '1.05rem', fontWeight: 600, color: record.reviewStatus === 'completed' ? 'var(--success)' : record.status === 'in_progress' ? 'var(--warning)' : 'var(--accent-primary)', marginBottom: '0.75rem' }}>
+                                            {record.reviewStatus === 'completed'
+                                                ? 'AI evaluated'
+                                                : record.reviewStatus === 'unavailable'
+                                                    ? 'Rubric unavailable'
+                                                    : record.reviewStatus === 'failed'
+                                                        ? 'Evaluation failed'
+                                                        : record.status === 'in_progress'
+                                                            ? 'In progress'
+                                                            : 'Answers submitted'}
                                         </div>
                                     )}
                                     {canReview && (

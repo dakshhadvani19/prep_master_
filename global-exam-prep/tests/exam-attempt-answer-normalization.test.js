@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { buildAttemptReviewRecord, normalizeAnswers } from '../api/exam-attempts.js';
+import {
+    buildAttemptReviewRecord,
+    buildExpiredExamAttemptPatch,
+    getExamAttemptDeadline,
+    isExpiredExamAttempt,
+    normalizeAnswers,
+} from '../api/exam-attempts.js';
 
 describe('normal exam answer normalization', () => {
     it('stores missing MCQ selections as -1 while preserving theory text', () => {
@@ -29,6 +35,68 @@ describe('normal exam answer normalization', () => {
             q3: 1,
             q4: 0,
         });
+    });
+});
+
+
+describe('expired normal exam finalization', () => {
+    const startedAt = '2026-11-06T04:32:40.000Z';
+    const deadline = Date.parse(startedAt) + 45 * 60 * 1000;
+    const baseAttempt = {
+        id: 'expired-attempt',
+        status: 'in_progress',
+        started_at: startedAt,
+        time_minutes: 45,
+        answer_revision: 4,
+        total_marks: 2,
+        questions: [
+            { id: 'q1', type: 'mcq', options: ['A', 'B', 'C', 'D'] },
+            { id: 'q2', type: 'mcq', options: ['A', 'B', 'C', 'D'] },
+        ],
+        answers: { q1: 2, q2: -1 },
+    };
+
+    it('expires only after the server-side exam deadline', () => {
+        expect(getExamAttemptDeadline(baseAttempt)).toBe(deadline);
+        expect(isExpiredExamAttempt(baseAttempt, deadline - 1)).toBe(false);
+        expect(isExpiredExamAttempt(baseAttempt, deadline)).toBe(true);
+        expect(isExpiredExamAttempt({ ...baseAttempt, status: 'submitted' }, deadline + 1)).toBe(false);
+        expect(isExpiredExamAttempt({ ...baseAttempt, time_minutes: 0 }, deadline + 1)).toBe(false);
+    });
+
+    it('auto-submits the saved answers at the original deadline and calculates the objective score', () => {
+        const patch = buildExpiredExamAttemptPatch(baseAttempt, { q1: 2, q2: 0 }, '2026-11-22T00:00:00.000Z');
+
+        expect(patch).toMatchObject({
+            answers: { q1: 2, q2: -1 },
+            score: 1,
+            status: 'auto_submitted',
+            submitted_at: new Date(deadline).toISOString(),
+            updated_at: '2026-11-22T00:00:00.000Z',
+            attempted_count: 1,
+            correct_count: 1,
+            incorrect_count: 0,
+            unattempted_count: 1,
+            answer_revision: 5,
+        });
+    });
+
+    it('preserves written theory answers without inventing an MCQ score', () => {
+        const theoryAttempt = {
+            ...baseAttempt,
+            total_marks: 4,
+            questions: [{ id: 't1', type: 'subjective', marks: 4 }],
+            answers: { t1: 'My saved response' },
+        };
+        const patch = buildExpiredExamAttemptPatch(theoryAttempt, {}, '2026-11-22T00:00:00.000Z');
+
+        expect(patch).toMatchObject({
+            answers: { t1: 'My saved response' },
+            score: null,
+            attempted_count: 1,
+            status: 'auto_submitted',
+        });
+        expect(patch).not.toHaveProperty('correct_count');
     });
 });
 

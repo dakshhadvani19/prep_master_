@@ -364,6 +364,99 @@ export function normalizeAnswers(input, mcqQuestionIds = []) {
     return normalized;
 }
 
+export function getExamAttemptDeadline(attempt) {
+    if (attempt?.status !== 'in_progress') return null;
+    const startedAt = Date.parse(attempt.started_at || '');
+    const timeMinutes = Number(attempt.time_minutes);
+    if (!Number.isFinite(startedAt) || !Number.isFinite(timeMinutes) || timeMinutes <= 0) return null;
+    return startedAt + timeMinutes * 60_000;
+}
+
+export function isExpiredExamAttempt(attempt, now = Date.now()) {
+    const deadline = getExamAttemptDeadline(attempt);
+    const nowMs = now instanceof Date ? now.getTime() : Number(now);
+    return deadline !== null && Number.isFinite(nowMs) && deadline <= nowMs;
+}
+
+export function buildExpiredExamAttemptPatch(attempt, answerKey, updatedAt = new Date().toISOString()) {
+    const deadline = getExamAttemptDeadline(attempt);
+    if (deadline === null) throw new Error('A valid in-progress exam deadline is required.');
+
+    const questions = Array.isArray(attempt.questions) ? attempt.questions : [];
+    const mcqQuestionIds = questions
+        .filter(question => question?.type === 'mcq')
+        .map(question => String(question.id));
+    const answers = normalizeAnswers(attempt.answers, mcqQuestionIds);
+    const keyEntries = Array.isArray(answerKey)
+        ? answerKey.map((expected, index) => [String(questions[index]?.id || index), expected])
+        : answerKey && typeof answerKey === 'object'
+            ? Object.entries(answerKey)
+            : [];
+
+    let score = null;
+    let correct = null;
+    let attempted = Object.values(answers)
+        .filter(value => value !== null && value !== '' && value !== -1).length;
+    if (keyEntries.length) {
+        score = keyEntries.reduce((sum, [questionId, expected]) => (
+            sum + (answers[questionId] !== -1 && answers[questionId] != null
+                && String(answers[questionId]) === String(expected) ? 1 : 0)
+        ), 0);
+        correct = score;
+        attempted = keyEntries.filter(([questionId]) => answers[questionId] !== -1 && answers[questionId] != null).length;
+    }
+
+    const nextRevision = Math.max(0, Math.trunc(Number(attempt.answer_revision) || 0)) + 1;
+    const patch = {
+        answers,
+        score,
+        status: 'auto_submitted',
+        submitted_at: new Date(deadline).toISOString(),
+        updated_at: updatedAt,
+        attempted_count: attempted,
+        answer_revision: nextRevision,
+    };
+    if (correct !== null) {
+        patch.correct_count = correct;
+        patch.incorrect_count = Math.max(0, attempted - correct);
+        patch.unattempted_count = Math.max(0, keyEntries.length - attempted);
+    }
+    return patch;
+}
+
+async function autoSubmitExpiredExamAttempt(admin, userId, attempt) {
+    let current = attempt;
+    for (let retry = 0; retry < 3; retry += 1) {
+        if (!isExpiredExamAttempt(current)) return current;
+
+        const answerRow = await privateExamData(admin, 'get_answer_key', { attempt_id: current.id });
+        const updatedAt = new Date().toISOString();
+        const patch = buildExpiredExamAttemptPatch(current, answerRow?.answer_key, updatedAt);
+        const saved = await privateExamData(admin, 'update_attempt', {
+            id: current.id,
+            user_id: userId,
+            attempt_type: 'exam',
+            statuses: ['in_progress'],
+            before_revision: patch.answer_revision,
+            patch,
+        });
+        if (saved) {
+            try {
+                await upsertTheoryEvaluation(admin, saved, userId);
+            } catch (error) {
+                console.warn('[exam-attempts] Could not initialize timed-out theory evaluation:', error?.message || error);
+            }
+            return saved;
+        }
+
+        current = await privateExamData(admin, 'get_attempt', {
+            id: current.id, user_id: userId, attempt_type: 'exam',
+        });
+        if (!current || current.status !== 'in_progress') return current || attempt;
+    }
+    return current;
+}
+
 export default async function handler(req, res) {
     res.setHeader('Cache-Control', 'no-store');
     if (req.method === 'OPTIONS') return res.status(204).end();
@@ -758,9 +851,11 @@ export default async function handler(req, res) {
                 .filter((question) => question?.type === 'mcq')
                 .map((question) => String(question.id));
             const answers = normalizeAnswers(body.answers, mcqQuestionIds);
+            const nextRevision = Math.max(0, Math.trunc(Number(attempt.answer_revision) || 0)) + 1;
             const updated = await privateExamData(admin, 'update_attempt', {
                 id: attemptId, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
-                patch: { answers, updated_at: new Date().toISOString() },
+                before_revision: nextRevision,
+                patch: { answers, updated_at: new Date().toISOString(), answer_revision: nextRevision },
             });
             if (!updated) return fail(res, 409, 'This attempt is no longer accepting answers.');
             return res.status(200).json({ ok: true });
@@ -788,7 +883,10 @@ export default async function handler(req, res) {
             const key = answerRow?.answer_key && typeof answerRow.answer_key === 'object' && !Array.isArray(answerRow.answer_key)
                 ? answerRow.answer_key : {};
             const keys = Object.entries(key);
-            const answers = normalizeAnswers(body.answers, keys.map(([questionId]) => questionId));
+            const mcqQuestionIds = (Array.isArray(attempt.questions) ? attempt.questions : [])
+                .filter(question => question?.type === 'mcq')
+                .map(question => String(question.id));
+            const answers = normalizeAnswers(body.answers, mcqQuestionIds);
             let score = null;
             let correct = null;
             let attempted = Object.values(answers).filter((value) => value !== null && value !== '' && value !== -1).length;
@@ -802,25 +900,29 @@ export default async function handler(req, res) {
                 totalMarks = keys.length;
                 attempted = keys.filter(([questionId]) => answers[questionId] !== -1 && answers[questionId] != null).length;
             }
+            const nextRevision = Math.max(0, Math.trunc(Number(attempt.answer_revision) || 0)) + 1;
+            const submittedAt = new Date().toISOString();
             const patch = {
                 answers,
                 score,
                 status: 'submitted',
-                submitted_at: new Date().toISOString(),
-                updated_at: new Date().toISOString(),
+                submitted_at: submittedAt,
+                updated_at: submittedAt,
                 attempted_count: attempted,
+                answer_revision: nextRevision,
             };
             if (correct !== null) {
                 patch.correct_count = correct;
                 patch.incorrect_count = Math.max(0, attempted - correct);
                 patch.unattempted_count = Math.max(0, keys.length - attempted);
             }
-            const saved = await privateExamData(admin, 'update_attempt', {
+            let saved = await privateExamData(admin, 'update_attempt', {
                 id: attemptId, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
+                before_revision: nextRevision,
                 patch,
             });
             if (!saved) {
-                const latest = await privateExamData(admin, 'get_attempt', { id: attemptId, user_id: user.id, attempt_type: 'exam' });
+                let latest = await privateExamData(admin, 'get_attempt', { id: attemptId, user_id: user.id, attempt_type: 'exam' });
                 if (latest && ['submitted', 'auto_submitted'].includes(latest.status)) {
                     return res.status(200).json({
                         ok: true, alreadySubmitted: true, score: latest.score,
@@ -828,9 +930,20 @@ export default async function handler(req, res) {
                             ? null : Math.round((Number(latest.score) / Number(latest.total_marks)) * 100),
                     });
                 }
-                return fail(res, 409, 'The attempt could not be finalized.');
+                if (latest?.status === 'in_progress') {
+                    const retryRevision = Math.max(0, Math.trunc(Number(latest.answer_revision) || 0)) + 1;
+                    saved = await privateExamData(admin, 'update_attempt', {
+                        id: attemptId, user_id: user.id, attempt_type: 'exam', statuses: ['in_progress'],
+                        before_revision: retryRevision,
+                        patch: { ...patch, updated_at: new Date().toISOString(), answer_revision: retryRevision },
+                    });
+                    if (saved) latest = saved;
+                }
+                if (!saved) return fail(res, 409, 'The attempt changed while it was being submitted. Please submit again.');
             }
-            const finalizedAttempt = { ...attempt, answers, status: 'submitted' };
+            const finalizedAttempt = {
+                ...attempt, answers, answer_revision: saved.answer_revision ?? patch.answer_revision, status: 'submitted',
+            };
             const evaluation = await upsertTheoryEvaluation(admin, finalizedAttempt, user.id);
             return res.status(200).json({
                 ok: true, alreadySubmitted: false, score,
@@ -914,6 +1027,14 @@ export default async function handler(req, res) {
                 user_id: user.id, attempt_type: 'exam', limit, order: 'started_at_desc',
             });
             const rows = Array.isArray(attempts) ? attempts : [];
+            for (let index = 0; index < rows.length; index += 1) {
+                if (!isExpiredExamAttempt(rows[index])) continue;
+                try {
+                    rows[index] = await autoSubmitExpiredExamAttempt(admin, user.id, rows[index]);
+                } catch (error) {
+                    console.warn('[exam-attempts] Could not finalize an expired attempt:', error?.message || error);
+                }
+            }
             const evaluationRows = rows.length ? await privateEvaluationData(admin, 'list', {
                 user_id: user.id, attempt_ids: rows.map(attempt => attempt.id),
             }) : [];

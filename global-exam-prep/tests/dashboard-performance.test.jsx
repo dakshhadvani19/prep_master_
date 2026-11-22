@@ -94,6 +94,40 @@ describe('student attempt history',()=>{
             .toHaveAttribute('href','/review/objective-without-score?attemptType=exam');
     });
 
+    it('does not describe an unfinished attempt as submitted or expose its review before timeout',async()=>{
+        mocks.getMyAttempts.mockResolvedValue({attempts:[{
+            id:'objective-in-progress',attempt_type:'exam',status:'in_progress',subject_code:'CE204',
+            subject_name:'Fundamentals of Machine Learning',exam_type:'mid-2',difficulty:'medium',
+            time_minutes:45,questions:[{id:'mcq-1',type:'mcq',text:'Question',options:['A','B','C','D']}],
+            answers:{'mcq-1':2},score:null,total_marks:30,review_status:'ready',
+            started_at:'2026-11-22T10:00:00.000Z',
+        }],error:null});
+        mocks.getMyTestRoomAttempts.mockResolvedValue({attempts:[],error:null});
+
+        renderDashboard();
+
+        expect(await screen.findByText('In progress')).toBeInTheDocument();
+        expect(screen.queryByText('Answers submitted')).toBeNull();
+        expect(screen.queryByRole('link',{name:/review answers/i})).toBeNull();
+    });
+
+    it('shows Review Answers after an expired attempt is auto-submitted by the API',async()=>{
+        mocks.getMyAttempts.mockResolvedValue({attempts:[{
+            id:'objective-auto-submitted',attempt_type:'exam',status:'auto_submitted',subject_code:'CE205',
+            subject_name:'Fundamentals of Machine Learning',exam_type:'mid-2',difficulty:'medium',
+            time_minutes:45,questions:[{id:'mcq-1',type:'mcq',text:'Question',options:['A','B','C','D']}],
+            answers:{'mcq-1':2},score:0,total_marks:30,review_status:'ready',
+            started_at:'2026-11-06T04:32:40.000Z',submitted_at:'2026-11-06T05:17:40.000Z',
+        }],error:null});
+        mocks.getMyTestRoomAttempts.mockResolvedValue({attempts:[],error:null});
+
+        renderDashboard();
+
+        expect(await screen.findByText('Auto-submitted')).toBeInTheDocument();
+        expect(screen.getByRole('link',{name:/review answers/i}))
+            .toHaveAttribute('href','/review/objective-auto-submitted?attemptType=exam');
+    });
+
     it('shows the same Review Answers action for a theory attempt while evaluation is pending',async()=>{
         mocks.getMyAttempts.mockResolvedValue({attempts:[{
             id:'theory-pending',attempt_type:'exam',status:'submitted',subject_code:'CE202',

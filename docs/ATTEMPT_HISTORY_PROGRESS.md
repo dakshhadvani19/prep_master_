@@ -63,3 +63,8 @@ No Supabase schema, RLS policy, public ERD table, question-generation rule, or T
 The dashboard no longer gates the **Review Answers** action on theory rubric evaluation being completed. Finalized MCQ, theory, and Test Room attempts with saved questions all use the same action and source-specific review route. Theory evaluation remains server-side and ReviewPage continues to explain pending, failed, and unavailable evaluation states.
 
 The no-score status for normal exams is labelled **Answers submitted** unless the server has returned an explicit evaluation state. It is not labelled “Theory answers” based on a missing score.
+
+
+## Expired normal-exam attempts — 2026-11-22
+
+The authenticated normal-exam history endpoint reconciles stale in-progress attempts after their stored deadline (`started_at + time_minutes`). It uses the last server-accepted answer snapshot, calculates objective scores from the private key, marks the row `auto_submitted` with `submitted_at` set to the original deadline, and initializes rubric evaluation for theory papers. The compare-and-set uses the attempt answer revision so a concurrent save or submit cannot be silently overwritten. The Dashboard distinguishes live `In progress` records from finalized, reviewable attempts.
