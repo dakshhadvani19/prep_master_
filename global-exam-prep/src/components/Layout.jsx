@@ -90,15 +90,10 @@ export default function Layout() {
                 WebkitBackdropFilter: 'blur(16px)',
                 borderBottom: '1px solid var(--glass-border)',
             }}>
-                <div style={{
+                <div className="pm-nav__inner" style={{
                     maxWidth: '1400px',
                     margin: '0 auto',
                     padding: '0 1.5rem',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    height: '64px',
-                    gap: '0.75rem',
                 }}>
                     {/* Logo */}
                     <Link to={showAdminNav ? '/dashboard' : '/'} className="pm-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
@@ -195,9 +190,12 @@ export default function Layout() {
                             );
                         })}
 
-                        {/* Keep the previous navbar footprint without a search control. */}
-                        <div className="pm-nav-search-spacer" aria-hidden="true" />
+                    </div>
 
+                    {/* Account actions sit outside the centered navigation capsule. */}
+                    <div className="pm-nav__right">
+                        <div className="pm-nav-search-spacer" aria-hidden="true" />
+                        <div className="pm-nav-auth">
                         {/* Auth Buttons */}
                         {currentUser ? (
                             <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
@@ -253,8 +251,8 @@ export default function Layout() {
                                 </Link>
                             </div>
                         )}
-                    </div>
 
+                        </div>
                     {/* Mobile Hamburger */}
                     <button
                         className="nav-mobile-toggle"
@@ -274,6 +272,7 @@ export default function Layout() {
                     >
                         {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
                     </button>
+                    </div>
                 </div>
 
                 {/* Mobile Dropdown Menu */}
@@ -379,12 +378,17 @@ export default function Layout() {
 
             <style>{`
                 @media (max-width: 900px) {
-                    .nav-desktop { display: none !important; }
+                    .pm-nav__inner { grid-template-columns: minmax(0, 1fr) auto !important; }
+                    .nav-desktop,
+                    .pm-nav-search-spacer,
+                    .pm-nav-auth { display: none !important; }
                     .nav-mobile-toggle { display: flex !important; }
                 }
                 @media (min-width: 901px) {
-                    .nav-mobile-toggle { display: none !important; }
+                    .pm-nav__inner { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
                     .nav-desktop { display: flex !important; }
+                    .pm-nav-auth { display: flex !important; }
+                    .nav-mobile-toggle { display: none !important; }
                 }
             `}</style>
         </>

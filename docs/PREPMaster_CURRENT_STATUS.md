@@ -483,3 +483,11 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 - Answer writes and normal submissions advance the attempt answer revision and use the private RPC compare-and-set guard, preventing the expiry reconciliation from overwriting a newer saved answer snapshot.
 - Dashboard cards now distinguish `In progress` from `Answers submitted` and label timed-out scored attempts `Auto-submitted`. Review Answers appears once the attempt is finalized.
 - Added tests for deadline boundaries, objective timeout scoring, preserving theory text, in-progress card state, and review availability after auto-submission.
+
+
+## 20. Centered navigation capsule and separated account actions (2026-11-22)
+
+- Reworked the desktop navbar into a three-column layout: brand at the left, exactly four primary navigation links centered in the rounded capsule, and profile/login/logout actions aligned independently at the top-right.
+- Kept the empty search-space spacer outside the capsule and retained the mobile dropdown's reserved search-space area. No search functionality was reintroduced.
+- Preserved the existing mobile hamburger/dropdown behavior and route destinations.
+- Added homepage regression assertions for the four-link capsule, separated right-side account actions, and absent global search controls.

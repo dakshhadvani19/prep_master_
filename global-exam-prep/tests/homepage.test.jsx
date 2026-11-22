@@ -95,7 +95,15 @@ describe('homepage', () => {
     await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
 
     const desktopNav = container.querySelector('.nav-desktop');
-    expect(desktopNav.querySelector('.pm-nav-search-spacer')).toBeTruthy();
+    const navInner = container.querySelector('.pm-nav__inner');
+    const rightActions = container.querySelector('.pm-nav__right');
+    expect(navInner).toBeTruthy();
+    expect(desktopNav.querySelectorAll('.nav-desktop-item')).toHaveLength(4);
+    expect(desktopNav.querySelector('.pm-nav-auth')).toBeNull();
+    expect(rightActions.querySelector('.pm-nav-search-spacer')).toBeTruthy();
+    expect(rightActions.querySelector('.pm-nav-auth')).toBeTruthy();
+    expect(rightActions.querySelector('.pm-nav-auth a[href="/signup?mode=login"]')).toBeTruthy();
+    expect(rightActions.querySelector('.pm-nav-auth a[href="/signup?mode=signup"]')).toBeTruthy();
     expect(desktopNav.querySelector('form, input, [aria-label="Submit Search"]')).toBeNull();
     expect(container.querySelector('input[placeholder="Search courses or subjects..."]')).toBeNull();
 

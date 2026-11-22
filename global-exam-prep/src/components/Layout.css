@@ -7,8 +7,31 @@
 }
 
 .pm-nav__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.75rem;
+    height: 64px;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+.nav-desktop {
+    justify-self: center;
+}
+
+.pm-nav__right {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.pm-nav-auth {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
 }
 
 /* Local active/hover fill: always positioned within its own nav item. */
@@ -68,7 +91,7 @@
 /* Empty slots retain the navbar geometry after global search was removed. */
 .pm-nav-search-spacer {
     flex: 0 0 auto;
-    width: calc(clamp(120px, 15vw, 200px) + 58px);
+    width: clamp(48px, 6vw, 84px);
     height: 35px;
 }
 
