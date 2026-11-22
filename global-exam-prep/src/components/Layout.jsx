@@ -19,6 +19,15 @@ export default function Layout() {
         setMobileMenuOpen(false);
     }, [location.pathname]);
 
+    async function handleLogout() {
+        try {
+            await logout();
+            navigate('/signup?mode=login');
+        } catch (error) {
+            console.error('Failed to log out', error);
+        }
+    }
+
     // Role-dependent navbar. Students (and guests) keep Home / Subscriptions.
     // Authenticated admins: Dashboard + Courses in those slots; Leaderboards and
     // Feedback stay. Never derived from email or storage — AuthContext.isAdmin only.
