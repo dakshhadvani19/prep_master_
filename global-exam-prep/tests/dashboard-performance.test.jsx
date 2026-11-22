@@ -71,7 +71,9 @@ describe('student attempt history',()=>{
         expect(mocks.getMyAttempts).toHaveBeenCalledWith(100);
         expect(mocks.getMyTestRoomAttempts).toHaveBeenCalledWith(100);
         expect(screen.getByText('Completed attempts').parentElement.querySelector('strong')).toHaveTextContent('2');
-        expect(screen.getByRole('link',{name:/review answers/i})).toHaveAttribute('href','/review/room-attempt-1?attemptType=test_room');
+        const reviewLinks = screen.getAllByRole('link',{name:/review answers/i}).map(link => link.getAttribute('href'));
+        expect(reviewLinks).toContain('/review/room-attempt-1?attemptType=test_room');
+        expect(reviewLinks).toContain('/review/exam-attempt-1?attemptType=exam');
     });
     it('shows the same Review Answers action for an objective attempt when its score is not available yet',async()=>{
         mocks.getMyAttempts.mockResolvedValue({attempts:[{
