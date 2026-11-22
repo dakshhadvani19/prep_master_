@@ -1,3 +1,5 @@
+> **Source archive note (2026-11-22):** The old root Syllabus/ and Questions/ staging exports are no longer checked in. Use the live catalog, checked-in runtime maps, and global-exam-prep/public/syllabus/ for current application behavior. Historical archive information is retained in docs where applicable.
+
 # PrepMaster Primary Key Rules
 
 **Purpose:** Keep the primary-key conventions consistent when adding or restoring catalog rows and when designing future Supabase tables.

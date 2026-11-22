@@ -66,7 +66,7 @@ describe('subject id uniqueness', () => {
 
 describe('canonical catalog coverage', () => {
   it('does not resolve IDs for subjects archived out of the public catalog', () => {
-    const csv = readFileSync('temp_removed_subjects/removed_subjects_2026-10-11.csv', 'utf8').trim();
+    const csv = readFileSync('../docs/archives/temp_removed_subjects/removed_subjects_2026-10-11.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
     const rows = lines.slice(1).map(parseCsvLine);
     const header = parseCsvLine(lines[0]);
@@ -83,7 +83,7 @@ describe('canonical catalog coverage', () => {
   });
 
   it('does not resolve Law & Arts rows temporarily excluded after PDF content review', () => {
-    const csv = readFileSync('temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv', 'utf8').trim();
+    const csv = readFileSync('../docs/archives/temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
     const rows = lines.slice(1).map(parseCsvLine);
     const header = parseCsvLine(lines[0]);
@@ -100,7 +100,7 @@ describe('canonical catalog coverage', () => {
   });
 
   it('does not resolve the 46 project/dissertation subjects removed from the active catalog', () => {
-    const csv = readFileSync('temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv', 'utf8').trim();
+    const csv = readFileSync('../docs/archives/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
     const rows = lines.slice(1).map(parseCsvLine);
     const header = parseCsvLine(lines[0]);
@@ -120,7 +120,7 @@ describe('canonical catalog coverage', () => {
   });
 
   it('does not resolve the 20 legacy-only project subjects removed from inactive course definitions', () => {
-    const csv = readFileSync('temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv', 'utf8').trim();
+    const csv = readFileSync('../docs/archives/temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
     const rows = lines.slice(1).map(parseCsvLine);
     const header = parseCsvLine(lines[0]);
@@ -139,7 +139,7 @@ describe('canonical catalog coverage', () => {
   });
 
   it('keeps Law & Arts network-unverified subjects mapped for retry', () => {
-    const csv = readFileSync('temp_removed_subjects/law_arts_network_retry_pending_2026-10-11.csv', 'utf8').trim();
+    const csv = readFileSync('../docs/archives/temp_removed_subjects/law_arts_network_retry_pending_2026-10-11.csv', 'utf8').trim();
     const lines = csv.split(/\r?\n/);
     const rows = lines.slice(1).map(parseCsvLine);
     const header = parseCsvLine(lines[0]);

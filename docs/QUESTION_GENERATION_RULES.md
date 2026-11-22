@@ -431,7 +431,7 @@ For generated question-bank files under `Questions/Diploma/<Course>/<Semester>/<
 
 ## 14. Supabase `TestsData` export contract
 
-The live `public."TestsData"` table has only `TestId BIGINT`, `Questions jsonb[]`, `Options jsonb[]`, and `Answers jsonb[]`. It has **no** separate `SubjectId`, `ExamType`, `Difficulty`, or marks column. For the exam-type-aware Semester 1 Diploma Computer Engineering bank, use `Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json` as the canonical metadata-and-payload bundle and `seed-all-v2.sql` as the staged insert script.
+The live `public."TestsData"` table has only `TestId BIGINT`, `Questions jsonb[]`, `Options jsonb[]`, and `Answers jsonb[]`. It has **no** separate `SubjectId`, `ExamType`, `Difficulty`, or marks column. The former Semester 1 Diploma Computer Engineering reference bundle and staged `seed-all-v2.sql` were repository-only generation artifacts and were removed during cleanup on 2026-11-22. They were not loaded by the running application. The live app resolves saved papers from Supabase `public.TestsData` through the server-side exam APIs.
 
 ### Exam format rules
 

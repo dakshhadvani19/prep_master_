@@ -1,3 +1,5 @@
+> **Repository cleanup note (2026-11-22):** The original source/archive paths described in the historical sections below are no longer required by the running application. Removed-subject CSV evidence is retained under docs/archives/temp_removed_subjects/. The duplicate root syllabus archive was removed; the current runtime syllabus source remains global-exam-prep/public/syllabus/.
+
 # PrepMaster — Current Status
 
 _Last updated: 2026-11-07_
@@ -128,12 +130,12 @@ Unless the requested task directly requires them, avoid opportunistic rewrites o
 
 ## 12. Syllabus availability cleanup (2026-10-11)
 
-- Archived 106 exact live B.Tech Subject rows under `global-exam-prep/temp_removed_subjects/` before deletion.
+- Archived 106 exact live B.Tech Subject rows under `docs/archives/temp_removed_subjects/` before deletion.
 - Archived 88 Law & Arts audit rows before additional exclusions; 74 exact live Subject rows were then deleted, and 14 blank-title rows were already absent. Post-delete verification found zero of the 74 deleted SubjectIds remaining.
 - Deleted 106 rows from live Supabase `public.Subjects`; a post-delete query confirmed none of those SubjectIds remained.
 - Rejected four Arena-labelled PDFs after internal course codes did not match the intended B.Tech subject.
 - The archives contain original SubjectId, course, title, semester, audit class, and reason needed for review/restoration. One B.Tech Bioinformatics target had no safe live-row match, so it was archived without a database deletion.
-- Law & Arts network failures remain live: 33 occurrences across 19 titles are listed in `global-exam-prep/temp_removed_subjects/law_arts_network_retry_pending_2026-10-11.csv`; these are explicitly not deletions.
+- Law & Arts network failures remain live: 33 occurrences across 19 titles are listed in `docs/archives/temp_removed_subjects/law_arts_network_retry_pending_2026-10-11.csv`; these are explicitly not deletions.
 - The Arena summary logged zero HTTP attempts. Thus exclusions mean “no acceptable PDF in that package,” not proof that no public syllabus exists. Restore only after a correctly matched PDF is verified.
 
 ## 13. Git/Arena workflow
@@ -170,7 +172,7 @@ Unless the requested task directly requires them, avoid opportunistic rewrites o
 - Source target: 245 intended Diploma subject records from the checked-in current Marwadi official-page syllabus manifest.
 - Live sync completed against Supabase `public."Subjects"` for CourseIds 44–49. 241 target IDs existed and now match the manifest's CourseId, semester, and subject name. No duplicate-ID inserts were attempted.
 - Four target records remain excluded pending evidence: two Applied Chemistry (`09GS3102`) rows whose PDF only specifies Semester I/II, and two rows whose source code/title validation remains flagged for review (`09CE2101` Computer Fundamental Skill for Mechanical and `09CI0616` Advance Design of Structures for Civil).
-- Ninety-six superseded/unverified old subject rows were copied to `public.temp_subjects_removed` with source metadata and removal reasons, and to `global-exam-prep/temp_removed_subjects/diploma_removed_subjects_2026-10-12.csv`, before deletion. Post-write verification confirmed 96 archived, 0 archived IDs still live, and 241 live Diploma rows.
+- Ninety-six superseded/unverified old subject rows were copied to `public.temp_subjects_removed` with source metadata and removal reasons, and to `docs/archives/temp_removed_subjects/diploma_removed_subjects_2026-10-12.csv`, before deletion. Post-write verification confirmed 96 archived, 0 archived IDs still live, and 241 live Diploma rows.
 - `public.temp_subjects_removed` has RLS enabled and no privileges granted to `anon` or `authenticated`; it is an internal audit/recovery table, not student-facing content.
 - `diploma_active_syllabus_catalog_2026-10-12.csv` represents the 241 active rows. The semester coverage report is `Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Reports/diploma_syllabus_coverage_2026-10-12.csv`. The four unresolved targets remain in `diploma_semester_review_pending_2026-10-12.csv`.
 - Compatibility maps and the Diploma arrays in `mockData.js` now omit the four unresolved subject IDs and contain the same 241 active numeric Diploma IDs.
@@ -234,7 +236,7 @@ Current truth: course- and semester-level v2 banks are documented in the reposit
 
 ## 16. Project deliverable subject removal — 2026-10-30
 
-The active Supabase catalog was audited across all departments/courses and **46 project/dissertation/research-project deliverable subjects were removed** from `public."Subjects"`. Their exact SubjectIds and original course/semester metadata are preserved in `global-exam-prep/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv`.
+The active Supabase catalog was audited across all departments/courses and **46 project/dissertation/research-project deliverable subjects were removed** from `public."Subjects"`. Their exact SubjectIds and original course/semester metadata are preserved in `docs/archives/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv`.
 
 - Migration `20261030113013_remove_project_deliverable_subjects_from_catalog` is applied.
 - Live verification after the change: 40 courses, 1,913 active subjects, and zero remaining project/dissertation/research-project deliverables under the audited title rules.
@@ -242,10 +244,10 @@ The active Supabase catalog was audited across all departments/courses and **46 
 - The same IDs were removed from the ExamPortal bridge, semester map, legacy mock subject hierarchy, and BCA/MCA live context overrides. An automated bridge regression test now covers the 46 archived IDs.
 - Academic project-management subjects were retained because they are taught theory/management subjects, not student project submissions.
 
-- A follow-up scan removed **20 additional legacy-only project deliverables** from the inactive/older course hierarchy (not live Supabase rows). Their original titles, course/semester details and IDs are archived in `global-exam-prep/temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv`. Their 15 remaining numeric bridge/semester keys were also removed. Current legacy static counts: 2,538 nonblank subjects and 2,452 numeric bridge/semester entries.
+- A follow-up scan removed **20 additional legacy-only project deliverables** from the inactive/older course hierarchy (not live Supabase rows). Their original titles, course/semester details and IDs are archived in `docs/archives/temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv`. Their 15 remaining numeric bridge/semester keys were also removed. Current legacy static counts: 2,538 nonblank subjects and 2,452 numeric bridge/semester entries.
 - The source syllabus JSON archives were retained; the runtime catalog and numeric exam routes are what were removed.
 
-The 58 internship, seminar, colloquium, moot court, attachment, practice school, NCC, and physical education/wellness occurrences were removed from the active exam catalogue by migration `20261030115624_remove_non_exam_activity_subjects_from_catalog`. Their original course/semester details remain archived in `global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`. This excludes them from PrepMaster's conventional exam bank; it does not imply that the university does not assess them through practical, oral, workplace, or activity-based methods.
+The 58 internship, seminar, colloquium, moot court, attachment, practice school, NCC, and physical education/wellness occurrences were removed from the active exam catalogue by migration `20261030115624_remove_non_exam_activity_subjects_from_catalog`. Their original course/semester details remain archived in `docs/archives/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`. This excludes them from PrepMaster's conventional exam bank; it does not imply that the university does not assess them through practical, oral, workplace, or activity-based methods.
 
 ## 17. Feedback submission flow — 2026-10-30
 

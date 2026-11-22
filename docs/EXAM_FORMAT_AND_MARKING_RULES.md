@@ -91,7 +91,7 @@ Every code question must specify the language/format and any relevant input, out
 
 ## 7. Reference-sample policy for this repository
 
-The files under `Questions/TestsData` are not a full production question bank. Retain only a small set of representative examples for future schema/generation reference (roughly 10% or fewer of the generated variants), including examples of:
+The former files under `Questions/TestsData` were not a full production question bank and were removed during repository cleanup on 2026-11-22. Do not depend on local staged question files at runtime. Use the live Supabase `public.TestsData` source and these rules for future generated-paper validation. The reference-sample list below describes the intended qualities of any future samples:
 
 - MCQs with four options and zero-based answer indices;
 - theory questions with 1-, 4-, and 8-mark rubrics;

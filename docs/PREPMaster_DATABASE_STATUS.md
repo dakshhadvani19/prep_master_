@@ -1,3 +1,5 @@
+> **Repository cleanup note (2026-11-22):** The original source/archive paths described in the historical sections below are no longer required by the running application. Removed-subject CSV evidence is retained under docs/archives/temp_removed_subjects/. The duplicate root syllabus archive was removed; the current runtime syllabus source remains global-exam-prep/public/syllabus/.
+
 # PrepMaster — Database Status
 
 > Schema updates (2026-10-27): operational `exam_attempts`, `exam_attempt_keys`, and `auth_otp` live in the unexposed `private` schema; the empty `exam_grades` table was removed. Phase 1 mirrors 18 private attempts into 13 public `TestsData` papers and 18 public `TestAttempts` rows; phase 2 maintains 13 `public.TestRooms` aggregates. Core ERD tables are unchanged. Older counts below are point-in-time snapshots unless explicitly updated.
@@ -192,7 +194,7 @@ The inventory includes some rows without an attached PDF URL and should be treat
 
 ## 11. Project/dissertation subject cleanup — 2026-10-30
 
-A live catalog audit identified 46 subjects whose titles represented project deliverables rather than ordinary teachable/examinable course units. The exact original rows are preserved in [`global-exam-prep/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv`](../global-exam-prep/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv).
+A live catalog audit identified 46 subjects whose titles represented project deliverables rather than ordinary teachable/examinable course units. The exact original rows are preserved in [`docs/archives/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv`](../docs/archives/temp_removed_subjects/project_deliverable_subjects_removed_2026-10-30.csv).
 
 - **Live migration:** `20261030113013_remove_project_deliverable_subjects_from_catalog`.
 - **Deleted:** 46 exact rows from `public."Subjects"`, across B.Tech, Diploma, BCA/MCA, Management Studies, Law & Arts, and Science & Pharmacy.
@@ -203,9 +205,9 @@ A live catalog audit identified 46 subjects whose titles represented project del
 - The full original syllabus JSON collections are retained as source/reference archives; they are not runtime catalog sources.
 
 
-- A second scan found **20 more project-deliverable records** only in inactive/older static course data. They are archived separately in [`legacy_project_subjects_removed_2026-10-30.csv`](../global-exam-prep/temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv) and removed from `mockData.js`; 15 stale numeric bridge entries and their semester-map keys were also removed. These 20 did not exist as live Supabase subject rows and did not require database deletion. Following both passes, 2,538 nonblank static subject entries and 2,452 numeric compatibility entries remain.
+- A second scan found **20 more project-deliverable records** only in inactive/older static course data. They are archived separately in [`legacy_project_subjects_removed_2026-10-30.csv`](../docs/archives/temp_removed_subjects/legacy_project_subjects_removed_2026-10-30.csv) and removed from `mockData.js`; 15 stale numeric bridge entries and their semester-map keys were also removed. These 20 did not exist as live Supabase subject rows and did not require database deletion. Following both passes, 2,538 nonblank static subject entries and 2,452 numeric compatibility entries remain.
 
-A separate title-based audit identified **58 activity-/workplace-based occurrences** (internships/placements, seminars, colloquia, moot court, attachment, practice school, NCC, and physical education/wellness). They were subsequently removed from the active exam catalog in migration `20261030115624_remove_non_exam_activity_subjects_from_catalog`; this catalog exclusion does not mean the university does not assess them through practical, oral, workplace or activity-based methods. See [`global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`](../global-exam-prep/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md) for the course/semester list.
+A separate title-based audit identified **58 activity-/workplace-based occurrences** (internships/placements, seminars, colloquia, moot court, attachment, practice school, NCC, and physical education/wellness). They were subsequently removed from the active exam catalog in migration `20261030115624_remove_non_exam_activity_subjects_from_catalog`; this catalog exclusion does not mean the university does not assess them through practical, oral, workplace or activity-based methods. See [`docs/archives/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md`](../docs/archives/temp_removed_subjects/non_exam_subjects_for_review_2026-10-30.md) for the course/semester list.
 
 
 ## 12. Feedback persistence — 2026-10-30

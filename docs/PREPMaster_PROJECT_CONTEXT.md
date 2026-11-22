@@ -1,3 +1,5 @@
+> **Repository cleanup note (2026-11-22):** The original source/archive paths described in the historical sections below are no longer required by the running application. Removed-subject CSV evidence is retained under docs/archives/temp_removed_subjects/. The duplicate root syllabus archive was removed; the current runtime syllabus source remains global-exam-prep/public/syllabus/.
+
 # PrepMaster — Project Context
 
 ## Purpose
@@ -118,7 +120,7 @@ Do not infer semester from SubjectId digits.
 
 ## Syllabus availability cleanup (2026-10-11)
 
-The live Supabase `public.Subjects` catalog excludes 106 subjects from the Arena review batch that had no acceptable subject-matched PDF in the supplied recovery package, including four incorrectly labelled PDFs rejected after internal course-code inspection. Their pre-deletion row metadata is stored in `global-exam-prep/temp_removed_subjects/removed_subjects_2026-10-11.csv`; the Bioinformatics target with no safe live-row match is preserved separately and was not deleted. The `subjectIdBridge.json` and `subjectSemesterMap.json` compatibility maps exclude the same 106 numeric IDs. The Arena run recorded zero HTTP attempts, so this exclusion reflects the package's verified-file list, not proof of internet-wide unavailability.
+The live Supabase `public.Subjects` catalog excludes 106 subjects from the Arena review batch that had no acceptable subject-matched PDF in the supplied recovery package, including four incorrectly labelled PDFs rejected after internal course-code inspection. Their pre-deletion row metadata is stored in `docs/archives/temp_removed_subjects/removed_subjects_2026-10-11.csv`; the Bioinformatics target with no safe live-row match is preserved separately and was not deleted. The `subjectIdBridge.json` and `subjectSemesterMap.json` compatibility maps exclude the same 106 numeric IDs. The Arena run recorded zero HTTP attempts, so this exclusion reflects the package's verified-file list, not proof of internet-wide unavailability.
 
 ## Catalog compatibility files
 
@@ -279,7 +281,7 @@ The removal of the previous backend is complete at the application architecture 
 
 ## Law & Arts syllabus match cleanup (2026-10-11)
 
-The Law & Arts PDF content audit temporarily excluded 74 live `public.Subjects` rows after archiving 88 audit rows (the other 14 were already absent). Archive: `global-exam-prep/temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv`. The 74 removed numeric IDs are removed from `subjectIdBridge.json` and `subjectSemesterMap.json`. Network-unverified cases (33 course/semester occurrences across 19 title groups) remain live and are documented in `law_arts_network_retry_pending_2026-10-11.csv`. The removal is based on an inconclusive/malformed one-to-one PDF mapping, not a claim that the underlying subject has no syllabus online; restore once the title/course code and syllabus are verified.
+The Law & Arts PDF content audit temporarily excluded 74 live `public.Subjects` rows after archiving 88 audit rows (the other 14 were already absent). Archive: `docs/archives/temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv`. The 74 removed numeric IDs are removed from `subjectIdBridge.json` and `subjectSemesterMap.json`. Network-unverified cases (33 course/semester occurrences across 19 title groups) remain live and are documented in `law_arts_network_retry_pending_2026-10-11.csv`. The removal is based on an inconclusive/malformed one-to-one PDF mapping, not a claim that the underlying subject has no syllabus online; restore once the title/course code and syllabus are verified.
 
 ## Management Studies recovery cleanup — 2026-10-11
 
@@ -291,7 +293,7 @@ The Law & Arts PDF content audit temporarily excluded 74 live `public.Subjects` 
 
 ## Diploma syllabus-backed catalog rule (updated 2026-10-12)
 
-For Diploma CourseIds 44–49, synchronize against the current official Marwadi syllabus manifest at `Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Reports/subject_inventory_from_marwadi_pages.csv` and the 245-target planning manifest in `global-exam-prep/temp_removed_subjects/diploma_catalog_sync_2026-10-12.csv`.
+For Diploma CourseIds 44–49, synchronize against the current official Marwadi syllabus manifest at `Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Reports/subject_inventory_from_marwadi_pages.csv` and the 245-target planning manifest in `docs/archives/temp_removed_subjects/diploma_catalog_sync_2026-10-12.csv`.
 
 - Verified ID format: convert alphabetic characters in the official subject code to 1-based alphabet positions (A=1…Z=26), preserve numeric digits, append `01`, left-pad the encoded code to 12 digits, then prefix CourseId. Example: CourseId 44 + `09CE3102` → `44000935310201`.
 - Completed sync state: 241 active Diploma Subject IDs in Supabase match the manifest by SubjectId, CourseId, semester, and subject name. Do not re-insert an existing SubjectId.

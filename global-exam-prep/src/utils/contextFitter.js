@@ -4,7 +4,7 @@ import { EXAM_BLUEPRINTS } from '../data/examBlueprints';
  * contextFitter.js — Syllabus scope selection, context batching, and coverage
  * planning under a 6,000-character model input cap.
  *
- * Contract documented in Algorithm/CONTEXT_FITTING_IMPLEMENTATION.md.
+ * Contract documented in docs/Algorithm/CONTEXT_FITTING_IMPLEMENTATION.md.
  *
  * Key rules:
  * - Split at chapter boundaries only — never mid-chapter.

@@ -3,7 +3,7 @@
 **Status date:** 2026-10-18  
 **Course:** Diploma Information and Communication Technology  
 **CourseId:** `49`  
-**Canonical location:** `Questions/TestsData/Diploma/Information and Communication Technology/`
+**Historical staging location:** `Questions/TestsData/Diploma/Information and Communication Technology/` (removed from the repository during the 2026-11-22 cleanup; it was not a runtime data source).
 
 ## Scope and result
 
@@ -48,7 +48,7 @@ Payload equality was checked against the source banks for all reused test rows: 
 - MCQ rows pass shape validation: 30 questions, 120 flattened options, and 30 answer indexes in the range 0–3.
 - Theory rows pass shape validation: four prompts marked `[8 marks]`, an empty options array, and four model-answer strings.
 - No project-specific folders or exam descriptor files were found.
-- `seed-all-v2.sql` is staged output only. **No exam rows were inserted into Supabase** by this generation work.
+- The former `seed-all-v2.sql` was staging output only. **No exam rows were inserted into Supabase** by this generation work. The staging files have since been removed; the running application uses the live Supabase `public.TestsData` table.
 
 ## Content-quality limitation
 

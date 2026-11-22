@@ -1,3 +1,5 @@
+> **Repository cleanup note (2026-11-22):** The original source/archive paths described in the historical sections below are no longer required by the running application. Removed-subject CSV evidence is retained under docs/archives/temp_removed_subjects/. The duplicate root syllabus archive was removed; the current runtime syllabus source remains global-exam-prep/public/syllabus/.
+
 # Diploma EE/Civil Question-Bank Generation Algorithm
 
 **Scope:** Diploma Electrical Engineering and Diploma Civil Engineering, Semesters 1–6.  

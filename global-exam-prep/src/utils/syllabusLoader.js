@@ -2,9 +2,9 @@
  * syllabusLoader.js — Load syllabus records from the static dataset served at
  * /syllabus/<department>/<course>/<subject>.json
  *
- * All files were copied from all_departments_syllabus/ into
- * global-exam-prep/public/syllabus/ and indexed in
- * global-exam-prep/public/syllabus/index.json by subject code.
+ * Runtime records are served from global-exam-prep/public/syllabus/ and indexed
+ * by global-exam-prep/public/syllabus/index.json. The original source archive
+ * used to create this copy is intentionally not required by the application.
  *
  * The frontend fetches records over HTTP at build/runtime — no secrets, no
  * answer keys, no Groq keys client-side.
