@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef, useMemo, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
-import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard } from 'lucide-react';
+import { BookOpen, User, LogOut, LogIn, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
-import { CATALOG_DOMAINS } from '../data/catalogDomains';
-import courseMapping from '../data/courseMapping.json';
 import './Layout.css';
 import PageLoading from './PageLoading';
 
@@ -13,86 +11,13 @@ export default function Layout() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const [searchQuery, setSearchQuery] = useState('');
-    const [showSuggestions, setShowSuggestions] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [hoveredNav, setHoveredNav] = useState(null);
-    const searchRef = useRef(null);
 
-    // Close suggestions on click outside
+    // Close the mobile menu when the user navigates to another route.
     useEffect(() => {
-        function handleClickOutside(event) {
-            if (searchRef.current && !searchRef.current.contains(event.target)) {
-                setShowSuggestions(false);
-            }
-        }
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
-
-    // Close mobile menu and suggestions on route change
-    useEffect(() => {
-        setShowSuggestions(false);
-        setSearchQuery('');
         setMobileMenuOpen(false);
     }, [location.pathname]);
-
-    // Departments + courses only — do not import mockData.js (subjects live in Supabase).
-    const searchableItems = useMemo(() => {
-        const items = [];
-        CATALOG_DOMAINS.forEach(domain => {
-            items.push({ type: 'Domain', id: domain.id, title: domain.title, path: `/domains/${domain.id}/courses` });
-        });
-        courseMapping.forEach(course => {
-            items.push({
-                type: 'Course',
-                id: String(course.courseId),
-                title: course.courseName,
-                path: `/courses/${course.courseId}/subjects`,
-                domainTitle: course.domainName,
-            });
-        });
-        return items;
-    }, []);
-
-    const filteredItems = useMemo(() => {
-        if (!searchQuery.trim()) return [];
-        const query = searchQuery.toLowerCase().replace(/[\.\s\-]/g, '');
-
-        // Prioritize exact matches and sort by type to ensure Domain/Course appear before Subjects
-        let exactMatches = [];
-        let partialMatches = [];
-
-        searchableItems.forEach(item => {
-            const itemTitle = item.title.toLowerCase().replace(/[\.\s\-]/g, '');
-            const itemId = item.id.toLowerCase().replace(/[\.\s\-]/g, '');
-
-            if (itemTitle.includes(query) || itemId.includes(query)) {
-                if (itemTitle === query || itemId === query) {
-                    exactMatches.push(item);
-                } else {
-                    partialMatches.push(item);
-                }
-            }
-        });
-
-        const typeOrder = { 'Domain': 1, 'Course': 2, 'Subject': 3 };
-
-        exactMatches.sort((a, b) => typeOrder[a.type] - typeOrder[b.type]);
-        partialMatches.sort((a, b) => typeOrder[a.type] - typeOrder[b.type]);
-
-        return [...exactMatches, ...partialMatches].slice(0, 6);
-    }, [searchQuery, searchableItems]);
-
-    async function handleLogout() {
-        try {
-            await logout();
-            navigate('/signup?mode=login');
-        } catch (error) {
-            console.error('Failed to log out', error);
-        }
-    }
-
 
     // Role-dependent navbar. Students (and guests) keep Home / Subscriptions.
     // Authenticated admins: Dashboard + Courses in those slots; Leaderboards and
@@ -261,115 +186,8 @@ export default function Layout() {
                             );
                         })}
 
-                        {/* Search */}
-                        <div ref={searchRef} style={{ position: 'relative' }}>
-                            <form
-                                onSubmit={(e) => {
-                                    e.preventDefault();
-                                    if (searchQuery.trim()) {
-                                        navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-                                        setShowSuggestions(false);
-                                    }
-                                }}
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '0.5rem',
-                                    padding: '0.5rem 1rem',
-                                    borderRadius: 'var(--radius-full)',
-                                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                                    background: 'rgba(0, 0, 0, 0.2)',
-                                    position: 'relative',
-                                    zIndex: 101,
-                                    transition: 'border-color 0.2s',
-                                }}
-                            >
-                                <button
-                                    type="submit"
-                                    style={{
-                                        background: 'transparent',
-                                        border: 'none',
-                                        padding: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        cursor: 'pointer'
-                                    }}
-                                    title="Search"
-                                    aria-label="Submit Search"
-                                >
-                                    <Search size={16} color="var(--text-secondary)" style={{ minWidth: '16px' }} />
-                                </button>
-                                <input
-                                    name="search"
-                                    type="text"
-                                    value={searchQuery}
-                                    onChange={(e) => { setSearchQuery(e.target.value); setShowSuggestions(true); }}
-                                    onFocus={() => setShowSuggestions(true)}
-                                    placeholder="Search courses or subjects..."
-                                    style={{
-                                        background: 'transparent',
-                                        border: 'none',
-                                        outline: 'none',
-                                        color: 'var(--text-primary)',
-                                        fontSize: '0.875rem',
-                                        fontFamily: 'inherit',
-                                        width: 'clamp(120px, 15vw, 200px)',
-                                    }}
-                                />
-                            </form>
-
-                            {showSuggestions && searchQuery.trim() !== '' && (
-                                <div style={{
-                                    position: 'absolute',
-                                    top: '100%',
-                                    right: 0,
-                                    marginTop: '0.5rem',
-                                    padding: '0.5rem',
-                                    borderRadius: 'var(--radius-lg)',
-                                    width: 'clamp(300px, 400px, 90vw)',
-                                    background: 'var(--bg-secondary)',
-                                    border: '1px solid var(--glass-border)',
-                                    boxShadow: 'var(--shadow-lg)',
-                                    maxHeight: '400px',
-                                    overflowY: 'auto',
-                                    zIndex: 100
-                                }}>
-                                    {filteredItems.length > 0 ? (
-                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                                            {filteredItems.map(item => (
-                                                <Link
-                                                    key={item.id + item.type}
-                                                    to={item.path}
-                                                    style={{
-                                                        padding: '0.75rem',
-                                                        borderRadius: 'var(--radius-md)',
-                                                        display: 'flex',
-                                                        alignItems: 'center',
-                                                        justifyContent: 'space-between',
-                                                        transition: 'background var(--transition-fast)'
-                                                    }}
-                                                    onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
-                                                    onMouseOut={e => e.currentTarget.style.background = 'transparent'}
-                                                    onClick={() => { setShowSuggestions(false); setSearchQuery(''); }}
-                                                >
-                                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                                                        <span style={{ fontWeight: 500, color: 'var(--text-primary)', fontSize: '0.9rem' }}>{item.title}</span>
-                                                        <span style={{ fontSize: '0.72rem', color: 'var(--text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                                            {item.type}{item.courseTitle ? ` • ${item.courseTitle}` : item.domainTitle ? ` • ${item.domainTitle}` : ''}
-                                                        </span>
-                                                    </div>
-                                                    <ChevronRight size={14} color="var(--text-secondary)" />
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div style={{ padding: '1rem', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-                                            No results found for "{searchQuery}"
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-                        </div>
+                        {/* Keep the previous navbar footprint without a search control. */}
+                        <div className="pm-nav-search-spacer" aria-hidden="true" />
 
                         {/* Auth Buttons */}
                         {currentUser ? (
@@ -459,95 +277,8 @@ export default function Layout() {
                         flexDirection: 'column',
                         gap: '1rem',
                     }}>
-                        {/* Mobile Search */}
-                        <div ref={searchRef} style={{ position: 'relative' }}>
-                            <form
-                                onSubmit={(e) => {
-                                    e.preventDefault();
-                                    if (searchQuery.trim()) {
-                                        navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-                                        setShowSuggestions(false);
-                                        setMobileMenuOpen(false);
-                                    }
-                                }}
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '0.5rem',
-                                    padding: '0.65rem 1rem',
-                                    borderRadius: 'var(--radius-md)',
-                                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                                    background: 'rgba(0, 0, 0, 0.3)',
-                                    width: '100%',
-                                }}
-                            >
-                                <button
-                                    type="submit"
-                                    style={{
-                                        background: 'transparent',
-                                        border: 'none',
-                                        padding: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        cursor: 'pointer'
-                                    }}
-                                    title="Search"
-                                >
-                                    <Search size={16} color="var(--text-secondary)" />
-                                </button>
-                                <input
-                                    type="text"
-                                    value={searchQuery}
-                                    onChange={(e) => { setSearchQuery(e.target.value); setShowSuggestions(true); }}
-                                    onFocus={() => setShowSuggestions(true)}
-                                    placeholder="Search courses or subjects..."
-                                    style={{
-                                        background: 'transparent',
-                                        border: 'none',
-                                        outline: 'none',
-                                        color: 'var(--text-primary)',
-                                        fontSize: '0.9rem',
-                                        fontFamily: 'inherit',
-                                        flex: 1,
-                                    }}
-                                />
-                            </form>
-                            {showSuggestions && searchQuery.trim() !== '' && (
-                                <div style={{
-                                    position: 'absolute',
-                                    top: '100%',
-                                    left: 0,
-                                    right: 0,
-                                    marginTop: '0.5rem',
-                                    padding: '0.5rem',
-                                    borderRadius: 'var(--radius-md)',
-                                    background: 'var(--bg-secondary)',
-                                    border: '1px solid var(--glass-border)',
-                                    maxHeight: '250px',
-                                    overflowY: 'auto',
-                                    zIndex: 100,
-                                }}>
-                                    {filteredItems.length > 0 ? filteredItems.map(item => (
-                                        <Link
-                                            key={item.id + item.type}
-                                            to={item.path}
-                                            style={{ padding: '0.65rem', borderRadius: 'var(--radius-sm)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-                                            onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
-                                            onMouseOut={e => e.currentTarget.style.background = 'transparent'}
-                                            onClick={() => { setShowSuggestions(false); setSearchQuery(''); setMobileMenuOpen(false); }}
-                                        >
-                                            <div>
-                                                <div style={{ fontWeight: 500, fontSize: '0.875rem', color: 'var(--text-primary)' }}>{item.title}</div>
-                                                <div style={{ fontSize: '0.7rem', color: 'var(--text-tertiary)', textTransform: 'uppercase' }}>{item.type}</div>
-                                            </div>
-                                            <ChevronRight size={13} color="var(--text-tertiary)" />
-                                        </Link>
-                                    )) : (
-                                        <div style={{ padding: '0.75rem', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>No results found</div>
-                                    )}
-                                </div>
-                            )}
-                        </div>
+                        {/* Preserve the mobile menu's previous top spacing. */}
+                        <div className="pm-nav-mobile-search-spacer" aria-hidden="true" />
 
                         {navItems.map((item) => {
                             const Icon = navIcon[item.id] || Home;

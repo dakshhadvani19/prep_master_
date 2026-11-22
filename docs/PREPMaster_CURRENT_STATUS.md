@@ -451,10 +451,18 @@ The 58 internship, seminar, colloquium, moot court, attachment, practice school,
 
 ## 16. Homepage Contact Us team cards (2026-11-07)
 
-- Updated the homepage Contact Us section to show four team members: Daksh Hadvani, Dev Kalola, Harsh Joshi, and Kashyap Ladani.
+- Updated the homepage Contact Us section to show five team members: Daksh Hadvani, Dev Kalola, Harsh Joshi, Kashyap Ladani, and Sneh Ghetiya.
 - Removed portrait images and the per-card “The people behind PrepMaster” and passion/description copy. Member names remain text-first without replacement avatar graphics.
-- Kept the shared study label as Diploma in Computer Engineering for all four profiles.
+- Kept the shared study label as Diploma in Computer Engineering for the first four profiles; Sneh Ghetiya is labelled Student at Marwadi University.
 - Limited social actions to GitHub, LinkedIn, and email. Each card renders only links that have been supplied; no profile URLs are fabricated.
-- Added Harsh Joshi’s provided LinkedIn profile and email, and Kashyap Ladani’s provided email.
-- Added a homepage regression test for the four cards, removed photo/copy elements, available link types, and supplied contact details.
+- Added Harsh Joshi’s provided LinkedIn profile and email, Kashyap Ladani’s provided email, and Sneh Ghetiya’s provided email and LinkedIn profile.
+- Added homepage regression coverage for all five cards, removed photo/copy elements, available link types, and supplied contact details.
 - Restored the original developer-card surfaces, appreciation control, and rounded pill social-button styling; kept the original email-compose link behavior.
+
+
+## 17. Global navbar search removal (2026-11-22)
+
+- Removed the shared search input, submit action, autocomplete suggestions, and local filtering logic from both desktop navigation and the mobile menu.
+- Kept invisible spacer elements in the original positions so the desktop navbar and mobile menu retain their previous layout footprint.
+- Left page-specific filters such as Admin Courses and Leaderboards unchanged. The standalone `/search` route remains available by direct navigation; the navbar no longer links to or invokes it.
+- Added homepage regression coverage for the absence of navbar search controls and the retained desktop/mobile spacer elements.

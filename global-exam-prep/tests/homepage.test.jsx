@@ -90,6 +90,21 @@ describe('homepage', () => {
     expect(container.querySelector('a[href="/signup?mode=signup"]')).toBeTruthy();
   }, 20000);
 
+  it('removes the global navbar search controls while preserving their empty space', async () => {
+    const { container } = await at('/');
+    await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
+
+    const desktopNav = container.querySelector('.nav-desktop');
+    expect(desktopNav.querySelector('.pm-nav-search-spacer')).toBeTruthy();
+    expect(desktopNav.querySelector('form, input, [aria-label="Submit Search"]')).toBeNull();
+    expect(container.querySelector('input[placeholder="Search courses or subjects..."]')).toBeNull();
+
+    fireEvent.click(container.querySelector('.nav-mobile-toggle'));
+    expect(container.querySelector('.pm-nav-mobile-search-spacer')).toBeTruthy();
+    expect(container.querySelector('input[placeholder="Search courses or subjects..."]')).toBeNull();
+    expect(container.querySelector('.pm-nav-mobile-search-spacer').parentElement.querySelector('form')).toBeNull();
+  }, 20000);
+
   it('"Join Test Room" opens the join-code screen without forcing subject selection or sign-in first', async () => {
     await at('/');
     const cta = await screen.findByRole('button', { name: /Join Test Room/i });
