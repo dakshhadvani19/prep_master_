@@ -120,7 +120,7 @@ export function buildUpdateRoomDurationScript() {
         "local ttl = tonumber(ARGV[3]) or 3600",
         "redis.call('SET', KEYS[1], cjson.encode(meta), 'EX', ttl)",
         "return cjson.encode(meta)"
-    ].join('\\n');
+    ].join('\n');
 }
 
 export function buildStartRoomScript() {
