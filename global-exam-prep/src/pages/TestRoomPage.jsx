@@ -208,6 +208,7 @@ export default function TestRoomPage() {
         Number(createPayload?.timeMinutes) || 45,
     );
     const [working, setWorking] = useState(false);
+    const [durationSaving, setDurationSaving] = useState(false);
     const [connected, setConnected] = useState(false);
     const [verifiedJoin, setVerifiedJoin] = useState(false);
     const [error, setError] = useState('');
@@ -749,7 +750,8 @@ export default function TestRoomPage() {
                 const nextRoom = { ...previousRoom, ...(snapshot.room || {}) };
                 const roomChanged = previousRoom.status !== nextRoom.status
                     || previousRoom.startedAt !== nextRoom.startedAt
-                    || previousRoom.deadlineAt !== nextRoom.deadlineAt;
+                    || previousRoom.deadlineAt !== nextRoom.deadlineAt
+                    || Number(previousRoom.durationMinutes) !== Number(nextRoom.durationMinutes);
                 roomMetaRef.current = nextRoom;
                 if (Number.isFinite(Number(nextRoom.serverNow))) {
                     serverClockOffsetRef.current = Number(nextRoom.serverNow) - Date.now();
@@ -864,6 +866,33 @@ export default function TestRoomPage() {
         autoCreateStartedRef.current = true;
         createRoomActionRef.current?.();
     }, [isHostFlow, view, canonicalQuestions.length]);
+
+    const changeRoomDuration = async (event) => {
+        const nextDuration = Number(event.target.value);
+        if (!isHostFlow || roomMetaRef.current?.status !== 'waiting' || durationSaving) return;
+        if (![10, 15, 20, 25, 30, 45, 60].includes(nextDuration)) return;
+        const previous = roomMetaRef.current;
+        if (nextDuration === Number(previous?.durationMinutes)) return;
+        setDurationSaving(true);
+        setError('');
+        try {
+            const response = await callRoomApi({ action: 'update_duration', code: roomCode, durationMinutes: nextDuration });
+            const updatedRoom = { ...previous, ...(response.room || {}), durationMinutes: nextDuration };
+            roomMetaRef.current = updatedRoom;
+            setRoomMeta(updatedRoom);
+            setDurationMinutes(nextDuration);
+            try {
+                await channelRef.current?.track(updatedRoom);
+            } catch (presenceError) {
+                // Redis is authoritative; the lobby poll will sync every participant.
+                console.warn('[TestRoom] Duration saved; Realtime refresh will use the Redis snapshot:', presenceError?.message || presenceError);
+            }
+        } catch (err) {
+            setError(err.message || 'Could not update the Test Room duration. Please retry.');
+        } finally {
+            setDurationSaving(false);
+        }
+    };
 
     const startRoom = async () => {
         if (!isHostFlow || roomMetaRef.current?.status !== 'waiting' || working) return;
@@ -1336,9 +1365,23 @@ export default function TestRoomPage() {
                         <div style={{ width: 48, height: 48, borderRadius: 15, background: 'rgba(59,130,246,0.12)', color: 'var(--accent-primary)', display: 'grid', placeItems: 'center', marginBottom: '1rem' }}><Clock3 size={24} /></div>
                         <h2 style={{ fontSize: '1.2rem', marginBottom: '0.55rem' }}>Waiting for the host</h2>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '1rem' }}>Everyone stays here until the host starts the test. The shared {roomMeta?.durationMinutes || durationMinutes}-minute timer will begin at the same moment for every participant.</p>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.7rem 0.8rem', background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.18)', borderRadius: 'var(--radius-md)', color: '#fbbf24', fontSize: '0.82rem', marginBottom: '1.2rem' }}><Clock3 size={16} /> {roomMeta?.durationMinutes || durationMinutes} minutes · {roomMeta?.questionCount || canonicalQuestions.length || 30} questions</div>
+                        <div style={{ display: 'grid', gap: '0.55rem', padding: '0.85rem 0.9rem', background: 'rgba(245,158,11,0.075)', border: '1px solid rgba(245,158,11,0.2)', borderRadius: 'var(--radius-md)', color: '#fbbf24', marginBottom: '1.2rem' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#f5c979', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.09em' }}><Clock3 size={16} /> TEST DURATION</div>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.7rem' }}>
+                                {isHostFlow && roomMeta?.status === 'waiting' ? (
+                                    <select aria-label="Test Room duration" value={Number(roomMeta?.durationMinutes || durationMinutes)} onChange={changeRoomDuration} disabled={durationSaving || working}
+                                        style={{ minWidth: 0, maxWidth: '100%', padding: '0.48rem 0.65rem', border: '1px solid rgba(245,158,11,0.3)', borderRadius: 9, background: 'rgba(18,20,24,0.92)', color: '#f7e6c5', font: 'inherit', fontSize: '0.9rem', fontWeight: 750, cursor: durationSaving ? 'wait' : 'pointer' }}>
+                                        {[10, 15, 20, 25, 30, 45, 60].map((minutes) => <option key={minutes} value={minutes} style={{ color: '#252525' }}>{minutes} minutes</option>)}
+                                    </select>
+                                ) : (
+                                    <strong style={{ color: '#fff0d2', fontSize: '1rem' }}>{roomMeta?.durationMinutes || durationMinutes} minutes</strong>
+                                )}
+                                {durationSaving ? <LoaderCircle size={17} className="spin" aria-label="Saving duration" /> : <span style={{ color: 'rgba(255,225,178,0.72)', fontSize: '0.72rem' }}>{roomMeta?.questionCount || canonicalQuestions.length || 30} questions</span>}
+                            </div>
+                            {isHostFlow && roomMeta?.status === 'waiting' && <small style={{ color: 'rgba(255,225,178,0.72)', fontSize: '0.72rem' }}>Change the shared timer before starting</small>}
+                        </div>
                         {isHostFlow ? (
-                            <button className="pm-room-gold-action" disabled={!connected || working || participantCount > MAX_PARTICIPANTS} onClick={startRoom} style={roomButtonStyle('primary', !connected || working || participantCount > MAX_PARTICIPANTS)}>{working ? <><LoaderCircle size={18} className="spin" /> Starting…</> : <><Play size={18} /> Start Test Room</>}</button>
+                            <button className="pm-room-gold-action" disabled={!connected || working || durationSaving || participantCount > MAX_PARTICIPANTS} onClick={startRoom} style={roomButtonStyle('primary', !connected || working || durationSaving || participantCount > MAX_PARTICIPANTS)}>{working ? <><LoaderCircle size={18} className="spin" /> Starting…</> : <><Play size={18} /> Start Test Room</>}</button>
                         ) : (
                             <div style={{ ...roomButtonStyle('secondary', true), cursor: 'default', lineHeight: 1.4 }}><LoaderCircle size={17} className="spin" /> Waiting for host to start…</div>
                         )}
