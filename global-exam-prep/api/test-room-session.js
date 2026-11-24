@@ -103,6 +103,12 @@ function keys(code, uid = '') {
     const base = 'pm:test-room:' + code;
     return { meta: base + ':meta', questions: base + ':questions', members: base + ':members', reconcileLock: base + ':reconcile-lock', participant: base + ':participant:' + uid };
 }
+function normalizeRoomDuration(value) {
+    const requested = Number.isFinite(Number(value)) ? Number(value) : 45;
+    return [10, 15, 20, 25, 30, 45, 60].reduce((closest, candidate) => (
+        Math.abs(candidate - requested) < Math.abs(closest - requested) ? candidate : closest
+    ), 45);
+}
 function displayName(user) {
     const metadata = user?.user_metadata || {};
     return String(metadata.full_name || metadata.name || user?.email?.split('@')[0] || 'Student').trim().slice(0, 80) || 'Student';
@@ -677,7 +683,7 @@ export default async function handler(req, res) {
                 subjectName: String(input.subjectName || 'MCQ Exam').slice(0, 160),
                 examTitle: String(input.examTitle || 'MCQ Exam').slice(0, 100),
                 difficulty: ['easy', 'medium', 'hard'].includes(input.difficulty) ? input.difficulty : 'medium',
-                durationMinutes: Math.min(180, Math.max(1, Math.floor(Number(input.durationMinutes) || 45))),
+                durationMinutes: normalizeRoomDuration(input.durationMinutes),
                 status: 'waiting', startedAt: null, deadlineAt: null, questionCount: 30,
                 participantLimit: MAX_PARTICIPANTS, createdAt: new Date(createdAtMs).toISOString(),
                 expiresAt: createdAtMs + ROOM_TTL_SECONDS * 1000, serverNow: createdAtMs,
