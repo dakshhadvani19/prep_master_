@@ -791,3 +791,28 @@
 .pm-room-answer-option:hover {
     transform: none !important;
 }
+
+
+/* Match the staff-removal select control and force readable native menu options. */
+.pm-room-duration-select {
+    min-width: 0;
+    max-width: 100%;
+    padding: .55rem .7rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .03);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.pm-room-duration-select:disabled {
+    cursor: wait;
+    opacity: .72;
+}
+.pm-room-duration-select option,
+.pm-test-room-page .pm-room-duration-select option {
+    color: #252525 !important;
+    background-color: #ffffff !important;
+}
