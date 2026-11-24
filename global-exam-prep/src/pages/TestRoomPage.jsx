@@ -816,7 +816,7 @@ export default function TestRoomPage() {
                     subjectName: createPayload?.subjectName || 'MCQ Exam',
                     examTitle: createPayload?.examTitle || 'MCQ Exam',
                     difficulty: createPayload?.difficulty,
-                    durationMinutes: Number(response.room?.durationMinutes) || Math.min(60, Math.max(10, Number(durationMinutes) || 45)),
+                    durationMinutes: Math.min(60, Math.max(10, Number(durationMinutes) || 45)),
                 },
                 questions: canonicalQuestions,
             });
@@ -833,7 +833,7 @@ export default function TestRoomPage() {
                 difficulty: ['easy', 'medium', 'hard'].includes(createPayload?.difficulty)
                     ? createPayload.difficulty
                     : 'medium',
-                durationMinutes: Math.min(180, Math.max(1, Number(durationMinutes) || 45)),
+                durationMinutes: Number(response.room?.durationMinutes) || Math.min(60, Math.max(10, Number(durationMinutes) || 45)),
                 status: 'waiting',
                 startedAt: null,
                 questionCount: canonicalQuestions.length,
