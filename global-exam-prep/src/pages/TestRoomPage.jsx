@@ -1369,9 +1369,8 @@ export default function TestRoomPage() {
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#f5c979', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.09em' }}><Clock3 size={16} /> TEST DURATION</div>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.7rem' }}>
                                 {isHostFlow && roomMeta?.status === 'waiting' ? (
-                                    <select aria-label="Test Room duration" value={Number(roomMeta?.durationMinutes || durationMinutes)} onChange={changeRoomDuration} disabled={durationSaving || working}
-                                        style={{ minWidth: 0, maxWidth: '100%', padding: '0.48rem 0.65rem', border: '1px solid rgba(245,158,11,0.3)', borderRadius: 9, background: 'rgba(18,20,24,0.92)', color: '#f7e6c5', font: 'inherit', fontSize: '0.9rem', fontWeight: 750, cursor: durationSaving ? 'wait' : 'pointer' }}>
-                                        {[10, 15, 20, 25, 30, 45, 60].map((minutes) => <option key={minutes} value={minutes} style={{ color: '#252525' }}>{minutes} minutes</option>)}
+                                    <select className="pm-room-duration-select" aria-label="Test Room duration" value={Number(roomMeta?.durationMinutes || durationMinutes)} onChange={changeRoomDuration} disabled={durationSaving || working}>
+                                        {[10, 15, 20, 25, 30, 45, 60].map((minutes) => <option key={minutes} value={minutes}>{minutes} minutes</option>)}
                                     </select>
                                 ) : (
                                     <strong style={{ color: '#fff0d2', fontSize: '1rem' }}>{roomMeta?.durationMinutes || durationMinutes} minutes</strong>
