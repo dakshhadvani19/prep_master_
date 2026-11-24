@@ -107,6 +107,22 @@ function displayName(user) {
     const metadata = user?.user_metadata || {};
     return String(metadata.full_name || metadata.name || user?.email?.split('@')[0] || 'Student').trim().slice(0, 80) || 'Student';
 }
+export function buildUpdateRoomDurationScript() {
+    return [
+        "local raw = redis.call('GET', KEYS[1])",
+        "if not raw then return 'ERR:ROOM_NOT_FOUND' end",
+        "local meta = cjson.decode(raw)",
+        "if meta.hostUid ~= ARGV[1] then return 'ERR:HOST_ONLY' end",
+        "if meta.status ~= 'waiting' then return 'ERR:ROOM_NOT_WAITING' end",
+        "local duration = tonumber(ARGV[2])",
+        "if not duration or (duration ~= 10 and duration ~= 15 and duration ~= 20 and duration ~= 25 and duration ~= 30 and duration ~= 45 and duration ~= 60) then return 'ERR:INVALID_DURATION' end",
+        "meta.durationMinutes = duration",
+        "local ttl = tonumber(ARGV[3]) or 3600",
+        "redis.call('SET', KEYS[1], cjson.encode(meta), 'EX', ttl)",
+        "return cjson.encode(meta)"
+    ].join('\\n');
+}
+
 export function buildStartRoomScript() {
     return [
         "local raw = redis.call('GET', KEYS[1])",
@@ -925,6 +941,30 @@ export default async function handler(req, res) {
                 }
             }
             return fail(res, 404, 'This room expired or is no longer available.');
+        }
+
+        if (action === 'update_duration') {
+            const duration = Number(body.durationMinutes);
+            if (!Number.isInteger(duration) || ![10, 15, 20, 25, 30, 45, 60].includes(duration)) {
+                return fail(res, 400, 'Choose a Test Room duration between 10 and 60 minutes.');
+            }
+            const updated = String(await redis(
+                'EVAL', buildUpdateRoomDurationScript(), 1, keys(code).meta,
+                user.id, duration, roomTtlSeconds(room),
+            ));
+            if (updated.startsWith('ERR:')) {
+                const reason = updated.slice(4);
+                const status = reason === 'HOST_ONLY' ? 403 : reason === 'ROOM_NOT_FOUND' ? 404 : reason === 'INVALID_DURATION' ? 400 : 409;
+                const message = ({
+                    HOST_ONLY: 'Only the room creator can change its duration.',
+                    ROOM_NOT_FOUND: 'This room expired or is no longer available.',
+                    ROOM_NOT_WAITING: 'The duration can only be changed before the test starts.',
+                    INVALID_DURATION: 'Choose one of the available Test Room durations.',
+                })[reason] || 'Could not update the Test Room duration.';
+                return fail(res, status, message);
+            }
+            const updatedRoom = parseJson(updated);
+            return res.status(200).json({ ok: true, room: buildLobbySnapshot(updatedRoom, []).room, serverNow: Date.now() });
         }
 
         if (action === 'poll_lobby') {
