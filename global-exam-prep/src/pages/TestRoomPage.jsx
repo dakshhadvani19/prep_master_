@@ -816,7 +816,7 @@ export default function TestRoomPage() {
                     subjectName: createPayload?.subjectName || 'MCQ Exam',
                     examTitle: createPayload?.examTitle || 'MCQ Exam',
                     difficulty: createPayload?.difficulty,
-                    durationMinutes: Math.min(180, Math.max(1, Number(durationMinutes) || 45)),
+                    durationMinutes: Number(response.room?.durationMinutes) || Math.min(60, Math.max(10, Number(durationMinutes) || 45)),
                 },
                 questions: canonicalQuestions,
             });
@@ -895,7 +895,7 @@ export default function TestRoomPage() {
     };
 
     const startRoom = async () => {
-        if (!isHostFlow || roomMetaRef.current?.status !== 'waiting' || working) return;
+        if (!isHostFlow || roomMetaRef.current?.status !== 'waiting' || working || durationSaving) return;
         setWorking(true);
         startingRoomRef.current = true;
         setError('');
