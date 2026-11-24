@@ -478,9 +478,9 @@ export default function AdminDashboard() {
                                 <div className="admin-field">
                                     <label htmlFor="staff-target">Select admin</label>
                                     <select id="staff-target" value={form.target} onChange={(event) => setForm({ ...form, target: event.target.value })} required>
-                                        <option value="">Choose staff account</option>
+                                        <option value="" style={{ color: "#252525" }}>Choose staff account</option>
                                         {removableStaff.map((member) => (
-                                            <option key={member.adminId} value={member.email}>
+                                            <option key={member.adminId} value={member.email} style={{ color: "#252525" }}>
                                                 {member.name || 'Admin'} · {member.email}
                                             </option>
                                         ))}
