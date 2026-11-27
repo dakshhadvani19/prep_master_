@@ -1,3 +1,0 @@
--- Superseded intermediate RPC version retained for version-history continuity.
--- The final pm_exam_testsdata_candidates implementation is created in
--- 20261107045210_prevent_repeated_testsdata_papers_per_user.sql.

@@ -1,3 +1,0 @@
--- No-op retained for version-history continuity.
--- The temporary Feedback.Rating experiment is excluded from the final schema;
--- no add/drop operation is required when rebuilding the current schema.

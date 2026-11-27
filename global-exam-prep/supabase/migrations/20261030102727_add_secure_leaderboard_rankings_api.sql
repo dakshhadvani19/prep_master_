@@ -1,3 +1,0 @@
--- Superseded migration retained for version-history continuity.
--- The final secure leaderboard ranking function is created in
--- 20261030104156_rank_leaderboard_by_percentage_then_points_and_return_filter_options.sql.

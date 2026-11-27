@@ -1,4 +1,0 @@
--- Intentionally empty migration retained for Supabase migration-history continuity.
--- The complete public.pm_leaderboard_rankings function is created by
--- 20261030102727_add_secure_leaderboard_rankings_api.sql.
--- This file was a byte-for-byte duplicate of that earlier migration.

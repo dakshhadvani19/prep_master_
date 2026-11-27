@@ -1,3 +1,0 @@
--- Superseded migration retained for version-history continuity.
--- The temporary two-argument RPC is dropped and replaced with the filtered
--- four-argument implementation in 20261101112612_filter_student_question_bank_candidates.sql.

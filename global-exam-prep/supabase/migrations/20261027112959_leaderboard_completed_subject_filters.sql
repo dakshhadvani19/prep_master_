@@ -1,4 +1,0 @@
--- Superseded migration retained for version-history continuity.
--- The canonical subject-id implementation is created in
--- 20261027113555_leaderboard_canonical_subject_binding.sql and refined in
--- 20261027115731_leaderboard_include_finalized_attempts.sql.

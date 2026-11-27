@@ -1,3 +1,0 @@
--- Retired experiment retained for version-history continuity.
--- Feedback.Rating was added temporarily and removed by the next migration.
--- The active feedback schema and UI do not include a rating field.

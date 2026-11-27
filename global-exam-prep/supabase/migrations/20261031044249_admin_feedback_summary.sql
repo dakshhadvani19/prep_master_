@@ -1,4 +1,0 @@
--- Retired migration retained for version-history continuity.
--- admin_get_feedback_summary was unused and is removed by
--- 20261127023250_cleanup_unused_legacy_routines.sql.
--- The current dashboard uses admin_get_dashboard_overview instead.

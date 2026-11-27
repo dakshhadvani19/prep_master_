@@ -1,6 +1,0 @@
--- Superseded intermediate RPCs retained for version-history continuity.
--- The application uses pm_exam_source_paper_claim, introduced in
--- 20261107045210_prevent_repeated_testsdata_papers_per_user.sql.
--- The temporary pm_exam_usage_claim_source_test RPC had no application,
--- trigger, policy, or SQL-routine callers and is removed in
--- 20261127025201_remove_unused_exam_source_claim_rpc.sql.

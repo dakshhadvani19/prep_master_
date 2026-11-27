@@ -1,3 +1,0 @@
--- Superseded migration retained for version-history continuity.
--- The final dashboard performance function is created in
--- 20261030110720_rank_dashboard_subject_performance.sql.
