@@ -259,9 +259,9 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                                 <table className="lb-board__table" data-testid="lb-rankings-table">
                                     <thead>
                                         <tr>
-                                            <th scope="col" title="Cumulative earned marks divided by completed attempts">Avg. Marks / Exam</th>
                                             <th scope="col">Rank</th>
                                             <th scope="col">Student</th>
+                                            <th scope="col" title="Cumulative earned marks divided by completed attempts">Avg. Marks / Exam</th>
                                             <th scope="col">Points</th>
                                             <th scope="col">Percentage</th>
                                             <th scope="col">Attempts</th>
