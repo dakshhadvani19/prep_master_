@@ -337,3 +337,192 @@
 @keyframes pm-evaluation-spin {
     to { transform: rotate(360deg); }
 }
+
+
+/* Current plan card — subscription catalogue's charcoal and warm-gold palette. */
+.sd-profile-stack {
+    display: grid;
+    flex: 0 1 320px;
+    gap: .75rem;
+    width: min(320px, 100%);
+    min-width: 0;
+    margin-left: auto;
+}
+.sd-profile-card {
+    box-sizing: border-box;
+    width: 100%;
+}
+.sd-plan-card {
+    min-width: 0;
+    padding: 1rem 1.05rem;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 18px;
+    background:
+        linear-gradient(155deg, rgba(255,255,255,.075), rgba(255,255,255,.025) 60%),
+        rgba(22,24,29,.88);
+    box-shadow: 0 12px 30px rgba(0,0,0,.14);
+}
+.sd-plan-card--monthly {
+    border-color: rgba(214,173,97,.5);
+    background:
+        linear-gradient(155deg, rgba(214,173,97,.16), rgba(255,255,255,.035) 56%),
+        rgba(26,25,22,.93);
+}
+.sd-plan-card--custom {
+    border-color: rgba(214,173,97,.35);
+    background:
+        linear-gradient(155deg, rgba(255,255,255,.09), rgba(214,173,97,.06) 75%),
+        rgba(20,22,26,.92);
+}
+.sd-plan-card__top,
+.sd-plan-card__title-row,
+.sd-plan-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .65rem;
+}
+.sd-plan-card__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    color: #d5ae69;
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: .11em;
+}
+.sd-plan-card__status,
+.sd-plan-card__validity {
+    flex: 0 0 auto;
+    padding: .24rem .48rem;
+    border: 1px solid rgba(214,173,97,.28);
+    border-radius: 999px;
+    color: #d9bb83;
+    background: rgba(214,173,97,.07);
+    font-size: .62rem;
+    font-weight: 750;
+    letter-spacing: .035em;
+}
+.sd-plan-card__title-row {
+    align-items: baseline;
+    margin: .75rem 0 .7rem;
+}
+.sd-plan-card__title-row h2 {
+    min-width: 0;
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.02rem;
+    font-weight: 760;
+    letter-spacing: -.02em;
+}
+.sd-plan-card__metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: .55rem;
+}
+.sd-plan-card__metric {
+    display: grid;
+    gap: .3rem;
+    min-width: 0;
+    padding: .68rem .72rem;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 11px;
+    background: rgba(0,0,0,.16);
+}
+.sd-plan-card__metric span {
+    color: var(--text-tertiary);
+    font-size: .66rem;
+    font-weight: 650;
+}
+.sd-plan-card__metric strong {
+    overflow-wrap: anywhere;
+    color: #dfbd7d;
+    font-size: 1.12rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+.sd-plan-card__meter {
+    height: 5px;
+    margin-top: .65rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255,255,255,.09);
+}
+.sd-plan-card__meter span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #9e7840, #dfbd7d);
+    transition: width .2s ease;
+}
+.sd-plan-card__footer {
+    flex-wrap: wrap;
+    margin-top: .7rem;
+    color: var(--text-tertiary);
+    font-size: .66rem;
+}
+.sd-plan-card__footer > span {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+}
+.sd-plan-card__footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    color: #d7b574;
+    font-size: .72rem;
+    font-weight: 750;
+    text-decoration: none;
+}
+.sd-plan-card__footer a:hover { color: #f0d49c; }
+.sd-plan-card__empty-copy {
+    margin: -.2rem 0 .75rem;
+    color: var(--text-secondary);
+    font-size: .73rem;
+    line-height: 1.5;
+}
+.sd-plan-card__state {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    min-height: 3rem;
+    color: var(--text-secondary);
+    font-size: .76rem;
+}
+.sd-plan-card__state--error {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .55rem;
+    padding: .65rem 0;
+    color: #e8aaaa;
+}
+.sd-plan-card__state button {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .35rem .55rem;
+    border: 1px solid rgba(214,173,97,.28);
+    border-radius: 8px;
+    background: rgba(214,173,97,.07);
+    color: #d9bb83;
+    font-size: .7rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.sd-plan-card__spin { animation: sd-plan-spin .8s linear infinite; }
+@keyframes sd-plan-spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 620px) {
+    .sd-profile-stack {
+        flex: 1 1 100%;
+        width: 100%;
+        margin-left: 0;
+    }
+    .sd-profile-card { text-align: left !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sd-plan-card__meter span,
+    .sd-plan-card__spin { animation: none; transition: none; }
+}

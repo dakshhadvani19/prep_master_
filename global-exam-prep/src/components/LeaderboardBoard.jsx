@@ -22,6 +22,13 @@ function formatPercentage(value) {
     return Number.isFinite(parsed) ? parsed.toFixed(2) : '—';
 }
 
+function formatAverageMarks(entry) {
+    const points = Number(entry?.points);
+    const attempts = Number(entry?.totalTests);
+    if (!Number.isFinite(points) || !Number.isFinite(attempts) || attempts <= 0) return '—';
+    return (points / attempts).toFixed(2);
+}
+
 function EmptyState({ title, children }) {
     return (
         <div className="lb-empty-state">
@@ -252,6 +259,7 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                                 <table className="lb-board__table" data-testid="lb-rankings-table">
                                     <thead>
                                         <tr>
+                                            <th scope="col" title="Cumulative earned marks divided by completed attempts">Avg. Marks / Exam</th>
                                             <th scope="col">Rank</th>
                                             <th scope="col">Student</th>
                                             <th scope="col">Points</th>
@@ -265,6 +273,7 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                                                 && String(viewer.studentId) === String(entry.studentId);
                                             return (
                                                 <tr key={entry.studentId} className={isViewer ? 'is-viewer' : ''}>
+                                                    <td><strong>{formatAverageMarks(entry)}</strong></td>
                                                     <td><span className="lb-board__rank">#{entry.rank}</span></td>
                                                     <td>
                                                         <span className="lb-board__student">{entry.displayName || 'Student'}</span>

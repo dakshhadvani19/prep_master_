@@ -4,11 +4,12 @@ import { domains } from '../data/mockData';
 import { examPrompts } from '../data/examPrompts';
 import {
     Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle,
-    BarChart3, BookMarked, Loader,
+    BarChart3, BookMarked, Loader, CreditCard, CalendarDays, RefreshCw,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import {
     getMyAttempts, getMyTestRoomAttempts, reconcileTestRoomAttempts, evaluateExamAttempt,
+    getCurrentSubscriptionSummary,
 } from '../utils/supabaseExam';
 import { findSubjectContext } from '../utils/subjectResolver';
 import AttemptSourceBadge from '../components/AttemptSourceBadge';
@@ -30,6 +31,34 @@ export default function Dashboard() {
     const navigate = useNavigate();
     const location = useLocation();
     const { currentUser, isAdmin } = useAuth();
+    const [planSummary, setPlanSummary] = useState(null);
+    const [planLoading, setPlanLoading] = useState(true);
+    const [planError, setPlanError] = useState('');
+    const [planRetry, setPlanRetry] = useState(0);
+
+    useEffect(() => {
+        if (!currentUser?.uid || isAdmin) {
+            setPlanSummary(null);
+            setPlanError('');
+            setPlanLoading(false);
+            return undefined;
+        }
+        let active = true;
+        setPlanLoading(true);
+        setPlanError('');
+        getCurrentSubscriptionSummary().then((result) => {
+            if (!active) return;
+            setPlanSummary(result.subscription || null);
+            setPlanError(result.error || '');
+        }).catch(() => {
+            if (!active) return;
+            setPlanSummary(null);
+            setPlanError('We could not load your current plan right now. Please retry.');
+        }).finally(() => {
+            if (active) setPlanLoading(false);
+        });
+        return () => { active = false; };
+    }, [currentUser?.uid, isAdmin, planRetry]);
 
     const runEvaluation = useCallback(async (attemptId, automatic = false) => {
         if (activeEvaluations.current.has(attemptId)) return { status: 'evaluating' };
@@ -175,6 +204,12 @@ export default function Dashboard() {
             subjectsAttempted:subjectPerformance.length,
         },subjectPerformance};
     },[history]);
+    const tokenPercent = planSummary && Number(planSummary.totalTokens) > 0
+        ? Math.min(100, Math.max(0, (Number(planSummary.remainingTokens) / Number(planSummary.totalTokens)) * 100))
+        : null;
+    const planEndLabel = planSummary?.endDate
+        ? new Date(planSummary.endDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+        : '';
 
     return (
         <div className="container animate-fade-in sd" style={{ maxWidth: '900px' }}>
@@ -233,23 +268,97 @@ export default function Dashboard() {
                     </div>
                 </div>
 
-                {/* Profile info on the right */}
+                {/* Profile and active plan stay together at the right of the dashboard header. */}
                 {currentUser && (
-                    <div style={{
-                        textAlign: 'right',
-                        padding: '1rem',
-                        background: 'var(--glass-bg)',
-                        border: '1px solid var(--glass-border)',
-                        borderRadius: 'var(--radius-md)',
-                        backdropFilter: 'blur(8px)',
-                        minWidth: '200px'
-                    }}>
-                        <div style={{ fontWeight: 600, fontSize: '1.1rem', color: 'var(--text-primary)' }}>
-                            {currentUser.displayName || 'User'}
+                    <div className="sd-profile-stack">
+                        <div className="sd-profile-card" style={{
+                            textAlign: 'right',
+                            padding: '1rem',
+                            background: 'var(--glass-bg)',
+                            border: '1px solid var(--glass-border)',
+                            borderRadius: 'var(--radius-md)',
+                            backdropFilter: 'blur(8px)',
+                            minWidth: '200px'
+                        }}>
+                            <div style={{ fontWeight: 600, fontSize: '1.1rem', color: 'var(--text-primary)' }}>
+                                {currentUser.displayName || 'User'}
+                            </div>
+                            <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+                                {currentUser.email}
+                            </div>
                         </div>
-                        <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
-                            {currentUser.email}
-                        </div>
+
+                        {!isAdmin && (
+                            <section className={'sd-plan-card sd-plan-card--' + (planSummary?.kind || 'free')} aria-label="Current subscription plan">
+                                <div className="sd-plan-card__top">
+                                    <span className="sd-plan-card__eyebrow"><CreditCard size={14} /> CURRENT PLAN</span>
+                                    <span className="sd-plan-card__status">{planSummary ? 'ACTIVE' : 'ACCOUNT'}</span>
+                                </div>
+
+                                {planLoading ? (
+                                    <div className="sd-plan-card__state" role="status">
+                                        <Loader size={17} className="sd-plan-card__spin" /> Loading current plan…
+                                    </div>
+                                ) : planError ? (
+                                    <div className="sd-plan-card__state sd-plan-card__state--error" role="alert">
+                                        <span>{planError}</span>
+                                        <button type="button" onClick={() => setPlanRetry((value) => value + 1)} disabled={planLoading}>
+                                            <RefreshCw size={14} /> Retry
+                                        </button>
+                                    </div>
+                                ) : planSummary ? (
+                                    <>
+                                        <div className="sd-plan-card__title-row">
+                                            <h2>{planSummary.title} plan</h2>
+                                            <span className="sd-plan-card__validity">{planSummary.validityDays}-day validity</span>
+                                        </div>
+                                        <div className="sd-plan-card__metrics">
+                                            <div className="sd-plan-card__metric">
+                                                <span>Remaining tokens</span>
+                                                <strong>{Number(planSummary.remainingTokens).toLocaleString('en-IN')}</strong>
+                                            </div>
+                                            <div className="sd-plan-card__metric">
+                                                <span>Days remaining</span>
+                                                <strong>{Number(planSummary.daysRemaining).toLocaleString('en-IN')}</strong>
+                                            </div>
+                                        </div>
+                                        {tokenPercent !== null && (
+                                            <div className="sd-plan-card__meter" role="progressbar" aria-label="Remaining subscription tokens" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(tokenPercent)}>
+                                                <span style={{ width: tokenPercent + '%' }} />
+                                            </div>
+                                        )}
+                                        <div className="sd-plan-card__footer">
+                                            <span><CalendarDays size={13} /> {planEndLabel ? 'Valid until ' + planEndLabel : 'Active subscription'}</span>
+                                            <Link to="/subscriptions">Manage plan <span aria-hidden="true">›</span></Link>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <>
+                                        <div className="sd-plan-card__title-row">
+                                            <h2>No active paid plan</h2>
+                                            <span className="sd-plan-card__validity">Free access</span>
+                                        </div>
+                                        <p className="sd-plan-card__empty-copy">
+                                            Weekly or monthly plan tokens and remaining validity will appear here after a subscription is activated.
+                                        </p>
+                                        <div className="sd-plan-card__metrics">
+                                            <div className="sd-plan-card__metric">
+                                                <span>Paid-plan tokens</span>
+                                                <strong>—</strong>
+                                            </div>
+                                            <div className="sd-plan-card__metric">
+                                                <span>Plan days</span>
+                                                <strong>—</strong>
+                                            </div>
+                                        </div>
+                                        <div className="sd-plan-card__footer">
+                                            <span>No paid subscription active</span>
+                                            <Link to="/subscriptions">View plans <span aria-hidden="true">›</span></Link>
+                                        </div>
+                                    </>
+                                )}
+                            </section>
+                        )}
                     </div>
                 )}
             </header>

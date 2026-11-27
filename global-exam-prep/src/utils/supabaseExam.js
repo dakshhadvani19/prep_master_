@@ -309,3 +309,35 @@ export async function getDashboardPerformanceSummary() {
     }
 }
 
+
+
+/**
+ * Loads the authenticated student's active subscription entitlement.
+ * Subscription balances and dates are returned by the server, never from browser-supplied IDs.
+ */
+export async function getCurrentSubscriptionSummary() {
+    try {
+        const token = await getAccessToken();
+        const response = await fetch('/api/student-subscription', {
+            method: 'GET',
+            headers: { Authorization: 'Bearer ' + token },
+            cache: 'no-store',
+        });
+        const result = await response.json().catch(() => null);
+        if (!response.ok) {
+            throw new Error(result?.error || 'Current subscription details are temporarily unavailable.');
+        }
+        const subscription = result?.subscription;
+        if (subscription !== null && subscription !== undefined
+            && (typeof subscription !== 'object' || Array.isArray(subscription))) {
+            throw new Error('Subscription service returned an invalid response.');
+        }
+        return { subscription: subscription || null, error: null };
+    } catch (error) {
+        console.error('[dashboard] Could not load current subscription:', error);
+        return {
+            subscription: null,
+            error: 'We could not load your current plan right now. Please retry.',
+        };
+    }
+}
