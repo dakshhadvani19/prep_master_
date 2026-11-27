@@ -29,6 +29,90 @@ function createAdminClient() {
     });
 }
 
+
+function parseUtcDate(value) {
+    if (!value) return NaN;
+    const text = String(value);
+    const normalized = /(?:Z|[+-]\\d{2}:?\\d{2})$/i.test(text)
+        ? text
+        : text.replace(' ', 'T') + 'Z';
+    return new Date(normalized).getTime();
+}
+
+function safeCount(value) {
+    const parsed = Number(value);
+    return Number.isSafeInteger(parsed) && parsed >= 0 ? parsed : 0;
+}
+
+function parseValidityDays(value, fallbackMs) {
+    const match = String(value ?? '').match(/(\\d+)/);
+    const parsed = match ? Number(match[1]) : 0;
+    return Number.isSafeInteger(parsed) && parsed > 0
+        ? parsed
+        : Math.max(1, Math.ceil(fallbackMs / 86400000));
+}
+
+async function loadCurrentSubscription(admin, studentId) {
+    const now = new Date();
+    const nowForDb = now.toISOString().slice(0, 19).replace('T', ' ');
+    const { data: rows, error } = await admin
+        .from('Subscribers')
+        .select('SubscriberId,StartDate,EndDate,SubscriptionId,RemainingTokens')
+        .eq('StudentId', studentId)
+        .lte('StartDate', nowForDb)
+        .gt('EndDate', nowForDb)
+        .order('StartDate', { ascending: false })
+        .limit(1);
+    if (error) throw error;
+
+    const active = Array.isArray(rows) ? rows[0] : null;
+    if (!active) return null;
+
+    let plan = null;
+    if (active.SubscriptionId !== null && active.SubscriptionId !== undefined) {
+        const { data, error: planError } = await admin
+            .from('Subscriptions')
+            .select('SubscriptionId,Amount,Tokens,TimeValidity')
+            .eq('SubscriptionId', active.SubscriptionId)
+            .maybeSingle();
+        if (planError) throw planError;
+        plan = data || null;
+    }
+
+    const startMs = parseUtcDate(active.StartDate);
+    const endMs = parseUtcDate(active.EndDate);
+    const durationMs = Number.isFinite(startMs) && Number.isFinite(endMs)
+        ? Math.max(0, endMs - startMs)
+        : 0;
+    const days = parseValidityDays(plan?.TimeValidity, durationMs);
+    const daysRemaining = Number.isFinite(endMs)
+        ? Math.max(0, Math.ceil((endMs - now.getTime()) / 86400000))
+        : 0;
+    const amount = Number(String(plan?.Amount ?? '').replace(/[^0-9.]/g, ''));
+    const kind = active.SubscriptionId == null
+        ? 'custom'
+        : days === 7 || amount === 39
+            ? 'weekly'
+            : days === 30 || amount === 149
+                ? 'monthly'
+                : 'custom';
+    const totalCandidate = Number(plan?.Tokens);
+    const totalTokens = Number.isSafeInteger(totalCandidate) && totalCandidate > 0
+        ? totalCandidate
+        : null;
+
+    return {
+        kind,
+        title: kind === 'weekly' ? 'Weekly' : kind === 'monthly' ? 'Monthly' : 'Custom',
+        validityDays: days,
+        daysRemaining,
+        remainingTokens: safeCount(active.RemainingTokens),
+        totalTokens,
+        startDate: active.StartDate,
+        endDate: active.EndDate,
+    };
+}
+
 function respond(res, status, message) {
     return res.status(status).json({ error: message });
 }
@@ -101,7 +185,16 @@ export default async function handler(req, res) {
             throw new Error('Dashboard performance service returned an invalid response.');
         }
 
-        return res.status(200).json({ performance: data });
+        let subscription = null;
+        let subscriptionError = null;
+        try {
+            subscription = await loadCurrentSubscription(admin, student.StudentId);
+        } catch (subscriptionLookupError) {
+            console.error('[dashboard-performance] subscription lookup failed:', subscriptionLookupError);
+            subscriptionError = 'Current subscription details could not be loaded. Please retry.';
+        }
+
+        return res.status(200).json({ performance: data, subscription, subscriptionError });
     } catch (error) {
         // Preserve real Supabase/Postgres details in server logs only.
         console.error('[dashboard-performance] request failed:', error);

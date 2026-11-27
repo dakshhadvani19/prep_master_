@@ -318,7 +318,7 @@ export async function getDashboardPerformanceSummary() {
 export async function getCurrentSubscriptionSummary() {
     try {
         const token = await getAccessToken();
-        const response = await fetch('/api/student-subscription', {
+        const response = await fetch('/api/dashboard-performance', {
             method: 'GET',
             headers: { Authorization: 'Bearer ' + token },
             cache: 'no-store',
@@ -327,6 +327,7 @@ export async function getCurrentSubscriptionSummary() {
         if (!response.ok) {
             throw new Error(result?.error || 'Current subscription details are temporarily unavailable.');
         }
+        if (result?.subscriptionError) throw new Error(result.subscriptionError);
         const subscription = result?.subscription;
         if (subscription !== null && subscription !== undefined
             && (typeof subscription !== 'object' || Array.isArray(subscription))) {
