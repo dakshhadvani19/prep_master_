@@ -1,0 +1,50 @@
+name: Code quality and production build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "global-exam-prep/**"
+      - ".github/workflows/code-quality.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "global-exam-prep/**"
+      - ".github/workflows/code-quality.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Repository ESLint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: global-exam-prep
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: global-exam-prep/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+
+  production-build:
+    name: Vite production build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: global-exam-prep
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: global-exam-prep/package-lock.json
+      - run: npm ci
+      - run: npm run build
