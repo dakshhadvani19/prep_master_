@@ -1,3 +1,3 @@
--- All application relations and helpers are schema-qualified. Pin SECURITY DEFINER search path to built-ins.
-ALTER FUNCTION public.pm_subscription_payment_action(text, jsonb)
-    SET search_path = pg_catalog;
+-- Superseded hardening step retained for version-history continuity.
+-- The final payment RPC definition pins search_path to pg_catalog in
+-- 20261117082403_activate_approved_subscription_plans_and_custom_weekly_rate.sql.

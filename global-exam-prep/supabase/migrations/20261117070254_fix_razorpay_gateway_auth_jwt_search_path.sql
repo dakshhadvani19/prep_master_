@@ -1,3 +1,3 @@
--- Retain an explicit path for the auth helper before final hardening.
-ALTER FUNCTION public.pm_subscription_payment_action(text, jsonb)
-    SET search_path = pg_catalog, public, private, auth;
+-- Superseded hardening step retained for version-history continuity.
+-- The final payment RPC definition pins search_path to pg_catalog in
+-- 20261117082403_activate_approved_subscription_plans_and_custom_weekly_rate.sql.
