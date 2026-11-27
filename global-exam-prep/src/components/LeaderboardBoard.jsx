@@ -273,12 +273,12 @@ export default function LeaderboardBoard({ subject, isAdmin = false }) {
                                                 && String(viewer.studentId) === String(entry.studentId);
                                             return (
                                                 <tr key={entry.studentId} className={isViewer ? 'is-viewer' : ''}>
-                                                    <td><strong>{formatAverageMarks(entry)}</strong></td>
                                                     <td><span className="lb-board__rank">#{entry.rank}</span></td>
                                                     <td>
                                                         <span className="lb-board__student">{entry.displayName || 'Student'}</span>
                                                         {isViewer && <span className="lb-board__you">You</span>}
                                                     </td>
+                                                    <td><strong>{formatAverageMarks(entry)}</strong></td>
                                                     <td>{formatNumber(entry.points)}</td>
                                                     <td><strong>{formatPercentage(entry.percentage)}</strong></td>
                                                     <td>{formatNumber(entry.totalTests)}</td>
