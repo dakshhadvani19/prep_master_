@@ -328,13 +328,6 @@ export default function Subscriptions() {
                 </article>
             </section>
 
-            <footer className="subscriptions-footer">
-                <div><RefreshCw size={16} /> Renewals are queued after your current subscription ends.</div>
-                <p>Razorpay Test Mode only. No live payment is collected.</p>
-                <button type="button" onClick={loadPlans} disabled={loading || busy}>
-                    <RefreshCw size={15} className={loading ? 'is-spinning' : ''} /> Refresh plan availability
-                </button>
-            </footer>
         </main>
     );
 }

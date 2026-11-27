@@ -335,6 +335,7 @@ export default function LandingPage() {
                             <DeveloperCard
                                 name="Harsh Joshi"
                                 email="https://mail.google.com/mail/?view=cm&fs=1&to=harshjoshi30112007@gmail.com"
+                                github="https://github.com/harsh-joshi03"
                                 linkedin="https://www.linkedin.com/in/harsh-joshi-1a5a2837a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                                 liked={likedHarsh} onLike={() => updateLike('dev_liked_harsh', setLikedHarsh, !likedHarsh)}
                             />
